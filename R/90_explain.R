@@ -77,14 +77,44 @@ rank_positions <- function(report) {
                na.last = TRUE), ]
 }
 
+#' Rows with a starter slot open that the plan also allows drafting this round.
+#'
+#' `deferred` started life as an urgency demotion only, which worked exactly as
+#' long as some other position still had a slot open. In a 17-round dry run
+#' every non-deferred slot was filled by round 8, K and DST became the only
+#' rows with still_needed > 0, and the demotion had nothing left to lose to --
+#' so the app recommended Jason Myers in round 8 against a defer_until_round of
+#' 16 (found 2026-09-06). Deferral has to remove the row from consideration,
+#' not merely rank it last.
+#'
+#' Shared by target_position() and explain_scarcity() for the same reason
+#' rank_positions() is shared: two copies of this filter are two chances for
+#' the recommended player and the sentence about him to disagree.
+#'
+#' @param report data.frame from scarcity_report().
+#' @return Subset of `report`. Reports predating `deferred` filter on need only.
+draftable_now <- function(report) {
+  needed <- report[report$still_needed > 0, , drop = FALSE]
+  if (is.null(needed$deferred)) return(needed)
+  needed[!isTRUE_each(needed$deferred), , drop = FALSE]
+}
+
+#' The mirror of draftable_now(): needed, but parked until a later round.
+deferred_needs <- function(report) {
+  needed <- report[report$still_needed > 0, , drop = FALSE]
+  if (is.null(needed$deferred)) return(needed[0, , drop = FALSE])
+  needed[isTRUE_each(needed$deferred), , drop = FALSE]
+}
+
 #' The position scarcity_report() says to take next, or NA if nothing is needed.
 #'
-#' @return Single position code, or NA_character_ when no starter slot is open.
+#' @return Single position code, or NA_character_ when no starter slot is open
+#'   -- including when the only open slots are ones the plan parks until later.
 target_position <- function(report) {
   if (is.null(report) || nrow(report) == 0) return(NA_character_)
-  needed <- report[report$still_needed > 0, ]
-  if (nrow(needed) == 0) return(NA_character_)
-  rank_positions(needed)$pos[1]
+  open <- draftable_now(report)
+  if (nrow(open) == 0) return(NA_character_)
+  rank_positions(open)$pos[1]
 }
 
 #' `vor_best` as a plain numeric, tolerating a report that predates the column.
@@ -94,6 +124,95 @@ target_position <- function(report) {
 #' is recoverable by reading the board and a crashed app is not.
 vor_best_or_na <- function(report) {
   if (is.null(report$vor_best)) rep(NA_real_, nrow(report)) else as.numeric(report$vor_best)
+}
+
+#' Positions the config says to leave until late, as display notes.
+#'
+#' @param report data.frame from scarcity_report().
+#' @return Named character vector, position -> note ("wait til rd 16"). Empty
+#'   when nothing is deferred, or when handed a report that predates the
+#'   `deferred` column.
+deferred_notes <- function(report) {
+  if (is.null(report) || nrow(report) == 0 || is.null(report$deferred)) {
+    return(character(0))
+  }
+  hit <- isTRUE_each(report$deferred)
+  if (!any(hit)) return(character(0))
+  pos <- report$pos[hit]
+  round <- if (is.null(report$defer_until_round)) {
+    rep(NA_integer_, length(pos))
+  } else {
+    as.integer(report$defer_until_round[hit])
+  }
+  setNames(ifelse(is.na(round), "wait til late", paste0("wait til rd ", round)), pos)
+}
+
+#' Vectorised isTRUE(). NA counts as not-true rather than propagating.
+isTRUE_each <- function(x) !is.na(x) & x
+
+#' Escape the three characters that would break out of an HTML table cell.
+#'
+#' mark_deferred() emits raw markup, so its caller has to turn xtable's own
+#' escaping off. This puts the escaping back for the parts that are data.
+escape_html <- function(x) {
+  x <- gsub("&", "&amp;", x, fixed = TRUE)
+  x <- gsub("<", "&lt;", x, fixed = TRUE)
+  gsub(">", "&gt;", x, fixed = TRUE)
+}
+
+#' Grey out board rows whose position the league plan says not to draft yet.
+#'
+#' The Board is a truthful "best available" and must keep showing these
+#' players -- filtering them would misstate what is actually on the board, and
+#' a hidden player cannot be reconsidered when a plan changes. But leaving them
+#' unmarked put kicker Jason Myers at board rank 21 while the run guide beside
+#' him read "Wait til late", so the two panes contradicted each other on screen
+#' (reported 2026-09-06). Dim and label; never remove.
+#'
+#' Output cells are raw HTML, so the caller MUST render with
+#' `sanitize.text.function = identity`. Every cell is escaped here first.
+#'
+#' @param display data.frame already formatted for display -- numbers must
+#'   arrive pre-rounded, since every column comes back as character.
+#' @param pos Character vector of positions, one per row of `display`.
+#' @param notes deferred_notes() output.
+#' @param note_col Column the "wait til" note is appended to.
+#' @return `display` with all-character cells; deferred rows wrapped in a
+#'   dimming span. Escaping happens whether or not anything is deferred, so the
+#'   caller's sanitize setting is safe on every path.
+mark_deferred <- function(display, pos, notes, note_col = "Player") {
+  display[] <- lapply(display, function(col) escape_html(as.character(col)))
+  hit <- pos %in% names(notes)
+  if (length(notes) == 0 || !any(hit)) return(display)
+  display[[note_col]][hit] <- paste0(
+    display[[note_col]][hit], " — ", notes[pos[hit]]
+  )
+  for (nm in names(display)) {
+    display[[nm]][hit] <- paste0(
+      "<span style=\"color: #9aa0a6;\">", display[[nm]][hit], "</span>"
+    )
+  }
+  display
+}
+
+#' "defense (round 15) and kicker (round 16)" -- parked positions, soonest first.
+#'
+#' @param parked deferred_needs() output.
+#' @return Single string. Empty input returns "" rather than erroring; a blank
+#'   readout mid-draft is recoverable, a crashed app is not.
+parked_phrase <- function(parked) {
+  if (nrow(parked) == 0) return("")
+  round <- if (is.null(parked$defer_until_round)) {
+    rep(NA_integer_, nrow(parked))
+  } else {
+    as.integer(parked$defer_until_round)
+  }
+  ord <- order(round, na.last = TRUE)
+  names_ <- position_name(parked$pos[ord])
+  round <- round[ord]
+  parts <- ifelse(is.na(round), names_, paste0(names_, " (round ", round, ")"))
+  if (length(parts) == 1) return(parts)
+  paste0(paste(parts[-length(parts)], collapse = ", "), " and ", parts[length(parts)])
 }
 
 #' Name the specific players to take, not just the position.
@@ -189,7 +308,17 @@ explain_scarcity <- function(report, picks = NULL) {
     return("Starting lineup is full. Draft best available for the bench.")
   }
 
-  ranked <- rank_positions(needed)
+  # Every open slot is a position the plan parks until later. Saying "lineup is
+  # full" here would be a lie -- kicker and defense are genuinely still empty --
+  # so name them and their rounds, and say what to do with the picks between now
+  # and then. This is rounds 10-14 of a real draft, not an edge case.
+  open <- draftable_now(report)
+  if (nrow(open) == 0) {
+    return(paste0("Starters set apart from ", parked_phrase(deferred_needs(report)),
+                  ". Draft the best bench player you can until then."))
+  }
+
+  ranked <- rank_positions(open)
 
   # Describe the row belonging to the player actually being named, not merely
   # the top-ranked row. These are the same row whenever recommend_picks() and

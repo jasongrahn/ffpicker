@@ -284,6 +284,20 @@ test_that("defer_until_round stops deferring once the draft reaches that round",
   expect_true(result$urgency[result$pos == "K"] < 5L)
 })
 
+test_that("the report carries the deferral round, so display can name it", {
+  board <- data.frame(player_key = 1:2, pos = c("RB", "K"), tier = 1,
+                      vor = c(140, 61))
+  state <- list(rosters = list(), my_team = "JGrahnasaurs", my_slot = 5, teams = 10,
+                drafted_players = c())
+  cfg <- league
+  cfg$draft <- list(defer_until_round = list(K = 16))
+
+  result <- scarcity_report(board, state, cfg)
+
+  expect_equal(result$defer_until_round[result$pos == "K"], 16L)
+  expect_true(is.na(result$defer_until_round[result$pos == "RB"]))
+})
+
 test_that("a config with no defer_until_round defers nothing", {
   board <- data.frame(player_key = 1:2, pos = c("RB", "K"), tier = 1,
                       vor = c(140, 61))

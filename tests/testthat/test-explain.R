@@ -300,3 +300,59 @@ test_that("rank_positions() is the single ordering all three callers share", {
   expect_equal(scarcity_display(rpt)$Position[1], unname(position_name(ranked$pos[1])))
   expect_match(explain_scarcity(rpt), position_name(ranked$pos[1]))
 })
+
+test_that("deferred_notes() names the round, and degrades on an older report", {
+  rpt <- data.frame(
+    pos = c("K", "DST", "RB"), still_needed = 1, tier_supply = 3,
+    picks_until_turn = 4L, survives = TRUE, vor_best = c(61, NA, 142),
+    deferred = c(TRUE, TRUE, FALSE), defer_until_round = c(16L, 15L, NA),
+    urgency = c(5L, 5L, 1L), stringsAsFactors = FALSE
+  )
+  notes <- deferred_notes(rpt)
+  expect_equal(notes, c(K = "wait til rd 16", DST = "wait til rd 15"))
+
+  # Report predating defer_until_round still marks, just without the number.
+  rpt$defer_until_round <- NULL
+  expect_equal(unname(deferred_notes(rpt)), rep("wait til late", 2))
+
+  # Report predating `deferred` entirely: nothing marked, no error.
+  rpt$deferred <- NULL
+  expect_length(deferred_notes(rpt), 0)
+  expect_length(deferred_notes(rpt[0, ]), 0)
+  expect_length(deferred_notes(NULL), 0)
+})
+
+test_that("mark_deferred() dims only deferred rows and never drops one", {
+  display <- data.frame(
+    Tier = 1:3, Player = c("Jason Myers", "Bijan Robinson", "Houston Texans"),
+    Pos = c("K", "RB", "DST"), `Extra pts` = c("61.4", "142.1", "0.0"),
+    check.names = FALSE, stringsAsFactors = FALSE
+  )
+  out <- mark_deferred(display, display$Pos,
+                       c(K = "wait til rd 16", DST = "wait til rd 15"))
+
+  # Truthful board: same rows, same order, nothing filtered.
+  expect_equal(nrow(out), 3L)
+  expect_match(out$Player[2], "^Bijan Robinson$")
+
+  # Deferred rows carry the note and the dim span on every cell.
+  expect_match(out$Player[1], "Jason Myers — wait til rd 16")
+  expect_match(out$Player[3], "wait til rd 15")
+  expect_true(all(grepl("color: #9aa0a6", out[1, ])))
+  expect_true(all(grepl("color: #9aa0a6", out[3, ])))
+  expect_false(any(grepl("color: #9aa0a6", out[2, ])))
+})
+
+test_that("mark_deferred() escapes cells, since the caller turns escaping off", {
+  display <- data.frame(Player = c("A & B", "<script>"), Pos = c("K", "RB"),
+                        check.names = FALSE, stringsAsFactors = FALSE)
+
+  # Nothing deferred: escaping must still happen, or sanitize.text.function =
+  # identity would ship raw markup from the data straight into the page.
+  plain <- mark_deferred(display, display$Pos, character(0))
+  expect_equal(plain$Player, c("A &amp; B", "&lt;script&gt;"))
+
+  marked <- mark_deferred(display, display$Pos, c(K = "wait til rd 16"))
+  expect_match(marked$Player[1], "A &amp; B — wait til rd 16")
+  expect_false(grepl("<script>", marked$Player[2], fixed = TRUE))
+})

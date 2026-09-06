@@ -86,7 +86,12 @@ pick_ui <- function(initial_team) {
           strong("Tier"), " = a gap in that number big enough to matter, counted ",
           "within one position only. The last tier-3 receiver and the first ",
           "tier-4 receiver are a real drop apart; a tier-3 receiver and a ",
-          "tier-3 kicker have nothing to do with each other."
+          "tier-3 kicker have nothing to do with each other.",
+          br(),
+          strong("Greyed rows"), " = a position your league plan says to leave ",
+          "until late, with the round shown next to the name. They stay on the ",
+          "board because this is a true best-available list, but taking one now ",
+          "costs you a starter somewhere else."
         ),
         h4("No current-season data yet (mostly rookies)", style = "margin-top: 20px;"),
         div(style = "overflow-x: auto;", tableOutput("fallback_board")),
@@ -231,12 +236,13 @@ server <- function(input, output, session) {
     # 2026-09-06). VOR is the only cross-position-comparable number here.
     available <- available[order(-available$vor, available$tier), ]
     out <- head(available[, c("tier", "player", "pos", "team", "vor", "ecr")], 30)
-    # renderTable() formats every numeric column alike, so a shared digits=
-    # would print tiers as "1.00". Tier and expert rank are labels/ranks, not
+    # Numbers are formatted here rather than by renderTable's digits=, because
+    # mark_deferred() hands every column back as character. renderTable would
+    # otherwise format every numeric column alike, so a shared digits= would
+    # print tiers as "1.00". Tier and expert rank are labels/ranks, not
     # measurements -- "68.19" implies a precision that a consensus of analysts
     # does not have, and costs a beat to read under a 1-minute clock.
-    out$tier <- as.integer(out$tier)
-    out$ecr <- as.integer(round(out$ecr))
+    #
     # "vor" and "ecr" are jargon, and CLAUDE.md makes plain English a product
     # feature rather than a courtesy: under a 1-minute clock a header you have
     # to decode is a header you ignore. Spelled out here, defined in the
@@ -245,18 +251,35 @@ server <- function(input, output, session) {
     # Expert rank rides along because it is the ONLY column this table shares
     # with the rookies below, and without it there is no way to place a rookie
     # against the ranked board at all (reported 2026-09-06).
-    names(out) <- c("Tier", "Player", "Pos", "Team", "Extra pts", "Expert rank")
-    out
-  }, digits = 1)
+    display <- data.frame(
+      Tier = as.integer(out$tier),
+      Player = out$player,
+      Pos = out$pos,
+      Team = out$team,
+      `Extra pts` = sprintf("%.1f", out$vor),
+      `Expert rank` = as.integer(round(out$ecr)),
+      check.names = FALSE, stringsAsFactors = FALSE
+    )
+    # Kickers outrank most of the board on Extra pts and are still the wrong
+    # pick for fifteen more rounds. Greyed, not dropped -- see mark_deferred().
+    mark_deferred(display, out$pos, deferred_notes(scarcity()))
+    # Every column is character now, so xtable can no longer infer that the
+    # number columns want right-aligning. Stated explicitly to keep the
+    # pre-marking look.
+  }, align = "rlllrr", sanitize.text.function = identity)
 
   output$fallback_board <- renderTable({
     req(started())
     available <- remaining_draft_pool(draft_fallback, state())
     out <- head(available[, c("ecr", "player", "pos", "team")], 30)
-    out$ecr <- as.integer(round(out$ecr))
-    names(out) <- c("Expert rank", "Player", "Pos", "Team")
-    out
-  }, digits = 0)
+    display <- data.frame(
+      `Expert rank` = as.integer(round(out$ecr)),
+      Player = out$player, Pos = out$pos, Team = out$team,
+      check.names = FALSE, stringsAsFactors = FALSE
+    )
+    # Every DST lives in this table, and DST is deferred too.
+    mark_deferred(display, out$pos, deferred_notes(scarcity()))
+  }, align = "rlll", sanitize.text.function = identity)
 }
 
 shinyApp(ui, server)

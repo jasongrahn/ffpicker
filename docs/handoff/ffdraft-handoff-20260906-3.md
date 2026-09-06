@@ -5,8 +5,6 @@
 **Date**: 2026-09-06
 **Draft**: Tuesday, Sept 8, 2026, 6:00pm ET — **~2 days out**
 **Prior**: `docs/handoff/ffdraft-handoff-20260906-2.md` (#9)
-**HEAD**: `b4d9773` — **5 commits local, none pushed**. Tests **306 / 0**.
-Pipeline green.
 **App**: running on 7645, clean log, slot 5.
 
 ---
@@ -178,8 +176,6 @@ in the model layer, not a draft-night patch.
 
 ## Do next, in order
 
-1. **`git push`** — 5 commits local (`1b553ae`, `f728183`, `2a13067`,
-   `277b465`, `b4d9773`). One command.
 2. **Mark deferred positions on Best available** (~20 min). Board says take
    Myers, guide says wait til late. Cheapest honest fix: dim or flag rows whose
    position is deferred at the current round — do NOT filter them out, the

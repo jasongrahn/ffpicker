@@ -176,6 +176,14 @@ scarcity_report <- function(draft_board, pick_log_state, league_config) {
       survives = survives,
       vor_best = vor_best,
       deferred = deferred,
+      # First round this position is allowed. Carried on the report so display
+      # code can label a dimmed board row ("wait til rd 16") without re-reading
+      # league.json and growing a second copy of the rule.
+      defer_until_round = if (is.null(defer_until[[p]])) {
+        NA_integer_
+      } else {
+        as.integer(defer_until[[p]])
+      },
       urgency = urgency,
       stringsAsFactors = FALSE
     )
