@@ -24,7 +24,8 @@ Use this index.
 | 10 | `20260906-3.md` | Expected-points wired. Three recommendation bugs killed, all found by screenshot. `dev/relaunch.sh`. |
 | 11 | `20260906-4.md` | Deferred rows greyed on board. First full 17-round dry run (`dev/dryrun.R`) — found deferral was demotion not exclusion. Rookie sources settled: use FantasyPros `sd`, don't scrape. |
 | 12 | `20260906-5.md` | Rookies priced onto Board. Yahoo import CSV built + names aligned — 292/510 imported, cause unsettled. |
-| 13 | `20260906-6.md` | **Current.** Position-page CSVs wired in — 473/510 Yahoo-confirmed. Naming ruled out as the import cause; probe file built to settle it. |
+| 13 | `20260906-6.md` | Position-page CSVs wired in — 473/510 Yahoo-confirmed. Naming ruled out as the import cause; probe file built to settle it. |
+| 14 | `20260906-7.md` | **Current.** Import thread closed — probe 25/25, full file 508/510. Bench-phase recommendations: rounds 8-14 name a player, 3 QBs -> 2. `renv` snapshotted. |
 
 ## Reading rule
 
