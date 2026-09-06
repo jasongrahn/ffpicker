@@ -174,12 +174,45 @@ Scope is therefore **a view over data that already exists**, not a new model.
 
 **Resolved decisions:**
 
-- **Ranking basis: positional ECR rank**, with `ppg_current` displayed beside it as a
-  sanity check. ECR covers 100% of the roster including rookies (who are `NA` in
-  `projected_points`), and it already prices 2026 team/coaching/depth-chart changes that
-  2025 production is blind to. The Board's `projected_points` is explicitly *not* reused —
-  it's a season-total metric (`ppg × 17 × availability`), and both the ×17 and the
-  durability discount are wrong shapes for a single-week decision.
+- **Ranking basis: league-scored EXPECTED points, with ECR as rookie fallback.**
+  *Revised 2026-09-06, same session — the first answer was generic ECR, and evidence
+  overturned it. Recorded here because the reversal is the useful part.*
+
+  Two studies by Alex Cates (2019 ESPN public leagues; n≈60,000 lineups and n=5,722
+  respectively) compared lineup-setting sources against actual managers:
+
+  | Source | Season wins vs. manager | Coaching efficiency |
+  |---|---|---|
+  | ESPN league-adjusted projections | +0.2 | 87.8% |
+  | Manager's own choices | — | 85% |
+  | FantasyPros expert consensus | **−1.7** | 80% |
+  | Reddit consensus | −1.8 | 79% |
+
+  **Generic expert consensus lost to the platform's projections *and* to ordinary
+  managers.** The proposed mechanism is personalization: ESPN's projections are calibrated
+  to each league's scoring; FantasyPros ECR is published once for everyone. Caveats: 2019,
+  full-PPR, ESPN-only, and both studies test start/sit, not drafting. Directional, not
+  decisive — but it points away from ECR-as-primary.
+
+  This project can do the thing that won, and better. `nflreadr::load_ff_opportunity()`
+  (verified live: 159 cols, weekly grain, 2025 available) publishes **expected stat lines**
+  — `receptions_exp`, `rec_touchdown_exp`, `pass_yards_gained_exp`, etc. Run those through
+  the existing `score_player_week()` and the result is expected points under *this* league's
+  half-PPR / −1-INT / 2-WR rules. League-adjusted like ESPN's, but calibrated to Yahoo
+  league #1541392 instead of ESPN defaults. This is the payoff Phase 2 predicted when it
+  said the scoring engine's value is "bigger than convenience."
+
+  It also fixes a live defect: `ppg_current` ranks on last season's **actual** points, so it
+  buys high on luck and sells low on misfortune. In 2025: De'Von Achane scored 322.1 vs
+  266.0 expected (+56.1, regress him); Justin Jefferson scored 201.5 vs 249.1 expected
+  (−47.6, buy him). Ranking on expected points is `CLAUDE.md`'s stated core principle —
+  "opportunity is sticky, efficiency is mostly noise" — finally operationalized rather than
+  merely asserted.
+
+  ECR is retained as the fallback for rookies (no NFL snaps, so no expected stat line) and
+  `ppg_current` stays visible as a sanity check. The Board's `projected_points` is still
+  *not* reused: it's a season-total metric (`ppg × 17 × availability`), and both the ×17 and
+  the durability discount are wrong shapes for a single-week decision.
 - **Display, never bake in.** Applied three times over: defensive matchup, weekly
   volatility, and expert dispersion are all shown next to the player and never fold into
   the ranking. Rationale: no way to calibrate any of them before Week 1, and false

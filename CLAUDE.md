@@ -75,6 +75,16 @@ granted, build a thin `httr2` OAuth2 client. Never build live sync as a dependen
 **League settings come from the user, not the API.** They read the Yahoo settings page
 and paste values into `league.json`.
 
+**Third-party fantasy libraries are all league-scoped — evaluated and rejected 2026-09-06.**
+`ffscrapr` (MFL/Sleeper/Fleaflicker/ESPN, Yahoo only "perhaps eventually"), the Python
+`espn-api` package, and ESPN-fantasy MCP servers all require a `league_id` for a league you
+are a member of, and return that league's rosters/settings/transactions. **None expose
+cross-league ADP, rankings, or projections**, so none of them help a Yahoo league. Do not
+re-investigate this category. The gap they would fill — Yahoo's own ADP, i.e. what the nine
+opponents will actually do — is real and remains unfilled: `yahoo_id`,
+`player_owned_yahoo`, and `player_owned_espn` are 100% NA in `ff_rankings`'
+`redraft-overall` slice. Carry that as the known blind spot in Phase 6's opponent model.
+
 **Config-driven or it doesn't ship.** Anything that could vary by league lives in
 `config/*.json`, validated against JSON Schema. No league rule is ever hardcoded.
 

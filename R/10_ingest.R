@@ -49,3 +49,19 @@ ingest_ff_rankings <- function(raw_dir = "data/raw") {
   arrow::write_parquet(rankings, path)
   path
 }
+
+#' Weekly expected-vs-actual fantasy points (nflreadr's ffopportunity model).
+#' Decomposes production into opportunity (expected) and efficiency (actual
+#' minus expected) -- see R/40_opportunity.R for what consumes this and why.
+#'
+#' @param seasons Integer vector of NFL seasons to pull.
+#' @param raw_dir Output directory for raw parquet.
+#' @return Path to the written parquet file.
+ingest_ff_opportunity <- function(seasons = 2015:nflreadr::most_recent_season(),
+                                   raw_dir = "data/raw") {
+  dir.create(raw_dir, showWarnings = FALSE, recursive = TRUE)
+  path <- file.path(raw_dir, "ff_opportunity.parquet")
+  opp <- nflreadr::load_ff_opportunity(seasons = seasons, stat_type = "weekly")
+  arrow::write_parquet(opp, path)
+  path
+}
