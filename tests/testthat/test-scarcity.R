@@ -31,19 +31,59 @@ test_that("still_needed drops to 0 once a non-flex position's starter slot is fi
   expect_equal(result$still_needed[result$pos == "K"], 1)
 })
 
-test_that("still_needed for flex-eligible positions reflects the shared RB/WR/TE/FLEX pool, not a per-position split", {
+test_that("still_needed for flex-eligible positions is dedicated need plus the shared FLEX slot, not a collapsed shared pool", {
   board <- data.frame(player_key = 1:5, pos = c("RB", "RB", "WR", "WR", "TE"), tier = 1)
-  # dedicated RB(2) and WR(2) slots are full, TE(1) and FLEX(1) are not --
-  # total pool is RB2+WR2+TE1+FLEX1=6, 4 drafted so far -> 2 remain, and that
-  # 2 applies to RB, WR, *and* TE alike since any of the three could fill it.
+  # dedicated RB(2) and WR(2) slots are full, TE(1) is not, and the single
+  # shared FLEX(1) slot hasn't been used by any surplus RB/WR pick -- so it's
+  # still open to whichever of RB/WR/TE gets drafted next.
   state <- list(rosters = list("JGrahnasaurs" = c(1, 2, 3, 4)), my_team = "JGrahnasaurs",
                 my_slot = 7, teams = 10, drafted_players = c(1, 2, 3, 4))
 
   result <- scarcity_report(board, state, league)
 
-  expect_equal(result$still_needed[result$pos == "RB"], 2)
-  expect_equal(result$still_needed[result$pos == "WR"], 2)
+  # RB: dedicated 2-2=0, plus open FLEX(1) = 1
+  expect_equal(result$still_needed[result$pos == "RB"], 1)
+  # WR: dedicated 2-2=0, plus open FLEX(1) = 1
+  expect_equal(result$still_needed[result$pos == "WR"], 1)
+  # TE: dedicated 1-0=1, plus open FLEX(1) = 2
   expect_equal(result$still_needed[result$pos == "TE"], 2)
+})
+
+test_that("still_needed correctly separates dedicated need per position instead of collapsing RB/WR/TE together (regression: reported 2026-09-06)", {
+  # 3 RBs drafted: fills both dedicated RB slots plus the single FLEX slot.
+  # RB's true remaining need is 0 -- but 0 WR and 0 TE have been drafted, so
+  # those positions have real, distinct holes that a shared-pool number
+  # would have hidden (the bug: it reported RB/WR/TE all == 3 here).
+  board <- data.frame(
+    player_key = 1:20, player = paste0("P", 1:20),
+    pos = c(rep("RB", 5), rep("WR", 5), rep("TE", 5), rep("QB", 5)),
+    tier = rep(1:5, 4), vor = 20:1
+  )
+  state <- list(rosters = list(Me = c(1L, 2L, 3L)), drafted_players = c(1L, 2L, 3L),
+                my_team = "Me", my_slot = 5, teams = 10)
+
+  result <- scarcity_report(board, state, league)
+
+  expect_equal(result$still_needed[result$pos == "RB"], 0)
+  expect_equal(result$still_needed[result$pos == "WR"], 2)
+  expect_equal(result$still_needed[result$pos == "TE"], 1)
+  expect_equal(result$still_needed[result$pos == "QB"], 1)
+})
+
+test_that("still_needed's shared FLEX slot is closed once a surplus flex-eligible pick already occupies it", {
+  # 3 RBs drafted (2 dedicated + 1 surplus) already occupies the single FLEX
+  # slot, so an empty TE's still_needed is its dedicated need only (1), not
+  # dedicated-plus-FLEX (2) -- the FLEX slot isn't double-counted as "open"
+  # for every flex-eligible position once something has already claimed it.
+  board <- data.frame(player_key = 1:8, pos = c(rep("RB", 3), rep("WR", 2), rep("TE", 3)), tier = 1)
+  state <- list(rosters = list("JGrahnasaurs" = c(1, 2, 3)), my_team = "JGrahnasaurs",
+                my_slot = 7, teams = 10, drafted_players = c(1, 2, 3))
+
+  result <- scarcity_report(board, state, league)
+
+  expect_equal(result$still_needed[result$pos == "RB"], 0)  # 2 dedicated + 1 surplus, no need left
+  expect_equal(result$still_needed[result$pos == "WR"], 2)  # dedicated 2-0=2, FLEX already spoken for
+  expect_equal(result$still_needed[result$pos == "TE"], 1)  # dedicated 1-0=1, FLEX already spoken for
 })
 
 test_that("still_needed for flex-eligible positions is 0 once the shared pool is fully filled", {
@@ -175,10 +215,10 @@ test_that("picks_until_turn/survives/urgency are NA before my_slot is captured (
   expect_true(is.na(row$picks_until_turn))
   expect_true(is.na(row$survives))
   expect_true(is.na(row$urgency))
-  # still_needed still resolves from the full shared FLEX pool (RB2+WR2+TE1+FLEX1=6)
-  # even though the board only has RB rows -- the pool size comes from league
-  # config, not from what happens to be on this board.
-  expect_equal(row$still_needed, 6)
+  # still_needed still resolves independent of my_slot: dedicated RB need
+  # (2-0=2) plus the open shared FLEX slot (1, untouched by any drafted
+  # flex-eligible pick) = 3.
+  expect_equal(row$still_needed, 3)
   expect_equal(row$tier_supply, 2)
 })
 

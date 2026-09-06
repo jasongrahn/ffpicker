@@ -44,30 +44,40 @@ scarcity_report <- function(draft_board, pick_log_state, league_config) {
   my_roster_keys <- if (is.null(my_team)) NULL else pick_log_state$rosters[[my_team]]
   my_roster_pos <- draft_board$pos[match(my_roster_keys, draft_board$player_key)]
   my_roster_pos <- my_roster_pos[!is.na(my_roster_pos)]
+  drafted_count <- function(p) sum(my_roster_pos == p)
 
-  # Flex-eligible positions (RB/WR/TE) share one pool of slots: their own
-  # dedicated starters plus the shared FLEX slot(s), mirroring compute_vor()'s
-  # shared replacement level in R/75_value.R. still_needed is set to the
-  # *same* remaining-pool count for RB, WR, and TE alike -- not split per
-  # position -- because any of the three can fill the open FLEX slot, so
-  # drafting any one of them is a legitimate way to close the remaining need.
-  # A hard per-position split would understate urgency for whichever position
-  # happens to have its own dedicated slots full already but could still plug
-  # the FLEX slot.
-  flex_dedicated_slots <- sum(vapply(flex_positions, function(p) starters[[p]] %||% 0, numeric(1)))
+  # RB2/WR2/TE1 are NOT interchangeable with each other -- only the single
+  # shared FLEX slot is open to all three. An earlier version of this
+  # function collapsed dedicated + FLEX into one shared-pool number
+  # (`flex_total_slots - flex_drafted`, applied identically to RB/WR/TE);
+  # that hid which specific position was actually empty. E.g. 3 drafted RBs
+  # fill both RB starter slots plus FLEX, leaving RB's true need at 0 -- but
+  # the shared-pool number reported RB/WR/TE all == 3, telling the drafter
+  # to keep taking RBs while WR and TE sat empty (bug reported 2026-09-06).
+  #
+  # Correct model: dedicated need per position is independent; the shared
+  # FLEX slot is "open" only if drafted flex-eligible picks haven't already
+  # exceeded their combined dedicated slots (that excess -- "flex surplus"
+  # -- is exactly who is eligible to occupy FLEX). Whatever FLEX need
+  # remains is then added to *each* flex-eligible position's own dedicated
+  # need, since any of the three can legitimately close it.
+  dedicated_need <- setNames(
+    vapply(positions, function(p) max(0, (starters[[p]] %||% 0) - drafted_count(p)), numeric(1)),
+    positions
+  )
+  flex_surplus <- sum(vapply(flex_positions, function(p) {
+    max(0, drafted_count(p) - (starters[[p]] %||% 0))
+  }, numeric(1)))
   flex_slot_count <- starters$FLEX %||% 0
-  flex_total_slots <- flex_dedicated_slots + flex_slot_count
-  flex_drafted <- sum(my_roster_pos %in% flex_positions)
-  flex_need_pool <- max(0, flex_total_slots - flex_drafted)
+  flex_need <- max(0, flex_slot_count - flex_surplus)
 
   picks_until_turn <- picks_until_my_turn(pick_log_state)
 
   rows <- lapply(positions, function(p) {
-    if (p %in% flex_positions) {
-      still_needed <- flex_need_pool
+    still_needed <- if (p %in% flex_positions) {
+      dedicated_need[[p]] + flex_need
     } else {
-      drafted <- sum(my_roster_pos == p)
-      still_needed <- max(0, (starters[[p]] %||% 0) - drafted)
+      dedicated_need[[p]]
     }
 
     # The "current live tier" is the best (lowest-numbered) tier that still

@@ -154,6 +154,11 @@ so passing on a positional run costs less. Recommendations must be slot-aware.
 - Scoring must be a pure vectorized function of (stat line, config). Golden-test it.
 - Every model outputs a distribution, not a point estimate.
 - Validate the config early and fail loudly. A bad `league.json` should not reach a model fit.
+- **Docs written in `/caveman` style.** Repo rule. Applies to `PLAN_1.md`, `CONTEXT.md`,
+  handoff docs, ADRs, roxygen blocks. Drop articles, filler, hedging. Fragments fine.
+  Arrows for causality (X -> Y). Technical terms, code blocks, error strings stay exact.
+  Exception per skill: full prose for security warnings, destructive-action confirms,
+  ordered multi-step sequences where fragment order risks misread.
 
 ## Current status
 
