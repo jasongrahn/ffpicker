@@ -21,11 +21,20 @@
 #' Jacksonville, and LA and LAR for the Rams; Yahoo writes Jax and LAR), so
 #' including it would break matches rather than sharpen them.
 #'
-#' @param path Pasted Yahoo player list.
+#' The file is append-only: the draft room's "all players" list stops well
+#' short of our 510-row export, so the rest arrives as further pastes taken one
+#' position at a time. Those overlap -- a WR-filtered list re-lists the top
+#' receivers the overall list already covered. Duplicates must be dropped here,
+#' because `align_yahoo_names()` treats a repeated key as ambiguous and refuses
+#' it, so an un-deduped append would silently *un*-match players that work
+#' today. First occurrence wins; the repeat carries the same spelling.
+#'
+#' @param path Pasted Yahoo player list. A character vector of several paths is
+#'   read and concatenated.
 #' @return data.frame: name, pos, team, xrank, adp. `adp` is NA for players
 #'   Yahoo shows a rank but no average draft position for.
 parse_yahoo_names <- function(path) {
-  lines <- readLines(path, encoding = "UTF-8", warn = FALSE)
+  lines <- unlist(lapply(path, readLines, encoding = "UTF-8", warn = FALSE))
   lines <- trimws(lines)
   lines <- lines[nzchar(lines)]
 
@@ -46,7 +55,7 @@ parse_yahoo_names <- function(path) {
   }
 
   parts <- strsplit(meta, "·", fixed = TRUE)
-  data.frame(
+  out <- data.frame(
     name = lines[i],
     pos = vapply(parts, `[`, character(1), 1),
     team = vapply(parts, `[`, character(1), 2),
@@ -54,6 +63,81 @@ parse_yahoo_names <- function(path) {
     adp = suppressWarnings(as.numeric(sub(".*ADP ([0-9.]+).*", "\\1", rank))),
     stringsAsFactors = FALSE
   )
+  # Deliberately exact name/pos/team, not the normalised key. Two distinct
+  # players can share a normalised key -- the two Isaiah Williamses are the live
+  # case -- and collapsing them would defeat the ambiguity guard downstream by
+  # making a genuinely undecidable name look decidable. A re-paste of the same
+  # player is byte-identical, so exactness is enough to catch it.
+  out[!duplicated(out[, c("name", "pos", "team")]), ]
+}
+
+#' Parse Yahoo's other export shape: a `Player,Position,Team` CSV.
+#'
+#' The draft room's own list stops around 300 players; our export is 510. The
+#' rest come from Yahoo's position-filtered player pages, which download as a
+#' plain CSV rather than paste as four-line blocks. Same job, different shape,
+#' so it gets its own parser and `load_yahoo_names()` picks between them.
+#'
+#' `xrank` and `adp` do not exist in this shape and come back NA. Nothing
+#' consumes them yet, and a fake rank would be worse than a missing one.
+#'
+#' Yahoo marks a multi-eligible player with a comma-joined position
+#' (`"RB, TE"`). Each eligibility becomes its own row, because our pool assigns
+#' exactly one position per player and we cannot know in advance which one it
+#' picked -- matching on either is correct and, since the rows differ in `pos`,
+#' it creates no ambiguous key.
+#'
+#' @param path One or more CSV paths.
+#' @return data.frame: name, pos, team, xrank, adp -- same columns as
+#'   parse_yahoo_names(), so the two are rbind-compatible.
+parse_yahoo_csv <- function(path) {
+  raw <- do.call(rbind, lapply(path, utils::read.csv,
+                               stringsAsFactors = FALSE, colClasses = "character"))
+  need <- c("Player", "Position", "Team")
+  if (!all(need %in% names(raw))) {
+    stop("parse_yahoo_csv: expected columns ", paste(need, collapse = ", "),
+         "; got ", paste(names(raw), collapse = ", "))
+  }
+
+  pos <- strsplit(trimws(raw$Position), "\\s*,\\s*")
+  n <- lengths(pos)
+  if (any(n == 0)) stop("parse_yahoo_csv: blank Position on row(s) ",
+                        paste(head(which(n == 0), 5), collapse = ", "))
+
+  data.frame(
+    name = rep(trimws(raw$Player), n),
+    pos = unlist(pos),
+    team = rep(trimws(raw$Team), n),
+    xrank = NA_integer_,
+    adp = NA_real_,
+    stringsAsFactors = FALSE
+  )
+}
+
+#' Read every Yahoo name source we have, in whichever shape each arrived in.
+#'
+#' Dispatch is on extension: `.csv` is the position-page download, anything
+#' else is a draft-room paste. Paths that do not exist are skipped rather than
+#' erroring -- these are manual exports that will go stale, and a missing one
+#' must degrade to our own spellings, not break the export.
+#'
+#' Deduplication runs across the combined set, not per file, because the whole
+#' point is that the sources overlap. Order matters only in that the first
+#' occurrence of a name wins; every source is Yahoo, so they agree.
+#'
+#' @param paths Character vector of paths, mixed shapes allowed.
+#' @return data.frame as parse_yahoo_names(), or NULL if nothing readable.
+load_yahoo_names <- function(paths) {
+  paths <- paths[file.exists(paths)]
+  if (!length(paths)) return(NULL)
+
+  is_csv <- grepl("\\.csv$", paths, ignore.case = TRUE)
+  parts <- list()
+  if (any(is_csv)) parts$csv <- parse_yahoo_csv(paths[is_csv])
+  if (any(!is_csv)) parts$paste <- parse_yahoo_names(paths[!is_csv])
+
+  out <- do.call(rbind, unname(parts))
+  out[!duplicated(out[, c("name", "pos", "team")]), ]
 }
 
 #' Normalised match key: what two spellings of the same player share.

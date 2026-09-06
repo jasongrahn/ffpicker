@@ -36,6 +36,76 @@ test_that("a block that is not the expected shape fails loudly", {
 })
 
 
+test_that("a re-pasted player is deduplicated", {
+  # The deep players arrive as further pastes taken one position at a time, and
+  # those overlap the overall list. A repeat left in place would read as an
+  # ambiguous key and un-match a player who matches today.
+  path <- write_yahoo_file(rep(yahoo_block("Bijan Robinson", "RB", "Atl", 5, 1, "1.5"), 2))
+  expect_equal(nrow(parse_yahoo_names(path)), 1)
+})
+
+test_that("two players sharing a normalised key both survive deduplication", {
+  # Deduplication must not defeat the ambiguity guard: collapsing the two
+  # Isaiah Williamses would make an undecidable name look decidable.
+  path <- write_yahoo_file(c(
+    yahoo_block("Isaiah Williams", "WR", "Det", 5, 300),
+    yahoo_block("Isaiah Williams", "WR", "NYJ", 9, 400)
+  ))
+  expect_equal(nrow(parse_yahoo_names(path)), 2)
+})
+
+
+# --- parsing the position-page CSV -----------------------------------------
+
+write_yahoo_csv <- function(lines, file = tempfile(fileext = ".csv")) {
+  writeLines(c("Player,Position,Team", lines), file)
+  file
+}
+
+test_that("a position-page CSV parses to the same columns as a paste", {
+  out <- parse_yahoo_csv(write_yahoo_csv(c("Troy Franklin,WR,Den", "Kareem Hunt,RB,KC")))
+  expect_equal(names(out), c("name", "pos", "team", "xrank", "adp"))
+  expect_equal(out$name, c("Troy Franklin", "Kareem Hunt"))
+  expect_equal(out$pos, c("WR", "RB"))
+  expect_equal(out$team, c("Den", "KC"))
+  # Yahoo does not put a rank on these pages. NA, not a fabricated number.
+  expect_true(all(is.na(out$xrank)), all(is.na(out$adp)))
+})
+
+test_that("a multi-eligible player becomes one row per position", {
+  # Our pool assigns exactly one position, and we cannot know which one it
+  # chose, so both spellings of the key must exist to be matchable.
+  out <- parse_yahoo_csv(write_yahoo_csv('Riley Nowakowski,"RB, TE",Pit'))
+  expect_equal(out$pos, c("RB", "TE"))
+  expect_equal(out$name, rep("Riley Nowakowski", 2))
+})
+
+test_that("a CSV without the expected columns fails loudly", {
+  f <- tempfile(fileext = ".csv")
+  writeLines(c("name,pos", "Troy Franklin,WR"), f)
+  expect_error(parse_yahoo_csv(f), "expected columns")
+})
+
+
+# --- combining the sources -------------------------------------------------
+
+test_that("both shapes load together and overlaps collapse", {
+  paste_path <- write_yahoo_file(yahoo_block("Troy Franklin", "WR", "Den", 12, 59))
+  csv_path <- write_yahoo_csv(c("Troy Franklin,WR,Den", "Kareem Hunt,RB,KC"))
+  out <- load_yahoo_names(c(paste_path, csv_path))
+
+  expect_equal(nrow(out), 2)
+  expect_setequal(out$name, c("Troy Franklin", "Kareem Hunt"))
+})
+
+test_that("sources that do not exist are skipped, not fatal", {
+  csv_path <- write_yahoo_csv("Kareem Hunt,RB,KC")
+  out <- load_yahoo_names(c(file.path(tempdir(), "gone.txt"), csv_path))
+  expect_equal(out$name, "Kareem Hunt")
+  expect_null(load_yahoo_names(file.path(tempdir(), "gone.txt")))
+})
+
+
 # --- normalising -----------------------------------------------------------
 
 test_that("a generational suffix does not change the key", {

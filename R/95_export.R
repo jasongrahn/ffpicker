@@ -1,3 +1,14 @@
+#' Every Yahoo-sourced name list, in the order they were collected.
+#'
+#' A constant so the set is stated once and adding the next position page is a
+#' one-line change. K and DEF have no CSV here: defenses are handled by rule
+#' (`yahoo_defense_name()`), and the kickers the paste misses are too few and
+#' too deep to be worth a page.
+YAHOO_NAME_SOURCES <- c(
+  "docs/yahoo-player-names.txt",
+  "docs/qb.csv", "docs/rb.csv", "docs/wr.csv", "docs/te.csv"
+)
+
 #' Export the Board as a Yahoo "import rankings" CSV.
 #'
 #' Yahoo's draft room can be told to order its own best-available list by an
@@ -49,12 +60,14 @@
 #' @param league_config Parsed league config, for `teams` and
 #'   `draft$defer_until_round`.
 #' @param path Where to write. Directory is created if absent.
-#' @param yahoo_names_path Pasted Yahoo player list used to correct spellings.
-#'   NULL, or a path that does not exist, writes our own spellings unchanged.
+#' @param yahoo_names_path Yahoo name sources used to correct spellings: the
+#'   draft-room paste, plus the position-page CSVs that reach the deep players
+#'   the paste stops short of. NULL, or paths that do not exist, writes our own
+#'   spellings unchanged.
 #' @return `path`, invisibly. Writes a CSV of every player, rank 1..n.
 export_yahoo_rankings <- function(draft_board, draft_fallback, league_config,
                                   path = "data/yahoo_rankings.csv",
-                                  yahoo_names_path = "docs/yahoo-player-names.txt") {
+                                  yahoo_names_path = YAHOO_NAME_SOURCES) {
   pool <- yahoo_ranking_order(draft_board, draft_fallback, league_config)
 
   out <- data.frame(
@@ -72,10 +85,11 @@ export_yahoo_rankings <- function(draft_board, draft_fallback, league_config,
   is_def <- out$position == "DEF"
   out$name[is_def] <- yahoo_defense_name(out$name[is_def])
 
-  # Optional by design: the list is a manual paste that will go stale, and a
+  # Optional by design: these are manual exports that will go stale, and a
   # missing one must degrade to our spellings rather than break the export.
-  if (!is.null(yahoo_names_path) && file.exists(yahoo_names_path)) {
-    out <- align_yahoo_names(out, parse_yahoo_names(yahoo_names_path))
+  yahoo <- if (is.null(yahoo_names_path)) NULL else load_yahoo_names(yahoo_names_path)
+  if (!is.null(yahoo)) {
+    out <- align_yahoo_names(out, yahoo)
     out$yahoo_matched <- NULL
   }
 
