@@ -35,8 +35,7 @@ URGENCY_LABELS <- c(
 #'   the same shape so renderTable() has something to draw.
 scarcity_display <- function(report) {
   if (is.null(report) || nrow(report) == 0) report <- report[0, , drop = FALSE]
-  ordered <- report[order(report$urgency, -vor_best_or_na(report),
-                          report$tier_supply, na.last = TRUE), ]
+  ordered <- rank_positions(report)
   out <- data.frame(
     Position = position_name(ordered$pos),
     Need = as.integer(ordered$still_needed),
@@ -50,7 +49,7 @@ scarcity_display <- function(report) {
   out
 }
 
-#' The position scarcity_report() says to take next, or NA if nothing is needed.
+#' Rank a scarcity report's positions: the one draft-order every caller uses.
 #'
 #' Most urgent first, then most value at stake, then thinnest live tier.
 #'
@@ -63,14 +62,29 @@ scarcity_display <- function(report) {
 #' two equally urgent positions the one to take is the one where passing costs
 #' more points, and VOR is the only cross-position-comparable number available.
 #' Thinnest tier stays as the last tiebreak, where it still means something.
+#'
+#' This exists as one function because the alternative already failed. When
+#' target_position(), scarcity_display() and explain_scarcity() each held their
+#' own copy of the sort, fixing two of them left the third ranking by the old
+#' rule -- so the app recommended CeeDee Lamb while the sentence around his
+#' name explained a tight end shortage (reported 2026-09-06). Three orderings
+#' that must agree are three chances to disagree. Callers get this one or none.
+#'
+#' @param report data.frame from scarcity_report().
+#' @return `report`, rows reordered. Rows are not filtered.
+rank_positions <- function(report) {
+  report[order(report$urgency, -vor_best_or_na(report), report$tier_supply,
+               na.last = TRUE), ]
+}
+
+#' The position scarcity_report() says to take next, or NA if nothing is needed.
+#'
 #' @return Single position code, or NA_character_ when no starter slot is open.
 target_position <- function(report) {
   if (is.null(report) || nrow(report) == 0) return(NA_character_)
   needed <- report[report$still_needed > 0, ]
   if (nrow(needed) == 0) return(NA_character_)
-  needed <- needed[order(needed$urgency, -vor_best_or_na(needed),
-                         needed$tier_supply, na.last = TRUE), ]
-  needed$pos[1]
+  rank_positions(needed)$pos[1]
 }
 
 #' `vor_best` as a plain numeric, tolerating a report that predates the column.
@@ -112,7 +126,7 @@ recommend_picks <- function(report, remaining_board, remaining_fallback, n = 3) 
   ranked <- if (nrow(rb) == 0) empty else data.frame(
     Player = rb$player, Pos = rb$pos, Team = rb$team,
     Tier = as.integer(rb$tier),
-    Value = sprintf("%.0f VOR", rb$vor),
+    Value = sprintf("+%.0f pts", rb$vor),
     stringsAsFactors = FALSE
   )
 
@@ -125,7 +139,7 @@ recommend_picks <- function(report, remaining_board, remaining_fallback, n = 3) 
       unranked <- data.frame(
         Player = fb$player, Pos = fb$pos, Team = fb$team,
         Tier = NA_integer_,
-        Value = sprintf("ECR %.0f", fb$ecr),
+        Value = sprintf("expert rank %.0f", fb$ecr),
         stringsAsFactors = FALSE
       )
       out <- rbind(out, head(unranked, n - nrow(out)))
@@ -175,8 +189,20 @@ explain_scarcity <- function(report, picks = NULL) {
     return("Starting lineup is full. Draft best available for the bench.")
   }
 
-  ranked <- needed[order(needed$urgency, needed$tier_supply), ]
+  ranked <- rank_positions(needed)
+
+  # Describe the row belonging to the player actually being named, not merely
+  # the top-ranked row. These are the same row whenever recommend_picks() and
+  # this function were handed the same report -- but when they diverged, the
+  # sentence read "Take CeeDee Lamb (WR, DAL) now. Only 1 tight end left at
+  # that level", naming a receiver and counting tight ends (reported
+  # 2026-09-06). Keying off `picks` makes the name and the noun the same fact,
+  # so no future re-ranking can split them again.
   top <- ranked[1, ]
+  if (!is.null(picks) && nrow(picks) > 0) {
+    matched <- ranked[ranked$pos == picks$Pos[1], ]
+    if (nrow(matched) > 0) top <- matched[1, ]
+  }
   gap <- top$picks_until_turn
   pos <- position_name(top$pos)
 

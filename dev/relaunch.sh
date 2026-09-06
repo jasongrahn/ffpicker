@@ -8,24 +8,26 @@
 #   dev/relaunch.sh              # empty log, app opens on the setup form
 #   dev/relaunch.sh --slot 5     # log pre-seeded as a started 10-team draft
 #                                # at slot 5, app opens straight on the board
-#   dev/relaunch.sh --force      # wipe even a log that looks like a real draft
+#   dev/relaunch.sh --force      # wipe even when data/DRAFT_IS_LIVE exists
 #   dev/relaunch.sh --no-wipe    # restart the server, keep the log as-is
 #
-# SAFETY. The real draft is a live event on a 1-minute pick clock, and this
-# script's whole job is to delete the Pick Log. Losing the log mid-draft means
-# losing the record of every pick made so far, with no time to rebuild it. So:
+# SAFETY. Wiping is the normal QA path and is never questioned. Two mechanisms
+# instead, neither of which fires during development:
 #
-#   * the current log is always archived to dev/pick_log_archive/ before being
-#     touched, timestamped, whatever else happens;
-#   * if the log holds more than $REAL_DRAFT_PICKS net picks it is treated as a
-#     real draft in progress and the script refuses to wipe without --force.
+#   * the current log is always archived to dev/pick_log_archive/ first,
+#     timestamped, whatever else happens. This is the real net -- it is
+#     lossless, so a mistaken wipe costs one copy command to undo.
+#   * if data/DRAFT_IS_LIVE exists, wiping is refused without --force.
 #
-# Do not add this to a hook, alias, or watcher that could fire unattended.
+# The marker is deliberate rather than inferred. An earlier version guessed
+# from pick count -- more than 10 picks meant "probably the real draft" -- and
+# immediately blocked a routine 16-pick QA run. Pick count cannot tell a long
+# QA session from a live draft, because they look identical. `touch
+# data/DRAFT_IS_LIVE` on draft night, delete it afterwards.
 
 set -euo pipefail
 
 PORT=7645
-REAL_DRAFT_PICKS=10
 
 root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 log_path="$root/data/pick_log.jsonl"
@@ -54,23 +56,17 @@ if [ -s "$log_path" ]; then
   echo "archived current log -> dev/pick_log_archive/pick_log-$stamp.jsonl"
 fi
 
-# --- refuse to wipe something that looks like the real thing --------------
-if [ "$wipe" -eq 1 ] && [ -s "$log_path" ]; then
-  made=$(grep -c '"type":"pick_made"' "$log_path" || true)
-  undone=$(grep -c '"type":"pick_corrected"' "$log_path" || true)
-  net=$(( made - undone ))
-  if [ "$net" -gt "$REAL_DRAFT_PICKS" ] && [ "$force" -eq 0 ]; then
-    cat >&2 <<EOF
+# --- refuse only when explicitly told the draft is live -------------------
+if [ "$wipe" -eq 1 ] && [ -e "$root/data/DRAFT_IS_LIVE" ] && [ "$force" -eq 0 ]; then
+  cat >&2 <<EOF
 
-REFUSING TO WIPE. The Pick Log holds $net picks, which is more than the $REAL_DRAFT_PICKS
-expected from an inspection session. This looks like a real draft in progress.
+REFUSING TO WIPE. data/DRAFT_IS_LIVE exists, so this log is the real draft.
 
-A copy is safe in dev/pick_log_archive/ either way. If you are certain this is
-throwaway data, re-run with --force. If the draft is live, do not.
+A copy is safe in dev/pick_log_archive/ either way. To wipe anyway, re-run
+with --force. When the draft is over, delete data/DRAFT_IS_LIVE.
 
 EOF
-    exit 1
-  fi
+  exit 1
 fi
 
 # --- stop the running server ---------------------------------------------

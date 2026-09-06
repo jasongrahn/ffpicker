@@ -66,9 +66,28 @@ pick_ui <- function(initial_team) {
       ),
       column(
         8,
+        h4("Best available", style = "margin-top: 0;"),
         tableOutput("board"),
-        h4("No current-season data yet (mostly rookies)"),
-        tableOutput("fallback_board")
+        helpText(
+          strong("Extra pts"), " = fantasy points this player is expected to score ",
+          "over a season beyond the best man you could get for free off the ",
+          "waiver wire at the same position. It is the number to compare across ",
+          "positions -- 40 extra points from a running back and 40 from a ",
+          "receiver are worth the same to you.",
+          br(),
+          strong("Tier"), " = a gap in that number big enough to matter, counted ",
+          "within one position only. The last tier-3 receiver and the first ",
+          "tier-4 receiver are a real drop apart; a tier-3 receiver and a ",
+          "tier-3 kicker have nothing to do with each other."
+        ),
+        h4("No current-season data yet (mostly rookies)", style = "margin-top: 20px;"),
+        tableOutput("fallback_board"),
+        helpText(
+          strong("Expert rank"), " = where a consensus of fantasy analysts drafts ",
+          "this player, lower being earlier. These players have no ",
+          "current-season stats to project from, so there is no Extra pts for ",
+          "them and they are not directly comparable to the table above."
+        )
       )
     )
   )
@@ -205,13 +224,20 @@ server <- function(input, output, session) {
     # renderTable() formats every numeric column alike, so a shared digits=
     # would print tiers as "1.00". Tier is a label, not a measurement.
     out$tier <- as.integer(out$tier)
+    # "vor" and "ecr" are jargon, and CLAUDE.md makes plain English a product
+    # feature rather than a courtesy: under a 1-minute clock a header you have
+    # to decode is a header you ignore. Spelled out here, defined in the
+    # legend under each table.
+    names(out) <- c("Tier", "Player", "Pos", "Team", "Extra pts")
     out
   }, digits = 1)
 
   output$fallback_board <- renderTable({
     req(started())
     available <- remaining_draft_pool(draft_fallback, state())
-    head(available[, c("ecr", "player", "pos", "team")], 30)
+    out <- head(available[, c("ecr", "player", "pos", "team")], 30)
+    names(out) <- c("Expert rank", "Player", "Pos", "Team")
+    out
   })
 }
 

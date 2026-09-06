@@ -147,7 +147,7 @@ test_that("recommend_picks() names ranked players best-VOR-first", {
   out <- recommend_picks(mk_report(), mk_board(), mk_fb())
   expect_equal(out$Player, c("Top RB", "Mid RB", "Low RB"))
   expect_equal(out$Team[1], "ATL")
-  expect_equal(out$Value[1], "180 VOR")
+  expect_equal(out$Value[1], "+180 pts")
 })
 
 test_that("recommend_picks() tops up from the fallback when the Board runs short", {
@@ -155,7 +155,7 @@ test_that("recommend_picks() tops up from the fallback when the Board runs short
   out <- recommend_picks(mk_report(), board, mk_fb())
   expect_equal(out$Player, c("Top RB", "Rookie RB"))
   expect_true(is.na(out$Tier[2]))
-  expect_equal(out$Value[2], "ECR 40")
+  expect_equal(out$Value[2], "expert rank 40")
 })
 
 test_that("recommend_picks() finds DSTs, which exist only in the fallback", {
@@ -238,4 +238,65 @@ test_that("a deferred position sorts below every live one and reads as wait-til-
   disp <- scarcity_display(rpt)
   expect_equal(disp$Position[nrow(disp)], "kicker")
   expect_equal(disp$Status[disp$Position == "kicker"], "Wait til late")
+})
+
+# --- Regression: advice line named a WR while counting TEs (2026-09-06) ---
+# Screenshot read: "Take CeeDee Lamb (WR, DAL) now. Only 1 tight end left at
+# that level and 8 picks until your turn -- likely gone."
+
+test_that("explain_scarcity() counts the position of the player it names, not a different one", {
+  # WR and TE both urgency 1 with tier_supply 1. WR wins on value at stake, so
+  # recommend_picks() names a receiver -- and the sentence must say receiver.
+  rpt <- data.frame(
+    pos = c("QB", "RB", "TE", "WR"),
+    still_needed = c(1, 2, 2, 2),
+    tier_supply = c(5, 4, 1, 1),
+    picks_until_turn = 8L,
+    survives = FALSE,
+    vor_best = c(45, 66.9, 26.5, 68),
+    deferred = FALSE,
+    urgency = 1L,
+    stringsAsFactors = FALSE
+  )
+  picks <- data.frame(Player = "CeeDee Lamb", Pos = "WR", Team = "DAL",
+                      Tier = 6L, Value = "+68 pts", stringsAsFactors = FALSE)
+
+  msg <- explain_scarcity(rpt, picks)
+
+  expect_match(msg, "CeeDee Lamb \\(WR, DAL\\)", fixed = FALSE)
+  expect_match(msg, "1 wide receiver left")
+  expect_false(grepl("tight end", msg))
+})
+
+test_that("explain_scarcity() describes the named player's position even if it is not the top-ranked one", {
+  # Belt and braces: if a caller hands in a `picks` from some other ranking,
+  # the sentence still stays internally consistent rather than mixing the two.
+  rpt <- data.frame(
+    pos = c("RB", "TE"), still_needed = 2, tier_supply = c(4, 1),
+    picks_until_turn = 8L, survives = FALSE, vor_best = c(140, 26.5),
+    deferred = FALSE, urgency = 1L, stringsAsFactors = FALSE
+  )
+  picks <- data.frame(Player = "Trey McBride", Pos = "TE", Team = "ARI",
+                      Tier = 1L, Value = "+27 pts", stringsAsFactors = FALSE)
+
+  msg <- explain_scarcity(rpt, picks)
+
+  expect_match(msg, "Trey McBride")
+  expect_match(msg, "1 tight end left")
+  expect_false(grepl("running back", msg))
+})
+
+test_that("rank_positions() is the single ordering all three callers share", {
+  rpt <- data.frame(
+    pos = c("K", "RB", "TE", "WR"), still_needed = c(1, 3, 2, 3),
+    tier_supply = 1, picks_until_turn = 4L, survives = FALSE,
+    vor_best = c(61.4, 142.1, 92.0, 116.6), deferred = FALSE, urgency = 1L,
+    stringsAsFactors = FALSE
+  )
+  ranked <- rank_positions(rpt)
+  expect_equal(ranked$pos, c("RB", "WR", "TE", "K"))
+  # All three public callers must agree with it, by construction.
+  expect_equal(target_position(rpt), ranked$pos[1])
+  expect_equal(scarcity_display(rpt)$Position[1], unname(position_name(ranked$pos[1])))
+  expect_match(explain_scarcity(rpt), position_name(ranked$pos[1]))
 })
