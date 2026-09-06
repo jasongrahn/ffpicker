@@ -28,6 +28,30 @@
 #'   contract of picks_until_my_turn() itself, since there is no turn to
 #'   compare against yet. `still_needed`/`tier_supply` don't depend on
 #'   my_slot and are always computed.
+#' Build the position-complete board that scarcity_report() needs.
+#'
+#' The Board alone is not position-complete: it has no DST rows at all (team-level,
+#' no dim_player row -- see _targets.R) and no rookies (has_current_data = FALSE).
+#' Feeding it to scarcity_report() directly means drafting a rookie RB1 or a DST
+#' leaves those picks unclassifiable, so `still_needed` keeps demanding a position
+#' you already filled. Combining fixes the need count.
+#'
+#' Fallback players get a tier one past the Board's worst. They are genuinely
+#' unranked by VOR, so they must not dilute a live tier's `tier_supply`; parking
+#' them behind every ranked player means they only become the live tier once the
+#' ranked ones at that position are actually gone -- which is exactly true.
+#'
+#' @param draft_board from assign_tiers(); needs player_key, player, pos, team, tier.
+#' @param draft_fallback from build_fallback_board() + dst_pool; no tier column.
+#' @return data.frame with the five shared columns, fallback rows tier-padded.
+scarcity_input <- function(draft_board, draft_fallback) {
+  cols <- c("player_key", "player", "pos", "team", "tier")
+  board <- as.data.frame(draft_board)[, cols]
+  fb <- as.data.frame(draft_fallback)[, setdiff(cols, "tier")]
+  fb$tier <- max(board$tier, na.rm = TRUE) + 1L
+  rbind(board, fb)
+}
+
 scarcity_report <- function(draft_board, pick_log_state, league_config) {
   starters <- league_config$roster$starters
   flex_positions <- unlist(league_config$roster$flex_eligible$FLEX)

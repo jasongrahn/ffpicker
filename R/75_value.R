@@ -14,15 +14,29 @@
 #' than a silently guessed value -- full projection modeling (draft capital as
 #' the rookie prior) is Phase 4, not this.
 #'
+#' Phase 8.1 adds a 2nd, parallel basis: EXPECTED points (opportunity, from
+#' `player_opportunity` -- see R/40_opportunity.R), scored under this same
+#' league's rules. Actual-basis ranks on realized TDs/yards, which bakes in
+#' a season's worth of touchdown luck; expected basis ranks on volume
+#' (targets/carries), which CLAUDE.md's core principle says is the sticky,
+#' predictive signal. Both bases computed and kept side by side -- caller
+#' (compute_vor()) picks which one drives VOR.
+#'
 #' @param fct_player_week_scored data.table from add_fantasy_points().
 #' @param draft_pool data.table from build_draft_pool().
 #' @param current_season Season to base points-per-game on.
 #' @param availability_seasons Seasons spanned by the availability-rate lookback.
+#' @param player_opportunity data.table from build_player_opportunity_value()
+#'   (R/40_opportunity.R), cols player_key/points_exp/games_exp, or NULL.
+#'   NULL (default) skips the expected-basis columns entirely -- keeps
+#'   pipeline runnable before `_targets.R` is rewired to pass this in.
 #' @return `draft_pool` with added columns: ppg_current, availability_rate,
-#'   projected_points, has_current_data.
+#'   projected_points, has_current_data, plus (when `player_opportunity` is
+#'   supplied) ppg_expected, projected_points_exp, has_expected_data.
 build_player_value <- function(fct_player_week_scored, draft_pool,
                                 current_season = 2025,
-                                availability_seasons = 2023:2025) {
+                                availability_seasons = 2023:2025,
+                                player_opportunity = NULL) {
   fpws <- fct_player_week_scored[fct_player_week_scored$season_type == "REG", ]
 
   # aggregate() errors on a zero-row input rather than returning an empty
@@ -67,6 +81,24 @@ build_player_value <- function(fct_player_week_scored, draft_pool,
   availability <- ifelse(is.na(value$availability_rate), 1, value$availability_rate)
   value$projected_points <- ifelse(value$has_current_data, value$ppg_current * 17 * availability, NA)
 
+  # expected basis -- same 17-game/availability projection math as above,
+  # just fed ppg_expected instead of ppg_current. NULL player_opportunity ->
+  # skip block entirely, no expected cols added (old callers unaffected).
+  if (!is.null(player_opportunity)) {
+    value <- merge(value, player_opportunity[, c("player_key", "points_exp", "games_exp")],
+                   by = "player_key", all.x = TRUE)
+    # merge() doesn't guarantee row order matches `value`'s pre-merge order
+    # (default sort=TRUE re-sorts by player_key) -- recompute availability
+    # from the post-merge frame itself instead of reusing the vector above,
+    # so it can never misalign row-to-row.
+    availability_exp <- ifelse(is.na(value$availability_rate), 1, value$availability_rate)
+    value$ppg_expected <- value$points_exp / value$games_exp
+    value$has_expected_data <- !is.na(value$ppg_expected)
+    value$projected_points_exp <- ifelse(value$has_expected_data, value$ppg_expected * 17 * availability_exp, NA)
+    value$points_exp <- NULL
+    value$games_exp <- NULL
+  }
+
   value
 }
 
@@ -83,11 +115,29 @@ build_player_value <- function(fct_player_week_scored, draft_pool,
 #' of scope here) -- positions with no flex competition (QB, K) get their own
 #' dedicated replacement level.
 #'
+#' Phase 8.1: `basis` picks which projection column drives replacement level
+#' and VOR -- "expected" (opportunity-based, CLAUDE.md's preferred signal)
+#' or "actual" (realized points, the old default). Everything else (dynamic
+#' replacement level from league_config, shared FLEX pool) is identical
+#' regardless of basis.
+#'
+#' Board-survival rule for basis="expected": a has_current_data player with
+#' no expected data (no `projected_points_exp`, e.g. missing from
+#' `player_opportunity`) falls back per-row to his actual-based
+#' `projected_points` rather than being excluded from VOR -- he stays on
+#' Board and ranked, just off the actual number instead of the expected one.
+#' This also makes basis="expected" a strict superset behavior of the old
+#' actual-only compute_vor(): a value_table with no `projected_points_exp`
+#' column at all (pre-Phase-8.1 caller) falls back for every row, reproducing
+#' the pre-existing actual-only ranking exactly.
+#'
 #' @param value_table data.table from build_player_value().
 #' @param league_config Parsed league config (list), e.g. load_config("league").
+#' @param basis Which projection drives VOR: "expected" (default) or "actual".
 #' @return `value_table`, restricted to rows with current-season data, with
 #'   added columns: replacement_value, vor.
-compute_vor <- function(value_table, league_config) {
+compute_vor <- function(value_table, league_config, basis = c("expected", "actual")) {
+  basis <- match.arg(basis)
   teams <- league_config$teams
   starters <- league_config$roster$starters
   flex_positions <- unlist(league_config$roster$flex_eligible$FLEX)
@@ -96,13 +146,20 @@ compute_vor <- function(value_table, league_config) {
   all_positions <- unique(vt$pos)
   non_flex_positions <- setdiff(all_positions, flex_positions)
 
+  # projection column actually used for ranking, per basis + fallback rule above.
+  proj <- if (basis == "actual" || is.null(vt[["projected_points_exp"]])) {
+    vt$projected_points
+  } else {
+    ifelse(is.na(vt$projected_points_exp), vt$projected_points, vt$projected_points_exp)
+  }
+
   replacement_value <- setNames(numeric(0), character(0))
 
   for (p in non_flex_positions) {
     n_starters <- starters[[p]]
     if (is.null(n_starters)) n_starters <- 0
     replacement_rank <- teams * n_starters
-    ranked <- sort(vt$projected_points[vt$pos == p], decreasing = TRUE)
+    ranked <- sort(proj[vt$pos == p], decreasing = TRUE)
     replacement_value[p] <- if (replacement_rank < length(ranked)) {
       ranked[replacement_rank + 1]
     } else {
@@ -113,7 +170,7 @@ compute_vor <- function(value_table, league_config) {
   if (length(flex_positions) > 0 && any(vt$pos %in% flex_positions)) {
     flex_starter_slots <- sum(vapply(flex_positions, function(p) starters[[p]] %||% 0, numeric(1)))
     flex_slots_total <- teams * (flex_starter_slots + (starters$FLEX %||% 0))
-    flex_ranked <- sort(vt$projected_points[vt$pos %in% flex_positions], decreasing = TRUE)
+    flex_ranked <- sort(proj[vt$pos %in% flex_positions], decreasing = TRUE)
     flex_replacement <- if (flex_slots_total < length(flex_ranked)) {
       flex_ranked[flex_slots_total + 1]
     } else {
@@ -123,7 +180,7 @@ compute_vor <- function(value_table, league_config) {
   }
 
   vt$replacement_value <- replacement_value[vt$pos]
-  vt$vor <- vt$projected_points - vt$replacement_value
+  vt$vor <- proj - vt$replacement_value
   vt
 }
 
@@ -144,8 +201,18 @@ assign_tiers <- function(vor_table, gap_multiplier = 1) {
   result <- do.call(rbind, lapply(split(vor_table, vor_table$pos), function(vt) {
     vt <- vt[order(vt$vor, decreasing = TRUE), ]
     gaps <- -diff(vt$vor)
-    threshold <- gap_multiplier * sd(vt$vor)
-    vt$tier <- cumsum(c(1, gaps > threshold))
+    # Threshold scales off the spread of the *gaps*, not the spread of VOR.
+    # sd(vor) is the wrong yardstick: it measures the whole position's range
+    # (elite RB to waiver RB), and a gap between two *consecutive* players
+    # essentially never spans that. Measured on the real 2025 board it cut
+    # every position into 2 tiers -- 114 running backs sharing "tier 1",
+    # which tells a drafter nothing and made the Phase 3.6 run guide inert.
+    # sd(gaps) asks the right question: is this drop unusual *for a step
+    # between neighbours*? Same board, same multiplier: 15-19 tiers at
+    # RB/WR/QB with 1-8 players in the top ones. Single-player top tiers are
+    # correct, not a bug -- the best back really is alone above the field.
+    threshold <- gap_multiplier * sd(gaps)
+    vt$tier <- cumsum(c(1L, gaps > threshold))
     vt
   }))
   rownames(result) <- NULL

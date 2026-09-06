@@ -86,11 +86,32 @@ test_that("build_player_value: a player with no current-season games gets NA pro
   expect_true(is.na(result$projected_points))
 })
 
-test_that("assign_tiers cuts a new tier only where the VOR gap exceeds the position's spread", {
+test_that("assign_tiers cuts a new tier where a gap is unusual for a step between neighbours", {
   vt <- data.frame(player_key = 1:4, pos = "RB", vor = c(50, 45, 10, 5))
-  # sd(vor) = 23.27; gaps are 5, 35, 5 -> only the 35 gap crosses 1x sd
+  # gaps are 5, 35, 5 -> sd(gaps) = 17.32; only the 35 gap crosses 1x that
   result <- assign_tiers(vt)
-  expect_equal(result$tier, c(1, 1, 2, 2))
+  expect_equal(result$tier, c(1L, 1L, 2L, 2L))
+})
+
+test_that("assign_tiers separates a gently-sloping position into several tiers", {
+  # Regression guard for the sd(vor) bug: a realistic long tail with a few real
+  # cliffs. sd(vor) as the threshold collapsed this kind of shape into 2 tiers.
+  vor <- c(100, 60, 58, 56, 54, 30, 29, 28, 27, 26)
+  vt <- data.frame(player_key = 1:10, pos = "WR", vor = vor)
+  result <- assign_tiers(vt)
+  expect_gt(max(result$tier), 2)
+  # The two cliffs (100->60 and 54->30) are where the breaks must land.
+  expect_equal(result$tier[1:2], c(1L, 2L))
+  expect_true(result$tier[6] > result$tier[5])
+})
+
+test_that("assign_tiers tiers each position independently", {
+  vt <- data.frame(
+    player_key = 1:6, pos = c("RB", "RB", "RB", "WR", "WR", "WR"),
+    vor = c(50, 45, 10, 50, 45, 10)
+  )
+  result <- assign_tiers(vt)
+  expect_equal(result$tier[result$pos == "RB"], result$tier[result$pos == "WR"])
 })
 
 test_that("build_fallback_board returns only no-current-data rows, sorted by ascending ecr", {
@@ -112,4 +133,141 @@ test_that("build_fallback_board excludes rows that have current-season data", {
   result <- build_fallback_board(vt)
   expect_false(1 %in% result$player_key)
   expect_equal(nrow(result), 1)
+})
+
+# --- Phase 8.1: expected-points ranking basis (see PLAN_1.md) ---
+
+test_that("build_player_value: player_opportunity = NULL (default) adds no expected-basis columns -- pipeline stays runnable pre-wiring", {
+  fpws <- data.frame(
+    player_key = c(1, 1), season = c(2025, 2025), week = c(1, 2),
+    season_type = "REG", fantasy_points = c(10, 20)
+  )
+  pool <- data.frame(player_key = 1, player = "Test Player", pos = "RB", team = "XX", ecr = 5, bye = 9)
+
+  result <- build_player_value(fpws, pool, current_season = 2025, availability_seasons = 2023:2025)
+
+  expect_false("ppg_expected" %in% names(result))
+  expect_false("projected_points_exp" %in% names(result))
+  expect_false("has_expected_data" %in% names(result))
+  # old columns present and unchanged
+  expect_equal(result$ppg_current, 15)
+  expect_true(result$has_current_data)
+})
+
+test_that("build_player_value: expected projection uses ppg_expected * 17 * the SAME availability multiplier as the actual projection", {
+  fpws <- data.frame(
+    player_key = c(1, 1), season = c(2025, 2025), week = c(1, 2),
+    season_type = "REG", fantasy_points = c(10, 20)
+  )
+  pool <- data.frame(player_key = 1, player = "Test Player", pos = "RB", team = "XX", ecr = 5, bye = 9)
+  opp <- data.frame(player_key = 1, points_exp = 24, games_exp = 2, points_actual = 30, points_diff = 6)
+
+  result <- build_player_value(fpws, pool,
+    current_season = 2025, availability_seasons = 2023:2025,
+    player_opportunity = opp
+  )
+
+  # current season (2025) falls inside availability_seasons (2023:2025), so
+  # availability_rate is a real computed value here, not the NA->1 fallback:
+  # games_played_window = 2, active_seasons_window = 1 -> 2/17.
+  avail <- 2 / 17
+  expect_equal(result$availability_rate, avail)
+  expect_equal(result$ppg_expected, 12)
+  expect_equal(result$projected_points_exp, 12 * 17 * avail)
+  expect_true(result$has_expected_data)
+  # old actual-based columns stay untouched, side by side, same multiplier
+  expect_equal(result$ppg_current, 15)
+  expect_equal(result$projected_points, 15 * 17 * avail)
+})
+
+test_that("build_player_value: expected projection falls back to availability = 1 when availability_rate is NA (mirrors actual-side rule exactly)", {
+  fpws <- data.frame(
+    player_key = c(1, 1), season = c(2025, 2025), week = c(1, 2),
+    season_type = "REG", fantasy_points = c(10, 20)
+  )
+  pool <- data.frame(player_key = 1, player = "Test Player", pos = "RB", team = "XX", ecr = 5, bye = 9)
+  opp <- data.frame(player_key = 1, points_exp = 24, games_exp = 2, points_actual = 30, points_diff = 6)
+
+  # availability_seasons has zero overlap with current_season's data -> no
+  # avail_stats rows for player 1 -> availability_rate NA -> both bases use 1.
+  result <- build_player_value(fpws, pool,
+    current_season = 2025, availability_seasons = 2020:2022,
+    player_opportunity = opp
+  )
+
+  expect_true(is.na(result$availability_rate))
+  expect_equal(result$projected_points, 15 * 17 * 1)
+  expect_equal(result$projected_points_exp, 12 * 17 * 1)
+})
+
+test_that("build_player_value: Board player (has_current_data) absent from player_opportunity gets NA expected fields, not dropped", {
+  fpws <- data.frame(
+    player_key = c(1, 1), season = c(2025, 2025), week = c(1, 2),
+    season_type = "REG", fantasy_points = c(10, 20)
+  )
+  pool <- data.frame(player_key = 1, player = "Test Player", pos = "RB", team = "XX", ecr = 5, bye = 9)
+  opp <- data.frame(player_key = 999, points_exp = 24, games_exp = 2, points_actual = 30, points_diff = 6)
+
+  result <- build_player_value(fpws, pool,
+    current_season = 2025, availability_seasons = 2023:2025,
+    player_opportunity = opp
+  )
+
+  expect_true(result$has_current_data)
+  expect_false(result$has_expected_data)
+  expect_true(is.na(result$ppg_expected))
+  expect_true(is.na(result$projected_points_exp))
+})
+
+test_that("compute_vor basis='expected' (default) ranks on projected_points_exp when present", {
+  vt <- data.frame(
+    player_key = 1:4,
+    pos = "QB",
+    projected_points = c(20, 15, 10, 5),
+    projected_points_exp = c(5, 40, 30, 25),
+    has_current_data = TRUE
+  )
+  result <- compute_vor(vt, synthetic_league)
+  # sorted desc by expected: 40,30,25,5 -> replacement_rank 2 -> 3rd ranked = 25
+  expect_equal(result$replacement_value, rep(25, 4))
+  expect_equal(result$vor, c(5 - 25, 40 - 25, 30 - 25, 25 - 25))
+})
+
+test_that("compute_vor basis='actual' ignores projected_points_exp entirely", {
+  vt <- data.frame(
+    player_key = 1:4,
+    pos = "QB",
+    projected_points = c(20, 15, 10, 5),
+    projected_points_exp = c(5, 40, 30, 25),
+    has_current_data = TRUE
+  )
+  result <- compute_vor(vt, synthetic_league, basis = "actual")
+  expect_equal(result$replacement_value, rep(10, 4))
+  expect_equal(result$vor, c(10, 5, 0, -5))
+})
+
+test_that("compute_vor basis='expected' falls back per-row to actual projection when expected is missing (Board-survival rule)", {
+  vt <- data.frame(
+    player_key = 1:4,
+    pos = "QB",
+    projected_points = c(20, 15, 10, 5),
+    projected_points_exp = c(NA, 40, 30, NA),
+    has_current_data = TRUE
+  )
+  result <- compute_vor(vt, synthetic_league)
+  # effective projection: 20(fallback), 40, 30, 5(fallback) -> sorted desc 40,30,20,5 -> 3rd = 20
+  expect_equal(result$replacement_value, rep(20, 4))
+  expect_equal(result$vor, c(20 - 20, 40 - 20, 30 - 20, 5 - 20))
+})
+
+test_that("compute_vor default basis stays backward-compatible with value tables that have no projected_points_exp column at all", {
+  vt <- data.frame(
+    player_key = 1:4,
+    pos = "QB",
+    projected_points = c(20, 15, 10, 5),
+    has_current_data = TRUE
+  )
+  result <- compute_vor(vt, synthetic_league)
+  expect_equal(result$replacement_value, rep(10, 4))
+  expect_equal(result$vor, c(10, 5, 0, -5))
 })

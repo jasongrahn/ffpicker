@@ -16,6 +16,10 @@ league_config <- targets::tar_read(league_config, store = file.path(root, "_targ
 draft_board <- targets::tar_read(draft_board, store = file.path(root, "_targets"))
 draft_fallback <- targets::tar_read(draft_fallback, store = file.path(root, "_targets"))
 
+# Position-complete board for the run guide. Built once -- it's static input,
+# same as the Board itself. See scarcity_input() for why the Board alone is wrong.
+scarcity_board <- scarcity_input(draft_board, draft_fallback)
+
 log_path <- file.path(root, "data", "pick_log.jsonl")
 dir.create(dirname(log_path), showWarnings = FALSE, recursive = TRUE)
 
@@ -38,6 +42,13 @@ pick_ui <- function(initial_team) {
       style = "font-size: 1.3em; font-weight: bold; padding: 8px 12px; margin-bottom: 12px; background: #eef; border-radius: 4px;",
       textOutput("turn_readout", inline = TRUE)
     ),
+    # The Board says who is best; this says which *position* to take now. Kept
+    # above the fold and in plain English because it is the actual decision
+    # being made, on a 1-minute clock, by someone who does not read "RB tier 3".
+    div(
+      style = "font-size: 1.15em; padding: 8px 12px; margin-bottom: 12px; background: #efe; border-left: 4px solid #4a4; border-radius: 4px;",
+      textOutput("scarcity_advice", inline = TRUE)
+    ),
     fluidRow(
       column(
         4,
@@ -47,7 +58,11 @@ pick_ui <- function(initial_team) {
         selectizeInput("player", "Player", choices = NULL,
                        options = list(placeholder = "search a player")),
         actionButton("make_pick", "Make Pick", class = "btn-primary"),
-        div(style = "margin-top: 8px;", uiOutput("undo_btn"))
+        div(style = "margin-top: 8px;", uiOutput("undo_btn")),
+        h4("Take one of these", style = "margin-top: 20px;"),
+        tableOutput("recommendation"),
+        h4("Position run guide", style = "margin-top: 20px;"),
+        tableOutput("scarcity")
       ),
       column(
         8,
@@ -155,12 +170,37 @@ server <- function(input, output, session) {
     }
   })
 
+  # Both read the same report; compute it once per state change rather than twice.
+  scarcity <- reactive({
+    req(started())
+    scarcity_report(scarcity_board, state(), league_config)
+  })
+
+  # Naming the position is only half the answer under a 1-minute clock; this
+  # names the players, so the Board never has to be scanned by eye mid-pick.
+  recommendation <- reactive({
+    req(started())
+    recommend_picks(scarcity(),
+                    remaining_draft_pool(draft_board, state()),
+                    remaining_draft_pool(draft_fallback, state()))
+  })
+
+  output$scarcity_advice <- renderText(explain_scarcity(scarcity(), recommendation()))
+
+  output$recommendation <- renderTable(recommendation(), digits = 0)
+
+  output$scarcity <- renderTable(scarcity_display(scarcity()), digits = 0)
+
   output$board <- renderTable({
     req(started())
     available <- remaining_draft_pool(draft_board, state())
     available <- available[order(available$tier, -available$vor), ]
-    head(available[, c("tier", "player", "pos", "team", "vor")], 30)
-  })
+    out <- head(available[, c("tier", "player", "pos", "team", "vor")], 30)
+    # renderTable() formats every numeric column alike, so a shared digits=
+    # would print tiers as "1.00". Tier is a label, not a measurement.
+    out$tier <- as.integer(out$tier)
+    out
+  }, digits = 1)
 
   output$fallback_board <- renderTable({
     req(started())
