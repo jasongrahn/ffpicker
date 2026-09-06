@@ -20,7 +20,8 @@ Use this index.
 | 6 | `20260905-3.md` | Rookie fallback section built, live-verified. |
 | 7 | `20260905-4.md` | Phase 3.5 hardened. Phase 8 identified as next. |
 | 8 | `20260906.md` | Team-assignment gap found and fixed. Phase 3.5 actually done. |
-| 9 | `20260906-2.md` | **Current.** Phase 3.6 run guide built. Expected-points ranking ready to wire. Budget rules. |
+| 9 | `20260906-2.md` | Phase 3.6 run guide built. Expected-points ranking ready to wire. Budget rules. |
+| 10 | `20260906-3.md` | **Current.** Expected-points wired. Three recommendation bugs killed, all found by screenshot. `dev/relaunch.sh`. |
 
 ## Reading rule
 
