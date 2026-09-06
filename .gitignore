@@ -10,3 +10,4 @@ data/stage/
 data/mart/
 data/ff.duckdb
 *.log
+dev/pick_log_archive/
