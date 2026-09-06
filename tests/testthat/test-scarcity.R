@@ -244,3 +244,69 @@ test_that("a roster pick that isn't on the board is excluded from still_needed r
 
   expect_equal(result$still_needed[result$pos == "QB"], 1)
 })
+
+# --- Regression: kicker recommended first overall (reported 2026-09-06) ---
+# The app told the drafter to take Jason Myers (K, SEA) with the first pick of
+# the draft. Three independent causes; these cover the two that live here.
+
+test_that("defer_until_round parks a position at the lowest urgency before its round, even with an open starter slot", {
+  board <- data.frame(player_key = 1:2, pos = c("RB", "K"), tier = 1,
+                      vor = c(140, 61))
+  state <- list(rosters = list(), my_team = "JGrahnasaurs", my_slot = 5, teams = 10,
+                drafted_players = c())
+  cfg <- league
+  cfg$draft <- list(defer_until_round = list(K = 16))
+
+  result <- scarcity_report(board, state, cfg)
+
+  # Round 1 of 17. K's starter slot is genuinely open and its tier will not
+  # survive, which is urgency 1 under the old rules -- the deferral is what
+  # stops that becoming a first-round kicker.
+  expect_equal(result$still_needed[result$pos == "K"], 1)
+  expect_true(result$deferred[result$pos == "K"])
+  expect_equal(result$urgency[result$pos == "K"], 5L)
+  expect_false(result$deferred[result$pos == "RB"])
+  expect_equal(result$urgency[result$pos == "RB"], 1L)
+})
+
+test_that("defer_until_round stops deferring once the draft reaches that round", {
+  board <- data.frame(player_key = 1:2, pos = c("RB", "K"), tier = 1,
+                      vor = c(140, 61))
+  # 150 picks made in a 10-team league -> pick 151 -> round 16.
+  state <- list(rosters = list(), my_team = "JGrahnasaurs", my_slot = 5, teams = 10,
+                drafted_players = seq_len(150))
+  cfg <- league
+  cfg$draft <- list(defer_until_round = list(K = 16))
+
+  result <- scarcity_report(board, state, cfg)
+
+  expect_false(result$deferred[result$pos == "K"])
+  expect_true(result$urgency[result$pos == "K"] < 5L)
+})
+
+test_that("a config with no defer_until_round defers nothing", {
+  board <- data.frame(player_key = 1:2, pos = c("RB", "K"), tier = 1,
+                      vor = c(140, 61))
+  state <- list(rosters = list(), my_team = "JGrahnasaurs", my_slot = 5, teams = 10,
+                drafted_players = c())
+
+  result <- scarcity_report(board, state, league)
+
+  expect_true(all(!result$deferred))
+})
+
+test_that("vor_best reports the best VOR still available at each position, NA when the position has none", {
+  board <- data.frame(player_key = 1:4, pos = c("RB", "RB", "WR", "DST"), tier = 1,
+                      vor = c(140, 90, 116, NA_real_))
+  state <- list(rosters = list(), my_team = "JGrahnasaurs", my_slot = 5, teams = 10,
+                drafted_players = c())
+
+  result <- scarcity_report(board, state, league)
+
+  expect_equal(result$vor_best[result$pos == "RB"], 140)
+  expect_equal(result$vor_best[result$pos == "WR"], 116)
+  # DST rides in the fallback with no VOR at all; max(na.rm=TRUE) on an
+  # all-NA vector would warn and return -Inf, which would sort as the most
+  # valuable position of all.
+  expect_true(is.na(result$vor_best[result$pos == "DST"]))
+})

@@ -24,7 +24,12 @@
           "type": ["integer", "null"],
           "minimum": 1
         },
-        "rounds": { "type": "integer", "minimum": 1 }
+        "rounds": { "type": "integer", "minimum": 1 },
+        "defer_until_round": {
+          "description": "Positions not to recommend before the given round, even when a starter slot is open. For positions whose VOR spread is real but unpredictable (K especially), last season's points carry almost no signal for next season, so spending an early pick on the leader buys noise. Keys are position codes, values are the first round the position may be recommended in. Omit or leave empty to disable.",
+          "type": "object",
+          "additionalProperties": { "type": "integer", "minimum": 1 }
+        }
       }
     },
     "roster": {

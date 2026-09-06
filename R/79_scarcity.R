@@ -45,10 +45,14 @@
 #' @param draft_fallback from build_fallback_board() + dst_pool; no tier column.
 #' @return data.frame with the five shared columns, fallback rows tier-padded.
 scarcity_input <- function(draft_board, draft_fallback) {
-  cols <- c("player_key", "player", "pos", "team", "tier")
+  cols <- c("player_key", "player", "pos", "team", "tier", "vor")
   board <- as.data.frame(draft_board)[, cols]
-  fb <- as.data.frame(draft_fallback)[, setdiff(cols, "tier")]
+  fb <- as.data.frame(draft_fallback)[, setdiff(cols, c("tier", "vor"))]
   fb$tier <- max(board$tier, na.rm = TRUE) + 1L
+  # Fallback players have no VOR by definition (that is what puts them in the
+  # fallback). NA, not 0: 0 would read as "replacement level", which is a
+  # measurement, and these are unmeasured.
+  fb$vor <- NA_real_
   rbind(board, fb)
 }
 
@@ -97,6 +101,17 @@ scarcity_report <- function(draft_board, pick_log_state, league_config) {
 
   picks_until_turn <- picks_until_my_turn(pick_log_state)
 
+  # Which round the draft is in right now, for defer_until_round below. Uses
+  # overall picks made, so it is correct regardless of whose slot is on the
+  # clock and works before my_slot is known.
+  teams <- pick_log_state$teams %||% league_config$teams
+  current_round <- if (is.null(teams) || is.na(teams) || teams < 1) {
+    NA_integer_
+  } else {
+    as.integer(ceiling((length(pick_log_state$drafted_players) + 1) / teams))
+  }
+  defer_until <- league_config$draft$defer_until_round %||% list()
+
   rows <- lapply(positions, function(p) {
     still_needed <- if (p %in% flex_positions) {
       dedicated_need[[p]] + flex_need
@@ -120,8 +135,29 @@ scarcity_report <- function(draft_board, pick_log_state, league_config) {
     # the clock, so the tier does not reliably survive.
     survives <- if (is.null(picks_until_turn)) NA else tier_supply > picks_until_turn
 
+    # Best VOR still on the board at this position -- how much value is
+    # actually at stake. Scarcity alone cannot rank positions: at pick 1 every
+    # position's tier 1 holds exactly one player, so urgency and tier_supply
+    # tie across RB/WR/TE/K and the sort fell through to alphabetical order,
+    # which recommended a kicker first overall (reported 2026-09-06).
+    vor_best <- if (nrow(live) == 0 || all(is.na(live$vor))) {
+      NA_real_
+    } else {
+      max(live$vor, na.rm = TRUE)
+    }
+
+    # Positions the league config says to leave until late. A kicker's VOR
+    # spread is real (61 points here) but it is pure efficiency noise -- and
+    # ff_opportunity carries no kicker data, so K is the one position still
+    # ranked on last season's ACTUAL points, which barely predict next
+    # season's. Deferring is cheaper than modelling that.
+    deferred <- !is.null(defer_until[[p]]) && !is.na(current_round) &&
+      current_round < defer_until[[p]]
+
     urgency <- if (is.na(survives)) {
       NA_integer_
+    } else if (deferred) {
+      5L # needed eventually, but deliberately parked until its round
     } else if (still_needed > 0 && !survives) {
       1L # needed, and will be gone before your turn -- take it now
     } else if (still_needed > 0 && survives) {
@@ -138,6 +174,8 @@ scarcity_report <- function(draft_board, pick_log_state, league_config) {
       tier_supply = tier_supply,
       picks_until_turn = if (is.null(picks_until_turn)) NA_integer_ else picks_until_turn,
       survives = survives,
+      vor_best = vor_best,
+      deferred = deferred,
       urgency = urgency,
       stringsAsFactors = FALSE
     )

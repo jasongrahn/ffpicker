@@ -22,7 +22,8 @@ count_of <- function(n, noun) paste0(n, " ", noun, if (n == 1) "" else "s")
 #' Urgency codes from scarcity_report(), in words. The integers exist to sort by;
 #' they are not something to show a drafter mid-clock.
 URGENCY_LABELS <- c(
-  "1" = "TAKE NOW", "2" = "Can wait", "3" = "Not needed", "4" = "Not needed"
+  "1" = "TAKE NOW", "2" = "Can wait", "3" = "Not needed", "4" = "Not needed",
+  "5" = "Wait til late"
 )
 
 #' Rewrite scarcity_report() for display: full position names, worded urgency,
@@ -34,7 +35,8 @@ URGENCY_LABELS <- c(
 #'   the same shape so renderTable() has something to draw.
 scarcity_display <- function(report) {
   if (is.null(report) || nrow(report) == 0) report <- report[0, , drop = FALSE]
-  ordered <- report[order(report$urgency, report$tier_supply, na.last = TRUE), ]
+  ordered <- report[order(report$urgency, -vor_best_or_na(report),
+                          report$tier_supply, na.last = TRUE), ]
   out <- data.frame(
     Position = position_name(ordered$pos),
     Need = as.integer(ordered$still_needed),
@@ -50,15 +52,34 @@ scarcity_display <- function(report) {
 
 #' The position scarcity_report() says to take next, or NA if nothing is needed.
 #'
-#' Most urgent first; ties broken by the thinnest live tier, since between two
-#' equally-needed positions the scarcer one disappears first.
+#' Most urgent first, then most value at stake, then thinnest live tier.
+#'
+#' `vor_best` sits ahead of `tier_supply` deliberately. Scarcity on its own
+#' cannot rank positions: assign_tiers() works within a position, so at pick 1
+#' every position's tier 1 holds exactly one player and urgency + tier_supply
+#' tie across RB/WR/TE/K. The sort then fell through to `positions`' own
+#' alphabetical order and answered "kicker" first overall -- correct by the
+#' letter of the old rule, useless in a draft (reported 2026-09-06). Between
+#' two equally urgent positions the one to take is the one where passing costs
+#' more points, and VOR is the only cross-position-comparable number available.
+#' Thinnest tier stays as the last tiebreak, where it still means something.
 #' @return Single position code, or NA_character_ when no starter slot is open.
 target_position <- function(report) {
   if (is.null(report) || nrow(report) == 0) return(NA_character_)
   needed <- report[report$still_needed > 0, ]
   if (nrow(needed) == 0) return(NA_character_)
-  needed <- needed[order(needed$urgency, needed$tier_supply, na.last = TRUE), ]
+  needed <- needed[order(needed$urgency, -vor_best_or_na(needed),
+                         needed$tier_supply, na.last = TRUE), ]
   needed$pos[1]
+}
+
+#' `vor_best` as a plain numeric, tolerating a report that predates the column.
+#'
+#' Degrading to "no value information, fall through to the next tiebreak" beats
+#' erroring. This runs under a 1-minute pick clock, where a blank advice line
+#' is recoverable by reading the board and a crashed app is not.
+vor_best_or_na <- function(report) {
+  if (is.null(report$vor_best)) rep(NA_real_, nrow(report)) else as.numeric(report$vor_best)
 }
 
 #' Name the specific players to take, not just the position.

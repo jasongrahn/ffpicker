@@ -194,7 +194,13 @@ server <- function(input, output, session) {
   output$board <- renderTable({
     req(started())
     available <- remaining_draft_pool(draft_board, state())
-    available <- available[order(available$tier, -available$vor), ]
+    # VOR first, tier only as a tiebreak within equal value. Tiers are assigned
+    # WITHIN a position (assign_tiers() groups by pos), so "tier 1" for a kicker
+    # and "tier 1" for a running back describe unrelated things and cannot be
+    # compared. Sorting by tier first interleaved them and pushed a 61-VOR
+    # kicker and five QBs above a 133-VOR Christian McCaffrey (reported
+    # 2026-09-06). VOR is the only cross-position-comparable number here.
+    available <- available[order(-available$vor, available$tier), ]
     out <- head(available[, c("tier", "player", "pos", "team", "vor")], 30)
     # renderTable() formats every numeric column alike, so a shared digits=
     # would print tiers as "1.00". Tier is a label, not a measurement.

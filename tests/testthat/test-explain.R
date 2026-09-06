@@ -10,6 +10,8 @@ mk_report <- function(...) {
     tier_supply = c(8, 3, 9, 4),
     picks_until_turn = 11L,
     survives = c(TRUE, FALSE, TRUE, FALSE),
+    vor_best = c(40, 120, 100, 90),
+    deferred = FALSE,
     urgency = c(2L, 1L, 2L, 1L),
     stringsAsFactors = FALSE
   )
@@ -25,7 +27,7 @@ test_that("position_name() spells out codes and passes unknowns through", {
 
 test_that("explain_scarcity() names the position that won't survive the turn", {
   msg <- explain_scarcity(mk_report())
-  # RB and TE both urgency 1; RB has the thinner tier so it wins the tiebreak.
+  # RB and TE both urgency 1; RB has more value at stake so it wins the tiebreak.
   expect_match(msg, "Take a running back now")
   expect_match(msg, "Only 3 running backs left")
   expect_match(msg, "11 picks")
@@ -73,7 +75,7 @@ test_that("scarcity_display() sorts most-urgent-first with readable columns", {
   expect_equal(names(out),
                c("Position", "Need", "Left at this level",
                  "Picks to your turn", "Status"))
-  # urgency 1 rows first, thinner tier ahead of thicker within the same urgency.
+  # urgency 1 rows first, more value at stake ahead of less within the same urgency.
   expect_equal(out$Position[1:2], c("running back", "tight end"))
   expect_equal(out$Status[1:2], c("TAKE NOW", "TAKE NOW"))
   expect_equal(out$Status[3], "Can wait")
@@ -88,13 +90,16 @@ test_that("scarcity_display() renders NA urgency as a dash, not NA", {
 test_that("scarcity_input() keeps fallback players behind every ranked player", {
   board <- data.frame(player_key = 1:3, player = c("a", "b", "c"),
                       pos = c("RB", "RB", "WR"), team = "X", tier = c(1L, 2L, 1L),
-                      stringsAsFactors = FALSE)
+                      vor = c(100, 50, 80), stringsAsFactors = FALSE)
   fallback <- data.frame(player_key = 4:5, player = c("rook", "def"),
                          pos = c("RB", "DST"), team = "Y", ecr = c(20, 99),
                          stringsAsFactors = FALSE)
   out <- scarcity_input(board, fallback)
   expect_equal(nrow(out), 5)
   expect_equal(out$tier[out$player_key %in% 4:5], c(3L, 3L))
+  # Fallback players carry no VOR, so they must not look like replacement-level
+  # (0) players to the value tiebreak -- they are unmeasured, not measured-bad.
+  expect_true(all(is.na(out$vor[out$player_key %in% 4:5])))
   # DST exists only in the fallback; without this it can never be counted as need.
   expect_true("DST" %in% out$pos)
 })
@@ -104,7 +109,8 @@ test_that("scarcity_report() counts a fallback pick against roster need", {
   # scarcity_input(), that pick was unclassifiable and RB need stayed at 2.
   board <- data.frame(player_key = 1:6, player = paste0("p", 1:6),
                       pos = c("RB", "RB", "WR", "WR", "TE", "QB"),
-                      team = "X", tier = 1L, stringsAsFactors = FALSE)
+                      team = "X", tier = 1L, vor = c(100, 90, 80, 70, 60, 50),
+                      stringsAsFactors = FALSE)
   fallback <- data.frame(player_key = 7L, player = "rookie rb", pos = "RB",
                          team = "Y", ecr = 5, stringsAsFactors = FALSE)
   cfg <- list(teams = 10, roster = list(
@@ -174,4 +180,62 @@ test_that("explain_scarcity() names the player, with position and team attached"
 
 test_that("explain_scarcity() falls back to the position when given no picks", {
   expect_match(explain_scarcity(mk_report()), "Take a running back now")
+})
+
+# --- Regression: kicker recommended first overall (reported 2026-09-06) ---
+
+test_that("target_position breaks an urgency tie on value at stake, not alphabetically", {
+  # The real pick-1 shape: assign_tiers() works within a position, so every
+  # position's tier 1 holds exactly one player. urgency and tier_supply tie
+  # across K/RB/TE/WR, and the old sort fell through to the report's own
+  # alphabetical row order -- answering "kicker" first overall.
+  rpt <- data.frame(
+    pos = c("K", "RB", "TE", "WR"),
+    still_needed = c(1, 3, 2, 3),
+    tier_supply = 1,
+    picks_until_turn = 4L,
+    survives = FALSE,
+    vor_best = c(61.4, 142.1, 92.0, 116.6),
+    deferred = FALSE,
+    urgency = 1L,
+    stringsAsFactors = FALSE
+  )
+
+  expect_equal(target_position(rpt), "RB")
+  # And the displayed guide agrees with the headline, rather than contradicting it.
+  expect_equal(scarcity_display(rpt)$Position[1], "running back")
+})
+
+test_that("target_position still falls back to thinnest tier when value at stake ties", {
+  rpt <- data.frame(
+    pos = c("WR", "RB"), still_needed = 2, tier_supply = c(9, 3),
+    picks_until_turn = 4L, survives = FALSE, vor_best = 100, deferred = FALSE,
+    urgency = 1L, stringsAsFactors = FALSE
+  )
+  expect_equal(target_position(rpt), "RB")
+})
+
+test_that("target_position tolerates a report with no vor_best column instead of erroring", {
+  # Draft night runs on a 1-minute clock: degrading to the old tiebreak is
+  # recoverable, a crashed app is not.
+  rpt <- data.frame(
+    pos = c("WR", "RB"), still_needed = 2, tier_supply = c(9, 3),
+    picks_until_turn = 4L, survives = FALSE, urgency = 1L,
+    stringsAsFactors = FALSE
+  )
+  expect_equal(target_position(rpt), "RB")
+  expect_silent(scarcity_display(rpt))
+})
+
+test_that("a deferred position sorts below every live one and reads as wait-til-late", {
+  rpt <- data.frame(
+    pos = c("K", "RB"), still_needed = c(1, 3), tier_supply = 1,
+    picks_until_turn = 4L, survives = FALSE, vor_best = c(61.4, 142.1),
+    deferred = c(TRUE, FALSE), urgency = c(5L, 1L), stringsAsFactors = FALSE
+  )
+
+  expect_equal(target_position(rpt), "RB")
+  disp <- scarcity_display(rpt)
+  expect_equal(disp$Position[nrow(disp)], "kicker")
+  expect_equal(disp$Status[disp$Position == "kicker"], "Wait til late")
 })
