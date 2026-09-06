@@ -1,0 +1,511 @@
+rank,name,team,position
+1,Bijan Robinson,ATL,RB
+2,Christian McCaffrey,SF,RB
+3,Amon-Ra St. Brown,DET,WR
+4,Jahmyr Gibbs,DET,RB
+5,Ja'Marr Chase,CIN,WR
+6,Javonte Williams,DAL,RB
+7,Jaxon Smith-Njigba,SEA,WR
+8,Derrick Henry,BAL,RB
+9,Davante Adams,LAR,WR
+10,Trey McBride,ARI,TE
+11,James Cook III,BUF,RB
+12,Jonathan Taylor,IND,RB
+13,Puka Nacua,LAR,WR
+14,Saquon Barkley,PHI,RB
+15,Ashton Jeanty,LV,RB
+16,CeeDee Lamb,DAL,WR
+17,De'Von Achane,MIA,RB
+18,Chase Brown,CIN,RB
+19,Travis Etienne Jr.,NO,RB
+20,Josh Jacobs,GB,RB
+21,Drake London,ATL,WR
+22,George Pickens,DAL,WR
+23,Kyren Williams,LAR,RB
+24,D'Andre Swift,CHI,RB
+25,Jeremiyah Love,ARI,RB
+26,Emeka Egbuka,TB,WR
+27,Matthew Stafford,LAR,QB
+28,Josh Allen,BUF,QB
+29,Jaylen Warren,PIT,RB
+30,Caleb Williams,CHI,QB
+31,Patrick Mahomes II,KC,QB
+32,Breece Hall,NYJ,RB
+33,Bo Nix,DEN,QB
+34,Kenny Gainwell,TB,RB
+35,Justin Jefferson,MIN,WR
+36,Rome Odunze,CHI,WR
+37,Courtland Sutton,DEN,WR
+38,Chris Olave,NO,WR
+39,Nico Collins,HOU,WR
+40,Zach Charbonnet,SEA,RB
+41,Rico Dowdle,PIT,RB
+42,Tyler Warren,IND,TE
+43,Wan'Dale Robinson,TEN,WR
+44,A.J. Brown,NE,WR
+45,TreVeyon Henderson,NE,RB
+46,Bucky Irving,TB,RB
+47,Tetairoa McMillan,CAR,WR
+48,Quinshon Judkins,CLE,RB
+49,RJ Harvey,DEN,RB
+50,Tony Pollard,TEN,RB
+51,Zay Flowers,BAL,WR
+52,Trevor Lawrence,JAC,QB
+53,Woody Marks,HOU,RB
+54,Mike Evans,SF,WR
+55,Michael Wilson,ARI,WR
+56,Brian Thomas Jr.,JAC,WR
+57,Jakobi Meyers,JAC,WR
+58,Tyrone Tracy Jr.,NYG,RB
+59,Troy Franklin,DEN,WR
+60,Alec Pierce,IND,WR
+61,Jake Ferguson,DAL,TE
+62,Jalen Hurts,PHI,QB
+63,Michael Pittman Jr.,PIT,WR
+64,DK Metcalf,PIT,WR
+65,Dak Prescott,DAL,QB
+66,Ladd McConkey,LAC,WR
+67,Jadarian Price,SEA,RB
+68,Jonathon Brooks,CAR,RB
+69,Kenneth Walker III,KC,RB
+70,Kyle Pitts Sr.,ATL,TE
+71,Drake Maye,NE,QB
+72,Quentin Johnston,LAC,WR
+73,Baker Mayfield,TB,QB
+74,Brock Bowers,LV,TE
+75,Justin Herbert,LAC,QB
+76,Carnell Tate,TEN,WR
+77,DJ Moore,BUF,WR
+78,Kyle Monangai,CHI,RB
+79,DeVonta Smith,PHI,WR
+80,Marvin Harrison Jr.,ARI,WR
+81,Keenan Allen,IND,WR
+82,Garrett Wilson,NYJ,WR
+83,Jaylen Waddle,DEN,WR
+84,Deebo Samuel Sr.,SF,WR
+85,Jameson Williams,DET,WR
+86,David Montgomery,HOU,RB
+87,Rashee Rice,KC,WR
+88,Rhamondre Stevenson,NE,RB
+89,Jauan Jennings,MIN,WR
+90,Jared Goff,DET,QB
+91,Romeo Doubs,NE,WR
+92,Travis Kelce,KC,TE
+93,Jordan Addison,MIN,WR
+94,Dalton Schultz,HOU,TE
+95,James Conner,ARI,RB
+96,Rachaad White,WAS,RB
+97,Brock Purdy,SF,QB
+98,George Kittle,SF,TE
+99,Tee Higgins,CIN,WR
+100,Malik Nabers,NYG,WR
+101,Aaron Jones Sr.,MIN,RB
+102,Jacory Croskey-Merritt,WAS,RB
+103,Colston Loveland,CHI,TE
+104,Hunter Henry,NE,TE
+105,Parker Washington,JAC,WR
+106,Jerry Jeudy,CLE,WR
+107,Terry McLaurin,WAS,WR
+108,Harold Fannin Jr.,CLE,TE
+109,MarShawn Lloyd,GB,RB
+110,Chuba Hubbard,CAR,RB
+111,Tyreek Hill,,WR
+112,Alvin Kamara,NO,RB
+113,KC Concepcion,CLE,WR
+114,Kareem Hunt,,RB
+115,Makai Lemon,PHI,WR
+116,Omarion Hampton,LAC,RB
+117,Xavier Worthy,KC,WR
+118,Kimani Vidal,LAC,RB
+119,Tre Tucker,LV,WR
+120,Stefon Diggs,WAS,WR
+121,Tyler Allgeier,ARI,RB
+122,Elic Ayomanor,TEN,WR
+123,Khalil Shakir,BUF,WR
+124,Blake Corum,LAR,RB
+125,Colby Parkinson,LAR,TE
+126,Juwan Johnson,NO,TE
+127,Chimere Dike,TEN,WR
+128,Darnell Mooney,NYG,WR
+129,Jonah Coleman,DEN,RB
+130,Mike Washington Jr.,LV,RB
+131,Christian Watson,GB,WR
+132,Dallas Goedert,PHI,TE
+133,Josh Downs,IND,WR
+134,De'Zhaun Stribling,SF,WR
+135,Jordyn Tyson,NO,WR
+136,Denzel Boston,CLE,WR
+137,Jordan Mason,MIN,RB
+138,Lamar Jackson,BAL,QB
+139,Cam Skattebo,NYG,RB
+140,Darius Slayton,NYG,WR
+141,Mark Andrews,BAL,TE
+142,Houston Texans,HOU,DEF
+143,Devin Singletary,NYG,RB
+144,Denver Broncos,DEN,DEF
+145,Cade Otton,TB,TE
+146,Los Angeles Rams,LA,DEF
+147,Oronde Gadsden II,LAC,TE
+148,Seattle Seahawks,SEA,DEF
+149,Keon Coleman,BUF,WR
+150,Philadelphia Eagles,PHI,DEF
+151,Adonai Mitchell,NYJ,WR
+152,Minnesota Vikings,MIN,DEF
+153,Jordan Love,GB,QB
+154,Pittsburgh Steelers,PIT,DEF
+155,Mack Hollins,NE,WR
+156,New England Patriots,NE,DEF
+157,Tyjae Spears,TEN,RB
+158,Jacksonville Jaguars,JAX,DEF
+159,Sam LaPorta,DET,TE
+160,Los Angeles Chargers,LAC,DEF
+161,Zach Ertz,,TE
+162,Jason Myers,SEA,K
+163,Baltimore Ravens,BAL,DEF
+164,AJ Barner,SEA,TE
+165,Ka'imi Fairbairn,HOU,K
+166,Green Bay Packers,GB,DEF
+167,C.J. Stroud,HOU,QB
+168,Brandon Aubrey,DAL,K
+169,Kansas City Chiefs,KC,DEF
+170,Tucker Kraft,GB,TE
+171,Cameron Dicker,LAC,K
+172,Detroit Lions,DET,DEF
+173,Rashid Shaheed,SEA,WR
+174,Cam Little,JAC,K
+175,Cleveland Browns,CLE,DEF
+176,Theo Johnson,NYG,TE
+177,Chase McLaughlin,TB,K
+178,Buffalo Bills,BUF,DEF
+179,Dalton Kincaid,BUF,TE
+180,Eddy Pineiro,SF,K
+181,Tennessee Titans,TEN,DEF
+182,Xavier Legette,CAR,WR
+183,Jake Bates,DET,K
+184,Dallas Cowboys,DAL,DEF
+185,Dyami Brown,WAS,WR
+186,Chris Boswell,PIT,K
+187,New Orleans Saints,NO,DEF
+188,Calvin Ridley,TEN,WR
+189,Cairo Santos,CHI,K
+190,San Francisco 49ers,SF,DEF
+191,Samaje Perine,CIN,RB
+192,Joey Slye,TEN,K
+193,Cincinnati Bengals,CIN,DEF
+194,Malik Washington,MIA,WR
+195,Will Reichard,MIN,K
+196,Chicago Bears,CHI,DEF
+197,Olamide Zaccheaus,ATL,WR
+198,Harrison Butker,KC,K
+199,Atlanta Falcons,ATL,DEF
+200,Chris Godwin Jr.,TB,WR
+201,Blake Grupe,NYJ,K
+202,New York Giants,NYG,DEF
+203,Emmett Johnson,KC,RB
+204,Wil Lutz,DEN,K
+205,Washington Commanders,WAS,DEF
+206,Omar Cooper Jr.,NYJ,WR
+207,Nick Folk,ATL,K
+208,Indianapolis Colts,IND,DEF
+209,Travis Hunter,JAC,WR
+210,Evan McPherson,CIN,K
+211,Las Vegas Raiders,LV,DEF
+212,Chig Okonkwo,WAS,TE
+213,Tyler Bass,BUF,K
+214,Carolina Panthers,CAR,DEF
+215,Cooper Kupp,SEA,WR
+216,Chad Ryland,ARI,K
+217,Tampa Bay Buccaneers,TB,DEF
+218,Isiah Pacheco,DET,RB
+219,Jake Elliott,PHI,K
+220,Arizona Cardinals,ARI,DEF
+221,J.K. Dobbins,DEN,RB
+222,Jason Sanders,,K
+223,New York Jets,NYJ,DEF
+224,Michael Carter,TEN,RB
+225,Brandon McManus,,K
+226,Miami Dolphins,MIA,DEF
+227,Caleb Douglas,MIA,WR
+228,Daniel Carlson,NO,K
+229,Ja'Kobi Lane,BAL,WR
+230,Zane Gonzalez,,K
+231,Cyrus Allen,KC,WR
+232,Malachi Fields,NYG,WR
+233,Tank Dell,HOU,WR
+234,Chris Bell,MIA,WR
+235,Zachariah Branch,ATL,WR
+236,Germie Bernard,PIT,WR
+237,Antonio Williams,WAS,WR
+238,Ted Hurst III,TB,WR
+239,Andrei Iosivas,CIN,WR
+240,Brashard Smith,KC,RB
+241,Luther Burden III,CHI,WR
+242,Mike Gesicki,CIN,TE
+243,Marvin Mims Jr.,DEN,WR
+244,Dontayvion Wicks,PHI,WR
+245,Emanuel Wilson,SEA,RB
+246,Evan Engram,DEN,TE
+247,Ryan Flournoy,DAL,WR
+248,Jonnu Smith,GB,TE
+249,Nicholas Singleton,TEN,RB
+250,Jaxson Dart,NYG,QB
+251,Audric Estime,NO,RB
+252,Bhayshul Tuten,JAC,RB
+253,Bryce Young,CAR,QB
+254,Jayden Reed,GB,WR
+255,Kenyon Sadiq,NYJ,TE
+256,Darren Waller,CAR,TE
+257,Mason Taylor,NYJ,TE
+258,Elijah Sarratt,BAL,WR
+259,T.J. Hockenson,MIN,TE
+260,Sean Tucker,TB,RB
+261,Jayden Daniels,WAS,QB
+262,Brenton Strange,JAC,TE
+263,Dylan Sampson,CLE,RB
+264,Ray Davis,BUF,RB
+265,Xavier Hutchinson,HOU,WR
+266,Chris Rodriguez Jr.,JAC,RB
+267,Tez Johnson,TB,WR
+268,Pat Bryant,DEN,WR
+269,Austin Ekeler,,RB
+270,Ty Johnson,BUF,RB
+271,Sam Darnold,SEA,QB
+272,DeMario Douglas,NE,WR
+273,Tank Bigsby,PHI,RB
+274,Jalen Tolbert,MIA,WR
+275,Bam Knight,ARI,RB
+276,Trey Benson,ARI,RB
+277,Cole Kmet,CHI,TE
+278,KaVontae Turpin,DAL,WR
+279,Cam Ward,TEN,QB
+280,Devaughn Vele,NO,WR
+281,Gunnar Helm,TEN,TE
+282,Dawson Knox,BUF,TE
+283,Hollywood Brown,PHI,WR
+284,David Njoku,LAC,TE
+285,Pat Freiermuth,PIT,TE
+286,Bryce Lance,NO,WR
+287,Skyler Bell,BUF,WR
+288,Jaylen Wright,MIA,RB
+289,Rashod Bateman,BAL,WR
+290,Matthew Golden,GB,WR
+291,Justice Hill,BAL,RB
+292,Brian Robinson Jr.,ATL,RB
+293,Christian Kirk,SF,WR
+294,Isaiah Bond,CLE,WR
+295,Geno Smith,NYJ,QB
+296,Tyler Lockett,LV,WR
+297,Joe Burrow,CIN,QB
+298,Isaiah Likely,NYG,TE
+299,Taysom Hill,,TE
+300,Jaylin Noel,HOU,WR
+301,Kaytron Allen,WAS,RB
+302,Ollie Gordon II,MIA,RB
+303,Jalen Nailor,LV,WR
+304,Kayshon Boutte,HOU,WR
+305,Michael Mayer,LV,TE
+306,Jalen Coker,CAR,WR
+307,Marquez Valdes-Scantling,,WR
+308,Joshua Palmer,BUF,WR
+309,Noah Fant,NO,TE
+310,Tyler Higbee,LAR,TE
+311,Kendrick Bourne,ARI,WR
+312,Greg Dortch,BUF,WR
+313,Chris Brazzell II,CAR,WR
+314,Eli Stowers,PHI,TE
+315,Oscar Delp,NO,TE
+316,Eli Raridon,NE,TE
+317,Brandon Aiyuk,SF,WR
+318,Jahan Dotson,ATL,WR
+319,DeAndre Hopkins,BAL,WR
+320,Tre' Harris,LAC,WR
+321,Emari Demercado,DAL,RB
+322,Xavier Smith,LAR,WR
+323,Isaac TeSlaa,DET,WR
+324,John Metchie III,CAR,WR
+325,Noah Gray,KC,TE
+326,Lil'Jordan Humphrey,DEN,WR
+327,Erick All Jr.,CIN,TE
+328,Miles Sanders,,RB
+329,Jerome Ford,WAS,RB
+330,Max Klare,LAR,TE
+331,Ja'Tavion Sanders,CAR,TE
+332,Darnell Washington,PIT,TE
+333,Terrance Ferguson,LAR,TE
+334,Demarcus Robinson,SF,WR
+335,Jaylin Lane,WAS,WR
+336,Tyquan Thornton,KC,WR
+337,Austin Hooper,ATL,TE
+338,Isaiah Davis,NYJ,RB
+339,Dohnte Meyers,CIN,WR
+340,Antonio Gibson,,RB
+341,Kalif Raymond,CHI,WR
+342,Devin Neal,,RB
+343,Tory Horton,SEA,WR
+344,Tim Patrick,NYJ,WR
+345,Kyler Murray,MIN,QB
+346,Kaelon Black,SF,RB
+347,Demond Claiborne,MIN,RB
+348,Jordan James,SF,RB
+349,Seth McGowan,IND,RB
+350,Kyle Juszczyk,SF,RB
+351,Adam Randall,BAL,RB
+352,Isaiah Williams,NYJ,WR
+353,Brandin Cooks,,WR
+354,Jalen McMillan,TB,WR
+355,Cedric Tillman,NO,WR
+356,Jaleel McLaughlin,CLE,RB
+357,Elijah Moore,PHI,WR
+358,Braelon Allen,NYJ,RB
+359,Antonio Williams,,RB
+360,Jarquez Hunter,,RB
+361,Eli Heidenreich,PIT,RB
+362,Brenen Thompson,LAC,WR
+363,Daniel Bellinger,TEN,TE
+364,Justin Joly,MIA,TE
+365,Nate Boerkircher,JAC,TE
+366,Will Kacmarek,MIA,TE
+367,Zavier Scott,CHI,RB
+368,Dont'e Thornton Jr.,LV,WR
+369,Jake Tonges,SF,TE
+370,Elijah Higgins,ARI,TE
+371,Najee Harris,NYG,RB
+372,Elijah Arroyo,SEA,TE
+373,Luke McCaffrey,WAS,WR
+374,Jeremy McNichols,WAS,RB
+375,Barion Brown,NO,WR
+376,Malik Benson,LV,WR
+377,Odell Beckham Jr.,NYG,WR
+378,Kaden Wetjen,PIT,WR
+379,Kevin Coleman Jr.,MIA,WR
+380,Zavion Thomas,CHI,WR
+381,Jalen Reagor,,WR
+382,Colbie Young,CIN,WR
+383,Isaiah Williams,,WR
+384,Reggie Virgil,ARI,WR
+385,Michael Woods II,DEN,WR
+386,CJ Daniels,LAR,WR
+387,Jacob Cowing,SF,WR
+388,Josh Cameron,JAC,WR
+389,Juice Wells Jr.,,WR
+390,Kendrick Law,DET,WR
+391,Deion Burks,IND,WR
+392,Khalil Herbert,,RB
+393,Kene Nwangwu,NYJ,RB
+394,Mitchell Evans,CAR,TE
+395,Joe Mixon,,RB
+396,Tommy Tremble,CAR,TE
+397,Marlin Klein,HOU,TE
+398,Tanner Koziol,JAC,TE
+399,Sam Roush,CHI,TE
+400,Konata Mumpfield,LAR,WR
+401,Kevin Austin Jr.,NO,WR
+402,Ashton Dulin,IND,WR
+403,Tutu Atwell,LAR,WR
+404,Jack Bech,LV,WR
+405,Jordan Whittington,LAR,WR
+406,Jahdae Walker,CHI,WR
+407,Adam Trautman,DEN,TE
+408,Trevor Etienne,CAR,RB
+409,Ameer Abdullah,JAC,RB
+410,Cade Stover,HOU,TE
+411,Daniel Jones,IND,QB
+412,Hunter Luepke,DAL,RB
+413,Tanner Hudson,CIN,TE
+414,Kyle Williams,NE,WR
+415,Nick Westbrook-Ikhine,,WR
+416,Jawhar Jordan,HOU,RB
+417,Keaton Mitchell,LAC,RB
+418,Treylon Burks,WAS,WR
+419,Jackson Hawes,BUF,TE
+420,John Bates,WAS,TE
+421,Luke Musgrave,GB,TE
+422,Raheim Sanders,CLE,RB
+423,Tua Tagovailoa,ATL,QB
+424,Josh Oliver,MIN,TE
+425,LeQuint Allen Jr.,JAC,RB
+426,Greg Dulcich,MIA,TE
+427,Kendre Miller,NO,RB
+428,Tyler Badie,DEN,RB
+429,Luke Schoonmaker,DAL,TE
+430,Tyler Conklin,DET,TE
+431,Will Shipley,PHI,RB
+432,Scotty Miller,CHI,WR
+433,Malik Davis,DAL,RB
+434,Jaydn Ott,KC,RB
+435,J'Mari Taylor,JAC,RB
+436,Alec Ingold,LAC,RB
+437,Jam Miller,,RB
+438,Lan Larison,NE,RB
+439,Damien Martinez,,RB
+440,Fernando Mendoza,LV,QB
+441,Drew Sample,CIN,TE
+442,Jaydon Blue,PHI,RB
+443,Chris Brooks,GB,RB
+444,Charlie Kolar,LAC,TE
+445,Dameon Pierce,PHI,RB
+446,George Holani,SEA,RB
+447,Jimmy Horn Jr.,CAR,WR
+448,Dylan Laube,LV,RB
+449,Savion Williams,GB,WR
+450,Reggie Gilliam,NE,RB
+451,Tahj Brooks,CIN,RB
+452,Rasheen Ali,BAL,RB
+453,AJ Dillon,CAR,RB
+454,Devontez Walker,BAL,WR
+455,Aaron Rodgers,PIT,QB
+456,DJ Giddens,IND,RB
+457,Kaleb Johnson,GB,RB
+458,Ben Sinnott,WAS,TE
+459,Ronnie Rivers,LAR,RB
+460,Tyler Goodson,ATL,RB
+461,Theo Wease Jr.,LAC,WR
+462,Tai Felton,MIN,WR
+463,Terrell Jennings,,RB
+464,Julius Chestnut,TEN,RB
+465,Xavier Restrepo,TEN,WR
+466,Jacob Saylors,DET,RB
+467,Jalen Royals,KC,WR
+468,Corey Kiner,NE,RB
+469,Justin Fields,KC,QB
+470,Brittain Brown,CHI,RB
+471,Phil Mafah,,RB
+472,J.J. McCarthy,MIN,QB
+473,Roschon Johnson,CHI,RB
+474,Tyler Shough,NO,QB
+475,Patrick Ricard,NYG,RB
+476,Sione Vaki,DET,RB
+477,Jordan Watkins,SF,WR
+478,Josh Williams,TB,RB
+479,Jelani Woods,NYJ,TE
+480,Kalel Mullings,TEN,RB
+481,Isaac Guerendo,SF,RB
+482,Chris Blair,ATL,WR
+483,Lew Nichols III,PIT,RB
+484,Jacoby Brissett,ARI,QB
+485,Mac Jones,SF,QB
+486,Kirk Cousins,LV,QB
+487,Joe Flacco,CIN,QB
+488,Deshaun Watson,CLE,QB
+489,Carson Beck,ARI,QB
+490,Drew Allar,PIT,QB
+491,Taylen Green,CLE,QB
+492,Michael Penix Jr.,ATL,QB
+493,Jameis Winston,NYG,QB
+494,Shedeur Sanders,CLE,QB
+495,Marcus Mariota,WAS,QB
+496,Tyrod Taylor,GB,QB
+497,Davis Mills,HOU,QB
+498,Jake Browning,,QB
+499,Ty Simpson,LAR,QB
+500,Cade Klubnik,NYJ,QB
+501,Jack Strand,ATL,QB
+502,Riley Leonard,IND,QB
+503,Quinn Ewers,JAC,QB
+504,Malik Willis,MIA,QB
+505,Trey Lance,LAC,QB
+506,Joe Milton III,DAL,QB
+507,Gardner Minshew II,ARI,QB
+508,Anthony Richardson Sr.,IND,QB
+509,Tyson Bagent,CHI,QB
+510,Jalen Milroe,SEA,QB
