@@ -109,18 +109,45 @@ test_that("no synthetic DST player_key collides with any real dim_player player_
 test_that("build_dst_pool's output shape matches build_fallback_board's, so the two can be rbind()ed into one selectable pool", {
   pool <- build_dst_pool(real_rankings_path)
 
-  expected_cols <- c(
-    "player_key", "player", "pos", "team", "ecr", "bye",
-    "ppg_current", "games_current", "availability_rate",
-    "has_current_data", "projected_points"
+  # Assert the invariant _targets.R actually depends on -- that the rbind()
+  # in the draft_fallback target succeeds -- rather than a hardcoded column
+  # list. A literal list only restates today's shape, so it passes while the
+  # pipeline breaks: that is exactly what happened when the expected-basis
+  # columns were added to build_player_value() and not here.
+  #
+  # player_key 2 has no 2025 games, so it lands on the fallback board;
+  # player_opportunity is passed so build_player_value() emits its
+  # expected-basis columns, matching how _targets.R calls it.
+  fpws <- data.frame(
+    player_key = c(1, 1), season = 2025, week = c(1, 2),
+    season_type = "REG", fantasy_points = c(10, 20)
   )
-  expect_equal(colnames(pool), expected_cols)
+  draft_pool <- data.frame(
+    player_key = c(1, 2), player = c("Has Data", "No Data"),
+    pos = c("RB", "WR"), team = c("XX", "YY"), ecr = c(5, 200), bye = 9
+  )
+  opp <- data.frame(
+    player_key = 1, points_exp = 24, games_exp = 2,
+    points_actual = 30, points_diff = 6
+  )
+
+  fallback <- build_fallback_board(
+    build_player_value(fpws, draft_pool, current_season = 2025,
+                       availability_seasons = 2023:2025, player_opportunity = opp)
+  )
+  expect_gt(nrow(fallback), 0)
+  expect_setequal(colnames(pool), colnames(fallback))
+  expect_silent(combined <- rbind(fallback, pool))
+  expect_equal(nrow(combined), nrow(fallback) + nrow(pool))
 
   # DSTs never carry per-player game logs in this cheap pre-draft version, so
   # they must present as fallback-board rows (has_current_data == FALSE),
-  # never as VOR-ranked rows.
+  # never as VOR-ranked rows. Same for the expected basis: ff_opportunity is
+  # player-level, so a team defense has no row there by construction.
   expect_true(all(!pool$has_current_data))
   expect_true(all(is.na(pool$projected_points)))
+  expect_true(all(!pool$has_expected_data))
+  expect_true(all(is.na(pool$projected_points_exp)))
 })
 
 test_that("required columns are never missing", {

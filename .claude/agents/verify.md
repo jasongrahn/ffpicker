@@ -13,7 +13,7 @@ Run the checks. Report what actually happened.
 
 Tests:
 ```
-Rscript -e 'devtools::load_all("."); testthat::test_dir("tests/testthat")'
+Rscript -e 'pkgload::load_all("."); testthat::test_dir("tests/testthat")'
 ```
 
 Pipeline:

@@ -31,7 +31,8 @@ list(
              build_player_opportunity_value(expected_stat_lines_scored, fct_player_week_scored, season = 2025)),
 
   tar_target(draft_pool, validate_draft_pool(build_draft_pool(ff_rankings_raw, dim_player))),
-  tar_target(player_value, build_player_value(fct_player_week_scored, draft_pool)),
+  tar_target(player_value, build_player_value(fct_player_week_scored, draft_pool,
+                                              player_opportunity = player_opportunity)),
   tar_target(draft_board, assign_tiers(validate_vor_table(compute_vor(player_value, league_config)))),
 
   # DSTs are team-level, so they have no dim_player row, no gsis_id, and no VOR.

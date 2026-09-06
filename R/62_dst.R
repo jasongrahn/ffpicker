@@ -85,5 +85,13 @@ build_dst_pool <- function(ff_rankings_path) {
   pool$has_current_data <- FALSE
   pool$projected_points <- NA_real_
 
+  # Expected basis, present once _targets.R passes player_opportunity into
+  # build_player_value(). DSTs are team-level, so ff_opportunity has no row
+  # for them at all -- has_expected_data = FALSE is the true value here, not
+  # a placeholder. Same "no data, ECR-only" meaning as the columns above.
+  pool$ppg_expected <- NA_real_
+  pool$has_expected_data <- FALSE
+  pool$projected_points_exp <- NA_real_
+
   pool
 }
