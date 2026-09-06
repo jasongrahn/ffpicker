@@ -20,10 +20,14 @@
 #' downstream consumes the result: a name Yahoo fails to match is a player
 #' missing from a convenience ordering, not a corrupted row in the pipeline.
 #' The blast radius is one wrong line in a list you will read with your own
-#' eyes before the draft. Two known hazards to check on Yahoo's side after
-#' upload: 39 of the 510 names carry a suffix ("Travis Etienne Jr.", "Patrick
-#' Mahomes II") which Yahoo may spell without, and two name pairs collide
-#' outright (Antonio Williams, Isaiah Williams -- all four deep-bench).
+#' eyes before the draft. Two name pairs collide outright (Antonio Williams,
+#' Isaiah Williams -- all four deep-bench); `align_yahoo_names()` refuses those
+#' rather than guessing.
+#'
+#' Where a spelling is known to differ it is corrected before writing, from
+#' Yahoo's own draft-room list -- see R/96_yahoo_names.R. That is what makes
+#' the 32 team defenses land at all: Yahoo calls them "Texans", we call them
+#' "Houston Texans".
 #'
 #' ## Deferred positions are placed, not dropped
 #'
@@ -45,9 +49,12 @@
 #' @param league_config Parsed league config, for `teams` and
 #'   `draft$defer_until_round`.
 #' @param path Where to write. Directory is created if absent.
+#' @param yahoo_names_path Pasted Yahoo player list used to correct spellings.
+#'   NULL, or a path that does not exist, writes our own spellings unchanged.
 #' @return `path`, invisibly. Writes a CSV of every player, rank 1..n.
 export_yahoo_rankings <- function(draft_board, draft_fallback, league_config,
-                                  path = "data/yahoo_rankings.csv") {
+                                  path = "data/yahoo_rankings.csv",
+                                  yahoo_names_path = "docs/yahoo-player-names.txt") {
   pool <- yahoo_ranking_order(draft_board, draft_fallback, league_config)
 
   out <- data.frame(
@@ -59,6 +66,18 @@ export_yahoo_rankings <- function(draft_board, draft_fallback, league_config,
     position = yahoo_position(pool$pos),
     stringsAsFactors = FALSE
   )
+
+  # Not conditional on the paste: this is Yahoo's naming convention for team
+  # defenses, and the whole position misses without it.
+  is_def <- out$position == "DEF"
+  out$name[is_def] <- yahoo_defense_name(out$name[is_def])
+
+  # Optional by design: the list is a manual paste that will go stale, and a
+  # missing one must degrade to our spellings rather than break the export.
+  if (!is.null(yahoo_names_path) && file.exists(yahoo_names_path)) {
+    out <- align_yahoo_names(out, parse_yahoo_names(yahoo_names_path))
+    out$yahoo_matched <- NULL
+  }
 
   # Written unquoted, matching the template Yahoo ships (which carries
   # "Ja'Marr Chase" bare, so its parser handles an apostrophe). That is only

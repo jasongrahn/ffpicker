@@ -29,7 +29,7 @@ rank,name,team,position
 28,Josh Allen,BUF,QB
 29,Jaylen Warren,PIT,RB
 30,Caleb Williams,CHI,QB
-31,Patrick Mahomes II,KC,QB
+31,Patrick Mahomes,KC,QB
 32,Breece Hall,NYJ,RB
 33,Bo Nix,DEN,QB
 34,Kenny Gainwell,TB,RB
@@ -140,91 +140,91 @@ rank,name,team,position
 139,Cam Skattebo,NYG,RB
 140,Darius Slayton,NYG,WR
 141,Mark Andrews,BAL,TE
-142,Houston Texans,HOU,DEF
+142,Texans,HOU,DEF
 143,Devin Singletary,NYG,RB
-144,Denver Broncos,DEN,DEF
+144,Broncos,DEN,DEF
 145,Cade Otton,TB,TE
-146,Los Angeles Rams,LA,DEF
-147,Oronde Gadsden II,LAC,TE
-148,Seattle Seahawks,SEA,DEF
+146,Rams,LA,DEF
+147,Oronde Gadsden,LAC,TE
+148,Seahawks,SEA,DEF
 149,Keon Coleman,BUF,WR
-150,Philadelphia Eagles,PHI,DEF
+150,Eagles,PHI,DEF
 151,Adonai Mitchell,NYJ,WR
-152,Minnesota Vikings,MIN,DEF
+152,Vikings,MIN,DEF
 153,Jordan Love,GB,QB
-154,Pittsburgh Steelers,PIT,DEF
+154,Steelers,PIT,DEF
 155,Mack Hollins,NE,WR
-156,New England Patriots,NE,DEF
+156,Patriots,NE,DEF
 157,Tyjae Spears,TEN,RB
-158,Jacksonville Jaguars,JAX,DEF
+158,Jaguars,JAX,DEF
 159,Sam LaPorta,DET,TE
-160,Los Angeles Chargers,LAC,DEF
+160,Chargers,LAC,DEF
 161,Zach Ertz,,TE
 162,Jason Myers,SEA,K
-163,Baltimore Ravens,BAL,DEF
+163,Ravens,BAL,DEF
 164,AJ Barner,SEA,TE
 165,Ka'imi Fairbairn,HOU,K
-166,Green Bay Packers,GB,DEF
+166,Packers,GB,DEF
 167,C.J. Stroud,HOU,QB
 168,Brandon Aubrey,DAL,K
-169,Kansas City Chiefs,KC,DEF
+169,Chiefs,KC,DEF
 170,Tucker Kraft,GB,TE
 171,Cameron Dicker,LAC,K
-172,Detroit Lions,DET,DEF
+172,Lions,DET,DEF
 173,Rashid Shaheed,SEA,WR
 174,Cam Little,JAC,K
-175,Cleveland Browns,CLE,DEF
+175,Browns,CLE,DEF
 176,Theo Johnson,NYG,TE
 177,Chase McLaughlin,TB,K
-178,Buffalo Bills,BUF,DEF
+178,Bills,BUF,DEF
 179,Dalton Kincaid,BUF,TE
 180,Eddy Pineiro,SF,K
-181,Tennessee Titans,TEN,DEF
+181,Titans,TEN,DEF
 182,Xavier Legette,CAR,WR
 183,Jake Bates,DET,K
-184,Dallas Cowboys,DAL,DEF
+184,Cowboys,DAL,DEF
 185,Dyami Brown,WAS,WR
 186,Chris Boswell,PIT,K
-187,New Orleans Saints,NO,DEF
+187,Saints,NO,DEF
 188,Calvin Ridley,TEN,WR
 189,Cairo Santos,CHI,K
-190,San Francisco 49ers,SF,DEF
+190,49ers,SF,DEF
 191,Samaje Perine,CIN,RB
 192,Joey Slye,TEN,K
-193,Cincinnati Bengals,CIN,DEF
+193,Bengals,CIN,DEF
 194,Malik Washington,MIA,WR
 195,Will Reichard,MIN,K
-196,Chicago Bears,CHI,DEF
+196,Bears,CHI,DEF
 197,Olamide Zaccheaus,ATL,WR
 198,Harrison Butker,KC,K
-199,Atlanta Falcons,ATL,DEF
+199,Falcons,ATL,DEF
 200,Chris Godwin Jr.,TB,WR
 201,Blake Grupe,NYJ,K
-202,New York Giants,NYG,DEF
+202,Giants,NYG,DEF
 203,Emmett Johnson,KC,RB
 204,Wil Lutz,DEN,K
-205,Washington Commanders,WAS,DEF
+205,Commanders,WAS,DEF
 206,Omar Cooper Jr.,NYJ,WR
 207,Nick Folk,ATL,K
-208,Indianapolis Colts,IND,DEF
+208,Colts,IND,DEF
 209,Travis Hunter,JAC,WR
 210,Evan McPherson,CIN,K
-211,Las Vegas Raiders,LV,DEF
+211,Raiders,LV,DEF
 212,Chig Okonkwo,WAS,TE
 213,Tyler Bass,BUF,K
-214,Carolina Panthers,CAR,DEF
+214,Panthers,CAR,DEF
 215,Cooper Kupp,SEA,WR
 216,Chad Ryland,ARI,K
-217,Tampa Bay Buccaneers,TB,DEF
+217,Buccaneers,TB,DEF
 218,Isiah Pacheco,DET,RB
 219,Jake Elliott,PHI,K
-220,Arizona Cardinals,ARI,DEF
+220,Cardinals,ARI,DEF
 221,J.K. Dobbins,DEN,RB
 222,Jason Sanders,,K
-223,New York Jets,NYJ,DEF
+223,Jets,NYJ,DEF
 224,Michael Carter,TEN,RB
 225,Brandon McManus,,K
-226,Miami Dolphins,MIA,DEF
+226,Dolphins,MIA,DEF
 227,Caleb Douglas,MIA,WR
 228,Daniel Carlson,NO,K
 229,Ja'Kobi Lane,BAL,WR
@@ -290,7 +290,7 @@ rank,name,team,position
 289,Rashod Bateman,BAL,WR
 290,Matthew Golden,GB,WR
 291,Justice Hill,BAL,RB
-292,Brian Robinson Jr.,ATL,RB
+292,Brian Robinson,ATL,RB
 293,Christian Kirk,SF,WR
 294,Isaiah Bond,CLE,WR
 295,Geno Smith,NYJ,QB
