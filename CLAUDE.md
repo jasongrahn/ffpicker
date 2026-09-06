@@ -96,6 +96,19 @@ bottom out at `ecr` 219. Reordering all 160 matched tail players by `search_rank
 different signal aimed at the Yahoo-ADP blind spot and remains unprobed — this closure does not
 cover it.
 
+**No Yahoo ranking data exists in this repo. Audited 2026-09-06.** Two files are named
+for Yahoo and neither holds Yahoo's opinion. `data/yahoo_rankings.csv` is **our own board
+exported** by `export_yahoo_rankings()` (`R/95_export.R:68`) for upload *into* Yahoo's
+custom-rankings feature — correlating it against our board gives Spearman **0.9976**
+(non-K/DST), i.e. a mirror. The `docs/{qb,rb,te,wr}.csv` position pages carried
+`Player,Position,Team` only, never `XRank`/`ADP`, and are deleted as of `e634f12`.
+`parse_yahoo_names()` parses `XRank #N`/`ADP N.N` correctly but **has never been fed a
+file containing them**. So handoff #15's "Yahoo ADP unconsumed" overstates the position:
+it is un-*acquired*, not merely unconsumed. `yahoo_id` is also 100% NA in the
+`redraft-overall` slice. Getting a real Yahoo ordering needs a manual paste from the user
+and is the prerequisite for the divergence flag in
+`docs/backlog/001-yahoo-rank-divergence.md`. **Season-long value — outlives draft night.**
+
 **Config-driven or it doesn't ship.** Anything that could vary by league lives in
 `config/*.json`, validated against JSON Schema. No league rule is ever hardcoded.
 
