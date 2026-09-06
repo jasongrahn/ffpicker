@@ -85,6 +85,17 @@ opponents will actually do — is real and remains unfilled: `yahoo_id`,
 `player_owned_yahoo`, and `player_owned_espn` are 100% NA in `ff_rankings`'
 `redraft-overall` slice. Carry that as the known blind spot in Phase 6's opponent model.
 
+**Sleeper API evaluated and rejected 2026-09-06 — do not re-investigate `search_rank`.**
+Access is clean (read-only HTTP, no token, terms fine); usefulness is not. `search_rank` is
+search-autocomplete popularity, and it is genuinely independent of FantasyPros ECR in the tail
+(rho 0.166) while still predicting 2025 PPG there (-0.314 vs ECR's -0.104). But that edge lives
+only where `ecr > 290`, and a 10-team 17-round draft removes 170 players — our own 17 picks
+bottom out at `ecr` 219. Reordering all 160 matched tail players by `search_rank` changed
+**0 of 17 picks and 0.0 starter points**. Real signal, wrong region. Numbers and harness in
+`docs/handoff/ffdraft-handoff-20260906-9.md` and `dev/sleeper/`. The `trending/add` endpoint is a
+different signal aimed at the Yahoo-ADP blind spot and remains unprobed — this closure does not
+cover it.
+
 **Config-driven or it doesn't ship.** Anything that could vary by league lives in
 `config/*.json`, validated against JSON Schema. No league rule is ever hardcoded.
 

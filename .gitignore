@@ -13,3 +13,4 @@ data/ff.duckdb
 dev/pick_log_archive/
 data/DRAFT_IS_LIVE
 .DS_Store
+dev/sleeper/cache/
