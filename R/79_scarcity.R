@@ -30,11 +30,13 @@
 #'   my_slot and are always computed.
 #' Build the position-complete board that scarcity_report() needs.
 #'
-#' The Board alone is not position-complete: it has no DST rows at all (team-level,
-#' no dim_player row -- see _targets.R) and no rookies (has_current_data = FALSE).
-#' Feeding it to scarcity_report() directly means drafting a rookie RB1 or a DST
-#' leaves those picks unclassifiable, so `still_needed` keeps demanding a position
-#' you already filled. Combining fixes the need count.
+#' The Board alone is not position-complete: it has no DST rows at all
+#' (team-level, no dim_player row -- see _targets.R). Feeding it to
+#' scarcity_report() directly means drafting a DST leaves that pick
+#' unclassifiable, so `still_needed` keeps demanding a position you already
+#' filled. Combining fixes the need count. Rookies used to need this too;
+#' add_consensus_rows() (R/77_consensus.R) now puts them on the Board itself,
+#' and build_fallback_board()'s `exclude_keys` keeps them out of here.
 #'
 #' Fallback players get a tier one past the Board's worst. They are genuinely
 #' unranked by VOR, so they must not dilute a live tier's `tier_supply`; parking

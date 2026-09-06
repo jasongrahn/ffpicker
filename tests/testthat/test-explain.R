@@ -166,6 +166,24 @@ test_that("recommend_picks() finds DSTs, which exist only in the fallback", {
   expect_equal(out$Player, c("Bears D", "Jets D"))
 })
 
+test_that("consensus_mark() marks estimated values and only those", {
+  expect_equal(consensus_mark(c("projected", "consensus", NA)), c("", "~", ""))
+})
+
+test_that("consensus_mark() marks nothing on a board that predates value_source", {
+  # Same degrade-don't-crash rule as vor_best_or_na(): under a 1-minute clock
+  # an unmarked number is recoverable, a crashed app is not.
+  expect_equal(consensus_mark(NULL), "")
+})
+
+test_that("recommend_picks() marks a consensus-estimated value so the panel agrees with the Board", {
+  board <- mk_board()
+  board$value_source <- ifelse(board$player == "Mid RB", "consensus", "projected")
+  out <- recommend_picks(mk_report(), board, mk_fb())
+  expect_equal(out$Value[out$Player == "Mid RB"], "~+90 pts")
+  expect_equal(out$Value[out$Player == "Top RB"], "+180 pts")
+})
+
 test_that("recommend_picks() returns no rows when no starter slot is open", {
   out <- recommend_picks(mk_report(still_needed = c(0, 0, 0, 0)), mk_board(), mk_fb())
   expect_equal(nrow(out), 0)

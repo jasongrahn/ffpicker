@@ -29,8 +29,8 @@
 #' @param ff_rankings_path Raw parquet from ingest_ff_rankings().
 #' @return data.table, one row per DST, in the same column shape as
 #'   `build_fallback_board()` (R/75_value.R) -- player_key, player, pos,
-#'   team, ecr, bye, ppg_current, games_current, availability_rate,
-#'   has_current_data, projected_points -- so it can be `rbind()`ed straight
+#'   team, ecr, sd, best, worst, rank_delta, bye, ppg_current, games_current,
+#'   availability_rate, has_current_data, projected_points -- so it can be `rbind()`ed straight
 #'   onto the fallback board into one selectable pool. `has_current_data` is
 #'   always FALSE and the stat columns are always NA: DSTs never get a real
 #'   per-game fantasy log in this cheap version, so they must present as
@@ -72,7 +72,11 @@ build_dst_pool <- function(ff_rankings_path) {
   DST_KEY_BASE <- 900000L
   dst$player_key <- -(DST_KEY_BASE + team_idx)
 
-  pool <- dst[order(dst$ecr), c("player_key", "player", "pos", "team", "ecr", "bye")]
+  # Same consensus-spread columns build_draft_pool() now carries, so the two
+  # still rbind(). DSTs never reach R/77_consensus.R (no ranked DST rows exist
+  # to fit a curve against), but the shapes must match regardless.
+  pool <- dst[order(dst$ecr), c("player_key", "player", "pos", "team",
+                                "ecr", "sd", "best", "worst", "rank_delta", "bye")]
 
   # Match build_player_value()'s column shape (R/75_value.R) exactly, so
   # this can be rbind()ed onto build_fallback_board()'s output. Every DST

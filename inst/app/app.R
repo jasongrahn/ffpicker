@@ -80,8 +80,14 @@ pick_ui <- function(initial_team) {
           "receiver are worth the same to you.",
           br(),
           strong("Expert rank"), " = where a consensus of fantasy analysts drafts ",
-          "this player, lower being earlier. Shown so this table can be compared ",
-          "against the rookies below, who have no Extra pts at all.",
+          "this player, lower being earlier.",
+          br(),
+          strong("A ~ before Extra pts"), " = estimated, not projected. These are ",
+          "almost all 2026 rookies: no NFL games yet, so nothing of their own to ",
+          "project from. The number is read off where the experts rank them and ",
+          "how much the experts disagree, then charged for that disagreement. ",
+          "Treat it as a real place on this list, held a little more loosely than ",
+          "the players around it.",
           br(),
           strong("Tier"), " = a gap in that number big enough to matter, counted ",
           "within one position only. The last tier-3 receiver and the first ",
@@ -93,15 +99,15 @@ pick_ui <- function(initial_team) {
           "board because this is a true best-available list, but taking one now ",
           "costs you a starter somewhere else."
         ),
-        h4("No current-season data yet (mostly rookies)", style = "margin-top: 20px;"),
+        h4("Team defenses (no Extra pts)", style = "margin-top: 20px;"),
         div(style = "overflow-x: auto;", tableOutput("fallback_board")),
         helpText(
           style = "max-width: 60em;",
-          "These players have no current-season stats to project from, so there ",
-          "is no Extra pts for them. Expert rank is the only column both tables ",
-          "share -- use it to place a rookie against the board above. A rookie at ",
-          "expert rank 40 is being drafted around the same point as a board player ",
-          "at expert rank 40, but with no projection behind him either way."
+          "A defense scores as a whole unit -- sacks, interceptions, points it ",
+          "holds the other team under -- so there is no individual stat line ",
+          "behind it and no Extra pts yet. Rank by expert rank and take one in ",
+          "the round the plan says. Rookies used to sit in this table too; they ",
+          "are now on the board above with an estimated Extra pts, marked ~."
         )
       )
     )
@@ -235,7 +241,7 @@ server <- function(input, output, session) {
     # kicker and five QBs above a 133-VOR Christian McCaffrey (reported
     # 2026-09-06). VOR is the only cross-position-comparable number here.
     available <- available[order(-available$vor, available$tier), ]
-    out <- head(available[, c("tier", "player", "pos", "team", "vor", "ecr")], 30)
+    out <- head(available[, c("tier", "player", "pos", "team", "vor", "ecr", "value_source")], 30)
     # Numbers are formatted here rather than by renderTable's digits=, because
     # mark_deferred() hands every column back as character. renderTable would
     # otherwise format every numeric column alike, so a shared digits= would
@@ -256,7 +262,11 @@ server <- function(input, output, session) {
       Player = out$player,
       Pos = out$pos,
       Team = out$team,
-      `Extra pts` = sprintf("%.1f", out$vor),
+      # "~" marks a value estimated from expert consensus rather than projected
+      # from the player's own production (add_consensus_rows(), R/77_consensus.R).
+      # One character, in the column the eye is already on, beats a separate
+      # column to cross-reference under a 1-minute clock. Defined in the legend.
+      `Extra pts` = paste0(consensus_mark(out$value_source), sprintf("%.1f", out$vor)),
       `Expert rank` = as.integer(round(out$ecr)),
       check.names = FALSE, stringsAsFactors = FALSE
     )

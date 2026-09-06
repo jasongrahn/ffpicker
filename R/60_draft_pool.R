@@ -11,9 +11,18 @@
 #' DST is dropped: it's scored at the team level in Yahoo, not from individual
 #' player rows, and was never part of dim_player to begin with.
 #'
+#' `sd`/`best`/`worst`/`rank_delta` ride along beside `ecr`. FantasyPros'
+#' ECR is the mean of many analysts' ranks; those four describe the spread
+#' around it -- how much the experts disagree about a player. A rookie with
+#' no NFL games has no stat line to project from, so that disagreement is
+#' the only measure of confidence available for him, and R/77_consensus.R
+#' turns it into a value estimate. Carried here rather than re-read from the
+#' parquet downstream, so the pool stays the single source of ranking truth.
+#'
 #' @param ff_rankings_path Raw parquet from ingest_ff_rankings().
 #' @param dim_player data.table from build_dim_player().
-#' @return data.table, one row per draftable player: player_key, player, pos, team, ecr, bye.
+#' @return data.table, one row per draftable player: player_key, player, pos,
+#'   team, ecr, sd, best, worst, rank_delta, bye.
 build_draft_pool <- function(ff_rankings_path, dim_player) {
   rankings <- as.data.frame(arrow::read_parquet(ff_rankings_path))
   rankings <- rankings[rankings$page_type == "redraft-overall", ]
@@ -27,7 +36,8 @@ build_draft_pool <- function(ff_rankings_path, dim_player) {
   # not a crosswalk failure -- dropped rather than carried as NA player_key.
   pool <- pool[!is.na(pool$player_key), ]
 
-  pool[, c("player_key", "player", "pos", "team", "ecr", "bye")]
+  pool[, c("player_key", "player", "pos", "team",
+           "ecr", "sd", "best", "worst", "rank_delta", "bye")]
 }
 
 #' Validate the draft pool: one row per player, ECR must be present and positive.

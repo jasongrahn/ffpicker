@@ -147,6 +147,25 @@ deferred_notes <- function(report) {
   setNames(ifelse(is.na(round), "wait til late", paste0("wait til rd ", round)), pos)
 }
 
+#' Mark a Board value that was estimated from expert consensus rather than
+#' projected from the player's own production (add_consensus_rows(),
+#' R/77_consensus.R).
+#'
+#' One shared mark for every pane that prints a value, for the same reason
+#' rank_positions() is shared: the Board and the recommendation panel sit side
+#' by side on screen, and two vocabularies for the same fact is two chances to
+#' read one of them as a different fact.
+#'
+#' A board predating the `value_source` column marks nothing rather than
+#' erroring -- the same degrade-don't-crash rule as vor_best_or_na().
+#'
+#' @param value_source Character vector, "projected" or "consensus".
+#' @return Character vector, "~" or "", one per element. "" for NULL input.
+consensus_mark <- function(value_source) {
+  if (is.null(value_source)) return("")
+  ifelse(!is.na(value_source) & value_source == "consensus", "~", "")
+}
+
 #' Vectorised isTRUE(). NA counts as not-true rather than propagating.
 isTRUE_each <- function(x) !is.na(x) & x
 
@@ -221,11 +240,12 @@ parked_phrase <- function(parked) {
 #' whole point is not having to cross-reference the position against the Board
 #' by eye. This picks the undrafted players at the target position, best first.
 #'
-#' Ranked players (the Board, which carries VOR) come first and are ordered by
-#' VOR. Unranked ones (rookies, DSTs -- no VOR at all) are appended in ECR
-#' order, and only surface when the position has no ranked players left, or
-#' too few to fill `n`. DST is the case that matters: it lives entirely in the
-#' fallback, so without this half the recommendation would come back empty.
+#' Board players (who carry a VOR, projected or consensus-estimated) come first
+#' and are ordered by VOR. Unranked ones are appended in ECR order, and only
+#' surface when the position has no Board players left, or too few to fill `n`.
+#' DST is now the only case that matters: it is team-level, has no VOR at all,
+#' and lives entirely in the fallback, so without this half the recommendation
+#' would come back empty in the round the plan finally allows a defense.
 #'
 #' @param report data.frame from scarcity_report().
 #' @param remaining_board undrafted rows of the Board: player, pos, team, tier, vor.
@@ -245,7 +265,7 @@ recommend_picks <- function(report, remaining_board, remaining_fallback, n = 3) 
   ranked <- if (nrow(rb) == 0) empty else data.frame(
     Player = rb$player, Pos = rb$pos, Team = rb$team,
     Tier = as.integer(rb$tier),
-    Value = sprintf("+%.0f pts", rb$vor),
+    Value = paste0(consensus_mark(rb$value_source), sprintf("+%.0f pts", rb$vor)),
     stringsAsFactors = FALSE
   )
 

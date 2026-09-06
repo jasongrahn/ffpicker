@@ -224,11 +224,20 @@ assign_tiers <- function(vor_table, gap_multiplier = 1) {
 #' These have an ECR but no VOR, so they're excluded from compute_vor()
 #' entirely; this surfaces them separately rather than dropping them.
 #'
+#' `exclude_keys` is how `add_consensus_rows()` (R/77_consensus.R) and this
+#' function stay disjoint. Once a rookie gets a consensus-estimated VOR he is a
+#' Board row, and leaving him here as well would double him -- twice in
+#' `combined_selectable_pool()`, twice in `scarcity_input()`'s need counting.
+#' The Board is the authority on who it has taken; this subtracts.
+#'
 #' @param value_table data.table from build_player_value().
-#' @return `value_table`, restricted to has_current_data == FALSE rows,
-#'   ordered by ascending ecr.
-build_fallback_board <- function(value_table) {
+#' @param exclude_keys player_keys already carried on the Board, typically
+#'   `draft_board$player_key`. Default keeps every no-data row.
+#' @return `value_table`, restricted to has_current_data == FALSE rows not in
+#'   `exclude_keys`, ordered by ascending ecr.
+build_fallback_board <- function(value_table, exclude_keys = NULL) {
   fb <- value_table[!value_table$has_current_data, ]
+  if (length(exclude_keys) > 0) fb <- fb[!(fb$player_key %in% exclude_keys), ]
   fb[order(fb$ecr), ]
 }
 

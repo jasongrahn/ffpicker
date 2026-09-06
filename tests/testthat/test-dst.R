@@ -9,6 +9,10 @@ test_that("build_dst_pool filters to redraft-overall DST rows only", {
     team      = c("SF", "SF", "KC", "JAC"),
     id        = c(1, 2, 3, 4),
     ecr       = c(100, 5, 50, 150),
+    sd        = c(10, 1, 5, 15),
+    best      = c(80, 3, 40, 120),
+    worst     = c(130, 8, 60, 190),
+    rank_delta = c(0, 1, -1, 2),
     bye       = c(9, 9, 10, 7)
   )
   arrow::write_parquet(fixture, tmp)
@@ -72,6 +76,10 @@ test_that("the synthetic key is keyed off team abbreviation, not row order -- st
     team = c("SF", "KC"),
     id = c(1, 2),
     ecr = c(10, 20),
+    sd = c(2, 3),
+    best = c(6, 14),
+    worst = c(15, 27),
+    rank_delta = c(0, 0),
     bye = c(9, 10)
   )
 
@@ -124,7 +132,9 @@ test_that("build_dst_pool's output shape matches build_fallback_board's, so the 
   )
   draft_pool <- data.frame(
     player_key = c(1, 2), player = c("Has Data", "No Data"),
-    pos = c("RB", "WR"), team = c("XX", "YY"), ecr = c(5, 200), bye = 9
+    pos = c("RB", "WR"), team = c("XX", "YY"), ecr = c(5, 200),
+    sd = c(1, 30), best = c(3, 140), worst = c(9, 280), rank_delta = c(0, 0),
+    bye = 9
   )
   opp <- data.frame(
     player_key = 1, points_exp = 24, games_exp = 2,
