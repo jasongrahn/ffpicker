@@ -95,55 +95,95 @@ is. Requires attribution to Sleeper per docs. Not tested. Flagged, not scoped.
 
 ---
 
-## Next session: write the plan, then delegate to haiku agents
+## Next session: plan an EVALUATION of Sleeper, then delegate to haiku agents
 
-Deliverable of next session is **a plan document**, not the implementation.
-Implementation gets handed to haiku agents afterward.
+**Goal is a verdict, not an integration.** Question on the table: *is Sleeper
+data a sufficient supplement to what we already have?* Plan and implementation
+both serve that question. Adoption is what happens **if** the evaluation
+passes — it is not the premise.
 
-### Scope the plan around this, not the tail
+This matters because the probe above already moved once. It started as "fix
+the 281 tail," measured out as "does nothing for the tail, beats a dead ECR in
+the 290-413 band." It can move again. Do not write a plan that can only
+conclude yes.
 
-Target = replace `ecr`-derived ordering in the censored band with a blended
-rank. Not = rescue the 281.
+### What "sufficient supplement" has to mean, concretely
 
-### Gate the plan on one measurement first
+Four criteria. Plan must state a pass/fail bar for each **before** measuring,
+or the result is post-hoc.
 
-Before any ingest target is written, settle: **does blending Sleeper into the
-censored band change who the app actually recommends?** Re-run `dev/dryrun.R`
-with a patched ordering and diff the 17 picks. If rounds 10-17 name the same
-players, the whole project is a no-op and should be dropped. ~30 min. This is
-Gate 0 of the plan and it can fail the project.
+1. **Coverage** — does it reach players our data misses or mis-ranks?
+   *Already measured: 714/732 pool match (98%), 1949 skill players ranked vs
+   FantasyPros' censored ~525.* Provisionally passes.
+2. **Signal** — does it predict production better than what we hold, and
+   where? *Already measured, table above. Passes in the censored band,
+   fails on the 281.*
+3. **Independence** — is `search_rank` new information, or is it re-deriving
+   the same consensus FantasyPros already sold us? **Not measured. Open.**
+   A popularity rank downstream of the same expert chatter adds nothing even
+   when it correlates. Test: partial correlation of Sleeper with PPG
+   controlling for ECR, inside the uncensored band where both are alive.
+4. **Actionability** — does any of it change a pick? **Not measured. Open,
+   and decisive.** Criteria 1-3 can all pass and the answer still be no.
+
+Criteria 3 and 4 are the session's real work. 1 and 2 are largely done.
+
+### Actionability is the gate that can end the project
+
+Patch `dev/dryrun.R`'s ordering with a Sleeper-informed rank and diff the 17
+picks against the current run. If rounds 10-17 name the same players, Sleeper
+is a measurement that changes no decision -> **write that verdict and stop.**
+~30 min. A clean negative here is a successful session, not a failed one.
+
+Run this early. It is cheap and it can save the other three.
 
 ### Shape for haiku delegation
 
-Haiku agents need bounded, verifiable, independent units. Suggested split —
-each one gets its own acceptance test, none needs the others' context:
+Haiku builds the **evaluation harness**, throwaway-tolerant, not production
+targets wired into `_targets.R`. Keep it in `dev/`. Each unit bounded,
+verifiable, independent:
 
-1. **Ingest target.** `ingest_sleeper_players()` in `R/10_ingest.R` style,
-   writes parquet to `data/raw/`, `format = "file"` target in `_targets.R`.
-   Cache-respecting — docs say once/day. Acceptance: parquet exists, >11k
-   rows, `search_rank` present.
-2. **Stage target.** Filter to active skill positions, drop `9999999`
-   sentinel, drop retired/no-team, produce `sleeper_rank` keyed on
-   `sleeper_id`. Acceptance: no sentinel values survive, no inactive rows.
-3. **Crosswalk + blend.** Join to `dim_player$sleeper_id`, blend into
-   `draft_pool`. Acceptance: match rate >= 95% of pool, blended order is
-   monotone where `ecr` is uncensored.
-4. **Tests + validation.** `pointblank` on the new targets, `testthat` file
-   matching repo convention.
+1. **Fetch + flatten.** `dev/sleeper_probe.R` — pull `/v1/players/nfl`, cache
+   to disk (docs: once/day), flatten `player_id`, `full_name`, `position`,
+   `team`, `search_rank`, `active` to a data frame. Acceptance: >11k rows,
+   re-run hits cache not network.
+2. **Clean.** Drop `9999999` sentinel, inactive, no-team, non-skill positions.
+   Acceptance: no sentinel survives, no inactive rows, row count reported.
+3. **Crosswalk + join.** To `dim_player$sleeper_id` and `draft_pool`. Emit
+   the match-rate table split by `ecr_source`. Acceptance: match rate printed,
+   no name-based joins anywhere.
+4. **Measurement script.** Criteria 3 and 4 above. Emits the correlation
+   table, the partial correlation, and the 17-pick diff. Acceptance: runs
+   end to end, prints numbers, asserts nothing.
 
-Blend rule is the one real judgement call — **decide it yourself in the plan,
-do not delegate it.** Haiku agents implement, they do not choose the model.
+Unit 4 **reports**; it must not decide. You read its output and write the
+verdict.
+
+### Decide these yourself, do not delegate
+
+- The pass/fail bar for each of the four criteria. Set before measuring.
+- Any blend rule, **if** the evaluation passes. Haiku implements a model, it
+  does not choose one.
 
 ### Non-negotiables to state in the plan
 
-- Config-driven. Any blend weight / censor threshold goes in `config/`, not
-  code. CLAUDE.md rule.
+- Evaluation code lives in `dev/`. Nothing enters `_targets.R` until the
+  verdict is yes. Do not grow `draft_pool` on spec.
 - Never join on name. `sleeper_id` only.
+- If it passes and gets adopted, thresholds and weights go in `config/`, not
+  code. CLAUDE.md rule.
 - `/caveman` docs style.
-- Do not touch the Yahoo export. That thread is closed (#14) and the CSV is
-  already imported into Yahoo.
+- Do not touch the Yahoo export. Closed in #14, CSV already imported.
 
----
+### Possible verdicts — all three are acceptable outcomes
+
+- **Adopt.** Passes all four -> write the integration plan.
+- **Adopt narrowly.** Passes only in the censored band -> use it only there,
+  say so explicitly, leave the rest of the board alone. *Current evidence
+  points here.*
+- **Reject.** Fails independence or actionability -> record the numbers in a
+  handoff so nobody re-investigates. Same closure Yahoo and `ffscrapr` got in
+  CLAUDE.md.
 
 ## Reproduce the numbers above
 
@@ -175,8 +215,8 @@ per-`player_key` mean `fantasy_points` from
 
 ## Do next
 
-1. **Write the Sleeper plan.** Gate 0 measurement first, then the 4-unit
-   haiku split. ~45 min.
+1. **Write the Sleeper evaluation plan.** Set the four pass/fail bars, then
+   the 4-unit haiku harness. Run actionability early — it can end it. ~45 min.
 2. Everything else is optional before Tuesday.
 
 `data/yahoo_rankings.csv` printing — **done, user handled it.**
@@ -185,11 +225,13 @@ per-`player_key` mean `fantasy_points` from
 
 ## Suggested skills
 
-- **`/prototype`** or **`/to-prd`** — for writing the plan doc itself.
-  `/prototype` if Gate 0 is the priority (measure, then decide);
-  `/to-prd` if the decision is already made and it needs specifying.
-- **`/tdd`** — hand to the haiku agents. Each of the 4 units has a stated
-  acceptance test; TDD is the natural fit and keeps haiku bounded.
+- **`/prototype`** — right fit. This is a throwaway harness answering a
+  yes/no, not a product. Prefer over `/to-prd`; nothing is being specified
+  for build yet.
+- **`/diagnose`** — if the measurements come back contradictory.
+- **`/tdd`** — hand to the haiku agents for units 1-3, which have real
+  acceptance tests. **Not** unit 4: a measurement script asserts nothing, and
+  TDD on it invites fitting the test to the hoped-for answer.
 - **`/caveman`** — repo doc style, required by CLAUDE.md.
 - **`verify` agent** — runs suite + targets pipeline, reports pass/fail
   without dumping R console output into context. Use after each haiku unit.
