@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "league.schema.json",
+  "title": "League config",
+  "type": "object",
+  "required": ["platform", "teams", "draft", "roster", "season"],
+  "additionalProperties": false,
+  "properties": {
+    "platform": { "type": "string", "enum": ["yahoo", "espn", "sleeper", "mfl", "fleaflicker"] },
+    "teams": {
+      "description": "Nullable until Pete confirms league size. Filled by sweep mode otherwise.",
+      "type": ["integer", "null"],
+      "minimum": 4,
+      "maximum": 20
+    },
+    "draft": {
+      "type": "object",
+      "required": ["type", "my_slot", "rounds"],
+      "additionalProperties": false,
+      "properties": {
+        "type": { "type": "string", "enum": ["snake", "auction", "linear"] },
+        "my_slot": {
+          "description": "Nullable until Pete confirms draft slot. Filled by sweep mode otherwise.",
+          "type": ["integer", "null"],
+          "minimum": 1
+        },
+        "rounds": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "roster": {
+      "type": "object",
+      "required": ["starters", "flex_eligible", "bench"],
+      "additionalProperties": false,
+      "properties": {
+        "starters": {
+          "type": "object",
+          "additionalProperties": { "type": "integer", "minimum": 0 }
+        },
+        "flex_eligible": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": { "type": "string", "enum": ["QB", "RB", "WR", "TE", "K", "DST"] }
+          }
+        },
+        "bench": { "type": "integer", "minimum": 0 },
+        "ir": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "season": {
+      "type": "object",
+      "required": ["regular_weeks", "playoff_weeks", "playoff_teams"],
+      "additionalProperties": false,
+      "properties": {
+        "regular_weeks": {
+          "type": "array", "items": { "type": "integer" }, "minItems": 2, "maxItems": 2
+        },
+        "playoff_weeks": {
+          "type": "array", "items": { "type": "integer" }, "minItems": 2, "maxItems": 2
+        },
+        "playoff_teams": { "type": "integer", "minimum": 2 }
+      }
+    }
+  }
+}

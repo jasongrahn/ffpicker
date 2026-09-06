@@ -1,0 +1,12 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+renv/library/
+renv/staging/
+_targets/
+data/raw/
+data/stage/
+data/mart/
+data/ff.duckdb
+*.log

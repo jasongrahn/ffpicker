@@ -1,0 +1,47 @@
+{
+  "passing": {
+    "yards": 0.04,
+    "td": 4,
+    "int": -1
+  },
+  "rushing": { "yards": 0.1, "td": 6 },
+  "receiving": {
+    "reception": 0.5,
+    "yards": 0.1,
+    "td": 6,
+    "position_premium": { "TE": 0.0 }
+  },
+  "misc": {
+    "fumble_lost": -2,
+    "two_point": 2,
+    "return_td": 6,
+    "offensive_fumble_return_td": 6
+  },
+  "kicking": {
+    "fg_0_39": 3,
+    "fg_40_49": 4,
+    "fg_50_plus": 5,
+    "fg_miss": 0,
+    "pat_made": 1,
+    "pat_miss": 0
+  },
+  "dst": {
+    "sack": 1,
+    "interception": 2,
+    "fumble_recovery": 2,
+    "touchdown": 6,
+    "safety": 2,
+    "block_kick": 2,
+    "return_td": 6,
+    "extra_point_returned": 2,
+    "points_allowed": [
+      { "max": 0, "points": 10 },
+      { "max": 6, "points": 7 },
+      { "max": 13, "points": 4 },
+      { "max": 20, "points": 1 },
+      { "max": 27, "points": 0 },
+      { "max": 34, "points": -1 },
+      { "max": 999, "points": -4 }
+    ]
+  }
+}

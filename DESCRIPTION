@@ -1,0 +1,27 @@
+Package: ffdraft
+Title: Local Fantasy Football Draft Engine
+Version: 0.0.0.9000
+Authors@R: person("Jason", "Grahn", email = "jasongrahn@gmail.com", role = c("aut", "cre"))
+Description: A local, config-driven fantasy football draft engine that optimizes
+    for P(championship) under a specific league's scoring and roster rules,
+    rather than producing generic rankings.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Depends: R (>= 4.4)
+Imports:
+    jsonlite,
+    jsonvalidate,
+    nflreadr,
+    data.table,
+    DBI,
+    duckdb,
+    targets,
+    pointblank
+Suggests:
+    testthat (>= 3.0.0),
+    shiny,
+    bslib,
+    reactable
+Config/testthat/edition: 3

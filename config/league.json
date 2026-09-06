@@ -1,0 +1,12 @@
+{
+  "platform": "yahoo",
+  "teams": 10,
+  "draft": { "type": "snake", "my_slot": null, "rounds": 17 },
+  "roster": {
+    "starters": { "QB": 1, "RB": 2, "WR": 2, "TE": 1, "FLEX": 1, "K": 1, "DST": 1 },
+    "flex_eligible": { "FLEX": ["RB", "WR", "TE"] },
+    "bench": 6,
+    "ir": 2
+  },
+  "season": { "regular_weeks": [1, 15], "playoff_weeks": [16, 17], "playoff_teams": 4 }
+}

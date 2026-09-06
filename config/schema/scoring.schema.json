@@ -1,0 +1,101 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "scoring.schema.json",
+  "title": "Scoring config",
+  "description": "Yahoo supports per-position per-stat values and non-default bonuses/tiers. Keep this permissive enough to absorb whatever the commissioner picked.",
+  "type": "object",
+  "required": ["passing", "rushing", "receiving", "misc", "kicking"],
+  "additionalProperties": false,
+  "properties": {
+    "passing": {
+      "type": "object",
+      "required": ["yards", "td", "int"],
+      "properties": {
+        "yards": { "type": "number" },
+        "td": { "type": "number" },
+        "int": { "type": "number" },
+        "bonus": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["stat", "gte", "points"],
+            "properties": {
+              "stat": { "type": "string" },
+              "gte": { "type": "number" },
+              "points": { "type": "number" }
+            }
+          }
+        }
+      }
+    },
+    "rushing": {
+      "type": "object",
+      "required": ["yards", "td"],
+      "properties": {
+        "yards": { "type": "number" },
+        "td": { "type": "number" },
+        "first_down": { "type": "number" }
+      }
+    },
+    "receiving": {
+      "type": "object",
+      "required": ["reception", "yards", "td"],
+      "properties": {
+        "reception": { "type": "number" },
+        "yards": { "type": "number" },
+        "td": { "type": "number" },
+        "position_premium": {
+          "type": "object",
+          "additionalProperties": { "type": "number" }
+        }
+      }
+    },
+    "misc": {
+      "type": "object",
+      "properties": {
+        "fumble_lost": { "type": "number" },
+        "two_point": { "type": "number" },
+        "return_td": { "type": "number" },
+        "offensive_fumble_return_td": { "type": "number" }
+      }
+    },
+    "kicking": {
+      "type": "object",
+      "required": ["fg_0_39", "fg_40_49", "fg_50_plus", "fg_miss", "pat_made", "pat_miss"],
+      "properties": {
+        "fg_0_39": { "type": "number" },
+        "fg_40_49": { "type": "number" },
+        "fg_50_plus": { "type": "number" },
+        "fg_miss": { "type": "number" },
+        "pat_made": { "type": "number" },
+        "pat_miss": { "type": "number" }
+      }
+    },
+    "dst": {
+      "type": "object",
+      "description": "Team-level defense/special-teams scoring. Not yet consumed by score_player_week() (see R/30_scoring.R) — needs a team-level stat source. Recorded here so the real league rule isn't lost before that's built.",
+      "properties": {
+        "sack": { "type": "number" },
+        "interception": { "type": "number" },
+        "fumble_recovery": { "type": "number" },
+        "touchdown": { "type": "number" },
+        "safety": { "type": "number" },
+        "block_kick": { "type": "number" },
+        "return_td": { "type": "number" },
+        "extra_point_returned": { "type": "number" },
+        "points_allowed": {
+          "type": "array",
+          "description": "Tiers ordered ascending by max; first tier where points_allowed <= max applies.",
+          "items": {
+            "type": "object",
+            "required": ["max", "points"],
+            "properties": {
+              "max": { "type": "number" },
+              "points": { "type": "number" }
+            }
+          }
+        }
+      }
+    }
+  }
+}
