@@ -7,17 +7,26 @@ mk_report <- function(...) {
   base <- data.frame(
     pos = c("QB", "RB", "WR", "TE"),
     still_needed = c(1, 2, 2, 1),
+    roster_count = c(0, 0, 0, 0),
+    bench_room = c(2, 7, 7, 2),
     tier_supply = c(8, 3, 9, 4),
     picks_until_turn = 11L,
     survives = c(TRUE, FALSE, TRUE, FALSE),
     vor_best = c(40, 120, 100, 90),
     deferred = FALSE,
+    defer_until_round = NA_integer_,
     urgency = c(2L, 1L, 2L, 1L),
     stringsAsFactors = FALSE
   )
   mods <- list(...)
   for (nm in names(mods)) base[[nm]] <- mods[[nm]]
   base
+}
+
+# The one-row shape recommend_picks() hands explain_scarcity().
+recommend_picks_stub <- function(player, pos, team) {
+  data.frame(Player = player, Pos = pos, Team = team, Tier = 1L,
+             Value = "+10 pts", stringsAsFactors = FALSE)
 }
 
 test_that("position_name() spells out codes and passes unknowns through", {
@@ -60,9 +69,59 @@ test_that("explain_scarcity() degrades when my_slot isn't captured yet", {
   expect_match(msg, "draft slot")
 })
 
-test_that("explain_scarcity() reports a full starting lineup", {
-  msg <- explain_scarcity(mk_report(still_needed = c(0, 0, 0, 0)))
+test_that("explain_scarcity() reports a full starting lineup and still names a pick", {
+  # Rounds 8-14 of the dry run: no starter slot open, and the advice pane went
+  # blank for nine straight picks. It must now name the best bench player.
+  report <- mk_report(still_needed = c(0, 0, 0, 0))
+  msg <- explain_scarcity(report, recommend_picks_stub("Kareem Hunt", "RB", "KC"))
   expect_match(msg, "Starting lineup is full")
+  expect_match(msg, "Best bench value is Kareem Hunt \\(RB, KC\\)")
+})
+
+test_that("explain_scarcity() names parked positions during the bench phase", {
+  report <- mk_report(still_needed = c(0, 0, 0, 0))
+  report <- rbind(report, data.frame(
+    pos = "K", still_needed = 1, roster_count = 0, bench_room = 1,
+    tier_supply = 5, picks_until_turn = 11L, survives = TRUE, vor_best = 61,
+    deferred = TRUE, urgency = 5L, defer_until_round = 16L,
+    stringsAsFactors = FALSE
+  ))
+  msg <- explain_scarcity(report, recommend_picks_stub("Kareem Hunt", "RB", "KC"))
+  expect_match(msg, "Starters set apart from")
+  expect_match(msg, "kicker")
+  expect_match(msg, "Best bench value is Kareem Hunt")
+  # And the kicker itself is never the bench recommendation before round 16.
+  expect_false(identical(target_position(report), "K"))
+})
+
+test_that("bench_open() drops positions already at their roster cap", {
+  # A league starting one QB has no use for a third. Two QBs rostered against a
+  # cap of two -> QB is out, however good the best one left is.
+  report <- mk_report(still_needed = c(0, 0, 0, 0),
+                      roster_count = c(2, 0, 0, 0),
+                      bench_room = c(0, 7, 7, 2),
+                      vor_best = c(400, 120, 100, 90))
+  expect_false("QB" %in% bench_open(report)$pos)
+  expect_equal(target_position(report), "RB")
+})
+
+test_that("bench_open() drops positions with nobody left on the board", {
+  report <- mk_report(still_needed = c(0, 0, 0, 0), tier_supply = c(0, 3, 9, 4))
+  expect_false("QB" %in% bench_open(report)$pos)
+})
+
+test_that("starter need outranks bench value while any starter slot is open", {
+  # QB has by far the most value at stake, but RB/WR/TE still need starters.
+  report <- mk_report(still_needed = c(0, 2, 2, 1), vor_best = c(400, 120, 100, 90))
+  expect_equal(target_position(report), "RB")
+})
+
+test_that("a report predating bench_room degrades to no bench recommendation", {
+  legacy <- mk_report(still_needed = c(0, 0, 0, 0))
+  legacy$bench_room <- NULL
+  expect_equal(nrow(bench_open(legacy)), 0L)
+  expect_true(is.na(target_position(legacy)))
+  expect_match(explain_scarcity(legacy), "Draft best available")
 })
 
 test_that("explain_scarcity() never returns empty on an empty report", {
@@ -139,7 +198,9 @@ mk_fb <- function() data.frame(
 
 test_that("target_position() picks the most urgent needed position", {
   expect_equal(target_position(mk_report()), "RB")
-  expect_true(is.na(target_position(mk_report(still_needed = c(0, 0, 0, 0)))))
+  # No starter slot open is no longer a dead end: it falls through to the best
+  # position that still has bench room.
+  expect_equal(target_position(mk_report(still_needed = c(0, 0, 0, 0))), "RB")
   expect_true(is.na(target_position(NULL)))
 })
 
@@ -184,8 +245,17 @@ test_that("recommend_picks() marks a consensus-estimated value so the panel agre
   expect_equal(out$Value[out$Player == "Top RB"], "+180 pts")
 })
 
-test_that("recommend_picks() returns no rows when no starter slot is open", {
+test_that("recommend_picks() names bench depth when no starter slot is open", {
   out <- recommend_picks(mk_report(still_needed = c(0, 0, 0, 0)), mk_board(), mk_fb())
+  expect_equal(names(out), c("Player", "Pos", "Team", "Tier", "Value"))
+  expect_equal(out$Player, c("Top RB", "Mid RB", "Low RB"))
+})
+
+test_that("recommend_picks() returns no rows only when nothing is draftable", {
+  # Every position capped and the lineup full -- the genuine end of the draft.
+  out <- recommend_picks(mk_report(still_needed = c(0, 0, 0, 0),
+                                   bench_room = c(0, 0, 0, 0)),
+                         mk_board(), mk_fb())
   expect_equal(nrow(out), 0)
   expect_equal(names(out), c("Player", "Pos", "Team", "Tier", "Value"))
 })

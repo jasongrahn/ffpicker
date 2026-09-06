@@ -324,3 +324,31 @@ test_that("vor_best reports the best VOR still available at each position, NA wh
   # valuable position of all.
   expect_true(is.na(result$vor_best[result$pos == "DST"]))
 })
+
+test_that("bench_room counts down from the position cap as the roster fills", {
+  capped <- league
+  capped$roster$max_at_position <- list(QB = 2, RB = 7)
+  board <- data.frame(player_key = 1:4, pos = c("QB", "QB", "RB", "K"), tier = 1)
+  state <- list(rosters = list("JGrahnasaurs" = c(1)), my_team = "JGrahnasaurs",
+                my_slot = 7, teams = 10, drafted_players = c(1))
+
+  result <- scarcity_report(board, state, capped)
+
+  expect_equal(result$roster_count[result$pos == "QB"], 1)
+  expect_equal(result$bench_room[result$pos == "QB"], 1)
+  # No cap configured for K -> uncapped, never filtered out on roster shape.
+  expect_true(is.infinite(result$bench_room[result$pos == "K"]))
+})
+
+test_that("a second QB in a one-QB league leaves no room for a third (regression: reported 2026-09-06)", {
+  capped <- league
+  capped$roster$max_at_position <- list(QB = 2)
+  board <- data.frame(player_key = 1:3, pos = c("QB", "QB", "QB"), tier = 1)
+  state <- list(rosters = list("JGrahnasaurs" = c(1, 2)), my_team = "JGrahnasaurs",
+                my_slot = 7, teams = 10, drafted_players = c(1, 2))
+
+  result <- scarcity_report(board, state, capped)
+
+  expect_equal(result$still_needed[result$pos == "QB"], 0)
+  expect_equal(result$bench_room[result$pos == "QB"], 0)
+})

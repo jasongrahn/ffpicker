@@ -49,7 +49,12 @@
           }
         },
         "bench": { "type": "integer", "minimum": 0 },
-        "ir": { "type": "integer", "minimum": 0 }
+        "ir": { "type": "integer", "minimum": 0 },
+        "max_at_position": {
+          "description": "Most players worth rostering at each position, starters included. Governs bench recommendations once every starter slot is filled: a league starting one QB has no use for a third, so the position drops out of consideration at 2 and the pick goes to a position that can still pay. Keys are position codes. Omit a position to leave it uncapped.",
+          "type": "object",
+          "additionalProperties": { "type": "integer", "minimum": 0 }
+        }
       }
     },
     "season": {
