@@ -22,7 +22,8 @@ Use this index.
 | 8 | `20260906.md` | Team-assignment gap found and fixed. Phase 3.5 actually done. |
 | 9 | `20260906-2.md` | Phase 3.6 run guide built. Expected-points ranking ready to wire. Budget rules. |
 | 10 | `20260906-3.md` | Expected-points wired. Three recommendation bugs killed, all found by screenshot. `dev/relaunch.sh`. |
-| 11 | `20260906-4.md` | **Current.** Deferred rows greyed on board. First full 17-round dry run (`dev/dryrun.R`) — found deferral was demotion not exclusion. Rookie sources settled: use FantasyPros `sd`, don't scrape. |
+| 11 | `20260906-4.md` | Deferred rows greyed on board. First full 17-round dry run (`dev/dryrun.R`) — found deferral was demotion not exclusion. Rookie sources settled: use FantasyPros `sd`, don't scrape. |
+| 12 | `20260906-5.md` | **Current.** Rookies priced onto Board. Yahoo import CSV built + names aligned — 292/510 imported, cause unsettled. |
 
 ## Reading rule
 
