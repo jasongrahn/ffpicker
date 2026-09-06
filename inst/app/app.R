@@ -67,13 +67,21 @@ pick_ui <- function(initial_team) {
       column(
         8,
         h4("Best available", style = "margin-top: 0;"),
-        tableOutput("board"),
+        div(style = "overflow-x: auto;", tableOutput("board")),
+        # Legends need an explicit max-width. Without one they inherit the
+        # width the table forces on the column and run off the right edge of
+        # the page mid-sentence (reported 2026-09-06).
         helpText(
+          style = "max-width: 60em;",
           strong("Extra pts"), " = fantasy points this player is expected to score ",
           "over a season beyond the best man you could get for free off the ",
           "waiver wire at the same position. It is the number to compare across ",
           "positions -- 40 extra points from a running back and 40 from a ",
           "receiver are worth the same to you.",
+          br(),
+          strong("Expert rank"), " = where a consensus of fantasy analysts drafts ",
+          "this player, lower being earlier. Shown so this table can be compared ",
+          "against the rookies below, who have no Extra pts at all.",
           br(),
           strong("Tier"), " = a gap in that number big enough to matter, counted ",
           "within one position only. The last tier-3 receiver and the first ",
@@ -81,12 +89,14 @@ pick_ui <- function(initial_team) {
           "tier-3 kicker have nothing to do with each other."
         ),
         h4("No current-season data yet (mostly rookies)", style = "margin-top: 20px;"),
-        tableOutput("fallback_board"),
+        div(style = "overflow-x: auto;", tableOutput("fallback_board")),
         helpText(
-          strong("Expert rank"), " = where a consensus of fantasy analysts drafts ",
-          "this player, lower being earlier. These players have no ",
-          "current-season stats to project from, so there is no Extra pts for ",
-          "them and they are not directly comparable to the table above."
+          style = "max-width: 60em;",
+          "These players have no current-season stats to project from, so there ",
+          "is no Extra pts for them. Expert rank is the only column both tables ",
+          "share -- use it to place a rookie against the board above. A rookie at ",
+          "expert rank 40 is being drafted around the same point as a board player ",
+          "at expert rank 40, but with no projection behind him either way."
         )
       )
     )
@@ -220,15 +230,22 @@ server <- function(input, output, session) {
     # kicker and five QBs above a 133-VOR Christian McCaffrey (reported
     # 2026-09-06). VOR is the only cross-position-comparable number here.
     available <- available[order(-available$vor, available$tier), ]
-    out <- head(available[, c("tier", "player", "pos", "team", "vor")], 30)
+    out <- head(available[, c("tier", "player", "pos", "team", "vor", "ecr")], 30)
     # renderTable() formats every numeric column alike, so a shared digits=
-    # would print tiers as "1.00". Tier is a label, not a measurement.
+    # would print tiers as "1.00". Tier and expert rank are labels/ranks, not
+    # measurements -- "68.19" implies a precision that a consensus of analysts
+    # does not have, and costs a beat to read under a 1-minute clock.
     out$tier <- as.integer(out$tier)
+    out$ecr <- as.integer(round(out$ecr))
     # "vor" and "ecr" are jargon, and CLAUDE.md makes plain English a product
     # feature rather than a courtesy: under a 1-minute clock a header you have
     # to decode is a header you ignore. Spelled out here, defined in the
     # legend under each table.
-    names(out) <- c("Tier", "Player", "Pos", "Team", "Extra pts")
+    #
+    # Expert rank rides along because it is the ONLY column this table shares
+    # with the rookies below, and without it there is no way to place a rookie
+    # against the ranked board at all (reported 2026-09-06).
+    names(out) <- c("Tier", "Player", "Pos", "Team", "Extra pts", "Expert rank")
     out
   }, digits = 1)
 
@@ -236,9 +253,10 @@ server <- function(input, output, session) {
     req(started())
     available <- remaining_draft_pool(draft_fallback, state())
     out <- head(available[, c("ecr", "player", "pos", "team")], 30)
+    out$ecr <- as.integer(round(out$ecr))
     names(out) <- c("Expert rank", "Player", "Pos", "Team")
     out
-  })
+  }, digits = 0)
 }
 
 shinyApp(ui, server)
