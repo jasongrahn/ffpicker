@@ -16,6 +16,11 @@ list(
   tar_target(ff_rankings_raw, ingest_ff_rankings(), format = "file"),
   tar_target(ff_opportunity_raw, ingest_ff_opportunity(), format = "file"),
 
+  # Yahoo's own draft ordering. Opponent model only -- never blended into vor.
+  # See R/97_yahoo_adp.R for the name-join justification and match rate.
+  tar_target(yahoo_adp_file, "docs/yahoo_fantasy_football_adp.csv", format = "file"),
+  tar_target(yahoo_adp, load_yahoo_adp(yahoo_adp_file)),
+
   tar_target(dim_player, validate_dim_player(build_dim_player(ff_playerids_raw, players_raw))),
   tar_target(fct_player_week, validate_fct_player_week(build_fct_player_week(player_stats_raw, dim_player))),
 
@@ -40,8 +45,10 @@ list(
   # against the Board was left to the drafter's eye under a 1-minute clock.
   # See R/77_consensus.R for the curve and the uncertainty penalty.
   tar_target(draft_board,
-             assign_tiers(validate_vor_table(
-               add_consensus_rows(compute_vor(player_value, league_config), player_value)))),
+             add_yahoo_ranks(
+               assign_tiers(validate_vor_table(
+                 add_consensus_rows(compute_vor(player_value, league_config), player_value))),
+               yahoo_adp, label = "draft_board")),
 
   # DSTs are team-level, so they have no dim_player row, no gsis_id, and no VOR.
   # They ride in the fallback section (has_current_data = FALSE) purely so the
@@ -54,6 +61,8 @@ list(
   # In practice this now leaves the fallback as DSTs plus anything the
   # consensus curve could not price.
   tar_target(draft_fallback,
-             rbind(build_fallback_board(player_value, exclude_keys = draft_board$player_key),
-                   dst_pool))
+             add_yahoo_ranks(
+               rbind(build_fallback_board(player_value, exclude_keys = draft_board$player_key),
+                     dst_pool),
+               yahoo_adp, label = "draft_fallback"))
 )
