@@ -28,7 +28,8 @@ Use this index.
 | 14 | `20260906-7.md` | Import thread closed — probe 25/25, full file 508/510. Bench-phase recommendations: rounds 8-14 name a player, 3 QBs -> 2. `renv` snapshotted. |
 | 15 | `20260906-8.md` | Position pages unioned into `draft_pool` (478 -> 732). Sleeper API probed: access clean, `search_rank` beats ECR where ECR is censored (-0.354 vs -0.014). Next: plan an *evaluation* of whether Sleeper is a sufficient supplement — verdict, not integration. |
 | 16 | `20260906-9.md` | Sleeper evaluated -> **REJECT**. Independent and predictive, but only where `ecr > 290` — past the end of a 10-team 17-round draft. 0 of 17 picks changed. Thread closed. |
-| 17 | `20260906-10.md` | **Current.** Yahoo XRank/ADP acquired, joins 170/170 of draftable range. Gate PASSED: real-Yahoo opponents change 5/17 picks, cost 32.5 starter pts -> `dev/dryrun.R`'s ECR opponent model is wrong and every strategy conclusion is optimistic. Fix scoped, NOT shipped. Adversarial critique in `docs/review/001-model-critique.md`. |
+| 17 | `20260906-10.md` | Yahoo XRank/ADP acquired, joins 170/170 of draftable range. Gate PASSED: real-Yahoo opponents change 5/17 picks, cost 32.5 starter pts -> `dev/dryrun.R`'s ECR opponent model is wrong and every strategy conclusion is optimistic. Fix scoped, NOT shipped. Adversarial critique in `docs/review/001-model-critique.md`. |
+| 18 | `20260906-11.md` | **Current.** Opponent model SHIPPED — `xrank`/`adp` on `draft_board`, dryrun opponents draft by XRank, `Yahoo gap` column live. New numbers: baseline **536.0**, QB-defer rd7/rd8 both 536.4. But dryrun is **n=1** — deterministic opponents, so no strategy comparison this repo has printed is a measurement. Next: scope for (1) Plackett-Luce Monte Carlo opponents with tau sweep + paired CIs, (2) survival probability -> **VONA**, live under the 1-minute clock. Four pre-registered bars set. |
 
 ## Reading rule
 
