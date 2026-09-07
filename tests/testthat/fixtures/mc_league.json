@@ -1,0 +1,46 @@
+{
+  "teams": 4,
+  "roster": {
+    "rounds": 6,
+    "starters": {
+      "QB": 1,
+      "RB": 1,
+      "WR": 1,
+      "TE": 1,
+      "FLEX": 1,
+      "K": 0,
+      "DST": 0
+    },
+    "bench": 2,
+    "ir": 0,
+    "flex_eligible": {
+      "FLEX": ["RB", "WR", "TE"]
+    }
+  },
+  "draft": {
+    "defer_until_round": {}
+  },
+  "scoring": {
+    "pass": {
+      "yards": 0.04,
+      "td": 4,
+      "int": -1
+    },
+    "rush": {
+      "yards": 0.1,
+      "td": 6
+    },
+    "rec": {
+      "yards": 0.1,
+      "td": 6,
+      "ppr": 0.5
+    },
+    "defense": {
+      "sack": 1,
+      "int": 2,
+      "fumble_recovered": 2,
+      "def_td": 6,
+      "safety": 2
+    }
+  }
+}

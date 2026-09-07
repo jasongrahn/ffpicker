@@ -114,6 +114,16 @@ scarcity_report <- function(draft_board, pick_log_state, league_config) {
   }
   defer_until <- league_config$draft$defer_until_round %||% list()
 
+  # Most players worth holding at each position, starters included. Starter
+  # need alone cannot shape the back half of a draft: once every starter slot
+  # is filled (round 8 in the 17-round dry run) still_needed is 0 everywhere,
+  # every position looks equally fine, and the app took a third quarterback in
+  # a league that starts one (reported 2026-09-06). A third QB can never enter
+  # a lineup, so its value at the margin is zero however good the player is.
+  # Uncapped when the config omits the position -- silently inventing a cap
+  # would be a league rule that lives in code.
+  max_at_position <- league_config$roster$max_at_position %||% list()
+
   rows <- lapply(positions, function(p) {
     still_needed <- if (p %in% flex_positions) {
       dedicated_need[[p]] + flex_need
@@ -170,9 +180,19 @@ scarcity_report <- function(draft_board, pick_log_state, league_config) {
       4L # not needed, and in no danger either -- least urgent
     }
 
+    # How many of this position are already on the roster, and how many more
+    # the cap still allows. bench_room is what the recommendation falls back
+    # to once no starter slot is open: room > 0 means another one here can
+    # still reach a lineup, room == 0 means it cannot.
+    roster_count <- drafted_count(p)
+    cap <- max_at_position[[p]]
+    bench_room <- if (is.null(cap)) Inf else max(0, as.numeric(cap) - roster_count)
+
     data.frame(
       pos = p,
       still_needed = still_needed,
+      roster_count = roster_count,
+      bench_room = bench_room,
       tier_supply = tier_supply,
       picks_until_turn = if (is.null(picks_until_turn)) NA_integer_ else picks_until_turn,
       survives = survives,

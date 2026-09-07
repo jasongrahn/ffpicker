@@ -20,6 +20,13 @@ draft_fallback <- targets::tar_read(draft_fallback, store = file.path(root, "_ta
 # same as the Board itself. See scarcity_input() for why the Board alone is wrong.
 scarcity_board <- scarcity_input(draft_board, draft_fallback)
 
+# Yahoo divergence is a property of the whole board, not of who is left, so it
+# is computed once here rather than per render. Ranks stay fixed to the full
+# pre-draft board on purpose: "the room takes him 26 picks earlier than we do"
+# must not drift as players come off.
+draft_board <- as.data.frame(draft_board)
+draft_board$yahoo_gap <- yahoo_divergence(draft_board)
+
 log_path <- file.path(root, "data", "pick_log.jsonl")
 dir.create(dirname(log_path), showWarnings = FALSE, recursive = TRUE)
 
@@ -93,6 +100,13 @@ pick_ui <- function(initial_team) {
           "within one position only. The last tier-3 receiver and the first ",
           "tier-4 receiver are a real drop apart; a tier-3 receiver and a ",
           "tier-3 kicker have nothing to do with each other.",
+          br(),
+          strong("Yahoo gap"), " = where Yahoo\'s own draft room ranks this ",
+          "player, minus where we rank him. Negative means the room likes him ",
+          "more than we do. At -20 or worse it is flagged ",
+          strong("takes him early"), " -- he will not still be there next time ",
+          "you pick, so take him now or plan without him. Blank means Yahoo ",
+          "does not list him at all. This column changes no number above it.",
           br(),
           strong("Greyed rows"), " = a position your league plan says to leave ",
           "until late, with the round shown next to the name. They stay on the ",
@@ -241,7 +255,8 @@ server <- function(input, output, session) {
     # kicker and five QBs above a 133-VOR Christian McCaffrey (reported
     # 2026-09-06). VOR is the only cross-position-comparable number here.
     available <- available[order(-available$vor, available$tier), ]
-    out <- head(available[, c("tier", "player", "pos", "team", "vor", "ecr", "value_source")], 30)
+    out <- head(available[, c("tier", "player", "pos", "team", "vor", "ecr",
+                              "value_source", "yahoo_gap")], 30)
     # Numbers are formatted here rather than by renderTable's digits=, because
     # mark_deferred() hands every column back as character. renderTable would
     # otherwise format every numeric column alike, so a shared digits= would
@@ -268,6 +283,10 @@ server <- function(input, output, session) {
       # column to cross-reference under a 1-minute clock. Defined in the legend.
       `Extra pts` = paste0(consensus_mark(out$value_source), sprintf("%.1f", out$vor)),
       `Expert rank` = as.integer(round(out$ecr)),
+      # Read-only. Nothing downstream consumes this -- it does not touch Extra
+      # pts, tiers, or the recommendation. It answers the one question the
+      # board cannot: will the other nine take him before we get back?
+      `Yahoo gap` = yahoo_gap_display(out$yahoo_gap),
       check.names = FALSE, stringsAsFactors = FALSE
     )
     # Kickers outrank most of the board on Extra pts and are still the wrong
@@ -276,7 +295,7 @@ server <- function(input, output, session) {
     # Every column is character now, so xtable can no longer infer that the
     # number columns want right-aligning. Stated explicitly to keep the
     # pre-marking look.
-  }, align = "rlllrr", sanitize.text.function = identity)
+  }, align = "rlllrrr", sanitize.text.function = identity)
 
   output$fallback_board <- renderTable({
     req(started())

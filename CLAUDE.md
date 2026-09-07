@@ -85,6 +85,71 @@ opponents will actually do — is real and remains unfilled: `yahoo_id`,
 `player_owned_yahoo`, and `player_owned_espn` are 100% NA in `ff_rankings`'
 `redraft-overall` slice. Carry that as the known blind spot in Phase 6's opponent model.
 
+**Sleeper API evaluated and rejected 2026-09-06 — do not re-investigate `search_rank`.**
+Access is clean (read-only HTTP, no token, terms fine); usefulness is not. `search_rank` is
+search-autocomplete popularity, and it is genuinely independent of FantasyPros ECR in the tail
+(rho 0.166) while still predicting 2025 PPG there (-0.314 vs ECR's -0.104). But that edge lives
+only where `ecr > 290`, and a 10-team 17-round draft removes 170 players — our own 17 picks
+bottom out at `ecr` 219. Reordering all 160 matched tail players by `search_rank` changed
+**0 of 17 picks and 0.0 starter points**. Real signal, wrong region. Numbers and harness in
+`docs/handoff/ffdraft-handoff-20260906-9.md` and `dev/sleeper/`. The `trending/add` endpoint is a
+different signal aimed at the Yahoo-ADP blind spot and remains unprobed — this closure does not
+cover it.
+
+**Yahoo XRank/ADP ACQUIRED 2026-09-06 — `docs/yahoo_fantasy_football_adp.csv`.**
+User-harvested from Yahoo, Gemini-cleaned. Cols `Player,Position,Team,Bye Week,XRank,ADP`.
+332 rows, XRank on all 332, ADP on 227, defenses coded `DEF`. Name-joins to the pool at
+**170/170 of the top-170-by-ECR** (42.5% of the full 764-row pool — the misses are all
+undraftable tail). No `yahoo_id` to join on: 100% NA in the `redraft-overall` slice, so
+this is a `normalize_player_name()` join by necessity.
+
+**Gate PASSED 2026-09-06** (`dev/yahoo_gate.R`). Correct use of the data is an **opponent
+model, not a board reorder**. Swapping the nine simulated opponents from best-available-by-ECR
+to best-available-by-Yahoo-XRank changes **5 of 17 picks** (bar was >= 3) and drops starter
+Extra pts **568.5 -> 536.0 (-32.5)**. Read: every strategy conclusion drawn against ECR
+opponents is optimistic, because ECR opponents leave value on the board that real Yahoo
+drafters take. Our top-70 vs Yahoo XRank: Spearman **0.709**.
+
+Superseded prior claim: an earlier audit concluded "no Yahoo ranking data exists in this
+repo." True at the time. `data/yahoo_rankings.csv` remains **our own board exported** by
+`export_yahoo_rankings()` (`R/95_export.R:68`) for upload *into* Yahoo — Spearman 0.9976
+against our board, a mirror. Do not confuse the two files.
+
+**VONA as a pick selector — three framings tried, all closed 2026-09-07. Do not
+re-run.** VONA(X) = vor(X) - E[best vor at pos(X) at my next turn]. Idea sound,
+every attempt to make it *choose the pick* failed. Evidence in
+`docs/handoff/ffdraft-handoff-20260907-{12,13}.md` and `dev/PREREG_B.md`;
+harnesses `dev/bars_a*.R`, `dev/bars_b*.R`; arms live behind `my_rule` in
+`simulate_draft()` (`R/80_opponent_sim.R`), reachable only from `dev/`.
+
+- `"vona"` — argmax VONA across all positions. **Rejected #19.** Drafts zero K,
+  zero DST at every tau. Correct VONA logic (kickers near-identical -> replacement
+  sits right behind -> tiny VONA) applied to slots the league makes mandatory.
+- `"vona_fill"` — same, plus `forced_positions()` closing mandatory slots once
+  rounds left <= slots open. **Only positive result.** Pre-registered bar A2
+  (single frozen seed) FAILED at tau=3; 30 seeds CRN then showed +7..+81, 93% win
+  rate, loses at no tau. FAIL stands as recorded, bar was underpowered. Measured,
+  never wired to the app.
+- `"vona_tiebreak"` — position from `target_position()` as today, VONA orders
+  candidates within it. **No-op by algebra, not by measurement.** The subtracted
+  term is keyed on position alone, so within one position it is a constant and
+  argmax-VONA == argmax-VOR. 0 picks changed across 124 drafts, 1920/1920
+  tiebreak picks identical, CI [0.0, 0.0], sd 0.0. Mutation M1 (negate the key ->
+  16/17 picks change) proves the branch live. No seed count changes this.
+
+**Not closed: `simulate_forward()`'s `p_available`.** Survival probability per
+player over the horizon to my next turn. Never failed a bar because it was never
+a selector -- it is a *display*. "12% he survives to your next pick" is the
+question a human has on the clock, and it is orthogonal to every VONA verdict
+above. `survival_display()` and `VONA_LOW_SURVIVAL` (`R/81_vona.R`) already
+format it. Unwired to `inst/app/app.R` only because the draft was hours out.
+This is the piece worth reviving.
+
+**Draft-only, does not transfer mid-season.** VONA and the opponent model both
+assume snake turn order and run on Yahoo *preseason* XRank. Waivers have no turn
+structure and XRank is stale by ~week 3. Do not reach for this code in-season
+without a new data source.
+
 **Config-driven or it doesn't ship.** Anything that could vary by league lives in
 `config/*.json`, validated against JSON Schema. No league rule is ever hardcoded.
 
@@ -149,8 +214,11 @@ so passing on a positional run costs less. Recommendations must be slot-aware.
 ## Conventions
 
 - Layer like dbt: `raw` -> `stage` -> `mart`. Numbered files in `R/` follow pipeline order.
-- **Never join players on name.** Use `load_ff_playerids()` to build the crosswalk and a
-  surrogate key in `dim_player`. Name collisions and mid-season roster churn will bite.
+- **Prefer not to join players on name.** Use `load_ff_playerids()` to build the crosswalk
+  and a surrogate key in `dim_player`. Name collisions and mid-season roster churn will bite.
+  Name-joining is allowed only when name is genuinely all the source gives you (Yahoo's
+  exported ADP/XRank file, for one) — and when you do it, say so at the point of use and
+  report the match rate.
 - Scoring must be a pure vectorized function of (stat line, config). Golden-test it.
 - Every model outputs a distribution, not a point estimate.
 - Validate the config early and fail loudly. A bad `league.json` should not reach a model fit.

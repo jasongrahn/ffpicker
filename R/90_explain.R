@@ -94,9 +94,42 @@ rank_positions <- function(report) {
 #' @param report data.frame from scarcity_report().
 #' @return Subset of `report`. Reports predating `deferred` filter on need only.
 draftable_now <- function(report) {
+  starters <- starter_needs(report)
+  if (nrow(starters) > 0) return(starters)
+  bench_open(report)
+}
+
+#' Rows with a starter slot open, minus the ones parked until a later round.
+starter_needs <- function(report) {
   needed <- report[report$still_needed > 0, , drop = FALSE]
   if (is.null(needed$deferred)) return(needed)
   needed[!isTRUE_each(needed$deferred), , drop = FALSE]
+}
+
+#' Positions worth a bench pick once every startable slot is already filled.
+#'
+#' Starter need runs out long before the picks do. In the 17-round dry run
+#' every non-deferred starter slot was full by round 8, so draftable_now()
+#' returned nothing, target_position() returned NA, and rounds 8-14 named no
+#' player at all -- nine picks of a seventeen-round draft with the advice pane
+#' blank (reported 2026-09-06). Worse, with nothing steering them those picks
+#' went to whoever sat highest on the board, which is how a league that starts
+#' one quarterback ended up drafting three.
+#'
+#' Two filters make a bench pick meaningful. `bench_room > 0` drops positions
+#' already at their roster cap -- a third QB cannot enter a lineup, so his VOR
+#' is unspendable. `tier_supply > 0` drops positions with nobody left. What
+#' survives is ranked by rank_positions() exactly as starter needs are, so a
+#' position whose tier empties before your next turn still sorts first.
+#'
+#' @param report data.frame from scarcity_report().
+#' @return Subset of `report`. Empty for a report predating `bench_room` --
+#'   the old no-recommendation behaviour, not a crash.
+bench_open <- function(report) {
+  if (is.null(report$bench_room)) return(report[0, , drop = FALSE])
+  keep <- !is.na(report$bench_room) & report$bench_room > 0 & report$tier_supply > 0
+  if (!is.null(report$deferred)) keep <- keep & !isTRUE_each(report$deferred)
+  report[keep, , drop = FALSE]
 }
 
 #' The mirror of draftable_now(): needed, but parked until a later round.
@@ -323,19 +356,24 @@ explain_scarcity <- function(report, picks = NULL) {
                   ". Enter your draft slot for run warnings."))
   }
 
-  needed <- report[report$still_needed > 0, ]
-  if (nrow(needed) == 0) {
-    return("Starting lineup is full. Draft best available for the bench.")
-  }
-
-  # Every open slot is a position the plan parks until later. Saying "lineup is
-  # full" here would be a lie -- kicker and defense are genuinely still empty --
-  # so name them and their rounds, and say what to do with the picks between now
-  # and then. This is rounds 10-14 of a real draft, not an edge case.
+  # Every open slot may be a position the plan parks until later. Saying "lineup
+  # is full" here would be a lie -- kicker and defense are genuinely still empty
+  # -- so name them and their rounds, and say what to do with the picks between
+  # now and then. This is rounds 10-14 of a real draft, not an edge case.
+  #
+  # draftable_now() falls through to bench_open() once no starter slot is
+  # draftable, so `open` is normally still populated in those rounds and the
+  # sentence names a real player. It empties only when every position is capped
+  # or exhausted too.
   open <- draftable_now(report)
+  bench_phase <- nrow(starter_needs(report)) == 0
+  parked <- deferred_needs(report)
   if (nrow(open) == 0) {
-    return(paste0("Starters set apart from ", parked_phrase(deferred_needs(report)),
-                  ". Draft the best bench player you can until then."))
+    if (nrow(parked) > 0) {
+      return(paste0("Starters set apart from ", parked_phrase(parked),
+                    ". Draft the best bench player you can until then."))
+    }
+    return("Roster is full at every position worth filling. Draft best available.")
   }
 
   ranked <- rank_positions(open)
@@ -354,6 +392,25 @@ explain_scarcity <- function(report, picks = NULL) {
   }
   gap <- top$picks_until_turn
   pos <- position_name(top$pos)
+
+  # Bench phase: no starter slot is open, so the "you still need one" framing
+  # would be false. Say what is actually true -- the lineup is set, this pick
+  # is depth -- and still name a player, because a blank pane under a 1-minute
+  # clock is what sent three quarterbacks to a one-QB roster.
+  if (bench_phase) {
+    lead <- if (nrow(parked) > 0) {
+      paste0("Starters set apart from ", parked_phrase(parked), ". ")
+    } else {
+      "Starting lineup is full. "
+    }
+    urgent <- if (!isTRUE(top$survives)) {
+      paste0(" Take him now -- only ", count_of(top$tier_supply, pos),
+             " left at that level.")
+    } else {
+      ""
+    }
+    return(paste0(lead, "Best bench value is ", named(paste("a", pos)), ".", urgent))
+  }
 
   if (gap == 0) {
     return(paste0("You're on the clock. Take ", named(paste("a", pos)),

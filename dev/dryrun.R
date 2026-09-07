@@ -3,9 +3,13 @@
 # calls -- pick log, scarcity_report(), recommend_picks() -- so a pass here means
 # the app's own advice path completes a draft, not that a parallel simulation does.
 #
-# Opponents draft best-available by expert rank (ECR). That is the closest cheap
-# stand-in for nine real drafters, and it naturally pushes K/DST late (their ECR
-# is 150+), so it does not hand our deferral a free win.
+# Opponents draft best-available by Yahoo XRank -- the ordering the actual
+# draft room uses, not expert consensus. ECR opponents were the old default and
+# they were measurably wrong: they leave value on the board real Yahoo drafters
+# take, which flattered every number this script has ever printed. Gate
+# evidence in dev/yahoo_gate.R and handoff #17 (5/17 picks change, starters
+# 568.5 -> 536.0). xrank is NA for players Yahoo does not list; order() puts
+# those last, which is correct -- unlisted means undrafted in a 170-pick draft.
 pkgload::load_all(quiet = TRUE)
 
 store <- "_targets"
@@ -17,6 +21,7 @@ scarcity_board <- scarcity_input(draft_board, draft_fallback)
 pool <- combined_selectable_pool(draft_board, draft_fallback)
 pool$ecr <- c(draft_board$ecr, draft_fallback$ecr)
 pool$vor <- c(draft_board$vor, rep(NA_real_, nrow(draft_fallback)))
+pool$xrank <- c(draft_board$xrank, draft_fallback$xrank)
 
 MY_SLOT <- 5
 TEAMS <- league_config$teams
@@ -68,11 +73,11 @@ run_draft <- function(defer) {
       my_picks <- rbind(my_picks, data.frame(
         round = rnd, overall = n, player = row$player, pos = row$pos,
         team = row$team, ecr = round(row$ecr), vor = round(row$vor, 1),
-        source = src, stringsAsFactors = FALSE
+        xrank = row$xrank, source = src, stringsAsFactors = FALSE
       ))
       team_name <- "JGrahnasaurs"
     } else {
-      pick_key <- remaining$player_key[order(remaining$ecr)][1]
+      pick_key <- remaining$player_key[order(remaining$xrank)][1]
       team_name <- paste("Team", slot_on_the_clock(n, TEAMS))
     }
 
@@ -125,7 +130,7 @@ for (nm in names(results)) {
   cat("\n\n########## ", nm, " ##########\n")
   print(r$picks, row.names = FALSE)
   cat("\n-- starting lineup --\n")
-  print(sv$lineup[, c("round", "player", "pos", "team", "ecr", "vor")], row.names = FALSE)
+  print(sv$lineup[, c("round", "player", "pos", "team", "ecr", "xrank", "vor")], row.names = FALSE)
   cat("\nstarter Extra pts total:", round(sv$total, 1),
       "| roster:", nrow(r$picks), "/", ROUNDS,
       "| unfilled:", if (length(sv$unfilled)) paste(sv$unfilled, collapse = ",") else "none", "\n")
