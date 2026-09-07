@@ -96,18 +96,24 @@ bottom out at `ecr` 219. Reordering all 160 matched tail players by `search_rank
 different signal aimed at the Yahoo-ADP blind spot and remains unprobed — this closure does not
 cover it.
 
-**No Yahoo ranking data exists in this repo. Audited 2026-09-06.** Two files are named
-for Yahoo and neither holds Yahoo's opinion. `data/yahoo_rankings.csv` is **our own board
-exported** by `export_yahoo_rankings()` (`R/95_export.R:68`) for upload *into* Yahoo's
-custom-rankings feature — correlating it against our board gives Spearman **0.9976**
-(non-K/DST), i.e. a mirror. The `docs/{qb,rb,te,wr}.csv` position pages carried
-`Player,Position,Team` only, never `XRank`/`ADP`, and are deleted as of `e634f12`.
-`parse_yahoo_names()` parses `XRank #N`/`ADP N.N` correctly but **has never been fed a
-file containing them**. So handoff #15's "Yahoo ADP unconsumed" overstates the position:
-it is un-*acquired*, not merely unconsumed. `yahoo_id` is also 100% NA in the
-`redraft-overall` slice. Getting a real Yahoo ordering needs a manual paste from the user
-and is the prerequisite for the divergence flag in
-`docs/backlog/001-yahoo-rank-divergence.md`. **Season-long value — outlives draft night.**
+**Yahoo XRank/ADP ACQUIRED 2026-09-06 — `docs/yahoo_fantasy_football_adp.csv`.**
+User-harvested from Yahoo, Gemini-cleaned. Cols `Player,Position,Team,Bye Week,XRank,ADP`.
+332 rows, XRank on all 332, ADP on 227, defenses coded `DEF`. Name-joins to the pool at
+**170/170 of the top-170-by-ECR** (42.5% of the full 764-row pool — the misses are all
+undraftable tail). No `yahoo_id` to join on: 100% NA in the `redraft-overall` slice, so
+this is a `normalize_player_name()` join by necessity.
+
+**Gate PASSED 2026-09-06** (`dev/yahoo_gate.R`). Correct use of the data is an **opponent
+model, not a board reorder**. Swapping the nine simulated opponents from best-available-by-ECR
+to best-available-by-Yahoo-XRank changes **5 of 17 picks** (bar was >= 3) and drops starter
+Extra pts **568.5 -> 536.0 (-32.5)**. Read: every strategy conclusion drawn against ECR
+opponents is optimistic, because ECR opponents leave value on the board that real Yahoo
+drafters take. Our top-70 vs Yahoo XRank: Spearman **0.709**.
+
+Superseded prior claim: an earlier audit concluded "no Yahoo ranking data exists in this
+repo." True at the time. `data/yahoo_rankings.csv` remains **our own board exported** by
+`export_yahoo_rankings()` (`R/95_export.R:68`) for upload *into* Yahoo — Spearman 0.9976
+against our board, a mirror. Do not confuse the two files.
 
 **Config-driven or it doesn't ship.** Anything that could vary by league lives in
 `config/*.json`, validated against JSON Schema. No league rule is ever hardcoded.
@@ -173,8 +179,11 @@ so passing on a positional run costs less. Recommendations must be slot-aware.
 ## Conventions
 
 - Layer like dbt: `raw` -> `stage` -> `mart`. Numbered files in `R/` follow pipeline order.
-- **Never join players on name.** Use `load_ff_playerids()` to build the crosswalk and a
-  surrogate key in `dim_player`. Name collisions and mid-season roster churn will bite.
+- **Prefer not to join players on name.** Use `load_ff_playerids()` to build the crosswalk
+  and a surrogate key in `dim_player`. Name collisions and mid-season roster churn will bite.
+  Name-joining is allowed only when name is genuinely all the source gives you (Yahoo's
+  exported ADP/XRank file, for one) — and when you do it, say so at the point of use and
+  report the match rate.
 - Scoring must be a pure vectorized function of (stat line, config). Golden-test it.
 - Every model outputs a distribution, not a point estimate.
 - Validate the config early and fail loudly. A bad `league.json` should not reach a model fit.
