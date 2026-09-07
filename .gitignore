@@ -15,3 +15,7 @@ data/DRAFT_IS_LIVE
 .DS_Store
 dev/sleeper/cache/
 dev/mc_results.rds
+dev/bars_a_results.rds
+dev/bars_a_seeds.rds
+dev/bars_b_results.rds
+dev/bars_b_seeds.rds

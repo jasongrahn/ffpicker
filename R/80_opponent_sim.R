@@ -76,13 +76,26 @@ draw_opponent_pick <- function(xrank, tau, noise = NULL) {
 #' @param noise numeric matrix from sim_noise(), nrow == nrow(ctx$pool),
 #'   ncol == teams * rounds. NULL allowed only if tau == 0.
 #' @param my_team character, default "JGrahnasaurs".
-#' @param my_rule character, "recommend" (use recommend_picks()) or
-#'   "vona" (use argmax vona, requires simulate_forward()).
-#' @return list(picks, advice, defer, tau). picks data.frame with columns:
+#' @param my_rule character, "recommend" (use recommend_picks()),
+#'   Only "recommend" is used outside dev/ -- the three VONA arms are measurement
+#'   arms, all closed 2026-09-07, kept as reproducible negative results. Verdicts
+#'   in CLAUDE.md; do not re-run without reading it.
+#'   "vona" (argmax vona, requires simulate_forward(); REJECTED #19 -- drafts
+#'   zero K and zero DST at every tau), "vona_fill"
+#'   (vona plus the Experiment A mandatory-starter-fill constraint --
+#'   see forced_positions()), or "vona_tiebreak" (Experiment B: position from
+#'   target_position() as today, VONA orders candidates within it only; NO-OP BY
+#'   ALGEBRA -- see vona() in R/81_vona.R. Kept so nobody retries it).
+#' @param tiebreak_sign 1 by default. Mutation-test hook for "vona_tiebreak"
+#'   only: -1 reverses the within-position ranking key, which must change picks
+#'   if the tiebreak branch is live at all. Never set it anywhere but
+#'   dev/bars_b_mutation.R.
+#' @return list(picks, advice, defer, tau, tb_log). picks data.frame with columns:
 #'   round, overall, player, pos, team, ecr, vor, xrank, source.
 #'   advice character vector of recommendations. defer copy of input.
 simulate_draft <- function(ctx, league_config, my_slot, defer, tau, noise = NULL,
-                           my_team = "JGrahnasaurs", my_rule = "recommend") {
+                           my_team = "JGrahnasaurs", my_rule = "recommend",
+                           tiebreak_sign = 1) {
   if (is.null(noise) && tau != 0) {
     stop("noise cannot be NULL when tau > 0")
   }
@@ -104,6 +117,7 @@ simulate_draft <- function(ctx, league_config, my_slot, defer, tau, noise = NULL
 
   my_picks <- data.frame()
   advice <- character(0)
+  tb_log <- NULL
 
   # Track row_id in pool for noise indexing
   if (!("row_id" %in% names(pool))) {
@@ -142,7 +156,68 @@ simulate_draft <- function(ctx, league_config, my_slot, defer, tau, noise = NULL
           pick_key <- remaining$player_key[hit]
           src <- "advised"
         }
-      } else if (my_rule == "vona") {
+      } else if (my_rule == "vona_tiebreak") {
+        # Experiment B. Position choice is NOT touched -- target_position()
+        # still names it, exactly as the recommend arm. VONA only orders
+        # candidates *within* that position. Every other path (bench branch,
+        # fallback-by-ECR branch, advice string) is the recommend arm verbatim,
+        # so any measured difference is attributable to the tiebreak alone.
+        board_rem <- remaining_draft_pool(ctx$board, state)
+        fb_rem <- remaining_draft_pool(ctx$fallback, state)
+        rec <- recommend_picks(report, board_rem, fb_rem)
+        advice <- c(advice, sprintf("R%02d  %s", rnd, explain_scarcity(report, rec)))
+
+        tb_pos <- target_position(report)
+        cand <- if (is.na(tb_pos)) {
+          board_rem[0, , drop = FALSE]
+        } else {
+          board_rem[board_rem$pos == tb_pos, , drop = FALSE]
+        }
+
+        if (nrow(rec) == 0 || nrow(cand) == 0) {
+          # Nothing for a within-position tiebreak to reorder: either no starter
+          # slot is open (bench branch), or the target position survives only in
+          # the fallback, which carries no vor (DST). Recommend arm, unchanged.
+          if (nrow(rec) == 0) {
+            rb <- board_rem[!(board_rem$pos %in% names(deferred_notes(report))), ]
+            rb <- rb[order(rb$vor, decreasing = TRUE), ]
+            pick_key <- rb$player_key[1]
+            src <- "bench"
+          } else {
+            hit <- which(remaining$player == rec$Player[1] & remaining$pos == rec$Pos[1] &
+                         remaining$team == rec$Team[1])
+            if (length(hit) != 1) stop(sprintf("round %d: %s matched %d rows", rnd,
+                                               rec$Player[1], length(hit)))
+            pick_key <- remaining$player_key[hit]
+            src <- "advised"
+          }
+        } else {
+          horizon <- picks_until_turn(n + 1L, my_slot, TEAMS)
+          vor_pick <- cand$player_key[order(cand$vor, decreasing = TRUE)][1]
+
+          if (is.null(horizon) || horizon == 0) {
+            pick_key <- vor_pick
+            src <- "advised"
+          } else {
+            fwd <- simulate_forward(ctx, state, horizon = horizon, tau = tau,
+                                    n_sims = 200L, seed = n)
+            v <- vona(cand, fwd$pos_best) * tiebreak_sign
+            if (all(is.na(v))) {
+              pick_key <- vor_pick
+              src <- "advised"
+            } else {
+              pick_key <- cand$player_key[which.max(replace(v, is.na(v), -Inf))]
+              src <- "vona_tb"
+            }
+            tb_log <- rbind(tb_log, data.frame(
+              round = rnd, pos = tb_pos, n_cand = nrow(cand),
+              vona_pick = pick_key, vor_pick = vor_pick,
+              same = identical(pick_key, vor_pick),
+              stringsAsFactors = FALSE
+            ))
+          }
+        }
+      } else if (my_rule %in% c("vona", "vona_fill")) {
         # VONA arm. Still emits the same advice string -- advice is the
         # explanation surface, unchanged. Only the pick differs.
         rec <- recommend_picks(report,
@@ -160,19 +235,47 @@ simulate_draft <- function(ctx, league_config, my_slot, defer, tau, noise = NULL
         # positional replacement by a mile, which is true and useless.
         board_rem <- board_rem[!(board_rem$pos %in% names(deferred_notes(report))), ]
 
+        # Experiment A. When rounds left <= starter slots still open, every
+        # pick must close a slot. Deferral loses here by construction: the
+        # constraint only fires when there is no round left to wait for.
+        forced <- character(0)
+        if (my_rule == "vona_fill") {
+          forced <- forced_positions(report, my_picks, league_config,
+                                     rounds_remaining = ROUNDS - rnd + 1L)
+          if (length(forced) > 0) {
+            # Candidates drawn from the whole remaining pool, not just the
+            # board: a mandatory slot has to be closed even if only off-board
+            # fallback players are left at that position. Those carry vor NA,
+            # so vona() reads NA and the vor sort drops them last -- which is
+            # the right order among them (pool order is ecr order).
+            cand <- remaining[remaining$pos %in% forced, ]
+            if (nrow(cand) == 0) {
+              # Position exhausted league-wide. Nothing to force; the slot
+              # cannot be filled by anyone, so fall back to the normal rule.
+              forced <- character(0)
+            } else {
+              board_rem <- cand
+            }
+          }
+        }
+
         if (is.null(horizon) || horizon == 0 || nrow(board_rem) == 0) {
           # No lookahead possible -> fall back to today's rule.
-          if (nrow(rec) == 0) {
+          if (length(forced) > 0) {
+            rb <- remaining[remaining$pos %in% forced, ]
+          } else {
             rb <- remaining_draft_pool(ctx$board, state)
             rb <- rb[!(rb$pos %in% names(deferred_notes(report))), ]
-            rb <- rb[order(rb$vor, decreasing = TRUE), ]
-            pick_key <- rb$player_key[1]
-            src <- "bench"
-          } else {
+          }
+          if (length(forced) == 0 && nrow(rec) > 0) {
             hit <- which(remaining$player == rec$Player[1] & remaining$pos == rec$Pos[1] &
                          remaining$team == rec$Team[1])
             pick_key <- remaining$player_key[hit[1]]
             src <- "advised"
+          } else {
+            rb <- rb[order(rb$vor, decreasing = TRUE), ]
+            pick_key <- rb$player_key[1]
+            src <- if (length(forced) > 0) "forced" else "bench"
           }
         } else {
           fwd <- simulate_forward(ctx, state, horizon = horizon, tau = tau,
@@ -181,14 +284,14 @@ simulate_draft <- function(ctx, league_config, my_slot, defer, tau, noise = NULL
           if (all(is.na(v))) {
             board_rem <- board_rem[order(board_rem$vor, decreasing = TRUE), ]
             pick_key <- board_rem$player_key[1]
-            src <- "bench"
+            src <- if (length(forced) > 0) "forced" else "bench"
           } else {
             pick_key <- board_rem$player_key[which.max(replace(v, is.na(v), -Inf))]
-            src <- "vona"
+            src <- if (length(forced) > 0) "vona_forced" else "vona"
           }
         }
       } else {
-        stop("my_rule must be 'recommend' or 'vona'")
+        stop("my_rule must be 'recommend', 'vona', 'vona_fill' or 'vona_tiebreak'")
       }
 
       row <- remaining[remaining$player_key == pick_key, ]
@@ -219,7 +322,8 @@ simulate_draft <- function(ctx, league_config, my_slot, defer, tau, noise = NULL
                                      player_key = pick_key))
   }
 
-  list(picks = my_picks, advice = advice, defer = defer, tau = tau)
+  list(picks = my_picks, advice = advice, defer = defer, tau = tau,
+       tb_log = tb_log)
 }
 
 #' Greedy starter fill, then total the starters' Extra pts.

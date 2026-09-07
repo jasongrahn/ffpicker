@@ -176,3 +176,87 @@ test_that("vona_display() formats correctly", {
   expect_equal(result[3], "-5.2")
   expect_equal(result[4], "+0.0")
 })
+
+# --- Experiment A: mandatory-slot fill constraint -------------------------
+
+#' Fixture league with mandatory K/DST slots and room to fill them.
+#' The stock fixture starts 0 K and 0 DST, so the constraint could never bind.
+fill_league <- function() {
+  cfg <- fixture_league()
+  cfg$roster$starters$K <- 1
+  cfg$roster$starters$DST <- 1
+  cfg$roster$rounds <- 8
+  cfg
+}
+
+test_that("forced_positions() silent while rounds outnumber unfilled slots", {
+  league_cfg <- fill_league()
+  report <- data.frame(pos = c("QB", "RB", "WR", "TE", "K", "DST"),
+                       still_needed = c(1, 2, 2, 1, 1, 1),
+                       stringsAsFactors = FALSE)
+  picks <- data.frame(pos = character(0), vor = numeric(0),
+                      stringsAsFactors = FALSE)
+  n_slots <- sum(unlist(league_cfg$roster$starters))
+
+  expect_identical(
+    forced_positions(report, picks, league_cfg, rounds_remaining = n_slots + 1L),
+    character(0)
+  )
+})
+
+test_that("forced_positions() fires when rounds_remaining <= slots_unfilled", {
+  league_cfg <- fill_league()
+  report <- data.frame(pos = c("QB", "RB", "WR", "TE", "K", "DST"),
+                       still_needed = c(0, 0, 0, 0, 1, 1),
+                       stringsAsFactors = FALSE)
+  # QB/RB/WR/TE/FLEX all covered; K and DST slots still open.
+  picks <- data.frame(
+    pos = c("QB", "RB", "WR", "TE", "RB"),
+    vor = c(50, 90, 70, 40, 30),
+    stringsAsFactors = FALSE
+  )
+  n_slots <- sum(unlist(league_cfg$roster$starters))
+  filled <- nrow(starter_value(picks, league_cfg)$lineup)
+  expect_equal(n_slots - filled, 2)
+
+  expect_setequal(
+    forced_positions(report, picks, league_cfg, rounds_remaining = 2L),
+    c("K", "DST")
+  )
+  expect_identical(
+    forced_positions(report, picks, league_cfg, rounds_remaining = 3L),
+    character(0)
+  )
+})
+
+test_that("forced_positions() returns nothing once lineup is full", {
+  league_cfg <- fill_league()
+  report <- data.frame(pos = c("QB", "RB", "WR", "TE", "K", "DST"),
+                       still_needed = c(0, 0, 0, 0, 0, 0),
+                       stringsAsFactors = FALSE)
+  picks <- data.frame(
+    pos = c("QB", "RB", "WR", "TE", "RB", "K", "DST"),
+    vor = c(50, 90, 70, 40, 30, 10, 5),
+    stringsAsFactors = FALSE
+  )
+  expect_identical(
+    forced_positions(report, picks, league_cfg, rounds_remaining = 1L),
+    character(0)
+  )
+})
+
+test_that("vona_fill arm fills every mandatory starter slot, plain vona does not", {
+  ctx <- fixture_ctx()
+  league_cfg <- fill_league()
+  rounds <- league_cfg$roster$rounds
+  noise <- sim_noise(nrow(ctx$pool), league_cfg$teams * rounds, seed = 7)
+  defer <- list(K = rounds, DST = rounds - 1)
+
+  fill <- simulate_draft(ctx, league_cfg, my_slot = 2, defer = defer,
+                         tau = 3, noise = noise, my_rule = "vona_fill")
+  expect_identical(starter_value(fill$picks, league_cfg)$unfilled, character(0))
+
+  plain <- simulate_draft(ctx, league_cfg, my_slot = 2, defer = defer,
+                          tau = 3, noise = noise, my_rule = "vona")
+  expect_false(identical(fill$picks, plain$picks))
+})

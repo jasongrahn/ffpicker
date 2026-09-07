@@ -123,6 +123,15 @@ simulate_forward <- function(ctx, state, horizon, tau, n_sims = 1000L, seed = 1L
 #' VONA(X) = vor(X) - E[vor of best available at pos(X) next turn].
 #' NA when vor is NA or position missing from pos_best.
 #'
+#' DEGENERATE WITHIN A POSITION -- Experiment B, closed 2026-09-07. The
+#' subtracted term is read out of `pos_map` by position alone. Hold the position
+#' fixed and it is a constant, so ordering by VONA equals ordering by `vor` and
+#' argmax-VONA equals argmax-`vor`. Measured: 0 picks changed across 124 drafts,
+#' 1920/1920 tiebreak picks identical, paired CI [0.0, 0.0], sd 0.0. This is
+#' algebra, not an underpowered measurement -- no seed count, tau or n_sims
+#' changes it. VONA only says something ACROSS positions, where the subtracted
+#' term varies. See dev/PREREG_B.md and CLAUDE.md.
+#'
 #' @param board_remaining data.frame with pos, vor columns.
 #' @param pos_best data.frame from simulate_forward() with pos, mean_best_vor.
 #' @return numeric, length nrow(board_remaining).
@@ -162,6 +171,13 @@ vona_display <- function(v) {
 
 #' Display survival: percentage or low-survival warning.
 #'
+#' The piece of this file that is NOT closed. `simulate_forward()`'s
+#' `p_available` never failed a bar because it was never a selector -- it is a
+#' readout. "12% he survives to your next pick" is the question a human has on
+#' the clock, and it is orthogonal to every VONA verdict. Unwired to
+#' inst/app/app.R only because the 2026-09-08 draft was hours out when it was
+#' built. Revive this before reviving any VONA arm.
+#'
 #' @param p numeric between 0 and 1, or NA. May be vector.
 #' @return character. NA -> "", p >= 0.25 -> "NN%", p < 0.25 -> html red warning.
 survival_display <- function(p) {
@@ -181,3 +197,42 @@ survival_display <- function(p) {
 
 # Constant for low survival threshold
 VONA_LOW_SURVIVAL <- 0.25
+
+#' Positions the mandatory-starter-fill constraint forces this pick.
+#'
+#' Experiment A -- measured, NOT wired to the app. Bar A2 as pre-registered
+#' FAILED (single frozen seed, tau=3); 30 seeds CRN then gave +7..+81 and a 93%
+#' win rate, losing at no tau. Unresolved on purpose, see CLAUDE.md.
+#'
+#' VONA argmax across all positions drafted zero K and zero DST
+#' at every tau -- correct VONA reasoning (near-identical kickers -> replacement
+#' sits right behind -> tiny VONA) applied to a slot the league makes mandatory.
+#' Once rounds left <= starter slots still empty, every remaining pick must
+#' close a slot or one stays open.
+#'
+#' Which slots are open is read two ways, both existing code, neither
+#' reinvented: `scarcity_report()`'s `still_needed` says *which* positions can
+#' close a slot (it already models dedicated + FLEX correctly), and
+#' `starter_value()`'s greedy fill says *how many* slots are still open.
+#'
+#' @param report data.frame from scarcity_report(); needs pos, still_needed.
+#' @param picks data.frame of my picks so far; needs pos, vor. May be empty.
+#' @param league_config list from load_config("league").
+#' @param rounds_remaining integer, rounds left INCLUDING the current one.
+#' @return character vector of positions to restrict the pick to. character(0)
+#'   means unconstrained -- either slack remains, or the lineup is already full.
+forced_positions <- function(report, picks, league_config, rounds_remaining) {
+  total_slots <- sum(unlist(league_config$roster$starters))
+
+  filled <- if (is.null(picks) || nrow(picks) == 0) {
+    0L
+  } else {
+    nrow(starter_value(picks, league_config)$lineup)
+  }
+  slots_unfilled <- total_slots - filled
+
+  if (slots_unfilled <= 0 || rounds_remaining > slots_unfilled) return(character(0))
+
+  need <- report$pos[!is.na(report$still_needed) & report$still_needed > 0]
+  as.character(need)
+}

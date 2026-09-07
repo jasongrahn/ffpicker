@@ -115,6 +115,41 @@ repo." True at the time. `data/yahoo_rankings.csv` remains **our own board expor
 `export_yahoo_rankings()` (`R/95_export.R:68`) for upload *into* Yahoo — Spearman 0.9976
 against our board, a mirror. Do not confuse the two files.
 
+**VONA as a pick selector — three framings tried, all closed 2026-09-07. Do not
+re-run.** VONA(X) = vor(X) - E[best vor at pos(X) at my next turn]. Idea sound,
+every attempt to make it *choose the pick* failed. Evidence in
+`docs/handoff/ffdraft-handoff-20260907-{12,13}.md` and `dev/PREREG_B.md`;
+harnesses `dev/bars_a*.R`, `dev/bars_b*.R`; arms live behind `my_rule` in
+`simulate_draft()` (`R/80_opponent_sim.R`), reachable only from `dev/`.
+
+- `"vona"` — argmax VONA across all positions. **Rejected #19.** Drafts zero K,
+  zero DST at every tau. Correct VONA logic (kickers near-identical -> replacement
+  sits right behind -> tiny VONA) applied to slots the league makes mandatory.
+- `"vona_fill"` — same, plus `forced_positions()` closing mandatory slots once
+  rounds left <= slots open. **Only positive result.** Pre-registered bar A2
+  (single frozen seed) FAILED at tau=3; 30 seeds CRN then showed +7..+81, 93% win
+  rate, loses at no tau. FAIL stands as recorded, bar was underpowered. Measured,
+  never wired to the app.
+- `"vona_tiebreak"` — position from `target_position()` as today, VONA orders
+  candidates within it. **No-op by algebra, not by measurement.** The subtracted
+  term is keyed on position alone, so within one position it is a constant and
+  argmax-VONA == argmax-VOR. 0 picks changed across 124 drafts, 1920/1920
+  tiebreak picks identical, CI [0.0, 0.0], sd 0.0. Mutation M1 (negate the key ->
+  16/17 picks change) proves the branch live. No seed count changes this.
+
+**Not closed: `simulate_forward()`'s `p_available`.** Survival probability per
+player over the horizon to my next turn. Never failed a bar because it was never
+a selector -- it is a *display*. "12% he survives to your next pick" is the
+question a human has on the clock, and it is orthogonal to every VONA verdict
+above. `survival_display()` and `VONA_LOW_SURVIVAL` (`R/81_vona.R`) already
+format it. Unwired to `inst/app/app.R` only because the draft was hours out.
+This is the piece worth reviving.
+
+**Draft-only, does not transfer mid-season.** VONA and the opponent model both
+assume snake turn order and run on Yahoo *preseason* XRank. Waivers have no turn
+structure and XRank is stale by ~week 3. Do not reach for this code in-season
+without a new data source.
+
 **Config-driven or it doesn't ship.** Anything that could vary by league lives in
 `config/*.json`, validated against JSON Schema. No league rule is ever hardcoded.
 
