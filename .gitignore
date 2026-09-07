@@ -14,3 +14,4 @@ dev/pick_log_archive/
 data/DRAFT_IS_LIVE
 .DS_Store
 dev/sleeper/cache/
+dev/mc_results.rds
