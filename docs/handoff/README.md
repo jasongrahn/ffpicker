@@ -27,7 +27,8 @@ Use this index.
 | 13 | `20260906-6.md` | Position-page CSVs wired in — 473/510 Yahoo-confirmed. Naming ruled out as the import cause; probe file built to settle it. |
 | 14 | `20260906-7.md` | Import thread closed — probe 25/25, full file 508/510. Bench-phase recommendations: rounds 8-14 name a player, 3 QBs -> 2. `renv` snapshotted. |
 | 15 | `20260906-8.md` | Position pages unioned into `draft_pool` (478 -> 732). Sleeper API probed: access clean, `search_rank` beats ECR where ECR is censored (-0.354 vs -0.014). Next: plan an *evaluation* of whether Sleeper is a sufficient supplement — verdict, not integration. |
-| 16 | `20260906-9.md` | **Current.** Sleeper evaluated -> **REJECT**. Independent and predictive, but only where `ecr > 290` — past the end of a 10-team 17-round draft. 0 of 17 picks changed. Thread closed. |
+| 16 | `20260906-9.md` | Sleeper evaluated -> **REJECT**. Independent and predictive, but only where `ecr > 290` — past the end of a 10-team 17-round draft. 0 of 17 picks changed. Thread closed. |
+| 17 | `20260906-10.md` | **Current.** Yahoo XRank/ADP acquired, joins 170/170 of draftable range. Gate PASSED: real-Yahoo opponents change 5/17 picks, cost 32.5 starter pts -> `dev/dryrun.R`'s ECR opponent model is wrong and every strategy conclusion is optimistic. Fix scoped, NOT shipped. Adversarial critique in `docs/review/001-model-critique.md`. |
 
 ## Reading rule
 
