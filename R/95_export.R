@@ -1,12 +1,14 @@
 #' Every Yahoo-sourced name list, in the order they were collected.
 #'
 #' A constant so the set is stated once and adding the next position page is a
-#' one-line change. K and DEF have no CSV here: defenses are handled by rule
-#' (`yahoo_defense_name()`), and the kickers the paste misses are too few and
-#' too deep to be worth a page.
+#' one-line change. K has no CSV: the kickers the paste misses are too few and
+#' too deep to be worth a page. DEF does, added 2026-09-08 -- the rule alone
+#' (`yahoo_defense_name()`) covered only 25 of 32, and the 7 it missed were the
+#' only rows in the export with no Yahoo name source at all.
 YAHOO_NAME_SOURCES <- c(
-  "docs/yahoo-player-names.txt",
-  "docs/qb.csv", "docs/rb.csv", "docs/wr.csv", "docs/te.csv"
+  "docs/uploads/yahoo-player-names.txt",
+  "docs/uploads/qb.csv", "docs/uploads/rb.csv", "docs/uploads/wr.csv",
+  "docs/uploads/te.csv", "docs/uploads/def.csv"
 )
 
 #' Export the Board as a Yahoo "import rankings" CSV.

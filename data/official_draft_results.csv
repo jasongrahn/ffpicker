@@ -1,0 +1,151 @@
+Pick,Player,Position,Team,Bye,DraftedBy,Status
+1,B. Robinson,RB,Atl,11,Bone Crushers,
+2,J. Gibbs,RB,Det,6,Locked In Michelle,
+3,J. Chase,WR,Cin,6,Steel City,Q
+4,P. Nacua,WR,LAR,11,Game Plan Nicole,Q
+5,S. Barkley,RB,Phi,10,Monday Night Madison,
+6,J. Taylor,RB,Ind,13,Max's TD Bombers,
+7,C. McCaffrey,RB,SF,8,Jason's Jazzy Team,Q
+8,A. St. Brown,WR,Det,6,Sunday Kevin,
+9,J. Smith-Njigba,WR,Sea,11,Maybe Mitchell,
+10,J. Williams,RB,Dal,14,Your Team,
+11,D. Henry,RB,Bal,13,Your Team,
+12,J. Jefferson,WR,Min,6,Maybe Mitchell,
+13,J. Cook III,RB,Buf,7,Sunday Kevin,
+14,D. Achane,RB,Mia,6,Jason's Jazzy Team,
+15,K. Walker III,RB,KC,5,Max's TD Bombers,
+16,O. Hampton,RB,LAC,7,Monday Night Madison,
+17,C. Lamb,WR,Dal,14,Game Plan Nicole,
+18,C. Brown,RB,Cin,6,Steel City,
+19,K. Williams,RB,LAR,11,Locked In Michelle,
+20,D. London,WR,Atl,11,Bone Crushers,
+21,J. Allen,QB,Buf,7,Bone Crushers,
+22,G. Pickens,WR,Dal,14,Locked In Michelle,
+23,N. Collins,WR,Hou,8,Steel City,
+24,B. Bowers,TE,LV,13,Game Plan Nicole,
+25,A. Brown,WR,NE,11,Monday Night Madison,
+26,A. Jeanty,RB,LV,13,Max's TD Bombers,Q
+27,T. Higgins,WR,Cin,6,Jason's Jazzy Team,Q
+28,C. Olave,WR,NO,8,Sunday Kevin,
+29,T. McBride,TE,Ari,14,Maybe Mitchell,
+30,D. Adams,WR,LAR,11,Your Team,
+31,T. Etienne Jr.,RB,NO,8,Your Team,
+32,B. Hall,RB,NYJ,13,Maybe Mitchell,Q
+33,M. Nabers,WR,NYG,8,Sunday Kevin,Q
+34,Z. Flowers,WR,Bal,13,Jason's Jazzy Team,Q
+35,D. Smith,WR,Phi,10,Max's TD Bombers,
+36,J. Love,RB,Ari,14,Monday Night Madison,Q
+37,J. Waddle,WR,Den,10,Game Plan Nicole,
+38,G. Wilson,WR,NYJ,13,Steel City,
+39,R. Rice,WR,KC,5,Locked In Michelle,
+40,T. McMillan,WR,Car,5,Bone Crushers,
+41,L. McConkey,WR,LAC,7,Bone Crushers,
+42,C. Skattebo,RB,NYG,8,Locked In Michelle,
+43,C. Loveland,TE,Chi,10,Steel City,
+44,D. Swift,RB,Chi,10,Game Plan Nicole,Q
+45,E. Egbuka,WR,TB,10,Monday Night Madison,Q
+46,L. Burden III,WR,Chi,10,Max's TD Bombers,Q
+47,D. Maye,QB,NE,11,Jason's Jazzy Team,
+48,T. Warren,TE,Ind,13,Sunday Kevin,Q
+49,L. Jackson,QB,Bal,13,Maybe Mitchell,
+50,R. Odunze,WR,Chi,10,Your Team,Q
+51,J. Ferguson,TE,Dal,14,Your Team,
+52,D. Montgomery,RB,Hou,8,Maybe Mitchell,
+53,B. Irving,RB,TB,10,Sunday Kevin,
+54,D. Kincaid,TE,Buf,7,Jason's Jazzy Team,
+55,J. Hurts,QB,Phi,10,Max's TD Bombers,
+56,T. McLaurin,WR,Was,7,Monday Night Madison,
+57,Q. Judkins,RB,Cle,11,Game Plan Nicole,
+58,B. Tuten,RB,Jax,7,Steel City,Q
+59,J. Burrow,QB,Cin,6,Locked In Michelle,
+60,D. Moore,WR,Buf,7,Bone Crushers,
+61,J. Price,RB,Sea,11,Bone Crushers,
+62,H. Fannin Jr.,TE,Cle,11,Locked In Michelle,
+63,J. Daniels,QB,Was,7,Steel City,
+64,C. Williams,QB,Chi,10,Game Plan Nicole,
+65,A. Pierce,WR,Ind,13,Monday Night Madison,
+66,T. Kraft,TE,GB,11,Max's TD Bombers,Q
+67,J. Williams,WR,Det,6,Jason's Jazzy Team,
+68,J. Herbert,QB,LAC,7,Sunday Kevin,
+69,T. Pollard,RB,Ten,9,Maybe Mitchell,
+70,M. Stafford,QB,LAR,11,Your Team,
+71,J. Jacobs,RB,GB,11,Your Team,CEL
+72,S. LaPorta,TE,Det,6,Maybe Mitchell,Q
+73,C. Watson,WR,GB,11,Sunday Kevin,
+74,R. Stevenson,RB,NE,11,Jason's Jazzy Team,
+75,P. Washington,WR,Jax,7,Max's TD Bombers,
+76,D. Goedert,TE,Phi,10,Monday Night Madison,
+77,M. Evans,WR,SF,8,Game Plan Nicole,Q
+78,T. Henderson,RB,NE,11,Steel City,O
+79,M. Harrison Jr.,WR,Ari,14,Locked In Michelle,
+80,K. Pitts Sr.,TE,Atl,11,Bone Crushers,
+81,J. Warren,RB,Pit,9,Bone Crushers,
+82,B. Aubrey,K,Dal,14,Locked In Michelle,
+83,M. Lloyd,RB,GB,11,Steel City,
+84,B. Thomas Jr.,WR,Jax,7,Game Plan Nicole,
+85,R. Dowdle,RB,Pit,9,Monday Night Madison,
+86,C. Tate,WR,Ten,9,Max's TD Bombers,Q
+87,D. Metcalf,WR,Pit,9,Jason's Jazzy Team,Q
+88,J. Brooks,RB,Car,5,Sunday Kevin,Q
+89,M. Wilson,WR,Ari,14,Maybe Mitchell,
+90,K. Gainwell,RB,TB,10,Your Team,
+91,C. Sutton,WR,Den,10,Your Team,
+92,B. Corum,RB,LAR,11,Maybe Mitchell,
+93,T. Lawrence,QB,Jax,7,Sunday Kevin,
+94,C. Hubbard,RB,Car,5,Jason's Jazzy Team,Q
+95,D. Prescott,QB,Dal,14,Max's TD Bombers,
+96,J. Dobbins,RB,Den,10,Monday Night Madison,
+97,G. Kittle,TE,SF,8,Game Plan Nicole,Q
+98,C. Godwin Jr.,WR,TB,10,Steel City,
+99,J. Mason,RB,Min,6,Locked In Michelle,
+100,J. Downs,WR,Ind,13,Bone Crushers,Q
+101,B. Purdy,QB,SF,8,Bone Crushers,
+102,J. Reed,WR,GB,11,Locked In Michelle,
+103,B. Nix,QB,Den,10,Steel City,
+104,J. Croskey-Merritt,RB,Was,7,Game Plan Nicole,Q
+105,S. Diggs,WR,Was,7,Monday Night Madison,
+106,R. Harvey,RB,Den,10,Max's TD Bombers,
+107,C. Dicker,K,LAC,7,Jason's Jazzy Team,Q
+108,Q. Johnston,WR,LAC,7,Sunday Kevin,
+109,D. Stribling,WR,SF,8,Maybe Mitchell,Q
+110,P. Mahomes,QB,KC,5,Your Team,Q
+111,W. Marks,RB,Hou,8,Your Team,
+112,Rams,DEF,LAR,11,Maybe Mitchell,
+113,T. Kelce,TE,KC,5,Sunday Kevin,
+114,Broncos,DEF,Den,10,Jason's Jazzy Team,
+115,I. Likely,TE,NYG,8,Max's TD Bombers,
+116,C. Rodriguez Jr.,RB,Jax,7,Monday Night Madison,
+117,M. Golden,WR,GB,11,Game Plan Nicole,
+118,J. Johnson,TE,NO,8,Steel City,
+119,Seahawks,DEF,Sea,11,Locked In Michelle,
+120,M. Andrews,TE,Bal,13,Bone Crushers,
+121,J. Addison,WR,Min,6,Bone Crushers,
+122,A. Jones Sr.,RB,Min,6,Locked In Michelle,
+123,K. Concepcion,WR,Cle,11,Steel City,
+124,J. Dart,QB,NYG,8,Game Plan Nicole,
+125,S. Darnold,QB,Sea,11,Monday Night Madison,
+126,M. Lemon,WR,Phi,10,Max's TD Bombers,
+127,J. Goff,QB,Det,6,Jason's Jazzy Team,
+128,M. Pittman Jr.,WR,Pit,9,Sunday Kevin,Q
+129,R. Doubs,WR,NE,11,Maybe Mitchell,
+130,T. Tracy Jr.,RB,NYG,8,Your Team,Q
+131,W. Robinson,WR,Ten,9,Your Team,Q
+132,R. Shaheed,WR,Sea,11,Maybe Mitchell,
+133,Texans,DEF,Hou,8,Sunday Kevin,
+134,K. Monangai,RB,Chi,10,Jason's Jazzy Team,Q
+135,K. Fairbairn,K,Hou,8,Max's TD Bombers,
+136,Eagles,DEF,Phi,10,Monday Night Madison,
+137,Ravens,DEF,Bal,13,Game Plan Nicole,
+138,J. Myers,K,Sea,11,Steel City,
+139,J. Meyers,WR,Jax,7,Locked In Michelle,Q
+140,Vikings,DEF,Min,6,Bone Crushers,
+141,C. Little,K,Jax,7,Bone Crushers,
+142,K. Murray,QB,Min,6,Locked In Michelle,
+143,Jaguars,DEF,Jax,7,Steel City,
+144,T. Loop,K,Bal,13,Game Plan Nicole,
+145,H. Mevis,K,LAR,11,Monday Night Madison,
+146,Steelers,DEF,Pit,9,Max's TD Bombers,
+147,D. Schultz,TE,Hou,8,Jason's Jazzy Team,
+148,W. Reichard,K,Min,6,Sunday Kevin,
+149,E. Pineiro,K,SF,8,Maybe Mitchell,
+150,Patriots,DEF,NE,11,Your Team,
