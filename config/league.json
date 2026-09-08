@@ -1,18 +1,1 @@
-{
-  "platform": "yahoo",
-  "teams": 10,
-  "draft": {
-    "type": "snake",
-    "my_slot": null,
-    "rounds": 17,
-    "defer_until_round": { "K": 16, "DST": 15 }
-  },
-  "roster": {
-    "starters": { "QB": 1, "RB": 2, "WR": 2, "TE": 1, "FLEX": 1, "K": 1, "DST": 1 },
-    "flex_eligible": { "FLEX": ["RB", "WR", "TE"] },
-    "bench": 6,
-    "ir": 2,
-    "max_at_position": { "QB": 2, "RB": 7, "WR": 7, "TE": 2, "K": 1, "DST": 1 }
-  },
-  "season": { "regular_weeks": [1, 15], "playoff_weeks": [16, 17], "playoff_teams": 4 }
-}
+{"platform":"yahoo","teams":10,"draft":{"type":"snake","my_slot":null,"rounds":15,"defer_until_round":{"K":14,"DST":14,"QB":7}},"roster":{"starters":{"QB":1,"RB":2,"WR":2,"TE":1,"FLEX":1,"K":1,"DST":1},"flex_eligible":{"FLEX":["RB","WR","TE"]},"bench":6,"ir":2,"max_at_position":{"QB":2,"RB":7,"WR":7,"TE":2,"K":1,"DST":1}},"season":{"regular_weeks":[1,15],"playoff_weeks":[16,17],"playoff_teams":4}}
