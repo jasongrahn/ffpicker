@@ -37,6 +37,7 @@ Use this index.
 
 | 23 | `20260908-16-DRAFT-DAY-CLOSE.md` | QB fade shipped as one config line (`defer_until_round QB: 7`), zero R code. Slot **10** captured. DEF/K rank-sinking proven a non-lever — Yahoo autodraft fills mandatory slots by round, ignores uploaded rank. Live pick log written during the draft, provenance flagged unresolved. |
 | 24 | `20260908-17-SEASON-START.md` | **Current. START HERE.** Official results in, `pick_log.jsonl` rebuilt from them (`422676e`, branch `draft-day-official-results`, PR not opened). **Draft was 15 rounds, not 17** — `rounds: 17` + `defer_until_round K: 16` meant we drafted **no kicker**, only team of 10. Config fixed. QB fade validated: got board's #1 and #4 QB at picks 70/110. Live log was 142/150 correct; our own 15 picks 15/15 — Jacobs at 71 real. **Draft engine done.** Next project = in-season weekly picker, scope from #21. |
+| 25 | `20260910-18-TOKEN-TOOLING-AUDIT.md` | Side track, not ffdraft. Token-tool audit (headroom ~5%, rtk Bash-only, serena 0 calls -> R `languageserver` missing, fixed). greptile uninstalled. Open: verify serena post-restart, pin serena uvx to SHA. #24 stays START HERE for football work. |
 
 ## Reading rule
 
