@@ -1,0 +1,16 @@
+season,week,player,pos,nfl_team,slot,started,proj,actual
+2026,1,M. Stafford,QB,LAR,QB,TRUE,18.06,5.10
+2026,1,J. Williams,RB,Dal,RB,TRUE,14.99,21.70
+2026,1,D. Henry,RB,Bal,RB,TRUE,14.02,34.80
+2026,1,D. Adams,WR,LAR,WR,TRUE,10.87,4.10
+2026,1,R. Odunze,WR,Chi,WR,TRUE,9.51,6.20
+2026,1,J. Ferguson,TE,Dal,TE,TRUE,7.30,1.60
+2026,1,T. Etienne Jr.,RB,NO,FLEX,TRUE,13.91,11.30
+2026,1,C. McLaughlin,K,TB,K,TRUE,7.03,11.00
+2026,1,Patriots,DEF,NE,DEF,TRUE,5.82,6.00
+2026,1,P. Mahomes,QB,KC,BN,FALSE,16.39,22.66
+2026,1,C. Sutton,WR,Den,BN,FALSE,8.90,2.10
+2026,1,W. Robinson,WR,Ten,BN,FALSE,8.38,6.30
+2026,1,K. Gainwell,RB,TB,BN,FALSE,10.44,2.30
+2026,1,W. Marks,RB,Hou,BN,FALSE,7.55,4.50
+2026,1,T. Tracy Jr.,RB,NYG,BN,FALSE,5.01,-0.60

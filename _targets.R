@@ -10,11 +10,33 @@ list(
   tar_target(league_config, load_config("league", config_dir = dirname(league_config_file))),
   tar_target(scoring_config, load_config("scoring", config_dir = dirname(scoring_config_file))),
 
-  tar_target(player_stats_raw, ingest_player_stats(), format = "file"),
-  tar_target(ff_playerids_raw, ingest_ff_playerids(), format = "file"),
-  tar_target(players_raw, ingest_players(), format = "file"),
+  # In-season, these five sources gain rows every week while their target
+  # definitions stay byte-identical, so targets' default cue sees no reason to
+  # re-run them and serves a stale cache indefinitely. The season argument does
+  # not save us: it is evaluated inside the function, so targets never sees it
+  # change. Measured 2026-09-15 -- a cache written 09-06 kept reporting max
+  # season 2025 after week 1 had been played, and only tar_invalidate() broke it.
+  #
+  # cue = "always" re-pulls on every tar_make(). Downstream is gated on the
+  # hash of the written parquet (format = "file"), not on the re-run itself.
+  # Measured steady-state cost of a no-change tar_make(): ~24s, 18 of 26
+  # targets skipped. ff_playerids_raw and ff_opportunity_raw do not round-trip
+  # byte-stable, so dim_player and expected_stat_lines rebuild each run --
+  # their *values* hash identical, so the cascade stops there and the board
+  # and fact tables still skip. Two cheap rebuilds is the price of not
+  # silently serving stale data; do not "optimize" this back to the default cue.
+  #
+  # ff_rankings_raw is deliberately NOT always-cued: it pulls season = "draft",
+  # a preseason snapshot that does not change in-season.
+  tar_target(player_stats_raw, ingest_player_stats(), format = "file",
+             cue = tar_cue(mode = "always")),
+  tar_target(ff_playerids_raw, ingest_ff_playerids(), format = "file",
+             cue = tar_cue(mode = "always")),
+  tar_target(players_raw, ingest_players(), format = "file",
+             cue = tar_cue(mode = "always")),
   tar_target(ff_rankings_raw, ingest_ff_rankings(), format = "file"),
-  tar_target(ff_opportunity_raw, ingest_ff_opportunity(), format = "file"),
+  tar_target(ff_opportunity_raw, ingest_ff_opportunity(), format = "file",
+             cue = tar_cue(mode = "always")),
 
   # Yahoo's own draft ordering. Opponent model only -- never blended into vor.
   # See R/97_yahoo_adp.R for the name-join justification and match rate.
@@ -25,6 +47,23 @@ list(
   tar_target(fct_player_week, validate_fct_player_week(build_fct_player_week(player_stats_raw, dim_player))),
 
   tar_target(fct_player_week_scored, add_fantasy_points(fct_player_week, scoring_config)),
+
+  # In-season layer. Slices the fact table to the live season and attaches
+  # role (snap share) and availability (injury designation) -- the two things
+  # a start/sit decision needs that a season-long stat line does not carry.
+  # Scoring is inherited from fct_player_week_scored, never recomputed.
+  tar_target(snap_counts_raw, ingest_snap_counts(), format = "file",
+             cue = tar_cue(mode = "always")),
+  tar_target(injuries_raw, ingest_injuries(), format = "file",
+             cue = tar_cue(mode = "always")),
+  tar_target(fct_player_week_current,
+             validate_fct_player_week_current(
+               build_fct_player_week_current(fct_player_week_scored, snap_counts_raw,
+                                             injuries_raw, dim_player))),
+  # Separate from the fact table on purpose. A stats-derived table has no row
+  # for a player who was ruled Out, which is the single most decision-relevant
+  # state a start/sit picker can see. See build_dim_injury_week() for numbers.
+  tar_target(dim_injury_week, build_dim_injury_week(injuries_raw)),
 
   # Expected (opportunity-driven) production, scored under this league's rules.
   # CLAUDE.md's core principle -- "opportunity is sticky, efficiency is mostly
