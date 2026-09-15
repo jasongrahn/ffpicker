@@ -1,3 +1,14 @@
+# Secrets. Added 2026-09-15 ahead of the Yahoo OAuth work -- .Renviron was NOT
+# ignored before this, so anything pasted into it would have been committed.
+# Yahoo consumer key/secret and any cached OAuth token live here, never in git.
+.Renviron
+.Renviron.*
+.env
+.env.*
+.httr-oauth
+*-oauth-cache.rds
+config/secrets*.json
+
 .Rproj.user
 .Rhistory
 .RData

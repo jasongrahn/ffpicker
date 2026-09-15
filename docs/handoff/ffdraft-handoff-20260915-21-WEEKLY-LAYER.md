@@ -1,4 +1,8 @@
-# ffdraft Handoff #28: draft phase closed. Weekly layer built. Yahoo API tangent proposed.
+# ffdraft Handoff #28: draft phase closed. Weekly layer built. Yahoo API re-opened.
+
+**START HERE -> §3.** Next session is the deep Yahoo API investigation. User lifted
+the `CLAUDE.md` "do not re-investigate" line for Yahoo on 2026-09-15. Secrets go in
+`.Renviron` (newly gitignored), never in `config/`.
 
 **Local**: `/Users/jasongrahn/R-projects/ffootballer`
 **Date**: 2026-09-15 (Mon), after Week 1 completed
@@ -77,47 +81,84 @@ Tests: **533 pass, 0 fail.**
 
 ---
 
-## 3. Next session: Yahoo player API — READ THIS BEFORE STARTING
+## 3. NEXT SESSION = Yahoo API, deep investigation. User decision 2026-09-15.
 
-User asked to stop hand-harvesting Yahoo and build API pulls. Reasonable ask.
-**Collides with a hard constraint. Resolve before writing code.**
+**User has explicitly re-opened this.** Direction: "we're going to investigate the
+yahoo API much deeper this time around. Adding my secrets as necessary."
 
-`CLAUDE.md` -> "Yahoo API is gated. Verified empirically 2026-09-06 — do not
-re-investigate." Finding was: `developer.yahoo.com/apps/create` offers only
-"OpenID Connect Permissions" and "TW Auction". No Fantasy Sports scope checkbox.
-Docs stale. League is private -> no scope -> no read.
+**This overrides `CLAUDE.md`'s "do not re-investigate" for Yahoo only.** That line was
+written 2026-09-06 off a ~10-minute look at the create-app form. It stands as an
+accurate record of *that* probe, not as a verdict on the whole API. User wants the
+deep version. Do not quote the constraint back at them — it has been consciously lifted.
 
-**Nothing since has changed that.** No new evidence gathered this session. Constraint
-stands as written.
+**Scope of the lift is Yahoo alone.** ESPN, `ffscrapr`, and Sleeper `search_rank`
+stay closed — each was closed with numbers, not a glance. Sleeper `trending/add`
+remains unprobed and uncovered by those closures.
 
-### What would make a re-probe legitimate
+### What 09-06 actually established, and what it did not
 
-Re-probe is cheap (~10 min: load create-app form, read the permissions list) and the
-finding is 9 days old. But run it as a **falsification test with a stated bar**, per
-repo habit — not as open-ended investigation:
+Established: `developer.yahoo.com/apps/create` shows only "OpenID Connect Permissions"
+and "TW Auction". No Fantasy Sports checkbox. Docs at `sports.yahoo.com/developer/docs/`
+still describe a Read / Read-Write picker that is not on the live form.
 
-- **Bar**: a Fantasy Sports scope appears on the live create-app form AND an issued
-  key returns 200 on `fantasysports.yahooapis.com/fantasy/v2/game/nfl`.
-- **Anything less = closed again.** Record result in `CLAUDE.md` either way, with date.
-- Do **not** re-open ESPN / Sleeper `search_rank` / `ffscrapr`. All three closed with
-  numbers, all three in `CLAUDE.md`. Sleeper `trending/add` remains the one unprobed
-  endpoint and is NOT covered by those closures.
-- Terms prohibit scraping / reverse-engineering. Not a fallback. Do not propose it.
+**Not established** — the gaps a deeper pass should attack:
 
-### If gate still closed — what actually replaces hand-harvesting
+1. Whether the Fantasy scope is grantable at the **authorize URL** even when absent
+   from the create-app form. Untested. Form UI and OAuth scope registry are not
+   necessarily the same system.
+2. Whether an OpenID-Connect-only key returns 200, 401, or 403 on
+   `fantasysports.yahooapis.com/fantasy/v2/game/nfl`. **Never actually called.**
+   09-06 reasoned it could not work; nobody issued the request.
+3. Whether a public-league read differs from private. League 1541392 is private.
+4. Whether `YFAR` (GitHub, unmaintained) still authenticates — its flow may predate
+   the form change and reveal the scope string.
 
-Ask user which they want; do not assume:
+Order matters: (2) is one `httr2` call and settles the most. Do it first.
 
-1. **Nothing.** Start/sit needs only the 15 rostered players + nflreadr. Already
-   have both. Yahoo adds nothing to the core loop.
-2. **Waiver targets** need "who is unowned in league 1541392". nflreadr cannot know
-   this. Genuinely Yahoo-only. One paste per week, same shape as
-   `docs/yahoo_fantasy_football_adp.csv`.
-3. **Yahoo weekly projections** as baseline to beat. Nice for measurement, not needed
-   to build.
+### Bars
 
-User is mid-collection of Yahoo player info for "data arbitrage" — ask what they
-pulled before building an ingest for it.
+- **Full pass**: authenticated read of league 1541392 rosters -> hand-harvesting dies.
+- **Partial**: any authenticated 200 on `/fantasy/v2/`, even public/game-level ->
+  worth building against, scope the subset.
+- **Fail**: record the exact endpoint, status code, and error body in `CLAUDE.md`,
+  dated. Supersede the 09-06 note; do not delete it.
+
+Record **response codes**, not impressions. 09-06's weakness was inference from a UI.
+
+### Secrets handling — do this before the user pastes anything
+
+**`.gitignore` did not cover `.Renviron` until commit on 2026-09-15.** Anything pasted
+there earlier would have been committed. Now ignored, along with `.env*`,
+`.httr-oauth`, `*-oauth-cache.rds`, `config/secrets*.json`.
+
+Rules:
+- Yahoo consumer key + secret -> `.Renviron` as `YAHOO_CLIENT_ID` /
+  `YAHOO_CLIENT_SECRET`. Read with `Sys.getenv()`. Never literal in `R/`, never in
+  `config/*.json` (that dir is committed).
+- `httr2::oauth_client(secret = )` + disk cache outside the repo (`~/.cache/httr2`).
+- Never echo a key into console output, a handoff, or a commit message. Redact to
+  last 4 chars if it must be referenced.
+- If a secret does reach a commit: rotate it at Yahoo first, rewrite history second.
+  Rotation is the fix; history rewrite alone is not.
+
+### Terms — unchanged, still binding
+
+Reverse-engineering and scraping stay prohibited. Deeper investigation means
+**exercising the documented OAuth surface harder**, not routing around it. If the
+API says no, the answer is a manual paste, not a scraper.
+
+### If the gate holds — what replaces hand-harvesting
+
+Ranked. Ask the user; do not assume:
+
+1. **Nothing, for start/sit.** Needs the 15 rostered players + nflreadr. Both in hand,
+   scoring validated. Yahoo adds zero to the core loop.
+2. **Waiver targets** — "who is unowned in league 1541392". nflreadr cannot know this.
+   Genuinely Yahoo-only. One paste/week, shape of `docs/yahoo_fantasy_football_adp.csv`.
+3. **Yahoo weekly projections** as the baseline to beat. Measurement, not capability.
+
+User was mid-collection of Yahoo player info for "data arbitrage" when this session
+ended. **Ask what they pulled before building an ingest for it.**
 
 ---
 
@@ -146,7 +187,10 @@ pulled before building an ingest for it.
 ## 6. Suggested skills
 
 - **`caveman`** — repo doc rule, any doc written
-- **`to-prd`** — scope the picker before code; still not done, still the right next step
-- **`claude-md-management:revise-claude-md`** — §4 stale blocks
+- **`claude-md-management:revise-claude-md`** — §4 stale blocks, AND the Yahoo
+  constraint block once §3 returns a verdict. That edit is required either way.
+- **`diagnose`** — §3 is a falsification exercise; suits it better than `prototype`
+- **`to-prd`** — scope the picker before code. Still not done. Still right, but now
+  queued behind the Yahoo tangent by user decision.
 - **`handoff`** / **`session-close`** — close next one. Note: skill defaults to `/tmp`;
   repo `docs/handoff/README.md` overrides — write here.
