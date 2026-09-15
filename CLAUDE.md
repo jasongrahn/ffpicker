@@ -57,6 +57,65 @@ scenarios to **10** — one per possible draft slot in a 10-team snake draft. `m
 
 ## Hard constraints
 
+**Yahoo API is gated. CLOSED 2026-09-15 with response codes. Do not re-investigate.**
+
+Deep pass run 2026-09-15 with the user's real app credentials (app id, consumer
+key, secret, redirect `https://127.0.0.1:7645/`). Harnesses `dev/yahoo/auth_probe.R`
+(OAuth2) and `dev/yahoo/oauth1_probe.py` (OAuth 1.0a). Supersedes but does not delete
+the 09-06 note below — that note inferred from a form UI, this one issued the requests.
+
+**Both auth generations tested.** First OAuth2-only pass was incomplete: Yahoo's own
+still-published sample code (gists under `VerizonMediaOwner`, Copyright Yahoo Inc.
+2017, zLib) is OAuth 1.0a and carries no `scope` concept at all, including a
+two-legged consumer-key-only call to `/fantasy/v2/game/nfl`. That path was untested
+and had to be run before any verdict. It was. It fails too — differently, and more
+informatively.
+
+| probe | status | body |
+|---|---|---|
+| `GET /fantasy/v2/game/nfl`, no token | 401 | `oauth_problem="unable_to_determine_oauth_type"` |
+| `GET /fantasy/v2/league/449.l.1541392`, no token | 401 | identical — private league leaks nothing |
+| `POST /oauth2/get_token` `grant_type=client_credentials` | 400 | `client assertion cannot be empty` — enterprise JWT flow, not ours |
+| authorize URL `scope=fspt-r` | 302 | -> redirect `?error=invalid_scope` **before login** |
+| authorize URL `scope=fspt-w` | 302 | -> same |
+| authorize URL `scope=bogus-scope-xyz` | 302 | -> same, so curl cannot discriminate scopes |
+| authorize URL `scope=openid` (control) | 200 | real consent screen, **offers only "Yahoo Auction (read/write)" + "Profile (read)"** |
+| `POST /oauth2/get_token` `grant_type=authorization_code` | **200** | valid `access_token` issued, `scope` field absent |
+| `GET /fantasy/v2/game/nfl` **with valid bearer token** | **401** | `oauth_problem="additional_authorization_required"` |
+| **OAuth1 two-legged** `GET /fantasy/v2/game/nfl`, HMAC-SHA1 signed | **403** | **"This application is not authorized to perform this action."** |
+| OAuth1 same, `format=json` | 403 | identical |
+| OAuth1 `GET /oauth/v2/get_request_token` | 401 | `Unauthorized` — OAuth1 three-legged endpoint retired |
+
+Reading. Three mechanisms, three refusals, all at the entitlement layer.
+
+The OAuth1 403 is the strongest single datapoint. Yahoo **accepted the HMAC-SHA1
+signature** — an invalid signature returns a signature error, not this one — so it
+parsed the request, identified the app by consumer key, and refused on authorization.
+Yahoo's own words, reached via Yahoo's own published sample code.
+
+On the OAuth2 side: token valid, entitlement absent. `fspt-r` is rejected at the
+authorize endpoint *before a login even happens*, so the scope is not merely unchecked
+on the create-app form — it is ungrantable to self-serve apps. The consent screen for
+a working `openid` flow offers only Yahoo Auction and Profile.
+
+Gap is at the entitlement layer: not the docs, not the form UI, not OAuth version,
+not our code. `sports.yahoo.com/developer/docs/` documenting the endpoint is not
+evidence of access — the endpoint exists and answers; it refuses this class of app.
+
+All four gaps named in handoff #28 §3 are now answered: (1) no, `fspt-r` is not
+grantable at the authorize URL; (2) 401 `additional_authorization_required`, now
+actually called; (3) private vs public is moot, refusal precedes league resolution —
+`/game/nfl` is public game metadata and is refused identically; (4) `YFAR` moot — it
+wraps the OAuth1 flow, whose request-token endpoint now returns 401.
+
+Consequence unchanged: **manual paste stays the primary path.** Do not reopen without
+a new fact from Yahoo's side (a changed permission list on `developer.yahoo.com/apps`,
+or a partner/enterprise entitlement). Re-running the probes above will not produce one.
+
+---
+
+*Superseded 2026-09-15, retained as the record of that probe:*
+
 **Yahoo API is gated. Verified empirically 2026-09-06 — do not re-investigate.**
 `sports.yahoo.com/developer/docs/` still documents a self-serve flow instructing you to
 "select either Read or Read/Write access for Fantasy Sports" when creating an app. **That
