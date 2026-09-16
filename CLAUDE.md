@@ -57,7 +57,45 @@ scenarios to **10** — one per possible draft slot in a 10-team snake draft. `m
 
 ## Hard constraints
 
-**Yahoo API is gated. CLOSED 2026-09-15 with response codes. Do not re-investigate.**
+**Yahoo API is gated behind a MANUAL APPROVAL FORM. Corrected 2026-09-16.**
+**-> Apply at `https://sports.yahoo.com/developer/access/`. This is the path in.**
+
+Status: **application not yet submitted.** Not closed. Not impossible. Blocked on a
+form the user can fill out in ~10 minutes, then a human review with no stated SLA.
+
+Yahoo removed self-serve Fantasy provisioning ~May 2026 and replaced it with an
+approval program. `developer.yahoo.com/fantasysports/guide/` now 308-redirects to
+`sports.yahoo.com/developer`. Creating an app is **necessary but not sufficient** —
+it yields the client id/secret, and the Fantasy entitlement is granted separately on
+approval. Existing legacy apps were de-provisioned 2026-07-22 without notice
+(`github.com/uberfastman/yfpy` issue #84), so this hit working integrations too, not
+just new ones.
+
+Form facts, read from the live page 2026-09-16:
+- Read-only. "Write access is not available at this time." `fspt-r` is the only scope.
+- Asks: Expected Users (Small <1,000 / Medium / Large), Client ID (optional, ours
+  exists), and a description.
+- **Personal / single-league use is explicitly in scope** — that is our case.
+- "incomplete or insufficiently detailed submissions cannot be evaluated and will be
+  closed without further correspondence." Write it properly the first time.
+- Attribution required if approved: "Fantasy data provided by Yahoo Fantasy",
+  linking back to Yahoo Fantasy.
+
+Error shapes are diagnostic, per the community thread and matching our probes:
+`401 additional_authorization_required` = never provisioned (us, new app).
+`403 This application is not authorized` = de-provisioned legacy app.
+
+**Superseded:** the 09-15 "CLOSED, do not re-investigate" verdict below was wrong in
+scope. Its twelve probes are accurate and worth keeping — they correctly prove the
+*app* lacks the entitlement. It wrongly concluded no path existed, having never
+looked for a provisioning process outside the create-app form. Same failure mode as
+the 09-06 note: inferring absence of a path from absence of a checkbox.
+
+---
+
+*Superseded 2026-09-16, probe data still valid, conclusion too broad:*
+
+**Yahoo API is gated. Probed exhaustively 2026-09-15 with response codes.**
 
 Deep pass run 2026-09-15 with the user's real app credentials (app id, consumer
 key, secret, redirect `https://127.0.0.1:7645/`). Harnesses `dev/yahoo/auth_probe.R`
@@ -108,9 +146,11 @@ actually called; (3) private vs public is moot, refusal precedes league resoluti
 `/game/nfl` is public game metadata and is refused identically; (4) `YFAR` moot — it
 wraps the OAuth1 flow, whose request-token endpoint now returns 401.
 
-Consequence unchanged: **manual paste stays the primary path.** Do not reopen without
-a new fact from Yahoo's side (a changed permission list on `developer.yahoo.com/apps`,
-or a partner/enterprise entitlement). Re-running the probes above will not produce one.
+Consequence **as revised 2026-09-16**: manual paste stays primary *until the access
+application is approved*. The probes above remain the correct description of an
+unprovisioned app — they are the "before" state. Re-running them changes nothing;
+submitting the form is the only action that can. Do not re-run them as a substitute
+for applying.
 
 ---
 
