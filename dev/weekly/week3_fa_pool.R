@@ -106,11 +106,77 @@ pool |> filter(profile == "BUY  volume, results lagging", opp_pg >= 8) |> head(2
   select(player, pos, team, opp_pg, opp_pctl, snap_pct, fp_pg, eff_rel, opp_trend) |>
   as.data.frame() |> print(digits = 2, row.names = FALSE)
 
-# ---- JOIN --------------------------------------------------------------------
-# Once the Yahoo free-agent export lands in docs/uploads/week_2_data/:
-#   fa <- read.csv("docs/uploads/week_2_data/<file>")
-#   fa$key <- normalize_player_name(fa$Player)      # R/96_yahoo_names.R
-#   pool$key <- normalize_player_name(pool$player)
-#   avail <- semi_join(pool, fa, by = "key")
-# Report the match rate at the point of use. Name join is forced here: Yahoo
-# exports carry no gsis_id, and yahoo_id is 100% NA in our pool.
+# ---- AVAILABILITY ------------------------------------------------------------
+# Ownership comes from the Yahoo players manifest, NOT a separate FA export.
+# `roster_status` holds the owning team name, or "FA". All 10 teams appear.
+#
+# Two limits inherited from how the manifest is built:
+#   * QB/RB/WR/TE only -- it comes from the position pages, so there is no K
+#     or DST ownership. Teams show 11-13 of 15 players; the gap is K + DST.
+#   * It is a point-in-time snapshot. Waivers move it. Check the file date
+#     against the week being planned before trusting it.
+source("R/96_yahoo_names.R")
+
+MANIFEST <- Sys.getenv("FF_MANIFEST", "docs/uploads/week_2_data/week_2_players.csv")
+
+if (!file.exists(MANIFEST)) {
+  cat("\n=== no manifest at", MANIFEST, "-- pool written, availability skipped\n")
+} else {
+  man <- read.csv(MANIFEST, stringsAsFactors = FALSE)
+  stopifnot("roster_status" %in% names(man))
+
+  cat(sprintf("\n=== ownership from %s (%s)\n", MANIFEST,
+              format(file.mtime(MANIFEST), "%Y-%m-%d")))
+  print(sort(table(man$roster_status), decreasing = TRUE))
+
+  fa <- man[man$roster_status == "FA" & man$pos %in% c("QB", "RB", "WR", "TE"), ]
+
+  # Name join is forced: the manifest carries no gsis_id, and yahoo_id is 100%
+  # NA in our pool. Report the rate, and never let a miss pass silently.
+  fa$key   <- normalize_player_name(fa$player, fa$pos)
+  pool$key <- normalize_player_name(pool$player, pool$pos)
+
+  avail <- dplyr::inner_join(
+    fa[, c("key", "player", "pos", "nfl_team", "pct_rostered", "fan_pts")],
+    pool, by = "key", suffix = c("", ".nfl"))
+
+  miss <- fa[!fa$key %in% pool$key, ]
+  # A miss with zero points is expected: the pool is built from stat lines, so
+  # a player who never recorded one has no row -- and no opportunity to buy.
+  # A miss WITH production is a real name failure and must be looked at.
+  bad <- miss[!is.na(miss$fan_pts) & miss$fan_pts > 0, ]
+
+  cat(sprintf("\n=== FA %d -> matched %d (%.1f%%) | unmatched %d, of which %d scored 0\n",
+              nrow(fa), nrow(avail), 100 * nrow(avail) / nrow(fa),
+              nrow(miss), sum(miss$fan_pts == 0, na.rm = TRUE)))
+
+  if (nrow(bad)) {
+    warning(nrow(bad), " free agent(s) with production failed to join on name.")
+    cat("\n!!! NAME-JOIN FAILURES WITH PRODUCTION -- check these by hand\n")
+    cat("    (known class: short-form first names, e.g. Josh/Joshua Palmer,\n",
+        "    Kenny/Kenneth Gainwell. nflreadr and Yahoo disagree.)\n", sep = "")
+    print(bad[order(-bad$fan_pts), c("player", "pos", "nfl_team", "fan_pts",
+                                     "pct_rostered")], row.names = FALSE)
+  }
+
+  cat("\n=== TOP 20 FREE AGENTS BY OPPORTUNITY/GAME\n")
+  avail |> arrange(desc(opp_pg)) |> head(20) |>
+    transmute(player, pos, tm = nfl_team, opp_pg = round(opp_pg, 1),
+              snap = round(snap_pct, 2), fp_pg = round(fp_pg, 1),
+              trend = opp_trend, rost = pct_rostered, profile) |>
+    as.data.frame() |> print(row.names = FALSE)
+
+  cat("\n=== FA BUY list: top-quintile opportunity, results lagging\n")
+  b <- avail |> filter(profile == "BUY  volume, results lagging") |>
+    arrange(desc(opp_pg))
+  if (nrow(b)) {
+    b |> head(10) |>
+      transmute(player, pos, tm = nfl_team, opp_pg = round(opp_pg, 1),
+                snap = round(snap_pct, 2), fp_pg = round(fp_pg, 1),
+                eff_rel = round(eff_rel, 2), rost = pct_rostered) |>
+      as.data.frame() |> print(row.names = FALSE)
+  } else cat("  none\n")
+
+  write.csv(avail, "data/weekly/2026_week03_free_agents.csv", row.names = FALSE)
+  cat("\n-> data/weekly/2026_week03_free_agents.csv\n")
+}

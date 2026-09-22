@@ -149,11 +149,44 @@ His 2021-2025 record stands: 8+ target games in 2 of 78 career (2.6%), career ma
 
 ### D6. Waiver claim
 
-**Blocked on the Yahoo free-agent export.** Candidate pool is built and ranked by
-opportunity: `data/weekly/2026_week03_candidates.csv` (414 players, via
-`dev/weekly/week3_fa_pool.R`). Needs the FA list to filter to claimable names.
+**Not blocked. Ownership is already in the players manifest** — `roster_status` holds
+the owning team name, or `FA`. No separate export is needed; an earlier note claiming
+otherwise was wrong. `dev/weekly/week3_fa_pool.R` runs the whole thing:
+414-player pool -> `2026_week03_candidates.csv`, FA-filtered -> `2026_week03_free_agents.csv`.
 
-Weakest roster spots by Week 2 output: Robinson (1.40), Gainwell (3.00), Marks (6.00).
+**The manifest on disk is STALE — do not claim off it.** It shows **Kalif Raymond as
+`FA`**, but he was claimed before Week 2, and JGrahnasaurs shows 12 skill players where
+the roster holds 13. It predates that waiver clearing. Re-export before deciding, then:
+
+```r
+FF_MANIFEST=docs/uploads/week_3_data/week_3_players.csv Rscript dev/weekly/week3_fa_pool.R
+```
+
+Two limits inherited from how the manifest is built:
+- **QB/RB/WR/TE only** — it comes from the position pages, so there is no K or DST
+  ownership. Every team shows 11-13 of 15; the gap is exactly K + DST.
+- `pct_rostered` is **league-wide Yahoo ownership**, a market signal. `roster_status` is
+  *our* league. Do not confuse them.
+
+Name join is forced (no `gsis_id` in the manifest). Week 2 snapshot: **221 FA -> 156
+matched (70.6%)**. Of 65 misses, **61 scored zero** — expected, since the pool is built
+from stat lines and a player with no opportunity is not a waiver target. The script
+**warns loudly** on any miss *with* production; last run flagged 4, one material:
+**Joshua Palmer** (WR Buf, 9.9 pts) = `Josh Palmer` in nflreadr. Known class,
+short-form first names, same as Kenny/Kenneth Gainwell.
+
+Weakest roster spots by Week 2 output: **Robinson (1.40), Gainwell (3.00), Marks (6.00)**.
+Marks is buried behind a healthy David Montgomery in Houston; Gainwell behind Bucky
+Irving in Tampa. Both are handcuffs, not contributors.
+
+Stale-snapshot candidates, for shape only — **re-run before trusting**:
+
+| player | pos | team | opp/g | snap | fp/g | our-league | note |
+|---|---|---|---|---|---|---|---|
+| Tyler Allgeier | RB | Ari | 13.0 | 62% | 5.4 | FA | trend **-12**, role shrinking |
+| Emanuel Wilson | RB | Sea | 12.0 | 23% | 4.8 | FA | trend **+20**, role growing |
+| Devaughn Vele | WR | NO | 8.0 | **94%** | 12.6 | FA | best snap share on the list |
+| Tyler Shough | QB | NO | — | 100% | **23.8** | FA | QB1, 43% rostered |
 
 - **Call:** TBD
 - **Reason:** TBD
@@ -163,7 +196,8 @@ Weakest roster spots by Week 2 output: Robinson (1.40), Gainwell (3.00), Marks (
 
 ## Open at freeze time
 
-1. Yahoo free-agent export — not yet uploaded. Blocks D6.
+1. **Refreshed players manifest** — the one on disk is pre-Raymond-claim. Not a missing
+   file, a stale one. Export week 3's, then re-run `week3_fa_pool.R` with `FF_MANIFEST`.
 2. Injury report — pull `load_injuries(2026)` week 3 on Friday, re-check Sunday 11:30am.
 3. `proj` values — hand-enter from Yahoo at freeze. **Note Yahoo revises projections on
    inactive news within the day** (Adams moved 9.82 -> 12.32 in Week 2 once Nacua was
