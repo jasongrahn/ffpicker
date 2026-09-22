@@ -1,0 +1,423 @@
+player,pos,pos_eligible,nfl_team,status,opponent,home_away,kickoff,injury,status_col,updated,depth_chart,source_file
+Elijah Mitchell,RB,RB,KC,NA,Ind,home,Sun 8:20 pm,Undisclosed,Q,Sep 16 3:36 AM,KC,game-day-calls.txt
+Oscar Delp,TE,TE,NO,Q,Bal,away,Sun 1:00 pm,Hamstring,Q,Sep 16 3:36 AM,NO,game-day-calls.txt
+Kyler Murray,QB,QB,Min,Q,Chi,away,Sun 1:00 pm,Concussion,Q,Sep 16 3:36 AM,Min,game-day-calls.txt
+Sam Scott,RB,RB,NYJ,NA,GB,home,Sun 1:00 pm,Undisclosed,Q,Sep 16 3:36 AM,NYJ,game-day-calls.txt
+Quentin Moore,TE,TE,Was,NA,Dal,away,Sun 4:25 pm,Undisclosed,Q,Sep 16 3:36 AM,Was,game-day-calls.txt
+Tank Dell,WR,WR,Hou,IR-R,Cin,home,Sun 1:00 pm,Knee - ACL + MCL,IR-R,Sep 16 3:36 AM,Hou,game-day-calls.txt
+Josh Jacobs,RB,RB,GB,,NYJ,away,Sun 1:00 pm,Personal,CEL,Sep 16 3:36 AM,GB,game-day-calls.txt
+Marvin Mims Jr.,WR,WR,Den,Q,Jax,home,Sun 4:05 pm,Foot,Q,Sep 16 3:36 AM,Den,game-day-calls.txt
+Zach Charbonnet,RB,RB,Sea,P,Ari,away,Sun 4:25 pm,Knee - ACL,PUP-R,Sep 16 3:36 AM,Sea,game-day-calls.txt
+Jalen Walthall,WR,WR,NYJ,NA,GB,home,Sun 1:00 pm,Undisclosed,Q,Sep 16 3:36 AM,NYJ,game-day-calls.txt
+A.J. Brown,WR,WR,NE,IR,Pit,home,Sun 1:00 pm,Ankle,IR,Sep 16 3:36 AM,NE,game-day-calls.txt
+Luke Musgrave,TE,TE,GB,P,NYJ,away,Sun 1:00 pm,Neck,PUP-R,Sep 16 3:36 AM,GB,game-day-calls.txt
+Parris Campbell,WR,WR,Dal,NA,Was,home,Sun 4:25 pm,Undisclosed,RET,Sep 16 3:36 AM,Dal,game-day-calls.txt
+Chip Trayanum,RB,RB,NYJ,IR,GB,home,Sun 1:00 pm,Neck,IR,Sep 16 3:36 AM,NYJ,game-day-calls.txt
+Anthony Richardson Sr.,QB,QB,Ind,Q,KC,away,Sun 8:20 pm,Groin,Q,Sep 16 3:36 AM,Ind,game-day-calls.txt
+Zay Flowers,WR,WR,Bal,Q,NO,home,Sun 1:00 pm,Hamstring,Q,Sep 16 3:36 AM,Bal,game-day-calls.txt
+Desmond Reid,RB,RB,Buf,NA,Det,home,Thu 8:15 pm,Undisclosed,Q,Sep 16 3:36 AM,Buf,game-day-calls.txt
+Ja'Kobi Lane,WR,WR,Bal,IR,NO,home,Sun 1:00 pm,Wrist,IR,Sep 16 3:36 AM,Bal,game-day-calls.txt
+Chris Brazzell II,WR,WR,Car,IR,Atl,away,Sun 1:00 pm,Knee,IR,Sep 16 3:36 AM,Car,game-day-calls.txt
+Raheem Blackshear,RB,RB,Det,NA,Buf,away,Thu 8:15 pm,Undisclosed,Q,Sep 16 3:36 AM,Det,game-day-calls.txt
+Will Grier,QB,QB,Dal,NA,Was,home,Sun 4:25 pm,Personal,RET,Sep 16 3:36 AM,Dal,game-day-calls.txt
+Malik Davis,RB,RB,Dal,IR,Was,home,Sun 4:25 pm,Hip,IR,Sep 16 3:36 AM,Dal,game-day-calls.txt
+Dennis Houston,WR,WR,TB,NA,Cle,home,Sun 1:00 pm,Groin,Q,Sep 16 3:36 AM,TB,game-day-calls.txt
+Jalen Virgil,WR,WR,Ari,NA,Sea,home,Sun 4:25 pm,Undisclosed,Q,Sep 16 3:36 AM,Ari,game-day-calls.txt
+Jameson Geers,TE,TE,Ari,IR,Sea,home,Sun 4:25 pm,Undisclosed,IR,Sep 16 3:36 AM,Ari,game-day-calls.txt
+Eli Stowers,TE,TE,Phi,IR,Ten,away,Sun 1:00 pm,Hamstring,IR,Sep 16 3:36 AM,Phi,game-day-calls.txt
+Irv Charles,WR,WR,Sea,IR-R,Ari,away,Sun 4:25 pm,Undisclosed,IR-R,Sep 16 3:36 AM,Sea,game-day-calls.txt
+Kene Nwangwu,RB,RB,NYJ,Q,GB,home,Sun 1:00 pm,Back,Q,Sep 16 3:36 AM,NYJ,game-day-calls.txt
+Jeremiah Webb,WR,WR,NE,IR,Pit,home,Sun 1:00 pm,Arm,IR,Sep 16 3:36 AM,NE,game-day-calls.txt
+Squirrel White,WR,WR,Chi,NA,Min,home,Sun 1:00 pm,Personal,RET,Sep 16 3:36 AM,Chi,game-day-calls.txt
+Ben Sims,TE,TE,Mia,NA,SF,away,Sun 4:25 pm,Undisclosed,Q,Sep 16 3:36 AM,Mia,game-day-calls.txt
+Ja'Corey Brooks,WR,WR,Was,NA,Dal,away,Sun 4:25 pm,Undisclosed,Q,Sep 16 3:36 AM,Was,game-day-calls.txt
+Shane Zylstra,TE,TE,NE,NA,Pit,home,Sun 1:00 pm,Undisclosed,Q,Sep 16 3:36 AM,NE,game-day-calls.txt
+Lincoln Pare,RB,RB,Ind,NA,KC,away,Sun 8:20 pm,Undisclosed,Q,Sep 16 3:36 AM,Ind,game-day-calls.txt
+Christian Kirk,WR,WR,SF,IR-R,Mia,home,Sun 4:25 pm,Calf,IR-R,Sep 16 3:36 AM,SF,game-day-calls.txt
+Luke Wysong,WR,WR,Min,NA,Chi,away,Sun 1:00 pm,Undisclosed,Q,Sep 16 3:36 AM,Min,game-day-calls.txt
+Dalevon Campbell,WR,WR,LAC,NA,LV,home,Sun 4:05 pm,Leg,Q,Sep 16 3:36 AM,LAC,game-day-calls.txt
+Scott Matlock,RB,RB,LAC,IR-R,LV,home,Sun 4:05 pm,Undisclosed,IR-R,Sep 16 3:36 AM,LAC,game-day-calls.txt
+Carson Towt,TE,TE,Ind,IR,KC,away,Sun 8:20 pm,Undisclosed,IR,Sep 16 3:36 AM,Ind,game-day-calls.txt
+De'Zhaun Stribling,WR,WR,SF,O,Mia,home,Sun 4:25 pm,Ankle,O,Sep 16 3:36 AM,SF,game-day-calls.txt
+Damien Alford,WR,WR,NO,NA,Bal,away,Sun 1:00 pm,Undisclosed,Q,Sep 16 3:36 AM,NO,game-day-calls.txt
+Will Mallory,TE,TE,Ind,IR-R,KC,away,Sun 8:20 pm,Thumb,IR-R,Sep 16 3:36 AM,Ind,game-day-calls.txt
+Justin Shorter,WR,"WR,TE",LV,IR,LAC,away,Sun 4:05 pm,Undisclosed,IR,Sep 16 3:36 AM,LV,game-day-calls.txt
+Dan Chisena,WR,WR,Car,NA,Atl,away,Sun 1:00 pm,Undisclosed,Q,Sep 16 3:36 AM,Car,game-day-calls.txt
+Jordyn Tyson,WR,WR,NO,IR-R,Bal,away,Sun 1:00 pm,Hamstring,IR-R,Sep 16 3:36 AM,NO,game-day-calls.txt
+Ray-Ray McCloud III,WR,WR,Chi,NA,Min,home,Sun 1:00 pm,Undisclosed,Q,Sep 16 3:36 AM,Chi,game-day-calls.txt
+Cedrick Wilson Jr.,WR,WR,Det,NA,Buf,away,Thu 8:15 pm,Knee,Q,Sep 16 3:36 AM,Det,game-day-calls.txt
+Sincere Brown,WR,WR,LAC,NA,LV,home,Sun 4:05 pm,Undisclosed,Q,Sep 16 3:36 AM,LAC,game-day-calls.txt
+Omar Cooper Jr.,WR,WR,NYJ,Q,GB,home,Sun 1:00 pm,Ankle,Q,Sep 16 3:36 AM,NYJ,game-day-calls.txt
+Hayden Large,TE,TE,Chi,IR,Min,home,Sun 1:00 pm,Undisclosed,IR,Sep 16 3:36 AM,Chi,game-day-calls.txt
+Corey Rucker,WR,WR,LV,IR,LAC,away,Sun 4:05 pm,Undisclosed,IR,Sep 16 3:36 AM,LV,game-day-calls.txt
+Jake Tonges,TE,TE,SF,IR,Mia,home,Sun 4:25 pm,Knee - MCL,IR,Sep 16 3:36 AM,SF,game-day-calls.txt
+Caullin Lacy,WR,WR,NYJ,NA,GB,home,Sun 1:00 pm,Undisclosed,Q,Sep 16 3:36 AM,NYJ,game-day-calls.txt
+Sam Darnold,QB,QB,Sea,O,Ari,away,Sun 4:25 pm,Lower Body,O,Sep 16 3:36 AM,Sea,game-day-calls.txt
+Michael Pittman Jr.,WR,WR,Pit,Q,NE,away,Sun 1:00 pm,Foot,Q,Sep 16 3:36 AM,Pit,game-day-calls.txt
+Gunner Olszewski,WR,WR,NYG,IR,LAR,away,Mon 8:15 pm,Achilles,IR,Sep 16 3:36 AM,NYG,game-day-calls.txt
+Joe Burrow,QB,QB,Cin,Q,Hou,away,Sun 1:00 pm,Back,Q,Sep 16 3:36 AM,Cin,game-day-calls.txt
+Tua Tagovailoa,QB,QB,Atl,Q,Car,home,Sun 1:00 pm,Oblique,Q,Sep 16 3:36 AM,Atl,game-day-calls.txt
+Jermar Jefferson,RB,RB,Min,NA,Chi,away,Sun 1:00 pm,Undisclosed,Q,Sep 16 3:36 AM,Min,game-day-calls.txt
+Aaron Anderson,WR,WR,Cle,NA,TB,away,Sun 1:00 pm,Undisclosed,Q,Sep 16 3:36 AM,Cle,game-day-calls.txt
+Pierre Strong Jr.,RB,RB,GB,NA,NYJ,away,Sun 1:00 pm,Hamstring,Q,Sep 16 3:36 AM,GB,game-day-calls.txt
+DJ Rogers,TE,TE,Dal,IR,Was,home,Sun 4:25 pm,Knee,IR,Sep 16 3:36 AM,Dal,game-day-calls.txt
+Danny Gray,WR,WR,Phi,NA,Ten,away,Sun 1:00 pm,Undisclosed,Q,Sep 16 3:36 AM,Phi,game-day-calls.txt
+Brandon Aiyuk,WR,WR,SF,NA,Mia,home,Sun 4:25 pm,Knee - ACL + MCL,DNR,Sep 16 3:36 AM,SF,game-day-calls.txt
+Jaren Kanak,TE,TE,Ten,IR,Phi,home,Sun 1:00 pm,Pectoral,IR,Sep 16 3:36 AM,Ten,game-day-calls.txt
+D'Andre Swift,RB,RB,Chi,Q,Min,home,Sun 1:00 pm,Ankle,Q,Sep 16 3:36 AM,Chi,game-day-calls.txt
+Calvin Austin III,WR,WR,NYG,IR,LAR,away,Mon 8:15 pm,Knee,IR,Sep 16 3:36 AM,NYG,game-day-calls.txt
+Kenny Yeboah,TE,TE,Ari,NA,Sea,home,Sun 4:25 pm,Hamstring,Q,Sep 16 3:36 AM,Ari,game-day-calls.txt
+Matthew Caldwell,QB,QB,LAR,IR,NYG,home,Mon 8:15 pm,Undisclosed,IR,Sep 16 3:36 AM,LAR,game-day-calls.txt
+Jam Miller,RB,RB,NE,NA,Pit,home,Sun 1:00 pm,Undisclosed,Q,Sep 16 3:36 AM,NE,game-day-calls.txt
+RJ Maryland,TE,TE,GB,NA,NYJ,away,Sun 1:00 pm,Hamstring,Q,Sep 16 3:36 AM,GB,game-day-calls.txt
+Miles Kitselman,TE,TE,Det,NA,Buf,away,Thu 8:15 pm,Leg,Q,Sep 16 3:36 AM,Det,game-day-calls.txt
+Antonio Gibson,RB,RB,NE,NA,Pit,home,Sun 1:00 pm,Knee - ACL,Q,Sep 16 3:36 AM,NE,game-day-calls.txt
+Jeff Caldwell,WR,WR,KC,IR,Ind,home,Sun 8:20 pm,Knee,IR,Sep 16 3:36 AM,KC,game-day-calls.txt
+Nikola Kalinic,TE,TE,Chi,IR,Min,home,Sun 1:00 pm,Knee,IR,Sep 16 3:36 AM,Chi,game-day-calls.txt
+Harrison Bryant,TE,TE,Hou,NA,Cin,home,Sun 1:00 pm,Undisclosed,Q,Sep 16 3:36 AM,Hou,game-day-calls.txt
+Le'Veon Moss,RB,RB,Mia,NA,SF,away,Sun 4:25 pm,Undisclosed,RET,Sep 16 3:36 AM,Mia,game-day-calls.txt
+Gabe Davis,WR,WR,Buf,NA,Det,home,Thu 8:15 pm,Knee - ACL,Q,Sep 16 3:36 AM,Buf,game-day-calls.txt
+EJ Smith,RB,RB,KC,NA,Ind,home,Sun 8:20 pm,Undisclosed,Q,Sep 16 3:36 AM,KC,game-day-calls.txt
+John Michael Gyllenborg,TE,TE,KC,,Ind,home,Sun 8:20 pm,Knee,IR,Sep 16 3:36 AM,KC,game-day-calls.txt
+Chase Curtis,TE,TE,NYJ,NA,GB,home,Sun 1:00 pm,Knee,Q,Sep 16 3:36 AM,NYJ,game-day-calls.txt
+John FitzPatrick,TE,TE,GB,NA,NYJ,away,Sun 1:00 pm,Achilles,Q,Sep 16 3:36 AM,GB,game-day-calls.txt
+Jordan Mason,RB,RB,Min,IR,Chi,away,Sun 1:00 pm,Thumb,IR,Sep 16 3:36 AM,Min,game-day-calls.txt
+Joe Royer,TE,TE,Cle,,TB,away,Sun 1:00 pm,Personal,NFI-R,Sep 16 3:36 AM,Cle,game-day-calls.txt
+DT Sheffield,WR,WR,NYJ,NA,GB,home,Sun 1:00 pm,Undisclosed,Q,Sep 16 3:36 AM,NYJ,game-day-calls.txt
+Adam Randall,RB,RB,Bal,IR-R,NO,home,Sun 1:00 pm,Undisclosed,IR-R,Sep 16 3:36 AM,Bal,game-day-calls.txt
+Ty Johnson,RB,RB,Buf,Q,Det,home,Thu 8:15 pm,Hamstring,Q,Sep 16 3:36 AM,Buf,game-day-calls.txt
+Isiah Pacheco,RB,RB,Det,IR,Buf,away,Thu 8:15 pm,Back,IR,Sep 16 3:36 AM,Det,game-day-calls.txt
+Brittain Brown,RB,RB,Chi,IR,Min,home,Sun 1:00 pm,Undisclosed,IR,Sep 16 3:36 AM,Chi,game-day-calls.txt
+Skylar Thompson,QB,QB,Bal,IR,NO,home,Sun 1:00 pm,Undisclosed,IR,Sep 16 3:36 AM,Bal,game-day-calls.txt
+Chris Oladokun,QB,QB,KC,NA,Ind,home,Sun 8:20 pm,Undisclosed,Q,Sep 16 3:36 AM,KC,game-day-calls.txt
+Dominic Richardson,RB,RB,NYJ,NA,GB,home,Sun 1:00 pm,Undisclosed,Q,Sep 16 3:36 AM,NYJ,game-day-calls.txt
+Kendrick Law,WR,WR,Det,IR,Buf,away,Thu 8:15 pm,Knee - ACL,IR,Sep 16 3:36 AM,Det,game-day-calls.txt
+Chig Okonkwo,TE,TE,Was,Q,Dal,away,Sun 4:25 pm,Hamstring,Q,Sep 16 3:36 AM,Was,game-day-calls.txt
+Michael Woods II,WR,WR,Den,NA,Jax,home,Sun 4:05 pm,Leg,Q,Sep 16 3:36 AM,Den,game-day-calls.txt
+Jakobi Meyers,WR,WR,Jax,Q,Den,away,Sun 4:05 pm,Thumb,Q,Sep 16 3:36 AM,Jax,game-day-calls.txt
+Grant Calcaterra,TE,TE,Phi,IR-R,Ten,away,Sun 1:00 pm,Back,IR-R,Sep 16 3:36 AM,Phi,game-day-calls.txt
+D.J. Montgomery,WR,WR,Ind,IR,KC,away,Sun 8:20 pm,Abdomen,IR,Sep 16 3:36 AM,Ind,game-day-calls.txt
+Ashton Dulin,WR,WR,Ind,Q,KC,away,Sun 8:20 pm,Ankle,Q,Sep 16 3:36 AM,Ind,game-day-calls.txt
+Kejon Owens,RB,RB,Min,NA,Chi,away,Sun 1:00 pm,Illness,Q,Sep 16 3:36 AM,Min,game-day-calls.txt
+Ty Chandler,RB,RB,NO,IR,Bal,away,Sun 1:00 pm,Knee,IR,Sep 16 3:36 AM,NO,game-day-calls.txt
+David Sills V,WR,WR,TB,IR-R,Cle,home,Sun 1:00 pm,Undisclosed,IR-R,Sep 16 3:36 AM,TB,game-day-calls.txt
+Cole Turner,TE,TE,Mia,IR,SF,away,Sun 4:25 pm,Undisclosed,IR,Sep 16 3:36 AM,Mia,game-day-calls.txt
+Robbie Ouzts,RB,"RB,TE",Sea,IR,Ari,away,Sun 4:25 pm,Neck,IR,Sep 16 3:36 AM,Sea,game-day-calls.txt
+Chase Roberts,WR,WR,LV,NA,LAC,away,Sun 4:05 pm,Undisclosed,Q,Sep 16 3:36 AM,LV,game-day-calls.txt
+Jacoby Jones,WR,WR,Was,NA,Dal,away,Sun 4:25 pm,Undisclosed,Q,Sep 16 3:36 AM,Was,game-day-calls.txt
+Jimmy Holiday,WR,WR,KC,IR,Ind,home,Sun 8:20 pm,Undisclosed,IR,Sep 16 3:36 AM,KC,game-day-calls.txt
+Ben Yurosek,TE,TE,Min,IR,Chi,away,Sun 1:00 pm,Undisclosed,IR,Sep 16 3:36 AM,Min,game-day-calls.txt
+Beaux Collins,WR,WR,Atl,IR-R,Car,home,Sun 1:00 pm,Undisclosed,IR-R,Sep 16 3:36 AM,Atl,game-day-calls.txt
+Lawrence Keys,WR,WR,Buf,NA,Det,home,Thu 8:15 pm,Leg,Q,Sep 16 3:36 AM,Buf,game-day-calls.txt
+Chris Collier,RB,RB,LV,IR,LAC,away,Sun 4:05 pm,Undisclosed,IR,Sep 16 3:36 AM,LV,game-day-calls.txt
+Raheem Mostert,RB,RB,LV,NA,LAC,away,Sun 4:05 pm,Knee,Q,Sep 16 3:36 AM,LV,game-day-calls.txt
+Coleman Owen,WR,WR,Ind,NA,KC,away,Sun 8:20 pm,Concussion,Q,Sep 16 3:36 AM,Ind,game-day-calls.txt
+Jeshaun Jones,WR,WR,Min,SUSP,Chi,away,Sun 1:00 pm,Suspension,SUSP,Sep 16 3:36 AM,Min,game-day-calls.txt
+Xavier Weaver,WR,WR,Ari,NA,Sea,home,Sun 4:25 pm,Hamstring,Q,Sep 16 3:36 AM,Ari,game-day-calls.txt
+Mason Tipton,WR,WR,NO,P,Bal,away,Sun 1:00 pm,Leg,PUP-R,Sep 16 3:36 AM,NO,game-day-calls.txt
+Carter Bradley,QB,QB,Jax,NA,Den,away,Sun 4:05 pm,Thumb,Q,Sep 16 3:36 AM,Jax,game-day-calls.txt
+Johnny Wilson,WR,WR,Phi,IR,Ten,away,Sun 1:00 pm,Knee,IR,Sep 16 3:36 AM,Phi,game-day-calls.txt
+Trey Sermon,RB,RB,Atl,IR,Car,home,Sun 1:00 pm,Undisclosed,IR,Sep 16 3:36 AM,Atl,game-day-calls.txt
+Luke Grimm,WR,WR,LAC,NA,LV,home,Sun 4:05 pm,Undisclosed,Q,Sep 16 3:36 AM,LAC,game-day-calls.txt
+Da'Quan Felton,WR,WR,NYJ,NA,GB,home,Sun 1:00 pm,Undisclosed,Q,Sep 16 3:36 AM,NYJ,game-day-calls.txt
+Tanner McLachlan,TE,TE,SF,NA,Mia,home,Sun 4:25 pm,Undisclosed,Q,Sep 16 3:36 AM,SF,game-day-calls.txt
+Connor Hulstein,TE,TE,NYJ,NA,GB,home,Sun 1:00 pm,Undisclosed,Q,Sep 16 3:36 AM,NYJ,game-day-calls.txt
+Ja'Quinden Jackson,RB,RB,Phi,NA,Ten,away,Sun 1:00 pm,Undisclosed,Q,Sep 16 3:36 AM,Phi,game-day-calls.txt
+Tyrone Tracy Jr.,RB,RB,NYG,Q,LAR,away,Mon 8:15 pm,Illness,Q,Sep 16 3:36 AM,NYG,game-day-calls.txt
+Ainias Smith,WR,WR,Car,NA,Atl,away,Sun 1:00 pm,Undisclosed,Q,Sep 16 3:36 AM,Car,game-day-calls.txt
+Carter Runyon,TE,TE,LV,IR-R,LAC,away,Sun 4:05 pm,Undisclosed,IR-R,Sep 16 3:36 AM,LV,game-day-calls.txt
+Audric Estime,RB,RB,NO,IR,Bal,away,Sun 1:00 pm,Thigh,IR,Sep 16 3:36 AM,NO,game-day-calls.txt
+Jamari Thrash,WR,WR,Cle,NA,TB,away,Sun 1:00 pm,Undisclosed,Q,Sep 16 3:36 AM,Cle,game-day-calls.txt
+Patrick Taylor Jr.,RB,RB,SF,NA,Mia,home,Sun 4:25 pm,Undisclosed,Q,Sep 16 3:36 AM,SF,game-day-calls.txt
+Jalen Coker,WR,WR,Car,Q,Atl,away,Sun 1:00 pm,Ankle,Q,Sep 16 3:36 AM,Car,game-day-calls.txt
+McCallan Castles,TE,TE,GB,NA,NYJ,away,Sun 1:00 pm,Undisclosed,Q,Sep 16 3:36 AM,GB,game-day-calls.txt
+Isaac Guerendo,RB,RB,SF,P,Mia,home,Sun 4:25 pm,Pectoral,PUP-R,Sep 16 3:36 AM,SF,game-day-calls.txt
+LeQuint Allen Jr.,RB,RB,Jax,Q,Den,away,Sun 4:05 pm,Hip,Q,Sep 16 3:36 AM,Jax,game-day-calls.txt
+Tory Horton,WR,WR,Sea,Q,Ari,away,Sun 4:25 pm,Hamstring,Q,Sep 16 3:36 AM,Sea,game-day-calls.txt
+KeAndre Lambert-Smith,WR,WR,LAC,IR,LV,home,Sun 4:05 pm,Hamstring,IR,Sep 16 3:36 AM,LAC,game-day-calls.txt
+Devin Neal,RB,RB,NO,NA,Bal,away,Sun 1:00 pm,Hamstring,Q,Sep 16 3:36 AM,NO,game-day-calls.txt
+Jaylin Lane,WR,WR,Was,Q,Dal,away,Sun 4:25 pm,Groin,Q,Sep 16 3:36 AM,Was,game-day-calls.txt
+Graham Mertz,QB,QB,Hou,IR,Cin,home,Sun 1:00 pm,Knee - ACL,IR,Sep 16 3:36 AM,Hou,game-day-calls.txt
+Trevor Etienne,RB,RB,Car,IR-R,Atl,away,Sun 1:00 pm,Ankle,IR-R,Sep 16 3:36 AM,Car,game-day-calls.txt
+Dylan Sampson,RB,RB,Cle,IR,TB,away,Sun 1:00 pm,Knee,IR,Sep 16 3:36 AM,Cle,game-day-calls.txt
+Dont'e Thornton Jr.,WR,WR,LV,IR,LAC,away,Sun 4:05 pm,Undisclosed,IR,Sep 16 3:36 AM,LV,game-day-calls.txt
+Dillon Gabriel,QB,QB,Cle,IR-R,TB,away,Sun 1:00 pm,Back,IR-R,Sep 16 3:36 AM,Cle,game-day-calls.txt
+Moliki Matavao,TE,TE,NO,IR,Bal,away,Sun 1:00 pm,Knee,IR,Sep 16 3:36 AM,NO,game-day-calls.txt
+Savion Williams,WR,WR,GB,IR-R,NYJ,away,Sun 1:00 pm,Ankle,IR-R,Sep 16 3:36 AM,GB,game-day-calls.txt
+Thomas Yassmin,TE,TE,GB,IR,NYJ,away,Sun 1:00 pm,Undisclosed,IR,Sep 16 3:36 AM,GB,game-day-calls.txt
+RJ Harvey,RB,RB,Den,Q,Jax,home,Sun 4:05 pm,Hamstring,Q,Sep 16 3:36 AM,Den,game-day-calls.txt
+Teddy Bridgewater,QB,QB,TB,NA,Cle,home,Sun 1:00 pm,Undisclosed,RET,Sep 16 3:36 AM,TB,game-day-calls.txt
+Jayden Higgins,WR,WR,Hou,IR,Cin,home,Sun 1:00 pm,Knee - ACL,IR,Sep 16 3:36 AM,Hou,game-day-calls.txt
+Kyle Monangai,RB,RB,Chi,Q,Min,home,Sun 1:00 pm,Hamstring,Q,Sep 16 3:36 AM,Chi,game-day-calls.txt
+Caleb Lohner,TE,TE,Den,IR-R,Jax,home,Sun 4:05 pm,Lower Body,IR-R,Sep 16 3:36 AM,Den,game-day-calls.txt
+Terrell Jennings,RB,RB,NE,NA,Pit,home,Sun 1:00 pm,Undisclosed,Q,Sep 16 3:36 AM,NE,game-day-calls.txt
+Brenden Bates,TE,TE,Cle,NA,TB,away,Sun 1:00 pm,Undisclosed,Q,Sep 16 3:36 AM,Cle,game-day-calls.txt
+Alex Bullock,WR,WR,Jax,NA,Den,away,Sun 4:05 pm,Undisclosed,RET,Sep 16 3:36 AM,Jax,game-day-calls.txt
+Luke Lachey,TE,TE,Hou,NA,Cin,home,Sun 1:00 pm,Foot,Q,Sep 16 3:36 AM,Hou,game-day-calls.txt
+Cole Burgess,WR,WR,Pit,IR,NE,away,Sun 1:00 pm,Undisclosed,IR,Sep 16 3:36 AM,Pit,game-day-calls.txt
+Malick Meiga,WR,WR,Car,NA,Atl,away,Sun 1:00 pm,Undisclosed,Q,Sep 16 3:36 AM,Car,game-day-calls.txt
+Tyreek Hill,WR,WR,Mia,NA,SF,away,Sun 4:25 pm,Knee - ACL,O,Sep 16 3:36 AM,Mia,game-day-calls.txt
+Kye Robichaux,RB,RB,Det,NA,Buf,away,Thu 8:15 pm,Foot,Q,Sep 16 3:36 AM,Det,game-day-calls.txt
+Tyrell Shavers,WR,WR,Buf,P,Det,home,Thu 8:15 pm,Knee - ACL,PUP-R,Sep 16 3:36 AM,Buf,game-day-calls.txt
+Jeremy McNichols,RB,RB,Was,IR-R,Dal,away,Sun 4:25 pm,Quadriceps,IR-R,Sep 16 3:36 AM,Was,game-day-calls.txt
+Brian Thomas Jr.,WR,WR,Jax,Q,Den,away,Sun 4:05 pm,Shoulder,Q,Sep 16 3:36 AM,Jax,game-day-calls.txt
+Brock Bowers,TE,TE,LV,Q,LAC,away,Sun 4:05 pm,Knee - Meniscus,Q,Sep 16 3:36 AM,LV,game-day-calls.txt
+Gee Scott,WR,WR,NE,NA,Pit,home,Sun 1:00 pm,Undisclosed,Q,Sep 16 3:36 AM,NE,game-day-calls.txt
+Dante Miller,RB,RB,NYG,NA,LAR,away,Mon 8:15 pm,Groin,Q,Sep 16 3:36 AM,NYG,game-day-calls.txt
+Sean McKeon,TE,TE,Ind,NA,KC,away,Sun 8:20 pm,Undisclosed,Q,Sep 16 3:36 AM,Ind,game-day-calls.txt
+Princeton Fant,TE,TE,Dal,IR,Was,home,Sun 4:25 pm,Knee - ACL + MCL,IR,Sep 16 3:36 AM,Dal,game-day-calls.txt
+Mario Williams,WR,WR,LAR,NA,NYG,home,Mon 8:15 pm,Undisclosed,Q,Sep 16 3:36 AM,LAR,game-day-calls.txt
+Tyrone Broden,WR,WR,Sea,NA,Ari,away,Sun 4:25 pm,Undisclosed,Q,Sep 16 3:36 AM,Sea,game-day-calls.txt
+Tim Patrick,WR,WR,NYJ,IR,GB,home,Sun 1:00 pm,Groin,IR,Sep 16 3:36 AM,NYJ,game-day-calls.txt
+George Kittle,TE,TE,SF,Q,Mia,home,Sun 4:25 pm,Achilles,Q,Sep 16 3:36 AM,SF,game-day-calls.txt
+Julian Hill,TE,TE,NE,IR,Pit,home,Sun 1:00 pm,Knee,IR,Sep 16 3:36 AM,NE,game-day-calls.txt
+Ben Sauls,K,K,NYG,NA,LAR,away,Mon 8:15 pm,Undisclosed,Q,Sep 16 3:36 AM,NYG,game-day-calls.txt
+Anthony Firkser,TE,TE,Det,NA,Buf,away,Thu 8:15 pm,Leg,Q,Sep 16 3:36 AM,Det,game-day-calls.txt
+Bryce Ford-Wheaton,WR,WR,NYG,NA,LAR,away,Mon 8:15 pm,Achilles,Q,Sep 16 3:36 AM,NYG,game-day-calls.txt
+Le'Meke Brockington,WR,WR,Atl,NA,Car,home,Sun 1:00 pm,Undisclosed,Q,Sep 16 3:36 AM,Atl,game-day-calls.txt
+Jimmy Kibble,WR,WR,NE,NA,Pit,home,Sun 1:00 pm,Undisclosed,Q,Sep 16 3:36 AM,NE,game-day-calls.txt
+Jake Bobo,WR,WR,Sea,IR,Ari,away,Sun 4:25 pm,Knee,IR,Sep 16 3:36 AM,Sea,game-day-calls.txt
+Myles Montgomery,RB,RB,NE,IR,Pit,home,Sun 1:00 pm,Undisclosed,IR,Sep 16 3:36 AM,NE,game-day-calls.txt
+River Cracraft,WR,WR,Was,NA,Dal,away,Sun 4:25 pm,Undisclosed,Q,Sep 16 3:36 AM,Was,game-day-calls.txt
+Michael Penix Jr.,QB,QB,Atl,Q,Car,home,Sun 1:00 pm,Knee - ACL,Q,Sep 16 3:36 AM,Atl,game-day-calls.txt
+Zane Gonzalez,K,K,Mia,NA,SF,away,Sun 4:25 pm,Undisclosed,Q,Sep 16 3:36 AM,Mia,game-day-calls.txt
+Kadarius Calloway,RB,RB,TB,NA,Cle,home,Sun 1:00 pm,Undisclosed,Q,Sep 16 3:36 AM,TB,game-day-calls.txt
+Ladd McConkey,WR,WR,LAC,Q,LV,home,Sun 4:05 pm,Ribs,Q,Sep 16 3:36 AM,LAC,game-day-calls.txt
+Dontae Fleming,WR,WR,Min,NA,Chi,away,Sun 1:00 pm,Undisclosed,Q,Sep 16 3:36 AM,Min,game-day-calls.txt
+Tip Reiman,TE,TE,Ari,P,Sea,home,Sun 4:25 pm,Ankle,PUP-R,Sep 16 3:36 AM,Ari,game-day-calls.txt
+Trey Benson,RB,RB,Ari,IR,Sea,home,Sun 4:25 pm,Knee,IR,Sep 16 3:36 AM,Ari,game-day-calls.txt
+Kyron Hudson,WR,WR,Chi,NA,Min,home,Sun 1:00 pm,Undisclosed,Q,Sep 16 3:36 AM,Chi,game-day-calls.txt
+Bryson Nesbit,TE,TE,Min,NA,Chi,away,Sun 1:00 pm,Undisclosed,Q,Sep 16 3:36 AM,Min,game-day-calls.txt
+Joe Mixon,RB,RB,Hou,O,Cin,home,Sun 1:00 pm,Foot,O,Sep 16 3:36 AM,Hou,game-day-calls.txt
+Ja'Lynn Polk,WR,WR,NO,NA,Bal,away,Sun 1:00 pm,Undisclosed,RET,Sep 16 3:36 AM,NO,game-day-calls.txt
+DJ Turner,WR,WR,LV,NA,LAC,away,Sun 4:05 pm,Undisclosed,Q,Sep 16 3:36 AM,LV,game-day-calls.txt
+Nico Collins,WR,WR,Hou,Q,Cin,home,Sun 1:00 pm,Hamstring,Q,Sep 16 3:36 AM,Hou,game-day-calls.txt
+Brock Rechsteiner,WR,WR,NO,SUSP,Bal,away,Sun 1:00 pm,Suspension,SUSP,Sep 16 3:36 AM,NO,game-day-calls.txt
+James Conner,RB,RB,Ari,IR-R,Sea,home,Sun 4:25 pm,Foot,IR-R,Sep 16 3:36 AM,Ari,game-day-calls.txt
+Juwan Johnson,TE,TE,NO,Q,Bal,away,Sun 1:00 pm,Illness,Q,Sep 16 3:36 AM,NO,game-day-calls.txt
+Ricky Pearsall,WR,WR,SF,IR,Mia,home,Sun 4:25 pm,Knee - PCL,IR,Sep 16 3:36 AM,SF,game-day-calls.txt
+Derius Davis,WR,WR,LAC,,LV,home,Sun 4:05 pm,,,Sep 16 3:31 AM,LAC,game-day-calls.txt
+Devontez Walker,WR,WR,Bal,,NO,home,Sun 1:00 pm,,,Sep 16 2:46 AM,Bal,game-day-calls.txt
+Sean Tucker,RB,RB,TB,,Cle,home,Sun 1:00 pm,,,Sep 16 2:31 AM,TB,game-day-calls.txt
+Josh Whyle,TE,TE,GB,,NYJ,away,Sun 1:00 pm,,,Sep 16 2:16 AM,GB,game-day-calls.txt
+Alvin Kamara,RB,RB,NO,,Bal,away,Sun 1:00 pm,,,Sep 16 1:56 AM,NO,game-day-calls.txt
+Alec Pierce,WR,WR,Ind,,KC,away,Sun 8:20 pm,,,Sep 16 1:46 AM,Ind,game-day-calls.txt
+TreVeyon Henderson,RB,RB,NE,,Pit,home,Sun 1:00 pm,,,Sep 16 1:31 AM,NE,game-day-calls.txt
+Tyson Bagent,QB,QB,Chi,,Min,home,Sun 1:00 pm,,,Sep 16 1:21 AM,Chi,game-day-calls.txt
+Jalen McMillan,WR,WR,TB,,Cle,home,Sun 1:00 pm,,,Sep 15 10:41 PM,TB,game-day-calls.txt
+JuJu Smith-Schuster,WR,WR,NYG,NA,LAR,away,Mon 8:15 pm,,,Sep 15 6:26 AM,NYG,game-day-calls.txt
+Jerome Ford,RB,RB,Was,NA,Dal,away,Sun 4:25 pm,,,Sep 15 4:31 AM,Was,game-day-calls.txt
+Sam Ehlinger,QB,QB,Den,,Jax,home,Sun 4:05 pm,,,Sep 14 8:41 PM,Den,game-day-calls.txt
+Dallen Bentley,TE,TE,Den,,Jax,home,Sun 4:05 pm,,,Sep 14 8:41 PM,Den,game-day-calls.txt
+Tyler Badie,RB,RB,Den,,Jax,home,Sun 4:05 pm,,,Sep 14 8:41 PM,Den,game-day-calls.txt
+Garrett Nussmeier,QB,QB,KC,,Ind,home,Sun 8:20 pm,,,Sep 14 8:36 PM,KC,game-day-calls.txt
+Jared Wiley,TE,TE,KC,,Ind,home,Sun 8:20 pm,,,Sep 14 8:36 PM,KC,game-day-calls.txt
+Davis Allen,TE,TE,LAR,,NYG,home,Mon 8:15 pm,,,Sep 13 9:36 PM,LAR,game-day-calls.txt
+Luke McCaffrey,WR,WR,Was,,Dal,away,Sun 4:25 pm,,,Sep 13 8:26 PM,Was,game-day-calls.txt
+Treylon Burks,WR,WR,Was,,Dal,away,Sun 4:25 pm,,,Sep 13 8:26 PM,Was,game-day-calls.txt
+Jordan James,RB,RB,SF,,Mia,home,Sun 4:25 pm,,,Sep 13 8:26 PM,SF,game-day-calls.txt
+Nick Kallerup,TE,TE,Sea,,Ari,away,Sun 4:25 pm,,,Sep 13 8:26 PM,Sea,game-day-calls.txt
+Jalen Milroe,QB,QB,Sea,,Ari,away,Sun 4:25 pm,,,Sep 13 8:26 PM,Sea,game-day-calls.txt
+Jordan Watkins,WR,WR,SF,,Mia,home,Sun 4:25 pm,,,Sep 13 8:26 PM,SF,game-day-calls.txt
+Nicholas Singleton,RB,RB,Ten,,Phi,home,Sun 1:00 pm,,,Sep 13 8:26 PM,Ten,game-day-calls.txt
+Will Howard,QB,QB,Pit,,NE,away,Sun 1:00 pm,,,Sep 13 8:26 PM,Pit,game-day-calls.txt
+Athan Kaliakmanis,QB,QB,Was,,Dal,away,Sun 4:25 pm,,,Sep 13 8:26 PM,Was,game-day-calls.txt
+Kurtis Rourke,QB,QB,SF,,Mia,home,Sun 4:25 pm,,,Sep 13 8:26 PM,SF,game-day-calls.txt
+Drew Allar,QB,QB,Pit,,NE,away,Sun 1:00 pm,,,Sep 13 8:26 PM,Pit,game-day-calls.txt
+Tutu Atwell,WR,WR,LAR,,NYG,home,Mon 8:15 pm,,,Sep 13 8:21 PM,LAR,game-day-calls.txt
+Elijah Moore,WR,WR,Phi,,Ten,away,Sun 1:00 pm,,,Sep 13 8:21 PM,Phi,game-day-calls.txt
+Max Klare,TE,TE,LAR,,NYG,home,Mon 8:15 pm,,,Sep 13 8:21 PM,LAR,game-day-calls.txt
+Najee Harris,RB,RB,NYG,,LAR,away,Mon 8:15 pm,,,Sep 13 8:21 PM,NYG,game-day-calls.txt
+Behren Morton,QB,QB,NE,,Pit,home,Sun 1:00 pm,,,Sep 13 8:21 PM,NE,game-day-calls.txt
+Ty Simpson,QB,QB,LAR,,NYG,home,Mon 8:15 pm,,,Sep 13 8:21 PM,LAR,game-day-calls.txt
+Thomas Fidone II,TE,TE,NYG,,LAR,away,Mon 8:15 pm,,,Sep 13 8:21 PM,NYG,game-day-calls.txt
+Dalen Cambre,WR,WR,NYG,NA,LAR,away,Mon 8:15 pm,,,Sep 13 8:21 PM,NYG,game-day-calls.txt
+Brady Cook,QB,QB,Mia,,SF,away,Sun 4:25 pm,,,Sep 13 8:21 PM,Mia,game-day-calls.txt
+J.J. McCarthy,QB,QB,Min,,Chi,away,Sun 1:00 pm,,,Sep 13 8:21 PM,Min,game-day-calls.txt
+Efton Chism III,WR,WR,NE,,Pit,home,Sun 1:00 pm,,,Sep 13 8:21 PM,NE,game-day-calls.txt
+Blake Grupe,K,K,NYJ,,GB,home,Sun 1:00 pm,,,Sep 13 8:21 PM,NYJ,game-day-calls.txt
+Tanner McKee,QB,QB,Phi,,Ten,away,Sun 1:00 pm,,,Sep 13 8:21 PM,Phi,game-day-calls.txt
+Jalen Tolbert,WR,WR,Mia,,SF,away,Sun 4:25 pm,,,Sep 13 8:21 PM,Mia,game-day-calls.txt
+Zach Wilson,QB,QB,NO,,Bal,away,Sun 1:00 pm,,,Sep 13 8:21 PM,NO,game-day-calls.txt
+Aidan O'Connell,QB,QB,LV,,LAC,away,Sun 4:05 pm,,,Sep 13 8:21 PM,LV,game-day-calls.txt
+Justin Joly,TE,TE,Mia,,SF,away,Sun 4:25 pm,,,Sep 13 8:21 PM,Mia,game-day-calls.txt
+Cole Payton,QB,QB,Phi,,Ten,away,Sun 1:00 pm,,,Sep 13 8:21 PM,Phi,game-day-calls.txt
+CJ Daniels,WR,WR,LAR,,NYG,home,Mon 8:15 pm,,,Sep 13 8:21 PM,LAR,game-day-calls.txt
+Demond Claiborne,RB,RB,Min,,Chi,away,Sun 1:00 pm,,,Sep 13 8:21 PM,Min,game-day-calls.txt
+Brevin Jordan,TE,TE,Hou,,Cin,home,Sun 1:00 pm,,,Sep 13 8:16 PM,Hou,game-day-calls.txt
+Tanner Koziol,TE,TE,Jax,,Den,away,Sun 4:05 pm,,,Sep 13 8:16 PM,Jax,game-day-calls.txt
+Ke'Shawn Williams,WR,WR,Cin,,Hou,away,Sun 1:00 pm,,,Sep 13 8:16 PM,Cin,game-day-calls.txt
+Taylen Green,QB,QB,Cle,,TB,away,Sun 1:00 pm,,,Sep 13 8:16 PM,Cle,game-day-calls.txt
+Quinn Ewers,QB,QB,Jax,,Den,away,Sun 4:05 pm,,,Sep 13 8:16 PM,Jax,game-day-calls.txt
+Jack Endries,TE,TE,Cin,,Hou,away,Sun 1:00 pm,,,Sep 13 8:16 PM,Cin,game-day-calls.txt
+DJ Giddens,RB,RB,Ind,,KC,away,Sun 8:20 pm,,,Sep 13 8:16 PM,Ind,game-day-calls.txt
+Israel Abanikanda,RB,RB,Dal,NA,Was,home,Sun 4:25 pm,,,Sep 13 8:16 PM,Dal,game-day-calls.txt
+Riley Leonard,QB,QB,Ind,,KC,away,Sun 8:20 pm,,,Sep 13 8:16 PM,Ind,game-day-calls.txt
+Camden Brown,WR,WR,Dal,,Was,home,Sun 4:25 pm,,,Sep 13 8:16 PM,Dal,game-day-calls.txt
+J. Michael Sturdivant,WR,WR,GB,,NYJ,away,Sun 1:00 pm,,,Sep 13 8:16 PM,GB,game-day-calls.txt
+Elijah Sarratt,WR,WR,Bal,,NO,home,Sun 1:00 pm,,,Sep 13 8:11 PM,Bal,game-day-calls.txt
+Ja'Tavion Sanders,TE,TE,Car,,Atl,away,Sun 1:00 pm,,,Sep 13 8:11 PM,Car,game-day-calls.txt
+Skyler Bell,WR,WR,Buf,,Det,home,Thu 8:15 pm,,,Sep 13 8:11 PM,Buf,game-day-calls.txt
+Joe Fagnano,QB,QB,Bal,,NO,home,Sun 1:00 pm,,,Sep 13 8:11 PM,Bal,game-day-calls.txt
+Haynes King,QB,QB,Car,,Atl,away,Sun 1:00 pm,,,Sep 13 8:11 PM,Car,game-day-calls.txt
+John Metchie III,WR,WR,Car,,Atl,away,Sun 1:00 pm,,,Sep 13 8:11 PM,Car,game-day-calls.txt
+Miller Moss,QB,QB,Chi,NA,Min,home,Sun 1:00 pm,,,Sep 13 8:11 PM,Chi,game-day-calls.txt
+Reggie Virgil,WR,WR,Ari,,Sea,home,Sun 4:25 pm,,,Sep 13 8:06 PM,Ari,game-day-calls.txt
+Carson Beck,QB,QB,Ari,,Sea,home,Sun 4:25 pm,,,Sep 13 8:06 PM,Ari,game-day-calls.txt
+Bo Melton,WR,WR,GB,,NYJ,away,Sun 1:00 pm,,,Sep 13 4:31 AM,GB,game-day-calls.txt
+Malik Nabers,WR,WR,NYG,,LAR,away,Mon 8:15 pm,,,Sep 13 3:56 AM,NYG,game-day-calls.txt
+Jeremiyah Love,RB,RB,Ari,,Sea,home,Sun 4:25 pm,,,Sep 13 12:06 AM,Ari,game-day-calls.txt
+Rome Odunze,WR,WR,Chi,,Min,home,Sun 1:00 pm,,,Sep 12 8:36 PM,Chi,game-day-calls.txt
+Cooper Rush,QB,QB,Atl,,Car,home,Sun 1:00 pm,,,Sep 12 6:06 PM,Atl,game-day-calls.txt
+Brenen Thompson,WR,WR,LAC,,LV,home,Sun 4:05 pm,,,Sep 11 2:51 AM,LAC,game-day-calls.txt
+Keaton Mitchell,RB,RB,LAC,,LV,home,Sun 4:05 pm,,,Sep 11 2:51 AM,LAC,game-day-calls.txt
+Will Kacmarek,TE,TE,Mia,,SF,away,Sun 4:25 pm,,,Sep 11 1:11 AM,Mia,game-day-calls.txt
+Zachariah Branch,WR,WR,Atl,,Car,home,Sun 1:00 pm,,,Sep 10 11:06 PM,Atl,game-day-calls.txt
+Jonathon Brooks,RB,RB,Car,,Atl,away,Sun 1:00 pm,,,Sep 10 10:21 PM,Car,game-day-calls.txt
+Jacory Croskey-Merritt,RB,RB,Was,,Dal,away,Sun 4:25 pm,,,Sep 10 10:21 PM,Was,game-day-calls.txt
+Patrick Mahomes,QB,QB,KC,,Ind,home,Sun 8:20 pm,,,Sep 10 2:06 AM,KC,game-day-calls.txt
+Drew Ogletree,TE,TE,Ind,,KC,away,Sun 8:20 pm,,,Sep 10 1:06 AM,Ind,game-day-calls.txt
+Kyle Juszczyk,RB,RB,SF,,Mia,home,Sun 4:25 pm,,,Sep 9 9:41 AM,SF,game-day-calls.txt
+Ollie Gordon II,RB,RB,Mia,,SF,away,Sun 4:25 pm,,,Sep 9 6:06 AM,Mia,game-day-calls.txt
+British Brooks,RB,RB,Hou,,Cin,home,Sun 1:00 pm,,,Sep 9 5:06 AM,Hou,game-day-calls.txt
+Joshua Pitsenberger,RB,RB,Hou,NA,Cin,home,Sun 1:00 pm,,,Sep 9 5:06 AM,Hou,game-day-calls.txt
+Cameron Dicker,K,K,LAC,,LV,home,Sun 4:05 pm,,,Sep 9 4:26 AM,LAC,game-day-calls.txt
+Marcus Mariota,QB,QB,Was,,Dal,away,Sun 4:25 pm,,,Sep 9 3:21 AM,Was,game-day-calls.txt
+John Bates,TE,TE,Was,,Dal,away,Sun 4:25 pm,,,Sep 9 3:21 AM,Was,game-day-calls.txt
+Ben Sinnott,TE,TE,Was,,Dal,away,Sun 4:25 pm,,,Sep 9 3:21 AM,Was,game-day-calls.txt
+Kendre Miller,RB,RB,NO,,Bal,away,Sun 1:00 pm,,,Sep 9 3:16 AM,NO,game-day-calls.txt
+Ashton Jeanty,RB,RB,LV,,LAC,away,Sun 4:05 pm,,,Sep 9 3:06 AM,LV,game-day-calls.txt
+Jaylin Noel,WR,WR,Hou,,Cin,home,Sun 1:00 pm,,,Sep 9 2:56 AM,Hou,game-day-calls.txt
+Tre' Harris,WR,WR,LAC,,LV,home,Sun 4:05 pm,,,Sep 9 2:56 AM,LAC,game-day-calls.txt
+Rachaad White,RB,RB,Was,,Dal,away,Sun 4:25 pm,,,Sep 9 2:46 AM,Was,game-day-calls.txt
+Tucker Kraft,TE,TE,GB,,NYJ,away,Sun 1:00 pm,,,Sep 9 2:41 AM,GB,game-day-calls.txt
+Keon Coleman,WR,WR,Buf,,Det,home,Thu 8:15 pm,,,Sep 9 2:36 AM,Buf,game-day-calls.txt
+Khalil Shakir,WR,WR,Buf,,Det,home,Thu 8:15 pm,,,Sep 9 2:36 AM,Buf,game-day-calls.txt
+Emeka Egbuka,WR,WR,TB,,Cle,home,Sun 1:00 pm,,,Sep 9 2:06 AM,TB,game-day-calls.txt
+Ja'Marr Chase,WR,WR,Cin,,Hou,away,Sun 1:00 pm,,,Sep 9 1:56 AM,Cin,game-day-calls.txt
+Tee Higgins,WR,WR,Cin,,Hou,away,Sun 1:00 pm,,,Sep 9 1:56 AM,Cin,game-day-calls.txt
+Josh Downs,WR,WR,Ind,,KC,away,Sun 8:20 pm,,,Sep 9 1:41 AM,Ind,game-day-calls.txt
+Ben Skowronek,WR,WR,Pit,,NE,away,Sun 1:00 pm,,,Sep 9 1:41 AM,Pit,game-day-calls.txt
+DK Metcalf,WR,WR,Pit,,NE,away,Sun 1:00 pm,,,Sep 9 1:36 AM,Pit,game-day-calls.txt
+Wan'Dale Robinson,WR,WR,Ten,,Phi,home,Sun 1:00 pm,,,Sep 9 1:31 AM,Ten,game-day-calls.txt
+Mitchell Trubisky,QB,QB,Ten,,Phi,home,Sun 1:00 pm,,,Sep 9 1:31 AM,Ten,game-day-calls.txt
+Carnell Tate,WR,WR,Ten,,Phi,home,Sun 1:00 pm,,,Sep 9 1:31 AM,Ten,game-day-calls.txt
+Theo Johnson,TE,TE,NYG,,LAR,away,Mon 8:15 pm,,,Sep 9 1:26 AM,NYG,game-day-calls.txt
+Tyler Warren,TE,TE,Ind,,KC,away,Sun 8:20 pm,,,Sep 9 1:26 AM,Ind,game-day-calls.txt
+Bhayshul Tuten,RB,RB,Jax,,Den,away,Sun 4:05 pm,,,Sep 9 1:26 AM,Jax,game-day-calls.txt
+Luther Burden III,WR,WR,Chi,,Min,home,Sun 1:00 pm,,,Sep 9 1:16 AM,Chi,game-day-calls.txt
+Breece Hall,RB,RB,NYJ,,GB,home,Sun 1:00 pm,,,Sep 9 1:16 AM,NYJ,game-day-calls.txt
+Isaiah Davis,RB,RB,NYJ,,GB,home,Sun 1:00 pm,,,Sep 9 1:16 AM,NYJ,game-day-calls.txt
+Kenyon Sadiq,TE,TE,NYJ,,GB,home,Sun 1:00 pm,,,Sep 9 1:16 AM,NYJ,game-day-calls.txt
+Sam LaPorta,TE,TE,Det,,Buf,away,Thu 8:15 pm,,,Sep 9 1:06 AM,Det,game-day-calls.txt
+Xavier Legette,WR,WR,Car,,Atl,away,Sun 1:00 pm,,,Sep 9 12:46 AM,Car,game-day-calls.txt
+Chuba Hubbard,RB,RB,Car,,Atl,away,Sun 1:00 pm,,,Sep 9 12:41 AM,Car,game-day-calls.txt
+Jacob Cowing,WR,WR,SF,,Mia,home,Sun 4:25 pm,,,Sep 8 5:06 AM,SF,game-day-calls.txt
+Jack Stoll,TE,TE,SF,NA,Mia,home,Sun 4:25 pm,,,Sep 8 3:36 AM,SF,game-day-calls.txt
+Puka Nacua,WR,WR,LAR,,NYG,home,Mon 8:15 pm,,,Sep 8 3:26 AM,LAR,game-day-calls.txt
+Terrance Ferguson,TE,TE,LAR,,NYG,home,Mon 8:15 pm,,,Sep 8 3:26 AM,LAR,game-day-calls.txt
+Mike Evans,WR,WR,SF,,Mia,home,Sun 4:25 pm,,,Sep 8 3:21 AM,SF,game-day-calls.txt
+Christian McCaffrey,RB,RB,SF,,Mia,home,Sun 4:25 pm,,,Sep 8 3:21 AM,SF,game-day-calls.txt
+Isaiah Bond,WR,WR,Cle,,TB,away,Sun 1:00 pm,,,Sep 6 11:26 PM,Cle,game-day-calls.txt
+Emanuel Wilson,RB,RB,Sea,,Ari,away,Sun 4:25 pm,,,Sep 6 4:56 AM,Sea,game-day-calls.txt
+Brayden Willis,TE,TE,SF,,Mia,home,Sun 4:25 pm,,,Sep 5 2:26 AM,SF,game-day-calls.txt
+Brock Lampe,RB,RB,Buf,NA,Det,home,Thu 8:15 pm,,,Sep 3 3:16 AM,Buf,game-day-calls.txt
+Kalel Mullings,RB,RB,Ten,NA,Phi,home,Sun 1:00 pm,,,Sep 2 9:06 AM,Ten,game-day-calls.txt
+Cedric Tillman,WR,WR,NO,NA,Bal,away,Sun 1:00 pm,,,Sep 2 6:21 AM,NO,game-day-calls.txt
+Kenneth Walker,RB,RB,KC,,Ind,home,Sun 8:20 pm,,,Sep 1 10:06 PM,KC,game-day-calls.txt
+Brandon Smith,WR,WR,Pit,NA,NE,away,Sun 1:00 pm,,,Aug 31 2:26 AM,Pit,game-day-calls.txt
+Cam Camper,WR,WR,NYJ,NA,GB,home,Sun 1:00 pm,,,Aug 30 9:46 PM,NYJ,game-day-calls.txt
+Jawhar Jordan,RB,RB,Hou,NA,Cin,home,Sun 1:00 pm,,,Aug 30 8:56 PM,Hou,game-day-calls.txt
+Ihmir Smith-Marsette,WR,WR,Ari,NA,Sea,home,Sun 4:25 pm,,,Aug 30 8:56 PM,Ari,game-day-calls.txt
+Dayton Wade,WR,WR,Bal,NA,NO,home,Sun 1:00 pm,,,Aug 30 7:16 PM,Bal,game-day-calls.txt
+Jalin Hyatt,WR,WR,NYG,NA,LAR,away,Mon 8:15 pm,,,Aug 30 6:21 AM,NYG,game-day-calls.txt
+Noah Whittington,RB,RB,Hou,NA,Cin,home,Sun 1:00 pm,,,Aug 30 4:49 AM,Hou,game-day-calls.txt
+Britain Covey,WR,WR,Phi,,Ten,away,Sun 1:00 pm,,,Aug 30 4:49 AM,Phi,game-day-calls.txt
+Chris Olave,WR,WR,NO,,Bal,away,Sun 1:00 pm,,,Aug 30 4:49 AM,NO,game-day-calls.txt
+Phil Mafah,RB,RB,NYG,NA,LAR,away,Mon 8:15 pm,,,Aug 30 4:49 AM,NYG,game-day-calls.txt
+Michael Trigg,TE,TE,Dal,NA,Was,home,Sun 4:25 pm,,,Aug 30 4:49 AM,Dal,game-day-calls.txt
+Lan Larison,RB,RB,NE,NA,Pit,home,Sun 1:00 pm,,,Aug 30 4:49 AM,NE,game-day-calls.txt
+Xavier Worthy,WR,WR,KC,,Ind,home,Sun 8:20 pm,,,Aug 30 4:49 AM,KC,game-day-calls.txt
+Anthony Gould,WR,WR,Ind,NA,KC,away,Sun 8:20 pm,,,Aug 30 4:49 AM,Ind,game-day-calls.txt
+Jabari Small,RB,RB,Det,NA,Buf,away,Thu 8:15 pm,,,Aug 30 4:49 AM,Det,game-day-calls.txt
+Elijah Higgins,TE,TE,Ari,,Sea,home,Sun 4:25 pm,,,Aug 30 4:49 AM,Ari,game-day-calls.txt
+Quentin Johnston,WR,WR,LAC,,LV,home,Sun 4:05 pm,,,Aug 30 4:49 AM,LAC,game-day-calls.txt
+Carsen Ryan,TE,TE,Cle,,TB,away,Sun 1:00 pm,,,Aug 30 4:49 AM,Cle,game-day-calls.txt
+Sione Vaki,RB,RB,Det,,Buf,away,Thu 8:15 pm,,,Aug 30 4:49 AM,Det,game-day-calls.txt
+Braxton Berrios,WR,WR,NYG,NA,LAR,away,Mon 8:15 pm,,,Aug 30 4:49 AM,NYG,game-day-calls.txt
+Tez Johnson,WR,WR,TB,,Cle,home,Sun 1:00 pm,,,Aug 30 4:49 AM,TB,game-day-calls.txt
+Bub Means,WR,WR,Cle,NA,TB,away,Sun 1:00 pm,,,Aug 25 12:36 AM,Cle,game-day-calls.txt
+Quinshon Judkins,RB,RB,Cle,,TB,away,Sun 1:00 pm,,,Aug 24 11:26 PM,Cle,game-day-calls.txt
+Cade Otton,TE,TE,TB,,Cle,home,Sun 1:00 pm,,,Aug 24 8:46 PM,TB,game-day-calls.txt
+Parker Washington,WR,WR,Jax,,Den,away,Sun 4:05 pm,,,Aug 24 7:31 PM,Jax,game-day-calls.txt
+Rasheen Ali,RB,RB,Bal,,NO,home,Sun 1:00 pm,,,Aug 24 3:11 AM,Bal,game-day-calls.txt
+DeVonta Smith,WR,WR,Phi,,Ten,away,Sun 1:00 pm,,,Aug 23 9:51 PM,Phi,game-day-calls.txt
+Makai Lemon,WR,WR,Phi,,Ten,away,Sun 1:00 pm,,,Aug 23 9:51 PM,Phi,game-day-calls.txt
+Dameon Pierce,RB,RB,Phi,NA,Ten,away,Sun 1:00 pm,,,Aug 23 9:26 PM,Phi,game-day-calls.txt
+Chris Bell,WR,WR,Mia,,SF,away,Sun 4:25 pm,,,Aug 23 8:06 PM,Mia,game-day-calls.txt
+Jaydon Blue,RB,RB,Phi,NA,Ten,away,Sun 1:00 pm,,,Aug 22 9:11 AM,Phi,game-day-calls.txt
+Kevin Coleman Jr.,WR,WR,Mia,,SF,away,Sun 4:25 pm,,,Aug 22 3:56 AM,Mia,game-day-calls.txt
+Max Brosmer,QB,QB,Min,NA,Chi,away,Sun 1:00 pm,,,Aug 22 3:11 AM,Min,game-day-calls.txt
+Trayveon Williams,RB,RB,Det,NA,Buf,away,Thu 8:15 pm,,,Aug 22 12:51 AM,Det,game-day-calls.txt
+Jacob Saylors,RB,RB,Det,,Buf,away,Thu 8:15 pm,,,Aug 22 12:06 AM,Det,game-day-calls.txt
+DJ Moore,WR,WR,Buf,,Det,home,Thu 8:15 pm,,,Aug 19 11:21 PM,Buf,game-day-calls.txt
+Brenden Rice,WR,WR,LV,NA,LAC,away,Sun 4:05 pm,,,Aug 19 2:56 AM,LV,game-day-calls.txt
+Jameson Williams,WR,WR,Det,,Buf,away,Thu 8:15 pm,,,Aug 19 2:06 AM,Det,game-day-calls.txt
+Bryce Lance,WR,WR,NO,,Bal,away,Sun 1:00 pm,,,Aug 19 1:56 AM,NO,game-day-calls.txt
+Jaylen Waddle,WR,WR,Den,,Jax,home,Sun 4:05 pm,,,Aug 18 9:56 PM,Den,game-day-calls.txt
+Tony Pollard,RB,RB,Ten,,Phi,home,Sun 1:00 pm,,,Aug 18 8:26 PM,Ten,game-day-calls.txt
+Tank Bigsby,RB,RB,Phi,,Ten,away,Sun 1:00 pm,,,Aug 18 7:51 PM,Phi,game-day-calls.txt
+Tyquan Thornton,WR,WR,KC,,Ind,home,Sun 8:20 pm,,,Aug 18 7:41 PM,KC,game-day-calls.txt
+Ronnie Bell,WR,WR,LV,NA,LAC,away,Sun 4:05 pm,,,Aug 18 4:31 AM,LV,game-day-calls.txt
+Kaelon Black,RB,RB,SF,,Mia,home,Sun 4:25 pm,,,Aug 18 1:11 AM,SF,game-day-calls.txt
+Zavion Thomas,WR,WR,Chi,,Min,home,Sun 1:00 pm,,,Aug 17 10:51 PM,Chi,game-day-calls.txt
+J.K. Dobbins,RB,RB,Den,,Jax,home,Sun 4:05 pm,,,Aug 17 10:36 PM,Den,game-day-calls.txt
+Nick Mullens,QB,QB,Jax,NA,Den,away,Sun 4:05 pm,,,Aug 17 7:21 PM,Jax,game-day-calls.txt
+Geno Smith,QB,QB,NYJ,,GB,home,Sun 1:00 pm,,,Aug 17 6:41 PM,NYJ,game-day-calls.txt
+Caleb Douglas,WR,WR,Mia,,SF,away,Sun 4:25 pm,,,Aug 17 6:26 PM,Mia,game-day-calls.txt
+Garrett Wilson,WR,WR,NYJ,,GB,home,Sun 1:00 pm,,,Aug 17 6:06 PM,NYJ,game-day-calls.txt
+Khalil Dinkins,TE,TE,SF,NA,Mia,home,Sun 4:25 pm,,,Aug 17 5:36 AM,SF,game-day-calls.txt
+Jadarian Price,RB,RB,Sea,,Ari,away,Sun 4:25 pm,,,Aug 17 3:06 AM,Sea,game-day-calls.txt
+Blake Watson,RB,RB,Ten,NA,Phi,home,Sun 1:00 pm,,,Aug 17 1:11 AM,Ten,game-day-calls.txt
+Craig Reynolds,RB,RB,Was,NA,Dal,away,Sun 4:25 pm,,,Aug 16 7:06 PM,Was,game-day-calls.txt
+Jake Browning,QB,QB,TB,NA,Cle,home,Sun 1:00 pm,,,Aug 16 6:16 PM,TB,game-day-calls.txt
+Michael Wiley,RB,RB,TB,NA,Cle,home,Sun 1:00 pm,,,Aug 16 3:16 AM,TB,game-day-calls.txt
+Gavin Bartholomew,TE,TE,Min,,Chi,away,Sun 1:00 pm,,,Aug 15 10:41 PM,Min,game-day-calls.txt
+Kaden Wetjen,WR,WR,Pit,,NE,away,Sun 1:00 pm,,,Aug 15 8:26 PM,Pit,game-day-calls.txt
+Marquez Valdes-Scantling,WR,WR,LAC,,LV,home,Sun 4:05 pm,,,Aug 15 8:26 AM,LAC,game-day-calls.txt
+Jordan Addison,WR,WR,Min,,Chi,away,Sun 1:00 pm,,,Aug 15 7:31 AM,Min,game-day-calls.txt
+Josh Reynolds,WR,WR,NYJ,NA,GB,home,Sun 1:00 pm,,,Aug 15 1:21 AM,NYJ,game-day-calls.txt
+Jaxson Dart,QB,QB,NYG,,LAR,away,Mon 8:15 pm,,,Aug 14 10:46 PM,NYG,game-day-calls.txt
+Jaleel McLaughlin,RB,RB,Cle,,TB,away,Sun 1:00 pm,,,Aug 14 5:36 AM,Cle,game-day-calls.txt
+Laquon Treadwell,WR,WR,Ind,,KC,away,Sun 8:20 pm,,,Aug 13 9:41 PM,Ind,game-day-calls.txt
+Jahmyr Gibbs,RB,RB,Det,,Buf,away,Thu 8:15 pm,,,Aug 13 6:31 PM,Det,game-day-calls.txt
+Tyjae Spears,RB,RB,Ten,,Phi,home,Sun 1:00 pm,,,Aug 13 9:11 AM,Ten,game-day-calls.txt
+Darren Waller,TE,TE,Car,,Atl,away,Sun 1:00 pm,,,Aug 12 5:36 AM,Car,game-day-calls.txt
+Trevor Siemian,QB,QB,Ten,NA,Phi,home,Sun 1:00 pm,,,Aug 12 2:51 AM,Ten,game-day-calls.txt
+Matthew Golden,WR,WR,GB,,NYJ,away,Sun 1:00 pm,,,Aug 10 9:06 PM,GB,game-day-calls.txt
+Jayden Reed,WR,WR,GB,,NYJ,away,Sun 1:00 pm,,,Aug 10 8:56 PM,GB,game-day-calls.txt
+Greg Dulcich,TE,TE,Mia,,SF,away,Sun 4:25 pm,,,Aug 10 12:56 AM,Mia,game-day-calls.txt
+Nate Adkins,TE,TE,Den,,Jax,home,Sun 4:05 pm,,,Aug 9 8:56 PM,Den,game-day-calls.txt
+Chris Brooks,RB,RB,GB,,NYJ,away,Sun 1:00 pm,,,Aug 8 9:26 PM,GB,game-day-calls.txt
+Elic Ayomanor,WR,WR,Ten,,Phi,home,Sun 1:00 pm,,,Aug 7 4:36 AM,Ten,game-day-calls.txt
+Cyrus Allen,WR,WR,KC,,Ind,home,Sun 8:20 pm,,,Aug 6 7:11 PM,KC,game-day-calls.txt
+Romeo Doubs,WR,WR,NE,,Pit,home,Sun 1:00 pm,,,Aug 6 6:36 PM,NE,game-day-calls.txt
+Bryce Pierre,TE,TE,Car,NA,Atl,away,Sun 1:00 pm,,,Aug 6 3:51 AM,Car,game-day-calls.txt
+Michael Mayer,TE,TE,LV,,LAC,away,Sun 4:05 pm,,,Aug 5 9:56 PM,LV,game-day-calls.txt
+Josh Kattus,TE,TE,Cin,NA,Hou,away,Sun 1:00 pm,,,Aug 5 7:06 PM,Cin,game-day-calls.txt
+Jermaine Terry,TE,TE,Cle,NA,TB,away,Sun 1:00 pm,,,Aug 5 3:26 AM,Cle,game-day-calls.txt
+Tyler Conklin,TE,TE,Det,,Buf,away,Thu 8:15 pm,,,Aug 5 3:21 AM,Det,game-day-calls.txt
+Cam Grandy,TE,TE,Min,NA,Chi,away,Sun 1:00 pm,,,Aug 5 2:46 AM,Min,game-day-calls.txt
+KC Concepcion Jr.,WR,WR,Cle,,TB,away,Sun 1:00 pm,,,Aug 5 12:56 AM,Cle,game-day-calls.txt
+Ben VanSumeren,RB,RB,KC,,Ind,home,Sun 8:20 pm,,,Aug 4 9:51 PM,KC,game-day-calls.txt
+CJ Dippre,TE,TE,TB,NA,Cle,home,Sun 1:00 pm,,,Aug 4 8:21 PM,TB,game-day-calls.txt
+Zach Ertz,TE,TE,Was,NA,Dal,away,Sun 4:25 pm,,,Aug 4 6:56 PM,Was,game-day-calls.txt
+Chris Rodriguez Jr.,RB,RB,Jax,,Den,away,Sun 4:05 pm,,,Aug 3 2:46 AM,Jax,game-day-calls.txt
+Joseph Manjack,WR,WR,Den,NA,Jax,home,Sun 4:05 pm,,,Aug 3 12:06 AM,Den,game-day-calls.txt
+Josh Oliver,TE,TE,Min,,Chi,away,Sun 1:00 pm,,,Aug 2 5:46 PM,Min,game-day-calls.txt
+Donald Parham Jr.,TE,TE,Pit,NA,NE,away,Sun 1:00 pm,,,Aug 1 1:51 AM,Pit,game-day-calls.txt
+Cody Hardy,TE,TE,NO,NA,Bal,away,Sun 1:00 pm,,,Jul 31 2:41 AM,NO,game-day-calls.txt
+Mitchell Evans,TE,TE,Car,,Atl,away,Sun 1:00 pm,,,Jul 31 12:41 AM,Car,game-day-calls.txt
+Kenny McIntosh,RB,RB,Sea,NA,Ari,away,Sun 4:25 pm,,,Jul 20 1:21 AM,Sea,game-day-calls.txt
+Quentin Skinner,WR,WR,Buf,NA,Det,home,Thu 8:15 pm,,,Jul 13 3:06 AM,Buf,game-day-calls.txt
+Montrell Johnson Jr.,RB,RB,Car,NA,Atl,away,Sun 1:00 pm,,,May 20 2:06 AM,,game-day-calls.txt

@@ -32,8 +32,12 @@ build_dim_player <- function(ff_playerids_path, players_path) {
   dim <- dim[order(dim$gsis_id), ]
   dim$player_key <- seq_len(nrow(dim))
 
+  # pfr_id is the only join key load_snap_counts() offers -- it carries no
+  # gsis_id -- so the crosswalk has to hold it for the in-season snap join in
+  # R/41_weekly.R. ~23% NA upstream, concentrated in players who have never
+  # taken a snap; see build_fct_player_week_current() for the match rate.
   keep_cols <- c("player_key", "gsis_id", "display_name", "name", "position.x", "position.y",
-                 "team", "yahoo_id", "sleeper_id", "espn_id", "fantasypros_id",
+                 "team", "yahoo_id", "sleeper_id", "espn_id", "fantasypros_id", "pfr_id",
                  "birth_date", "draft_year", "draft_round", "draft_pick", "draft_ovr",
                  "college_name", "latest_team", "status")
   dim <- dim[, intersect(keep_cols, colnames(dim))]
