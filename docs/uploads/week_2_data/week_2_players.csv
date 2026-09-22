@@ -1,0 +1,348 @@
+player,pos,pos_eligible,nfl_team,status,opponent,home_away,kickoff,roster_status,gp,bye,fan_pts,rank_preseason,rank_actual,pct_rostered,pass_yds,pass_td,pass_int,rush_att,rush_yds,rush_td,tgt,rec,rec_yds,rec_td,ret_td,two_pt,fum_lost,source_file
+Caleb Williams,QB,QB,Chi,,Min,home,Sun 1:00 pm,Owl Out Blitz,1,10,37.26,72,1,99,269,2,0,10,65,2,0,0,0,0,0,0,0,qb.txt
+Josh Allen,QB,QB,Buf,,Det,home,Thu 8:15 pm,Bone Crushers,1,7,35.66,35,2,100,334,2,0,6,23,2,0,0,0,0,0,0,0,qb.txt
+Bryce Young,QB,QB,Car,,Atl,away,Sun 1:00 pm,FA,1,5,32.44,182,5,19,361,3,1,2,10,1,0,0,0,0,0,0,0,qb.txt
+Jaxson Dart,QB,QB,NYG,,LAR,away,Mon 8:15 pm,Owl Out Blitz,1,8,26.60,107,14,93,230,3,0,11,54,0,0,0,0,0,0,0,0,qb.txt
+Trevor Lawrence,QB,QB,Jax,,Den,away,Sun 4:05 pm,Sunday Kevin,1,7,26.10,80,15,95,245,4,0,2,3,0,0,0,0,0,0,0,0,qb.txt
+Tyler Shough,QB,QB,NO,,Bal,away,Sun 1:00 pm,FA,1,8,25.20,143,16,43,410,3,2,4,8,0,0,0,0,0,0,0,1,qb.txt
+Lamar Jackson,QB,QB,Bal,,NO,home,Sun 1:00 pm,Maybe Mitchell,1,13,24.96,53,17,100,324,1,0,7,40,1,0,0,0,0,0,0,1,qb.txt
+Jalen Hurts,QB,QB,Phi,,Ten,away,Sun 1:00 pm,Max’s TD Bombers,1,10,24.72,63,18,100,203,3,0,7,46,0,0,0,0,0,0,0,0,qb.txt
+Patrick Mahomes,QB,QB,KC,,Ind,home,Sun 8:20 pm,JGrahnasaurs,1,5,22.66,122,24,87,184,2,1,7,23,1,0,0,0,0,0,0,0,qb.txt
+Brock Purdy,QB,QB,SF,,Mia,home,Sun 4:25 pm,Bone Crushers,1,8,22.10,101,27,91,205,3,1,5,29,0,0,0,0,0,0,0,0,qb.txt
+Jordan Love,QB,QB,GB,,NYJ,away,Sun 1:00 pm,FA,1,11,20.48,125,30,69,387,2,1,1,0,0,0,0,0,0,0,0,1,qb.txt
+Carson Wentz,QB,QB,Min,,Chi,away,Sun 1:00 pm,FA,1,6,19.22,364,33,2,133,3,0,5,-1,0,0,0,0,0,0,1,0,qb.txt
+Malik Willis,QB,QB,Mia,,SF,away,Sun 4:25 pm,FA,1,6,17.70,133,40,38,220,0,1,6,39,1,0,0,0,0,0,0,0,qb.txt
+Jayden Daniels,QB,QB,Was,,Dal,away,Sun 4:25 pm,Steel City,1,7,17.66,67,41,99,164,2,0,5,31,0,0,0,0,0,0,0,0,qb.txt
+Jacoby Brissett,QB,QB,Ari,,Sea,home,Sun 4:25 pm,FA,1,14,16.48,209,45,7,277,1,0,6,14,0,0,0,0,0,0,0,0,qb.txt
+C.J. Stroud,QB,QB,Hou,,Cin,home,Sun 1:00 pm,FA,1,8,16.46,175,46,32,274,2,0,2,15,0,0,0,0,0,0,0,2,qb.txt
+Jared Goff,QB,QB,Det,,Buf,away,Thu 8:15 pm,Jason's Jazzy Team,1,6,16.44,117,47,85,206,2,0,2,2,0,0,0,0,0,0,0,0,qb.txt
+Kirk Cousins,QB,QB,LV,,LAC,away,Sun 4:05 pm,FA,1,13,15.80,308,52,4,160,3,2,5,-6,0,0,0,0,0,0,0,0,qb.txt
+Dak Prescott,QB,QB,Dal,,Was,home,Sun 4:25 pm,Max’s TD Bombers,1,14,15.40,83,54,97,175,2,1,2,14,0,0,0,0,0,0,0,0,qb.txt
+Joe Burrow,QB,QB,Cin,Q,Hou,away,Sun 1:00 pm,Locked In Michelle,1,6,15.16,64,55,100,254,1,1,5,20,0,0,0,0,0,0,0,0,qb.txt
+Deshaun Watson,QB,QB,Cle,,TB,away,Sun 1:00 pm,FA,1,11,15.00,306,58,2,205,1,1,6,38,0,0,0,0,0,0,0,0,qb.txt
+Justin Herbert,QB,QB,LAC,,LV,home,Sun 4:05 pm,Sunday Kevin,1,7,14.26,75,61,97,209,1,1,5,29,0,0,0,0,0,0,0,0,qb.txt
+Drake Maye,QB,QB,NE,,Pit,home,Sun 1:00 pm,Jason's Jazzy Team,1,11,12.82,61,76,99,178,1,3,7,47,0,0,0,0,0,0,0,0,qb.txt
+Drew Lock,QB,QB,Sea,,Ari,away,Sun 4:25 pm,FA,1,11,12.78,2769,77,1,187,1,0,2,13,0,0,0,0,0,0,0,0,qb.txt
+Aaron Rodgers,QB,QB,Pit,,NE,away,Sun 1:00 pm,FA,1,9,12.54,249,78,10,221,1,0,3,-3,0,0,0,0,0,0,0,0,qb.txt
+Cam Ward,QB,QB,Ten,,Phi,home,Sun 1:00 pm,FA,1,9,11.70,185,92,11,140,1,0,4,21,0,0,0,0,0,0,0,0,qb.txt
+Baker Mayfield,QB,QB,TB,,Cle,home,Sun 1:00 pm,Monday Night Madison,1,10,11.64,137,93,56,216,0,0,5,30,1,0,0,0,0,0,0,3,qb.txt
+Daniel Jones,QB,QB,Ind,,KC,away,Sun 8:20 pm,FA,1,13,10.04,167,104,23,166,1,1,1,4,0,0,0,0,0,0,0,0,qb.txt
+Geno Smith,QB,QB,NYJ,,GB,home,Sun 1:00 pm,FA,1,13,9.30,245,117,5,215,0,0,6,7,0,0,0,0,0,0,0,0,qb.txt
+Cooper Rush,QB,QB,Atl,,Car,home,Sun 1:00 pm,FA,1,11,7.72,2880,144,1,143,1,2,0,0,0,0,0,0,0,0,0,0,qb.txt
+Bo Nix,QB,QB,Den,,Jax,home,Sun 4:05 pm,Steel City,1,10,6.44,105,167,90,131,1,1,3,2,0,0,0,0,0,0,0,1,qb.txt
+Matthew Stafford,QB,QB,LAR,,NYG,home,Mon 8:15 pm,JGrahnasaurs,1,11,5.10,115,195,90,155,0,1,2,-1,0,0,0,0,0,0,0,0,qb.txt
+Kenny Pickett,QB,QB,Car,,Atl,away,Sun 1:00 pm,FA,1,5,2.40,2884,268,0,0,0,0,1,24,0,0,0,0,0,0,0,0,qb.txt
+Stetson Bennett IV,QB,QB,LAR,,NYG,home,Mon 8:15 pm,FA,1,11,1.42,2868,297,0,13,0,0,1,9,0,0,0,0,0,0,0,0,qb.txt
+Kyler Murray,QB,QB,Min,Q,Chi,away,Sun 1:00 pm,Locked In Michelle,1,6,0.62,119,327,69,18,0,1,2,9,0,0,0,0,0,0,0,0,qb.txt
+Sam Darnold,QB,QB,Sea,O,Ari,away,Sun 4:25 pm,Monday Night Madison,1,11,0.52,156,330,32,13,0,0,0,0,0,0,0,0,0,0,0,0,qb.txt
+Ken Seals,QB,QB,KC,NA,Ind,home,Sun 8:20 pm,FA,,5,0.00,2828,404,0,,,,,,,,,,,,,,qb.txt
+Spencer Rattler,QB,QB,NO,,Bal,away,Sun 1:00 pm,FA,,8,0.00,2288,388,0,,,,,,,,,,,,,,qb.txt
+Jacob Clark,QB,QB,LV,NA,LAC,away,Sun 4:05 pm,FA,,13,0.00,2830,416,0,,,,,,,,,,,,,,qb.txt
+Dillon Gabriel,QB,QB,Cle,IR-R,TB,away,Sun 1:00 pm,FA,,11,0.00,2801,661,0,,,,,,,,,,,,,,qb.txt
+Shedeur Sanders,QB,QB,Cle,,TB,away,Sun 1:00 pm,FA,,11,0.00,305,681,2,,,,,,,,,,,,,,qb.txt
+Jalen Milroe,QB,QB,Sea,,Ari,away,Sun 4:25 pm,FA,,11,0.00,2887,666,0,,,,,,,,,,,,,,qb.txt
+Graham Mertz,QB,QB,Hou,IR,Cin,home,Sun 1:00 pm,FA,,8,0.00,2844,695,0,,,,,,,,,,,,,,qb.txt
+Jake Retzlaff,QB,QB,Sea,NA,Ari,away,Sun 4:25 pm,FA,,11,0.00,2812,1185,0,,,,,,,,,,,,,,qb.txt
+Joe Fagnano,QB,QB,Bal,,NO,home,Sun 1:00 pm,FA,,13,0.00,2827,1184,0,,,,,,,,,,,,,,qb.txt
+Cam Miller,QB,QB,Mia,NA,SF,away,Sun 4:25 pm,FA,,6,0.00,2858,690,0,,,,,,,,,,,,,,qb.txt
+Riley Leonard,QB,QB,Ind,,KC,away,Sun 8:20 pm,FA,,13,0.00,2869,691,0,,,,,,,,,,,,,,qb.txt
+Kyle McCord,QB,QB,Mia,,SF,away,Sun 4:25 pm,FA,,6,0.00,2813,693,0,,,,,,,,,,,,,,qb.txt
+Will Howard,QB,QB,Pit,,NE,away,Sun 1:00 pm,FA,,9,0.00,2814,698,0,,,,,,,,,,,,,,qb.txt
+Carter Bradley,QB,QB,Jax,NA,Den,away,Sun 4:05 pm,FA,,7,0.00,2821,450,0,,,,,,,,,,,,,,qb.txt
+Derrick Henry,RB,RB,Bal,,NO,home,Sun 1:00 pm,JGrahnasaurs,1,13,34.80,15,3,100,0,0,0,24,144,3,1,1,19,0,0,0,0,rb.txt
+Kenneth Walker,RB,RB,KC,,Ind,home,Sun 8:20 pm,Max’s TD Bombers,1,5,32.60,11,4,100,0,0,0,23,173,1,6,3,18,1,0,0,0,rb.txt
+D'Andre Swift,RB,RB,Chi,Q,Min,home,Sun 1:00 pm,Owl Out Blitz,1,10,31.90,42,6,98,0,0,0,18,124,3,1,1,10,0,0,0,0,rb.txt
+Jahmyr Gibbs,RB,RB,Det,,Buf,away,Thu 8:15 pm,Locked In Michelle,1,6,31.10,1,7,100,0,0,0,29,156,2,5,5,30,0,0,0,1,rb.txt
+Ashton Jeanty,RB,RB,LV,,LAC,away,Sun 4:05 pm,Max’s TD Bombers,1,13,29.70,21,9,100,0,0,0,23,102,0,6,6,45,2,0,0,0,rb.txt
+David Montgomery,RB,RB,Hou,,Cin,home,Sun 1:00 pm,Maybe Mitchell,1,8,27.40,57,11,98,0,0,0,20,60,2,3,3,19,1,0,0,0,rb.txt
+Bijan Robinson,RB,RB,Atl,,Car,home,Sun 1:00 pm,Bone Crushers,1,11,27.30,2,12,100,0,0,0,21,83,0,10,8,90,1,0,0,0,rb.txt
+Jonathan Taylor,RB,RB,Ind,,KC,away,Sun 8:20 pm,Max’s TD Bombers,1,13,23.60,5,21,100,0,0,0,19,98,2,4,3,23,0,0,0,1,rb.txt
+Chuba Hubbard,RB,RB,Car,,Atl,away,Sun 1:00 pm,Jason's Jazzy Team,1,5,22.20,84,26,91,0,0,0,10,49,1,3,3,38,1,0,0,0,rb.txt
+Javonte Williams,RB,RB,Dal,,Was,home,Sun 4:25 pm,JGrahnasaurs,1,14,21.70,29,29,100,0,0,0,12,41,1,5,5,31,1,0,0,0,rb.txt
+Kyle Monangai,RB,RB,Chi,Q,Min,home,Sun 1:00 pm,Jason's Jazzy Team,1,10,19.40,110,32,79,0,0,0,10,100,1,2,2,24,0,0,0,0,rb.txt
+Breece Hall,RB,RB,NYJ,,GB,home,Sun 1:00 pm,Maybe Mitchell,1,13,18.80,30,35,99,0,0,0,22,102,1,2,2,16,0,0,0,0,rb.txt
+Bucky Irving,RB,RB,TB,,Cle,home,Sun 1:00 pm,Sunday Kevin,1,10,16.80,50,42,98,0,0,0,8,45,1,7,7,48,0,0,0,1,rb.txt
+Chase Brown,RB,RB,Cin,,Hou,away,Sun 1:00 pm,Steel City,1,6,16.30,14,49,100,0,0,0,16,56,1,6,5,22,0,0,0,0,rb.txt
+Cam Skattebo,RB,RB,NYG,,LAR,away,Mon 8:15 pm,Locked In Michelle,1,8,14.10,48,62,98,0,0,0,18,81,1,0,0,0,0,0,0,0,rb.txt
+Kyren Williams,RB,RB,LAR,,NYG,home,Mon 8:15 pm,Locked In Michelle,1,11,14.00,27,64,100,0,0,0,11,41,1,3,3,24,0,0,0,0,rb.txt
+Jacory Croskey-Merritt,RB,RB,Was,,Dal,away,Sun 4:25 pm,Owl Out Blitz,1,7,12.10,91,82,85,0,0,0,16,63,1,1,1,-7,0,0,0,0,rb.txt
+Jeremiyah Love,RB,RB,Ari,,Sea,home,Sun 4:25 pm,Monday Night Madison,1,14,12.00,28,87,100,0,0,0,11,41,1,4,2,9,0,0,0,0,rb.txt
+Rhamondre Stevenson,RB,RB,NE,,Pit,home,Sun 1:00 pm,Jason's Jazzy Team,1,11,12.00,62,85,95,0,0,0,18,51,0,6,5,44,0,0,0,0,rb.txt
+Jordan Mason,RB,RB,Min,IR,Chi,away,Sun 1:00 pm,Locked In Michelle,1,6,11.90,103,90,82,0,0,0,15,59,1,0,0,0,0,0,0,0,rb.txt
+Devin Singletary,RB,RB,NYG,,LAR,away,Mon 8:15 pm,FA,1,8,11.80,276,91,4,0,0,0,6,16,0,4,4,22,1,0,0,0,rb.txt
+Travis Etienne Jr.,RB,RB,NO,,Bal,away,Sun 1:00 pm,JGrahnasaurs,1,8,11.30,40,96,99,0,0,0,9,46,0,9,7,32,0,0,0,0,rb.txt
+Christian McCaffrey,RB,RB,SF,,Mia,home,Sun 4:25 pm,Jason's Jazzy Team,1,8,11.30,6,98,100,0,0,0,10,68,0,8,5,20,0,0,0,0,rb.txt
+Aaron Jones Sr.,RB,RB,Min,,Chi,away,Sun 1:00 pm,Locked In Michelle,1,6,10.00,123,107,74,0,0,0,12,40,1,1,0,0,0,0,0,0,rb.txt
+Bhayshul Tuten,RB,RB,Jax,,Den,away,Sun 4:05 pm,Steel City,1,7,9.30,58,115,95,0,0,0,15,66,0,1,1,22,0,0,0,0,rb.txt
+Kendre Miller,RB,RB,NO,,Bal,away,Sun 1:00 pm,FA,1,8,9.00,228,119,1,0,0,0,9,30,1,0,0,0,0,0,0,0,rb.txt
+De'Von Achane,RB,RB,Mia,,SF,away,Sun 4:25 pm,Jason's Jazzy Team,1,6,8.60,17,128,100,0,0,0,11,36,0,5,4,30,0,0,0,0,rb.txt
+Saquon Barkley,RB,RB,Phi,,Ten,away,Sun 1:00 pm,Monday Night Madison,1,10,8.50,10,129,100,0,0,0,15,83,0,2,1,-3,0,0,0,0,rb.txt
+James Cook III,RB,RB,Buf,,Det,home,Thu 8:15 pm,Sunday Kevin,1,7,8.40,9,130,100,0,0,0,13,57,0,4,3,12,0,0,0,0,rb.txt
+Omarion Hampton,RB,RB,LAC,,LV,home,Sun 4:05 pm,Monday Night Madison,1,7,8.30,16,131,100,0,0,0,12,43,1,0,0,0,0,0,0,1,rb.txt
+Tyler Allgeier,RB,RB,Ari,,Sea,home,Sun 4:25 pm,FA,1,14,8.00,136,139,51,0,0,0,17,61,0,2,2,9,0,0,0,0,rb.txt
+Jaylen Warren,RB,RB,Pit,,NE,away,Sun 1:00 pm,Bone Crushers,1,9,7.80,69,142,95,0,0,0,10,46,0,6,5,27,0,0,0,1,rb.txt
+Emmett Johnson,RB,RB,KC,,Ind,home,Sun 8:20 pm,FA,1,5,7.80,157,143,23,0,0,0,8,24,0,2,2,44,0,0,0,0,rb.txt
+Kaelon Black,RB,RB,SF,,Mia,home,Sun 4:25 pm,FA,1,8,7.50,169,146,37,0,0,0,14,65,0,1,1,5,0,0,0,0,rb.txt
+Jadarian Price,RB,RB,Sea,,Ari,away,Sun 4:25 pm,Bone Crushers,1,11,6.80,59,161,96,0,0,0,10,52,0,2,2,6,0,0,0,0,rb.txt
+Jonathon Brooks,RB,RB,Car,,Atl,away,Sun 1:00 pm,Sunday Kevin,1,5,6.70,77,162,90,0,0,0,4,14,0,2,1,48,0,0,0,0,rb.txt
+Samaje Perine,RB,RB,Cin,,Hou,away,Sun 1:00 pm,FA,1,6,6.50,230,166,4,0,0,0,5,20,0,3,3,30,0,0,0,0,rb.txt
+RJ Harvey,RB,RB,Den,Q,Jax,home,Sun 4:05 pm,Max’s TD Bombers,1,10,6.10,108,175,82,0,0,0,3,18,0,4,4,23,0,0,0,0,rb.txt
+Quinshon Judkins,RB,RB,Cle,,TB,away,Sun 1:00 pm,Owl Out Blitz,1,11,6.00,56,178,97,0,0,0,12,33,0,2,2,17,0,0,0,0,rb.txt
+Blake Corum,RB,RB,LAR,,NYG,home,Mon 8:15 pm,Maybe Mitchell,1,11,5.40,92,193,87,0,0,0,10,54,0,0,0,0,0,0,0,0,rb.txt
+Woody Marks,RB,RB,Hou,,Cin,home,Sun 1:00 pm,JGrahnasaurs,1,8,4.50,130,202,49,0,0,0,9,42,0,1,1,-2,0,0,0,0,rb.txt
+Raheim Sanders,RB,RB,Cle,,TB,away,Sun 1:00 pm,FA,1,11,4.10,326,214,1,0,0,0,1,1,0,3,3,25,0,0,0,0,rb.txt
+Mike Washington Jr.,RB,RB,LV,,LAC,away,Sun 4:05 pm,FA,1,13,4.10,128,215,50,0,0,0,7,41,0,0,0,0,0,0,0,0,rb.txt
+Braelon Allen,RB,RB,NYJ,,GB,home,Sun 1:00 pm,FA,1,13,4.00,164,216,15,0,0,0,10,40,0,1,0,0,0,0,0,0,rb.txt
+Tony Pollard,RB,RB,Ten,,Phi,home,Sun 1:00 pm,Maybe Mitchell,1,9,3.90,81,222,91,0,0,0,7,35,0,2,1,-1,0,0,0,0,rb.txt
+MarShawn Lloyd,RB,RB,GB,,NYJ,away,Sun 1:00 pm,Steel City,1,11,3.70,71,225,87,0,0,0,13,37,0,1,0,0,0,0,0,0,rb.txt
+Rachaad White,RB,RB,Was,,Dal,away,Sun 4:25 pm,W (Sep 18),1,7,3.70,114,228,59,0,0,0,7,22,0,2,2,5,0,0,0,0,rb.txt
+Ameer Abdullah,RB,RB,Jax,,Den,away,Sun 4:05 pm,FA,1,7,3.70,2658,229,0,0,0,0,4,32,0,1,1,0,0,0,0,0,rb.txt
+J.K. Dobbins,RB,RB,Den,,Jax,home,Sun 4:05 pm,Monday Night Madison,1,10,3.60,85,231,89,0,0,0,8,36,0,0,0,0,0,0,0,0,rb.txt
+Tyjae Spears,RB,RB,Ten,,Phi,home,Sun 1:00 pm,FA,1,9,3.40,140,237,37,0,0,0,3,12,0,4,2,12,0,0,0,0,rb.txt
+Justice Hill,RB,RB,Bal,,NO,home,Sun 1:00 pm,FA,1,13,3.30,246,238,3,0,0,0,6,18,0,1,1,10,0,0,0,0,rb.txt
+Rico Dowdle,RB,RB,Pit,,NE,away,Sun 1:00 pm,Monday Night Madison,1,9,3.10,86,245,92,0,0,0,8,15,0,5,2,6,0,0,0,0,rb.txt
+Brian Robinson,RB,RB,Atl,,Car,home,Sun 1:00 pm,FA,1,11,3.10,162,244,25,0,0,0,9,31,0,0,0,0,0,0,0,0,rb.txt
+Brady Russell,RB,"RB,TE",Sea,,Ari,away,Sun 4:25 pm,FA,1,11,3.00,2783,246,0,0,0,0,0,0,0,2,2,20,0,0,0,0,rb.txt
+Chris Brooks,RB,RB,GB,,NYJ,away,Sun 1:00 pm,FA,1,11,2.90,244,256,3,0,0,0,7,29,0,1,0,0,0,0,0,0,rb.txt
+George Holani,RB,RB,Sea,,Ari,away,Sun 4:25 pm,FA,1,11,2.90,219,253,5,0,0,0,8,29,0,1,0,0,0,0,0,0,rb.txt
+Ronnie Rivers,RB,RB,LAR,,NYG,home,Mon 8:15 pm,FA,1,11,2.90,2786,255,0,0,0,0,5,19,0,1,1,5,0,0,0,0,rb.txt
+AJ Dillon,RB,RB,Car,,Atl,away,Sun 1:00 pm,FA,1,5,2.80,2757,259,0,0,0,0,5,28,0,0,0,0,0,0,0,0,rb.txt
+Kenny Gainwell,RB,RB,TB,,Cle,home,Sun 1:00 pm,JGrahnasaurs,1,10,2.30,111,272,78,0,0,0,5,15,0,1,1,3,0,0,0,0,rb.txt
+Sione Vaki,RB,RB,Det,,Buf,away,Thu 8:15 pm,FA,1,6,2.30,328,270,0,0,0,0,2,7,0,1,1,11,0,0,0,0,rb.txt
+Chris Rodriguez Jr.,RB,RB,Jax,,Den,away,Sun 4:05 pm,FA,1,7,2.30,112,273,57,0,0,0,6,23,0,0,0,0,0,0,0,0,rb.txt
+Lan Larison,RB,RB,NE,NA,Pit,home,Sun 1:00 pm,FA,1,11,1.90,2642,284,0,0,0,0,0,0,0,2,2,9,0,0,0,0,rb.txt
+Will Shipley,RB,RB,Phi,,Ten,away,Sun 1:00 pm,FA,1,10,1.70,2792,288,0,0,0,0,2,4,0,1,1,8,0,0,0,0,rb.txt
+Kaytron Allen,RB,RB,Was,,Dal,away,Sun 4:25 pm,FA,1,7,1.60,227,294,2,0,0,0,4,16,0,0,0,0,0,0,0,0,rb.txt
+Corey Kiner,RB,RB,NE,,Pit,home,Sun 1:00 pm,FA,1,11,1.10,351,308,0,0,0,0,6,11,0,0,0,0,0,0,0,0,rb.txt
+Keaton Mitchell,RB,RB,LAC,,LV,home,Sun 4:05 pm,FA,1,7,0.90,124,316,38,0,0,0,4,9,0,0,0,0,0,0,0,0,rb.txt
+Emari Demercado,RB,RB,Dal,,Was,home,Sun 4:25 pm,FA,1,14,0.70,343,324,2,0,0,0,2,7,0,0,0,0,0,0,0,0,rb.txt
+CJ Donaldson,RB,RB,NO,NA,Bal,away,Sun 1:00 pm,FA,1,8,0.70,2652,326,0,0,0,0,2,4,0,2,1,-2,0,0,0,0,rb.txt
+Hunter Luepke,RB,RB,Dal,,Was,home,Sun 4:25 pm,FA,1,14,0.70,2750,325,0,0,0,0,1,7,0,0,0,0,0,0,0,0,rb.txt
+DeeJay Dallas,RB,RB,Min,NA,Chi,away,Sun 1:00 pm,FA,1,6,0.60,2800,328,0,0,0,0,0,0,0,1,1,1,0,0,0,0,rb.txt
+Seth McGowan,RB,RB,Ind,,KC,away,Sun 8:20 pm,FA,1,13,0.50,224,332,1,0,0,0,0,0,0,1,1,0,0,0,0,0,rb.txt
+Ray Davis,RB,RB,Buf,,Det,home,Thu 8:15 pm,FA,1,7,0.30,159,333,15,0,0,0,1,3,0,0,0,0,0,0,0,0,rb.txt
+Emanuel Wilson,RB,RB,Sea,,Ari,away,Sun 4:25 pm,FA,1,11,0.30,258,337,1,0,0,0,2,3,0,0,0,0,0,0,0,0,rb.txt
+Tank Bigsby,RB,RB,Phi,,Ten,away,Sun 1:00 pm,FA,1,10,0.30,138,336,32,0,0,0,1,3,0,0,0,0,0,0,0,0,rb.txt
+Frank Gore Jr.,RB,RB,Buf,NA,Det,home,Thu 8:15 pm,FA,1,7,0.30,2656,335,0,0,0,0,1,3,0,0,0,0,0,0,0,0,rb.txt
+Connor Heyward,RB,RB,LV,,LAC,away,Sun 4:05 pm,FA,1,13,0.10,2763,341,0,0,0,0,1,1,0,0,0,0,0,0,0,0,rb.txt
+Kalel Mullings,RB,RB,Ten,NA,Phi,home,Sun 1:00 pm,FA,,9,0.00,2587,697,0,,,,,,,,,,,,,,rb.txt
+Barika Kpeenu,RB,RB,TB,NA,Cle,home,Sun 1:00 pm,FA,,10,0.00,2610,584,0,,,,,,,,,,,,,,rb.txt
+Ja'Quinden Jackson,RB,RB,Phi,NA,Ten,away,Sun 1:00 pm,FA,,10,0.00,2580,801,0,,,,,,,,,,,,,,rb.txt
+Rodney Hammond Jr.,RB,RB,Den,NA,Jax,home,Sun 4:05 pm,FA,,10,0.00,2620,536,0,,,,,,,,,,,,,,rb.txt
+Montrell Johnson Jr.,RB,RB,Car,NA,Atl,away,Sun 1:00 pm,FA,,5,0.00,2598,773,0,,,,,,,,,,,,,,rb.txt
+DJ Giddens,RB,RB,Ind,,KC,away,Sun 8:20 pm,FA,,13,0.00,282,684,0,,,,,,,,,,,,,,rb.txt
+Jordan James,RB,RB,SF,,Mia,home,Sun 4:25 pm,FA,,8,0.00,242,682,1,,,,,,,,,,,,,,rb.txt
+Jaydon Blue,RB,RB,Phi,NA,Ten,away,Sun 1:00 pm,FA,,10,0.00,332,683,1,,,,,,,,,,,,,,rb.txt
+Robbie Ouzts,RB,"RB,TE",Sea,IR,Ari,away,Sun 4:25 pm,FA,,11,0.00,2495,689,0,,,,,,,,,,,,,,rb.txt
+Anthony Tyus III,RB,RB,Car,NA,Atl,away,Sun 1:00 pm,FA,,5,0.00,2547,816,0,,,,,,,,,,,,,,rb.txt
+Ollie Gordon II,RB,RB,Mia,,SF,away,Sun 4:25 pm,FA,,6,0.00,285,692,1,,,,,,,,,,,,,,rb.txt
+Amar Johnson,RB,RB,LAC,NA,LV,home,Sun 4:05 pm,FA,,7,0.00,2561,821,0,,,,,,,,,,,,,,rb.txt
+Roydell Williams,RB,RB,Det,NA,Buf,away,Thu 8:15 pm,FA,,6,0.00,2579,576,0,,,,,,,,,,,,,,rb.txt
+Jarquez Hunter,RB,RB,Mia,NA,SF,away,Sun 4:25 pm,FA,,6,0.00,342,678,0,,,,,,,,,,,,,,rb.txt
+Donovan Edwards,RB,RB,Mia,NA,SF,away,Sun 4:25 pm,FA,,6,0.00,2597,811,0,,,,,,,,,,,,,,rb.txt
+Lincoln Pare,RB,RB,Ind,NA,KC,away,Sun 8:20 pm,FA,,13,0.00,2612,510,0,,,,,,,,,,,,,,rb.txt
+Justin Jones,RB,RB,Sea,NA,Ari,away,Sun 4:25 pm,FA,,11,0.00,2556,583,0,,,,,,,,,,,,,,rb.txt
+Kentrel Bullock,RB,RB,Cin,NA,Hou,away,Sun 1:00 pm,FA,,6,0.00,2590,512,0,,,,,,,,,,,,,,rb.txt
+Jamal Haynes,RB,RB,Cin,NA,Hou,away,Sun 1:00 pm,FA,,6,0.00,2596,513,0,,,,,,,,,,,,,,rb.txt
+Anderson Castle,RB,RB,Ind,NA,KC,away,Sun 8:20 pm,FA,,13,0.00,2625,562,0,,,,,,,,,,,,,,rb.txt
+Damon Bankston,RB,RB,GB,NA,NYJ,away,Sun 1:00 pm,FA,,11,0.00,2552,517,0,,,,,,,,,,,,,,rb.txt
+Myles Montgomery,RB,RB,NE,IR,Pit,home,Sun 1:00 pm,FA,,11,0.00,2543,522,0,,,,,,,,,,,,,,rb.txt
+Nate Carter,RB,RB,KC,NA,Ind,home,Sun 8:20 pm,FA,,5,0.00,2616,788,0,,,,,,,,,,,,,,rb.txt
+Grant Finley,RB,RB,NYG,NA,LAR,away,Mon 8:15 pm,FA,,8,0.00,2603,581,0,,,,,,,,,,,,,,rb.txt
+Isaiah Likely,TE,TE,NYG,,LAR,away,Mon 8:15 pm,Max’s TD Bombers,1,8,23.80,120,19,91,0,0,0,0,0,0,8,8,78,2,0,0,0,te.txt
+Dallas Goedert,TE,TE,Phi,,Ten,away,Sun 1:00 pm,Monday Night Madison,1,10,21.70,116,28,93,0,0,0,0,0,0,5,4,77,2,0,0,0,te.txt
+Trey McBride,TE,TE,Ari,,Sea,home,Sun 4:25 pm,Maybe Mitchell,1,14,20.00,34,31,100,0,0,0,0,0,0,13,9,95,1,0,0,0,te.txt
+Mike Gesicki,TE,TE,Cin,,Hou,away,Sun 1:00 pm,FA,1,6,16.30,313,50,5,0,0,0,0,0,0,7,5,78,1,0,0,0,te.txt
+Dalton Kincaid,TE,TE,Buf,,Det,home,Thu 8:15 pm,Jason's Jazzy Team,1,7,15.50,106,53,93,0,0,0,0,0,0,6,5,130,0,0,0,0,te.txt
+Pat Freiermuth,TE,TE,Pit,,NE,away,Sun 1:00 pm,FA,1,9,13.10,216,67,8,0,0,0,0,0,0,5,5,46,1,0,0,0,te.txt
+Juwan Johnson,TE,TE,NO,Q,Bal,away,Sun 1:00 pm,Steel City,1,8,12.90,134,73,74,0,0,0,0,0,0,7,3,54,1,0,0,0,te.txt
+Evan Engram,TE,TE,Den,,Jax,home,Sun 4:05 pm,FA,1,10,12.30,286,81,2,0,0,0,0,0,0,5,4,43,1,0,0,0,te.txt
+T.J. Hockenson,TE,TE,Min,,Chi,away,Sun 1:00 pm,FA,1,6,11.60,215,94,25,0,0,0,0,0,0,5,4,36,1,0,0,0,te.txt
+Noah Fant,TE,TE,NO,,Bal,away,Sun 1:00 pm,FA,1,8,11.30,359,97,0,0,0,0,0,0,0,8,4,33,1,0,0,0,te.txt
+Cole Kmet,TE,TE,Chi,,Min,home,Sun 1:00 pm,FA,1,10,10.50,365,103,1,0,0,0,0,0,0,3,2,35,1,0,0,0,te.txt
+Kenyon Sadiq,TE,TE,NYJ,,GB,home,Sun 1:00 pm,FA,1,13,9.90,195,110,15,0,0,0,1,3,1,3,3,21,0,0,0,0,te.txt
+Brenton Strange,TE,TE,Jax,,Den,away,Sun 4:05 pm,FA,1,7,9.30,174,116,31,0,0,0,0,0,0,3,2,23,1,0,0,0,te.txt
+Tyler Warren,TE,TE,Ind,,KC,away,Sun 8:20 pm,Sunday Kevin,1,13,8.80,46,125,99,0,0,0,0,0,0,5,3,13,1,0,0,0,te.txt
+Travis Kelce,TE,TE,KC,,Ind,home,Sun 8:20 pm,Sunday Kevin,1,5,8.60,118,127,94,0,0,0,0,0,0,5,3,71,0,0,0,0,te.txt
+David Njoku,TE,TE,LAC,,LV,home,Sun 4:05 pm,FA,1,7,8.30,315,132,4,0,0,0,0,0,0,5,5,58,0,0,0,0,te.txt
+Tucker Kraft,TE,TE,GB,,NYJ,away,Sun 1:00 pm,Max’s TD Bombers,1,11,8.00,66,137,99,0,0,0,0,0,0,6,3,65,0,0,0,0,te.txt
+Sam LaPorta,TE,TE,Det,,Buf,away,Thu 8:15 pm,Maybe Mitchell,1,6,7.30,70,149,99,0,0,0,0,0,0,8,5,48,0,0,0,0,te.txt
+Mark Andrews,TE,TE,Bal,,NO,home,Sun 1:00 pm,Bone Crushers,1,13,6.90,135,159,87,0,0,0,0,0,0,6,4,49,0,0,0,0,te.txt
+Eli Raridon,TE,TE,NE,,Pit,home,Sun 1:00 pm,FA,1,11,6.70,274,163,1,0,0,0,0,0,0,1,1,2,1,0,0,0,te.txt
+Michael Mayer,TE,TE,LV,,LAC,away,Sun 4:05 pm,FA,1,13,6.20,288,174,22,0,0,0,0,0,0,7,6,32,0,0,0,0,te.txt
+Jonnu Smith,TE,TE,GB,,NYJ,away,Sun 1:00 pm,FA,1,11,6.00,360,181,0,0,0,0,0,0,0,3,2,50,0,0,0,0,te.txt
+Dalton Schultz,TE,TE,Hou,,Cin,home,Sun 1:00 pm,Jason's Jazzy Team,1,8,5.50,149,191,48,0,0,0,0,0,0,8,4,35,0,0,0,0,te.txt
+Gunnar Helm,TE,TE,Ten,,Phi,home,Sun 1:00 pm,FA,1,9,4.80,264,199,2,0,0,0,0,0,0,5,4,28,0,0,0,0,te.txt
+Oronde Gadsden,TE,TE,LAC,,LV,home,Sun 4:05 pm,FA,1,7,4.20,217,207,7,0,0,0,0,0,0,2,2,32,0,0,0,0,te.txt
+Hunter Henry,TE,TE,NE,,Pit,home,Sun 1:00 pm,FA,1,11,4.10,166,209,54,0,0,0,0,0,0,3,3,26,0,0,0,0,te.txt
+Cade Otton,TE,TE,TB,,Cle,home,Sun 1:00 pm,FA,1,10,4.10,223,212,3,0,0,0,0,0,0,5,3,26,0,0,0,0,te.txt
+Tommy Tremble,TE,TE,Car,,Atl,away,Sun 1:00 pm,FA,1,5,4.00,2093,218,0,0,0,0,0,0,0,5,3,25,0,0,0,0,te.txt
+Darren Waller,TE,TE,Car,,Atl,away,Sun 1:00 pm,FA,1,5,3.80,248,223,2,0,0,0,0,0,0,2,2,28,0,0,0,0,te.txt
+Drew Sample,TE,TE,Cin,,Hou,away,Sun 1:00 pm,FA,1,6,3.40,2266,236,0,0,0,0,0,0,0,3,3,19,0,0,0,0,te.txt
+Josh Oliver,TE,TE,Min,,Chi,away,Sun 1:00 pm,FA,1,6,3.20,2070,242,0,0,0,0,0,0,0,4,2,22,0,0,0,0,te.txt
+Harold Fannin Jr.,TE,TE,Cle,,TB,away,Sun 1:00 pm,Locked In Michelle,1,11,3.10,78,243,96,0,0,0,0,0,0,3,2,21,0,0,0,0,te.txt
+Luke Farrell,TE,TE,SF,,Mia,home,Sun 4:25 pm,FA,1,8,2.90,2505,254,0,0,0,0,0,0,0,2,2,19,0,0,0,0,te.txt
+Darnell Washington,TE,TE,Pit,,NE,away,Sun 1:00 pm,FA,1,9,2.80,311,257,1,0,0,0,0,0,0,2,2,18,0,0,0,0,te.txt
+Greg Dulcich,TE,TE,Mia,,SF,away,Sun 4:25 pm,FA,1,6,2.80,193,258,10,0,0,0,0,0,0,2,2,18,0,0,0,0,te.txt
+Chig Okonkwo,TE,TE,Was,Q,Dal,away,Sun 4:25 pm,FA,1,7,2.60,158,262,31,0,0,0,0,0,0,3,2,16,0,0,0,0,te.txt
+Foster Moreau,TE,TE,Hou,,Cin,home,Sun 1:00 pm,FA,1,8,2.50,2271,264,0,0,0,0,0,0,0,2,2,15,0,0,0,0,te.txt
+Brevyn Spann-Ford,TE,TE,Dal,,Was,home,Sun 4:25 pm,FA,1,14,2.40,2633,265,0,0,0,0,0,0,0,2,2,14,0,0,0,0,te.txt
+AJ Barner,TE,TE,Sea,,Ari,away,Sun 4:25 pm,FA,1,11,2.30,183,269,15,0,0,0,0,0,0,2,2,13,0,0,0,0,te.txt
+John Bates,TE,TE,Was,,Dal,away,Sun 4:25 pm,FA,1,7,2.30,2292,271,0,0,0,0,0,0,0,3,2,13,0,0,0,0,te.txt
+George Kittle,TE,TE,SF,Q,Mia,home,Sun 4:25 pm,Owl Out Blitz,1,8,2.20,87,276,96,0,0,0,0,0,0,5,2,12,0,0,0,0,te.txt
+Marlin Klein,TE,TE,Hou,,Cin,home,Sun 1:00 pm,FA,1,8,2.10,307,278,0,0,0,0,0,0,0,1,1,16,0,0,0,0,te.txt
+Adam Trautman,TE,TE,Den,,Jax,home,Sun 4:05 pm,FA,1,10,2.00,2109,279,0,0,0,0,0,0,0,3,2,10,0,0,0,0,te.txt
+Blake Whiteheart,TE,TE,Cle,,TB,away,Sun 1:00 pm,FA,1,11,1.90,2718,285,0,0,0,0,0,0,0,1,1,14,0,0,0,0,te.txt
+Matt Hibner,TE,TE,Bal,,NO,home,Sun 1:00 pm,FA,1,13,1.80,2256,287,0,0,0,0,0,0,0,1,1,13,0,0,0,0,te.txt
+Davis Allen,TE,TE,LAR,,NYG,home,Mon 8:15 pm,FA,1,11,1.80,2119,286,0,0,0,0,0,0,0,1,1,13,0,0,0,0,te.txt
+Luke Schoonmaker,TE,TE,Dal,,Was,home,Sun 4:25 pm,FA,1,14,1.70,2500,289,0,0,0,0,0,0,0,1,1,12,0,0,0,0,te.txt
+Jake Ferguson,TE,TE,Dal,,Was,home,Sun 4:25 pm,JGrahnasaurs,1,14,1.60,146,292,78,0,0,0,0,0,0,2,2,6,0,0,0,0,te.txt
+Mitchell Evans,TE,TE,Car,,Atl,away,Sun 1:00 pm,FA,1,5,1.40,2116,299,0,0,0,0,0,0,0,2,1,9,0,0,0,0,te.txt
+Nate Boerkircher,TE,TE,Jax,,Den,away,Sun 4:05 pm,FA,1,7,1.40,2260,301,0,0,0,0,0,0,0,1,1,9,0,0,0,0,te.txt
+Theo Johnson,TE,TE,NYG,,LAR,away,Mon 8:15 pm,FA,1,8,1.40,334,298,0,0,0,0,0,0,0,1,1,9,0,0,0,0,te.txt
+Jake Briningstool,TE,TE,KC,,Ind,home,Sun 8:20 pm,FA,1,5,1.40,2261,300,0,0,0,0,0,0,0,1,1,9,0,0,0,0,te.txt
+Daniel Bellinger,TE,TE,Ten,,Phi,home,Sun 1:00 pm,FA,1,9,1.20,2097,306,0,0,0,0,0,0,0,1,1,7,0,0,0,0,te.txt
+Dawson Knox,TE,TE,Buf,,Det,home,Thu 8:15 pm,FA,1,7,1.20,368,305,1,0,0,0,0,0,0,1,1,7,0,0,0,0,te.txt
+Colby Parkinson,TE,TE,LAR,,NYG,home,Mon 8:15 pm,FA,1,11,1.10,247,307,1,0,0,0,0,0,0,2,1,6,0,0,0,0,te.txt
+Brock Wright,TE,TE,Det,,Buf,away,Thu 8:15 pm,FA,1,6,1.00,2076,311,0,0,0,0,0,0,0,1,1,5,0,0,0,0,te.txt
+Noah Gray,TE,TE,KC,,Ind,home,Sun 8:20 pm,FA,1,5,1.00,2115,310,0,0,0,0,0,0,0,1,1,5,0,0,0,0,te.txt
+Tanner Hudson,TE,TE,Cin,NA,Hou,away,Sun 1:00 pm,FA,1,6,0.90,2094,318,0,0,0,0,0,0,0,1,1,4,0,0,0,0,te.txt
+Durham Smythe,TE,TE,Bal,,NO,home,Sun 1:00 pm,FA,1,13,0.90,2688,317,0,0,0,0,0,0,0,1,1,4,0,0,0,0,te.txt
+Jeremy Ruckert,TE,TE,NYJ,,GB,home,Sun 1:00 pm,FA,1,13,0.90,2269,320,0,0,0,0,0,0,0,1,1,4,0,0,0,0,te.txt
+Mason Taylor,TE,TE,NYJ,,GB,home,Sun 1:00 pm,FA,1,13,0.80,314,322,0,0,0,0,0,0,0,3,2,-2,0,0,0,0,te.txt
+Cade Stover,TE,TE,Hou,,Cin,home,Sun 1:00 pm,FA,1,8,0.30,2502,334,0,0,0,0,0,0,0,1,1,-2,0,0,0,0,te.txt
+Tyler Higbee,TE,TE,LAR,,NYG,home,Mon 8:15 pm,FA,1,11,0.20,362,340,1,0,0,0,0,0,0,2,2,12,0,0,0,1,te.txt
+Eli Stowers,TE,TE,Phi,IR,Ten,away,Sun 1:00 pm,FA,,10,0.00,304,1010,1,,,,,,,,,,,,,,te.txt
+Drew Biber,TE,TE,Cle,NA,TB,away,Sun 1:00 pm,FA,,11,0.00,2210,579,0,,,,,,,,,,,,,,te.txt
+Drake Dabney,TE,TE,GB,NA,NYJ,away,Sun 1:00 pm,FA,,11,0.00,2209,959,0,,,,,,,,,,,,,,te.txt
+Gavin Bartholomew,TE,TE,Min,,Chi,away,Sun 1:00 pm,FA,,6,0.00,2236,700,0,,,,,,,,,,,,,,te.txt
+Layne Pryor,TE,TE,Hou,NA,Cin,home,Sun 1:00 pm,FA,,8,0.00,2219,989,0,,,,,,,,,,,,,,te.txt
+Jackson Meeks,WR,"WR,TE",Det,,Buf,away,Thu 8:15 pm,FA,,6,0.00,2282,819,0,,,,,,,,,,,,,,te.txt
+Thomas Gordon,TE,TE,Det,NA,Buf,away,Thu 8:15 pm,FA,,6,0.00,2207,976,0,,,,,,,,,,,,,,te.txt
+Carson Towt,TE,TE,Ind,IR,KC,away,Sun 8:20 pm,FA,,13,0.00,2145,992,0,,,,,,,,,,,,,,te.txt
+Moliki Matavao,TE,TE,NO,IR,Bal,away,Sun 1:00 pm,FA,,8,0.00,2226,704,0,,,,,,,,,,,,,,te.txt
+Thomas Fidone II,TE,TE,NYG,,LAR,away,Mon 8:15 pm,FA,,8,0.00,2147,702,0,,,,,,,,,,,,,,te.txt
+Jalen Coker,WR,WR,Car,Q,Atl,away,Sun 1:00 pm,Max’s TD Bombers,1,5,29.80,113,8,67,0,0,0,0,0,0,9,8,138,2,0,0,0,wr.txt
+Christian Watson,WR,WR,GB,,NYJ,away,Sun 1:00 pm,Sunday Kevin,1,11,29.70,52,10,97,0,0,0,0,0,0,8,6,147,2,0,0,0,wr.txt
+Justin Jefferson,WR,WR,Min,,Chi,away,Sun 1:00 pm,Maybe Mitchell,1,6,27.20,13,13,100,0,0,0,0,0,0,9,8,92,2,0,1,0,wr.txt
+Amon-Ra St. Brown,WR,WR,Det,,Buf,away,Thu 8:15 pm,Sunday Kevin,1,6,23.70,7,20,100,0,0,0,0,0,0,14,10,67,2,0,0,0,wr.txt
+Zay Flowers,WR,WR,Bal,Q,NO,home,Sun 1:00 pm,Jason's Jazzy Team,1,13,23.50,32,22,100,0,0,0,0,0,0,6,5,150,1,0,0,0,wr.txt
+Chris Olave,WR,WR,NO,,Bal,away,Sun 1:00 pm,Sunday Kevin,1,8,23.20,24,23,100,0,0,0,0,0,0,13,10,182,0,0,0,0,wr.txt
+Jaxon Smith-Njigba,WR,WR,Sea,,Ari,away,Sun 4:25 pm,Maybe Mitchell,1,11,22.20,8,25,100,0,0,0,0,0,0,11,8,122,1,0,0,0,wr.txt
+DJ Moore,WR,WR,Buf,,Det,home,Thu 8:15 pm,Bone Crushers,1,7,18.50,45,36,97,0,0,0,0,0,0,8,5,100,1,0,0,0,wr.txt
+Nico Collins,WR,WR,Hou,Q,Cin,home,Sun 1:00 pm,Steel City,1,8,17.70,18,39,100,0,0,0,1,7,0,10,7,75,1,0,0,0,wr.txt
+Parker Washington,WR,WR,Jax,,Den,away,Sun 4:05 pm,Max’s TD Bombers,1,7,16.80,54,43,95,0,0,0,0,0,0,6,5,83,1,0,0,0,wr.txt
+Ladd McConkey,WR,WR,LAC,Q,LV,home,Sun 4:05 pm,Bone Crushers,1,7,16.70,41,44,98,0,0,0,0,0,0,7,5,82,1,0,0,0,wr.txt
+Devaughn Vele,WR,WR,NO,,Bal,away,Sun 1:00 pm,FA,1,8,16.40,205,48,21,0,0,0,0,0,0,9,7,69,1,0,0,0,wr.txt
+Deebo Samuel Sr.,WR,WR,SF,,Mia,home,Sun 4:25 pm,Max’s TD Bombers,1,8,15.00,154,57,58,0,0,0,1,12,0,7,6,48,1,0,0,0,wr.txt
+Antonio Williams,WR,WR,Was,,Dal,away,Sun 4:25 pm,FA,1,7,14.40,238,59,6,0,0,0,0,0,0,4,4,64,1,0,0,0,wr.txt
+Dontayvion Wicks,WR,WR,Phi,,Ten,away,Sun 1:00 pm,FA,1,10,14.30,152,60,21,0,0,0,0,0,0,4,2,73,1,0,0,0,wr.txt
+Mike Evans,WR,WR,SF,,Mia,home,Sun 4:25 pm,Owl Out Blitz,1,8,13.90,60,65,96,0,0,0,0,0,0,7,6,49,1,0,0,0,wr.txt
+Stefon Diggs,WR,WR,Was,,Dal,away,Sun 4:25 pm,Monday Night Madison,1,7,13.50,97,66,87,0,0,0,0,0,0,9,4,55,1,0,0,0,wr.txt
+Denzel Boston,WR,WR,Cle,,TB,away,Sun 1:00 pm,FA,1,11,12.90,144,74,29,0,0,0,0,0,0,4,2,59,1,0,0,0,wr.txt
+CeeDee Lamb,WR,WR,Dal,,Was,home,Sun 4:25 pm,Owl Out Blitz,1,14,12.90,12,75,100,0,0,0,1,0,0,8,5,44,1,0,0,0,wr.txt
+Matthew Golden,WR,WR,GB,,NYJ,away,Sun 1:00 pm,Owl Out Blitz,1,11,12.50,99,79,78,0,0,0,0,0,0,12,6,95,0,0,0,0,wr.txt
+Kalif Raymond,WR,WR,Chi,,Min,home,Sun 1:00 pm,FA,1,10,12.40,350,80,4,0,0,0,0,0,0,9,8,84,0,0,0,0,wr.txt
+Demarcus Robinson,WR,WR,SF,,Mia,home,Sun 4:25 pm,FA,1,8,12.00,2078,84,2,0,0,0,0,0,0,3,2,50,1,0,0,0,wr.txt
+Caleb Douglas,WR,WR,Mia,,SF,away,Sun 4:25 pm,FA,1,6,11.90,179,89,22,0,0,0,0,0,0,7,5,94,0,0,0,0,wr.txt
+Kendrick Bourne,WR,WR,Ari,,Sea,home,Sun 4:25 pm,FA,1,14,11.50,348,95,2,0,0,0,0,0,0,8,8,75,0,0,0,0,wr.txt
+Jakobi Meyers,WR,WR,Jax,Q,Den,away,Sun 4:05 pm,Locked In Michelle,1,7,11.20,127,99,51,0,0,0,1,2,0,2,2,40,1,0,0,0,wr.txt
+Garrett Wilson,WR,WR,NYJ,,GB,home,Sun 1:00 pm,Steel City,1,13,10.90,36,102,98,0,0,0,0,0,0,7,6,79,0,0,0,0,wr.txt
+Joshua Palmer,WR,WR,Buf,,Det,home,Thu 8:15 pm,FA,1,7,9.90,292,111,0,0,0,0,0,0,0,2,1,34,1,0,0,0,wr.txt
+Puka Nacua,WR,WR,LAR,,NYG,home,Mon 8:15 pm,Owl Out Blitz,1,11,9.90,4,112,100,0,0,0,0,0,0,9,5,74,0,0,0,0,wr.txt
+Malik Nabers,WR,WR,NYG,,LAR,away,Mon 8:15 pm,Sunday Kevin,1,8,9.90,25,113,99,0,0,0,0,0,0,9,6,69,0,0,0,0,wr.txt
+Jack Bech,WR,WR,LV,,LAC,away,Sun 4:05 pm,FA,1,13,9.80,236,114,1,0,0,0,0,0,0,4,3,23,1,0,0,0,wr.txt
+Josh Cameron,WR,WR,Jax,,Den,away,Sun 4:05 pm,FA,1,7,9.00,2134,123,0,0,0,0,0,0,0,2,2,20,1,0,0,0,wr.txt
+Rashee Rice,WR,WR,KC,,Ind,home,Sun 8:20 pm,Locked In Michelle,1,5,8.90,39,124,99,0,0,0,0,0,0,2,2,19,1,0,0,0,wr.txt
+Emeka Egbuka,WR,WR,TB,,Cle,home,Sun 1:00 pm,Monday Night Madison,1,10,8.80,43,126,98,0,0,0,0,0,0,6,5,63,0,0,0,0,wr.txt
+Alec Pierce,WR,WR,Ind,,KC,away,Sun 8:20 pm,Monday Night Madison,1,13,8.10,96,134,89,0,0,0,0,0,0,6,4,61,0,0,0,0,wr.txt
+Michael Wilson,WR,WR,Ari,,Sea,home,Sun 4:25 pm,Maybe Mitchell,1,14,8.10,90,133,86,0,0,0,0,0,0,7,5,56,0,0,0,0,wr.txt
+Tetairoa McMillan,WR,WR,Car,,Atl,away,Sun 1:00 pm,Bone Crushers,1,5,8.00,37,135,99,0,0,0,0,0,0,8,5,75,0,0,0,1,wr.txt
+Elic Ayomanor,WR,WR,Ten,,Phi,home,Sun 1:00 pm,FA,1,9,7.60,323,145,0,0,0,0,0,0,0,3,1,11,1,0,0,0,wr.txt
+Adonai Mitchell,WR,WR,NYJ,,GB,home,Sun 1:00 pm,FA,1,13,7.50,145,147,16,0,0,0,0,0,0,3,3,60,0,0,0,0,wr.txt
+Tee Higgins,WR,WR,Cin,,Hou,away,Sun 1:00 pm,Jason's Jazzy Team,1,6,7.40,31,148,99,0,0,0,0,0,0,6,3,59,0,0,0,0,wr.txt
+Michael Pittman Jr.,WR,WR,Pit,Q,NE,away,Sun 1:00 pm,Sunday Kevin,1,9,7.30,104,150,80,0,0,0,0,0,0,3,3,58,0,0,0,0,wr.txt
+Mack Hollins,WR,WR,NE,,Pit,home,Sun 1:00 pm,FA,1,11,7.10,361,151,2,0,0,0,0,0,0,5,4,51,0,0,0,0,wr.txt
+Luther Burden III,WR,WR,Chi,,Min,home,Sun 1:00 pm,Max’s TD Bombers,1,10,7.00,44,154,97,0,0,0,1,2,0,5,5,63,0,0,0,1,wr.txt
+Khalil Shakir,WR,WR,Buf,,Det,home,Thu 8:15 pm,FA,1,7,7.00,139,155,44,0,0,0,0,0,0,6,4,50,0,0,0,0,wr.txt
+DeVonta Smith,WR,WR,Phi,,Ten,away,Sun 1:00 pm,Max’s TD Bombers,1,10,6.80,26,160,100,0,0,0,0,0,0,6,3,53,0,0,0,0,wr.txt
+Jahdae Walker,WR,WR,Chi,,Min,home,Sun 1:00 pm,FA,1,10,6.60,2107,164,0,0,0,0,0,0,0,1,1,1,1,0,0,0,wr.txt
+Jameson Williams,WR,WR,Det,,Buf,away,Thu 8:15 pm,Jason's Jazzy Team,1,6,6.50,49,165,97,0,0,0,0,0,0,9,4,45,0,0,0,0,wr.txt
+Wan'Dale Robinson,WR,WR,Ten,,Phi,home,Sun 1:00 pm,JGrahnasaurs,1,9,6.30,109,169,63,0,0,0,0,0,0,6,5,38,0,0,0,0,wr.txt
+Jaylin Noel,WR,WR,Hou,,Cin,home,Sun 1:00 pm,FA,1,8,6.30,190,168,2,0,0,0,0,0,0,2,2,53,0,0,0,0,wr.txt
+Chris Godwin Jr.,WR,WR,TB,,Cle,home,Sun 1:00 pm,Steel City,1,10,6.30,82,170,90,0,0,0,1,3,0,4,4,40,0,0,0,0,wr.txt
+Keenan Allen,WR,WR,Ind,,KC,away,Sun 8:20 pm,FA,1,13,6.20,147,173,26,0,0,0,0,0,0,6,6,32,0,0,0,0,wr.txt
+Pat Bryant,WR,WR,Den,,Jax,home,Sun 4:05 pm,FA,1,10,6.20,171,171,9,0,0,0,0,0,0,6,4,42,0,0,0,0,wr.txt
+Rome Odunze,WR,WR,Chi,,Min,home,Sun 1:00 pm,JGrahnasaurs,1,10,6.20,51,172,96,0,0,0,0,0,0,3,2,52,0,0,0,0,wr.txt
+DK Metcalf,WR,WR,Pit,,NE,away,Sun 1:00 pm,Jason's Jazzy Team,1,9,6.00,76,180,93,0,0,0,0,0,0,10,4,40,0,0,0,0,wr.txt
+Carnell Tate,WR,WR,Ten,,Phi,home,Sun 1:00 pm,W (Sep 19),1,9,5.80,74,188,90,0,0,0,0,0,0,6,4,38,0,0,0,0,wr.txt
+KC Concepcion Jr.,WR,WR,Cle,,TB,away,Sun 1:00 pm,Steel City,1,11,5.80,98,189,73,0,0,0,3,15,0,5,4,43,0,0,0,1,wr.txt
+Chris Moore,WR,WR,Bal,,NO,home,Sun 1:00 pm,FA,1,13,5.80,2253,187,0,0,0,0,0,0,0,2,1,53,0,0,0,0,wr.txt
+Bryce Lance,WR,WR,NO,,Bal,away,Sun 1:00 pm,FA,1,8,5.70,287,190,0,0,0,0,0,0,0,4,3,42,0,0,0,0,wr.txt
+Brian Thomas Jr.,WR,WR,Jax,Q,Den,away,Sun 4:05 pm,Owl Out Blitz,1,7,5.50,73,192,89,0,0,0,0,0,0,3,3,40,0,0,0,0,wr.txt
+Ted Hurst III,WR,WR,TB,,Cle,home,Sun 1:00 pm,FA,1,10,5.10,241,194,1,0,0,0,0,0,0,3,3,36,0,0,0,0,wr.txt
+Malik Washington,WR,WR,Mia,,SF,away,Sun 4:25 pm,FA,1,6,4.80,208,198,14,0,0,0,0,0,0,8,3,53,0,0,0,1,wr.txt
+Xavier Hutchinson,WR,WR,Hou,,Cin,home,Sun 1:00 pm,FA,1,8,4.70,295,201,0,0,0,0,0,0,0,6,3,32,0,0,0,0,wr.txt
+Josh Downs,WR,WR,Ind,,KC,away,Sun 8:20 pm,Bone Crushers,1,13,4.70,88,200,85,0,0,0,0,0,0,4,2,37,0,0,0,0,wr.txt
+Drake London,WR,WR,Atl,,Car,home,Sun 1:00 pm,Bone Crushers,1,11,4.50,20,203,100,0,0,0,1,6,0,4,2,29,0,0,0,0,wr.txt
+Cooper Kupp,WR,WR,Sea,,Ari,away,Sun 4:25 pm,FA,1,11,4.50,263,205,11,0,0,0,0,0,0,3,2,35,0,0,0,0,wr.txt
+DeMario Douglas,WR,WR,NE,,Pit,home,Sun 1:00 pm,FA,1,11,4.50,293,204,2,0,0,0,0,0,0,7,5,20,0,0,0,0,wr.txt
+George Pickens,WR,WR,Dal,,Was,home,Sun 4:25 pm,Locked In Michelle,1,14,4.30,22,206,100,0,0,0,0,0,0,6,3,28,0,0,0,0,wr.txt
+Jalen Nailor,WR,WR,LV,,LAC,away,Sun 4:05 pm,FA,1,13,4.20,186,208,16,0,0,0,0,0,0,5,3,27,0,0,0,0,wr.txt
+Davante Adams,WR,WR,LAR,,NYG,home,Mon 8:15 pm,JGrahnasaurs,1,11,4.10,55,210,97,0,0,0,0,0,0,6,3,26,0,0,0,0,wr.txt
+A.J. Brown,WR,WR,NE,IR,Pit,home,Sun 1:00 pm,Monday Night Madison,1,11,4.10,23,211,99,0,0,0,0,0,0,4,3,26,0,0,0,0,wr.txt
+Roman Wilson,WR,WR,Pit,,NE,away,Sun 1:00 pm,FA,1,9,4.10,346,213,0,0,0,0,0,0,0,6,3,26,0,0,0,0,wr.txt
+Marvin Harrison Jr.,WR,WR,Ari,,Sea,home,Sun 4:25 pm,Locked In Michelle,1,14,3.80,68,224,92,0,0,0,0,0,0,3,1,33,0,0,0,0,wr.txt
+Darnell Mooney,WR,WR,NYG,,LAR,away,Mon 8:15 pm,FA,1,8,3.70,261,226,1,0,0,0,0,0,0,2,2,27,0,0,0,0,wr.txt
+Tre Tucker,WR,WR,LV,,LAC,away,Sun 4:05 pm,FA,1,13,3.70,142,227,32,0,0,0,0,0,0,4,2,27,0,0,0,0,wr.txt
+Jerry Jeudy,WR,WR,Cle,,TB,away,Sun 1:00 pm,FA,1,11,3.60,196,230,10,0,0,0,0,0,0,4,2,26,0,0,0,0,wr.txt
+Tre' Harris,WR,WR,LAC,,LV,home,Sun 4:05 pm,FA,1,7,3.50,184,232,4,0,0,0,0,0,0,6,3,20,0,0,0,0,wr.txt
+Malachi Fields,WR,WR,NYG,,LAR,away,Mon 8:15 pm,FA,1,8,3.50,225,235,11,0,0,0,0,0,0,4,2,25,0,0,0,0,wr.txt
+Jayden Reed,WR,WR,GB,,NYJ,away,Sun 1:00 pm,Locked In Michelle,1,11,3.50,94,233,83,0,0,0,0,0,0,7,3,20,0,0,0,0,wr.txt
+Xavier Worthy,WR,WR,KC,,Ind,home,Sun 8:20 pm,FA,1,5,3.30,131,240,56,0,0,0,0,0,0,6,3,18,0,0,0,0,wr.txt
+Dohnte Meyers,WR,WR,Cin,,Hou,away,Sun 1:00 pm,FA,1,6,3.30,2293,239,0,0,0,0,1,10,0,1,1,18,0,0,0,0,wr.txt
+Ryan Flournoy,WR,WR,Dal,,Was,home,Sun 4:25 pm,FA,1,14,3.20,172,241,7,0,0,0,0,0,0,4,2,22,0,0,0,0,wr.txt
+Chris Bell,WR,WR,Mia,,SF,away,Sun 4:25 pm,FA,1,6,3.00,206,252,7,0,0,0,0,0,0,2,1,25,0,0,0,0,wr.txt
+Quentin Johnston,WR,WR,LAC,,LV,home,Sun 4:05 pm,Sunday Kevin,1,7,2.70,89,260,84,0,0,0,0,0,0,6,2,17,0,0,0,0,wr.txt
+Kayshon Boutte,WR,WR,Hou,,Cin,home,Sun 1:00 pm,FA,1,8,2.60,177,261,20,0,0,0,0,0,0,2,1,21,0,0,0,0,wr.txt
+LaJohntay Wester,WR,WR,Bal,,NO,home,Sun 1:00 pm,FA,1,13,2.50,2760,263,0,0,0,0,0,0,0,2,2,15,0,0,0,0,wr.txt
+Jahan Dotson,WR,WR,Atl,,Car,home,Sun 1:00 pm,FA,1,11,2.40,234,267,1,0,0,0,0,0,0,3,1,19,0,0,0,0,wr.txt
+Terry McLaurin,WR,WR,Was,,Dal,away,Sun 4:25 pm,Monday Night Madison,1,7,2.40,47,266,97,0,0,0,0,0,0,4,2,14,0,0,0,0,wr.txt
+Ja'Marr Chase,WR,WR,Cin,,Hou,away,Sun 1:00 pm,Steel City,1,6,2.20,3,274,100,0,0,0,0,0,0,4,2,12,0,0,0,0,wr.txt
+Andrei Iosivas,WR,WR,Cin,,Hou,away,Sun 1:00 pm,FA,1,6,2.20,321,275,0,0,0,0,0,0,0,3,2,12,0,0,0,0,wr.txt
+Courtland Sutton,WR,WR,Den,,Jax,home,Sun 4:05 pm,JGrahnasaurs,1,10,2.10,100,277,85,0,0,0,0,0,0,5,2,11,0,0,0,0,wr.txt
+Jared Wayne,WR,WR,Hou,,Cin,home,Sun 1:00 pm,FA,1,8,1.70,2504,290,0,0,0,0,0,0,0,1,1,12,0,0,0,0,wr.txt
+Ja'Kobi Lane,WR,WR,Bal,IR,NO,home,Sun 1:00 pm,FA,1,13,1.60,161,293,15,0,0,0,0,0,0,3,1,11,0,0,0,0,wr.txt
+Travis Hunter,WR,WR,Jax,,Den,away,Sun 4:05 pm,FA,1,7,1.60,187,291,14,0,0,0,1,3,0,1,1,8,0,0,0,0,wr.txt
+Bo Melton,WR,WR,GB,,NYJ,away,Sun 1:00 pm,FA,1,11,1.50,2695,296,0,0,0,0,0,0,0,1,1,10,0,0,0,0,wr.txt
+Jonathan Mingo,WR,WR,Dal,,Was,home,Sun 4:25 pm,FA,1,14,1.50,2748,295,0,0,0,0,0,0,0,1,1,10,0,0,0,0,wr.txt
+KaVontae Turpin,WR,WR,Dal,,Was,home,Sun 4:25 pm,FA,1,14,1.30,2085,303,4,0,0,0,0,0,0,1,1,8,0,0,0,0,wr.txt
+Jordan Whittington,WR,WR,LAR,,NYG,home,Mon 8:15 pm,FA,1,11,1.30,2675,302,0,0,0,0,0,0,0,1,1,8,0,0,0,0,wr.txt
+Isaiah Williams,WR,WR,NYJ,,GB,home,Sun 1:00 pm,FA,1,13,1.20,2631,304,0,0,0,0,0,0,0,1,1,7,0,0,0,0,wr.txt
+Olamide Zaccheaus,WR,WR,Atl,,Car,home,Sun 1:00 pm,FA,1,11,1.00,2091,312,0,0,0,0,0,0,0,1,1,5,0,0,0,0,wr.txt
+Makai Lemon,WR,WR,Phi,,Ten,away,Sun 1:00 pm,W (Sep 19),1,10,1.00,102,313,67,0,0,0,0,0,0,4,3,-5,0,0,0,0,wr.txt
+Rashid Shaheed,WR,WR,Sea,,Ari,away,Sun 4:25 pm,Maybe Mitchell,1,11,0.90,132,321,44,0,0,0,0,0,0,3,1,4,0,0,0,0,wr.txt
+Jaylin Lane,WR,WR,Was,Q,Dal,away,Sun 4:25 pm,FA,1,7,0.90,2512,319,0,0,0,0,0,0,0,1,1,4,0,0,0,0,wr.txt
+Jaylen Waddle,WR,WR,Den,,Jax,home,Sun 4:05 pm,Owl Out Blitz,1,10,0.70,33,323,99,0,0,0,0,0,0,3,1,2,0,0,0,0,wr.txt
+Keon Coleman,WR,WR,Buf,,Det,home,Thu 8:15 pm,FA,1,7,0.60,275,329,2,0,0,0,0,0,0,1,1,1,0,0,0,0,wr.txt
+Troy Franklin,WR,WR,Den,,Jax,home,Sun 4:05 pm,FA,1,10,0.50,299,331,1,0,0,0,1,5,0,1,0,0,0,0,0,0,wr.txt
+Malik Benson,WR,WR,LV,,LAC,away,Sun 4:05 pm,FA,1,13,0.30,296,339,0,0,0,0,1,-8,0,2,1,6,0,0,0,0,wr.txt
+Barion Brown,WR,WR,NO,,Bal,away,Sun 1:00 pm,FA,1,8,0.30,2513,338,1,0,0,0,1,3,0,0,0,0,0,0,0,0,wr.txt
+Luke Grimm,WR,WR,LAC,NA,LV,home,Sun 4:05 pm,FA,,7,0.00,2477,744,0,,,,,,,,,,,,,,wr.txt
+Kyrese Rowan,WR,WR,NO,NA,Bal,away,Sun 1:00 pm,FA,,8,0.00,2389,961,0,,,,,,,,,,,,,,wr.txt
+Jaden Smith,WR,WR,Dal,NA,Was,home,Sun 4:25 pm,FA,,14,0.00,2400,974,0,,,,,,,,,,,,,,wr.txt
+Isaiah Bond,WR,WR,Cle,,TB,away,Sun 1:00 pm,FA,0,11,0.00,336,987,0,0,0,0,0,0,0,0,0,0,0,0,0,0,wr.txt
+Joaquin Davis,WR,WR,Pit,NA,NE,away,Sun 1:00 pm,FA,,9,0.00,2427,729,0,,,,,,,,,,,,,,wr.txt
+Trent Taylor,WR,WR,SF,NA,Mia,home,Sun 4:25 pm,FA,,8,0.00,2342,980,0,,,,,,,,,,,,,,wr.txt
+Damien Alford,WR,WR,NO,NA,Bal,away,Sun 1:00 pm,FA,,8,0.00,2416,993,0,,,,,,,,,,,,,,wr.txt
+Josh Reynolds,WR,WR,NYJ,NA,GB,home,Sun 1:00 pm,FA,,13,0.00,2127,955,0,,,,,,,,,,,,,,wr.txt
+De'Zhaun Stribling,WR,WR,SF,O,Mia,home,Sun 4:25 pm,Maybe Mitchell,,8,0.00,93,1001,60,,,,,,,,,,,,,,wr.txt
+Bryson Green,WR,WR,Ari,NA,Sea,home,Sun 4:25 pm,FA,,14,0.00,2415,743,0,,,,,,,,,,,,,,wr.txt
+Jordyn Tyson,WR,WR,NO,IR-R,Bal,away,Sun 1:00 pm,FA,,8,0.00,129,997,55,,,,,,,,,,,,,,wr.txt
+Will Sheppard,WR,WR,Mia,NA,SF,away,Sun 4:25 pm,FA,,6,0.00,2382,736,0,,,,,,,,,,,,,,wr.txt
+JuJu Smith-Schuster,WR,WR,NYG,NA,LAR,away,Mon 8:15 pm,FA,,8,0.00,2126,935,0,,,,,,,,,,,,,,wr.txt
+Curtis Samuel,WR,WR,Buf,NA,Det,home,Thu 8:15 pm,FA,,7,0.00,2290,926,0,,,,,,,,,,,,,,wr.txt
+Zay Jones,WR,WR,Hou,NA,Cin,home,Sun 1:00 pm,FA,,8,0.00,2284,925,0,,,,,,,,,,,,,,wr.txt
+Germie Bernard,WR,WR,Pit,,NE,away,Sun 1:00 pm,FA,,9,0.00,266,1009,1,,,,,,,,,,,,,,wr.txt
+Garrett Greene,WR,WR,TB,NA,Cle,home,Sun 1:00 pm,FA,,10,0.00,2451,738,0,,,,,,,,,,,,,,wr.txt
+Andrew Armstrong,WR,WR,KC,NA,Ind,home,Sun 8:20 pm,FA,,5,0.00,2336,767,0,,,,,,,,,,,,,,wr.txt

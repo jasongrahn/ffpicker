@@ -1,0 +1,26 @@
+date,player,pos,pos_eligible,nfl_team,status,opponent,home_away,kickoff,roster_status,change,source_file
+Sep 16,Cooper McDonald,LB,LB,KC,IR,Ind,home,Sun 8:20 pm,FA,Deactivated,roster-changes
+Sep 16,Kitan Crawford,S,S,Ari,IR,Sea,home,Sun 4:25 pm,FA,Deactivated,roster-changes
+Sep 16,Kalen King,CB,CB,Ari,,Sea,home,Sun 4:25 pm,FA,Activated,roster-changes
+Sep 16,Jaylin Simpson,S,"S,CB",Mia,,SF,away,Sun 4:25 pm,FA,Activated,roster-changes
+Sep 16,Jordan Magee,LB,LB,Was,IR,Dal,away,Sun 4:25 pm,FA,Deactivated,roster-changes
+Sep 16,Jake Tonges,TE,TE,SF,IR,Mia,home,Sun 4:25 pm,FA,Deactivated,roster-changes
+Sep 16,Da'Shawn Hand,DT,"DT,DE",Atl,IR,Car,home,Sun 1:00 pm,FA,Deactivated,roster-changes
+Sep 16,Jack Kiser,LB,LB,Jax,,Den,away,Sun 4:05 pm,FA,Activated,roster-changes
+Sep 16,Lil'Jordan Humphrey,WR,WR,Den,,Jax,home,Sun 4:05 pm,FA,Activated,roster-changes
+Sep 15,Jordan Clark,S,S,NYJ,,GB,home,Sun 1:00 pm,FA,Activated,roster-changes
+Sep 15,Jimmy Horn Jr.,WR,WR,Car,NA,Atl,away,Sun 1:00 pm,FA,Deactivated,roster-changes
+Sep 15,KeAndre Lambert-Smith,WR,WR,LAC,IR,LV,home,Sun 4:05 pm,FA,Deactivated,roster-changes
+Sep 15,Dylan Sampson,RB,RB,Cle,IR,TB,away,Sun 1:00 pm,FA,Deactivated,roster-changes
+Sep 15,Jamal Hill,LB,LB,Hou,,Cin,home,Sun 1:00 pm,FA,Activated,roster-changes
+Sep 15,Xavier Thomas,LB,"LB,DE",SF,SUSP,Mia,home,Sun 4:25 pm,FA,Deactivated,roster-changes
+Sep 15,Jaleel McLaughlin,RB,RB,Cle,,TB,away,Sun 1:00 pm,FA,Activated,roster-changes
+Sep 15,Brayden Willis,TE,TE,SF,,Mia,home,Sun 4:25 pm,FA,Activated,roster-changes
+Sep 15,Britain Covey,WR,WR,Phi,,Ten,away,Sun 1:00 pm,FA,Activated,roster-changes
+Sep 15,Gary Jennings,WR,WR,LAC,,LV,home,Sun 4:05 pm,FA,Activated,roster-changes
+Sep 15,Marcus Harris,DL,"DL,DT",KC,NA,Ind,home,Sun 8:20 pm,FA,Deactivated,roster-changes
+Sep 15,Henry To'oTo'o,LB,LB,Hou,IR,Cin,home,Sun 1:00 pm,FA,Deactivated,roster-changes
+Sep 15,Tyler Goodson,RB,RB,Dal,,Was,home,Sun 4:25 pm,FA,Activated,roster-changes
+Sep 15,Adam Prentice,RB,RB,Den,NA,Jax,home,Sun 4:05 pm,FA,Deactivated,roster-changes
+Sep 15,Tyrel Dodson,LB,LB,Car,,Atl,away,Sun 1:00 pm,FA,Activated,roster-changes
+Sep 15,Lil'Jordan Humphrey,WR,WR,Den,,Jax,home,Sun 4:05 pm,FA,Deactivated,roster-changes

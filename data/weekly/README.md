@@ -20,11 +20,28 @@ counterfactual. Without them there is no bar.
 `regret = (best legal lineup from full roster) - (lineup actually started)`.
 Picker earns its keep only if it closes regret across many weeks, not one.
 
+## Decision log — second file per week, from Week 2 on
+
+`2026_week{NN}_decisions.md`. Written **before first kickoff, frozen at kickoff**,
+retro appended below a line that is never edited.
+
+Why: regret scores the *lineup*. It cannot score the *reasoning*. Week 1 notes were
+written post-game, so every rationale in them is reconstructed and unfalsifiable.
+
+Each decision records call -> reason -> **kill condition** stated up front. Kill
+condition must be a result that proves the reasoning wrong, not merely a bad score.
+Wk1 is the proof they differ: Mahomes-over-Stafford was worth 0.35 pts ex-ante and
+17.56 ex-post. Right process, wrong outcome. Log both, never collapse them.
+
+Also log contrarian calls explicitly (`% started` vs our call) — those are the only
+ones where being right is informative.
+
 ## Cases so far
 
 | week | result | started | optimal | regret | opp |
 |---|---|---|---|---|---|
 | 1 | L vs Bone Crushers | 101.80 | **121.56** | **19.76** | 118.96 |
+| 2 | **W** vs Sunday Kevin | 152.58 | **155.08** | **2.50** | 112.08 |
 
 ## Week 1 notes
 

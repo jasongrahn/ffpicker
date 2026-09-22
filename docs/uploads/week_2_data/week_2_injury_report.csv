@@ -1,0 +1,665 @@
+player,pos,pos_eligible,nfl_team,status,opponent,home_away,kickoff,injury_type,depth_chart,source_file
+Brock Rechsteiner,WR,WR,NO,SUSP,Bal,away,Sun 1:00 pm,Suspension,NO,injury-report.txt
+Jeshaun Jones,WR,WR,Min,SUSP,Chi,away,Sun 1:00 pm,Suspension,Min,injury-report.txt
+Omar Cooper Jr.,WR,WR,NYJ,Q,GB,home,Sun 1:00 pm,Ankle,NYJ,injury-report.txt
+D'Andre Swift,RB,RB,Chi,Q,Min,home,Sun 1:00 pm,Ankle,Chi,injury-report.txt
+Kene Nwangwu,RB,RB,NYJ,Q,GB,home,Sun 1:00 pm,Back,NYJ,injury-report.txt
+Tory Horton,WR,WR,Sea,Q,Ari,away,Sun 4:25 pm,Hamstring,Sea,injury-report.txt
+Nico Collins,WR,WR,Hou,Q,Cin,home,Sun 1:00 pm,Hamstring,Hou,injury-report.txt
+Jaylin Lane,WR,WR,Was,Q,Dal,away,Sun 4:25 pm,Groin,Was,injury-report.txt
+RJ Harvey,RB,RB,Den,Q,Jax,home,Sun 4:05 pm,Hamstring,Den,injury-report.txt
+George Kittle,TE,TE,SF,Q,Mia,home,Sun 4:25 pm,Achilles,SF,injury-report.txt
+Anthony Richardson Sr.,QB,QB,Ind,Q,KC,away,Sun 8:20 pm,Groin,Ind,injury-report.txt
+Juwan Johnson,TE,TE,NO,Q,Bal,away,Sun 1:00 pm,Illness,NO,injury-report.txt
+Marvin Mims Jr.,WR,WR,Den,Q,Jax,home,Sun 4:05 pm,Foot,Den,injury-report.txt
+Jalen Coker,WR,WR,Car,Q,Atl,away,Sun 1:00 pm,Ankle,Car,injury-report.txt
+Michael Pittman Jr.,WR,WR,Pit,Q,NE,away,Sun 1:00 pm,Foot,Pit,injury-report.txt
+Chig Okonkwo,TE,TE,Was,Q,Dal,away,Sun 4:25 pm,Hamstring,Was,injury-report.txt
+Kyler Murray,QB,QB,Min,Q,Chi,away,Sun 1:00 pm,Concussion,Min,injury-report.txt
+Tua Tagovailoa,QB,QB,Atl,Q,Car,home,Sun 1:00 pm,Oblique,Atl,injury-report.txt
+Joe Burrow,QB,QB,Cin,Q,Hou,away,Sun 1:00 pm,Back,Cin,injury-report.txt
+Tyrone Tracy Jr.,RB,RB,NYG,Q,LAR,away,Mon 8:15 pm,Illness,NYG,injury-report.txt
+Ashton Dulin,WR,WR,Ind,Q,KC,away,Sun 8:20 pm,Ankle,Ind,injury-report.txt
+Jakobi Meyers,WR,WR,Jax,Q,Den,away,Sun 4:05 pm,Thumb,Jax,injury-report.txt
+Oscar Delp,TE,TE,NO,Q,Bal,away,Sun 1:00 pm,Hamstring,NO,injury-report.txt
+Brock Bowers,TE,TE,LV,Q,LAC,away,Sun 4:05 pm,Knee - Meniscus,LV,injury-report.txt
+Brian Thomas Jr.,WR,WR,Jax,Q,Den,away,Sun 4:05 pm,Shoulder,Jax,injury-report.txt
+Michael Penix Jr.,QB,QB,Atl,Q,Car,home,Sun 1:00 pm,Knee - ACL,Atl,injury-report.txt
+Ladd McConkey,WR,WR,LAC,Q,LV,home,Sun 4:05 pm,Ribs,LAC,injury-report.txt
+Ty Johnson,RB,RB,Buf,Q,Det,home,Thu 8:15 pm,Hamstring,Buf,injury-report.txt
+LeQuint Allen Jr.,RB,RB,Jax,Q,Den,away,Sun 4:05 pm,Hip,Jax,injury-report.txt
+Zay Flowers,WR,WR,Bal,Q,NO,home,Sun 1:00 pm,Hamstring,Bal,injury-report.txt
+Kyle Monangai,RB,RB,Chi,Q,Min,home,Sun 1:00 pm,Hamstring,Chi,injury-report.txt
+Isaac Guerendo,RB,RB,SF,P,Mia,home,Sun 4:25 pm,Pectoral,SF,injury-report.txt
+Mason Tipton,WR,WR,NO,P,Bal,away,Sun 1:00 pm,Leg,NO,injury-report.txt
+Tip Reiman,TE,TE,Ari,P,Sea,home,Sun 4:25 pm,Ankle,Ari,injury-report.txt
+Tyrell Shavers,WR,WR,Buf,P,Det,home,Thu 8:15 pm,Knee - ACL,Buf,injury-report.txt
+Zach Charbonnet,RB,RB,Sea,P,Ari,away,Sun 4:25 pm,Knee - ACL,Sea,injury-report.txt
+Luke Musgrave,TE,TE,GB,P,NYJ,away,Sun 1:00 pm,Neck,GB,injury-report.txt
+Joe Mixon,RB,RB,Hou,O,Cin,home,Sun 1:00 pm,Foot,Hou,injury-report.txt
+De'Zhaun Stribling,WR,WR,SF,O,Mia,home,Sun 4:25 pm,Ankle,SF,injury-report.txt
+Sam Darnold,QB,QB,Sea,O,Ari,away,Sun 4:25 pm,Lower Body,Sea,injury-report.txt
+Joe Royer,TE,TE,Cle,,TB,away,Sun 1:00 pm,Personal,Cle,injury-report.txt
+Emmanuel Henderson Jr.,WR,WR,Sea,,Ari,away,Sun 4:25 pm,,Sea,injury-report.txt
+Zack Kuntz,TE,TE,Dal,NA,Was,home,Sun 4:25 pm,,Dal,injury-report.txt
+Mitchell Tinsley,WR,WR,Hou,NA,Cin,home,Sun 1:00 pm,,Hou,injury-report.txt
+Khalil Dinkins,TE,TE,SF,NA,Mia,home,Sun 4:25 pm,,SF,injury-report.txt
+Danny Gray,WR,WR,Phi,NA,Ten,away,Sun 1:00 pm,Undisclosed,Phi,injury-report.txt
+Adrian Martinez,QB,QB,SF,NA,Mia,home,Sun 4:25 pm,,SF,injury-report.txt
+Wesley Grimes,WR,WR,SF,NA,Mia,home,Sun 4:25 pm,,SF,injury-report.txt
+Malik Cunningham,WR,WR,Det,NA,Buf,away,Thu 8:15 pm,,Det,injury-report.txt
+Ronnie Bell,WR,WR,LV,NA,LAC,away,Sun 4:05 pm,,LV,injury-report.txt
+Kenny McIntosh,RB,RB,Sea,NA,Ari,away,Sun 4:25 pm,,Sea,injury-report.txt
+Colton Dowell,WR,WR,SF,NA,Mia,home,Sun 4:25 pm,,SF,injury-report.txt
+Lew Nichols,RB,RB,Pit,NA,NE,away,Sun 1:00 pm,,Pit,injury-report.txt
+A.T. Perry,WR,WR,Den,NA,Jax,home,Sun 4:05 pm,,Den,injury-report.txt
+Tyler Scott,WR,WR,LAR,NA,NYG,home,Mon 8:15 pm,,LAR,injury-report.txt
+Jalin Hyatt,WR,WR,NYG,NA,LAR,away,Mon 8:15 pm,,NYG,injury-report.txt
+Deuce Vaughn,RB,RB,Hou,NA,Cin,home,Sun 1:00 pm,,Hou,injury-report.txt
+Trey Palmer,WR,WR,NO,NA,Bal,away,Sun 1:00 pm,,NO,injury-report.txt
+Jake Moody,K,K,Bal,NA,NO,home,Sun 1:00 pm,,Bal,injury-report.txt
+Eric Gray,RB,RB,Cle,NA,TB,away,Sun 1:00 pm,,Cle,injury-report.txt
+Dameon Pierce,RB,RB,Phi,NA,Ten,away,Sun 1:00 pm,,Phi,injury-report.txt
+Clayton Tune,QB,QB,GB,NA,NYJ,away,Sun 1:00 pm,,GB,injury-report.txt
+Sean Clifford,QB,QB,Cin,NA,Hou,away,Sun 1:00 pm,,Cin,injury-report.txt
+Evan Hull,RB,RB,Ari,NA,Sea,home,Sun 4:25 pm,,Ari,injury-report.txt
+Israel Abanikanda,RB,RB,Dal,NA,Was,home,Sun 4:25 pm,,Dal,injury-report.txt
+Charlie Jones,WR,WR,NYG,NA,LAR,away,Mon 8:15 pm,,NYG,injury-report.txt
+Jake Haener,QB,QB,NYG,NA,LAR,away,Mon 8:15 pm,,NYG,injury-report.txt
+B.T. Potter,K,K,TB,NA,Cle,home,Sun 1:00 pm,,TB,injury-report.txt
+Joel Wilson,TE,TE,Ten,NA,Phi,home,Sun 1:00 pm,,Ten,injury-report.txt
+Ben Sims,TE,TE,Mia,NA,SF,away,Sun 4:25 pm,Undisclosed,Mia,injury-report.txt
+Desmond Ridder,QB,QB,GB,NA,NYJ,away,Sun 1:00 pm,,GB,injury-report.txt
+Dylan Drummond,WR,WR,Atl,NA,Car,home,Sun 1:00 pm,,Atl,injury-report.txt
+Jalen Moreno-Cropper,WR,WR,NO,NA,Bal,away,Sun 1:00 pm,,NO,injury-report.txt
+Lucky Jackson,WR,WR,Det,NA,Buf,away,Thu 8:15 pm,,Det,injury-report.txt
+Robert Henry Jr.,RB,RB,Was,NA,Dal,away,Sun 4:25 pm,,Was,injury-report.txt
+Charlie Smyth,K,K,NO,NA,Bal,away,Sun 1:00 pm,,NO,injury-report.txt
+Dante Miller,RB,RB,NYG,NA,LAR,away,Mon 8:15 pm,Groin,NYG,injury-report.txt
+Chris Hilton Jr.,WR,WR,GB,NA,NYJ,away,Sun 1:00 pm,,GB,injury-report.txt
+Owen Wright,RB,RB,Hou,NA,Cin,home,Sun 1:00 pm,,Hou,injury-report.txt
+Velus Jones Jr.,WR,"WR,RB",Sea,NA,Ari,away,Sun 4:25 pm,,Sea,injury-report.txt
+Eric Rivers Jr.,WR,WR,TB,NA,Cle,home,Sun 1:00 pm,,TB,injury-report.txt
+Noah Short,WR,WR,TB,NA,Cle,home,Sun 1:00 pm,,TB,injury-report.txt
+Vinny Anthony II,WR,WR,Atl,NA,Car,home,Sun 1:00 pm,,Atl,injury-report.txt
+Ja'Lynn Polk,WR,WR,NO,NA,Bal,away,Sun 1:00 pm,Undisclosed,NO,injury-report.txt
+Malik Rutherford,WR,WR,Atl,NA,Car,home,Sun 1:00 pm,,Atl,injury-report.txt
+Travis Vokolek,TE,TE,Ari,NA,Sea,home,Sun 4:25 pm,,Ari,injury-report.txt
+Jordan Mims,RB,RB,Phi,NA,Ten,away,Sun 1:00 pm,,Phi,injury-report.txt
+Anthony Smith,WR,WR,Dal,NA,Was,home,Sun 4:25 pm,,Dal,injury-report.txt
+Harrison Wallace III,WR,WR,Ari,NA,Sea,home,Sun 4:25 pm,,Ari,injury-report.txt
+Elijah Cooks,WR,WR,Car,NA,Atl,away,Sun 1:00 pm,,Car,injury-report.txt
+Marcus Burke,WR,WR,Ten,NA,Phi,home,Sun 1:00 pm,,Ten,injury-report.txt
+Tanner Brown,K,K,NO,NA,Bal,away,Sun 1:00 pm,,NO,injury-report.txt
+Carlos Washington Jr.,RB,RB,Mia,NA,SF,away,Sun 4:25 pm,,Mia,injury-report.txt
+Malik Heath,WR,WR,Atl,NA,Car,home,Sun 1:00 pm,,Atl,injury-report.txt
+Trent Battle,RB,RB,Atl,NA,Car,home,Sun 1:00 pm,,Atl,injury-report.txt
+Isaiah Winstead,WR,WR,Pit,NA,NE,away,Sun 1:00 pm,,Pit,injury-report.txt
+Kaidon Salter,QB,QB,Ten,NA,Phi,home,Sun 1:00 pm,,Ten,injury-report.txt
+Shedrick Jackson,WR,WR,LV,NA,LAC,away,Sun 4:05 pm,,LV,injury-report.txt
+Bryce Ford-Wheaton,WR,WR,NYG,NA,LAR,away,Mon 8:15 pm,Achilles,NYG,injury-report.txt
+Zavier Scott,RB,RB,Chi,NA,Min,home,Sun 1:00 pm,,Chi,injury-report.txt
+Jason Brownlee,WR,WR,KC,NA,Ind,home,Sun 8:20 pm,,KC,injury-report.txt
+Xavier Gipson,WR,WR,Phi,NA,Ten,away,Sun 1:00 pm,,Phi,injury-report.txt
+Deneric Prince,RB,RB,NE,NA,Pit,home,Sun 1:00 pm,,NE,injury-report.txt
+Lewis Bond,WR,WR,Hou,NA,Cin,home,Sun 1:00 pm,,Hou,injury-report.txt
+Will Pauling,WR,WR,SF,NA,Mia,home,Sun 4:25 pm,,SF,injury-report.txt
+Hendon Hooker,QB,QB,Ten,NA,Phi,home,Sun 1:00 pm,,Ten,injury-report.txt
+Sincere Brown,WR,WR,LAC,NA,LV,home,Sun 4:05 pm,Undisclosed,LAC,injury-report.txt
+Joey Aguilar,QB,QB,Jax,NA,Den,away,Sun 4:05 pm,,Jax,injury-report.txt
+Lance McCutcheon,WR,WR,Ten,NA,Phi,home,Sun 1:00 pm,,Ten,injury-report.txt
+Kejon Owens,RB,RB,Min,NA,Chi,away,Sun 1:00 pm,Illness,Min,injury-report.txt
+Marcus Sanders Jr.,WR,WR,Min,NA,Chi,away,Sun 1:00 pm,,Min,injury-report.txt
+Brady Boyd,WR,WR,Jax,NA,Den,away,Sun 4:05 pm,,Jax,injury-report.txt
+Dillon Bell,WR,WR,Min,NA,Chi,away,Sun 1:00 pm,,Min,injury-report.txt
+Josh Kelly,WR,WR,Hou,NA,Cin,home,Sun 1:00 pm,,Hou,injury-report.txt
+Hassan Haskins,RB,RB,NE,NA,Pit,home,Sun 1:00 pm,,NE,injury-report.txt
+Shaleak Knotts,WR,WR,Min,NA,Chi,away,Sun 1:00 pm,,Min,injury-report.txt
+Samori Toure,WR,WR,Phi,NA,Ten,away,Sun 1:00 pm,,Phi,injury-report.txt
+Chris Oladokun,QB,QB,KC,NA,Ind,home,Sun 8:20 pm,Undisclosed,KC,injury-report.txt
+Alex Bullock,WR,WR,Jax,NA,Den,away,Sun 4:05 pm,Undisclosed,Jax,injury-report.txt
+Bailey Zappe,QB,QB,NYJ,NA,GB,home,Sun 1:00 pm,,NYJ,injury-report.txt
+Gregory Desrosiers,RB,RB,LAC,NA,LV,home,Sun 4:05 pm,,LAC,injury-report.txt
+Evan Svoboda,TE,TE,LAC,NA,LV,home,Sun 4:05 pm,,LAC,injury-report.txt
+Kyron Drones,QB,QB,GB,NA,NYJ,away,Sun 1:00 pm,,GB,injury-report.txt
+Teagan Quitoriano,TE,TE,Ari,NA,Sea,home,Sun 4:25 pm,,Ari,injury-report.txt
+Ben Patterson,WR,WR,Cle,NA,TB,away,Sun 1:00 pm,,Cle,injury-report.txt
+Mason Shipley,K,K,NO,NA,Bal,away,Sun 1:00 pm,,NO,injury-report.txt
+Jerome Ford,RB,RB,Was,NA,Dal,away,Sun 4:25 pm,,Was,injury-report.txt
+Montrell Washington,WR,WR,NYG,NA,LAR,away,Mon 8:15 pm,,NYG,injury-report.txt
+Trebor Pena,WR,WR,Jax,NA,Den,away,Sun 4:05 pm,,Jax,injury-report.txt
+Roman Hemby,RB,RB,LV,NA,LAC,away,Sun 4:05 pm,,LV,injury-report.txt
+James Mitchell,TE,TE,Dal,NA,Was,home,Sun 4:25 pm,,Dal,injury-report.txt
+John FitzPatrick,TE,TE,GB,NA,NYJ,away,Sun 1:00 pm,Achilles,GB,injury-report.txt
+CJ Donaldson,RB,RB,NO,NA,Bal,away,Sun 1:00 pm,,NO,injury-report.txt
+Luke Wysong,WR,WR,Min,NA,Chi,away,Sun 1:00 pm,Undisclosed,Min,injury-report.txt
+Jerand Bradley,TE,TE,LAC,NA,LV,home,Sun 4:05 pm,,LAC,injury-report.txt
+Keaontay Ingram,RB,RB,KC,NA,Ind,home,Sun 8:20 pm,,KC,injury-report.txt
+Michael Woods II,WR,WR,Den,NA,Jax,home,Sun 4:05 pm,Leg,Den,injury-report.txt
+Devonte Ross,WR,WR,LAC,NA,LV,home,Sun 4:05 pm,,LAC,injury-report.txt
+Miller Moss,QB,QB,Chi,NA,Min,home,Sun 1:00 pm,,Chi,injury-report.txt
+Kendric Pryor,WR,WR,Cin,NA,Hou,away,Sun 1:00 pm,,Cin,injury-report.txt
+Cedric Tillman,WR,WR,NO,NA,Bal,away,Sun 1:00 pm,,NO,injury-report.txt
+Dae'Quan Wright,TE,TE,Cle,NA,TB,away,Sun 1:00 pm,,Cle,injury-report.txt
+Jaydn Ott,RB,RB,KC,NA,Ind,home,Sun 8:20 pm,,KC,injury-report.txt
+Erik Ezukanma,WR,WR,Phi,NA,Ten,away,Sun 1:00 pm,,Phi,injury-report.txt
+Cade York,K,K,NYJ,NA,GB,home,Sun 1:00 pm,,NYJ,injury-report.txt
+Sawyer Robertson,QB,QB,LV,NA,LAC,away,Sun 4:05 pm,,LV,injury-report.txt
+Le'Veon Moss,RB,RB,Mia,NA,SF,away,Sun 4:25 pm,Undisclosed,Mia,injury-report.txt
+Michael Trigg,TE,TE,Dal,NA,Was,home,Sun 4:25 pm,,Dal,injury-report.txt
+Chandler Morris,QB,QB,TB,NA,Cle,home,Sun 1:00 pm,,TB,injury-report.txt
+Lucas Havrisik,K,K,GB,NA,NYJ,away,Sun 1:00 pm,,GB,injury-report.txt
+Zamir White,RB,RB,NO,NA,Bal,away,Sun 1:00 pm,,NO,injury-report.txt
+J'Mari Taylor,RB,RB,Jax,NA,Den,away,Sun 4:05 pm,,Jax,injury-report.txt
+Cash Jones,RB,RB,Atl,NA,Car,home,Sun 1:00 pm,,Atl,injury-report.txt
+Will Levis,QB,QB,Ten,NA,Phi,home,Sun 1:00 pm,,Ten,injury-report.txt
+Jam Miller,RB,RB,NE,NA,Pit,home,Sun 1:00 pm,Undisclosed,NE,injury-report.txt
+Michael Wortham,WR,WR,Jax,NA,Den,away,Sun 4:05 pm,,Jax,injury-report.txt
+Tyren Montgomery,WR,WR,Ten,NA,Phi,home,Sun 1:00 pm,,Ten,injury-report.txt
+Maurice Alexander,WR,WR,Chi,NA,Min,home,Sun 1:00 pm,,Chi,injury-report.txt
+Zaire Mitchell-Paden,TE,TE,Hou,NA,Cin,home,Sun 1:00 pm,,Hou,injury-report.txt
+Ethan Conner,TE,TE,Mia,NA,SF,away,Sun 4:25 pm,,Mia,injury-report.txt
+Tanner Conner,TE,TE,NYG,NA,LAR,away,Mon 8:15 pm,,NYG,injury-report.txt
+Deven Thompkins,WR,WR,LV,NA,LAC,away,Sun 4:05 pm,,LV,injury-report.txt
+Sincere McCormick,RB,RB,SF,NA,Mia,home,Sun 4:25 pm,,SF,injury-report.txt
+Kaden Davis,WR,WR,Chi,NA,Min,home,Sun 1:00 pm,,Chi,injury-report.txt
+Brandon Johnson,WR,WR,Pit,NA,NE,away,Sun 1:00 pm,,Pit,injury-report.txt
+Jalen Virgil,WR,WR,Ari,NA,Sea,home,Sun 4:25 pm,Undisclosed,Ari,injury-report.txt
+Dennis Houston,WR,WR,TB,NA,Cle,home,Sun 1:00 pm,Groin,TB,injury-report.txt
+Jashaun Corbin,RB,RB,Dal,NA,Was,home,Sun 4:25 pm,,Dal,injury-report.txt
+Raheem Blackshear,RB,RB,Det,NA,Buf,away,Thu 8:15 pm,Undisclosed,Det,injury-report.txt
+Tucker Fisk,TE,TE,LAC,NA,LV,home,Sun 4:05 pm,,LAC,injury-report.txt
+Stone Smartt,TE,TE,NO,NA,Bal,away,Sun 1:00 pm,,NO,injury-report.txt
+Lucas Krull,TE,TE,Den,NA,Jax,home,Sun 4:05 pm,,Den,injury-report.txt
+Pierre Strong Jr.,RB,RB,GB,NA,NYJ,away,Sun 1:00 pm,Hamstring,GB,injury-report.txt
+Luke Altmyer,QB,QB,Det,NA,Buf,away,Thu 8:15 pm,,Det,injury-report.txt
+Elijah Mitchell,RB,RB,KC,NA,Ind,home,Sun 8:20 pm,Undisclosed,KC,injury-report.txt
+Mitch Van Vooren,TE,TE,NE,NA,Pit,home,Sun 1:00 pm,,NE,injury-report.txt
+Damien Alford,WR,WR,NO,NA,Bal,away,Sun 1:00 pm,Undisclosed,NO,injury-report.txt
+Eli Pancol,WR,WR,Ind,NA,KC,away,Sun 8:20 pm,,Ind,injury-report.txt
+Jarquez Hunter,RB,RB,Mia,NA,SF,away,Sun 4:25 pm,,Mia,injury-report.txt
+Anthony Tyus III,RB,RB,Car,NA,Atl,away,Sun 1:00 pm,,Car,injury-report.txt
+Jamaal Pritchett,WR,WR,NYJ,NA,GB,home,Sun 1:00 pm,,NYJ,injury-report.txt
+Jaydon Blue,RB,RB,Phi,NA,Ten,away,Sun 1:00 pm,,Phi,injury-report.txt
+Donovan Edwards,RB,RB,Mia,NA,SF,away,Sun 4:25 pm,,Mia,injury-report.txt
+Quentin Skinner,WR,WR,Buf,NA,Det,home,Thu 8:15 pm,,Buf,injury-report.txt
+Ja'Quinden Jackson,RB,RB,Phi,NA,Ten,away,Sun 1:00 pm,Undisclosed,Phi,injury-report.txt
+Caden Prieskorn,TE,TE,Car,NA,Atl,away,Sun 1:00 pm,,Car,injury-report.txt
+Cam Miller,QB,QB,Mia,NA,SF,away,Sun 4:25 pm,,Mia,injury-report.txt
+Cam Camper,WR,WR,NYJ,NA,GB,home,Sun 1:00 pm,,NYJ,injury-report.txt
+Chandler Brayboy,WR,WR,NE,NA,Pit,home,Sun 1:00 pm,,NE,injury-report.txt
+Seth Henigan,QB,QB,Ind,NA,KC,away,Sun 8:20 pm,,Ind,injury-report.txt
+Devin Neal,RB,RB,NO,NA,Bal,away,Sun 1:00 pm,Hamstring,NO,injury-report.txt
+Patrick Herbert,TE,TE,LAC,NA,LV,home,Sun 4:05 pm,,LAC,injury-report.txt
+Da'Quan Felton,WR,WR,NYJ,NA,GB,home,Sun 1:00 pm,Undisclosed,NYJ,injury-report.txt
+Amar Johnson,RB,RB,LAC,NA,LV,home,Sun 4:05 pm,,LAC,injury-report.txt
+Kye Robichaux,RB,RB,Det,NA,Buf,away,Thu 8:15 pm,Foot,Det,injury-report.txt
+Dalen Cambre,WR,WR,NYG,NA,LAR,away,Mon 8:15 pm,,NYG,injury-report.txt
+CJ Dippre,TE,TE,TB,NA,Cle,home,Sun 1:00 pm,,TB,injury-report.txt
+Tyrone Broden,WR,WR,Sea,NA,Ari,away,Sun 4:25 pm,Undisclosed,Sea,injury-report.txt
+Xavier Guillory,WR,WR,Bal,NA,NO,home,Sun 1:00 pm,,Bal,injury-report.txt
+Jordan Waters,RB,RB,LAR,NA,NYG,home,Mon 8:15 pm,,LAR,injury-report.txt
+Mario Williams,WR,WR,LAR,NA,NYG,home,Mon 8:15 pm,Undisclosed,LAR,injury-report.txt
+Brennan Presley,WR,WR,LAR,NA,NYG,home,Mon 8:15 pm,,LAR,injury-report.txt
+Tru Edwards,WR,WR,LAR,NA,NYG,home,Mon 8:15 pm,,LAR,injury-report.txt
+Brock Lampe,RB,RB,Buf,NA,Det,home,Thu 8:15 pm,,Buf,injury-report.txt
+Gee Scott,WR,WR,NE,NA,Pit,home,Sun 1:00 pm,Undisclosed,NE,injury-report.txt
+Jakobie Keeney-James,WR,WR,Pit,NA,NE,away,Sun 1:00 pm,,Pit,injury-report.txt
+Lan Larison,RB,RB,NE,NA,Pit,home,Sun 1:00 pm,,NE,injury-report.txt
+Roc Taylor,WR,WR,Car,NA,Atl,away,Sun 1:00 pm,,Car,injury-report.txt
+JJ Galbreath,TE,TE,Ind,NA,KC,away,Sun 8:20 pm,,Ind,injury-report.txt
+Bryce Pierre,TE,TE,Car,NA,Atl,away,Sun 1:00 pm,,Car,injury-report.txt
+Tre Stewart,RB,RB,Ari,NA,Sea,home,Sun 4:25 pm,,Ari,injury-report.txt
+Bryson Nesbit,TE,TE,Min,NA,Chi,away,Sun 1:00 pm,Undisclosed,Min,injury-report.txt
+Dontae Fleming,WR,WR,Min,NA,Chi,away,Sun 1:00 pm,Undisclosed,Min,injury-report.txt
+Kalel Mullings,RB,RB,Ten,NA,Phi,home,Sun 1:00 pm,,Ten,injury-report.txt
+Nate Carter,RB,RB,KC,NA,Ind,home,Sun 8:20 pm,,KC,injury-report.txt
+Jacardia Wright,RB,RB,Sea,NA,Ari,away,Sun 4:25 pm,,Sea,injury-report.txt
+Will Sheppard,WR,WR,Mia,NA,SF,away,Sun 4:25 pm,,Mia,injury-report.txt
+Courtney Jackson,WR,WR,Ten,NA,Phi,home,Sun 1:00 pm,,Ten,injury-report.txt
+Joaquin Davis,WR,WR,Pit,NA,NE,away,Sun 1:00 pm,,Pit,injury-report.txt
+Max Brosmer,QB,QB,Min,NA,Chi,away,Sun 1:00 pm,,Min,injury-report.txt
+DJ Uiagalelei,QB,QB,LAC,NA,LV,home,Sun 4:05 pm,,LAC,injury-report.txt
+Connor Bazelak,QB,QB,TB,NA,Cle,home,Sun 1:00 pm,,TB,injury-report.txt
+Josh Williams,RB,RB,TB,NA,Cle,home,Sun 1:00 pm,,TB,injury-report.txt
+Garrett Greene,WR,WR,TB,NA,Cle,home,Sun 1:00 pm,,TB,injury-report.txt
+Stephen Gosnell,WR,WR,Buf,NA,Det,home,Thu 8:15 pm,,Buf,injury-report.txt
+Ahmani Marshall,RB,RB,Car,NA,Atl,away,Sun 1:00 pm,,Car,injury-report.txt
+Bryson Green,WR,WR,Ari,NA,Sea,home,Sun 4:25 pm,,Ari,injury-report.txt
+Luke Grimm,WR,WR,LAC,NA,LV,home,Sun 4:05 pm,Undisclosed,LAC,injury-report.txt
+Mac Dalena,WR,WR,Buf,NA,Det,home,Thu 8:15 pm,,Buf,injury-report.txt
+Traeshon Holden,WR,WR,Dal,NA,Was,home,Sun 4:25 pm,,Dal,injury-report.txt
+Maddux Trujillo,K,K,Buf,NA,Det,home,Thu 8:15 pm,,Buf,injury-report.txt
+Ulysses Bentley IV,RB,RB,Ind,NA,KC,away,Sun 8:20 pm,,Ind,injury-report.txt
+Rivaldo Fairweather,TE,TE,Ari,NA,Sea,home,Sun 4:25 pm,,Ari,injury-report.txt
+Hal Presley III,WR,WR,KC,NA,Ind,home,Sun 8:20 pm,,KC,injury-report.txt
+Jimmy Horn Jr.,WR,WR,Car,NA,Atl,away,Sun 1:00 pm,,Car,injury-report.txt
+Kaden Prather,WR,WR,GB,NA,NYJ,away,Sun 1:00 pm,,GB,injury-report.txt
+Quincy Skinner Jr.,WR,WR,GB,NA,NYJ,away,Sun 1:00 pm,,GB,injury-report.txt
+Joshua Simon,TE,TE,Atl,NA,Car,home,Sun 1:00 pm,,Atl,injury-report.txt
+Nick Nash,WR,WR,Was,NA,Dal,away,Sun 4:25 pm,,Was,injury-report.txt
+Montrell Johnson Jr.,RB,RB,Car,NA,Atl,away,Sun 1:00 pm,,Car,injury-report.txt
+Jalin Conyers,TE,TE,Mia,NA,SF,away,Sun 4:25 pm,,Mia,injury-report.txt
+Damien Martinez,RB,RB,GB,NA,NYJ,away,Sun 1:00 pm,,GB,injury-report.txt
+Phil Mafah,RB,RB,NYG,NA,LAR,away,Mon 8:15 pm,,NYG,injury-report.txt
+AJ Henning,WR,WR,Mia,NA,SF,away,Sun 4:25 pm,,Mia,injury-report.txt
+Jordan Moore,WR,WR,Cin,NA,Hou,away,Sun 1:00 pm,,Cin,injury-report.txt
+Junior Bergen,WR,WR,NYJ,NA,GB,home,Sun 1:00 pm,,NYJ,injury-report.txt
+Andrew Armstrong,WR,WR,KC,NA,Ind,home,Sun 8:20 pm,,KC,injury-report.txt
+Theo Wease Jr.,WR,WR,LAC,NA,LV,home,Sun 4:05 pm,,LAC,injury-report.txt
+Luke Lachey,TE,TE,Hou,NA,Cin,home,Sun 1:00 pm,Foot,Hou,injury-report.txt
+Ricky White III,WR,WR,Sea,NA,Ari,away,Sun 4:25 pm,,Sea,injury-report.txt
+Dominic Lovett,WR,WR,Det,NA,Buf,away,Thu 8:15 pm,,Det,injury-report.txt
+JP Richardson,WR,WR,Chi,NA,Min,home,Sun 1:00 pm,,Chi,injury-report.txt
+Marshall Lang,TE,TE,Min,NA,Chi,away,Sun 1:00 pm,,Min,injury-report.txt
+Xavier Restrepo,WR,WR,Ten,NA,Phi,home,Sun 1:00 pm,,Ten,injury-report.txt
+Layne Pryor,TE,TE,Hou,NA,Cin,home,Sun 1:00 pm,,Hou,injury-report.txt
+Brenden Rice,WR,WR,LV,NA,LAC,away,Sun 4:05 pm,,LV,injury-report.txt
+Tanner McLachlan,TE,TE,SF,NA,Mia,home,Sun 4:25 pm,Undisclosed,SF,injury-report.txt
+Casey Washington,WR,WR,Car,NA,Atl,away,Sun 1:00 pm,,Car,injury-report.txt
+Tejhaun Palmer,WR,WR,NE,NA,Pit,home,Sun 1:00 pm,,NE,injury-report.txt
+Joshua Karty,K,K,Ari,NA,Sea,home,Sun 4:25 pm,,Ari,injury-report.txt
+Kisean Johnson,WR,WR,GB,NA,NYJ,away,Sun 1:00 pm,,GB,injury-report.txt
+ShunDerrick Powell,RB,RB,Phi,NA,Ten,away,Sun 1:00 pm,,Phi,injury-report.txt
+Cornelius Johnson,WR,WR,Bal,NA,NO,home,Sun 1:00 pm,,Bal,injury-report.txt
+Jawhar Jordan,RB,RB,Hou,NA,Cin,home,Sun 1:00 pm,,Hou,injury-report.txt
+Tahj Washington,WR,WR,Mia,NA,SF,away,Sun 4:25 pm,,Mia,injury-report.txt
+Jaheim Bell,TE,TE,Pit,NA,NE,away,Sun 1:00 pm,,Pit,injury-report.txt
+Devin Culp,TE,TE,TB,NA,Cle,home,Sun 1:00 pm,,TB,injury-report.txt
+Carter Bradley,QB,QB,Jax,NA,Den,away,Sun 4:05 pm,Thumb,Jax,injury-report.txt
+John Rhys Plumlee,WR,WR,Pit,NA,NE,away,Sun 1:00 pm,,Pit,injury-report.txt
+Cody Schrader,RB,RB,Den,NA,Jax,home,Sun 4:05 pm,,Den,injury-report.txt
+Xavier Weaver,WR,WR,Ari,NA,Sea,home,Sun 4:25 pm,Hamstring,Ari,injury-report.txt
+Jha'Quan Jackson,WR,WR,Hou,NA,Cin,home,Sun 1:00 pm,,Hou,injury-report.txt
+Ja'Corey Brooks,WR,WR,Was,NA,Dal,away,Sun 4:25 pm,Undisclosed,Was,injury-report.txt
+Isaiah Wooden,WR,WR,LAC,NA,LV,home,Sun 4:05 pm,,LAC,injury-report.txt
+Marcedes Lewis,TE,TE,Den,NA,Jax,home,Sun 4:05 pm,,Den,injury-report.txt
+Thomas Gordon,TE,TE,Det,NA,Buf,away,Thu 8:15 pm,,Det,injury-report.txt
+Jaden Smith,WR,WR,Dal,NA,Was,home,Sun 4:25 pm,,Dal,injury-report.txt
+Ty Pezza,TE,TE,Bal,NA,NO,home,Sun 1:00 pm,,Bal,injury-report.txt
+Hunter Dekkers,QB,QB,NO,NA,Bal,away,Sun 1:00 pm,,NO,injury-report.txt
+Lucas Scott,RB,RB,Bal,NA,NO,home,Sun 1:00 pm,,Bal,injury-report.txt
+Kyrese Rowan,WR,WR,NO,NA,Bal,away,Sun 1:00 pm,,NO,injury-report.txt
+Drake Dabney,TE,TE,GB,NA,NYJ,away,Sun 1:00 pm,,GB,injury-report.txt
+Jamari Thrash,WR,WR,Cle,NA,TB,away,Sun 1:00 pm,Undisclosed,Cle,injury-report.txt
+Joe Milton III,QB,QB,Dal,NA,Was,home,Sun 4:25 pm,,Dal,injury-report.txt
+Ainias Smith,WR,WR,Car,NA,Atl,away,Sun 1:00 pm,Undisclosed,Car,injury-report.txt
+Dalevon Campbell,WR,WR,LAC,NA,LV,home,Sun 4:05 pm,Leg,LAC,injury-report.txt
+Max Hurleman,WR,"WR,RB",Pit,NA,NE,away,Sun 1:00 pm,,Pit,injury-report.txt
+Bub Means,WR,WR,Cle,NA,TB,away,Sun 1:00 pm,,Cle,injury-report.txt
+Anthony Gould,WR,WR,Ind,NA,KC,away,Sun 8:20 pm,,Ind,injury-report.txt
+Luke Floriea,WR,WR,Cle,NA,TB,away,Sun 1:00 pm,,Cle,injury-report.txt
+Ja'seem Reed,WR,WR,Car,NA,Atl,away,Sun 1:00 pm,,Car,injury-report.txt
+Austin Reed,QB,QB,Bal,NA,NO,home,Sun 1:00 pm,,Bal,injury-report.txt
+JaQuae Jackson,WR,WR,LAC,NA,LV,home,Sun 4:05 pm,,LAC,injury-report.txt
+Ben Sauls,K,K,NYG,NA,LAR,away,Mon 8:15 pm,Undisclosed,NYG,injury-report.txt
+Jabari Small,RB,RB,Det,NA,Buf,away,Thu 8:15 pm,,Det,injury-report.txt
+Carson Steele,RB,RB,Phi,NA,Ten,away,Sun 1:00 pm,,Phi,injury-report.txt
+Kedon Slovis,QB,QB,GB,NA,NYJ,away,Sun 1:00 pm,,GB,injury-report.txt
+Tre Watson,TE,TE,Mia,NA,SF,away,Sun 4:25 pm,,Mia,injury-report.txt
+Zach Horton,TE,TE,Det,NA,Buf,away,Thu 8:15 pm,,Det,injury-report.txt
+Shawn Bowman,TE,TE,Ari,NA,Sea,home,Sun 4:25 pm,,Ari,injury-report.txt
+Baylor Cupp,TE,TE,Ari,NA,Sea,home,Sun 4:25 pm,,Ari,injury-report.txt
+Qadir Ismail,TE,TE,Chi,NA,Min,home,Sun 1:00 pm,,Chi,injury-report.txt
+Gage Larvadain,WR,WR,Bal,NA,NO,home,Sun 1:00 pm,,Bal,injury-report.txt
+Julian Hicks,WR,WR,Sea,NA,Ari,away,Sun 4:25 pm,,Sea,injury-report.txt
+Brenden Bates,TE,TE,Cle,NA,TB,away,Sun 1:00 pm,Undisclosed,Cle,injury-report.txt
+John Jiles,WR,WR,NE,NA,Pit,home,Sun 1:00 pm,,NE,injury-report.txt
+Hayden Rucci,TE,TE,Jax,NA,Den,away,Sun 4:05 pm,,Jax,injury-report.txt
+Terrell Jennings,RB,RB,NE,NA,Pit,home,Sun 1:00 pm,Undisclosed,NE,injury-report.txt
+Lenny Krieg,K,K,GB,NA,NYJ,away,Sun 1:00 pm,,GB,injury-report.txt
+Deion Hankins,RB,RB,Chi,NA,Min,home,Sun 1:00 pm,,Chi,injury-report.txt
+Isaiah Neyor,WR,WR,GB,NA,NYJ,away,Sun 1:00 pm,,GB,injury-report.txt
+Messiah Swinson,TE,TE,Cle,NA,TB,away,Sun 1:00 pm,,Cle,injury-report.txt
+Joshua Cephus,WR,WR,Jax,NA,Den,away,Sun 4:05 pm,,Jax,injury-report.txt
+Jermaine Terry,TE,TE,Cle,NA,TB,away,Sun 1:00 pm,,Cle,injury-report.txt
+Juice Wells Jr.,WR,WR,Atl,NA,Car,home,Sun 1:00 pm,,Atl,injury-report.txt
+Michael Wiley,RB,RB,TB,NA,Cle,home,Sun 1:00 pm,,TB,injury-report.txt
+Sam Hartman,QB,QB,Was,NA,Dal,away,Sun 4:25 pm,,Was,injury-report.txt
+Frank Gore Jr.,RB,RB,Buf,NA,Det,home,Thu 8:15 pm,,Buf,injury-report.txt
+Bryce Oliver,WR,WR,Ten,NA,Phi,home,Sun 1:00 pm,,Ten,injury-report.txt
+Dayton Wade,WR,WR,Bal,NA,NO,home,Sun 1:00 pm,,Bal,injury-report.txt
+Xavier Johnson,WR,WR,Cin,NA,Hou,away,Sun 1:00 pm,,Cin,injury-report.txt
+Lawrence Keys,WR,WR,Buf,NA,Det,home,Thu 8:15 pm,Leg,Buf,injury-report.txt
+Ian Wheeler,RB,RB,Buf,NA,Det,home,Thu 8:15 pm,,Buf,injury-report.txt
+Blake Watson,RB,RB,Ten,NA,Phi,home,Sun 1:00 pm,,Ten,injury-report.txt
+Jacoby Jones,WR,WR,Was,NA,Dal,away,Sun 4:25 pm,Undisclosed,Was,injury-report.txt
+Jack Westover,RB,"RB,TE",Was,NA,Dal,away,Sun 4:25 pm,,Was,injury-report.txt
+Cam Grandy,TE,TE,Min,NA,Chi,away,Sun 1:00 pm,,Min,injury-report.txt
+Treyton Welch,TE,TE,NO,NA,Bal,away,Sun 1:00 pm,,NO,injury-report.txt
+Mason Pline,TE,TE,KC,NA,Ind,home,Sun 8:20 pm,,KC,injury-report.txt
+McCallan Castles,TE,TE,GB,NA,NYJ,away,Sun 1:00 pm,Undisclosed,GB,injury-report.txt
+Kendall Milton,RB,RB,Cin,NA,Hou,away,Sun 1:00 pm,,Cin,injury-report.txt
+Diego Pavia,QB,QB,Bal,NA,NO,home,Sun 1:00 pm,,Bal,injury-report.txt
+Kevin Austin Jr.,WR,WR,NO,NA,Bal,away,Sun 1:00 pm,,NO,injury-report.txt
+Coleman Owen,WR,WR,Ind,NA,KC,away,Sun 8:20 pm,Concussion,Ind,injury-report.txt
+Sahmir Hagans,WR,WR,Ind,NA,KC,away,Sun 8:20 pm,,Ind,injury-report.txt
+Gabriel Benyard,WR,WR,Car,NA,Atl,away,Sun 1:00 pm,,Car,injury-report.txt
+Jackson Acker,RB,RB,Buf,NA,Det,home,Thu 8:15 pm,,Buf,injury-report.txt
+Miles Sanders,RB,RB,Dal,NA,Was,home,Sun 4:25 pm,,Dal,injury-report.txt
+Mecole Hardman Jr.,WR,WR,Buf,NA,Det,home,Thu 8:15 pm,,Buf,injury-report.txt
+Parris Campbell,WR,WR,Dal,NA,Was,home,Sun 4:25 pm,Undisclosed,Dal,injury-report.txt
+Jordon Vaughn,RB,RB,Ind,NA,KC,away,Sun 8:20 pm,,Ind,injury-report.txt
+E.J. Horton,WR,WR,Ind,NA,KC,away,Sun 8:20 pm,,Ind,injury-report.txt
+Jonathan Brady,WR,WR,LV,NA,LAC,away,Sun 4:05 pm,,LV,injury-report.txt
+Kentrel Bullock,RB,RB,Cin,NA,Hou,away,Sun 1:00 pm,,Cin,injury-report.txt
+Xavier Loyd,WR,WR,KC,NA,Ind,home,Sun 8:20 pm,,KC,injury-report.txt
+Patrick Gurd,TE,TE,LV,NA,LAC,away,Sun 4:05 pm,,LV,injury-report.txt
+Will Grier,QB,QB,Dal,NA,Was,home,Sun 4:25 pm,Personal,Dal,injury-report.txt
+Alexander Mattison,RB,RB,Mia,NA,SF,away,Sun 4:25 pm,,Mia,injury-report.txt
+Hakeem Butler,WR,WR,Den,NA,Jax,home,Sun 4:05 pm,,Den,injury-report.txt
+Elijah Tau-Tolliver,RB,RB,Bal,NA,NO,home,Sun 1:00 pm,,Bal,injury-report.txt
+Jaden Nixon,RB,RB,GB,NA,NYJ,away,Sun 1:00 pm,,GB,injury-report.txt
+Lincoln Pare,RB,RB,Ind,NA,KC,away,Sun 8:20 pm,Undisclosed,Ind,injury-report.txt
+Jamal Haynes,RB,RB,Cin,NA,Hou,away,Sun 1:00 pm,,Cin,injury-report.txt
+Jacob De Jesus,WR,WR,KC,NA,Ind,home,Sun 8:20 pm,,KC,injury-report.txt
+Jason Sanders,K,K,NYJ,NA,GB,home,Sun 1:00 pm,,NYJ,injury-report.txt
+Jimmy Kibble,WR,WR,NE,NA,Pit,home,Sun 1:00 pm,Undisclosed,NE,injury-report.txt
+Justin Watson,WR,WR,Hou,NA,Cin,home,Sun 1:00 pm,,Hou,injury-report.txt
+Cameron Dorner,WR,WR,NE,NA,Pit,home,Sun 1:00 pm,,NE,injury-report.txt
+Marquez Valdes-Scantling,WR,WR,LAC,,LV,home,Sun 4:05 pm,,LAC,injury-report.txt
+Ray-Ray McCloud III,WR,WR,Chi,NA,Min,home,Sun 1:00 pm,Undisclosed,Chi,injury-report.txt
+Cedrick Wilson Jr.,WR,WR,Det,NA,Buf,away,Thu 8:15 pm,Knee,Det,injury-report.txt
+Braxton Berrios,WR,WR,NYG,NA,LAR,away,Mon 8:15 pm,,NYG,injury-report.txt
+Tanner Hudson,TE,TE,Cin,NA,Hou,away,Sun 1:00 pm,,Cin,injury-report.txt
+Omari Kelly,WR,WR,Chi,NA,Min,home,Sun 1:00 pm,,Chi,injury-report.txt
+Nick DeGennaro,WR,WR,NE,NA,Pit,home,Sun 1:00 pm,,NE,injury-report.txt
+Trent Sherfield,WR,WR,Buf,NA,Det,home,Thu 8:15 pm,,Buf,injury-report.txt
+Kenny Fletcher Jr.,TE,TE,Ind,NA,KC,away,Sun 8:20 pm,,Ind,injury-report.txt
+Damon Bankston,RB,RB,GB,NA,NYJ,away,Sun 1:00 pm,,GB,injury-report.txt
+Malik Turner,WR,WR,SF,NA,Mia,home,Sun 4:25 pm,,SF,injury-report.txt
+John Wolford,QB,QB,Min,NA,Chi,away,Sun 1:00 pm,,Min,injury-report.txt
+Squirrel White,WR,WR,Chi,NA,Min,home,Sun 1:00 pm,Personal,Chi,injury-report.txt
+Omari Evans,WR,WR,KC,NA,Ind,home,Sun 8:20 pm,,KC,injury-report.txt
+Michael Briscoe,WR,WR,Min,NA,Chi,away,Sun 1:00 pm,,Min,injury-report.txt
+Will Dissly,TE,TE,LAC,NA,LV,home,Sun 4:05 pm,,LAC,injury-report.txt
+Dane Key,WR,WR,Den,NA,Jax,home,Sun 4:05 pm,,Den,injury-report.txt
+Treyvhon Saunders,WR,WR,Hou,NA,Cin,home,Sun 1:00 pm,,Hou,injury-report.txt
+Craig Reynolds,RB,RB,Was,NA,Dal,away,Sun 4:25 pm,,Was,injury-report.txt
+D'Ernest Johnson,RB,RB,Ten,NA,Phi,home,Sun 1:00 pm,,Ten,injury-report.txt
+Daniel Sobkowicz,WR,WR,Hou,NA,Cin,home,Sun 1:00 pm,,Hou,injury-report.txt
+Jalen Walthall,WR,WR,NYJ,NA,GB,home,Sun 1:00 pm,Undisclosed,NYJ,injury-report.txt
+Sean Brown,WR,WR,Den,NA,Jax,home,Sun 4:05 pm,,Den,injury-report.txt
+Jalen Reagor,WR,WR,Mia,NA,SF,away,Sun 4:25 pm,,Mia,injury-report.txt
+Brandon Aiyuk,WR,WR,SF,NA,Mia,home,Sun 4:25 pm,Knee - ACL + MCL,SF,injury-report.txt
+Noah Whittington,RB,RB,Hou,NA,Cin,home,Sun 1:00 pm,,Hou,injury-report.txt
+Coleman Bennett,RB,RB,Mia,NA,SF,away,Sun 4:25 pm,,Mia,injury-report.txt
+Desmond Reid,RB,RB,Buf,NA,Det,home,Thu 8:15 pm,Undisclosed,Buf,injury-report.txt
+Dontae McMillan,RB,RB,Bal,NA,NO,home,Sun 1:00 pm,,Bal,injury-report.txt
+Cortez Braham Jr.,WR,WR,Bal,NA,NO,home,Sun 1:00 pm,,Bal,injury-report.txt
+Cam Akers,RB,RB,Sea,NA,Ari,away,Sun 4:25 pm,,Sea,injury-report.txt
+Octavian Smith Jr.,WR,WR,Bal,NA,NO,home,Sun 1:00 pm,,Bal,injury-report.txt
+Jack Velling,TE,TE,Atl,NA,Car,home,Sun 1:00 pm,,Atl,injury-report.txt
+Greg Dortch,WR,WR,Buf,NA,Det,home,Thu 8:15 pm,,Buf,injury-report.txt
+Donald Parham Jr.,TE,TE,Pit,NA,NE,away,Sun 1:00 pm,,Pit,injury-report.txt
+Hunter Renfrow,WR,WR,Car,NA,Atl,away,Sun 1:00 pm,,Car,injury-report.txt
+DeShawn Hanika,TE,TE,Ind,NA,KC,away,Sun 8:20 pm,,Ind,injury-report.txt
+Easton Stick,QB,QB,TB,NA,Cle,home,Sun 1:00 pm,,TB,injury-report.txt
+Darius Slayton,WR,WR,NYG,NA,LAR,away,Mon 8:15 pm,,NYG,injury-report.txt
+Levi Wentz,WR,WR,Pit,NA,NE,away,Sun 1:00 pm,,Pit,injury-report.txt
+Trayveon Williams,RB,RB,Det,NA,Buf,away,Thu 8:15 pm,,Det,injury-report.txt
+Juwann Winfree,WR,WR,Hou,NA,Cin,home,Sun 1:00 pm,,Hou,injury-report.txt
+Travis Homer,RB,RB,Pit,NA,NE,away,Sun 1:00 pm,,Pit,injury-report.txt
+Scotty Miller,WR,WR,Chi,NA,Min,home,Sun 1:00 pm,,Chi,injury-report.txt
+Jake Retzlaff,QB,QB,Sea,NA,Ari,away,Sun 4:25 pm,,Sea,injury-report.txt
+Chris Myarick,TE,TE,LV,NA,LAC,away,Sun 4:05 pm,,LV,injury-report.txt
+Jake Browning,QB,QB,TB,NA,Cle,home,Sun 1:00 pm,,TB,injury-report.txt
+Brett Rypien,QB,QB,Hou,NA,Cin,home,Sun 1:00 pm,,Hou,injury-report.txt
+Stephen Carlson,TE,TE,Chi,NA,Min,home,Sun 1:00 pm,,Chi,injury-report.txt
+Sam Scott,RB,RB,NYJ,NA,GB,home,Sun 1:00 pm,Undisclosed,NYJ,injury-report.txt
+Tyree Jackson,TE,TE,Was,NA,Dal,away,Sun 4:25 pm,,Was,injury-report.txt
+Quentin Moore,TE,TE,Was,NA,Dal,away,Sun 4:25 pm,Undisclosed,Was,injury-report.txt
+Trenton Irwin,WR,WR,SF,NA,Mia,home,Sun 4:25 pm,,SF,injury-report.txt
+Chase Edmonds,RB,RB,Was,NA,Dal,away,Sun 4:25 pm,,Was,injury-report.txt
+Le'Meke Brockington,WR,WR,Atl,NA,Car,home,Sun 1:00 pm,Undisclosed,Atl,injury-report.txt
+Denzel Mims,WR,WR,Dal,NA,Was,home,Sun 4:25 pm,,Dal,injury-report.txt
+Roydell Williams,RB,RB,Det,NA,Buf,away,Thu 8:15 pm,,Det,injury-report.txt
+Brandon Allen,QB,QB,NYG,NA,LAR,away,Mon 8:15 pm,,NYG,injury-report.txt
+Jeff Driskel,QB,QB,Was,NA,Dal,away,Sun 4:25 pm,,Was,injury-report.txt
+Justin Jones,RB,RB,Sea,NA,Ari,away,Sun 4:25 pm,,Sea,injury-report.txt
+Grant Finley,RB,RB,NYG,NA,LAR,away,Mon 8:15 pm,,NYG,injury-report.txt
+Connor Hulstein,TE,TE,NYJ,NA,GB,home,Sun 1:00 pm,Undisclosed,NYJ,injury-report.txt
+Drew Biber,TE,TE,Cle,NA,TB,away,Sun 1:00 pm,,Cle,injury-report.txt
+Jeff Weimer,WR,WR,KC,NA,Ind,home,Sun 8:20 pm,,KC,injury-report.txt
+Liam Clifford,WR,WR,LAC,NA,LV,home,Sun 4:05 pm,,LAC,injury-report.txt
+Barika Kpeenu,RB,RB,TB,NA,Cle,home,Sun 1:00 pm,,TB,injury-report.txt
+Tyler Moore,TE,TE,Ind,NA,KC,away,Sun 8:20 pm,,Ind,injury-report.txt
+Jeremiah Franklin,TE,TE,Mia,NA,SF,away,Sun 4:25 pm,,Mia,injury-report.txt
+Malick Meiga,WR,WR,Car,NA,Atl,away,Sun 1:00 pm,Undisclosed,Car,injury-report.txt
+Zay Jones,WR,WR,Hou,NA,Cin,home,Sun 1:00 pm,,Hou,injury-report.txt
+Curtis Samuel,WR,WR,Buf,NA,Det,home,Thu 8:15 pm,,Buf,injury-report.txt
+JuJu Smith-Schuster,WR,WR,NYG,NA,LAR,away,Mon 8:15 pm,,NYG,injury-report.txt
+Kyre Duplessis,WR,WR,Den,NA,Jax,home,Sun 4:05 pm,,Den,injury-report.txt
+Tyreek Hill,WR,WR,Mia,NA,SF,away,Sun 4:25 pm,Knee - ACL,Mia,injury-report.txt
+Alex Tecza,RB,RB,Pit,NA,NE,away,Sun 1:00 pm,,Pit,injury-report.txt
+Brandon Hayes,WR,WR,Phi,NA,Ten,away,Sun 1:00 pm,,Phi,injury-report.txt
+Teddy Bridgewater,QB,QB,TB,NA,Cle,home,Sun 1:00 pm,Undisclosed,TB,injury-report.txt
+Matt Prater,K,K,Buf,NA,Det,home,Thu 8:15 pm,,Buf,injury-report.txt
+Josh Johnson,QB,QB,Cin,NA,Hou,away,Sun 1:00 pm,,Cin,injury-report.txt
+Russell Wilson,QB,QB,NYG,NA,LAR,away,Mon 8:15 pm,,NYG,injury-report.txt
+DeAndre Hopkins,WR,WR,Bal,NA,NO,home,Sun 1:00 pm,,Bal,injury-report.txt
+Zach Ertz,TE,TE,Was,NA,Dal,away,Sun 4:25 pm,,Was,injury-report.txt
+Brandon McManus,K,K,GB,NA,NYJ,away,Sun 1:00 pm,,GB,injury-report.txt
+Brandin Cooks,WR,WR,NO,NA,Bal,away,Sun 1:00 pm,,NO,injury-report.txt
+Jimmy Garoppolo,QB,QB,LAR,NA,NYG,home,Mon 8:15 pm,,LAR,injury-report.txt
+Matthew Henry,WR,WR,TB,NA,Cle,home,Sun 1:00 pm,,TB,injury-report.txt
+Phillip Dorsett II,WR,WR,LV,NA,LAC,away,Sun 4:05 pm,,LV,injury-report.txt
+Tyler Lockett,WR,WR,LV,NA,LAC,away,Sun 4:05 pm,,LV,injury-report.txt
+Trevor Siemian,QB,QB,Ten,NA,Phi,home,Sun 1:00 pm,,Ten,injury-report.txt
+Raheem Mostert,RB,RB,LV,NA,LAC,away,Sun 4:05 pm,Knee,LV,injury-report.txt
+DeAndre Carter,WR,WR,Cle,NA,TB,away,Sun 1:00 pm,,Cle,injury-report.txt
+Sterling Shepard,WR,WR,NYJ,NA,GB,home,Sun 1:00 pm,,NYJ,injury-report.txt
+Nick Vannett,TE,TE,Bal,NA,NO,home,Sun 1:00 pm,,Bal,injury-report.txt
+Louis Hansen,TE,TE,Hou,NA,Cin,home,Sun 1:00 pm,,Hou,injury-report.txt
+Kareem Hunt,RB,RB,KC,NA,Ind,home,Sun 8:20 pm,,KC,injury-report.txt
+Keelan Marion,WR,WR,Atl,NA,Car,home,Sun 1:00 pm,,Atl,injury-report.txt
+E.J. Warner,QB,QB,Den,NA,Jax,home,Sun 4:05 pm,,Den,injury-report.txt
+Dean Patterson IV,WR,WR,TB,NA,Cle,home,Sun 1:00 pm,,TB,injury-report.txt
+Jordan Nubin,RB,RB,Den,NA,Jax,home,Sun 4:05 pm,,Den,injury-report.txt
+Dare Ogunbowale,RB,RB,LV,NA,LAC,away,Sun 4:05 pm,,LV,injury-report.txt
+River Cracraft,WR,WR,Was,NA,Dal,away,Sun 4:25 pm,Undisclosed,Was,injury-report.txt
+Brett Weaver,TE,TE,Den,NA,Jax,home,Sun 4:05 pm,,Den,injury-report.txt
+Tommy Thomas,WR,WR,Den,NA,Jax,home,Sun 4:05 pm,,Den,injury-report.txt
+Trent Howland,RB,RB,Den,NA,Jax,home,Sun 4:05 pm,,Den,injury-report.txt
+Rodney Hammond Jr.,RB,RB,Den,NA,Jax,home,Sun 4:05 pm,,Den,injury-report.txt
+Taysom Hill,TE,TE,NO,NA,Bal,away,Sun 1:00 pm,,NO,injury-report.txt
+Paul Geelen,K,K,Den,NA,Jax,home,Sun 4:05 pm,,Den,injury-report.txt
+Nick Chubb,RB,RB,Hou,NA,Cin,home,Sun 1:00 pm,,Hou,injury-report.txt
+Julius Davis,RB,RB,Den,NA,Jax,home,Sun 4:05 pm,,Den,injury-report.txt
+Stone Eby,TE,TE,Den,NA,Jax,home,Sun 4:05 pm,,Den,injury-report.txt
+Dante Pettis,WR,WR,Buf,NA,Det,home,Thu 8:15 pm,,Buf,injury-report.txt
+Kolbe Katsis,WR,WR,Den,NA,Jax,home,Sun 4:05 pm,,Den,injury-report.txt
+Brandon Frazier,TE,TE,Atl,NA,Car,home,Sun 1:00 pm,,Atl,injury-report.txt
+Pharaoh Brown,TE,TE,Ind,NA,KC,away,Sun 8:20 pm,,Ind,injury-report.txt
+Kadarius Calloway,RB,RB,TB,NA,Cle,home,Sun 1:00 pm,Undisclosed,TB,injury-report.txt
+Heinrich Haarberg,TE,TE,Car,NA,Atl,away,Sun 1:00 pm,,Car,injury-report.txt
+Trent Taylor,WR,WR,SF,NA,Mia,home,Sun 4:25 pm,,SF,injury-report.txt
+Miles Davis,RB,RB,Car,NA,Atl,away,Sun 1:00 pm,,Car,injury-report.txt
+Josh Reynolds,WR,WR,NYJ,NA,GB,home,Sun 1:00 pm,,NYJ,injury-report.txt
+Anderson Castle,RB,RB,Ind,NA,KC,away,Sun 8:20 pm,,Ind,injury-report.txt
+Terrill Davis,WR,WR,Min,NA,Chi,away,Sun 1:00 pm,,Min,injury-report.txt
+Mante Morrow,WR,WR,LAC,NA,LV,home,Sun 4:05 pm,,LAC,injury-report.txt
+Nathan Peterman,QB,QB,Atl,NA,Car,home,Sun 1:00 pm,,Atl,injury-report.txt
+Rashad Rochelle,WR,WR,Sea,NA,Ari,away,Sun 4:25 pm,,Sea,injury-report.txt
+Trayvon Rudolph,WR,WR,Min,NA,Chi,away,Sun 1:00 pm,,Min,injury-report.txt
+Anthony Firkser,TE,TE,Det,NA,Buf,away,Thu 8:15 pm,Leg,Det,injury-report.txt
+Zane Gonzalez,K,K,Mia,NA,SF,away,Sun 4:25 pm,Undisclosed,Mia,injury-report.txt
+David Moore,WR,WR,Car,NA,Atl,away,Sun 1:00 pm,,Car,injury-report.txt
+Noah Brown,WR,WR,LV,NA,LAC,away,Sun 4:05 pm,,LV,injury-report.txt
+Johnny Pascuzzi,TE,TE,LAC,NA,LV,home,Sun 4:05 pm,,LAC,injury-report.txt
+Austin Ekeler,RB,RB,Was,NA,Dal,away,Sun 4:25 pm,,Was,injury-report.txt
+Younghoe Koo,K,K,NYG,NA,LAR,away,Mon 8:15 pm,,NYG,injury-report.txt
+Kyron Hudson,WR,WR,Chi,NA,Min,home,Sun 1:00 pm,Undisclosed,Chi,injury-report.txt
+Nick Mullens,QB,QB,Jax,NA,Den,away,Sun 4:05 pm,,Jax,injury-report.txt
+Van Jefferson,WR,WR,Was,NA,Dal,away,Sun 4:25 pm,,Was,injury-report.txt
+Alex Bachman,WR,WR,LAR,NA,NYG,home,Mon 8:15 pm,,LAR,injury-report.txt
+Ethan Sanchez,K,K,SF,NA,Mia,home,Sun 4:25 pm,,SF,injury-report.txt
+Joshua Pitsenberger,RB,RB,Hou,NA,Cin,home,Sun 1:00 pm,,Hou,injury-report.txt
+Kyle Trask,QB,QB,Car,NA,Atl,away,Sun 1:00 pm,,Car,injury-report.txt
+Isaiah Hodgins,WR,WR,NYG,NA,LAR,away,Mon 8:15 pm,,NYG,injury-report.txt
+Ken Seals,QB,QB,KC,NA,Ind,home,Sun 8:20 pm,,KC,injury-report.txt
+Al-Jay Henderson,RB,RB,NYJ,NA,GB,home,Sun 1:00 pm,,NYJ,injury-report.txt
+James Proche II,WR,WR,Ten,NA,Phi,home,Sun 1:00 pm,,Ten,injury-report.txt
+Ademola Faleye,TE,TE,TB,NA,Cle,home,Sun 1:00 pm,,TB,injury-report.txt
+Chris Freeman,K,K,Hou,NA,Cin,home,Sun 1:00 pm,,Hou,injury-report.txt
+Quez Watkins,WR,WR,Phi,NA,Ten,away,Sun 1:00 pm,,Phi,injury-report.txt
+Raylen Sharpe,WR,WR,Ind,NA,KC,away,Sun 8:20 pm,,Ind,injury-report.txt
+Tre' McKitty,TE,TE,Was,NA,Dal,away,Sun 4:25 pm,,Was,injury-report.txt
+Michael Carter,RB,RB,Ten,NA,Phi,home,Sun 1:00 pm,,Ten,injury-report.txt
+Chase Curtis,TE,TE,NYJ,NA,GB,home,Sun 1:00 pm,Knee,NYJ,injury-report.txt
+Hank Beatty,WR,WR,Ten,NA,Phi,home,Sun 1:00 pm,,Ten,injury-report.txt
+Andre Baccellia,WR,WR,Ari,NA,Sea,home,Sun 4:25 pm,,Ari,injury-report.txt
+Caullin Lacy,WR,WR,NYJ,NA,GB,home,Sun 1:00 pm,Undisclosed,NYJ,injury-report.txt
+Jaden Bradley,WR,WR,Was,NA,Dal,away,Sun 4:25 pm,,Was,injury-report.txt
+K.J. Osborn,WR,WR,Ten,NA,Phi,home,Sun 1:00 pm,,Ten,injury-report.txt
+Isaiah Jacobs,RB,RB,GB,NA,NYJ,away,Sun 1:00 pm,,GB,injury-report.txt
+Eni Falayi,TE,TE,GB,NA,NYJ,away,Sun 1:00 pm,,GB,injury-report.txt
+Mekhi Mews,WR,WR,NO,NA,Bal,away,Sun 1:00 pm,,NO,injury-report.txt
+RJ Maryland,TE,TE,GB,NA,NYJ,away,Sun 1:00 pm,Hamstring,GB,injury-report.txt
+Laith Marjan,K,K,Pit,NA,NE,away,Sun 1:00 pm,,Pit,injury-report.txt
+Miles Kitselman,TE,TE,Det,NA,Buf,away,Thu 8:15 pm,Leg,Det,injury-report.txt
+Joseph Manjack,WR,WR,Den,NA,Jax,home,Sun 4:05 pm,,Den,injury-report.txt
+Cameron Ross,WR,WR,Den,NA,Jax,home,Sun 4:05 pm,,Den,injury-report.txt
+Ihmir Smith-Marsette,WR,WR,Ari,NA,Sea,home,Sun 4:25 pm,,Ari,injury-report.txt
+Tyler Johnson,WR,WR,NYJ,NA,GB,home,Sun 1:00 pm,,NYJ,injury-report.txt
+Cody Hardy,TE,TE,NO,NA,Bal,away,Sun 1:00 pm,,NO,injury-report.txt
+Cody White,WR,WR,LV,NA,LAC,away,Sun 4:05 pm,,LV,injury-report.txt
+DeeJay Dallas,RB,RB,Min,NA,Chi,away,Sun 1:00 pm,,Min,injury-report.txt
+Lawrence Cager,TE,TE,Was,NA,Dal,away,Sun 4:25 pm,,Was,injury-report.txt
+Rohan Jones,TE,TE,LAR,NA,NYG,home,Mon 8:15 pm,,LAR,injury-report.txt
+Dean Connors,RB,RB,LAR,NA,NYG,home,Mon 8:15 pm,,LAR,injury-report.txt
+Mark Gronowski,QB,QB,Hou,NA,Cin,home,Sun 1:00 pm,,Hou,injury-report.txt
+Donaven McCulley,WR,WR,Mia,NA,SF,away,Sun 4:25 pm,,Mia,injury-report.txt
+Kansei Matsuzawa,K,K,LV,NA,LAC,away,Sun 4:05 pm,,LV,injury-report.txt
+Anthony Hankerson,RB,RB,Sea,NA,Ari,away,Sun 4:25 pm,,Sea,injury-report.txt
+Romello Brinson,WR,WR,Dal,NA,Was,home,Sun 4:25 pm,,Dal,injury-report.txt
+Matt Lauter,TE,TE,Min,NA,Chi,away,Sun 1:00 pm,,Min,injury-report.txt
+Kyle Dixon,WR,WR,NE,NA,Pit,home,Sun 1:00 pm,,NE,injury-report.txt
+Mason Kinsey,WR,WR,Ten,NA,Phi,home,Sun 1:00 pm,,Ten,injury-report.txt
+Kristian Wilkerson,WR,WR,Atl,NA,Car,home,Sun 1:00 pm,,Atl,injury-report.txt
+Nick Westbrook-Ikhine,WR,WR,Ind,NA,KC,away,Sun 8:20 pm,,Ind,injury-report.txt
+Salvon Ahmed,RB,RB,Chi,NA,Min,home,Sun 1:00 pm,,Chi,injury-report.txt
+Malik McClain,WR,WR,NYJ,NA,GB,home,Sun 1:00 pm,,NYJ,injury-report.txt
+Patrick Taylor Jr.,RB,RB,SF,NA,Mia,home,Sun 4:25 pm,Undisclosed,SF,injury-report.txt
+E.J. Williams Jr.,WR,WR,LV,NA,LAC,away,Sun 4:05 pm,,LV,injury-report.txt
+Jacob Clark,QB,QB,LV,NA,LAC,away,Sun 4:05 pm,,LV,injury-report.txt
+Chase Roberts,WR,WR,LV,NA,LAC,away,Sun 4:05 pm,Undisclosed,LV,injury-report.txt
+JaMycal Hasty,RB,RB,NE,NA,Pit,home,Sun 1:00 pm,,NE,injury-report.txt
+Sean McKeon,TE,TE,Ind,NA,KC,away,Sun 8:20 pm,Undisclosed,Ind,injury-report.txt
+DT Sheffield,WR,WR,NYJ,NA,GB,home,Sun 1:00 pm,Undisclosed,NYJ,injury-report.txt
+Terion Stewart,RB,RB,KC,NA,Ind,home,Sun 8:20 pm,,KC,injury-report.txt
+Dee Eskridge,WR,WR,Mia,NA,SF,away,Sun 4:25 pm,,Mia,injury-report.txt
+Jonathan Ward,RB,RB,Bal,NA,NO,home,Sun 1:00 pm,,Bal,injury-report.txt
+EJ Smith,RB,RB,KC,NA,Ind,home,Sun 8:20 pm,Undisclosed,KC,injury-report.txt
+Terrace Marshall Jr.,WR,WR,Mia,NA,SF,away,Sun 4:25 pm,,Mia,injury-report.txt
+Dan Chisena,WR,WR,Car,NA,Atl,away,Sun 1:00 pm,Undisclosed,Car,injury-report.txt
+Kole Wilson,WR,WR,Cle,NA,TB,away,Sun 1:00 pm,,Cle,injury-report.txt
+Dan Villari,TE,TE,LAR,NA,NYG,home,Mon 8:15 pm,,LAR,injury-report.txt
+Harrison Bryant,TE,TE,Hou,NA,Cin,home,Sun 1:00 pm,Undisclosed,Hou,injury-report.txt
+Austin Trammell,WR,WR,Jax,NA,Den,away,Sun 4:05 pm,,Jax,injury-report.txt
+Will Ferrin,K,K,NYJ,NA,GB,home,Sun 1:00 pm,,NYJ,injury-report.txt
+Sal Cannella,TE,TE,Cle,NA,TB,away,Sun 1:00 pm,,Cle,injury-report.txt
+Jaret Patterson,RB,RB,LAC,NA,LV,home,Sun 4:05 pm,,LAC,injury-report.txt
+Michael Bandy,WR,WR,Den,NA,Jax,home,Sun 4:05 pm,,Den,injury-report.txt
+Brandon Smith,WR,WR,Pit,NA,NE,away,Sun 1:00 pm,,Pit,injury-report.txt
+Adam Prentice,RB,RB,Den,NA,Jax,home,Sun 4:05 pm,,Den,injury-report.txt
+Luke Drzewiecki,K,K,Bal,NA,NO,home,Sun 1:00 pm,,Bal,injury-report.txt
+Gabe Davis,WR,WR,Buf,NA,Det,home,Thu 8:15 pm,Knee - ACL,Buf,injury-report.txt
+Tarik Black,WR,WR,Det,NA,Buf,away,Thu 8:15 pm,,Det,injury-report.txt
+Aaron Anderson,WR,WR,Cle,NA,TB,away,Sun 1:00 pm,Undisclosed,Cle,injury-report.txt
+Jack Stoll,TE,TE,SF,NA,Mia,home,Sun 4:25 pm,,SF,injury-report.txt
+Shane Buechele,QB,QB,Buf,NA,Det,home,Thu 8:15 pm,,Buf,injury-report.txt
+Albert Okwuegbunam Jr.,TE,TE,LV,,LAC,away,Sun 4:05 pm,,LV,injury-report.txt
+TJ Harden,RB,RB,Sea,NA,Ari,away,Sun 4:25 pm,,Sea,injury-report.txt
+Jordan Hudson,WR,WR,Dal,NA,Was,home,Sun 4:25 pm,,Dal,injury-report.txt
+DJ Turner,WR,WR,LV,NA,LAC,away,Sun 4:05 pm,Undisclosed,LV,injury-report.txt
+Shane Zylstra,TE,TE,NE,NA,Pit,home,Sun 1:00 pm,Undisclosed,NE,injury-report.txt
+Lake McRee,TE,TE,Pit,NA,NE,away,Sun 1:00 pm,,Pit,injury-report.txt
+Chamon Metayer,TE,TE,Car,NA,Atl,away,Sun 1:00 pm,,Car,injury-report.txt
+Dominic Richardson,RB,RB,NYJ,NA,GB,home,Sun 1:00 pm,Undisclosed,NYJ,injury-report.txt
+Gabriel Plascencia,K,K,Chi,NA,Min,home,Sun 1:00 pm,,Chi,injury-report.txt
+Ja'Mori Maclin,WR,WR,Buf,NA,Det,home,Thu 8:15 pm,,Buf,injury-report.txt
+Gary Brightwell,RB,RB,Cin,NA,Hou,away,Sun 1:00 pm,,Cin,injury-report.txt
+Max Tomczak,WR,WR,Buf,NA,Det,home,Thu 8:15 pm,,Buf,injury-report.txt
+Khalil Herbert,RB,RB,Atl,NA,Car,home,Sun 1:00 pm,,Atl,injury-report.txt
+Josiah Deguara,TE,TE,Phi,NA,Ten,away,Sun 1:00 pm,,Phi,injury-report.txt
+Kobe Prentice,WR,WR,NE,NA,Pit,home,Sun 1:00 pm,,NE,injury-report.txt
+Josh Kattus,TE,TE,Cin,NA,Hou,away,Sun 1:00 pm,,Cin,injury-report.txt
+Cornell Powell,WR,WR,Pit,NA,NE,away,Sun 1:00 pm,,Pit,injury-report.txt
+Jermar Jefferson,RB,RB,Min,NA,Chi,away,Sun 1:00 pm,Undisclosed,Min,injury-report.txt
+Tim Jones,WR,WR,Jax,NA,Den,away,Sun 4:05 pm,,Jax,injury-report.txt
+Lance Mason,TE,TE,Pit,NA,NE,away,Sun 1:00 pm,,Pit,injury-report.txt
+Kenny Yeboah,TE,TE,Ari,NA,Sea,home,Sun 4:25 pm,Hamstring,Ari,injury-report.txt
+Noah Thomas,WR,WR,Cin,NA,Hou,away,Sun 1:00 pm,,Cin,injury-report.txt
+Kevorian Barnes,RB,RB,NYG,NA,LAR,away,Mon 8:15 pm,,NYG,injury-report.txt
+Antonio Gibson,RB,RB,NE,NA,Pit,home,Sun 1:00 pm,Knee - ACL,NE,injury-report.txt
+Davon Booth,RB,RB,Ind,NA,KC,away,Sun 8:20 pm,,Ind,injury-report.txt
+Adam Randall,RB,RB,Bal,IR-R,NO,home,Sun 1:00 pm,Undisclosed,Bal,injury-report.txt
+Christian Kirk,WR,WR,SF,IR-R,Mia,home,Sun 4:25 pm,Calf,SF,injury-report.txt
+Beaux Collins,WR,WR,Atl,IR-R,Car,home,Sun 1:00 pm,Undisclosed,Atl,injury-report.txt
+Scott Matlock,RB,RB,LAC,IR-R,LV,home,Sun 4:05 pm,Undisclosed,LAC,injury-report.txt
+Caleb Lohner,TE,TE,Den,IR-R,Jax,home,Sun 4:05 pm,Lower Body,Den,injury-report.txt
+Savion Williams,WR,WR,GB,IR-R,NYJ,away,Sun 1:00 pm,Ankle,GB,injury-report.txt
+Will Mallory,TE,TE,Ind,IR-R,KC,away,Sun 8:20 pm,Thumb,Ind,injury-report.txt
+Trevor Etienne,RB,RB,Car,IR-R,Atl,away,Sun 1:00 pm,Ankle,Car,injury-report.txt
+Carter Runyon,TE,TE,LV,IR-R,LAC,away,Sun 4:05 pm,Undisclosed,LV,injury-report.txt
+David Sills V,WR,WR,TB,IR-R,Cle,home,Sun 1:00 pm,Undisclosed,TB,injury-report.txt
+Jordyn Tyson,WR,WR,NO,IR-R,Bal,away,Sun 1:00 pm,Hamstring,NO,injury-report.txt
+Irv Charles,WR,WR,Sea,IR-R,Ari,away,Sun 4:25 pm,Undisclosed,Sea,injury-report.txt
+Grant Calcaterra,TE,TE,Phi,IR-R,Ten,away,Sun 1:00 pm,Back,Phi,injury-report.txt
+Jeremy McNichols,RB,RB,Was,IR-R,Dal,away,Sun 4:25 pm,Quadriceps,Was,injury-report.txt
+Dillon Gabriel,QB,QB,Cle,IR-R,TB,away,Sun 1:00 pm,Back,Cle,injury-report.txt
+Tank Dell,WR,WR,Hou,IR-R,Cin,home,Sun 1:00 pm,Knee - ACL + MCL,Hou,injury-report.txt
+James Conner,RB,RB,Ari,IR-R,Sea,home,Sun 4:25 pm,Foot,Ari,injury-report.txt
+Ty Chandler,RB,RB,NO,IR,Bal,away,Sun 1:00 pm,Knee,NO,injury-report.txt
+Cole Turner,TE,TE,Mia,IR,SF,away,Sun 4:25 pm,Undisclosed,Mia,injury-report.txt
+Dont'e Thornton Jr.,WR,WR,LV,IR,LAC,away,Sun 4:05 pm,Undisclosed,LV,injury-report.txt
+Hayden Large,TE,TE,Chi,IR,Min,home,Sun 1:00 pm,Undisclosed,Chi,injury-report.txt
+Calvin Austin III,WR,WR,NYG,IR,LAR,away,Mon 8:15 pm,Knee,NYG,injury-report.txt
+Dylan Sampson,RB,RB,Cle,IR,TB,away,Sun 1:00 pm,Knee,Cle,injury-report.txt
+Chris Collier,RB,RB,LV,IR,LAC,away,Sun 4:05 pm,Undisclosed,LV,injury-report.txt
+Skylar Thompson,QB,QB,Bal,IR,NO,home,Sun 1:00 pm,Undisclosed,Bal,injury-report.txt
+Brittain Brown,RB,RB,Chi,IR,Min,home,Sun 1:00 pm,Undisclosed,Chi,injury-report.txt
+KeAndre Lambert-Smith,WR,WR,LAC,IR,LV,home,Sun 4:05 pm,Hamstring,LAC,injury-report.txt
+Moliki Matavao,TE,TE,NO,IR,Bal,away,Sun 1:00 pm,Knee,NO,injury-report.txt
+Tim Patrick,WR,WR,NYJ,IR,GB,home,Sun 1:00 pm,Groin,NYJ,injury-report.txt
+Nikola Kalinic,TE,TE,Chi,IR,Min,home,Sun 1:00 pm,Knee,Chi,injury-report.txt
+Matthew Caldwell,QB,QB,LAR,IR,NYG,home,Mon 8:15 pm,Undisclosed,LAR,injury-report.txt
+Isiah Pacheco,RB,RB,Det,IR,Buf,away,Thu 8:15 pm,Back,Det,injury-report.txt
+Jeremiah Webb,WR,WR,NE,IR,Pit,home,Sun 1:00 pm,Arm,NE,injury-report.txt
+Trey Sermon,RB,RB,Atl,IR,Car,home,Sun 1:00 pm,Undisclosed,Atl,injury-report.txt
+Cole Burgess,WR,WR,Pit,IR,NE,away,Sun 1:00 pm,Undisclosed,Pit,injury-report.txt
+DJ Rogers,TE,TE,Dal,IR,Was,home,Sun 4:25 pm,Knee,Dal,injury-report.txt
+Jordan Mason,RB,RB,Min,IR,Chi,away,Sun 1:00 pm,Thumb,Min,injury-report.txt
+John Michael Gyllenborg,TE,TE,KC,,Ind,home,Sun 8:20 pm,Knee,KC,injury-report.txt
+Graham Mertz,QB,QB,Hou,IR,Cin,home,Sun 1:00 pm,Knee - ACL,Hou,injury-report.txt
+Robbie Ouzts,RB,"RB,TE",Sea,IR,Ari,away,Sun 4:25 pm,Neck,Sea,injury-report.txt
+Thomas Yassmin,TE,TE,GB,IR,NYJ,away,Sun 1:00 pm,Undisclosed,GB,injury-report.txt
+Ben Yurosek,TE,TE,Min,IR,Chi,away,Sun 1:00 pm,Undisclosed,Min,injury-report.txt
+Jake Tonges,TE,TE,SF,IR,Mia,home,Sun 4:25 pm,Knee - MCL,SF,injury-report.txt
+Jayden Higgins,WR,WR,Hou,IR,Cin,home,Sun 1:00 pm,Knee - ACL,Hou,injury-report.txt
+Malik Davis,RB,RB,Dal,IR,Was,home,Sun 4:25 pm,Hip,Dal,injury-report.txt
+Julian Hill,TE,TE,NE,IR,Pit,home,Sun 1:00 pm,Knee,NE,injury-report.txt
+Ja'Kobi Lane,WR,WR,Bal,IR,NO,home,Sun 1:00 pm,Wrist,Bal,injury-report.txt
+Ricky Pearsall,WR,WR,SF,IR,Mia,home,Sun 4:25 pm,Knee - PCL,SF,injury-report.txt
+Jake Bobo,WR,WR,Sea,IR,Ari,away,Sun 4:25 pm,Knee,Sea,injury-report.txt
+Chip Trayanum,RB,RB,NYJ,IR,GB,home,Sun 1:00 pm,Neck,NYJ,injury-report.txt
+Trey Benson,RB,RB,Ari,IR,Sea,home,Sun 4:25 pm,Knee,Ari,injury-report.txt
+Kendrick Law,WR,WR,Det,IR,Buf,away,Thu 8:15 pm,Knee - ACL,Det,injury-report.txt
+Gunner Olszewski,WR,WR,NYG,IR,LAR,away,Mon 8:15 pm,Achilles,NYG,injury-report.txt
+D.J. Montgomery,WR,WR,Ind,IR,KC,away,Sun 8:20 pm,Abdomen,Ind,injury-report.txt
+Carson Towt,TE,TE,Ind,IR,KC,away,Sun 8:20 pm,Undisclosed,Ind,injury-report.txt
+Jameson Geers,TE,TE,Ari,IR,Sea,home,Sun 4:25 pm,Undisclosed,Ari,injury-report.txt
+Corey Rucker,WR,WR,LV,IR,LAC,away,Sun 4:05 pm,Undisclosed,LV,injury-report.txt
+Eli Stowers,TE,TE,Phi,IR,Ten,away,Sun 1:00 pm,Hamstring,Phi,injury-report.txt
+Jaren Kanak,TE,TE,Ten,IR,Phi,home,Sun 1:00 pm,Pectoral,Ten,injury-report.txt
+Audric Estime,RB,RB,NO,IR,Bal,away,Sun 1:00 pm,Thigh,NO,injury-report.txt
+Princeton Fant,TE,TE,Dal,IR,Was,home,Sun 4:25 pm,Knee - ACL + MCL,Dal,injury-report.txt
+A.J. Brown,WR,WR,NE,IR,Pit,home,Sun 1:00 pm,Ankle,NE,injury-report.txt
+Chris Brazzell II,WR,WR,Car,IR,Atl,away,Sun 1:00 pm,Knee,Car,injury-report.txt
+Justin Shorter,WR,"WR,TE",LV,IR,LAC,away,Sun 4:05 pm,Undisclosed,LV,injury-report.txt
+Jeff Caldwell,WR,WR,KC,IR,Ind,home,Sun 8:20 pm,Knee,KC,injury-report.txt
+Jimmy Holiday,WR,WR,KC,IR,Ind,home,Sun 8:20 pm,Undisclosed,KC,injury-report.txt
+Myles Montgomery,RB,RB,NE,IR,Pit,home,Sun 1:00 pm,Undisclosed,NE,injury-report.txt
+Johnny Wilson,WR,WR,Phi,IR,Ten,away,Sun 1:00 pm,Knee,Phi,injury-report.txt
+Josh Jacobs,RB,RB,GB,,NYJ,away,Sun 1:00 pm,Personal,GB,injury-report.txt

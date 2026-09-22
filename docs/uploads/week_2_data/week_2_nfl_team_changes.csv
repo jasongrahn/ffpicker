@@ -1,0 +1,51 @@
+date,player,pos,pos_eligible,nfl_team,status,opponent,home_away,kickoff,roster_status,change,source_file
+Sep 16,Marvin Jones Jr.,LB,"LB,DE",Was,NA,Dal,away,Sun 4:25 pm,FA,Sea to Was,league-team-changes
+Sep 16,Michael Heldman,DE,DE,KC,NA,Ind,home,Sun 8:20 pm,FA,NO to KC,league-team-changes
+Sep 16,Austin Keys,LB,LB,Was,NA,Dal,away,Sun 4:25 pm,FA,Ari to Was,league-team-changes
+Sep 16,Art Green,CB,CB,Ari,NA,Sea,home,Sun 4:25 pm,FA,NYG to Ari,league-team-changes
+Sep 16,Jerrick Reed II,S,S,Ari,NA,Sea,home,Sun 4:25 pm,FA,Ten to Ari,league-team-changes
+Sep 16,Drake Jackson,DL,"DL,DE",Atl,NA,Car,home,Sun 1:00 pm,FA,Was to Atl,league-team-changes
+Sep 16,Khalil Herbert,RB,RB,Atl,NA,Car,home,Sun 1:00 pm,FA,SF to Atl,league-team-changes
+Sep 16,Jack Stoll,TE,TE,SF,NA,Mia,home,Sun 4:25 pm,FA,Cle to SF,league-team-changes
+Sep 16,BJ Ojulari,LB,"LB,DE",Jax,NA,Den,away,Sun 4:05 pm,FA,NFC to AFC,league-team-changes
+Sep 16,McKinnley Jackson,DL,"DL,DT",SF,NA,Mia,home,Sun 4:25 pm,FA,AFC to NFC,league-team-changes
+Sep 16,Jack Stoll,TE,TE,SF,NA,Mia,home,Sun 4:25 pm,FA,AFC to NFC,league-team-changes
+Sep 16,Kenneth Murray Jr.,LB,LB,Hou,NA,Cin,home,Sun 1:00 pm,FA,NFC to AFC,league-team-changes
+Sep 16,Brock Lampe,RB,RB,Buf,NA,Det,home,Thu 8:15 pm,FA,NFC to AFC,league-team-changes
+Sep 16,Tyler Johnson,WR,WR,NYJ,NA,GB,home,Sun 1:00 pm,FA,NFC to AFC,league-team-changes
+Sep 16,Eric Gray,RB,RB,Cle,NA,TB,away,Sun 1:00 pm,FA,NFC to AFC,league-team-changes
+Sep 16,Marquez Valdes-Scantling,WR,WR,LAC,,LV,home,Sun 4:05 pm,FA,NFC to AFC,league-team-changes
+Sep 16,John Saunders Jr.,S,S,NYJ,NA,GB,home,Sun 1:00 pm,FA,NE to NYJ,league-team-changes
+Sep 16,Jimmy Ciarlo,LB,LB,Ten,NA,Phi,home,Sun 1:00 pm,FA,Buf to Ten,league-team-changes
+Sep 16,Kenneth Murray Jr.,LB,LB,Hou,NA,Cin,home,Sun 1:00 pm,FA,Dal to Hou,league-team-changes
+Sep 16,Marquez Valdes-Scantling,WR,WR,LAC,,LV,home,Sun 4:05 pm,FA,Dal to LAC,league-team-changes
+Sep 15,Gage Larvadain,WR,WR,Bal,NA,NO,home,Sun 1:00 pm,FA,Cle to Bal,league-team-changes
+Sep 15,McKinnley Jackson,DL,"DL,DT",SF,NA,Mia,home,Sun 4:25 pm,FA,Cin to SF,league-team-changes
+Sep 15,Eric Gray,RB,RB,Cle,NA,TB,away,Sun 1:00 pm,FA,NYG to Cle,league-team-changes
+Sep 15,BJ Ojulari,LB,"LB,DE",Jax,NA,Den,away,Sun 4:05 pm,FA,Ari to Jax,league-team-changes
+Sep 15,Tyler Johnson,WR,WR,NYJ,NA,GB,home,Sun 1:00 pm,FA,Dal to NYJ,league-team-changes
+Sep 15,Josiah Deguara,TE,TE,Phi,NA,Ten,away,Sun 1:00 pm,FA,SF to Phi,league-team-changes
+Sep 15,Sterling Shepard,WR,WR,NYJ,NA,GB,home,Sun 1:00 pm,FA,Hou to NYJ,league-team-changes
+Sep 15,Brock Lampe,RB,RB,Buf,NA,Det,home,Thu 8:15 pm,FA,Sea to Buf,league-team-changes
+Sep 15,Tyler Goodson,RB,RB,Dal,,Was,home,Sun 4:25 pm,FA,Atl to Dal,league-team-changes
+Sep 15,Phil Mafah,RB,RB,NYG,NA,LAR,away,Mon 8:15 pm,FA,Dal to NYG,league-team-changes
+Sep 14,Chandler Brayboy,WR,WR,NE,NA,Pit,home,Sun 1:00 pm,FA,Jax to NE,league-team-changes
+Sep 14,Jonah Williams,DE,DE,NO,NA,Bal,away,Sun 1:00 pm,FA,Ari to NO,league-team-changes
+Sep 13,Keidron Smith,DB,"DB,CB",Chi,NA,Min,home,Sun 1:00 pm,FA,Atl to Chi,league-team-changes
+Sep 13,Keidron Smith,DB,"DB,CB",Chi,NA,Min,home,Sun 1:00 pm,FA,Chi to Atl,league-team-changes
+Sep 12,Jaden Crumedy,DT,"DT,DE",Hou,,Cin,home,Sun 1:00 pm,FA,NFC to AFC,league-team-changes
+Sep 11,Jaden Crumedy,DT,"DT,DE",Hou,,Cin,home,Sun 1:00 pm,FA,GB to Hou,league-team-changes
+Sep 11,Xavier Gipson,WR,WR,Phi,NA,Ten,away,Sun 1:00 pm,FA,NYG to Phi,league-team-changes
+Sep 11,DaQuan Jones,DT,DT,NE,,Pit,home,Sun 1:00 pm,FA,Buf to NE,league-team-changes
+Sep 11,Nate Carter,RB,RB,KC,NA,Ind,home,Sun 8:20 pm,FA,NFC to AFC,league-team-changes
+Sep 10,Melvin Smith Jr.,CB,CB,KC,NA,Ind,home,Sun 8:20 pm,FA,Ten to KC,league-team-changes
+Sep 10,Natrone Brooks,CB,CB,Det,NA,Buf,away,Thu 8:15 pm,FA,Atl to Det,league-team-changes
+Sep 10,Jaylon Jones,CB,CB,Ten,,Phi,home,Sun 1:00 pm,FA,Ind to Ten,league-team-changes
+Sep 10,Nate Carter,RB,RB,KC,NA,Ind,home,Sun 8:20 pm,FA,Atl to KC,league-team-changes
+Sep 10,Kyrese Rowan,WR,WR,NO,NA,Bal,away,Sun 1:00 pm,FA,AFC to NFC,league-team-changes
+Sep 10,Jihad Ward,LB,"LB,DE",Min,NA,Chi,away,Sun 1:00 pm,FA,AFC to NFC,league-team-changes
+Sep 9,Damon Bankston,RB,RB,GB,NA,NYJ,away,Sun 1:00 pm,FA,NYG to GB,league-team-changes
+Sep 9,Kyrese Rowan,WR,WR,NO,NA,Bal,away,Sun 1:00 pm,FA,Den to NO,league-team-changes
+Sep 9,Kahlef Hailassie,S,"S,CB",GB,NA,NYJ,away,Sun 1:00 pm,FA,Min to GB,league-team-changes
+Sep 9,Keidron Smith,DB,"DB,CB",Chi,NA,Min,home,Sun 1:00 pm,FA,Atl to Chi,league-team-changes
+Sep 9,Zacch Pickens,DL,"DL,DT",Atl,NA,Car,home,Sun 1:00 pm,FA,NYG to Atl,league-team-changes

@@ -30,3 +30,5 @@ dev/bars_a_results.rds
 dev/bars_a_seeds.rds
 dev/bars_b_results.rds
 dev/bars_b_seeds.rds
+__pycache__/
+*.pyc

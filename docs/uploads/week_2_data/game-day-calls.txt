@@ -1,0 +1,4200 @@
+Player
+	
+Injury
+	
+Status
+	
+Updated
+	
+Depth Chart
+Elijah Mitchell
+Elijah MitchellNANo new player Notes KC - RB
+Sun 8:20 pm vs Ind
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+KC
+Oscar Delp
+Oscar DelpQPlayer Note NO - TE
+Sun 1:00 pm @ Bal
+	
+Hamstring
+	
+Q
+	
+Sep 16 3:36 AM
+	
+NO
+Kyler Murray
+Kyler MurrayQVideo ForecastNew Player Note Min - QB
+Sun 1:00 pm @ Chi
+	
+Concussion
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Min
+Sam Scott
+Sam ScottNANo new player Notes NYJ - RB
+Sun 1:00 pm vs GB
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+NYJ
+Quentin Moore
+Quentin MooreNAPlayer Note Was - TE
+Sun 4:25 pm @ Dal
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Was
+Tank Dell
+Tank DellIR-RNo new player Notes Hou - WR
+Sun 1:00 pm vs Cin
+	
+Knee - ACL + MCL
+	
+IR-R
+	
+Sep 16 3:36 AM
+	
+Hou
+Josh Jacobs
+Josh JacobsCELPlayer Note GB - RB
+Sun 1:00 pm @ NYJ
+	
+Personal
+	
+CEL
+	
+Sep 16 3:36 AM
+	
+GB
+Marvin Mims Jr.
+Marvin Mims Jr.QNew Player Note Den - WR
+Sun 4:05 pm vs Jax
+	
+Foot
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Den
+Zach Charbonnet
+Zach CharbonnetPUP-RPlayer Note Sea - RB
+Sun 4:25 pm @ Ari
+	
+Knee - ACL
+	
+PUP-R
+	
+Sep 16 3:36 AM
+	
+Sea
+Jalen Walthall
+Jalen WalthallNANo new player Notes NYJ - WR
+Sun 1:00 pm vs GB
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+NYJ
+A.J. Brown
+A.J. BrownIRVideo ForecastPlayer Note NE - WR
+Sun 1:00 pm vs Pit
+	
+Ankle
+	
+IR
+	
+Sep 16 3:36 AM
+	
+NE
+Luke Musgrave
+Luke MusgravePUP-RNo new player Notes GB - TE
+Sun 1:00 pm @ NYJ
+	
+Neck
+	
+PUP-R
+	
+Sep 16 3:36 AM
+	
+GB
+Parris Campbell
+Parris CampbellNANo new player Notes Dal - WR
+Sun 4:25 pm vs Was
+	
+Undisclosed
+	
+RET
+	
+Sep 16 3:36 AM
+	
+Dal
+Chip Trayanum
+Chip TrayanumIRNo new player Notes NYJ - RB
+Sun 1:00 pm vs GB
+	
+Neck
+	
+IR
+	
+Sep 16 3:36 AM
+	
+NYJ
+Anthony Richardson Sr.
+Anthony Richardson Sr.QNew Player Note Ind - QB
+Sun 8:20 pm @ KC
+	
+Groin
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Ind
+Zay Flowers
+Zay FlowersQVideo ForecastNew Player Note Bal - WR
+Sun 1:00 pm vs NO
+	
+Hamstring
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Bal
+Desmond Reid
+Desmond ReidNANo new player Notes Buf - RB
+Thu 8:15 pm vs Det
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Buf
+Ja'Kobi Lane
+Ja'Kobi LaneIRNew Player Note Bal - WR
+Sun 1:00 pm vs NO
+	
+Wrist
+	
+IR
+	
+Sep 16 3:36 AM
+	
+Bal
+Chris Brazzell II
+Chris Brazzell IIIRNo new player Notes Car - WR
+Sun 1:00 pm @ Atl
+	
+Knee
+	
+IR
+	
+Sep 16 3:36 AM
+	
+Car
+Raheem Blackshear
+Raheem BlackshearNANo new player Notes Det - RB
+Thu 8:15 pm @ Buf
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Det
+Will Grier
+Will GrierNANo new player Notes Dal - QB
+Sun 4:25 pm vs Was
+	
+Personal
+	
+RET
+	
+Sep 16 3:36 AM
+	
+Dal
+Malik Davis
+Malik DavisIRPlayer Note Dal - RB
+Sun 4:25 pm vs Was
+	
+Hip
+	
+IR
+	
+Sep 16 3:36 AM
+	
+Dal
+Dennis Houston
+Dennis HoustonNANo new player Notes TB - WR
+Sun 1:00 pm vs Cle
+	
+Groin
+	
+Q
+	
+Sep 16 3:36 AM
+	
+TB
+Jalen Virgil
+Jalen VirgilNANo new player Notes Ari - WR
+Sun 4:25 pm vs Sea
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Ari
+Jameson Geers
+Jameson GeersIRNo new player Notes Ari - TE
+Sun 4:25 pm vs Sea
+	
+Undisclosed
+	
+IR
+	
+Sep 16 3:36 AM
+	
+Ari
+Eli Stowers
+Eli StowersIRPlayer Note Phi - TE
+Sun 1:00 pm @ Ten
+	
+Hamstring
+	
+IR
+	
+Sep 16 3:36 AM
+	
+Phi
+Irv Charles
+Irv CharlesIR-RNo new player Notes Sea - WR
+Sun 4:25 pm @ Ari
+	
+Undisclosed
+	
+IR-R
+	
+Sep 16 3:36 AM
+	
+Sea
+Kene Nwangwu
+Kene NwangwuQNew Player Note NYJ - RB
+Sun 1:00 pm vs GB
+	
+Back
+	
+Q
+	
+Sep 16 3:36 AM
+	
+NYJ
+Jeremiah Webb
+Jeremiah WebbIRNo new player Notes NE - WR
+Sun 1:00 pm vs Pit
+	
+Arm
+	
+IR
+	
+Sep 16 3:36 AM
+	
+NE
+Squirrel White
+Squirrel WhiteNANo new player Notes Chi - WR
+Sun 1:00 pm vs Min
+	
+Personal
+	
+RET
+	
+Sep 16 3:36 AM
+	
+Chi
+Ben Sims
+Ben SimsNAPlayer Note Mia - TE
+Sun 4:25 pm @ SF
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Mia
+Ja'Corey Brooks
+Ja'Corey BrooksNANo new player Notes Was - WR
+Sun 4:25 pm @ Dal
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Was
+Shane Zylstra
+Shane ZylstraNANew Player Note NE - TE
+Sun 1:00 pm vs Pit
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+NE
+Lincoln Pare
+Lincoln PareNANo new player Notes Ind - RB
+Sun 8:20 pm @ KC
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Ind
+Christian Kirk
+Christian KirkIR-RNo new player Notes SF - WR
+Sun 4:25 pm vs Mia
+	
+Calf
+	
+IR-R
+	
+Sep 16 3:36 AM
+	
+SF
+Luke Wysong
+Luke WysongNANo new player Notes Min - WR
+Sun 1:00 pm @ Chi
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Min
+Dalevon Campbell
+Dalevon CampbellNAPlayer Note LAC - WR
+Sun 4:05 pm vs LV
+	
+Leg
+	
+Q
+	
+Sep 16 3:36 AM
+	
+LAC
+Scott Matlock
+Scott MatlockIR-RNo new player Notes LAC - RB
+Sun 4:05 pm vs LV
+	
+Undisclosed
+	
+IR-R
+	
+Sep 16 3:36 AM
+	
+LAC
+Carson Towt
+Carson TowtIRNo new player Notes Ind - TE
+Sun 8:20 pm @ KC
+	
+Undisclosed
+	
+IR
+	
+Sep 16 3:36 AM
+	
+Ind
+De'Zhaun Stribling
+De'Zhaun StriblingOVideo ForecastNew Player Note SF - WR
+Sun 4:25 pm vs Mia
+	
+Ankle
+	
+O
+	
+Sep 16 3:36 AM
+	
+SF
+Damien Alford
+Damien AlfordNANo new player Notes NO - WR
+Sun 1:00 pm @ Bal
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+NO
+Will Mallory
+Will MalloryIR-RNo new player Notes Ind - TE
+Sun 8:20 pm @ KC
+	
+Thumb
+	
+IR-R
+	
+Sep 16 3:36 AM
+	
+Ind
+Justin Shorter
+Justin ShorterIRNo new player Notes LV - WR,TE
+Sun 4:05 pm @ LAC
+	
+Undisclosed
+	
+IR
+	
+Sep 16 3:36 AM
+	
+LV
+Dan Chisena
+Dan ChisenaNANo new player Notes Car - WR
+Sun 1:00 pm @ Atl
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Car
+Jordyn Tyson
+Jordyn TysonIR-RNo new player Notes NO - WR
+Sun 1:00 pm @ Bal
+	
+Hamstring
+	
+IR-R
+	
+Sep 16 3:36 AM
+	
+NO
+Ray-Ray McCloud III
+Ray-Ray McCloud IIINANo new player Notes Chi - WR
+Sun 1:00 pm vs Min
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Chi
+Cedrick Wilson Jr.
+Cedrick Wilson Jr.NANo new player Notes Det - WR
+Thu 8:15 pm @ Buf
+	
+Knee
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Det
+Sincere Brown
+Sincere BrownNANo new player Notes LAC - WR
+Sun 4:05 pm vs LV
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+LAC
+Omar Cooper Jr.
+Omar Cooper Jr.QPlayer Note NYJ - WR
+Sun 1:00 pm vs GB
+	
+Ankle
+	
+Q
+	
+Sep 16 3:36 AM
+	
+NYJ
+Hayden Large
+Hayden LargeIRNo new player Notes Chi - TE
+Sun 1:00 pm vs Min
+	
+Undisclosed
+	
+IR
+	
+Sep 16 3:36 AM
+	
+Chi
+Corey Rucker
+Corey RuckerIRNo new player Notes LV - WR
+Sun 4:05 pm @ LAC
+	
+Undisclosed
+	
+IR
+	
+Sep 16 3:36 AM
+	
+LV
+Jake Tonges
+Jake TongesIRNew Player Note SF - TE
+Sun 4:25 pm vs Mia
+	
+Knee - MCL
+	
+IR
+	
+Sep 16 3:36 AM
+	
+SF
+Caullin Lacy
+Caullin LacyNANo new player Notes NYJ - WR
+Sun 1:00 pm vs GB
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+NYJ
+Sam Darnold
+Sam DarnoldOVideo ForecastNew Player Note Sea - QB
+Sun 4:25 pm @ Ari
+	
+Lower Body
+	
+O
+	
+Sep 16 3:36 AM
+	
+Sea
+Michael Pittman Jr.
+Michael Pittman Jr.QNew Player Note Pit - WR
+Sun 1:00 pm @ NE
+	
+Foot
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Pit
+Gunner Olszewski
+Gunner OlszewskiIRNo new player Notes NYG - WR
+Mon 8:15 pm @ LAR
+	
+Achilles
+	
+IR
+	
+Sep 16 3:36 AM
+	
+NYG
+Joe Burrow
+Joe BurrowQVideo ForecastNew Player Note Cin - QB
+Sun 1:00 pm @ Hou
+	
+Back
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Cin
+Tua Tagovailoa
+Tua TagovailoaQVideo ForecastNew Player Note Atl - QB
+Sun 1:00 pm vs Car
+	
+Oblique
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Atl
+Jermar Jefferson
+Jermar JeffersonNAPlayer Note Min - RB
+Sun 1:00 pm @ Chi
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Min
+Aaron Anderson
+Aaron AndersonNANo new player Notes Cle - WR
+Sun 1:00 pm @ TB
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Cle
+Pierre Strong Jr.
+Pierre Strong Jr.NAPlayer Note GB - RB
+Sun 1:00 pm @ NYJ
+	
+Hamstring
+	
+Q
+	
+Sep 16 3:36 AM
+	
+GB
+DJ Rogers
+DJ RogersIRNo new player Notes Dal - TE
+Sun 4:25 pm vs Was
+	
+Knee
+	
+IR
+	
+Sep 16 3:36 AM
+	
+Dal
+Danny Gray
+Danny GrayNAPlayer Note Phi - WR
+Sun 1:00 pm @ Ten
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Phi
+Brandon Aiyuk
+Brandon AiyukNANo new player Notes SF - WR
+Sun 4:25 pm vs Mia
+	
+Knee - ACL + MCL
+	
+DNR
+	
+Sep 16 3:36 AM
+	
+SF
+Jaren Kanak
+Jaren KanakIRNo new player Notes Ten - TE
+Sun 1:00 pm vs Phi
+	
+Pectoral
+	
+IR
+	
+Sep 16 3:36 AM
+	
+Ten
+D'Andre Swift
+D'Andre SwiftQNew Player Note Chi - RB
+Sun 1:00 pm vs Min
+	
+Ankle
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Chi
+Calvin Austin III
+Calvin Austin IIIIRNo new player Notes NYG - WR
+Mon 8:15 pm @ LAR
+	
+Knee
+	
+IR
+	
+Sep 16 3:36 AM
+	
+NYG
+Kenny Yeboah
+Kenny YeboahNANo new player Notes Ari - TE
+Sun 4:25 pm vs Sea
+	
+Hamstring
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Ari
+Matthew Caldwell
+Matthew CaldwellIRNo new player Notes LAR - QB
+Mon 8:15 pm vs NYG
+	
+Undisclosed
+	
+IR
+	
+Sep 16 3:36 AM
+	
+LAR
+Jam Miller
+Jam MillerNANo new player Notes NE - RB
+Sun 1:00 pm vs Pit
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+NE
+RJ Maryland
+RJ MarylandNANo new player Notes GB - TE
+Sun 1:00 pm @ NYJ
+	
+Hamstring
+	
+Q
+	
+Sep 16 3:36 AM
+	
+GB
+Miles Kitselman
+Miles KitselmanNANo new player Notes Det - TE
+Thu 8:15 pm @ Buf
+	
+Leg
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Det
+Antonio Gibson
+Antonio GibsonNANo new player Notes NE - RB
+Sun 1:00 pm vs Pit
+	
+Knee - ACL
+	
+Q
+	
+Sep 16 3:36 AM
+	
+NE
+Jeff Caldwell
+Jeff CaldwellIRNo new player Notes KC - WR
+Sun 8:20 pm vs Ind
+	
+Knee
+	
+IR
+	
+Sep 16 3:36 AM
+	
+KC
+Nikola Kalinic
+Nikola KalinicIRNo new player Notes Chi - TE
+Sun 1:00 pm vs Min
+	
+Knee
+	
+IR
+	
+Sep 16 3:36 AM
+	
+Chi
+Harrison Bryant
+Harrison BryantNANo new player Notes Hou - TE
+Sun 1:00 pm vs Cin
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Hou
+Le'Veon Moss
+Le'Veon MossNANo new player Notes Mia - RB
+Sun 4:25 pm @ SF
+	
+Undisclosed
+	
+RET
+	
+Sep 16 3:36 AM
+	
+Mia
+Gabe Davis
+Gabe DavisNANo new player Notes Buf - WR
+Thu 8:15 pm vs Det
+	
+Knee - ACL
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Buf
+EJ Smith
+EJ SmithNANo new player Notes KC - RB
+Sun 8:20 pm vs Ind
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+KC
+John Michael Gyllenborg
+J. Michael GyllenborgIRNo new player Notes KC - TE
+Sun 8:20 pm vs Ind
+	
+Knee
+	
+IR
+	
+Sep 16 3:36 AM
+	
+KC
+Chase Curtis
+Chase CurtisNANo new player Notes NYJ - TE
+Sun 1:00 pm vs GB
+	
+Knee
+	
+Q
+	
+Sep 16 3:36 AM
+	
+NYJ
+John FitzPatrick
+John FitzPatrickNANo new player Notes GB - TE
+Sun 1:00 pm @ NYJ
+	
+Achilles
+	
+Q
+	
+Sep 16 3:36 AM
+	
+GB
+Jordan Mason
+Jordan MasonIRVideo ForecastNew Player Note Min - RB
+Sun 1:00 pm @ Chi
+	
+Thumb
+	
+IR
+	
+Sep 16 3:36 AM
+	
+Min
+Joe Royer
+Joe RoyerNFI-RNo new player Notes Cle - TE
+Sun 1:00 pm @ TB
+	
+Personal
+	
+NFI-R
+	
+Sep 16 3:36 AM
+	
+Cle
+DT Sheffield
+DT SheffieldNANo new player Notes NYJ - WR
+Sun 1:00 pm vs GB
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+NYJ
+Adam Randall
+Adam RandallIR-RNo new player Notes Bal - RB
+Sun 1:00 pm vs NO
+	
+Undisclosed
+	
+IR-R
+	
+Sep 16 3:36 AM
+	
+Bal
+Ty Johnson
+Ty JohnsonQNew Player Note Buf - RB
+Thu 8:15 pm vs Det
+	
+Hamstring
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Buf
+Isiah Pacheco
+Isiah PachecoIRPlayer Note Det - RB
+Thu 8:15 pm @ Buf
+	
+Back
+	
+IR
+	
+Sep 16 3:36 AM
+	
+Det
+Brittain Brown
+Brittain BrownIRNo new player Notes Chi - RB
+Sun 1:00 pm vs Min
+	
+Undisclosed
+	
+IR
+	
+Sep 16 3:36 AM
+	
+Chi
+Skylar Thompson
+Skylar ThompsonIRNo new player Notes Bal - QB
+Sun 1:00 pm vs NO
+	
+Undisclosed
+	
+IR
+	
+Sep 16 3:36 AM
+	
+Bal
+Chris Oladokun
+Chris OladokunNANo new player Notes KC - QB
+Sun 8:20 pm vs Ind
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+KC
+Dominic Richardson
+Dominic RichardsonNANo new player Notes NYJ - RB
+Sun 1:00 pm vs GB
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+NYJ
+Kendrick Law
+Kendrick LawIRNo new player Notes Det - WR
+Thu 8:15 pm @ Buf
+	
+Knee - ACL
+	
+IR
+	
+Sep 16 3:36 AM
+	
+Det
+Chig Okonkwo
+Chig OkonkwoQNew Player Note Was - TE
+Sun 4:25 pm @ Dal
+	
+Hamstring
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Was
+Michael Woods II
+Michael Woods IINANo new player Notes Den - WR
+Sun 4:05 pm vs Jax
+	
+Leg
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Den
+Jakobi Meyers
+Jakobi MeyersQVideo ForecastNew Player Note Jax - WR
+Sun 4:05 pm @ Den
+	
+Thumb
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Jax
+Grant Calcaterra
+Grant CalcaterraIR-RNo new player Notes Phi - TE
+Sun 1:00 pm @ Ten
+	
+Back
+	
+IR-R
+	
+Sep 16 3:36 AM
+	
+Phi
+D.J. Montgomery
+D.J. MontgomeryIRNo new player Notes Ind - WR
+Sun 8:20 pm @ KC
+	
+Abdomen
+	
+IR
+	
+Sep 16 3:36 AM
+	
+Ind
+Ashton Dulin
+Ashton DulinQNo new player Notes Ind - WR
+Sun 8:20 pm @ KC
+	
+Ankle
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Ind
+Kejon Owens
+Kejon OwensNANo new player Notes Min - RB
+Sun 1:00 pm @ Chi
+	
+Illness
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Min
+Ty Chandler
+Ty ChandlerIRNo new player Notes NO - RB
+Sun 1:00 pm @ Bal
+	
+Knee
+	
+IR
+	
+Sep 16 3:36 AM
+	
+NO
+David Sills V
+David Sills VIR-RNo new player Notes TB - WR
+Sun 1:00 pm vs Cle
+	
+Undisclosed
+	
+IR-R
+	
+Sep 16 3:36 AM
+	
+TB
+Cole Turner
+Cole TurnerIRNo new player Notes Mia - TE
+Sun 4:25 pm @ SF
+	
+Undisclosed
+	
+IR
+	
+Sep 16 3:36 AM
+	
+Mia
+Robbie Ouzts
+Robbie OuztsIRNo new player Notes Sea - RB,TE
+Sun 4:25 pm @ Ari
+	
+Neck
+	
+IR
+	
+Sep 16 3:36 AM
+	
+Sea
+Chase Roberts
+Chase RobertsNANo new player Notes LV - WR
+Sun 4:05 pm @ LAC
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+LV
+Jacoby Jones
+Jacoby JonesNAPlayer Note Was - WR
+Sun 4:25 pm @ Dal
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Was
+Jimmy Holiday
+Jimmy HolidayIRNo new player Notes KC - WR
+Sun 8:20 pm vs Ind
+	
+Undisclosed
+	
+IR
+	
+Sep 16 3:36 AM
+	
+KC
+Ben Yurosek
+Ben YurosekIRPlayer Note Min - TE
+Sun 1:00 pm @ Chi
+	
+Undisclosed
+	
+IR
+	
+Sep 16 3:36 AM
+	
+Min
+Beaux Collins
+Beaux CollinsIR-RNo new player Notes Atl - WR
+Sun 1:00 pm vs Car
+	
+Undisclosed
+	
+IR-R
+	
+Sep 16 3:36 AM
+	
+Atl
+Lawrence Keys
+Lawrence KeysNANo new player Notes Buf - WR
+Thu 8:15 pm vs Det
+	
+Leg
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Buf
+Chris Collier
+Chris CollierIRNo new player Notes LV - RB
+Sun 4:05 pm @ LAC
+	
+Undisclosed
+	
+IR
+	
+Sep 16 3:36 AM
+	
+LV
+Raheem Mostert
+Raheem MostertNANo new player Notes LV - RB
+Sun 4:05 pm @ LAC
+	
+Knee
+	
+Q
+	
+Sep 16 3:36 AM
+	
+LV
+Coleman Owen
+Coleman OwenNAPlayer Note Ind - WR
+Sun 8:20 pm @ KC
+	
+Concussion
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Ind
+Jeshaun Jones
+Jeshaun JonesSUSPNo new player Notes Min - WR
+Sun 1:00 pm @ Chi
+	
+Suspension
+	
+SUSP
+	
+Sep 16 3:36 AM
+	
+Min
+Xavier Weaver
+Xavier WeaverNANo new player Notes Ari - WR
+Sun 4:25 pm vs Sea
+	
+Hamstring
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Ari
+Mason Tipton
+Mason TiptonPUP-RNo new player Notes NO - WR
+Sun 1:00 pm @ Bal
+	
+Leg
+	
+PUP-R
+	
+Sep 16 3:36 AM
+	
+NO
+Carter Bradley
+Carter BradleyNAPlayer Note Jax - QB
+Sun 4:05 pm @ Den
+	
+Thumb
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Jax
+Johnny Wilson
+Johnny WilsonIRNo new player Notes Phi - WR
+Sun 1:00 pm @ Ten
+	
+Knee
+	
+IR
+	
+Sep 16 3:36 AM
+	
+Phi
+Trey Sermon
+Trey SermonIRNo new player Notes Atl - RB
+Sun 1:00 pm vs Car
+	
+Undisclosed
+	
+IR
+	
+Sep 16 3:36 AM
+	
+Atl
+Luke Grimm
+Luke GrimmNANo new player Notes LAC - WR
+Sun 4:05 pm vs LV
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+LAC
+Da'Quan Felton
+Da'Quan FeltonNANo new player Notes NYJ - WR
+Sun 1:00 pm vs GB
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+NYJ
+Tanner McLachlan
+Tanner McLachlanNANo new player Notes SF - TE
+Sun 4:25 pm vs Mia
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+SF
+Connor Hulstein
+Connor HulsteinNANo new player Notes NYJ - TE
+Sun 1:00 pm vs GB
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+NYJ
+Ja'Quinden Jackson
+Ja'Quinden JacksonNANo new player Notes Phi - RB
+Sun 1:00 pm @ Ten
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Phi
+Tyrone Tracy Jr.
+Tyrone Tracy Jr.QNew Player Note NYG - RB
+Mon 8:15 pm @ LAR
+	
+Illness
+	
+Q
+	
+Sep 16 3:36 AM
+	
+NYG
+Ainias Smith
+Ainias SmithNANo new player Notes Car - WR
+Sun 1:00 pm @ Atl
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Car
+Carter Runyon
+Carter RunyonIR-RNo new player Notes LV - TE
+Sun 4:05 pm @ LAC
+	
+Undisclosed
+	
+IR-R
+	
+Sep 16 3:36 AM
+	
+LV
+Audric Estime
+Audric EstimeIRPlayer Note NO - RB
+Sun 1:00 pm @ Bal
+	
+Thigh
+	
+IR
+	
+Sep 16 3:36 AM
+	
+NO
+Jamari Thrash
+Jamari ThrashNAPlayer Note Cle - WR
+Sun 1:00 pm @ TB
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Cle
+Patrick Taylor Jr.
+Patrick Taylor Jr.NANo new player Notes SF - RB
+Sun 4:25 pm vs Mia
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+SF
+Jalen Coker
+Jalen CokerQVideo ForecastNew Player Note Car - WR
+Sun 1:00 pm @ Atl
+	
+Ankle
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Car
+McCallan Castles
+McCallan CastlesNANo new player Notes GB - TE
+Sun 1:00 pm @ NYJ
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+GB
+Isaac Guerendo
+Isaac GuerendoPUP-RNo new player Notes SF - RB
+Sun 4:25 pm vs Mia
+	
+Pectoral
+	
+PUP-R
+	
+Sep 16 3:36 AM
+	
+SF
+LeQuint Allen Jr.
+LeQuint Allen Jr.QPlayer Note Jax - RB
+Sun 4:05 pm @ Den
+	
+Hip
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Jax
+Tory Horton
+Tory HortonQPlayer Note Sea - WR
+Sun 4:25 pm @ Ari
+	
+Hamstring
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Sea
+KeAndre Lambert-Smith
+KeAndre Lambert-SmithIRNew Player Note LAC - WR
+Sun 4:05 pm vs LV
+	
+Hamstring
+	
+IR
+	
+Sep 16 3:36 AM
+	
+LAC
+Devin Neal
+Devin NealNANo new player Notes NO - RB
+Sun 1:00 pm @ Bal
+	
+Hamstring
+	
+Q
+	
+Sep 16 3:36 AM
+	
+NO
+Jaylin Lane
+Jaylin LaneQNew Player Note Was - WR
+Sun 4:25 pm @ Dal
+	
+Groin
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Was
+Graham Mertz
+Graham MertzIRNo new player Notes Hou - QB
+Sun 1:00 pm vs Cin
+	
+Knee - ACL
+	
+IR
+	
+Sep 16 3:36 AM
+	
+Hou
+Trevor Etienne
+Trevor EtienneIR-RNo new player Notes Car - RB
+Sun 1:00 pm @ Atl
+	
+Ankle
+	
+IR-R
+	
+Sep 16 3:36 AM
+	
+Car
+Dylan Sampson
+Dylan SampsonIRPlayer Note Cle - RB
+Sun 1:00 pm @ TB
+	
+Knee
+	
+IR
+	
+Sep 16 3:36 AM
+	
+Cle
+Dont'e Thornton Jr.
+Dont'e Thornton Jr.IRNo new player Notes LV - WR
+Sun 4:05 pm @ LAC
+	
+Undisclosed
+	
+IR
+	
+Sep 16 3:36 AM
+	
+LV
+Dillon Gabriel
+Dillon GabrielIR-RNo new player Notes Cle - QB
+Sun 1:00 pm @ TB
+	
+Back
+	
+IR-R
+	
+Sep 16 3:36 AM
+	
+Cle
+Moliki Matavao
+Moliki MatavaoIRNo new player Notes NO - TE
+Sun 1:00 pm @ Bal
+	
+Knee
+	
+IR
+	
+Sep 16 3:36 AM
+	
+NO
+Savion Williams
+Savion WilliamsIR-RNo new player Notes GB - WR
+Sun 1:00 pm @ NYJ
+	
+Ankle
+	
+IR-R
+	
+Sep 16 3:36 AM
+	
+GB
+Thomas Yassmin
+Thomas YassminIRNo new player Notes GB - TE
+Sun 1:00 pm @ NYJ
+	
+Undisclosed
+	
+IR
+	
+Sep 16 3:36 AM
+	
+GB
+RJ Harvey
+RJ HarveyQVideo ForecastNew Player Note Den - RB
+Sun 4:05 pm vs Jax
+	
+Hamstring
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Den
+Teddy Bridgewater
+Teddy BridgewaterNANo new player Notes TB - QB
+Sun 1:00 pm vs Cle
+	
+Undisclosed
+	
+RET
+	
+Sep 16 3:36 AM
+	
+TB
+Jayden Higgins
+Jayden HigginsIRNo new player Notes Hou - WR
+Sun 1:00 pm vs Cin
+	
+Knee - ACL
+	
+IR
+	
+Sep 16 3:36 AM
+	
+Hou
+Kyle Monangai
+Kyle MonangaiQNew Player Note Chi - RB
+Sun 1:00 pm vs Min
+	
+Hamstring
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Chi
+Caleb Lohner
+Caleb LohnerIR-RNo new player Notes Den - TE
+Sun 4:05 pm vs Jax
+	
+Lower Body
+	
+IR-R
+	
+Sep 16 3:36 AM
+	
+Den
+Terrell Jennings
+Terrell JenningsNANo new player Notes NE - RB
+Sun 1:00 pm vs Pit
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+NE
+Brenden Bates
+Brenden BatesNANo new player Notes Cle - TE
+Sun 1:00 pm @ TB
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Cle
+Alex Bullock
+Alex BullockNANo new player Notes Jax - WR
+Sun 4:05 pm @ Den
+	
+Undisclosed
+	
+RET
+	
+Sep 16 3:36 AM
+	
+Jax
+Luke Lachey
+Luke LacheyNANo new player Notes Hou - TE
+Sun 1:00 pm vs Cin
+	
+Foot
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Hou
+Cole Burgess
+Cole BurgessIRNo new player Notes Pit - WR
+Sun 1:00 pm @ NE
+	
+Undisclosed
+	
+IR
+	
+Sep 16 3:36 AM
+	
+Pit
+Malick Meiga
+Malick MeigaNANo new player Notes Car - WR
+Sun 1:00 pm @ Atl
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Car
+Tyreek Hill
+Tyreek HillNAPlayer Note Mia - WR
+Sun 4:25 pm @ SF
+	
+Knee - ACL
+	
+O
+	
+Sep 16 3:36 AM
+	
+Mia
+Kye Robichaux
+Kye RobichauxNANo new player Notes Det - RB
+Thu 8:15 pm @ Buf
+	
+Foot
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Det
+Tyrell Shavers
+Tyrell ShaversPUP-RNo new player Notes Buf - WR
+Thu 8:15 pm vs Det
+	
+Knee - ACL
+	
+PUP-R
+	
+Sep 16 3:36 AM
+	
+Buf
+Jeremy McNichols
+Jeremy McNicholsIR-RNo new player Notes Was - RB
+Sun 4:25 pm @ Dal
+	
+Quadriceps
+	
+IR-R
+	
+Sep 16 3:36 AM
+	
+Was
+Brian Thomas Jr.
+Brian Thomas Jr.QVideo ForecastNew Player Note Jax - WR
+Sun 4:05 pm @ Den
+	
+Shoulder
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Jax
+Brock Bowers
+Brock BowersQVideo ForecastNew Player Note LV - TE
+Sun 4:05 pm @ LAC
+	
+Knee - Meniscus
+	
+Q
+	
+Sep 16 3:36 AM
+	
+LV
+Gee Scott
+Gee ScottNANo new player Notes NE - WR
+Sun 1:00 pm vs Pit
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+NE
+Dante Miller
+Dante MillerNANo new player Notes NYG - RB
+Mon 8:15 pm @ LAR
+	
+Groin
+	
+Q
+	
+Sep 16 3:36 AM
+	
+NYG
+Sean McKeon
+Sean McKeonNANo new player Notes Ind - TE
+Sun 8:20 pm @ KC
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Ind
+Princeton Fant
+Princeton FantIRNo new player Notes Dal - TE
+Sun 4:25 pm vs Was
+	
+Knee - ACL + MCL
+	
+IR
+	
+Sep 16 3:36 AM
+	
+Dal
+Mario Williams
+Mario WilliamsNANo new player Notes LAR - WR
+Mon 8:15 pm vs NYG
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+LAR
+Tyrone Broden
+Tyrone BrodenNANo new player Notes Sea - WR
+Sun 4:25 pm @ Ari
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Sea
+Tim Patrick
+Tim PatrickIRPlayer Note NYJ - WR
+Sun 1:00 pm vs GB
+	
+Groin
+	
+IR
+	
+Sep 16 3:36 AM
+	
+NYJ
+George Kittle
+George KittleQNew Player Note SF - TE
+Sun 4:25 pm vs Mia
+	
+Achilles
+	
+Q
+	
+Sep 16 3:36 AM
+	
+SF
+Julian Hill
+Julian HillIRNo new player Notes NE - TE
+Sun 1:00 pm vs Pit
+	
+Knee
+	
+IR
+	
+Sep 16 3:36 AM
+	
+NE
+Ben Sauls
+Ben SaulsNANo new player Notes NYG - K
+Mon 8:15 pm @ LAR
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+NYG
+Anthony Firkser
+Anthony FirkserNANo new player Notes Det - TE
+Thu 8:15 pm @ Buf
+	
+Leg
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Det
+Bryce Ford-Wheaton
+Bryce Ford-WheatonNANo new player Notes NYG - WR
+Mon 8:15 pm @ LAR
+	
+Achilles
+	
+Q
+	
+Sep 16 3:36 AM
+	
+NYG
+Le'Meke Brockington
+Le'Meke BrockingtonNANo new player Notes Atl - WR
+Sun 1:00 pm vs Car
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Atl
+Jimmy Kibble
+Jimmy KibbleNANo new player Notes NE - WR
+Sun 1:00 pm vs Pit
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+NE
+Jake Bobo
+Jake BoboIRNo new player Notes Sea - WR
+Sun 4:25 pm @ Ari
+	
+Knee
+	
+IR
+	
+Sep 16 3:36 AM
+	
+Sea
+Myles Montgomery
+Myles MontgomeryIRNo new player Notes NE - RB
+Sun 1:00 pm vs Pit
+	
+Undisclosed
+	
+IR
+	
+Sep 16 3:36 AM
+	
+NE
+River Cracraft
+River CracraftNANo new player Notes Was - WR
+Sun 4:25 pm @ Dal
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Was
+Michael Penix Jr.
+Michael Penix Jr.QNew Player Note Atl - QB
+Sun 1:00 pm vs Car
+	
+Knee - ACL
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Atl
+Zane Gonzalez
+Zane GonzalezNANo new player Notes Mia - K
+Sun 4:25 pm @ SF
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Mia
+Kadarius Calloway
+Kadarius CallowayNANo new player Notes TB - RB
+Sun 1:00 pm vs Cle
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+TB
+Ladd McConkey
+Ladd McConkeyQVideo ForecastNew Player Note LAC - WR
+Sun 4:05 pm vs LV
+	
+Ribs
+	
+Q
+	
+Sep 16 3:36 AM
+	
+LAC
+Dontae Fleming
+Dontae FlemingNANo new player Notes Min - WR
+Sun 1:00 pm @ Chi
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Min
+Tip Reiman
+Tip ReimanPUP-RNo new player Notes Ari - TE
+Sun 4:25 pm vs Sea
+	
+Ankle
+	
+PUP-R
+	
+Sep 16 3:36 AM
+	
+Ari
+Trey Benson
+Trey BensonIRNo new player Notes Ari - RB
+Sun 4:25 pm vs Sea
+	
+Knee
+	
+IR
+	
+Sep 16 3:36 AM
+	
+Ari
+Kyron Hudson
+Kyron HudsonNANo new player Notes Chi - WR
+Sun 1:00 pm vs Min
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Chi
+Bryson Nesbit
+Bryson NesbitNANo new player Notes Min - TE
+Sun 1:00 pm @ Chi
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Min
+Joe Mixon
+Joe MixonONo new player Notes Hou - RB
+Sun 1:00 pm vs Cin
+	
+Foot
+	
+O
+	
+Sep 16 3:36 AM
+	
+Hou
+Ja'Lynn Polk
+Ja'Lynn PolkNANo new player Notes NO - WR
+Sun 1:00 pm @ Bal
+	
+Undisclosed
+	
+RET
+	
+Sep 16 3:36 AM
+	
+NO
+DJ Turner
+DJ TurnerNANo new player Notes LV - WR
+Sun 4:05 pm @ LAC
+	
+Undisclosed
+	
+Q
+	
+Sep 16 3:36 AM
+	
+LV
+Nico Collins
+Nico CollinsQVideo ForecastNew Player Note Hou - WR
+Sun 1:00 pm vs Cin
+	
+Hamstring
+	
+Q
+	
+Sep 16 3:36 AM
+	
+Hou
+Brock Rechsteiner
+Brock RechsteinerSUSPNo new player Notes NO - WR
+Sun 1:00 pm @ Bal
+	
+Suspension
+	
+SUSP
+	
+Sep 16 3:36 AM
+	
+NO
+James Conner
+James ConnerIR-RNo new player Notes Ari - RB
+Sun 4:25 pm vs Sea
+	
+Foot
+	
+IR-R
+	
+Sep 16 3:36 AM
+	
+Ari
+Juwan Johnson
+Juwan JohnsonQVideo ForecastNew Player Note NO - TE
+Sun 1:00 pm @ Bal
+	
+Illness
+	
+Q
+	
+Sep 16 3:36 AM
+	
+NO
+Ricky Pearsall
+Ricky PearsallIRNo new player Notes SF - WR
+Sun 4:25 pm vs Mia
+	
+Knee - PCL
+	
+IR
+	
+Sep 16 3:36 AM
+	
+SF
+Derius Davis
+Derius DavisPlayer Note LAC - WR
+Sun 4:05 pm vs LV
+	
+	
+	
+Sep 16 3:31 AM
+	
+LAC
+Devontez Walker
+Devontez WalkerPlayer Note Bal - WR
+Sun 1:00 pm vs NO
+	
+	
+	
+Sep 16 2:46 AM
+	
+Bal
+Sean Tucker
+Sean TuckerNew Player Note TB - RB
+Sun 1:00 pm vs Cle
+	
+	
+	
+Sep 16 2:31 AM
+	
+TB
+Josh Whyle
+Josh WhylePlayer Note GB - TE
+Sun 1:00 pm @ NYJ
+	
+	
+	
+Sep 16 2:16 AM
+	
+GB
+Alvin Kamara
+Alvin KamaraNew Player Note NO - RB
+Sun 1:00 pm @ Bal
+	
+	
+	
+Sep 16 1:56 AM
+	
+NO
+Alec Pierce
+Alec PierceVideo ForecastNew Player Note Ind - WR
+Sun 8:20 pm @ KC
+	
+	
+	
+Sep 16 1:46 AM
+	
+Ind
+TreVeyon Henderson
+TreVeyon HendersonVideo ForecastNew Player Note NE - RB
+Sun 1:00 pm vs Pit
+	
+	
+	
+Sep 16 1:31 AM
+	
+NE
+Tyson Bagent
+Tyson BagentPlayer Note Chi - QB
+Sun 1:00 pm vs Min
+	
+	
+	
+Sep 16 1:21 AM
+	
+Chi
+Jalen McMillan
+Jalen McMillanNew Player Note TB - WR
+Sun 1:00 pm vs Cle
+	
+	
+	
+Sep 15 10:41 PM
+	
+TB
+JuJu Smith-Schuster
+JuJu Smith-SchusterNANew Player Note NYG - WR
+Mon 8:15 pm @ LAR
+	
+	
+	
+Sep 15 6:26 AM
+	
+NYG
+Jerome Ford
+Jerome FordNANew Player Note Was - RB
+Sun 4:25 pm @ Dal
+	
+	
+	
+Sep 15 4:31 AM
+	
+Was
+Sam Ehlinger
+Sam EhlingerPlayer Note Den - QB
+Sun 4:05 pm vs Jax
+	
+	
+	
+Sep 14 8:41 PM
+	
+Den
+Dallen Bentley
+Dallen BentleyNo new player Notes Den - TE
+Sun 4:05 pm vs Jax
+	
+	
+	
+Sep 14 8:41 PM
+	
+Den
+Tyler Badie
+Tyler BadiePlayer Note Den - RB
+Sun 4:05 pm vs Jax
+	
+	
+	
+Sep 14 8:41 PM
+	
+Den
+Garrett Nussmeier
+Garrett NussmeierPlayer Note KC - QB
+Sun 8:20 pm vs Ind
+	
+	
+	
+Sep 14 8:36 PM
+	
+KC
+Jared Wiley
+Jared WileyPlayer Note KC - TE
+Sun 8:20 pm vs Ind
+	
+	
+	
+Sep 14 8:36 PM
+	
+KC
+Davis Allen
+Davis AllenPlayer Note LAR - TE
+Mon 8:15 pm vs NYG
+	
+	
+	
+Sep 13 9:36 PM
+	
+LAR
+Luke McCaffrey
+Luke McCaffreyPlayer Note Was - WR
+Sun 4:25 pm @ Dal
+	
+	
+	
+Sep 13 8:26 PM
+	
+Was
+Treylon Burks
+Treylon BurksPlayer Note Was - WR
+Sun 4:25 pm @ Dal
+	
+	
+	
+Sep 13 8:26 PM
+	
+Was
+Jordan James
+Jordan JamesPlayer Note SF - RB
+Sun 4:25 pm vs Mia
+	
+	
+	
+Sep 13 8:26 PM
+	
+SF
+Nick Kallerup
+Nick KallerupNo new player Notes Sea - TE
+Sun 4:25 pm @ Ari
+	
+	
+	
+Sep 13 8:26 PM
+	
+Sea
+Jalen Milroe
+Jalen MilroePlayer Note Sea - QB
+Sun 4:25 pm @ Ari
+	
+	
+	
+Sep 13 8:26 PM
+	
+Sea
+Jordan Watkins
+Jordan WatkinsPlayer Note SF - WR
+Sun 4:25 pm vs Mia
+	
+	
+	
+Sep 13 8:26 PM
+	
+SF
+Nicholas Singleton
+Nicholas SingletonPlayer Note Ten - RB
+Sun 1:00 pm vs Phi
+	
+	
+	
+Sep 13 8:26 PM
+	
+Ten
+Will Howard
+Will HowardPlayer Note Pit - QB
+Sun 1:00 pm @ NE
+	
+	
+	
+Sep 13 8:26 PM
+	
+Pit
+Athan Kaliakmanis
+Athan KaliakmanisPlayer Note Was - QB
+Sun 4:25 pm @ Dal
+	
+	
+	
+Sep 13 8:26 PM
+	
+Was
+Kurtis Rourke
+Kurtis RourkePlayer Note SF - QB
+Sun 4:25 pm vs Mia
+	
+	
+	
+Sep 13 8:26 PM
+	
+SF
+Drew Allar
+Drew AllarPlayer Note Pit - QB
+Sun 1:00 pm @ NE
+	
+	
+	
+Sep 13 8:26 PM
+	
+Pit
+Tutu Atwell
+Tutu AtwellPlayer Note LAR - WR
+Mon 8:15 pm vs NYG
+	
+	
+	
+Sep 13 8:21 PM
+	
+LAR
+Elijah Moore
+Elijah MoorePlayer Note Phi - WR
+Sun 1:00 pm @ Ten
+	
+	
+	
+Sep 13 8:21 PM
+	
+Phi
+Max Klare
+Max KlarePlayer Note LAR - TE
+Mon 8:15 pm vs NYG
+	
+	
+	
+Sep 13 8:21 PM
+	
+LAR
+Najee Harris
+Najee HarrisPlayer Note NYG - RB
+Mon 8:15 pm @ LAR
+	
+	
+	
+Sep 13 8:21 PM
+	
+NYG
+Behren Morton
+Behren MortonPlayer Note NE - QB
+Sun 1:00 pm vs Pit
+	
+	
+	
+Sep 13 8:21 PM
+	
+NE
+Ty Simpson
+Ty SimpsonPlayer Note LAR - QB
+Mon 8:15 pm vs NYG
+	
+	
+	
+Sep 13 8:21 PM
+	
+LAR
+Thomas Fidone II
+Thomas Fidone IINo new player Notes NYG - TE
+Mon 8:15 pm @ LAR
+	
+	
+	
+Sep 13 8:21 PM
+	
+NYG
+Dalen Cambre
+Dalen CambreNANew Player Note NYG - WR
+Mon 8:15 pm @ LAR
+	
+	
+	
+Sep 13 8:21 PM
+	
+NYG
+Brady Cook
+Brady CookPlayer Note Mia - QB
+Sun 4:25 pm @ SF
+	
+	
+	
+Sep 13 8:21 PM
+	
+Mia
+J.J. McCarthy
+J.J. McCarthyPlayer Note Min - QB
+Sun 1:00 pm @ Chi
+	
+	
+	
+Sep 13 8:21 PM
+	
+Min
+Efton Chism III
+Efton Chism IIIPlayer Note NE - WR
+Sun 1:00 pm vs Pit
+	
+	
+	
+Sep 13 8:21 PM
+	
+NE
+Blake Grupe
+Blake GrupePlayer Note NYJ - K
+Sun 1:00 pm vs GB
+	
+	
+	
+Sep 13 8:21 PM
+	
+NYJ
+Tanner McKee
+Tanner McKeePlayer Note Phi - QB
+Sun 1:00 pm @ Ten
+	
+	
+	
+Sep 13 8:21 PM
+	
+Phi
+Jalen Tolbert
+Jalen TolbertPlayer Note Mia - WR
+Sun 4:25 pm @ SF
+	
+	
+	
+Sep 13 8:21 PM
+	
+Mia
+Zach Wilson
+Zach WilsonPlayer Note NO - QB
+Sun 1:00 pm @ Bal
+	
+	
+	
+Sep 13 8:21 PM
+	
+NO
+Aidan O'Connell
+Aidan O'ConnellPlayer Note LV - QB
+Sun 4:05 pm @ LAC
+	
+	
+	
+Sep 13 8:21 PM
+	
+LV
+Justin Joly
+Justin JolyPlayer Note Mia - TE
+Sun 4:25 pm @ SF
+	
+	
+	
+Sep 13 8:21 PM
+	
+Mia
+Cole Payton
+Cole PaytonPlayer Note Phi - QB
+Sun 1:00 pm @ Ten
+	
+	
+	
+Sep 13 8:21 PM
+	
+Phi
+CJ Daniels
+CJ DanielsPlayer Note LAR - WR
+Mon 8:15 pm vs NYG
+	
+	
+	
+Sep 13 8:21 PM
+	
+LAR
+Demond Claiborne
+Demond ClaibornePlayer Note Min - RB
+Sun 1:00 pm @ Chi
+	
+	
+	
+Sep 13 8:21 PM
+	
+Min
+Brevin Jordan
+Brevin JordanPlayer Note Hou - TE
+Sun 1:00 pm vs Cin
+	
+	
+	
+Sep 13 8:16 PM
+	
+Hou
+Tanner Koziol
+Tanner KoziolPlayer Note Jax - TE
+Sun 4:05 pm @ Den
+	
+	
+	
+Sep 13 8:16 PM
+	
+Jax
+Ke'Shawn Williams
+Ke'Shawn WilliamsNo new player Notes Cin - WR
+Sun 1:00 pm @ Hou
+	
+	
+	
+Sep 13 8:16 PM
+	
+Cin
+Taylen Green
+Taylen GreenPlayer Note Cle - QB
+Sun 1:00 pm @ TB
+	
+	
+	
+Sep 13 8:16 PM
+	
+Cle
+Quinn Ewers
+Quinn EwersPlayer Note Jax - QB
+Sun 4:05 pm @ Den
+	
+	
+	
+Sep 13 8:16 PM
+	
+Jax
+Jack Endries
+Jack EndriesPlayer Note Cin - TE
+Sun 1:00 pm @ Hou
+	
+	
+	
+Sep 13 8:16 PM
+	
+Cin
+DJ Giddens
+DJ GiddensPlayer Note Ind - RB
+Sun 8:20 pm @ KC
+	
+	
+	
+Sep 13 8:16 PM
+	
+Ind
+Israel Abanikanda
+Israel AbanikandaNANew Player Note Dal - RB
+Sun 4:25 pm vs Was
+	
+	
+	
+Sep 13 8:16 PM
+	
+Dal
+Riley Leonard
+Riley LeonardPlayer Note Ind - QB
+Sun 8:20 pm @ KC
+	
+	
+	
+Sep 13 8:16 PM
+	
+Ind
+Camden Brown
+Camden BrownNo new player Notes Dal - WR
+Sun 4:25 pm vs Was
+	
+	
+	
+Sep 13 8:16 PM
+	
+Dal
+J. Michael Sturdivant
+J. Michael SturdivantPlayer Note GB - WR
+Sun 1:00 pm @ NYJ
+	
+	
+	
+Sep 13 8:16 PM
+	
+GB
+Elijah Sarratt
+Elijah SarrattPlayer Note Bal - WR
+Sun 1:00 pm vs NO
+	
+	
+	
+Sep 13 8:11 PM
+	
+Bal
+Ja'Tavion Sanders
+Ja'Tavion SandersPlayer Note Car - TE
+Sun 1:00 pm @ Atl
+	
+	
+	
+Sep 13 8:11 PM
+	
+Car
+Skyler Bell
+Skyler BellPlayer Note Buf - WR
+Thu 8:15 pm vs Det
+	
+	
+	
+Sep 13 8:11 PM
+	
+Buf
+Joe Fagnano
+Joe FagnanoPlayer Note Bal - QB
+Sun 1:00 pm vs NO
+	
+	
+	
+Sep 13 8:11 PM
+	
+Bal
+Haynes King
+Haynes KingPlayer Note Car - QB
+Sun 1:00 pm @ Atl
+	
+	
+	
+Sep 13 8:11 PM
+	
+Car
+John Metchie III
+John Metchie IIINew Player Note Car - WR
+Sun 1:00 pm @ Atl
+	
+	
+	
+Sep 13 8:11 PM
+	
+Car
+Miller Moss
+Miller MossNANew Player Note Chi - QB
+Sun 1:00 pm vs Min
+	
+	
+	
+Sep 13 8:11 PM
+	
+Chi
+Reggie Virgil
+Reggie VirgilNo new player Notes Ari - WR
+Sun 4:25 pm vs Sea
+	
+	
+	
+Sep 13 8:06 PM
+	
+Ari
+Carson Beck
+Carson BeckPlayer Note Ari - QB
+Sun 4:25 pm vs Sea
+	
+	
+	
+Sep 13 8:06 PM
+	
+Ari
+Bo Melton
+Bo MeltonPlayer Note GB - WR
+Sun 1:00 pm @ NYJ
+	
+	
+	
+Sep 13 4:31 AM
+	
+GB
+Malik Nabers
+Malik NabersVideo ForecastPlayer Note NYG - WR
+Mon 8:15 pm @ LAR
+	
+	
+	
+Sep 13 3:56 AM
+	
+NYG
+Jeremiyah Love
+Jeremiyah LoveVideo ForecastPlayer Note Ari - RB
+Sun 4:25 pm vs Sea
+	
+	
+	
+Sep 13 12:06 AM
+	
+Ari
+Rome Odunze
+Rome OdunzePlayer Note Chi - WR
+Sun 1:00 pm vs Min
+	
+	
+	
+Sep 12 8:36 PM
+	
+Chi
+Cooper Rush
+Cooper RushVideo ForecastNew Player Note Atl - QB
+Sun 1:00 pm vs Car
+	
+	
+	
+Sep 12 6:06 PM
+	
+Atl
+Brenen Thompson
+Brenen ThompsonPlayer Note LAC - WR
+Sun 4:05 pm vs LV
+	
+	
+	
+Sep 11 2:51 AM
+	
+LAC
+Keaton Mitchell
+Keaton MitchellVideo ForecastPlayer Note LAC - RB
+Sun 4:05 pm vs LV
+	
+	
+	
+Sep 11 2:51 AM
+	
+LAC
+Will Kacmarek
+Will KacmarekPlayer Note Mia - TE
+Sun 4:25 pm @ SF
+	
+	
+	
+Sep 11 1:11 AM
+	
+Mia
+Zachariah Branch
+Zachariah BranchPlayer Note Atl - WR
+Sun 1:00 pm vs Car
+	
+	
+	
+Sep 10 11:06 PM
+	
+Atl
+Jonathon Brooks
+Jonathon BrooksPlayer Note Car - RB
+Sun 1:00 pm @ Atl
+	
+	
+	
+Sep 10 10:21 PM
+	
+Car
+Jacory Croskey-Merritt
+Jacory Croskey-MerrittPlayer Note Was - RB
+Sun 4:25 pm @ Dal
+	
+	
+	
+Sep 10 10:21 PM
+	
+Was
+Patrick Mahomes
+Patrick MahomesVideo ForecastNew Player Note KC - QB
+Sun 8:20 pm vs Ind
+	
+	
+	
+Sep 10 2:06 AM
+	
+KC
+Drew Ogletree
+Drew OgletreePlayer Note Ind - TE
+Sun 8:20 pm @ KC
+	
+	
+	
+Sep 10 1:06 AM
+	
+Ind
+Kyle Juszczyk
+Kyle JuszczykPlayer Note SF - RB
+Sun 4:25 pm vs Mia
+	
+	
+	
+Sep 9 9:41 AM
+	
+SF
+Ollie Gordon II
+Ollie Gordon IIPlayer Note Mia - RB
+Sun 4:25 pm @ SF
+	
+	
+	
+Sep 9 6:06 AM
+	
+Mia
+British Brooks
+British BrooksPlayer Note Hou - RB
+Sun 1:00 pm vs Cin
+	
+	
+	
+Sep 9 5:06 AM
+	
+Hou
+Joshua Pitsenberger
+Joshua PitsenbergerNANo new player Notes Hou - RB
+Sun 1:00 pm vs Cin
+	
+	
+	
+Sep 9 5:06 AM
+	
+Hou
+Cameron Dicker
+Cameron DickerPlayer Note LAC - K
+Sun 4:05 pm vs LV
+	
+	
+	
+Sep 9 4:26 AM
+	
+LAC
+Marcus Mariota
+Marcus MariotaPlayer Note Was - QB
+Sun 4:25 pm @ Dal
+	
+	
+	
+Sep 9 3:21 AM
+	
+Was
+John Bates
+John BatesPlayer Note Was - TE
+Sun 4:25 pm @ Dal
+	
+	
+	
+Sep 9 3:21 AM
+	
+Was
+Ben Sinnott
+Ben SinnottPlayer Note Was - TE
+Sun 4:25 pm @ Dal
+	
+	
+	
+Sep 9 3:21 AM
+	
+Was
+Kendre Miller
+Kendre MillerPlayer Note NO - RB
+Sun 1:00 pm @ Bal
+	
+	
+	
+Sep 9 3:16 AM
+	
+NO
+Ashton Jeanty
+Ashton JeantyVideo ForecastPlayer Note LV - RB
+Sun 4:05 pm @ LAC
+	
+	
+	
+Sep 9 3:06 AM
+	
+LV
+Jaylin Noel
+Jaylin NoelPlayer Note Hou - WR
+Sun 1:00 pm vs Cin
+	
+	
+	
+Sep 9 2:56 AM
+	
+Hou
+Tre' Harris
+Tre' HarrisPlayer Note LAC - WR
+Sun 4:05 pm vs LV
+	
+	
+	
+Sep 9 2:56 AM
+	
+LAC
+Rachaad White
+Rachaad WhitePlayer Note Was - RB
+Sun 4:25 pm @ Dal
+	
+	
+	
+Sep 9 2:46 AM
+	
+Was
+Tucker Kraft
+Tucker KraftPlayer Note GB - TE
+Sun 1:00 pm @ NYJ
+	
+	
+	
+Sep 9 2:41 AM
+	
+GB
+Keon Coleman
+Keon ColemanPlayer Note Buf - WR
+Thu 8:15 pm vs Det
+	
+	
+	
+Sep 9 2:36 AM
+	
+Buf
+Khalil Shakir
+Khalil ShakirPlayer Note Buf - WR
+Thu 8:15 pm vs Det
+	
+	
+	
+Sep 9 2:36 AM
+	
+Buf
+Emeka Egbuka
+Emeka EgbukaVideo ForecastPlayer Note TB - WR
+Sun 1:00 pm vs Cle
+	
+	
+	
+Sep 9 2:06 AM
+	
+TB
+Ja'Marr Chase
+Ja'Marr ChasePlayer Note Cin - WR
+Sun 1:00 pm @ Hou
+	
+	
+	
+Sep 9 1:56 AM
+	
+Cin
+Tee Higgins
+Tee HigginsVideo ForecastPlayer Note Cin - WR
+Sun 1:00 pm @ Hou
+	
+	
+	
+Sep 9 1:56 AM
+	
+Cin
+Josh Downs
+Josh DownsVideo ForecastPlayer Note Ind - WR
+Sun 8:20 pm @ KC
+	
+	
+	
+Sep 9 1:41 AM
+	
+Ind
+Ben Skowronek
+Ben SkowronekPlayer Note Pit - WR
+Sun 1:00 pm @ NE
+	
+	
+	
+Sep 9 1:41 AM
+	
+Pit
+DK Metcalf
+DK MetcalfVideo ForecastPlayer Note Pit - WR
+Sun 1:00 pm @ NE
+	
+	
+	
+Sep 9 1:36 AM
+	
+Pit
+Wan'Dale Robinson
+Wan'Dale RobinsonVideo ForecastPlayer Note Ten - WR
+Sun 1:00 pm vs Phi
+	
+	
+	
+Sep 9 1:31 AM
+	
+Ten
+Mitchell Trubisky
+Mitchell TrubiskyPlayer Note Ten - QB
+Sun 1:00 pm vs Phi
+	
+	
+	
+Sep 9 1:31 AM
+	
+Ten
+Carnell Tate
+Carnell TateVideo ForecastPlayer Note Ten - WR
+Sun 1:00 pm vs Phi
+	
+	
+	
+Sep 9 1:31 AM
+	
+Ten
+Theo Johnson
+Theo JohnsonPlayer Note NYG - TE
+Mon 8:15 pm @ LAR
+	
+	
+	
+Sep 9 1:26 AM
+	
+NYG
+Tyler Warren
+Tyler WarrenVideo ForecastPlayer Note Ind - TE
+Sun 8:20 pm @ KC
+	
+	
+	
+Sep 9 1:26 AM
+	
+Ind
+Bhayshul Tuten
+Bhayshul TutenVideo ForecastPlayer Note Jax - RB
+Sun 4:05 pm @ Den
+	
+	
+	
+Sep 9 1:26 AM
+	
+Jax
+Luther Burden III
+Luther Burden IIIPlayer Note Chi - WR
+Sun 1:00 pm vs Min
+	
+	
+	
+Sep 9 1:16 AM
+	
+Chi
+Breece Hall
+Breece HallPlayer Note NYJ - RB
+Sun 1:00 pm vs GB
+	
+	
+	
+Sep 9 1:16 AM
+	
+NYJ
+Isaiah Davis
+Isaiah DavisPlayer Note NYJ - RB
+Sun 1:00 pm vs GB
+	
+	
+	
+Sep 9 1:16 AM
+	
+NYJ
+Kenyon Sadiq
+Kenyon SadiqVideo ForecastPlayer Note NYJ - TE
+Sun 1:00 pm vs GB
+	
+	
+	
+Sep 9 1:16 AM
+	
+NYJ
+Sam LaPorta
+Sam LaPortaPlayer Note Det - TE
+Thu 8:15 pm @ Buf
+	
+	
+	
+Sep 9 1:06 AM
+	
+Det
+Xavier Legette
+Xavier LegettePlayer Note Car - WR
+Sun 1:00 pm @ Atl
+	
+	
+	
+Sep 9 12:46 AM
+	
+Car
+Chuba Hubbard
+Chuba HubbardVideo ForecastPlayer Note Car - RB
+Sun 1:00 pm @ Atl
+	
+	
+	
+Sep 9 12:41 AM
+	
+Car
+Jacob Cowing
+Jacob CowingPlayer Note SF - WR
+Sun 4:25 pm vs Mia
+	
+	
+	
+Sep 8 5:06 AM
+	
+SF
+Jack Stoll
+Jack StollNANew Player Note SF - TE
+Sun 4:25 pm vs Mia
+	
+	
+	
+Sep 8 3:36 AM
+	
+SF
+Puka Nacua
+Puka NacuaPlayer Note LAR - WR
+Mon 8:15 pm vs NYG
+	
+	
+	
+Sep 8 3:26 AM
+	
+LAR
+Terrance Ferguson
+Terrance FergusonVideo ForecastPlayer Note LAR - TE
+Mon 8:15 pm vs NYG
+	
+	
+	
+Sep 8 3:26 AM
+	
+LAR
+Mike Evans
+Mike EvansVideo ForecastPlayer Note SF - WR
+Sun 4:25 pm vs Mia
+	
+	
+	
+Sep 8 3:21 AM
+	
+SF
+Christian McCaffrey
+Christian McCaffreyVideo ForecastPlayer Note SF - RB
+Sun 4:25 pm vs Mia
+	
+	
+	
+Sep 8 3:21 AM
+	
+SF
+Isaiah Bond
+Isaiah BondPlayer Note Cle - WR
+Sun 1:00 pm @ TB
+	
+	
+	
+Sep 6 11:26 PM
+	
+Cle
+Emanuel Wilson
+Emanuel WilsonPlayer Note Sea - RB
+Sun 4:25 pm @ Ari
+	
+	
+	
+Sep 6 4:56 AM
+	
+Sea
+Brayden Willis
+Brayden WillisNew Player Note SF - TE
+Sun 4:25 pm vs Mia
+	
+	
+	
+Sep 5 2:26 AM
+	
+SF
+Brock Lampe
+Brock LampeNAPlayer Note Buf - RB
+Thu 8:15 pm vs Det
+	
+	
+	
+Sep 3 3:16 AM
+	
+Buf
+Kalel Mullings
+Kalel MullingsNANo new player Notes Ten - RB
+Sun 1:00 pm vs Phi
+	
+	
+	
+Sep 2 9:06 AM
+	
+Ten
+Cedric Tillman
+Cedric TillmanNANo new player Notes NO - WR
+Sun 1:00 pm @ Bal
+	
+	
+	
+Sep 2 6:21 AM
+	
+NO
+Kenneth Walker
+Kenneth WalkerVideo ForecastPlayer Note KC - RB
+Sun 8:20 pm vs Ind
+	
+	
+	
+Sep 1 10:06 PM
+	
+KC
+Brandon Smith
+Brandon SmithNANo new player Notes Pit - WR
+Sun 1:00 pm @ NE
+	
+	
+	
+Aug 31 2:26 AM
+	
+Pit
+Cam Camper
+Cam CamperNANo new player Notes NYJ - WR
+Sun 1:00 pm vs GB
+	
+	
+	
+Aug 30 9:46 PM
+	
+NYJ
+Jawhar Jordan
+Jawhar JordanNANo new player Notes Hou - RB
+Sun 1:00 pm vs Cin
+	
+	
+	
+Aug 30 8:56 PM
+	
+Hou
+Ihmir Smith-Marsette
+Ihmir Smith-MarsetteNANew Player Note Ari - WR
+Sun 4:25 pm vs Sea
+	
+	
+	
+Aug 30 8:56 PM
+	
+Ari
+Dayton Wade
+Dayton WadeNANo new player Notes Bal - WR
+Sun 1:00 pm vs NO
+	
+	
+	
+Aug 30 7:16 PM
+	
+Bal
+Jalin Hyatt
+Jalin HyattNANo new player Notes NYG - WR
+Mon 8:15 pm @ LAR
+	
+	
+	
+Aug 30 6:21 AM
+	
+NYG
+Noah Whittington
+Noah WhittingtonNANo new player Notes Hou - RB
+Sun 1:00 pm vs Cin
+	
+	
+	
+Aug 30 4:49 AM
+	
+Hou
+Britain Covey
+Britain CoveyNew Player Note Phi - WR
+Sun 1:00 pm @ Ten
+	
+	
+	
+Aug 30 4:49 AM
+	
+Phi
+Chris Olave
+Chris OlavePlayer Note NO - WR
+Sun 1:00 pm @ Bal
+	
+	
+	
+Aug 30 4:49 AM
+	
+NO
+Phil Mafah
+Phil MafahNAPlayer Note NYG - RB
+Mon 8:15 pm @ LAR
+	
+	
+	
+Aug 30 4:49 AM
+	
+NYG
+Michael Trigg
+Michael TriggNANo new player Notes Dal - TE
+Sun 4:25 pm vs Was
+	
+	
+	
+Aug 30 4:49 AM
+	
+Dal
+Lan Larison
+Lan LarisonNAPlayer Note NE - RB
+Sun 1:00 pm vs Pit
+	
+	
+	
+Aug 30 4:49 AM
+	
+NE
+Xavier Worthy
+Xavier WorthyPlayer Note KC - WR
+Sun 8:20 pm vs Ind
+	
+	
+	
+Aug 30 4:49 AM
+	
+KC
+Anthony Gould
+Anthony GouldNANo new player Notes Ind - WR
+Sun 8:20 pm @ KC
+	
+	
+	
+Aug 30 4:49 AM
+	
+Ind
+Jabari Small
+Jabari SmallNAPlayer Note Det - RB
+Thu 8:15 pm @ Buf
+	
+	
+	
+Aug 30 4:49 AM
+	
+Det
+Elijah Higgins
+Elijah HigginsNo new player Notes Ari - TE
+Sun 4:25 pm vs Sea
+	
+	
+	
+Aug 30 4:49 AM
+	
+Ari
+Quentin Johnston
+Quentin JohnstonVideo ForecastPlayer Note LAC - WR
+Sun 4:05 pm vs LV
+	
+	
+	
+Aug 30 4:49 AM
+	
+LAC
+Carsen Ryan
+Carsen RyanNo new player Notes Cle - TE
+Sun 1:00 pm @ TB
+	
+	
+	
+Aug 30 4:49 AM
+	
+Cle
+Sione Vaki
+Sione VakiPlayer Note Det - RB
+Thu 8:15 pm @ Buf
+	
+	
+	
+Aug 30 4:49 AM
+	
+Det
+Braxton Berrios
+Braxton BerriosNAPlayer Note NYG - WR
+Mon 8:15 pm @ LAR
+	
+	
+	
+Aug 30 4:49 AM
+	
+NYG
+Tez Johnson
+Tez JohnsonNo new player Notes TB - WR
+Sun 1:00 pm vs Cle
+	
+	
+	
+Aug 30 4:49 AM
+	
+TB
+Bub Means
+Bub MeansNAPlayer Note Cle - WR
+Sun 1:00 pm @ TB
+	
+	
+	
+Aug 25 12:36 AM
+	
+Cle
+Quinshon Judkins
+Quinshon JudkinsVideo ForecastPlayer Note Cle - RB
+Sun 1:00 pm @ TB
+	
+	
+	
+Aug 24 11:26 PM
+	
+Cle
+Cade Otton
+Cade OttonPlayer Note TB - TE
+Sun 1:00 pm vs Cle
+	
+	
+	
+Aug 24 8:46 PM
+	
+TB
+Parker Washington
+Parker WashingtonVideo ForecastPlayer Note Jax - WR
+Sun 4:05 pm @ Den
+	
+	
+	
+Aug 24 7:31 PM
+	
+Jax
+Rasheen Ali
+Rasheen AliNo new player Notes Bal - RB
+Sun 1:00 pm vs NO
+	
+	
+	
+Aug 24 3:11 AM
+	
+Bal
+DeVonta Smith
+DeVonta SmithPlayer Note Phi - WR
+Sun 1:00 pm @ Ten
+	
+	
+	
+Aug 23 9:51 PM
+	
+Phi
+Makai Lemon
+Makai LemonVideo ForecastPlayer Note Phi - WR
+Sun 1:00 pm @ Ten
+	
+	
+	
+Aug 23 9:51 PM
+	
+Phi
+Dameon Pierce
+Dameon PierceNANo new player Notes Phi - RB
+Sun 1:00 pm @ Ten
+	
+	
+	
+Aug 23 9:26 PM
+	
+Phi
+Chris Bell
+Chris BellPlayer Note Mia - WR
+Sun 4:25 pm @ SF
+	
+	
+	
+Aug 23 8:06 PM
+	
+Mia
+Jaydon Blue
+Jaydon BlueNANo new player Notes Phi - RB
+Sun 1:00 pm @ Ten
+	
+	
+	
+Aug 22 9:11 AM
+	
+Phi
+Kevin Coleman Jr.
+Kevin Coleman Jr.Player Note Mia - WR
+Sun 4:25 pm @ SF
+	
+	
+	
+Aug 22 3:56 AM
+	
+Mia
+Max Brosmer
+Max BrosmerNANo new player Notes Min - QB
+Sun 1:00 pm @ Chi
+	
+	
+	
+Aug 22 3:11 AM
+	
+Min
+Trayveon Williams
+Trayveon WilliamsNANo new player Notes Det - RB
+Thu 8:15 pm @ Buf
+	
+	
+	
+Aug 22 12:51 AM
+	
+Det
+Jacob Saylors
+Jacob SaylorsPlayer Note Det - RB
+Thu 8:15 pm @ Buf
+	
+	
+	
+Aug 22 12:06 AM
+	
+Det
+DJ Moore
+DJ MoorePlayer Note Buf - WR
+Thu 8:15 pm vs Det
+	
+	
+	
+Aug 19 11:21 PM
+	
+Buf
+Brenden Rice
+Brenden RiceNANo new player Notes LV - WR
+Sun 4:05 pm @ LAC
+	
+	
+	
+Aug 19 2:56 AM
+	
+LV
+Jameson Williams
+Jameson WilliamsVideo ForecastPlayer Note Det - WR
+Thu 8:15 pm @ Buf
+	
+	
+	
+Aug 19 2:06 AM
+	
+Det
+Bryce Lance
+Bryce LancePlayer Note NO - WR
+Sun 1:00 pm @ Bal
+	
+	
+	
+Aug 19 1:56 AM
+	
+NO
+Jaylen Waddle
+Jaylen WaddleVideo ForecastPlayer Note Den - WR
+Sun 4:05 pm vs Jax
+	
+	
+	
+Aug 18 9:56 PM
+	
+Den
+Tony Pollard
+Tony PollardPlayer Note Ten - RB
+Sun 1:00 pm vs Phi
+	
+	
+	
+Aug 18 8:26 PM
+	
+Ten
+Tank Bigsby
+Tank BigsbyPlayer Note Phi - RB
+Sun 1:00 pm @ Ten
+	
+	
+	
+Aug 18 7:51 PM
+	
+Phi
+Tyquan Thornton
+Tyquan ThorntonNew Player Note KC - WR
+Sun 8:20 pm vs Ind
+	
+	
+	
+Aug 18 7:41 PM
+	
+KC
+Ronnie Bell
+Ronnie BellNANo new player Notes LV - WR
+Sun 4:05 pm @ LAC
+	
+	
+	
+Aug 18 4:31 AM
+	
+LV
+Kaelon Black
+Kaelon BlackVideo ForecastPlayer Note SF - RB
+Sun 4:25 pm vs Mia
+	
+	
+	
+Aug 18 1:11 AM
+	
+SF
+Zavion Thomas
+Zavion ThomasNo new player Notes Chi - WR
+Sun 1:00 pm vs Min
+	
+	
+	
+Aug 17 10:51 PM
+	
+Chi
+J.K. Dobbins
+J.K. DobbinsVideo ForecastPlayer Note Den - RB
+Sun 4:05 pm vs Jax
+	
+	
+	
+Aug 17 10:36 PM
+	
+Den
+Nick Mullens
+Nick MullensNAPlayer Note Jax - QB
+Sun 4:05 pm @ Den
+	
+	
+	
+Aug 17 7:21 PM
+	
+Jax
+Geno Smith
+Geno SmithPlayer Note NYJ - QB
+Sun 1:00 pm vs GB
+	
+	
+	
+Aug 17 6:41 PM
+	
+NYJ
+Caleb Douglas
+Caleb DouglasVideo ForecastPlayer Note Mia - WR
+Sun 4:25 pm @ SF
+	
+	
+	
+Aug 17 6:26 PM
+	
+Mia
+Garrett Wilson
+Garrett WilsonPlayer Note NYJ - WR
+Sun 1:00 pm vs GB
+	
+	
+	
+Aug 17 6:06 PM
+	
+NYJ
+Khalil Dinkins
+Khalil DinkinsNANo new player Notes SF - TE
+Sun 4:25 pm vs Mia
+	
+	
+	
+Aug 17 5:36 AM
+	
+SF
+Jadarian Price
+Jadarian PriceVideo ForecastPlayer Note Sea - RB
+Sun 4:25 pm @ Ari
+	
+	
+	
+Aug 17 3:06 AM
+	
+Sea
+Blake Watson
+Blake WatsonNANo new player Notes Ten - RB
+Sun 1:00 pm vs Phi
+	
+	
+	
+Aug 17 1:11 AM
+	
+Ten
+Craig Reynolds
+Craig ReynoldsNANo new player Notes Was - RB
+Sun 4:25 pm @ Dal
+	
+	
+	
+Aug 16 7:06 PM
+	
+Was
+Jake Browning
+Jake BrowningNANo new player Notes TB - QB
+Sun 1:00 pm vs Cle
+	
+	
+	
+Aug 16 6:16 PM
+	
+TB
+Michael Wiley
+Michael WileyNANo new player Notes TB - RB
+Sun 1:00 pm vs Cle
+	
+	
+	
+Aug 16 3:16 AM
+	
+TB
+Gavin Bartholomew
+Gavin BartholomewNo new player Notes Min - TE
+Sun 1:00 pm @ Chi
+	
+	
+	
+Aug 15 10:41 PM
+	
+Min
+Kaden Wetjen
+Kaden WetjenNo new player Notes Pit - WR
+Sun 1:00 pm @ NE
+	
+	
+	
+Aug 15 8:26 PM
+	
+Pit
+Marquez Valdes-Scantling
+M. Valdes-ScantlingNANew Player Note LAC - WR
+Sun 4:05 pm vs LV
+	
+	
+	
+Aug 15 8:26 AM
+	
+LAC
+Jordan Addison
+Jordan AddisonVideo ForecastPlayer Note Min - WR
+Sun 1:00 pm @ Chi
+	
+	
+	
+Aug 15 7:31 AM
+	
+Min
+Josh Reynolds
+Josh ReynoldsNANo new player Notes NYJ - WR
+Sun 1:00 pm vs GB
+	
+	
+	
+Aug 15 1:21 AM
+	
+NYJ
+Jaxson Dart
+Jaxson DartPlayer Note NYG - QB
+Mon 8:15 pm @ LAR
+	
+	
+	
+Aug 14 10:46 PM
+	
+NYG
+Jaleel McLaughlin
+Jaleel McLaughlinPlayer Note Cle - RB
+Sun 1:00 pm @ TB
+	
+	
+	
+Aug 14 5:36 AM
+	
+Cle
+Laquon Treadwell
+Laquon TreadwellNo new player Notes Ind - WR
+Sun 8:20 pm @ KC
+	
+	
+	
+Aug 13 9:41 PM
+	
+Ind
+Jahmyr Gibbs
+Jahmyr GibbsVideo ForecastPlayer Note Det - RB
+Thu 8:15 pm @ Buf
+	
+	
+	
+Aug 13 6:31 PM
+	
+Det
+Tyjae Spears
+Tyjae SpearsPlayer Note Ten - RB
+Sun 1:00 pm vs Phi
+	
+	
+	
+Aug 13 9:11 AM
+	
+Ten
+Darren Waller
+Darren WallerPlayer Note Car - TE
+Sun 1:00 pm @ Atl
+	
+	
+	
+Aug 12 5:36 AM
+	
+Car
+Trevor Siemian
+Trevor SiemianNANo new player Notes Ten - QB
+Sun 1:00 pm vs Phi
+	
+	
+	
+Aug 12 2:51 AM
+	
+Ten
+Matthew Golden
+Matthew GoldenVideo ForecastPlayer Note GB - WR
+Sun 1:00 pm @ NYJ
+	
+	
+	
+Aug 10 9:06 PM
+	
+GB
+Jayden Reed
+Jayden ReedPlayer Note GB - WR
+Sun 1:00 pm @ NYJ
+	
+	
+	
+Aug 10 8:56 PM
+	
+GB
+Greg Dulcich
+Greg DulcichPlayer Note Mia - TE
+Sun 4:25 pm @ SF
+	
+	
+	
+Aug 10 12:56 AM
+	
+Mia
+Nate Adkins
+Nate AdkinsNo new player Notes Den - TE
+Sun 4:05 pm vs Jax
+	
+	
+	
+Aug 9 8:56 PM
+	
+Den
+Chris Brooks
+Chris BrooksVideo ForecastPlayer Note GB - RB
+Sun 1:00 pm @ NYJ
+	
+	
+	
+Aug 8 9:26 PM
+	
+GB
+Elic Ayomanor
+Elic AyomanorPlayer Note Ten - WR
+Sun 1:00 pm vs Phi
+	
+	
+	
+Aug 7 4:36 AM
+	
+Ten
+Cyrus Allen
+Cyrus AllenNew Player Note KC - WR
+Sun 8:20 pm vs Ind
+	
+	
+	
+Aug 6 7:11 PM
+	
+KC
+Romeo Doubs
+Romeo DoubsVideo ForecastPlayer Note NE - WR
+Sun 1:00 pm vs Pit
+	
+	
+	
+Aug 6 6:36 PM
+	
+NE
+Bryce Pierre
+Bryce PierreNANo new player Notes Car - TE
+Sun 1:00 pm @ Atl
+	
+	
+	
+Aug 6 3:51 AM
+	
+Car
+Michael Mayer
+Michael MayerVideo ForecastPlayer Note LV - TE
+Sun 4:05 pm @ LAC
+	
+	
+	
+Aug 5 9:56 PM
+	
+LV
+Josh Kattus
+Josh KattusNANo new player Notes Cin - TE
+Sun 1:00 pm @ Hou
+	
+	
+	
+Aug 5 7:06 PM
+	
+Cin
+Jermaine Terry
+Jermaine TerryNANo new player Notes Cle - TE
+Sun 1:00 pm @ TB
+	
+	
+	
+Aug 5 3:26 AM
+	
+Cle
+Tyler Conklin
+Tyler ConklinNo new player Notes Det - TE
+Thu 8:15 pm @ Buf
+	
+	
+	
+Aug 5 3:21 AM
+	
+Det
+Cam Grandy
+Cam GrandyNANo new player Notes Min - TE
+Sun 1:00 pm @ Chi
+	
+	
+	
+Aug 5 2:46 AM
+	
+Min
+KC Concepcion Jr.
+KC Concepcion Jr.Video ForecastPlayer Note Cle - WR
+Sun 1:00 pm @ TB
+	
+	
+	
+Aug 5 12:56 AM
+	
+Cle
+Ben VanSumeren
+Ben VanSumerenNew Player Note KC - RB
+Sun 8:20 pm vs Ind
+	
+	
+	
+Aug 4 9:51 PM
+	
+KC
+CJ Dippre
+CJ DippreNANo new player Notes TB - TE
+Sun 1:00 pm vs Cle
+	
+	
+	
+Aug 4 8:21 PM
+	
+TB
+Zach Ertz
+Zach ErtzNANo new player Notes Was - TE
+Sun 4:25 pm @ Dal
+	
+	
+	
+Aug 4 6:56 PM
+	
+Was
+Chris Rodriguez Jr.
+Chris Rodriguez Jr.Player Note Jax - RB
+Sun 4:05 pm @ Den
+	
+	
+	
+Aug 3 2:46 AM
+	
+Jax
+Joseph Manjack
+Joseph ManjackNANo new player Notes Den - WR
+Sun 4:05 pm vs Jax
+	
+	
+	
+Aug 3 12:06 AM
+	
+Den
+Josh Oliver
+Josh OliverPlayer Note Min - TE
+Sun 1:00 pm @ Chi
+	
+	
+	
+Aug 2 5:46 PM
+	
+Min
+Donald Parham Jr.
+Donald Parham Jr.NANo new player Notes Pit - TE
+Sun 1:00 pm @ NE
+	
+	
+	
+Aug 1 1:51 AM
+	
+Pit
+Cody Hardy
+Cody HardyNANo new player Notes NO - TE
+Sun 1:00 pm @ Bal
+	
+	
+	
+Jul 31 2:41 AM
+	
+NO
+Mitchell Evans
+Mitchell EvansPlayer Note Car - TE
+Sun 1:00 pm @ Atl
+	
+	
+	
+Jul 31 12:41 AM
+	
+Car
+Kenny McIntosh
+Kenny McIntoshNANo new player Notes Sea - RB
+Sun 4:25 pm @ Ari
+	
+	
+	
+Jul 20 1:21 AM
+	
+Sea
+Quentin Skinner
+Quentin SkinnerNANo new player Notes Buf - WR
+Thu 8:15 pm vs Det
+	
+	
+	
+Jul 13 3:06 AM
+	
+Buf
+Montrell Johnson Jr.
+Montrell Johnson Jr.NANo new player Notes Car - RB
+Sun 1:00 pm @ Atl
+	
+	
+	
+May 20 2:06 AM
+	

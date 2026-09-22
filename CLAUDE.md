@@ -31,7 +31,8 @@ Do not over-explain R, dbt patterns, or statistics. Do explain football.
 **Known — pulled from the real Yahoo settings page for "TKWW2K26 League 5" (ID #1541392)
 on 2026-09-04:**
 - Company league, organizer is Pete Gentile
-- 10-team snake draft, 17 rounds (9 starters + 6 bench + 2 IR)
+- 10-team snake draft, **15 rounds** (9 starters + 6 bench). IR 2 exists but is **not
+  drafted** — a 17-round assumption cost us the Week 1 kicker (handoff #24).
 - Platform: Yahoo
 - Draft date: **Tuesday, Sept 8, 2026, 6:00pm ET**, 1-minute pick clock (2026 NFL season
   opens Wed Sept 9 — this is the night before Week 1)
@@ -303,7 +304,9 @@ so passing on a positional run costs less. Recommendations must be slot-aware.
 
 ## Stack
 
-- R 4.4+, `renv` for pinning, package structure (`devtools::load_all()`)
+- R 4.4+, `renv` for pinning, package structure (`devtools::load_all()`).
+  **`renv` is currently out of sync — `devtools` is not installed and `load_all()` fails.**
+  Workaround: `source()` the `R/*.R` files you need directly. Fix with `renv::status()`.
 - `targets` for the DAG, DuckDB as the local warehouse, parquet for raw
 - `nflreadr` (1.5.1+) for all NFL data. `ffsimulator` as a reference implementation
 - `jsonlite` + `jsonvalidate` for config, `pointblank` for data validation
@@ -319,6 +322,19 @@ so passing on a positional run costs less. Recommendations must be slot-aware.
   exported ADP/XRank file, for one) — and when you do it, say so at the point of use and
   report the match rate.
 - Scoring must be a pure vectorized function of (stat line, config). Golden-test it.
+- **`score_player_week()` is validated 26/26** vs Yahoo box scores across Weeks 1-2, incl.
+  2-pt conversions and kicker FG bands. Do not re-validate. **DST is the only gap** —
+  per-player by design; worth 21.00 (14% of the total) in Week 2.
+- **nflreadr name gotchas are silent.** `Kenny` not `Kenneth` Gainwell; the column is
+  `passing_interceptions`, not `interceptions`. A name miss returns `NA` through a join,
+  not an error. This is the name-join rule above collecting its debt.
+- **`load_schedules()` `temp`/`wind` are NA for every unplayed game** — backfilled
+  post-game only. Not a bug. Use the market total as the weather proxy.
+- **A Yahoo injury `O` is a state, not an event.** Diff it against last week's usage before
+  reading it as news — a player long out reads identically to one just ruled out.
+- **A Yahoo live win probability mid-week is not a forecast.** It is points already banked
+  plus a stale projection, so it is most wrong when the opponent's early players spiked.
+  Compute remaining-vs-remaining instead; it inverted the Week 2 read.
 - Every model outputs a distribution, not a point estimate.
 - Validate the config early and fail loudly. A bad `league.json` should not reach a model fit.
 - **Docs written in `/caveman` style.** Repo rule. Applies to `PLAN_1.md`, `CONTEXT.md`,
@@ -329,8 +345,17 @@ so passing on a positional run costs less. Recommendations must be slot-aware.
 
 ## Current status
 
-Nothing built yet. Next action is Phase 0 (see `PLAN.md`).
+**Draft engine DONE.** Drafted 2026-09-08 from slot 10. In-season now — **record 1-1
+through Week 2**. Current work is the weekly start/sit layer (`R/41_weekly.R`), not
+`PLAN.md`. Read the newest doc in `docs/handoff/` for live state; `docs/handoff/README.md`
+is the index.
 
-**First task of Phase 0 is verification, not code.** Every claim in `PLAN.md` about what
-nflverse returns is from documentation, unverified against a live session. Confirm actual
-column names, 2026 data availability, and join keys before building on them.
+Weekly loop, as practiced: freeze a decision log with **pre-registered kill conditions**
+before kickoff (`data/weekly/2026_weekNN_decisions.md`), then score the week against them
+and log `regret = best legal lineup - started` in `data/weekly/README.md`. Separate
+"decision wrong" from "outcome bad" — Week 1 proved they differ.
+
+**Lineup deadlines are not a player's own kickoff.** The real deadline for a slot is
+`min(kickoff of that player's legal replacements)`. Week 2: Adams locked Monday, but every
+WR who could replace him played Sunday 1:00pm, so the call was due 31h earlier than the
+lock table said.
