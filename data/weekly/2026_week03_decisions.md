@@ -11,8 +11,22 @@ Week 2 scored 4 right / 2 wrong that way, and both wrongs cost 2.50 combined.
 - ADD **Chiefs DEF**, DROP Patriots DEF (+2.22 proj)
 - ADD **H. Butker (K, KC)**, DROP C. McLaughlin (+1.36 proj)
 
-Starters **100.46 -> 104.04**. Opponent **Maybe Mitchell (2-0)** projected **116.95**.
-We are the underdog by **12.91**.
+**Yahoo "Orig Proj", logged 2026-09-23, ties out exactly:**
+
+| | proj |
+|---|---|
+| JGrahnasaurs (1-1, 4th) | **103.99** |
+| Maybe Mitchell (2-0, 2nd) | **116.94** |
+| gap | **-12.95** |
+
+Yahoo: **38% underdog**. Lineups in `2026_week03_myteam.csv` and
+`2026_week03_opponent.csv`; both sum to Yahoo's totals to the penny.
+
+Three of my values drifted between the position pages (read 18:46) and the matchup page
+(read ~19:55): Adams 9.91->9.89, Sutton 8.82->8.81, Etienne 9.70->9.68. Total 104.04 ->
+**103.99**. Trivial, and the **matchup-page figures are the ones recorded** — they are
+what the decisions were actually made against. Noting it because the two Yahoo surfaces
+disagree at the second decimal and a future join must pick one deliberately.
 
 ---
 
@@ -69,6 +83,34 @@ Correlation is not the thing to avoid — **paying for it** is.
 **Kill condition:** all three of Mahomes, Butker, Chiefs finish under 60% of projection
 (12.54 / 5.44 / 4.66). That is one game script sinking three slots, and it would mean
 single-game concentration needs a real penalty, not just a flag.
+
+### 1a. Head-to-head overlap. Only visible once the opponent lineup was logged.
+
+**Eight of my nine starters sit in three games**, and the opponent has players in two of
+them. This changes the shape of the margin, not just my own variance.
+
+| game | when | mine | theirs |
+|---|---|---|---|
+| **BAL @ DAL** | Sun 16:25 | Henry 16.99, J. Williams 13.32, Ferguson 7.57 = **37.88** | **L. Jackson 22.89** |
+| **KC @ MIA** | Sun 13:00 | Mahomes 20.90, Butker 9.06, Chiefs 7.77 = **37.73** | — |
+| **LA @ DEN** | Sun 20:20 | Adams 9.89, Sutton 8.81 = **18.70** | Rams DEF 5.77 |
+
+Two genuine hedges fell out of this, neither of them planned:
+
+**BAL @ DAL is self-damping.** Henry and their Lamar Jackson are **teammates**. Baltimore
+scoring helps Henry *and* Jackson; my Williams and Ferguson are on the other side. Any
+Baltimore blowout moves ~38 of my points and ~23 of theirs in partly offsetting
+directions. The margin is less sensitive to this game than 60 points of exposure suggests.
+
+**Sutton is directly opposed to their Rams DEF.** Denver's passing game succeeding is the
+same event as the Rams defense failing. Points I gain there are points they lose.
+
+**KC @ MIA is the unhedged one.** 37.73 of my points, none of theirs. It is my biggest
+single-game bet and the one with no offset — which is the §1 concentration restated in
+head-to-head terms, and the reason the kill condition above is worth checking.
+
+**Consequence for the retro:** margin variance is lower than either roster's standalone
+variance implies. Do not read a close final score as evidence the projections were sharp.
 
 ---
 
@@ -269,5 +311,12 @@ Also record, separately from the kill table:
 - **Process:** was the Etienne check made at ~14:55, and was the right action taken?
 - **Out-of-sample:** actual / own-season-average for Henry, Mahomes, Sutton (learn #2).
 - **Streaming:** Chiefs vs Patriots, Butker vs McLaughlin, actual points both ways.
+- **Opponent:** fill `actual` in `2026_week03_opponent.csv`. First week their lineup was
+  logged pre-kickoff, so it is the first week **projection error can be measured on both
+  sides** — ours vs theirs, same Yahoo model. Two weeks of our own error is not enough to
+  say whether Yahoo is biased or we are simply unlucky.
+- **Hedge check (§1a):** did BAL @ DAL damp the margin as argued? Henry and their Jackson
+  are teammates; Sutton is directly opposed to their Rams DEF. If both my Baltimore-side
+  and Dallas-side players moved the same direction, the self-damping claim is wrong.
 
 **n=3. Fit nothing.**
