@@ -75,10 +75,15 @@ read_yahoo_position <- function(path) {
 #' @param dir Directory holding `yahoo_week*_*.csv`.
 #' @return tibble, one row per player (deduped; `wrt` is a superset of wr/te).
 read_yahoo_week <- function(dir) {
-  files <- list.files(dir, pattern = "^yahoo_week\\d+_.*\\.csv$", full.names = TRUE)
-  # `wrt` is Yahoo's combined flex page and duplicates wr + te. Drop it: the
+  # WHITELIST the position exports. A glob over `yahoo_week*_*.csv` also drags
+  # in gamedaycalls/ and injuries/, which share the prefix but not the schema
+  # -- no `Roster Status`, no `Fantasy Fan Pts` -- and the failure surfaces as
+  # a confusing tibble recycling error, not a missing-column one.
+  # `wrt` is Yahoo's combined flex page and duplicates wr + te; the
   # per-position files carry the same rows with cleaner position labels.
-  files <- files[!grepl("_wrt\\.csv$", files)]
+  pos <- c("qb", "rb", "wr", "te", "k", "def")
+  files <- list.files(dir, full.names = TRUE)
+  files <- files[grepl(sprintf("_(%s)\\.csv$", paste(pos, collapse = "|")), files)]
   stopifnot(length(files) > 0)
 
   bind_rows(lapply(files, read_yahoo_position)) |>
