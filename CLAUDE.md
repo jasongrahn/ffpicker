@@ -281,6 +281,43 @@ Target share and carry share predict themselves. Touchdown rate does not. Any mo
 fails to aggressively regress efficiency is fooling itself, and most public projections
 do. This principle governs feature selection in Layer 2 and shrinkage in Layer 3.
 
+### Game script. Measured 2026-09-23, use it instead of guessing.
+
+Vegas spread moves fantasy points **by position, and only for some positions.** Measured
+on 2024-25 starter-calibre player-weeks, scored as points **relative to each player's own
+season average** so player quality cancels out. Harness: `dev/weekly/` scratch, rerunnable.
+
+| position | dog 3-7 | fav 0-3 | **fav 3-7** | fav 10+ |
+|---|---|---|---|---|
+| RB | 0.945 | 1.036 | **1.078** | 1.134 |
+| WR | 0.975 | 0.935 | 1.059 | ~1.00 |
+| QB | — | 0.939 | 1.028 | **1.120** |
+
+**RB is the position that cares.** Leading teams run to kill the clock. A back on a 3-7
+point favorite is in the peak bucket; on a 3-7 point dog he loses ~5%.
+
+**WR is flat across every bucket.** Trailing teams pass more, which offsets the lost
+possessions. So "his team is an underdog" is **not** a reason to bench a receiver, and
+being on a favorite is not a reason to start one. Let the projection decide.
+
+**There is no blowout tax.** QBs favored by 10+ score **1.120x** their own average
+(n=37); RBs favored 13+ hit 1.311 (n=24). A big spread mostly means a **bad opponent**,
+and that outweighs the risk of resting starters late. This killed a "Mahomes' ceiling is
+capped at -11.5" argument that was about to become advice.
+
+Also: high game total helps RBs (47+ -> 1.061 vs 0.939 at 41-44).
+
+### Streaming K and DST. The only near-free weekly lever.
+
+One roster spot each, no opportunity cost, and both slots are forced — so a matchup swap
+costs nothing but the claim. **DST scoring is dominated by points allowed**
+(`config/scoring.json` tiers: 0 allowed = 10, 1-6 = 7, 7-13 = 4, 14-20 = 1, 21-27 = 0),
+so rank candidates by **opponent implied total** (`total/2 - spread/2`), lowest first.
+Rank kickers by **own implied total**, highest first.
+
+Under test since Week 3 with a deliberately loose >3 pt kill bar, because the *method* is
+on trial, not the player. Do not call it validated until several weeks have scored.
+
 ### Snake turn structure
 
 For T teams, slot s (1-indexed), round r:
@@ -335,6 +372,35 @@ so passing on a positional run costs less. Recommendations must be slot-aware.
 - **A Yahoo live win probability mid-week is not a forecast.** It is points already banked
   plus a stale projection, so it is most wrong when the opponent's early players spiked.
   Compute remaining-vs-remaining instead; it inverted the Week 2 read.
+- **Yahoo weekly exports (week 3 format onward) carry a `Player ID`.** That is a real
+  surrogate key — join it to `load_ff_playerids()$yahoo_id` instead of on names. Reader:
+  `dev/weekly/read_yahoo_week.R`. Three silent traps live there, all handled; do not
+  simplify them out:
+  (a) **headers contain invisible private-use-area characters** — `"Fantasy Fan Pts"` is
+  really `"Fantasy Fan Pts"`, a sort-arrow glyph, so `d[["Fantasy Fan Pts"]]`
+  returns **NULL rather than erroring**;
+  (b) the file glob must **whitelist the six position files** — `gamedaycalls` and
+  `injuries` share the prefix but not the schema;
+  (c) the stat columns are **projections for the upcoming week, not actuals** (decimal TD
+  counts are the tell).
+- **`yahoo_id` coverage collapses by draft class**: 2022 85.6%, 2023 75.4%, 2024 32.3%,
+  **2025 0.3%, 2026 0%**. Rookies are in the crosswalk with a `gsis_id` and no Yahoo id,
+  so an **id-only join silently drops every rookie**. `attach_nfl_ids()` falls back to
+  name and records which key was used in `method`. Do not "fix" it to id-only.
+- **`rosterchanges_injured_reserve.csv` is not trustworthy.** 15% of one day's rows listed
+  the same player as both "On" and "Off" IR, including healthy starters. Use the
+  `injuries` and `gamedaycalls` exports, which agree with each other and with nflreadr.
+  The Yahoo injuries export is **skill-positions only** — for defensive players use
+  `nflreadr::load_injuries()`.
+- **Yahoo's position pages and matchup page disagree at the second decimal.** Same player,
+  same week, ~0.02 apart. Pick one surface deliberately and say which; the **matchup page**
+  is what a lineup decision is actually made against.
+- **Log the opponent's lineup pre-kickoff**, not just ours. It makes projection error
+  measurable on both sides against the same model, and it exposes head-to-head structure
+  invisible from one roster — e.g. our RB and their QB being teammates damps the margin.
+- **Correlation is not the thing to avoid — paying for it is.** A stack that costs
+  projected points to buy shared upside loses; concentration that arrives for free while
+  *gaining* points is fine. Flag it either way, and give it a kill condition.
 - Every model outputs a distribution, not a point estimate.
 - Validate the config early and fail loudly. A bad `league.json` should not reach a model fit.
 - **Docs written in `/caveman` style.** Repo rule. Applies to `PLAN_1.md`, `CONTEXT.md`,
@@ -346,14 +412,23 @@ so passing on a positional run costs less. Recommendations must be slot-aware.
 ## Current status
 
 **Draft engine DONE.** Drafted 2026-09-08 from slot 10. In-season now — **record 1-1
-through Week 2**. Current work is the weekly start/sit layer (`R/41_weekly.R`), not
-`PLAN.md`. Read the newest doc in `docs/handoff/` for live state; `docs/handoff/README.md`
-is the index.
+through Week 2, Week 3 frozen and in flight**. Current work is the weekly start/sit layer
+(`R/41_weekly.R`, `R/42_deadlines.R`), not `PLAN.md`. Read the newest doc in
+`docs/handoff/` for live state; `docs/handoff/README.md` is the index.
 
-Weekly loop, as practiced: freeze a decision log with **pre-registered kill conditions**
-before kickoff (`data/weekly/2026_weekNN_decisions.md`), then score the week against them
-and log `regret = best legal lineup - started` in `data/weekly/README.md`. Separate
-"decision wrong" from "outcome bad" — Week 1 proved they differ.
+Weekly loop, as practiced — it works, keep it:
+1. **Freeze a decision log before kickoff** (`data/weekly/2026_weekNN_decisions.md`) with
+   a **pre-registered kill condition** per decision. Record holds too: "tested all 16
+   swaps, none help" is a result, and without it the retro cannot tell a considered hold
+   from an unconsidered one.
+2. Log **both lineups** (`_myteam.csv`, `_opponent.csv`) at freeze-time projections.
+3. After Monday, append to `## Retro` — never edit above it. Score each kill condition
+   y/n and **separate "decision wrong" from "outcome bad"**; Week 1 proved they differ.
+4. `regret = best legal lineup - started` -> `data/weekly/README.md`. Week 1 **19.76**,
+   Week 2 **2.50**.
+
+**n is tiny. Fit nothing.** Three weeks of data cannot support a model. The decision logs
+are there to accumulate honest test cases, not to be regressed on yet.
 
 **Lineup deadlines are not a player's own kickoff.** The real deadline for a slot is
 `min(kickoff of that player's legal replacements)`. Week 2: Adams locked Monday, but every
