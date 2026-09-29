@@ -1,0 +1,141 @@
+Player,Player ID,Team,Positions,Injury,Game,Roster Status,GP*,Bye,Fantasy Fan Pts,Rankings Pre-Season,Rankings Actual,Trends % Ros,Passing Yds,Passing TD,Passing Int,Rushing Att*,Rushing Yds,Rushing TD,Receiving Tgt*,Receiving Rec,Receiving Yds,Receiving TD,Ret TD,Misc 2PT,Fum Lost
+Josh Allen,30977,Buf,QB,Q,Sun 1:00 pm vs NE,Dave’s Bone Crushers,1,7,22.85,25,1,100%,236,1.5,0.6,7.7,37.1,0.7,-,-,-,-,-,0.1,0.2
+Lamar Jackson,31002,Bal,QB,,Sun 1:00 pm vs Ten,Maybe Mitchell,1,13,21.14,28,3,100%,233,1.5,0.4,8.4,44.3,0.4,-,-,-,-,-,0.1,0.2
+Joe Burrow,32671,Cin,QB,,Sun 1:00 pm vs Jax,Locked In Michelle,1,6,20.01,78,4,99%,282,1.9,0.7,3.0,10.6,0.1,-,-,-,-,-,0.1,0.2
+Patrick Mahomes,30123,KC,QB,,Sun 4:25 pm @ LV,JGrahnasaurs,1,5,19.98,67,5,97%,255,1.8,0.6,3.5,18.3,0.2,-,-,-,-,-,0.1,0.2
+Tyler Shough,41825,NO,QB,,Mon 8:15 pm vs Atl,Monday Night Madison,1,8,19.61,100,7,83%,261,1.7,0.8,4.6,18.4,0.2,-,-,-,-,-,0.1,0.2
+C.J. Stroud,40030,Hou,QB,,Sun 1:00 pm vs Dal,W (Sep 30),1,8,19.60,138,8,54%,271,1.8,0.5,3.2,15.0,0.1,-,-,-,-,-,0.1,0.2
+Kyler Murray,31833,Min,QB,,Sun 4:05 pm vs Mia,W (Sep 30),1,6,19.56,124,9,68%,231,1.6,0.6,5.8,30.0,0.3,-,-,-,-,-,0.1,0.2
+Trevor Lawrence,33389,Jax,QB,,Sun 1:00 pm @ Cin,Sunday Kevin,1,7,19.34,61,10,94%,252,1.7,0.8,4.2,19.5,0.3,-,-,-,-,-,0.1,0.2
+Bryce Young,40029,Car,QB,,Sun 8:20 pm vs Det,Owl Out Blitz,1,5,18.83,108,11,72%,248,1.7,0.7,3.7,18.3,0.2,-,-,-,-,-,0.1,0.2
+Dak Prescott,29369,Dal,QB,,Sun 1:00 pm @ Hou,Max’s TD Bombers,1,14,18.71,50,12,98%,273,1.7,0.8,3.2,12.7,0.1,-,-,-,-,-,0.1,0.2
+Brock Purdy,34218,SF,QB,,Sun 4:25 pm vs Den,Dave’s Bone Crushers,1,8,18.49,38,13,97%,238,1.7,0.8,3.9,19.7,0.2,-,-,-,-,-,0.1,0.1
+Drake Maye,40881,NE,QB,,Sun 1:00 pm @ Buf,Jason's Jazzy Team,1,11,18.47,79,14,95%,233,1.4,0.7,5.3,29.0,0.2,-,-,-,-,-,0.1,0.2
+Jared Goff,29235,Det,QB,,Sun 8:20 pm @ Car,Jason's Jazzy Team,1,6,18.45,69,15,93%,259,1.9,0.6,2.1,6.8,0.1,-,-,-,-,-,0.1,0.2
+Jordan Love,32696,GB,QB,,Sun 1:00 pm @ TB,Locked In Michelle,1,11,18.17,90,17,73%,266,1.7,0.6,2.9,10.1,0.1,-,-,-,-,-,0.1,0.2
+Daniel Jones,31838,Ind,QB,,Sun 9:30 am @ Was,W (Sep 30),1,13,17.97,146,18,21%,233,1.6,0.6,3.9,16.2,0.2,-,-,-,-,-,0.1,0.2
+Bo Nix,40875,Den,QB,,Sun 4:25 pm @ SF,Steel City,1,10,17.95,101,19,83%,239,1.6,0.6,4.2,15.7,0.2,-,-,-,-,-,0.1,0.2
+Marcus Mariota,28390,Was,QB,,Sun 9:30 am vs Ind,W (Sep 30),1,7,17.64,"2,071",22,3%,222,1.4,0.8,6.3,29.4,0.2,-,-,-,-,-,0.1,0.2
+Jacoby Brissett,29325,Ari,QB,,Sun 1:00 pm @ NYG,W (Sep 30),1,14,17.08,270,25,10%,230,1.7,0.5,2.9,11.6,0.1,-,-,-,-,-,0.1,0.2
+Jalen Hurts,32723,Phi,QB,,Sun 1:00 pm vs LAR,Max’s TD Bombers,1,10,16.90,29,26,99%,199,1.2,0.6,6.1,27.8,0.3,-,-,-,-,-,0.1,0.2
+Case Keenum,26483,Chi,QB,,Sun 1:00 pm vs NYJ,W (Sep 30),1,10,16.70,"2,076",27,2%,223,1.6,0.6,3.6,12.4,0.1,-,-,-,-,-,-,-
+Sam Darnold,30973,Sea,QB,,Sun 4:25 pm vs LAC,Monday Night Madison,1,11,16.66,152,29,38%,245,1.6,0.9,2.7,8.7,0.1,-,-,-,-,-,0.1,0.1
+Matthew Stafford,9265,LAR,QB,,Sun 1:00 pm @ Phi,JGrahnasaurs,1,11,16.49,104,30,91%,246,1.7,0.7,1.6,4.1,0.0,-,-,-,-,-,0.1,0.1
+Kirk Cousins,25812,LV,QB,,Sun 4:25 pm vs KC,W (Sep 30),1,13,16.11,290,32,14%,236,1.6,0.6,2.2,5.4,0.1,-,-,-,-,-,0.1,0.1
+Jameis Winston,28389,NYG,QB,,Sun 1:00 pm vs Ari,W (Sep 30),1,8,16.08,"2,801",31,5%,208,1.5,0.8,4.3,17.0,0.2,-,-,-,-,-,0.1,0.2
+Deshaun Watson,30125,Cle,QB,,Thu 8:15 pm vs Pit,W (Sep 30),1,11,15.99,278,33,7%,217,1.3,0.7,5.2,21.0,0.1,-,-,-,-,-,0.1,0.2
+Justin Herbert,32676,LAC,QB,,Sun 4:25 pm @ Sea,Sunday Kevin,1,7,15.48,86,35,89%,213,1.3,0.9,4.5,21.1,0.1,-,-,-,-,-,0.1,0.2
+Michael Penix Jr.,40889,Atl,QB,,Mon 8:15 pm @ NO,W (Sep 30),1,11,15.12,240,39,5%,218,1.4,0.5,2.1,7.7,0.1,-,-,-,-,-,0.1,0.1
+Geno Smith,26662,NYJ,QB,,Sun 1:00 pm @ Chi,W (Sep 30),1,13,15.09,253,41,9%,225,1.3,0.9,3.3,13.5,0.1,-,-,-,-,-,0.1,0.2
+Aaron Rodgers,7200,Pit,QB,,Thu 8:15 pm @ Cle,W (Sep 30),1,9,14.43,213,45,9%,207,1.5,0.5,1.6,6.5,0.1,-,-,-,-,-,0.1,0.1
+Jalon Daniels,42919,TB,QB,,Sun 1:00 pm vs GB,W (Sep 30),1,10,14.31,"2,875",47,0%,200,1.2,1.0,4.7,19.0,0.1,-,-,-,-,-,0.1,0.1
+Malik Willis,34042,Mia,QB,,Sun 4:05 pm @ Min,W (Sep 30),1,6,14.25,128,50,31%,188,0.9,0.7,6.0,27.4,0.2,-,-,-,-,-,0.1,0.1
+Cam Ward,41786,Ten,QB,,Sun 1:00 pm @ Bal,W (Sep 30),1,9,13.87,165,54,11%,202,1.1,0.5,2.7,10.6,0.1,-,-,-,-,-,0.1,0.2
+Tyson Bagent,40504,Chi,QB,,Sun 1:00 pm vs NYJ,W (Sep 30),1,10,7.50,"2,877",160,1%,117,0.6,0.4,1.9,4.6,0.1,-,-,-,-,-,0.0,0.1
+Fernando Mendoza,42623,LV,QB,,Sun 4:25 pm vs KC,W (Sep 30),1,13,0.16,300,469,7%,-,-,-,0.4,-0.1,0.0,-,-,-,-,-,0.0,0.0
+Sawyer Robertson,42893,LV,QB,NA,Sun 4:25 pm vs KC,W (Sep 30),-,13,0.00,"2,849","1,125",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Kyle McCord,41971,Mia,QB,,Sun 4:05 pm @ Min,W (Sep 30),1,6,0.00,"2,811",786,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Riley Leonard,41968,Ind,QB,,Sun 9:30 am @ Was,W (Sep 30),1,13,0.00,"2,863",785,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Cam Miller,41964,Mia,QB,NA,Sun 4:05 pm @ Min,W (Sep 30),-,6,0.00,"2,853",784,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Shedeur Sanders,41930,Cle,QB,,Thu 8:15 pm vs Pit,W (Sep 30),1,11,0.00,302,780,2%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jalen Milroe,41882,Sea,QB,,Sun 4:25 pm vs LAC,W (Sep 30),1,11,0.00,"2,886",770,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Diego Pavia,43001,Bal,QB,NA,Sun 1:00 pm vs Ten,W (Sep 30),-,13,0.00,"2,847","1,187",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Joe Fagnano,43003,Bal,QB,,Sun 1:00 pm vs Ten,W (Sep 30),-,13,0.00,"2,824","1,190",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jake Retzlaff,43004,Sea,QB,NA,Sun 4:25 pm vs LAC,W (Sep 30),-,11,0.00,"2,810","1,191",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Ken Seals,43111,KC,QB,NA,Sun 4:25 pm @ LV,W (Sep 30),-,5,0.00,"2,825",535,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Dillon Gabriel,41861,Cle,QB,IR-R,Thu 8:15 pm vs Pit,W (Sep 30),-,11,0.00,"2,802",769,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Will Howard,41989,Pit,QB,,Thu 8:15 pm @ Cle,W (Sep 30),1,9,0.00,"2,812",790,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jaxson Dart,41810,NYG,QB,IR,Sun 1:00 pm vs Ari,W (Sep 30),-,8,0.00,113,762,34%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Kedon Slovis,41476,GB,QB,NA,Sun 1:00 pm @ TB,W (Sep 30),-,11,0.00,"2,808",714,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Sam Hartman,41238,Was,QB,NA,Sun 9:30 am vs Ind,W (Sep 30),-,7,0.00,"2,872",619,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Austin Reed,41220,Bal,QB,NA,Sun 1:00 pm vs Ten,W (Sep 30),-,13,0.00,"2,806",611,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Carter Bradley,41133,Jax,QB,NA,Sun 1:00 pm @ Cin,W (Sep 30),-,7,0.00,"2,819",578,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Joe Milton III,41060,Dal,QB,NA,Sun 1:00 pm @ Hou,W (Sep 30),-,14,0.00,"2,876",530,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Spencer Rattler,41043,NO,QB,,Mon 8:15 pm vs Atl,W (Sep 30),1,8,0.00,"2,638",522,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+J.J. McCarthy,40905,NYG,QB,,Sun 1:00 pm vs Ari,W (Sep 30),1,8,0.00,"2,252","1,162",1%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jacob Clark,43128,LV,QB,NA,Sun 4:25 pm vs KC,W (Sep 30),-,13,0.00,"2,826",546,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Mark Gronowski,43146,Hou,QB,NA,Sun 1:00 pm vs Dal,W (Sep 30),-,8,0.00,"2,820",557,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Graham Mertz,41975,Hou,QB,IR,Sun 1:00 pm vs Dal,W (Sep 30),-,8,0.00,"2,839",788,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Quinn Ewers,42037,Jax,QB,,Sun 1:00 pm @ Cin,W (Sep 30),1,7,0.00,"2,784",804,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Kurtis Rourke,42009,SF,QB,,Sun 4:25 pm vs Den,W (Sep 30),-,8,0.00,"2,827",797,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Drew Allar,42698,Pit,QB,,Thu 8:15 pm @ Cle,W (Sep 30),1,9,0.00,"2,817","1,068",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Luke Altmyer,42899,Det,QB,NA,Sun 8:20 pm @ Car,W (Sep 30),-,6,0.00,"2,840","1,129",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Chandler Morris,42883,TB,QB,NA,Sun 1:00 pm vs GB,W (Sep 30),-,10,0.00,"2,821","1,120",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Garrett Nussmeier,42871,KC,QB,,Sun 4:25 pm @ LV,W (Sep 30),1,5,0.00,"2,822","1,115",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Behren Morton,42856,NE,QB,,Sun 1:00 pm @ Buf,W (Sep 30),1,11,0.00,"2,848","1,111",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Kyron Drones,42900,GB,QB,NA,Sun 1:00 pm @ TB,W (Sep 30),-,11,0.00,"2,854","1,130",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Matthew Caldwell,42901,LAR,QB,IR,Sun 1:00 pm @ Phi,W (Sep 30),-,11,0.00,"2,805","1,131",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Athan Kaliakmanis,42845,Was,QB,,Sun 9:30 am vs Ind,W (Sep 30),1,7,0.00,"2,813","1,105",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Taylen Green,42804,Cle,QB,,Thu 8:15 pm vs Pit,W (Sep 30),1,11,0.00,"2,873","1,093",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Cole Payton,42801,Phi,QB,NA,Sun 1:00 pm vs LAR,W (Sep 30),-,10,0.00,"2,814","1,091",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Cade Klubnik,42732,NYJ,QB,,Sun 1:00 pm @ Chi,W (Sep 30),1,13,0.00,"2,828","1,076",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Caleb Williams,40900,Chi,QB,D,Sun 1:00 pm vs NYJ,Owl Out Blitz,1,10,0.00,107,"1,158",95%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jack Strand,42898,Atl,QB,,Mon 8:15 pm @ NO,W (Sep 30),-,11,0.00,"2,870","1,128",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Ty Simpson,42635,LAR,QB,,Sun 1:00 pm @ Phi,W (Sep 30),1,11,0.00,"2,874","1,050",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Miller Moss,42902,Chi,QB,NA,Sun 1:00 pm vs NYJ,W (Sep 30),-,10,0.00,"2,818","1,132",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Joey Aguilar,42903,Jax,QB,NA,Sun 1:00 pm @ Cin,W (Sep 30),-,7,0.00,"2,830","1,134",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Haynes King,42904,Car,QB,,Sun 8:20 pm vs Det,W (Sep 30),-,5,0.00,"2,832","1,136",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Hunter Dekkers,42537,NO,QB,NA,Mon 8:15 pm vs Atl,W (Sep 30),-,8,0.00,"2,803","1,025",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Kaidon Salter,42982,Ten,QB,NA,Sun 1:00 pm @ Bal,W (Sep 30),-,9,0.00,"2,857","1,179",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Brady Cook,42229,Mia,QB,,Sun 4:05 pm @ Min,W (Sep 30),1,6,0.00,"2,859",896,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Seth Henigan,42205,Ind,QB,NA,Sun 9:30 am @ Was,W (Sep 30),-,13,0.00,"2,856",879,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Connor Bazelak,42084,TB,QB,NA,Sun 1:00 pm vs GB,W (Sep 30),-,10,0.00,"2,858",820,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+DJ Uiagalelei,42079,LAC,QB,,Sun 4:25 pm @ Sea,W (Sep 30),-,7,0.00,"2,833",818,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Max Brosmer,42075,Min,QB,,Sun 4:05 pm vs Mia,W (Sep 30),-,6,0.00,"2,880",817,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Carson Beck,42687,Ari,QB,,Sun 1:00 pm @ NYG,W (Sep 30),1,14,0.00,"2,831","1,064",1%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Will Levis,40068,NYJ,QB,NA,Sun 1:00 pm @ Chi,W (Sep 30),-,13,0.00,"2,794",833,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jayden Daniels,40896,Was,QB,Q,Sun 9:30 am vs Ind,Steel City,1,7,0.00,179,"1,156",82%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Nick Mullens,30563,Jax,QB,NA,Sun 1:00 pm @ Cin,W (Sep 30),-,7,0.00,"2,889","1,109",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Gardner Minshew II,32010,Ari,QB,,Sun 1:00 pm @ NYG,W (Sep 30),1,14,0.00,"2,881",907,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Easton Stick,31998,TB,QB,NA,Sun 1:00 pm vs GB,W (Sep 30),-,10,0.00,"2,838",901,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jarrett Stidham,31965,Den,QB,,Sun 4:25 pm @ SF,W (Sep 30),1,10,0.00,"2,851",880,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Will Grier,31932,Dal,QB,NA,Sun 1:00 pm @ Hou,W (Sep 30),-,14,0.00,"2,836",859,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Drew Lock,31874,Sea,QB,,Sun 4:25 pm vs LAC,W (Sep 30),1,11,0.00,"2,503",832,6%,-,-,-,-,-,-,-,-,-,-,-,-,-
+John Wolford,31803,Min,QB,NA,Sun 4:05 pm vs Mia,W (Sep 30),-,6,0.00,"2,816",808,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Kyle Allen,31301,Buf,QB,,Sun 1:00 pm vs NE,W (Sep 30),1,7,0.00,"2,815",721,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Mason Rudolph,31046,Pit,QB,,Thu 8:15 pm @ Cle,W (Sep 30),1,9,0.00,"2,879",637,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Baker Mayfield,30971,TB,QB,O,Sun 1:00 pm vs GB,W (Sep 30),-,10,0.00,134,607,48%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Cooper Rush,30788,Atl,QB,,Mon 8:15 pm @ NO,W (Sep 30),1,11,0.00,"2,882",514,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Nathan Peterman,30284,Atl,QB,NA,Mon 8:15 pm @ NO,W (Sep 30),-,11,0.00,"2,855","1,035",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Brett Rypien,32221,Hou,QB,NA,Sun 1:00 pm vs Dal,W (Sep 30),-,8,0.00,"2,804",998,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Mitchell Trubisky,30115,Ten,QB,,Sun 1:00 pm @ Bal,W (Sep 30),1,9,0.00,"2,862",979,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jeff Driskel,29441,Was,QB,NA,Sun 9:30 am vs Ind,W (Sep 30),-,7,0.00,"2,809",753,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Brandon Allen,29435,NYG,QB,NA,Sun 1:00 pm vs Ari,W (Sep 30),-,8,0.00,"2,845",751,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Carson Wentz,29236,Min,QB,,Sun 4:05 pm vs Mia,W (Sep 30),1,6,0.00,341,718,2%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Trevor Siemian,28638,Ten,QB,NA,Sun 1:00 pm @ Bal,W (Sep 30),-,9,0.00,"2,834","1,173",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jimmy Garoppolo,27590,LAR,QB,NA,Sun 1:00 pm @ Phi,W (Sep 30),-,11,0.00,"2,885",779,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Teddy Bridgewater,27560,TB,QB,NA,Sun 1:00 pm vs GB,W (Sep 30),-,10,0.00,"2,841",773,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Russell Wilson,25785,NYG,QB,NA,Sun 1:00 pm vs Ari,W (Sep 30),-,8,0.00,"2,723",858,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Tyrod Taylor,24967,GB,QB,,Sun 1:00 pm @ TB,W (Sep 30),1,11,0.00,"2,727",661,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Andy Dalton,24822,Phi,QB,,Sun 1:00 pm vs LAR,W (Sep 30),1,10,0.00,"2,887",605,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Josh Johnson,8937,Cin,QB,NA,Sun 1:00 pm vs Jax,W (Sep 30),-,6,0.00,"2,866",748,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jake Browning,32138,TB,QB,NA,Sun 1:00 pm vs GB,W (Sep 30),-,10,0.00,"2,688",969,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Tua Tagovailoa,32675,Atl,QB,,Mon 8:15 pm @ NO,W (Sep 30),1,11,0.00,"2,095","1,142",2%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Tommy DeVito,40533,NE,QB,,Sun 1:00 pm @ Buf,W (Sep 30),1,11,0.00,"2,869","1,038",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Tyler Huntley,32993,Bal,QB,,Sun 1:00 pm vs Ten,W (Sep 30),1,13,0.00,"2,865",595,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Adrian Martinez,40299,SF,QB,NA,Sun 4:25 pm vs Den,W (Sep 30),-,8,0.00,"2,807",958,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Tanner McKee,40220,Phi,QB,NA,Sun 1:00 pm vs LAR,W (Sep 30),-,10,0.00,"2,871",915,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Clayton Tune,40188,GB,QB,NA,Sun 1:00 pm @ TB,W (Sep 30),-,11,0.00,"2,867",899,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Sean Clifford,40173,Cin,QB,NA,Sun 1:00 pm vs Jax,W (Sep 30),-,6,0.00,"2,844",890,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Stetson Bennett IV,40153,LAR,QB,,Sun 1:00 pm @ Phi,W (Sep 30),1,11,0.00,"2,868",877,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jake Haener,40144,NYG,QB,NA,Sun 1:00 pm vs Ari,W (Sep 30),-,8,0.00,"2,864",870,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Aidan O'Connell,40138,LV,QB,Q,Sun 4:25 pm vs KC,W (Sep 30),1,13,0.00,"2,796",867,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Hendon Hooker,40096,Ten,QB,NA,Sun 1:00 pm @ Bal,W (Sep 30),-,9,0.00,"2,837",847,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Joe Flacco,8795,Cin,QB,,Sun 1:00 pm vs Jax,W (Sep 30),1,6,0.00,"2,243",727,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Anthony Richardson Sr.,40040,Ind,QB,,Sun 9:30 am @ Was,W (Sep 30),1,13,0.00,"2,778",822,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Skylar Thompson,34203,Bal,QB,IR,Sun 1:00 pm vs Ten,W (Sep 30),-,13,0.00,"2,852",975,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Chris Oladokun,34197,KC,QB,NA,Sun 4:25 pm @ LV,W (Sep 30),-,5,0.00,"2,842",973,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Sam Howell,34100,Dal,QB,,Sun 1:00 pm @ Hou,W (Sep 30),1,14,0.00,"2,829",935,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Bailey Zappe,34093,NYJ,QB,NA,Sun 1:00 pm @ Chi,W (Sep 30),-,13,0.00,"2,835",929,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Desmond Ridder,34030,GB,QB,NA,Sun 1:00 pm @ TB,W (Sep 30),-,11,0.00,"2,861",892,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Kenny Pickett,33975,Car,QB,,Sun 8:20 pm vs Det,W (Sep 30),1,5,0.00,"2,888",856,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Shane Buechele,33879,Buf,QB,NA,Sun 1:00 pm vs NE,W (Sep 30),-,7,0.00,"2,823",814,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Sam Ehlinger,33606,Den,QB,,Sun 4:25 pm @ SF,W (Sep 30),-,10,0.00,"2,843",761,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Davis Mills,33455,Hou,QB,,Sun 1:00 pm vs Dal,W (Sep 30),1,8,0.00,"2,742",739,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Kyle Trask,33452,Car,QB,NA,Sun 8:20 pm vs Det,W (Sep 30),-,5,0.00,"2,846",738,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Mac Jones,33403,SF,QB,,Sun 4:25 pm vs Den,W (Sep 30),1,8,0.00,"2,773",733,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Justin Fields,33399,KC,QB,,Sun 4:25 pm @ LV,W (Sep 30),1,5,0.00,"2,031",732,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Trey Lance,33391,LAC,QB,,Sun 4:25 pm @ Sea,W (Sep 30),1,7,0.00,"2,878",731,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Zach Wilson,33390,NO,QB,,Mon 8:15 pm vs Atl,W (Sep 30),1,8,0.00,"2,884",730,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+E.J. Warner,43402,Den,QB,NA,Sun 4:25 pm @ SF,W (Sep 30),-,10,0.00,"2,850",666,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Joshua Dobbs,30248,Det,QB,,Sun 8:20 pm @ Car,W (Sep 30),1,6,0.02,"2,883","1,195",0%,-,-,-,0.4,-0.4,0.0,-,-,-,-,-,-,-
