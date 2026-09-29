@@ -1,16 +1,16 @@
 season,week,player,pos,nfl_team,slot,started,proj,proj_gameday,proj_gameday_src,actual
-2026,3,P. Mahomes,QB,KC,QB,TRUE,20.90,19.98,matchup,
-2026,3,D. Henry,RB,Bal,RB,TRUE,16.99,17.43,matchup,
-2026,3,J. Williams,RB,Dal,RB,TRUE,13.32,13.43,matchup,
-2026,3,D. Adams,WR,LAR,WR,TRUE,9.89,12.50,matchup,
-2026,3,C. Sutton,WR,Den,WR,TRUE,8.81,8.80,matchup,
-2026,3,J. Ferguson,TE,Dal,TE,TRUE,7.57,7.50,matchup,
-2026,3,T. Etienne Jr.,RB,NO,FLEX,TRUE,9.68,9.82,matchup,
-2026,3,H. Butker,K,KC,K,TRUE,9.06,8.80,matchup,
-2026,3,Chiefs,DEF,KC,DEF,TRUE,7.77,7.52,matchup,
-2026,3,M. Stafford,QB,LAR,BN,FALSE,16.65,16.30,position_export,
-2026,3,R. Odunze,WR,Chi,BN,FALSE,7.69,7.34,position_export,
-2026,3,W. Robinson,WR,Ten,BN,FALSE,7.28,6.97,position_export,
-2026,3,W. Marks,RB,Hou,BN,FALSE,7.16,7.58,position_export,
-2026,3,K. Gainwell,RB,TB,BN,FALSE,6.74,6.81,position_export,
-2026,3,K. Raymond,WR,Chi,BN,FALSE,4.94,5.02,position_export,
+2026,3,P. Mahomes,QB,KC,QB,TRUE,20.90,19.98,matchup,16.94
+2026,3,D. Henry,RB,Bal,RB,TRUE,16.99,17.43,matchup,21.40
+2026,3,J. Williams,RB,Dal,RB,TRUE,13.32,13.43,matchup,17.30
+2026,3,D. Adams,WR,LAR,WR,TRUE,9.89,12.50,matchup,17.20
+2026,3,C. Sutton,WR,Den,WR,TRUE,8.81,8.80,matchup,6.10
+2026,3,J. Ferguson,TE,Dal,TE,TRUE,7.57,7.50,matchup,7.80
+2026,3,T. Etienne Jr.,RB,NO,FLEX,TRUE,9.68,9.82,matchup,8.00
+2026,3,H. Butker,K,KC,K,TRUE,9.06,8.80,matchup,6.00
+2026,3,Chiefs,DEF,KC,DEF,TRUE,7.77,7.52,matchup,8.00
+2026,3,M. Stafford,QB,LAR,BN,FALSE,16.65,16.30,position_export,22.90
+2026,3,R. Odunze,WR,Chi,BN,FALSE,7.69,7.34,position_export,5.90
+2026,3,W. Robinson,WR,Ten,BN,FALSE,7.28,6.97,position_export,15.20
+2026,3,W. Marks,RB,Hou,BN,FALSE,7.16,7.58,position_export,8.60
+2026,3,K. Gainwell,RB,TB,BN,FALSE,6.74,6.81,position_export,2.00
+2026,3,K. Raymond,WR,Chi,BN,FALSE,4.94,5.02,position_export,18.00

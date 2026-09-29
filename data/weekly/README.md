@@ -42,6 +42,7 @@ ones where being right is informative.
 |---|---|---|---|---|---|
 | 1 | L vs Bone Crushers | 101.80 | **121.56** | **19.76** | 118.96 |
 | 2 | **W** vs Sunday Kevin | 152.58 | **155.08** | **2.50** | 112.08 |
+| 3 | **W** vs Maybe Mitchell | 108.74 | **133.80** | **25.06** | 96.70 |
 
 ## Week 1 notes
 
@@ -67,3 +68,32 @@ distinguishable from variance.
 
 Kicker note: McLaughlin 11.00 on proj 7.03, second week running he beats his number.
 Not signal yet. Revisit at week 4.
+
+## Week 3 notes
+
+**Won by 12.04 while leaving 25.06 on the bench.** Worst regret of the three weeks, in a
+week we won. Opposite of Week 1, where the decisions were defensible and the result was a
+loss. Won because the opponent missed projection by **-20.24**, not because the lineup was
+good — we beat our own projection by only +4.75.
+
+Three of four live choices wrong: QB (Stafford 22.90 benched for Mahomes 16.94), WR2
+(Raymond 18.00 benched for Sutton 6.10), FLEX (Robinson 15.20 benched for Etienne 8.00).
+
+**Structural finding, not a start/sit error.** Two benched pass-catchers outscored two of
+three starting receiver-eligible slots. Raymond/Robinson/Odunze/Sutton target counts are
+converging (9-5-7, 5-4-7, 3-4-6). The WR/FLEX depth chart is mis-ranked and Yahoo's
+projections are not separating these players.
+
+**Streaming test (D6) split, net +3.00.** DST worked as theorised: Chiefs 8.00 vs dropped
+Patriots **-1.00**, because Jacksonville hung 35 on New England and points-allowed tiers
+dominate DST scoring — the exact mechanism the bet was placed on. Kicker lost: Butker 6.00
+vs dropped McLaughlin 12.00, who has now beaten his projection three weeks running.
+Compound kill bar (**both** by >3) not met, so the method stands. Halves should be scored
+separately from Week 4 on.
+
+**QB call now wrong in both directions**, -17.56 in Week 1 and -5.96 in Week 3, combined
+**23.52**. Both times the projection was followed. Largest recurring leak.
+
+`score_player_week()` reproduced all 9 Yahoo starter scores exactly. Validation **35/35**
+across weeks 1-3. DST still hand-scored from `config/scoring.json`.
+
