@@ -327,9 +327,36 @@ Requirement: each week, know which slots go uncovered in week `W+2`, and see the
 for those slots early enough to claim ahead of the other nine managers. Two weeks is the stated
 horizon; Bates at 55% rostered is the worked example of why one week is too late.
 
-Everything the report needs already exists: `Bye` column in the Yahoo position exports, and
-`load_schedules(2026)` carries `spread_line` / `total_line` for future weeks (verified out to
-week 5 on 09-29 — check how much further ahead the lines actually populate before relying on it).
+**Constraint found 09-29, and it splits the design in two. Measured, not assumed:**
+
+| week | games | with lines |
+|---|---|---|
+| 4 | 16 | **16 (100%)** |
+| 5 | 15 | **15 (100%)** |
+| **6** | 14 | **0** |
+| 7-15 | — | **0** |
+
+**`load_schedules(2026)` publishes `spread_line` / `total_line` exactly one week ahead.** During
+Week 4, Week 5 is the furthest week with any lines at all. So:
+
+- **K and DST cannot be planned two weeks out.** Implied total *is* the entire streaming method,
+  and the input does not exist until the week before. **Their horizon is capped at one week.**
+  The Week 5 Bates call in §6 was possible only because Week 5 is exactly one week out — that is
+  the ceiling, not headroom.
+- **QB / RB / WR / TE can be planned as far ahead as wanted**, because they are ranked on
+  `rank_actual` (realised production) and projection, neither of which needs a future line.
+- **The bye calendar itself is known for the whole season** from the exports' `Bye` column.
+
+**Consequence for the stated goal of "getting in front of other managers":** at K and DST you
+structurally *cannot* get ahead on matchup merit — nobody can, the information does not exist.
+The only early edge there is claiming on **bye-avoidance** alone, which is a weaker reason and
+should be priced as such. The two-week edge is real at WR/RB/TE, which is where Week 10's
+three-receiver hole lives anyway.
+
+**Second constraint, unmeasured:** free-agent status comes from the weekly Yahoo export's
+`Roster Status`, so a two-week-ahead candidate list uses *today's* availability as a proxy for
+availability in two weeks. That is not a flaw — it is the point, since the move is to claim while
+the player is still free — but it means the list decays and must be re-cut each week, never cached.
 
 Design not settled. Do not build until it is.
 
