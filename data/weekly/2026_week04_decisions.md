@@ -2,6 +2,9 @@
 
 **Opponent:** Jason's Jazzy Team (Pete), 1-2-0, 8th.
 **Frozen:** NOT YET. Roster moves executed Tue 2026-09-29 (evening). Lineup open.
+**Pending waivers (3, none processed):** Allen in / Etienne out; Ravens in / Chiefs out;
+Stroud in / Stafford out. Export says `W (Sep 30)`; league rules recalled as a 2-day period.
+Whichever is right, all three resolve before Sun 10-04 1:00 pm.
 **Date note:** handoff #32 dated 09-29 as "Mon". 2026-09-29 is a **Tuesday**. Corrected here.
 **Projection source:** `docs/uploads/week_4_data/` week-4 Yahoo position exports (projections, not actuals).
 **Prior:** handoff #32 `docs/handoff/ffdraft-handoff-20260929-25-WEEK4-SWAPS.md`.
@@ -199,6 +202,32 @@ Same bar as Week 3's D5 — beating one starter is variance, beating two as a pa
 This is now the **fourth straight week** this pool is inside its own error bar. If the kill fires
 again, Yahoo projections stop being the WR ranking input and the retro must name a replacement.
 
+### D8. QB2 — Stroud claimed, Stafford dropped. Not a Week 4 lineup change.
+
+**C.J. Stroud (QB, Houston)** claimed, **M. Stafford (QB, LA Rams)** dropped. Neither starts
+Week 4 — Mahomes does, per D4. This is a **Week 5 bye-cover and rest-of-season** move.
+
+| | wk4 proj | rank preseason -> **actual** | bye | % ros |
+|---|---|---|---|---|
+| **C.J. Stroud** | **19.60** | 138 -> **8** | 8 | 54% |
+| Stafford (dropped) | 16.49 | 104 -> **30** | 11 | ours |
+
+Stroud outprojects Stafford by 3.11 and outranks him by 22 places on the season. Stafford's
+only function was Mahomes' Week 5 bye; Stroud does that job better and is a real QB1 the rest
+of the way.
+
+**Bye-week check, the reason this is safe:** Stroud's bye is **Week 8**, Mahomes' is **Week 5**.
+They do not collide. Dropping Stafford (bye 11) loses nothing, since Adams also byes in 11 and
+Mahomes plays that week.
+
+**Kill condition (D8):** Stroud finishes Weeks 4-8 below Stafford's points over the same span.
+Explicitly a **five-week** bar, not a one-week one — this was a rest-of-season call and judging it
+on Week 4, when neither man starts, would be incoherent.
+
+**Caveat carried:** these are the same Yahoo projections that have mis-ranked the WR group four
+straight weeks. The supporting evidence here is `rank_actual` (8 vs 30), which is realised
+production rather than projection, so it does not lean on the weak signal.
+
 ### D7. Forced slots. No decision exists.
 
 Ferguson (TE), Butker (K), Ravens (DEF) — one rostered player each. Recorded for completeness.
@@ -249,6 +278,60 @@ not the player's own kickoff.
 - Anything about Odunze in isolation (D6's bar is on pairs, not individuals).
 - Anything about Allen's Week 4 score (claimed for depth, not started).
 - Whether the DST rule works. It is 1-for-1. Week 4 makes n=2. Not validated either way.
+- Anything about Stroud vs Stafford (D8 is a five-week bar; neither starts Week 4).
+
+---
+
+## 6. Bye horizon. Opened Tue 09-29, not yet a process.
+
+Roster byes after the three pending claims land. **Week 4 is the last week with no bye exposure.**
+
+| wk | out | who | slot actually at risk |
+|---|---|---|---|
+| **5** | 2 | QB Mahomes, **K Butker** | **K** — Stroud covers QB. One kicker on roster, zero that week. |
+| 8 | 2 | QB Stroud, RB Marks | none — Mahomes covers QB, RB is 4 deep |
+| 9 | 1 | WR Robinson | none — he is already benched |
+| **10** | 4 | RB Gainwell, **WR Sutton, WR Odunze, WR Raymond** | **WR** — 3 of 5 receivers gone at once. Leaves Adams + Robinson for two WR slots, FLEX must go to an RB. |
+| 11 | 1 | WR Adams | thin, not broken |
+| 13 | 3 | RB Henry, RB Allen, DEF Ravens | RB — loses the best back and the new claim together |
+| **14** | 2 | RB Williams, **TE Ferguson** | **TE** — only rostered TE. Week 14 is a seeding week (regular season runs 1-15). |
+
+**Three real holes: K in 5, WR in 10, TE in 14.** Everything else is covered by existing depth.
+
+**Week 5 K answer already computed** from `load_schedules(2026)` week-5 lines (published, checked
+09-29). Own implied total, highest first, free agents only:
+
+| K | team | wk5 own implied | opp | % ros |
+|---|---|---|---|---|
+| **J. Bates** | Det | **29.00** | @ARI (total 52.5) | **55%** |
+| E. McPherson | Cin | 27.50 | vs MIA | 67% |
+| T. Bass | Buf | 25.00 | vs LA | 25% |
+
+Only **Carolina and Kansas City** bye in Week 5, so the Ravens DEF claim is unaffected.
+
+**Recommended Week 5 move: drop Butker, claim Bates.** A bye is a *forced* swap, so D3's
+"hold the incumbent" rule does not apply — that rule governs optional weekly swaps. Bates at 55%
+rostered means roughly half the league can see the same bye coming; this is decided on the Week 5
+waiver run, not later.
+
+**This section is a one-off, produced by hand. Making it a repeatable two-week-ahead process is
+the open task — see the Week 4 to-do below.**
+
+---
+
+## 7. Open task: bye monitoring, two weeks ahead
+
+Stated as a priority Tue 09-29. **Not yet designed. Decide before Week 5 freezes.**
+
+Requirement: each week, know which slots go uncovered in week `W+2`, and see the candidate pool
+for those slots early enough to claim ahead of the other nine managers. Two weeks is the stated
+horizon; Bates at 55% rostered is the worked example of why one week is too late.
+
+Everything the report needs already exists: `Bye` column in the Yahoo position exports, and
+`load_schedules(2026)` carries `spread_line` / `total_line` for future weeks (verified out to
+week 5 on 09-29 — check how much further ahead the lines actually populate before relying on it).
+
+Design not settled. Do not build until it is.
 
 ---
 
