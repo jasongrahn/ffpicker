@@ -256,6 +256,55 @@ Both must fire. One alone is variance on a 1.66-point gap; both together means t
 is wrong, not merely unlucky.
 
 
+#### D6a. **AMENDMENT, 09-29 late.** Yahoo says bench Raymond for Odunze. Resolved against Yahoo.
+
+Yahoo's lineup assistant recommends Odunze over Raymond. Per §00 this is the source with the logged
+failure record, so it does not get to win on assertion — but Raymond and Odunze are **Chicago
+teammates competing for the same targets**, so the 12.30 vs 5.97 ppg gap is not two independent
+players and cannot settle it either. Week 2's retro found Odunze's snap share moved 48% -> 84%. If
+that role shift continued, the box scores lag reality and Yahoo is reading something true.
+
+**So the test is usage, not points.** Fresh pull, `nflreadr::load_player_stats(2026)` and
+`load_snap_counts(2026)`, weeks 1-3, week by week — aggregate ppg cannot see a trend.
+
+| wk | Raymond snap% | **Raymond tgts** | Raymond tgt share | Odunze snap% | **Odunze tgts** | Odunze tgt share |
+|---|---|---|---|---|---|---|
+| 1 | 0.60 | **9** | 0.346 | 0.48 | 3 | 0.115 |
+| 2 | 0.62 | **5** | 0.167 | **0.84** | 4 | 0.133 |
+| 3 | 0.75 | **7** | 0.206 | **0.85** | 6 | 0.176 |
+
+**The Week 2 finding is confirmed and it held — and it did not convert.** Odunze really is at
+84-85% of snaps. He plays more than Raymond and is targeted less. Targets per snap: Raymond
+.200 / .109 / .130, Odunze .083 / .065 / .098 — Raymond leads every week. Odunze is on the field;
+Raymond gets the ball.
+
+**Raymond's edge is opportunity, not luck.** 21 targets to 13, leading in *all three weeks*, never
+a losing week. **One TD in three games**, so the 12.30 ppg is volume, not touchdown variance. Per
+`CLAUDE.md` — opportunity sticky, efficiency noise — that is the side you keep. Hand-computed
+half-PPR off this pull reproduces 12.30 and 5.97 exactly, so those figures are sound.
+
+**Three counters, checked, none flips it:**
+1. **Raymond's catch rate is 90% (19/21).** That *is* efficiency and it will regress; league-average
+   WR is ~65%. Regressed, he still leads on targets, which is the part that sticks.
+2. **Odunze owns the air yards** — share .282 / .249 / .416 vs Raymond's .204 / .037 / .278. Odunze
+   is the downfield option: higher ceiling, lower floor. §0 has us as **favourites** on production
+   (110.25 vs 92.47), and favourites want floor. Argues Raymond a second, independent way.
+3. **Raymond is off his Week 1 peak** — target share .346 -> .167 -> .206. Real decline, but flat
+   across weeks 2-3 and above Odunze in both.
+
+**Verdict: Raymond starts, as D6 already had it. Yahoo's recommendation is rejected on usage.**
+
+**Kill condition (D6a), two firings required:** Odunze outscores Raymond in Week 4 **and**
+out-targets him in Week 4. Points alone do not fire it — one deep TD on a 41%-air-yards-share role
+is exactly the variance this decision priced in. Targets are the claim; make targets the test.
+
+**Unrostered finding, logged because it explains both players.** **Luther Burden III (WR, Chicago)**
+is the rising target earner in that room — share .192 -> .233 -> **.324**, team-leading **11
+targets** in Week 3. He is the threat to Raymond and Odunze alike. **Rostered by Max's TD Bombers**,
+so he is a trade target, not a claim — same shape as Breece Hall in §6. Noted as ownership state,
+not an action item. Trade angle, if it is ever opened: his target share tripled in three weeks and
+Max may still be pricing him on preseason rank.
+
 ### D8. **CANCELLED.** Stroud claim withdrawn. Stafford retained.
 
 **Originally: claim C.J. Stroud (QB, Houston), drop M. Stafford (QB, LA Rams). Cancelled 09-29

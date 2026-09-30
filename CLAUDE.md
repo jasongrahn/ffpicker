@@ -401,6 +401,25 @@ so passing on a positional run costs less. Recommendations must be slot-aware.
 - **Correlation is not the thing to avoid — paying for it is.** A stack that costs
   projected points to buy shared upside loses; concentration that arrives for free while
   *gaining* points is fine. Flag it either way, and give it a kill condition.
+- **Need before candidates. Never infer a positional need from a candidate looking good.**
+  Any add/drop question runs in this order: (1) roster counts by position + bye week per
+  player, byes derived as `setdiff(all_weeks, weeks_played)` from `load_schedules(2026)`;
+  (2) per bye week, ask *am I actually short a startable body at that slot* — **FLEX
+  absorbs a lot, and 4 RBs for 2 RB slots is depth, not a hole**; (3) only then rank the
+  free-agent pool. Cost of skipping step 1, measured 2026-09-29: ranked the pool, saw
+  falling RB opportunity, called RB the hole. Wrong — real holes were **K (wk5, zero
+  kickers)** and **TE (1-deep all season, zero in wk14)**. If the sentence "X is your
+  hole" is being written, the depth and bye tables must already be on screen.
+- **`data/weekly/2026_weekNN_myteam.csv` can lag the decision log.** It is written at
+  lineup-log time and does not get rewritten when a decision reverses. The wk4 file still
+  listed Stroud, B. Allen, and Gainwell after D8/D1/D9 killed all three. **The decision
+  log's `LIVE` / `CANCELLED` / `NEW` rows are authoritative for who is rostered**; the csv
+  is authoritative only for what was projected at freeze time.
+- **A replacement level is only as good as the pool it is taken from.** Median ppg over a
+  280-row Yahoo free-agent export is ~1.5-2.3 for RB/WR/TE because the pool is mostly
+  inactive bodies -> every waiver body shows a large fake VOR. Rank the wire on
+  **opportunity and its week-over-week trend**, and bar anyone under ~5 opp/g before
+  ranking at all.
 - Every model outputs a distribution, not a point estimate.
 - Validate the config early and fail loudly. A bad `league.json` should not reach a model fit.
 - **Docs written in `/caveman` style.** Repo rule. Applies to `PLAN_1.md`, `CONTEXT.md`,
