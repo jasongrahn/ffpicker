@@ -1,86 +1,134 @@
 # Week 4 Decisions — 2026, JGrahnasaurs (2-1)
 
 **Opponent:** Jason's Jazzy Team (Pete), 1-2-0, 8th.
-**Frozen:** NOT YET. Roster moves executed Tue 2026-09-29 (evening). Lineup open.
-**Pending waivers (3, none processed):** Allen in / Etienne out; Ravens in / Chiefs out;
-Stroud in / Stafford out. Export says `W (Sep 30)`; league rules recalled as a 2-day period.
-Whichever is right, all three resolve before Sun 10-04 1:00 pm.
-**Date note:** handoff #32 dated 09-29 as "Mon". 2026-09-29 is a **Tuesday**. Corrected here.
-**Projection source:** `docs/uploads/week_4_data/` week-4 Yahoo position exports (projections, not actuals).
-**Prior:** handoff #32 `docs/handoff/ffdraft-handoff-20260929-25-WEEK4-SWAPS.md`.
+**Frozen:** NOT YET. Lineup open. Opened Tue 2026-09-29, **materially revised Tue 09-29 evening**
+after the methodology correction in §00.
 
-Do not edit above `## Retro`. Retro appended after Monday 10-05.
+**Waiver state, Tue 09-29 evening:**
 
----
-
-## 0. The frame. Two numbers, and they point opposite ways.
-
-**Observed on the Yahoo matchup page Tue 09-29** (screenshot, pre-waiver). Opponent has **already set
-a lineup, and it is not their best legal one.**
-
-| | projected starters |
+| claim | status |
 |---|---|
-| **JGrahnasaurs** (after D1/D2 below) | **100.13** |
-| Jason's Jazzy Team — **best legal lineup** | **109.74** |
-| Jason's Jazzy Team — **lineup as actually set** | **89.51** |
+| Ravens DEF in / Chiefs DEF out | **LIVE** — kept, see D2 |
+| **D. Boston (WR, Cle) in / K. Gainwell (RB, TB) out** | **LIVE** — new, see D9. Gainwell already dropped. |
+| ~~Stroud in / Stafford out~~ | **CANCELLED** — see D8 |
+| ~~B. Allen in / Etienne out~~ | **CANCELLED** — see D1. Etienne retained. |
 
-**They are starting De'Von Achane at RB2. Achane is on IR. He projects 0.00.** Benched behind him:
-Hubbard 14.53, Flowers 14.28, Maye 18.47, Stevenson 9.95. That is roughly **20 points sitting on
-their bench**, and one of the nine slots is a guaranteed zero.
+**Prior:** handoff #32 `docs/handoff/ffdraft-handoff-20260929-25-WEEK4-SWAPS.md`.
+**Date note:** handoff #32 dated 09-29 as "Mon". 2026-09-29 is a **Tuesday**. Corrected here.
 
-Yahoo's own header reads **92.75 vs 89.51, "Favorite 53%"** — but that is our *pre-move* lineup, still
-carrying Etienne 0.00 in the FLEX and Chiefs DEF. It is stale in our favour's direction, not theirs.
-
-**How to plan against this: assume they fix it.** It is Tuesday evening, the first lock is Thursday night, and an
-IR player in a starting slot is the most visible possible error. Plan against **109.74**, which makes
-us **~9.6 point underdogs**. Treat the 89.51 as upside, not as the baseline.
-
-**Consequence for the calls below, stated carefully because it cuts both ways:** against their best
-lineup we are the dog and variance helps us; against their set lineup we are a 10-point favourite and
-variance *hurts* us. **So variance is not a usable tiebreaker this week.** Anywhere below where a
-"we need the right tail" argument could have been reached for, it is withdrawn. Every call stands on
-projection and pre-commitment alone.
-
-**Prediction logged for the retro:** predicted their QB as Maye 18.47; they started **Goff 18.44**.
-Wrong player, 0.03 points apart. Records that the QB slot on their roster is a coin flip, not that
-the prediction method failed.
-
-**Their only early lock: DK Metcalf, Thu 10-01 8:15.** He is in their starting lineup at WR2 (8.73).
-Once he plays they cannot move him, but every other slot including Achane stays editable until Sunday.
+Do not edit above `## Retro`. Retro appended after Monday 2026-10-05.
 
 ---
 
-## 1. Roster moves. BOTH EXECUTED Tue 09-29. Not decisions any more, record only.
+## 00. METHODOLOGY CORRECTION. Read before trusting anything dated earlier.
 
-### D1. Etienne dropped. Braelon Allen claimed.
+**`Rankings Actual` in the Yahoo position exports is NOT realised production. It is that week's
+projection restated as a rank.**
 
-**T. Etienne Jr. (RB, New Orleans)** was `O`, proj **0.00**, `rank_actual` 734. IR checked on the
-Yahoo roster page directly — **this league's IR does not accept an `O` designation**, so the free
-option did not exist. Answers handoff #32 §3's open question: **no**. Record it, do not re-check.
+Measured 09-29 by counting rank-order violations between `Rankings Actual` and `Fantasy Fan Pts`
+within each position file:
 
-Diffed against usage first per `CLAUDE.md` (`O` state, not event): Week 3 he was `Q`, dressed,
-played, 57 rush + 13 rec + 2 rec, scored 8.00. So the `O` **is** new information, not a stale tag.
-Drop justified on that, not on the tag alone.
+| pos | n | rank-order violations |
+|---|---|---|
+| QB | 140 | 2 (1.4%) |
+| RB | 264 | **0** |
+| WR | 465 | **0** |
+| TE | 246 | **0** |
+| K | 56 | **0** |
+| DEF | 32 | **0** |
 
-Claim: **Braelon Allen (RB, NY Jets)**, proj **10.28**, **21% rostered**, waiver clears Wed 09-30,
-plays Sun 1:00 @ Chi.
+**0 violations in 1,203 of 1,243 players.** The two columns are the same information twice. A
+player "ranked 8th on the season" is simply a player with a high projection this week.
 
-Reason he is not a projection artifact — the Jets backfield changed hands and the league has not
-repriced it:
+**What this invalidated.** Three conclusions in this document were built on `Rankings Actual`
+presented as independent evidence. All three were wrong, and all three are corrected below
+(D1, D6, D8). Any argument of the form "the projection says X *and* the season rank agrees" was
+one source counted twice.
 
-| | proj carries | proj pts | rank preseason -> actual | % ros |
-|---|---|---|---|---|
-| **B. Allen** | **12.6** | **10.28** | 223 -> **87** | **21%** |
-| B. Hall | 7.2 | 7.36 | 32 -> **164** | 99% |
+**The correct source for realised production is `nflreadr::load_player_stats(2026)` scored through
+`score_player_week()`** — the function `CLAUDE.md` records as validated 35/35 against Yahoo box
+scores. That is what every number below now uses. 362 players scored, weeks 1-3, under
+`config/scoring.json`.
 
-Allen would be RB3 by projection ahead of Marks 7.58 and Gainwell 6.67. **Not** started Week 4 —
-claim is for depth and for Weeks 5+.
+**Standing rule from here: never cite `Rankings Actual` or `Rankings Pre-Season` as evidence of
+performance.** They are projection derivatives. Use them only to read Yahoo's *opinion*, never to
+check it. Only `score_player_week()` output counts as production.
 
-**Kill condition (D1):** Allen under 8 carries in Week 4 **and** Hall over 12. That reads as Yahoo's
-projection being ahead of the actual coaching decision, and the claim was wrong.
+---
 
-**Note:** Hall is on the Week 3 opponent's roster (Maybe Mitchell), not this week's. No head-to-head
-effect.
+## 0. The frame. Reversed by the correction. We are favourites, not underdogs.
+
+The earlier version of this section had us as ~9.6-point underdogs and built a variance argument on
+it. That rested on Yahoo projections. On realised production the matchup inverts.
+
+**Skill slots only (QB/RB/RB/WR/WR/TE/FLEX). K and DST are excluded — `score_player_week()` is
+per-player by design and `score_team_week()` does not exist yet.**
+
+| lineup | by Yahoo projection | **by actual ppg, wks 1-3** |
+|---|---|---|
+| **JGrahnasaurs** (revised, D6 below) | 99.09 | **110.25** |
+| Jason's Jazzy Team — best legal | 109.74 | **92.47** |
+| Jason's Jazzy Team — **as actually set** | 89.51 | **83.96** |
+
+**The projection had us 10.6 points behind. Production has us 17.8 points ahead of their best
+legal lineup.** Same two rosters, opposite verdicts, and one of the two sources has a documented
+four-week failure record on exactly this kind of ranking.
+
+**Their lineup error is smaller than it looked.** De'Von Achane, in their starting RB2 slot, is on
+IR and will score 0 — but he averaged 7.03 ppg before the injury, so he was never the 17-point hole
+the projection-based read implied. Their real cost is the gap to Hubbard (16.20 ppg), about 16
+points.
+
+**A second, funnier finding: their "best legal lineup" is worse than the one they set, at QB.**
+Projection-optimal starts Drake Maye (18.47 proj) over Jared Goff (18.44). By production Goff is at
+**21.86 ppg** and Maye at **9.20**. They started the right quarterback for the wrong reason, and
+our "they should fix it" advice would have made them worse there.
+
+**Consequence, and it now points one way.** On the better signal we are favourites by roughly 18.
+**Favourites want floor, not ceiling.** The earlier "variance helps us" argument is dead twice over
+— first because it was withdrawn as unusable, now because it points the wrong way.
+
+**Held against all of the above: n = 3 games.** `CLAUDE.md` says fit nothing on this and is right.
+Production is not being treated as truth — it is being treated as *a second source that disagrees
+with the first*, where the first has a recorded failure history and the second is our own validated
+scoring function. That is the entire claim.
+
+**Their only early lock: DK Metcalf, Thu 10-01 8:15**, in their starting lineup at WR2 (7.10 ppg).
+Every other slot including Achane stays editable until Sunday.
+
+---
+
+## 1. Roster moves.
+
+### D1. **CORRECTED.** Etienne RETAINED. Allen claim cancelled.
+
+**Originally: drop Etienne, claim Braelon Allen. Both withdrawn 09-29 evening.**
+
+The original argument had two legs and §00 removed both.
+
+| | original claim | **actual production, wks 1-3** |
+|---|---|---|
+| T. Etienne Jr. (RB, NO) | "worth 0.00, rank 734" | **8.47 ppg — our RB3** |
+| B. Allen (RB, NYJ) | "12.6 proj carries, rank 223 -> 87" | **5.07 ppg** |
+| B. Hall (RB, NYJ) | "losing the job, rank 32 -> 164" | **12.50 ppg** |
+
+**Etienne's 0.00 is one week of injury, not his value.** He out-produces Marks (6.37) and every
+back we considered claiming. Dropping a functioning RB3 to clear a spot was correct only under the
+belief that he was worthless, and that belief came from a projection for a week he is `O` for.
+
+**The Allen case was the same source twice.** Projected carries and `Rankings Actual` both come
+from the Yahoo projection. Against production Allen has been outscored by the man he was supposed
+to be replacing, better than 2 to 1. The role change may still be real and coming — Yahoo may know
+something the box scores do not yet show — but it was presented here as established and it was not.
+
+**Confirmed separately: the league IR slot does NOT accept an `O` designation.** That answer stands;
+it was checked on the roster page, not inferred. Etienne therefore occupies a bench spot, which is
+the correct price for an 8.47-ppg back.
+
+**Kill condition (D1):** Etienne misses Weeks 5 and 6 as well. A three-week absence makes the bench
+spot too expensive and he becomes droppable on the next roster crunch.
+
+
 
 ### D2. DEF streamed: Chiefs -> Ravens. Method call, executed.
 
@@ -106,6 +154,7 @@ miss on a streaming rule retires the rule (see D3).
 
 ---
 
+
 ## 2. Lineup. Nine slots.
 
 | slot | player | pos | NFL | proj | kickoff ET |
@@ -122,6 +171,7 @@ miss on a streaming rule retires the rule (see D3).
 | | | | | **100.13** | |
 
 Bench: Stafford 16.49, Odunze 8.21, Robinson 7.98, Marks 7.58, Gainwell 6.67, (Allen 10.28 if claim lands).
+
 
 ### D3. K — hold Butker. Method explicitly on probation.
 
@@ -169,70 +219,102 @@ substitutes for each other in the worst way, and a Houston blowout either direct
 **Kill condition (D5):** Marks or Gainwell outscores Williams by 5+. Would mean the RB depth chart
 is mis-ranked the way the WR one demonstrably is.
 
-### D6. WR / FLEX — Adams, Sutton, Raymond. **Raymond is not a judgment call.**
 
-**Raymond starts by pre-commitment.** D5 of the Week 3 log set the trigger at **6+ targets in
-Week 3 -> starts Week 4**. He got **7** (6 catches, 90 yards, 1 TD, 18.00 points). Trigger fired.
-Not optional. Honouring a rule's hit after the Week 3 log paid 11.90 for honouring its miss.
+### D6. **CORRECTED.** WR / FLEX — Adams, **Robinson**, Raymond. Sutton benched.
 
-**State the cost honestly:** Raymond projects **6.28**, lowest of the five receivers. Starting him
-over Odunze costs **-1.93 projected points**. That is the price of the rule, paid knowingly. Per §0 the
-underdog/variance argument is **withdrawn** — it is not available as a tiebreaker when the same week
-has us as a 10-point favourite under the opponent's actual lineup. The cost is paid for one reason
-only: the pre-commitment. No supporting argument is offered or needed.
+**Originally: Adams, Sutton, Raymond. Sutton benched 09-29 evening on the §00 correction.**
 
-Remaining two receiver-eligible slots:
+The original call started Sutton over Odunze on a 0.81-point projection edge. Production says the
+projection has this group close to backwards:
 
-| WR | wk1 tgt | wk2 | wk3 | wk4 proj | % ros | |
-|---|---|---|---|---|---|---|
-| **D. Adams** | 6 | 10 | 13 | **11.34** | 98% | **starts** — only separated player |
-| **C. Sutton** | 5 | 4 | 7 | **9.02** | 79% | **starts** |
-| R. Odunze | 3 | 4 | 6 | 8.21 | 92% | bench |
-| W. Robinson | — | — | — | 7.98 | 47% | bench |
+| WR | **actual ppg** | wk4 proj | start? |
+|---|---|---|---|
+| D. Adams (LA Rams) | **18.93** | 11.34 | **yes** — the only separated player, on both signals |
+| **K. Raymond (Chicago)** | **12.30** | 6.28 | **yes** — trigger, and production agrees |
+| **W. Robinson (Tennessee)** | **7.63** | 7.98 | **yes** — replaces Sutton |
+| R. Odunze (Chicago) | 5.97 | 8.21 | no |
+| **C. Sutton (Denver)** | **4.07** | 9.02 | **NO — benched** |
 
-Sutton over Odunze on two grounds: higher projection, and Odunze is Chicago **like Raymond**, so
-starting both doubles one game with a forced starter already in it.
+**Sutton was our projected WR2 and is our worst producing receiver by 1.9 ppg.** Starting him was
+the single largest error in the original document.
 
-**Robinson benched resolves the D2 conflict for free.** He is the Tennessee receiver on the other
-side of Henry + Ravens DEF. Starting him would have been betting against our own two best plays.
-He is off the projection board anyway, so no price was paid to avoid it.
+**Raymond starts by pre-commitment and that is still the reason.** D5 of the Week 3 log set the
+trigger at 6+ targets in Week 3; he got 7. What changed is the *cost*: originally logged as
+"-1.93 projected points, paid knowingly." On production Raymond is our **second-best receiver**
+and the trigger was not a cost at all. The rule and the better signal agree. Honour the rule; note
+that the arithmetic that made it look expensive came from the discredited source.
 
-**Kill condition (D6):** any two of {Odunze, Robinson} outscore any two of {Adams, Sutton, Raymond}.
-Same bar as Week 3's D5 — beating one starter is variance, beating two as a pair is a ranking failure.
-This is now the **fourth straight week** this pool is inside its own error bar. If the kill fires
-again, Yahoo projections stop being the WR ranking input and the retro must name a replacement.
+**The one genuinely close call: Robinson vs Odunze.** Robinson leads by 1.66 ppg, inside any
+reasonable error bar on three games. Against him: **Robinson is the Tennessee receiver in the same
+game as our Henry and our Ravens DEF**, so he is directly opposed to two plays we like more than
+him. Per `CLAUDE.md`, correlation is not the thing to avoid — paying for it is — and here avoiding
+it costs 1.66 ppg of the better signal to buy a hedge on the worse one. **Start Robinson, flag the
+overlap.** Reasonable people take Odunze; it is not a mistake, it is a different weighting.
 
-### D8. QB2 — Stroud claimed, Stafford dropped. Not a Week 4 lineup change.
+**Kill condition (D6), tightened:** Sutton outscores Robinson **and** Odunze outscores Robinson.
+Both must fire. One alone is variance on a 1.66-point gap; both together means the benching logic
+is wrong, not merely unlucky.
 
-**C.J. Stroud (QB, Houston)** claimed, **M. Stafford (QB, LA Rams)** dropped. Neither starts
-Week 4 — Mahomes does, per D4. This is a **Week 5 bye-cover and rest-of-season** move.
 
-| | wk4 proj | rank preseason -> **actual** | bye | % ros |
+### D8. **CANCELLED.** Stroud claim withdrawn. Stafford retained.
+
+**Originally: claim C.J. Stroud (QB, Houston), drop M. Stafford (QB, LA Rams). Cancelled 09-29
+evening before processing.**
+
+The original case was "Stroud outprojects Stafford by 3.11 **and** outranks him 8 to 30 on the
+season," with an explicit note that the rank was "realised production rather than projection, so it
+does not lean on the weak signal." **Per §00 that note was false.** Rank 8 and projection 19.60 are
+the same number in two costumes. The case was one source asserted twice.
+
+| | **actual ppg wks 1-3** | wk4 proj |
+|---|---|---|
+| **M. Stafford (ours, retained)** | **18.66** | 16.49 |
+| C.J. Stroud (not claimed) | **15.05** | 19.60 |
+
+**The swap was a 3.61 ppg downgrade.** Caught only because the claim had not yet processed.
+
+**No QB action is needed at all.** Mahomes byes Week 5, Stafford byes Week 11. They do not collide,
+so the Week 5 cover this move was meant to buy already exists for free.
+
+**Noted, not acted on:** Kirk Cousins (QB, Las Vegas) has produced **19.75 ppg** and is free at 14%
+rostered — ahead of Stafford by 1.09. Too small a gap to spend a claim on a player who starts once
+all season.
+
+
+
+### D9. **NEW.** D. Boston claimed, K. Gainwell dropped. Executed 09-29 evening.
+
+**Denzel Boston (WR, Cleveland)** claimed; **Kenny Gainwell (RB, Tampa Bay)** dropped outright.
+
+| | actual ppg wks 1-3 | wk4 proj | bye | % ros |
 |---|---|---|---|---|
-| **C.J. Stroud** | **19.60** | 138 -> **8** | 8 | 54% |
-| Stafford (dropped) | 16.49 | 104 -> **30** | 11 | ours |
+| **D. Boston (WR, Cle)** | **12.67** (3g) | 8.87 | 11 | 76% |
+| K. Gainwell (RB, TB) — dropped | **2.43** (3g) | 6.67 | 10 | — |
 
-Stroud outprojects Stafford by 3.11 and outranks him by 22 places on the season. Stafford's
-only function was Mahomes' Week 5 bye; Stroud does that job better and is a real QB1 the rest
-of the way.
+Gainwell was the worst producer on the roster by a factor of two and byed in Week 10 alongside
+three of our five receivers. Boston would slot in immediately as our **second-best receiver by
+production**, behind only Adams.
 
-**Bye-week check, the reason this is safe:** Stroud's bye is **Week 8**, Mahomes' is **Week 5**.
-They do not collide. Dropping Stafford (bye 11) loses nothing, since Adams also byes in 11 and
-Mahomes plays that week.
+**This is the first move in this document made on production rather than projection**, and it is
+the largest single upgrade the roster had available.
 
-**Kill condition (D8):** Stroud finishes Weeks 4-8 below Stafford's points over the same span.
-Explicitly a **five-week** bar, not a one-week one — this was a rest-of-season call and judging it
-on Week 4, when neither man starts, would be incoherent.
+**Side effect, and it closes a hole flagged in §6:** Boston's bye is Week 11, so he plays in Week 10.
+The Week 10 three-receiver bye is now covered by Adams + Boston with no FLEX contortion required.
 
-**Caveat carried:** these are the same Yahoo projections that have mis-ranked the WR group four
-straight weeks. The supporting evidence here is `rank_actual` (8 vs 30), which is realised
-production rather than projection, so it does not lean on the weak signal.
+**Not started Week 4 unless the waiver clears before Thu 8:15.** Cleveland plays Thursday. If the
+claim processes after kickoff he is locked at 0 and the D6 lineup stands as written.
+
+**Kill condition (D9):** Boston finishes Weeks 4-8 below Sutton over the same span. Five-week bar,
+matching D8's reasoning — this was a rest-of-season call on a three-game sample and a one-week
+result cannot settle it.
+
 
 ### D7. Forced slots. No decision exists.
 
 Ferguson (TE), Butker (K), Ravens (DEF) — one rostered player each. Recorded for completeness.
 
 ---
+
 
 ## 3. Head-to-head overlap. Observed lineup, Tue 09-29.
 
@@ -241,8 +323,8 @@ is in §0 and is what we plan against.
 
 | game | ours | theirs (as set) | read |
 |---|---|---|---|
-| **DEN @ SF** | Sutton 9.02 | **McCaffrey 17.44**, **Broncos DEF 5.17** | **Their roster fights itself, and it is live.** Broncos DEF scoring means Denver stopping San Francisco means less McCaffrey. Their best player and their DEF are on opposite sides of one game. Our exposure (Sutton) is on the side that hurts both. **This is the only genuinely leveraged position either way.** |
-| **BAL vs TEN** | Henry 17.68, **Ravens DEF 7.58** | **nothing — Flowers 14.28 is benched** | As set, our two biggest correlated plays are unopposed. **This is the slot most likely to change**: if they fix the lineup, Flowers starts and the game becomes aligned-not-opposed (he is a Raven; a Baltimore blowout feeds all three). Re-check Sunday morning. |
+| **DEN @ SF** | *(Sutton 9.02 — now BENCHED, D6)* | **McCaffrey 17.44**, **Broncos DEF 5.17** | **Their roster fights itself, and it is live.** Broncos DEF scoring means Denver stopping San Francisco means less McCaffrey. Their best player and their DEF are on opposite sides of one game. Our exposure there is gone since Sutton was benched, so this leverage is now theirs alone. **This is the only genuinely leveraged position either way.** |
+| **BAL vs TEN** | Henry 17.68, **Ravens DEF 7.58**, **Robinson 7.98 (TEN — now STARTING, D6)** | **nothing — Flowers 14.28 is benched** | As set, our two biggest correlated plays are unopposed by *them* — but D6 put our own Robinson on the Tennessee side, so we now oppose ourselves here. Self-inflicted, priced at 1.66 ppg, taken knowingly. **This is the slot most likely to change**: if they fix the lineup, Flowers starts and the game becomes aligned-not-opposed (he is a Raven; a Baltimore blowout feeds all three). Re-check Sunday morning. |
 | **DAL @ HOU** | J. Williams 12.72, (Marks 7.58 BN) | Schultz 7.80 **benched** | No live overlap. |
 | **CHI vs NYJ** | Raymond 6.28, (Odunze 8.21 BN) | Monangai 8.33 **benched** | No live overlap. Our claimed Allen (NYJ) is on the other side, benched. |
 
@@ -254,6 +336,7 @@ asleep.
 **What depends on them staying asleep:** ~20 points, concentrated in Achane's zeroed RB2 slot and the
 Hubbard/Flowers bench. Do not build any decision on it. It is not ours to control and it is the most
 correctable error on the page.
+
 
 ## 4. Deadlines. Earlier than the lock table says.
 
@@ -272,15 +355,17 @@ not the player's own kickoff.
 
 ---
 
+
 ## 5. Explicitly NOT being learned this week
 
 - Anything about Mahomes vs Stafford (D4 — deliberately unmeasured).
-- Anything about Odunze in isolation (D6's bar is on pairs, not individuals).
-- Anything about Allen's Week 4 score (claimed for depth, not started).
+- Anything about Odunze in isolation (D6's bar requires two firings, not one).
+- Anything about Boston's or Etienne's single Week 4 score (D9 and D1 are five-week and
+  three-week bars respectively).
 - Whether the DST rule works. It is 1-for-1. Week 4 makes n=2. Not validated either way.
-- Anything about Stroud vs Stafford (D8 is a five-week bar; neither starts Week 4).
+- **Whether production beats projection.** n=3. §00 establishes that the two disagree and that one
+  of them is our own validated function. It does not establish that three games predict anything.
 
----
 
 ## 6. Bye horizon. Opened Tue 09-29, not yet a process.
 
@@ -361,6 +446,7 @@ the player is still free — but it means the list decays and must be re-cut eac
 Design not settled. Do not build until it is.
 
 ---
+
 
 ## Retro
 
