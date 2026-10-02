@@ -1,7 +1,7 @@
 # Week 4 Decisions — 2026, JGrahnasaurs (2-1)
 
 **Opponent:** Jason's Jazzy Team (Pete), 1-2-0, 8th.
-**Frozen:** NOT YET. Lineup open. Opened Tue 2026-09-29, **materially revised Tue 09-29 evening**
+**Frozen:** 2026-10-02. Lineup locked as logged. Both lineups written at matchup-page projections (`proj_gameday`, src `matchup_2026-10-01`). Opened Tue 2026-09-29, **materially revised Tue 09-29 evening**
 after the methodology correction in §00.
 
 **Waiver state, Tue 09-29 evening:**
@@ -12,6 +12,8 @@ after the methodology correction in §00.
 | **D. Boston (WR, Cle) in / K. Gainwell (RB, TB) out** | **LIVE** — new, see D9. Gainwell already dropped. |
 | ~~Stroud in / Stafford out~~ | **CANCELLED** — see D8 |
 | ~~B. Allen in / Etienne out~~ | **CANCELLED** — see D1. Etienne retained. |
+| **T. Etienne (RB, NO) -> IR slot** | **DONE** 10-01 — IR, hamstring. See D10. Frees a roster spot, no drop. |
+| **J. Bates (K, Det) added** | **DONE** 10-01 — K2, into the slot Etienne's IR move freed. See D11. |
 
 **Prior:** handoff #32 `docs/handoff/ffdraft-handoff-20260929-25-WEEK4-SWAPS.md`.
 **Date note:** handoff #32 dated 09-29 as "Mon". 2026-09-29 is a **Tuesday**. Corrected here.
@@ -163,14 +165,20 @@ miss on a streaming rule retires the rule (see D3).
 | RB | D. Henry | RB | Bal | 17.68 | Sun 1:00 |
 | RB | J. Williams | RB | Dal | 12.72 | Sun 1:00 |
 | WR | D. Adams | WR | LAR | 11.34 | Sun 1:00 |
-| WR | C. Sutton | WR | Den | 9.02 | Sun 4:25 |
-| FLEX | **K. Raymond** | WR | Chi | **6.28** | Sun 1:00 |
-| TE | J. Ferguson | TE | Dal | 6.93 | Sun 1:00 |
+| WR | **D. Boston** | WR | Cle | **8.92** | **Thu 8:15** |
+| FLEX | **K. Raymond** | WR | Chi | **6.23** | Sun 1:00 |
+| TE | J. Ferguson | TE | Dal | 6.94 | Sun 1:00 |
 | K | H. Butker | K | KC | 8.60 | Sun 4:25 |
 | DEF | **Ravens** | DEF | Bal | 7.58 | Sun 1:00 |
-| | | | | **100.13** | |
+| | | | | **100.02** | |
 
-Bench: Stafford 16.49, Odunze 8.21, Robinson 7.98, Marks 7.58, Gainwell 6.67, (Allen 10.28 if claim lands).
+**Revised 10-01. Sutton -> Boston at WR2, see D6b.** Projections restated from the 10-01 Yahoo
+pull, so they differ from the 09-29 figures above by ~0.1 (Mahomes 19.97, Henry 17.60, Adams 11.46).
+**Boston plays Thursday 8:15pm**, which makes the WR2 deadline Thu, not Sun — the earliest kickoff
+among that slot's legal replacements.
+
+Bench: Stafford 16.74, Sutton 9.15, Odunze 8.16, Robinson 8.01, Marks 7.75, **Bates (K2)**.
+**IR: Etienne.** Active roster 15/15, both IR slots now 1 of 2 used.
 
 
 ### D3. K — hold Butker. Method explicitly on probation.
@@ -305,6 +313,40 @@ so he is a trade target, not a claim — same shape as Breece Hall in §6. Noted
 not an action item. Trade angle, if it is ever opened: his target share tripled in three weeks and
 Max may still be pricing him on preseason rank.
 
+#### D6b. **AMENDMENT, 10-01.** Sutton -> Boston at WR2. D6's choice of Robinson superseded.
+
+D6 picked Adams + Robinson because **Boston's claim was still pending** when it was written. The
+claim landed, so the comparison had to be re-run with him in it. Yahoo's lineup also still held the
+**pre-correction** D6 (Sutton starting, Robinson benched) — the §00 fix had never been applied on the
+site, so the live lineup was wrong against our own log independently of this decision.
+
+| WR | **ppg** | snap% by wk | tgt share by wk | last wk tgts |
+|---|---|---|---|---|
+| D. Adams | 18.93 | .54 / .65 / .83 | .222 / .333 / .265 | 13 |
+| **D. Boston** | **12.67** | **.92 / .93 / .89** | .182 / .233 / .133 | 4 |
+| K. Raymond | 12.30 | .60 / .62 / .75 | .346 / .167 / .206 | 7 |
+| W. Robinson | 7.63 | .82 / **.53 / .63** | .214 / **.059** / .314 | 11 |
+| C. Sutton | 4.07 | .76 / .73 / .87 | .185 / .138 / .226 | 7 |
+
+**Boston plays 90% of Cleveland's snaps every week** — the most stable opportunity signal in the
+group, and the one the repo principle says sticks. Sutton is also full-time and has converted it to
+4.07 ppg with **zero TDs**; he is the clearest downgrade on the roster.
+
+**Boston over Robinson, revising D6:** Robinson's snap share is 53-63% in two of three weeks, and his
+11-target Week 3 sits next to a **one-target Week 2**. Part-time role that spiked once, against an
+every-down role.
+
+**Honest counter, recorded:** Boston's targets fell to 4 in Week 3 and two TDs in three games carry
+the 12.67. At **2.53 fp per opportunity** he is over-efficient and will regress. The case rests on
+the snaps, not the points. Robinson is the higher-variance alternative and taking him is defensible.
+
+**Side effect:** benching Robinson (Ten) removes the self-opposition D6 flagged — we no longer own a
+Tennessee receiver against our own Henry and Ravens DEF in the same game.
+
+**Kill condition (D6b), two firings:** Boston finishes Week 4 below **both** Sutton and Robinson.
+One alone is variance on a 3-receiver spread this tight; both together means the snap-share read is
+wrong, not merely unlucky.
+
 ### D8. **CANCELLED.** Stroud claim withdrawn. Stafford retained.
 
 **Originally: claim C.J. Stroud (QB, Houston), drop M. Stafford (QB, LA Rams). Cancelled 09-29
@@ -358,6 +400,69 @@ matching D8's reasoning — this was a rest-of-season call on a three-game sampl
 result cannot settle it.
 
 
+### D10. **NEW.** Etienne -> IR slot. Executed 10-01. No drop required.
+
+**Travis Etienne Jr. (RB, NO) is on IR with a hamstring.** Moved to an IR slot rather than dropped.
+
+Three sources, and the one CLAUDE.md says to distrust failed exactly as documented:
+
+| source | says | trust |
+|---|---|---|
+| `yahoo_week4_injuries_2026-10-01.csv` | `IR, Hamstring`, new note `Y` | yes |
+| `yahoo_week4_gamedaycalls_2026-10-01.csv` | `IR, Hamstring`, **Oct 1 2:51 AM** | yes |
+| `rosterchanges_injured_reserve_2026-10-01.csv` | **"Off IR" (Sep 30) AND "On IR" (Sep 23)** | **no — self-contradicting, as the standing rule predicts** |
+| `nflreadr::load_injuries(2026)` wk4 | silent | **not evidence** — see below |
+
+**nflreadr's Week 4 report is not filed yet and must not be read as a clean bill of health.** 257
+rows, **2 with a `report_status`**, and **zero rows for New Orleans**. An absent row means an absent
+report. Checked on 09-30 when Yahoo showed only `O` and the temptation was to read nflreadr's silence
+as disagreement.
+
+**The `O` was real news, not a stale state.** Per the standing rule, diffed against usage before
+believing it: Etienne was a **full practice participant with no designation** in Week 3 and took
+**15 opportunities, his season high**, carries trending 9 -> 8 -> 13. Healthy and rising, then IR.
+
+**Why IR and not a drop.** League carries **2 IR slots that do not count against the 15**. He is
+IR-designated, so the move is free: it opens a roster spot while keeping a back who was producing
+8.47 ppg on a growing role. The alternative on the table was dropping Sutton, which is no longer
+necessary.
+
+**Kill condition (D10):** Etienne is cleared to play and we fail to restore him to the active roster
+within one week of clearance. The risk in this move is forgetting it, not making it.
+
+### D11. **NEW.** J. Bates (K, Det) added as K2, into the slot D10 freed.
+
+First week K and DST could be evaluated against a real pool: the 10-01 upload carries a
+**`Roster Status`** column, so availability is known — **46 FA kickers, 20 FA defenses**. The Week 3
+free-agent export had **no K or DEF rows at all**, which is why D3 could only say "hold."
+
+Ranked by the standing method — kickers on **own implied total**, DST on **opponent implied total**,
+from `load_schedules(2026)`, all 16 Week 4 games priced.
+
+| kicker | wk4 own implied | wk5 own implied |
+|---|---|---|
+| **J. Bates (Det)** | 27.00 | **29.00 — best in the league** |
+| H. Butker (KC) | 26.00 | **BYE** |
+| best other FA | Bass (Buf) 27.75 | Drzewiecki / Moody (Bal) 27.75 |
+
+Bates wins the week that matters. **Week 5 is Butker's bye**, and Bates holds the single best kicker
+spot on the board that week. §5.2 queued him on reasoning that now checks out against published lines.
+Taken on 10-01 rather than next week because the slot existed on 10-01 and he was 55% rostered.
+
+**Butker still starts Week 4.** Bates leads by 1.00 of implied total — inside noise, and far under
+D3's deliberately loose >=3 pt bar. Switch in Week 5.
+
+**Ravens held, and they are the best DST on the board**, not merely adequate: opponent implied
+**15.50** (line moved toward us from 16.00 on 09-29) against the best available FA at **17.50**
+(Packers). Nothing to do.
+
+**Logged for Week 5, do not act yet:** the Ravens degrade hard, opponent implied **15.50 -> 21.75**
+(vs Atl), best FA then being the Jets at 18.5. §7's one-week line horizon means that call cannot be
+made earlier than Week 5 anyway.
+
+**Kill condition (D11):** in Week 5, Bates scores **more than 3 points below** the FA kicker who held
+the highest own implied total that week. Bar matches D3's — the *method* is on trial, not the player.
+
 ### D7. Forced slots. No decision exists.
 
 Ferguson (TE), Butker (K), Ravens (DEF) — one rostered player each. Recorded for completeness.
@@ -385,6 +490,56 @@ asleep.
 **What depends on them staying asleep:** ~20 points, concentrated in Achane's zeroed RB2 slot and the
 Hubbard/Flowers bench. Do not build any decision on it. It is not ours to control and it is the most
 correctable error on the page.
+
+
+### 3a. Production read, added at freeze 2026-10-02.
+
+Projection says this is close. **Production says it is not.** Both computed on the same
+roster, skill slots only.
+
+| surface | ours | theirs | margin |
+|---|---|---|---|
+| Yahoo proj, 9 slots (`proj_gameday`) | 99.68 | 90.39 | +9.29 |
+| Yahoo proj, 7 skill slots | 83.50 | 78.17 | +5.33 |
+| **Our ppg wks 1-3, 7 skill slots** | **115.29** | **83.96** | **+31.33** |
+| same, Achane correctly zeroed | 115.29 | 76.93 | **+38.36** |
+| same, vs their best legal lineup | 115.29 | 108.33 | **+6.96** |
+
+Method: `score_player_week()` over `nflreadr::load_player_stats(2026)` wks 1-3, mean per
+game. K and DST excluded both sides -> `score_team_week()` does not exist. Not comparable
+to Yahoo's number and not meant to be: Yahoo projects one week, this averages three played.
+
+**Finding.** Both sides beat projection on production, ours by **+31.79**, theirs by
+**+5.79**. Gap is not roster quality as projected -> it is that our starters have
+outperformed their own projections ~5.5x harder than theirs have. Consistent with §00.
+
+**+6.96 vs their best legal lineup is the number that matters.** It is the floor, and it
+does not depend on them leaving Achane (IR, 0.00) in at RB2 or Flowers (14.30) on the bench.
+
+**Bench check, run at freeze.** Yahoo has our FLEX inverted. Projection prefers Sutton over
+Raymond by 2.66; production has Raymond at **3x** Sutton. Hold confirmed, not changed.
+
+| player | proj wk4 | ppg wks 1-3 |
+|---|---|---|
+| Raymond (FLEX, start) | 6.49 | **12.30** |
+| Sutton (BN) | 9.15 | **4.07** |
+| Odunze (BN) | 8.03 | 5.97 |
+| Robinson (BN) | 7.85 | 7.63 |
+| Marks (BN) | 7.78 | 6.37 |
+| Mahomes (QB, start) | 19.96 | 22.86 |
+| Stafford (BN) | 16.78 | 18.66 |
+
+Confirms **D6a** (Raymond over Odunze on usage -> also right on output) and **D6b**
+(Sutton out -> margin wider than when logged). Mahomes over Stafford is the narrowest hold
+on the roster at 4.20 ppg.
+
+**Kill condition (3a).** If over wks 4-6 the ppg-based margin calls the winner no better
+than the Yahoo projection does, stop computing it and use Yahoo. Scored in the wk6 retro.
+
+**n = 3. Fit nothing.** This is a read, not a model.
+
+**Name trap.** Our `J. Williams` is **Javonte** Williams (Dal, RB). Theirs is **Jameson**
+Williams (Det, WR). Both start. Do not collapse them in the retro.
 
 
 ## 4. Deadlines. Earlier than the lock table says.
