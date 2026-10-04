@@ -37,26 +37,62 @@ condition. Numbers live there. Do not restate them, read them.
 
 ---
 
-## 2. What the next session does. In order.
+## 2. Gameday check. Run 11:09 Sun 2026-10-04. No change made.
 
-1. **Re-pull.** `nflreadr::clear_cache()` then `load_player_stats(2026)`,
-   `load_schedules(2026)`, `load_injuries(2026)`. Week 4 actuals land through
-   Sunday evening and are **incomplete until Tuesday** — MNF is Mon 8:15 NO vs Atl
-   (Etienne's game, he is IR, scores 0).
-2. **Lineup is frozen but NOT locked.** Check the clock before claiming otherwise
-   — this doc first got it wrong. Only **Boston (Cle, Thu 8:15)** was locked at
-   11:09 Sun. Deadline per slot is `min(kickoff of legal replacements)`, so the
-   **QB slot's deadline was Stafford's 1:00pm, not Mahomes' 4:25.**
-   Checked 11:09 Sun: no change warranted. Injury reports now filed (**138 of 318**
-   rows carry `report_status`, vs 2 of 257 on 09-30) and **no one on the roster is
-   O or Q**. Only open call was **K**: lines moved post-freeze, Bates own implied
-   **27.5** vs Butker **26.0** -> method prefers Bates by 1.5, worth ~0.3-0.5 fp,
-   **under the >3pt kill bar**. Held Butker. Week 5 switch stands.
-3. **Monday 2026-10-05: append `## Retro`.** Score each kill condition y/n.
+Re-pull **DONE**: `clear_cache()` + `load_schedules(2026)` + `load_injuries(2026)`.
+
+**Frozen is not locked.** This doc first claimed the slate had locked the roster.
+Wrong, and caught by the user. Only **Boston (Cle, Thu 8:15)** was locked. **Check
+the clock before asserting a lock.**
+
+Deadline per slot is `min(kickoff of legal replacements)` — not the starter's own
+kickoff. That rule moved the **QB** call up 3h25m:
+
+| by | slot | starter (kick) | alternative (kick) | call |
+|---|---|---|---|---|
+| **1:00pm** | QB | Mahomes (4:25) | **Stafford (1:00)** | hold, 22.86 vs 18.66 ppg |
+| **1:00pm** | FLEX | **Raymond (1:00)** | Sutton (4:25) | hold, 12.30 vs 4.07 ppg |
+| **1:00pm** | RB2 | **Javonte (1:00)** | Marks (1:00) | hold, 15.17 vs 6.37 ppg |
+| **4:25pm** | K | Butker (4:25) | Bates (8:20) | **held. see below** |
+| locked | WR2 | Boston | — | played Thu |
+
+**Injury reports are filed now.** **138 of 318** wk4 rows carry a `report_status`,
+vs **2 of 257** on 09-30. **Nobody on the roster is O or Q.** Only Mahomes and
+Adams appear at all, both Full Participation, no designation. The 09-30 silence was
+an unfiled report, exactly as D10 recorded — not health, and now not silence either.
+
+**K was the only live call.** Lines moved after the freeze:
+
+| K | own implied | kick |
+|---|---|---|
+| **Bates** (Det vs Car) | **27.5** | 8:20pm |
+| Butker (KC @ LV) | 26.0 | 4:25pm |
+
+Method ranks kickers by own implied total, highest first -> prefers **Bates by 1.5**,
+worth **~0.3-0.5 fp**, **under the >3pt kill bar** the streaming test runs on.
+**Held Butker.** Week 5 switch stands. Open until 4:25 if revisited — a change after
+freeze needs its own dated entry so the retro scores it apart from D1-D11.
+
+Two confirmations from the same pull:
+
+- **Henry is in the best game script available.** BAL favored **11.5** (own implied
+  **27.0**). RB favored 10+ -> **1.134x** own average, and our measured table says
+  **there is no blowout tax**.
+- **Ravens DST opponent implied 15.5**, lowest on the board. DST is dominated by
+  points allowed -> correct start. The **21.75** degrade is **wk5**, not today.
+
+---
+
+## 2b. Still to do.
+
+1. **Mon 2026-10-05: append `## Retro`.** Score each kill condition y/n.
    **Separate "decision wrong" from "outcome bad"** — wk1 proved they differ.
    `regret = best legal lineup - started` -> `data/weekly/README.md`.
    Running: wk1 **19.76**, wk2 **2.50**.
-4. **Fill the `actual` column** in both wk4 csvs. Schema already has it, empty.
+2. **Fill the `actual` column** in both wk4 csvs. Schema has it, empty.
+3. **Re-pull `load_player_stats(2026)` for actuals.** Week 4 is **incomplete until
+   Tuesday** — MNF is Mon 8:15 ATL @ NO. Etienne is IR there, scores 0.
+4. **Score §3a's kill condition at the wk6 retro**, not before.
 
 ---
 
