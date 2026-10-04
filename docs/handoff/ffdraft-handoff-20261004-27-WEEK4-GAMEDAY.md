@@ -43,8 +43,15 @@ condition. Numbers live there. Do not restate them, read them.
    `load_schedules(2026)`, `load_injuries(2026)`. Week 4 actuals land through
    Sunday evening and are **incomplete until Tuesday** — MNF is Mon 8:15 NO vs Atl
    (Etienne's game, he is IR, scores 0).
-2. **Do not touch the Week 4 lineup.** Frozen, and the 1:00pm slate has locked
-   almost everything. Any swap thought is a Week 5 thought.
+2. **Lineup is frozen but NOT locked.** Check the clock before claiming otherwise
+   — this doc first got it wrong. Only **Boston (Cle, Thu 8:15)** was locked at
+   11:09 Sun. Deadline per slot is `min(kickoff of legal replacements)`, so the
+   **QB slot's deadline was Stafford's 1:00pm, not Mahomes' 4:25.**
+   Checked 11:09 Sun: no change warranted. Injury reports now filed (**138 of 318**
+   rows carry `report_status`, vs 2 of 257 on 09-30) and **no one on the roster is
+   O or Q**. Only open call was **K**: lines moved post-freeze, Bates own implied
+   **27.5** vs Butker **26.0** -> method prefers Bates by 1.5, worth ~0.3-0.5 fp,
+   **under the >3pt kill bar**. Held Butker. Week 5 switch stands.
 3. **Monday 2026-10-05: append `## Retro`.** Score each kill condition y/n.
    **Separate "decision wrong" from "outcome bad"** — wk1 proved they differ.
    `regret = best legal lineup - started` -> `data/weekly/README.md`.
