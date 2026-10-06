@@ -1,17 +1,17 @@
 season,week,player,pos,nfl_team,slot,started,proj,proj_gameday,proj_gameday_src,actual
-2026,4,P. Mahomes,QB,KC,QB,TRUE,19.98,19.96,matchup_2026-10-01,
-2026,4,D. Henry,RB,Bal,RB,TRUE,17.68,17.33,matchup_2026-10-01,
-2026,4,J. Williams,RB,Dal,RB,TRUE,12.72,12.74,matchup_2026-10-01,
-2026,4,D. Adams,WR,LAR,WR,TRUE,11.34,11.22,matchup_2026-10-01,
-2026,4,D. Boston,WR,Cle,WR,TRUE,,8.89,matchup_2026-10-01,
-2026,4,J. Ferguson,TE,Dal,TE,TRUE,6.93,6.87,matchup_2026-10-01,
-2026,4,K. Raymond,WR,Chi,FLEX,TRUE,6.28,6.49,matchup_2026-10-01,
-2026,4,H. Butker,K,KC,K,TRUE,8.60,8.60,matchup_2026-10-01,
-2026,4,Ravens,DEF,Bal,DEF,TRUE,7.58,7.58,matchup_2026-10-01,
-2026,4,M. Stafford,QB,LAR,BN,FALSE,,16.78,matchup_2026-10-01,
-2026,4,C. Sutton,WR,Den,BN,FALSE,9.02,9.15,matchup_2026-10-01,
-2026,4,J. Bates,K,Det,BN,FALSE,,8.32,matchup_2026-10-01,
-2026,4,R. Odunze,WR,Chi,BN,FALSE,8.21,8.03,matchup_2026-10-01,
-2026,4,W. Robinson,WR,Ten,BN,FALSE,7.98,7.85,matchup_2026-10-01,
-2026,4,W. Marks,RB,Hou,BN,FALSE,7.58,7.78,matchup_2026-10-01,
+2026,4,P. Mahomes,QB,KC,QB,TRUE,19.98,19.96,matchup_2026-10-01,17.00
+2026,4,D. Henry,RB,Bal,RB,TRUE,17.68,17.33,matchup_2026-10-01,14.90
+2026,4,J. Williams,RB,Dal,RB,TRUE,12.72,12.74,matchup_2026-10-01,28.80
+2026,4,D. Adams,WR,LAR,WR,TRUE,11.34,11.22,matchup_2026-10-01,5.20
+2026,4,D. Boston,WR,Cle,WR,TRUE,,8.89,matchup_2026-10-01,10.90
+2026,4,J. Ferguson,TE,Dal,TE,TRUE,6.93,6.87,matchup_2026-10-01,2.60
+2026,4,K. Raymond,WR,Chi,FLEX,TRUE,6.28,6.49,matchup_2026-10-01,1.60
+2026,4,H. Butker,K,KC,K,TRUE,8.60,8.60,matchup_2026-10-01,6.00
+2026,4,Ravens,DEF,Bal,DEF,TRUE,7.58,7.58,matchup_2026-10-01,6.00
+2026,4,M. Stafford,QB,LAR,BN,FALSE,,16.78,matchup_2026-10-01,11.68
+2026,4,C. Sutton,WR,Den,BN,FALSE,9.02,9.15,matchup_2026-10-01,0.90
+2026,4,J. Bates,K,Det,BN,FALSE,,8.32,matchup_2026-10-01,18.00
+2026,4,R. Odunze,WR,Chi,BN,FALSE,8.21,8.03,matchup_2026-10-01,12.40
+2026,4,W. Robinson,WR,Ten,BN,FALSE,7.98,7.85,matchup_2026-10-01,9.50
+2026,4,W. Marks,RB,Hou,BN,FALSE,7.58,7.78,matchup_2026-10-01,8.20
 2026,4,T. Etienne,RB,NO,IR,FALSE,,0.00,matchup_2026-10-01,

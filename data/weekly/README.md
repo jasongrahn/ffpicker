@@ -43,6 +43,7 @@ ones where being right is informative.
 | 1 | L vs Bone Crushers | 101.80 | **121.56** | **19.76** | 118.96 |
 | 2 | **W** vs Sunday Kevin | 152.58 | **155.08** | **2.50** | 112.08 |
 | 3 | **W** vs Maybe Mitchell | 108.74 | **133.80** | **25.06** | 96.70 |
+| 4 | L vs Jason's Jazzy Team | 93.00 | **120.10** | **27.10** | 98.58 |
 
 ## Week 1 notes
 

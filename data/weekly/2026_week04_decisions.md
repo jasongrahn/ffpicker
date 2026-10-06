@@ -655,3 +655,172 @@ Design not settled. Do not build until it is.
 ## Retro
 
 *Append after Monday 2026-10-05. Do not edit above this line.*
+
+---
+
+### GD1. Gameday script read. 2026-10-04 11:40 ET. **No lineup change.**
+
+Read, not decision. Logged below `## Retro` line because it is post-freeze. Scored
+apart from D1-D11. Lineup as frozen stands — no slot moved.
+
+**Sign error found and fixed.** `load_schedules()` `spread_line` is **positive =
+HOME favoured**. Earlier verbal reads this session inverted it for CHI and DEN.
+Corrected: **Chi favoured 3.5** (own implied 23.50), **Den 3-pt dog @ SF** (22.75).
+Validated against handoff #34 numbers before use — BAL own 27.0 / opp 15.5, DET own
+27.5. Both reproduce exactly.
+
+Consequence: Sutton's only remaining edge over Raymond was implied total. Gone.
+Raymond's team is the favourite. **D6/D6a/D6b hold strengthens, no amendment needed.**
+
+Multipliers from `CLAUDE.md` game-script table. RB/WR/QB only — TE/K/DST unmeasured.
+
+| slot | player | game | fav by | own imp | mult | ppg | adj |
+|---|---|---|---|---|---|---|---|
+| RB1 | **Henry** | BAL vs TEN | **+11.5** | **27.0** | **1.134** | 24.13 | **27.36** |
+| QB | Mahomes | KC @ LV | +4.5 | 26.0 | 1.028 | 22.86 | 23.50 |
+| WR1 | Adams | LA @ PHI | +3.5 | 23.0 | 1.000 | 18.93 | 18.93 |
+| RB2 | J. Williams | DAL @ HOU | **-3.0** | 22.75 | **0.945** | 15.17 | **14.34** |
+| FLEX | Raymond | CHI vs NYJ | +3.5 | 23.5 | 1.000 | 12.30 | 12.30 |
+| WR2 | Boston | *played Thu* | -2.5 | 18.0 | — | — | **10.90 actual** |
+| TE | Ferguson | DAL @ HOU | -3.0 | 22.75 | n/a | 9.23 | 9.23 |
+| K | Butker | KC @ LV | +4.5 | 26.0 | — | — | — |
+| DEF | Ravens | BAL vs TEN | +11.5 | **opp 15.5** | — | — | — |
+
+**116.56 script-adjusted. Skill slots only, 7 of 9** — `score_team_week()` does not
+exist. Not comparable to a Yahoo total. Say so every time.
+
+**Four reads.**
+
+1. **One blowout on slate: BAL -11.5. We hold both profitable sides.** Henry at RB
+   fav 10+ -> 1.134x, and measured table says **no blowout tax** (RB fav 13+ = 1.311).
+   Ravens DST opponent implied **15.50, lowest on the board** — DST dominated by
+   points allowed -> correct start. Positively correlated, both ours, **arrived free
+   while gaining points** -> permitted concentration, not paid-for. Benched Robinson
+   is the TEN side (own implied 15.50, worst we roster) — starting him would have
+   fought our own DST.
+2. **Javonte is the only starter in a negative RB bucket.** Dal 3-pt dog -> 0.945x.
+   Bench Marks is Hou, 3-pt favourite -> 1.078x. 14% multiplier swing toward Marks.
+   Adjusted **14.34 vs 6.87. Hold by 7.47.** Script moves the gap, does not close it.
+   Total 48.5 is highest of our 1:00 games -> helps both backs (47+ -> 1.061).
+3. **Nothing to defend.** No starter a dog by more than 3. Only double-digit dog we
+   roster is Robinson, already benched. No defensive adjustment exists.
+4. **QB script is a dead heat.** Mahomes +4.5 and Stafford +3.5 both land 1.028. Hold
+   rests entirely on production, 22.86 vs 18.66. **Hold by 4.32 adjusted.**
+
+**K unchanged.** Bates own implied **27.50** (Det @ Car, total 51.5, highest on board)
+vs Butker **26.00**. 1.5 total ~ 0.3-0.5 fp, **under the >3pt kill bar**. Hold Butker.
+Wk5 switch stands, reason is implied total not form.
+
+**Kill condition (GD1), two firings required:** Henry finishes **below his own 24.13
+ppg** AND Javonte finishes **above his own 15.17 ppg**. Both must fire — that is the
+multipliers wrong-signed, not noise. One alone is a single player-week at n=3 and
+settles nothing. **Score at the wk6 retro, not Monday.** Same bar as §3a.
+
+---
+
+## Retro — Week 4. Appended 2026-10-05. Nothing above this edited.
+
+**L. 93.00 - 98.58, margin -5.58. Record 2-2.** All nine slots, Yahoo finals.
+`score_player_week()` reproduced **22/22** skill scores both rosters exactly —
+validation now 57/57 wks 1-4. DST still hand-read from Yahoo.
+
+Opponent caveat: their logged RB2 **Achane scored 0.00** (IR, since waived). They
+added **Kamara** (NO, MNF) post-freeze. If Kamara took the slot their total rises and
+the loss widens. **Loss is determinate either way.** Matchup page would settle it.
+
+| | started | best legal | regret |
+|---|---|---|---|
+| **ours** | **93.00** | **120.10** | **27.10** |
+| theirs | 98.58 | 141.86 | 57.28 |
+
+**Worst regret of four weeks** (wk1 19.76, wk2 2.50, wk3 25.06, **wk4 27.10**).
+**Best legal lineup beats them by 21.52.** Winnable game, lost on three swaps:
+
+| swap | gain |
+|---|---|
+| **Bates 18.00 over Butker 6.00** | **+12.00** |
+| Robinson 9.50 over Raymond 1.60 | +7.90 |
+| Odunze 12.40 over Adams 5.20 | +7.20 |
+
+Both pass-catcher swaps were **on our own bench and flagged pre-kickoff**. Not variance.
+
+### Kill conditions scored
+
+| id | bar | result |
+|---|---|---|
+| **D6a** | Odunze > Raymond on **pts AND tgts** | **FIRED. KILLED.** 12.40/1.60, **7 tgt / 2 tgt** |
+| D6 | Sutton > Robinson **and** Odunze > Robinson | **not fired.** Sutton 0.90 < 9.50, one leg |
+| D6b | Boston below **both** Sutton, Robinson | **not fired.** 10.90 beat both |
+| D2 | Ravens under Chiefs by >3 | **not fired.** Ravens 6.00, Chiefs 4.00. **DST half works 2nd wk running** |
+| D5 | Marks beats Javonte by 5+ | **not fired.** 8.20 vs 28.80 |
+| D9 | Boston < Sutton wks 4-8 | wk1 of 5. 10.90 vs 0.90, on track |
+| **D3** | highest-own-implied **available** K beats Butker by 3+ | **see below. literal NO, intent YES** |
+| GD1 | Henry < 24.13 **and** Javonte > 15.17 | **FIRED.** 14.90 / 28.80. Caveat below |
+| D1, D10, D11 | — | MNF pending / wk5 |
+
+### D6a. Clean kill. Chicago target room reorganised.
+
+Bar was deliberately **targets, not points**. Both legs fired. Log's own honest counter
+was correct: *"the 12.30 vs 5.97 gap may be describing a Chicago that no longer exists."*
+It was. **Luther Burden III took 6 targets** — the exact player flagged at D6a line 311.
+Third Chicago QB in four weeks (Bagent, 34 att). Raymond's 12.30 ppg rested on a target
+share that is gone. **Raymond out of FLEX from wk5. Not revisitable.**
+
+### D3. The bar measured the wrong thing. Method NOT retired.
+
+**Literal reading: does not fire.** D3's "highest-own-implied available" was **Bass (BUF
+27.75, FA)**. Bass **8.00** vs Butker **6.00** = **+2.00, under the 3 bar.** So the
+pre-registered retirement of the kicker rule is **not triggered.** Say that plainly
+before anything else, because it is the reading that does *not* flatter us to skip.
+
+**Intent reading: fires hard.** D3's table was written 09-29. **D11 added Bates 10-01**,
+after it. Final lines put **Det own implied 28.50, highest of all 30 teams** -> the
+method's true #1 pick was **Bates, on our own bench, 18.00. +12.00 over Butker.**
+
+**Method tested properly instead of on one player.** 30 teams, one kicker each, wk4
+finals vs final own implied total:
+
+- **Spearman 0.300, Pearson 0.339.** Positive.
+- buckets: `<20` **7.14** | `20-23` **8.78** | `23-26` **11.10** | `26+` 9.75 (n=4)
+- method's #1 (Bates) was the week's **#2 kicker overall**. Butker 6.00, under the
+  30-team **median 8.00** and mean 9.30.
+
+**-> The streaming method was right. The HOLD BAR is what failed.** D3 and GD1 both
+denominate the K bar in **projected points** (gap 0.33, then 0.25). Yahoo kicker
+projections cluster inside ~1 point for everyone while **actuals ran 0-19**. A
+>3-*projected*-point bar on kickers is **unsatisfiable by construction** -> always says
+hold -> the method can never act. Two weeks running it suppressed a correct call
+(wk3 McLaughlin +6.00, wk4 Bates +12.00, **18.00 forgone**).
+
+**Change, wk5 on: the K hold bar is denominated in OWN IMPLIED TOTAL, not projection.**
+Start the highest-own-implied kicker we hold. Retire the projected-point gap for K only.
+Kicker *projections* are not evidence and do not get a vote.
+
+### GD1. Fired, and stated against ourselves.
+
+Multipliers inverted: best-script RB (Henry, fav 11.5, 1.134x) **14.90**, below his 24.13.
+Worst-script RB (Javonte, dog 3, 0.945x) **28.80**, our top scorer.
+
+**Do not retire the game-script table.** The bar was pre-registered on **one player-week
+per leg**, which this repo already knows is underpowered. One week cannot overturn a
+multi-season mean. **Logged as fired, table stands. Re-score wk6 as written.**
+
+Real lesson is the bar, not the table: **GD1 repeated D3's error** — a two-leg bar on
+n=1 observations. Future script bars need many player-weeks, not our own two starters.
+
+### Decision wrong vs outcome bad
+
+- **Sutton/Raymond: decision RIGHT, outcome bad.** Raymond 1.60 beat Sutton 0.90. The
+  question asked twice on gameday was answered correctly and gained **+0.70**. It was
+  also **the wrong FLEX** — Odunze and Robinson both sat. **Sutton was never the
+  expensive comparison. D6a was, and we got it wrong.** Answering the question asked
+  instead of the question that mattered is the lesson.
+- **QB hold RIGHT.** Mahomes 17.00 > Stafford 11.68. First time in 4 wks the QB call
+  landed; prior leak was 23.52 over wks 1+3.
+- **D5 RB hold RIGHT, big.** Javonte 28.80.
+- **Adams 5.20** on 18.93 ppg. Outcome bad, no decision to fix — he was the correct WR1.
+
+### Standing
+
+**n = 4. Fit nothing.** Two bars this week (D3, GD1) failed on *power*, not on direction.
+**Stop writing kill conditions on single player-weeks.** That is the transferable finding.
