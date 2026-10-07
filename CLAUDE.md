@@ -406,7 +406,7 @@ so passing on a positional run costs less. Recommendations must be slot-aware.
   player, byes derived as `setdiff(all_weeks, weeks_played)` from `load_schedules(2026)`;
   (2) per bye week, ask *am I actually short a startable body at that slot* — **FLEX
   absorbs a lot, and 4 RBs for 2 RB slots is depth, not a hole**; (3) only then rank the
-  free-agent pool. Cost of skipping step 1, measured 2026-09-29: ranked the pool, saw
+  free-agent pool, and (4) pick the drop by usage trend, not ppg. Cost of skipping step 1, measured 2026-09-29: ranked the pool, saw
   falling RB opportunity, called RB the hole. Wrong — real holes were **K (wk5, zero
   kickers)** and **TE (1-deep all season, zero in wk14)**. If the sentence "X is your
   hole" is being written, the depth and bye tables must already be on screen.
@@ -415,6 +415,24 @@ so passing on a positional run costs less. Recommendations must be slot-aware.
   listed Stroud, B. Allen, and Gainwell after D8/D1/D9 killed all three. **The decision
   log's `LIVE` / `CANCELLED` / `NEW` rows are authoritative for who is rostered**; the csv
   is authoritative only for what was projected at freeze time.
+- **The drop is ranked the same way as the add: snap share and target trend, never ppg.**
+  ppg embeds exactly the efficiency the core principle says to regress, so it mis-ranks
+  your own bench in both directions at once. Cost, measured 2026-10-06: handoff #36 called
+  **Sutton** the drop at 3.28 ppg, "worst on roster by 2.5x," and a session relayed it.
+  The real drop was **Raymond** at 9.63 ppg — snap share **60/62/75/51**, third in the CHI
+  room behind rookie Luther Burden III, 91% catch rate on aDOT 5.7 that regresses *down*.
+  Sutton held **73-87%** snaps and a 5.5 tgt/g #1 boundary role at aDOT 11.5 on a **41%**
+  catch rate that regresses *up*. Yahoo's own wk5 projections had them 8.96 vs **5.71**.
+  Identical byes (CHI and DEN both wk10), so byes did not discriminate — usage did. **The
+  user caught this, not the analysis.** Pull `load_snap_counts()` before naming any drop.
+- **A handoff doc is a prior claim, not a source.** Its roster rankings, drop candidates,
+  projections and ppg figures were derived from data that has since moved, by the same
+  reasoning now under review. Re-derive from `load_player_stats()`, `load_snap_counts()`
+  and the newest `docs/uploads/week_NN_data/` export before acting on an add/drop or
+  quoting a number. Same failure shape as treating `load_schedules()` output as fact
+  rather than a snapshot — and note handoff #36 §4's FLEX line (Raymond 9.62 / Odunze
+  7.58) is **season ppg, not a week-5 projection**, so the "we trail by 1.61" figure
+  inherits the ppg error.
 - **A replacement level is only as good as the pool it is taken from.** Median ppg over a
   280-row Yahoo free-agent export is ~1.5-2.3 for RB/WR/TE because the pool is mostly
   inactive bodies -> every waiver body shows a large fake VOR. Rank the wire on
