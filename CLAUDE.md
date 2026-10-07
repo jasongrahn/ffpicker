@@ -339,8 +339,23 @@ costs nothing but the claim. **DST scoring is dominated by points allowed**
 so rank candidates by **opponent implied total** (`total/2 - spread/2`), lowest first.
 Rank kickers by **own implied total**, highest first.
 
-Under test since Week 3 with a deliberately loose >3 pt kill bar, because the *method* is
-on trial, not the player. Do not call it validated until several weeks have scored.
+**DST side VALIDATED league-wide 2026-10-06.** No longer under test. All 32 teams,
+weeks 1-4, **n=128** team-weeks, DST points derived from `load_team_stats()` +
+`config/scoring.json` tiers. Harness `dev/weekly/dst_test.R`.
+
+- opponent implied total -> DST pts: **r = -0.275, p = 0.0017**, CI [-0.428, -0.107]
+- own implied total -> DST pts: r = -0.021, **p = 0.81** — correctly irrelevant, which
+  confirms we rank on the right side of the line
+- edge **+1.92 pts/wk** over a random DST; within-week Spearman +0.308
+
+Two refinements tested and **rejected**: the lowest quartile scoring below the second is
+noise (p = 0.291), and game total adds nothing on top (coef p = 0.200). **Rank on
+opponent implied total alone.**
+
+Ceiling: opp_implied explains only **7.6%** of DST variance — the rest is turnovers and
+return TDs, which are not forecastable. The edge is **0.39 sd**, so the rule will look
+wrong in individual weeks and still be right. **Do not kill it on a bad week**; the >3 pt
+kill bar is retired for DST. K side remains untested (no league-wide K harness yet).
 
 ### Snake turn structure
 
@@ -457,6 +472,55 @@ so passing on a positional run costs less. Recommendations must be slot-aware.
   rather than a snapshot — and note handoff #36 §4's FLEX line (Raymond 9.62 / Odunze
   7.58) is **season ppg, not a week-5 projection**, so the "we trail by 1.61" figure
   inherits the ppg error.
+- **The Yahoo projection is the best one-week point estimate available to us. Do not
+  override it with our own numbers. Measured 2026-10-06, `dev/weekly/proj_benchmark.R`,
+  week 4, 221 startable players.** MAE: Yahoo **4.29**, opportunity x position rate 6.71,
+  season ppg 7.32, last week only 7.70. Paired t-test vs the best baseline **-2.42,
+  p < 0.0001**, CI [-3.22, -1.63]. Yahoo wins at every position (QB 3.50 vs 7.18, RB 4.29
+  vs 6.51, TE 4.29 vs 4.95, WR 4.69 vs 7.25). **Season ppg is the worst non-trivial
+  baseline** — that is the Sutton/Raymond error quantified, since Yahoo's own proj had
+  Sutton 8.96 vs Raymond 5.71 and the ppg ranking threw that away.
+
+  So opportunity and snap-share analysis has **three jobs, and start/sit is not one of
+  them**: (1) rank the wire, where projections are thin or absent; (2) catch a role change
+  the projection has not absorbed yet — a backfield vacated mid-week, a rookie taking over
+  a route tree; (3) **choose the drop**, which is a question about future role, not about
+  this week's points. For a start/sit call between two rostered players, read the
+  projection and stop.
+
+- **The lineup layer is already at its ceiling. Do not spend the week there. Measured
+  2026-10-06, `dev/weekly/proj_vs_choice.R`.** Compared what we started against the
+  projection-optimal lineup and the hindsight optimum, weeks 1-4:
+
+  | | 4-wk total |
+  |---|---|
+  | started | 456.12 |
+  | projection-optimal | 456.92 |
+  | hindsight-optimal | 530.54 |
+  | regret from **our deviations** | **+0.80 (1%)** |
+  | regret from **projection error** | **+73.62 (99%)** |
+
+  **Four weeks of start/sit work has cost 0.80 points — 0.20/wk.** We follow the
+  projection near-perfectly already; 99% of the 74.42 regret is the projection being
+  wrong, which we cannot fix. The pooled positional leak (WR 46.90, QB 23.52, K 12.00,
+  DEF 0.00, TE 0.00) therefore does **not** mean we benched the right WR — it means the
+  projection could not say which WR would hit. TE leaking zero is the same artifact
+  inverted: 1-deep means there was never a choice to get wrong, so the "TE hole" has cost
+  nothing to date.
+
+  For scale, week 4: lineup error **27.10**, roster error **66.76**. **Leverage is roster
+  quality and the two free streaming slots, not weekly lineup optimization.** A regret
+  number is still worth logging — it measures the projection, not us.
+
+- **The wire has two phases per week, and priority only matters in the first.** Yahoo
+  dumps every unowned player onto waivers after Sunday games; they clear Wednesday.
+  Week 4 WR export (Sat 10-04): **FA 360 / owned 54 / W 51**. Week 5 WR export
+  (Mon 10-06): **FA 0 / owned 53 / W 412**. Before the clear, priority gates everything;
+  after it, the pool is first-come and priority is irrelevant. **A Thursday/Friday second
+  look is free and spends no priority** — take it. Also: any availability filter over an
+  export must treat `FA` *and* `W (...)` as available. A `^W \(` -only filter understated
+  the week 4 pool by 360 WRs.
+
 - **A replacement level is only as good as the pool it is taken from.** Median ppg over a
   280-row Yahoo free-agent export is ~1.5-2.3 for RB/WR/TE because the pool is mostly
   inactive bodies -> every waiver body shows a large fake VOR. Rank the wire on
