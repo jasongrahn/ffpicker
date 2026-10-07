@@ -194,6 +194,46 @@ drop Sutton or Odunze, whichever has the lower snap share at that point.
 
 ---
 
+## 6a. Method tests live this week. Score these in the retro.
+
+Player kill conditions are in §1. These are the **method** trials — what a result teaches
+beyond this week's roster.
+
+| # | method under test | bar | week |
+|---|---|---|---|
+| 1 | DST streaming by **opponent** implied total | Ravens beat Bengals by >3 → strike | 3rd scored. Not fired wks 3, 4 |
+| 2 | **Snap share and target trend outrank ppg** for naming a drop | Raymond outscores Sutton across wks 5-7 → the new rule is wrong | **1 of 3. New, out-of-sample** |
+| 3 | D9, carried: Boston < Sutton wks 4-8 | — | 2 of 5. wk4 was 10.90 vs 0.90 |
+
+Test 2 is the only one where a rule changed *because* of a measurement and is now exposed
+to new data. It matters more than the other two.
+
+### **The K rule change is NOT testable this week. Do not score it as a pass.**
+
+Week 4's retro re-denominated the kicker hold bar in **own implied total** instead of
+projected points — correct, and worth 18.00 forgone points across wks 3-4. Testing it
+needs two live kickers to choose between:
+
+- **wk5: Butker on KC bye** → forced to Bates
+- **wk6: Bates on DET bye** → forced to Butker
+
+**First real test is week 7.** A forced start is not evidence the rule works. Recorded
+here so neither retro can read it as a passing week.
+
+### Untested and testable now: the game-script multipliers.
+
+Every projection in §2 carries one — Henry 0.945x, Javonte 1.078x, Stafford 1.028x — and
+**no retro has ever scored whether they beat the raw projection.** The multipliers were
+measured on 2024-25; whether they transfer to 2026 is unmeasured.
+
+Four weeks of `_myteam.csv` / `_opponent.csv` hold both lineups at freeze-time
+projections, so this is backtestable against existing files, not something to wait for.
+Compare MAE adjusted vs unadjusted against Yahoo actuals, both rosters, wks 1-4. **n = 4
+weeks cannot validate them** — it can catch a sign error or a bucket mis-assignment, and
+that is the whole claim.
+
+---
+
 ## 7. Explicitly NOT being learned this week
 
 - Whether the DST streaming method works. n too small; bar deliberately loose.
