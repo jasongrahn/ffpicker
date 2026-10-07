@@ -396,3 +396,48 @@ Yahoo dumps every unowned player onto waivers after Sunday games; they clear
 Wednesday. **Before the clear, priority gates everything. After it, the pool
 is first-come and priority is irrelevant.** A Thursday/Friday second look is
 free and does not spend priority.
+
+## 7. Game-script remeasurement, 2026-10-07
+
+Trigger: user challenged the Gordon II FLEX call — "miami ... going up against the
+bengals who are one of the top defensive picks for the week, are we SURE". Challenge was
+correct. MIA sits at -7.0, which falls in a bucket the published table never measured
+(it stopped at dog 3-7). The original recommendation had no measured basis.
+
+Rebuilt on 2024-25 as a slope instead of buckets (`dev/weekly/mult_measure.R`):
+
+| pos | n | slope/pt | p | 7-pt dog |
+|---|---|---|---|---|
+| RB | 779 | +0.00799 | 0.0109 | 0.944 |
+| WR | 1132 | -0.00129 | 0.679 | flat |
+| QB | 398 | +0.00562 | 0.102 | flat |
+
+RB x WR interaction -0.00928, p = 0.0406. Only 1 of 22 bucket cells was significant
+(RB fav3-7 1.081, CI [1.013, 1.148]); dog7-10 vs dog3-7 was indistinguishable
+(diff -0.039, p = 0.689) — buckets cannot resolve this, the slope can.
+
+**Second standing rule reversed:** inside the ~5% band the tiebreaker is the SPREAD, not
+usage. Usage is already inside the Yahoo projection; the spread demonstrably is not
+(Pearson +0.129, n=39). Using usage double-counts.
+
+### Week 5 lineup, FINAL (set 2026-10-07)
+
+QB Stafford | RB Javonte Williams, Derrick Henry | WR Davante Adams, Carnell Tate
+TE Hockenson | FLEX Denzel Boston | K Bates | DEF Jaguars
+
+Raw 104.67, spread-adjusted 105.28. Pre-swap lineup was 103.84 / 104.45.
+Sutton benched (WR flat, so his +3.5 buys nothing). Gordon II benched (RB -5.6%).
+
+**Kill condition:** if Gordon II out-scores Boston AND Tate this week, that is one
+player-week and changes nothing — the rule was measured on n=779, not on wk5. Only a
+sign flip in a rerun of `mult_measure.R` on 2026 data at season end kills it.
+
+### Roster move
+
+ADD Tyler Higbee (LAR TE, bye 11) into the one open spot. No drop. Closes the week-6 TE
+hole created when Ferguson was dropped instead of Butker. Higbee 8.5 tgt/g and 12.7
+half-PPR/g over wks 3-4 vs Hockenson's 8.5 / 10.2 — he is not a backup, he is a second
+starter whose bye complements Hockenson's.
+
+Butker HELD, not dropped. KC's bye is week 5, so he covers week 6 when Bates (DET) is
+out. The earlier kill condition about week-6 free kickers is moot.

@@ -281,11 +281,34 @@ Target share and carry share predict themselves. Touchdown rate does not. Any mo
 fails to aggressively regress efficiency is fooling itself, and most public projections
 do. This principle governs feature selection in Layer 2 and shrinkage in Layer 3.
 
-### Game script. Measured 2026-09-23, use it instead of guessing.
+### Game script. Measured 2026-09-23, REMEASURED AS A SLOPE 2026-10-07. Use the slope.
 
 Vegas spread moves fantasy points **by position, and only for some positions.** Measured
 on 2024-25 starter-calibre player-weeks, scored as points **relative to each player's own
-season average** so player quality cancels out. Harness: `dev/weekly/` scratch, rerunnable.
+season average** so player quality cancels out. Harness `dev/weekly/mult_measure.R`,
+rerunnable.
+
+**Use the slope, not the buckets.** The bucket table below was the 09-23 instrument and
+is kept for reference, but buckets run n=24-40 per cell and **only 1 of 22 cells is
+significantly different from 1.0** (RB fav3-7, 1.081, CI [1.013, 1.148]). Regressing
+relative points on favouredness pools every bucket and is far better powered:
+
+| position | n | slope / pt of spread | p | implied at 7-pt dog |
+|---|---|---|---|---|
+| **RB** | 779 | **+0.00799** | **0.0109** | **0.944** |
+| WR | 1132 | -0.00129 | 0.679 | ~1.00, flat |
+| QB | 398 | +0.00562 | 0.102 | ~1.00, flat |
+
+RB-vs-WR interaction coefficient **-0.00928, p = 0.0406** -> the two positions genuinely
+respond differently. This is the strongest game-script evidence in the log.
+
+Multiplier for an RB = `1 + 0.00799 * favouredness`. WR and QB get **1.0**; do not apply
+a WR multiplier at all, in either direction. The published WR fav3-7 1.059 did not
+survive the rebuild (came back 1.006) and was noise.
+
+The slope is linear, so it **extends past the measured buckets** — this is why it
+replaced them. The old table stopped at dog 3-7 and had nothing to say about a 7-point
+dog, which is exactly the case that came up in wk5 (Gordon II, MIA -7.0).
 
 | position | dog 3-7 | fav 0-3 | **fav 3-7** | fav 10+ |
 |---|---|---|---|---|
@@ -326,10 +349,21 @@ source counted twice".
 
 What the backtest *did* establish: **decision impact is 2.3%** — 5 of 220 FLEX-eligible
 pairs reordered across wks 1-4. The adjustment only changes a choice when two players sit
-within ~5% of each other, so **inside that band break the tie on usage, not on the
-multiplier.** Keep applying it; stop treating it as evidence at the margin. Same shape as
-the QB cliff above: a half-point line move swinging a number 9.5% is not measuring
-anything.
+within ~5% of each other. Same shape as the QB cliff above: a half-point line move
+swinging a number 9.5% is not measuring anything.
+
+**REVERSED 2026-10-07: inside that band, break the tie on the SPREAD, not on usage.**
+The old rule said usage. That double-counts. Yahoo's projection already prices usage —
+that is most of what a projection *is*, and it is why a back with 15.5 opportunities and
+a receiver with 10.5 can project 9.80 vs 9.77. Reaching for usage again to break that tie
+counts the same input twice. The spread is the one input the backtest showed Yahoo does
+**not** price (Pearson +0.129, n=39), so it is the only legitimate tiebreaker available.
+Applies to RBs only — WR slope is flat, so a WR tie stays a tie and the projection wins.
+
+Worked wk5 case: Gordon II (RB, MIA -7.0, proj 9.80) vs Tate (WR, TEN -7.5, proj 9.77).
+Raw gap 0.3%. RB penalty 5.6% -> 9.25 vs 9.77. Started Tate. **The user caught this**,
+on the grounds that Gordon II was facing a top defence; the measurement agreed with the
+instinct and also showed the deeper-dog WR was unaffected.
 
 ### Streaming K and DST. The only near-free weekly lever.
 
