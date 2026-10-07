@@ -220,17 +220,65 @@ needs two live kickers to choose between:
 **First real test is week 7.** A forced start is not evidence the rule works. Recorded
 here so neither retro can read it as a passing week.
 
-### Untested and testable now: the game-script multipliers.
+### Game-script multipliers: BACKTESTED 2026-10-06. Inconclusive by construction.
 
-Every projection in §2 carries one — Henry 0.945x, Javonte 1.078x, Stafford 1.028x — and
-**no retro has ever scored whether they beat the raw projection.** The multipliers were
-measured on 2024-25; whether they transfer to 2026 is unmeasured.
+Ran it. Harness `dev/weekly/mult_backtest.R`. All four frozen `_myteam.csv` /
+`_opponent.csv` files, wks 1-4, both rosters, n = **45** player-weeks the multipliers
+touch (QB/RB/WR in a listed bucket). Spread matched 85/85.
 
-Four weeks of `_myteam.csv` / `_opponent.csv` hold both lineups at freeze-time
-projections, so this is backtestable against existing files, not something to wait for.
-Compare MAE adjusted vs unadjusted against Yahoo actuals, both rosters, wks 1-4. **n = 4
-weeks cannot validate them** — it can catch a sign error or a bucket mis-assignment, and
-that is the whole claim.
+| | raw | adjusted | delta |
+|---|---|---|---|
+| MAE | 6.444 | 6.595 | **+0.151** |
+| RMSE | 8.449 | 8.483 | +0.034 |
+| adjusted closer | — | — | 21 of 44 |
+
+95% bootstrap CI on the MAE delta **[−0.084, +0.397]** — straddles zero. Paired t-test
+**p = 0.226**. Pre-registered claim was that n=4 weeks could catch a **sign error or a
+bucket mis-assignment, nothing more**. It found neither: bucket-level agreement between
+multiplier direction and realised direction is 3 of 7 cells with n>=3, scattered across
+positions rather than uniformly flipped. That is a coin flip, i.e. no detectable signal —
+not evidence the table is wrong.
+
+**This question cannot be answered from our logs, ever.** A multiplier moves a projection
+~5%, about **0.60 pts on a typical 12-pt projection**, against per-player-week error of
+**6.44**. Signal:noise ~1:10. Narrowing the CI to ±0.05 needs ≈ **1,000 player-weeks**, or
+25+ weeks of both rosters. The table was measured on 2024-25 league-wide data with
+thousands of player-weeks — the right instrument. **Retire "do the multipliers work" as a
+retro question.** Same failure shape as `single-seed-bars-underpowered`.
+
+Double-counting checked and **not found**: if Yahoo's projection already priced the
+spread, applying ours on top would be #33's "one source counted twice". Pearson
+(favouredness, Yahoo proj / own ppg) = **+0.129**, n=39 with a ppg>=5 floor — not clearly
+positive. No evidence Yahoo prices game script into these numbers.
+
+### What the backtest DID establish: decision impact is 2.3%.
+
+The useful question is not accuracy, it is whether the adjustment ever changes a choice.
+Across every FLEX-eligible pair on our roster, wks 1-4: **5 of 220 pairs reordered
+(2.3%)**.
+
+```
+wk1  Odunze   9.51 -> 10.07  vs  Gainwell 10.44 -> 9.87
+wk2  Sutton   8.98 ->  8.40  vs  Odunze    8.64 -> 9.15
+wk2  Gainwell 8.01            vs  Marks     7.44 -> 8.02
+wk4  Ferguson 6.87            vs  Raymond   6.49 -> 6.87
+wk4  Robinson 7.85            vs  Marks     7.78 -> 8.39
+```
+
+A multiplier only changes a decision when two players sit within ~5% of each other.
+**97.7% of the time it moves a number we report without moving a choice we make.**
+
+**Rule adopted, wk5 on:** when a start/sit gap is under ~5%, the multiplier is **not** the
+tiebreaker — it is noise at the same scale as the gap. Break the tie on usage. Same shape
+as the Stafford cliff in §2: a half-point line move swinging his number 9.5% is not
+measuring anything.
+
+### Data defect found and repaired during the backtest.
+
+`data/weekly/2026_week04_opponent.csv` carried a **stray empty 11th column**, so `actual`
+sat in field 12 and any name-based reader returned NA for every opponent actual. Removed.
+Starters now sum to **98.58**, matching the Week 4 retro exactly — the retro number was
+right, the file was wrong. Backup taken before the edit.
 
 ---
 

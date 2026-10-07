@@ -307,6 +307,30 @@ capped at -11.5" argument that was about to become advice.
 
 Also: high game total helps RBs (47+ -> 1.061 vs 0.939 at 41-44).
 
+**Under a ~5% gap the multiplier is NOT the tiebreaker. Backtested 2026-10-06.**
+Harness `dev/weekly/mult_backtest.R`, rerunnable, all four frozen `_myteam.csv` /
+`_opponent.csv` files, both rosters, n=45 player-weeks.
+
+Accuracy verdict is **inconclusive and always will be**: MAE 6.444 raw -> 6.595 adjusted,
+delta **+0.151**, 95% bootstrap CI **[-0.084, +0.397]**, p=0.226. No sign error, no bucket
+mis-assignment — the only things n=4 weeks could have caught. A multiplier moves a
+projection ~5%, ~0.60 pts on a typical 12-pt projection, against per-player-week error of
+**6.44**. Signal:noise ~1:10; resolving it needs ~1,000 player-weeks. **The table was
+measured on 2024-25 league-wide data — that is the right instrument. Our weekly logs are
+not. Do not score "do the multipliers work" in a retro.** See
+`single-seed-bars-underpowered`.
+
+Double-counting was checked and not found: Pearson(favouredness, Yahoo proj / own ppg) =
++0.129, n=39. Yahoo does not visibly price the spread, so applying ours is not #33's "one
+source counted twice".
+
+What the backtest *did* establish: **decision impact is 2.3%** — 5 of 220 FLEX-eligible
+pairs reordered across wks 1-4. The adjustment only changes a choice when two players sit
+within ~5% of each other, so **inside that band break the tie on usage, not on the
+multiplier.** Keep applying it; stop treating it as evidence at the margin. Same shape as
+the QB cliff above: a half-point line move swinging a number 9.5% is not measuring
+anything.
+
 ### Streaming K and DST. The only near-free weekly lever.
 
 One roster spot each, no opportunity cost, and both slots are forced — so a matchup swap
