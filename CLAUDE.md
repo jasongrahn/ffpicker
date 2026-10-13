@@ -352,18 +352,53 @@ pairs reordered across wks 1-4. The adjustment only changes a choice when two pl
 within ~5% of each other. Same shape as the QB cliff above: a half-point line move
 swinging a number 9.5% is not measuring anything.
 
-**REVERSED 2026-10-07: inside that band, break the tie on the SPREAD, not on usage.**
-The old rule said usage. That double-counts. Yahoo's projection already prices usage —
-that is most of what a projection *is*, and it is why a back with 15.5 opportunities and
-a receiver with 10.5 can project 9.80 vs 9.77. Reaching for usage again to break that tie
-counts the same input twice. The spread is the one input the backtest showed Yahoo does
-**not** price (Pearson +0.129, n=39), so it is the only legitimate tiebreaker available.
-Applies to RBs only — WR slope is flat, so a WR tie stays a tie and the projection wins.
+**RULE RETIRED 2026-10-13. Inside that band NOTHING arbitrates — start the higher raw
+Yahoo projection and stop.** Do not break the tie on the spread, and do not revert to
+usage either. Harness `dev/weekly/spread_tiebreak_leaguewide.R`, rerunnable.
 
-Worked wk5 case: Gordon II (RB, MIA -7.0, proj 9.80) vs Tate (WR, TEN -7.5, proj 9.77).
-Raw gap 0.3%. RB penalty 5.6% -> 9.25 vs 9.77. Started Tate. **The user caught this**,
-on the grounds that Gordon II was facing a top defence; the measurement agreed with the
-instinct and also showed the deeper-dog WR was unaffected.
+The spread tiebreak was adopted 10-07 on reasoning, never on a decision test. It got one.
+All **10 rosters** rebuilt from the `Roster Status` column of the week-4/5 position
+*actual* exports, every within-5% RB/WR/TE pair scored raw ordering vs spread-adjusted
+ordering against actuals. Only **discordant** pairs — where the rule changes the pick —
+carry information.
+
+| scope | pairs within 5% | discordant | spread pick right | 95% CI | p |
+|---|---|---|---|---|---|
+| 10 rosters, wks 4-5 | 75 | 17 (22.7%) | 6 (35.3%) | [0.142, 0.617] | 0.33 |
+| pool-wide, wks 4-5 | 1,497 | 240 (16.0%) | 114 (47.5%) | [0.410, 0.540] | 0.48 |
+| pool-wide, excl. actual == 0 | — | **215** | **105 (48.8%)** | **[0.420, 0.557]** | 0.79 |
+
+Points: **-0.488/decision**, CI [-1.77, +0.80]. No favouredness bucket escapes chance
+(dog7+ 43.6% n=55 … fav7+ 44.4% n=27). The CI **excludes accuracy above 55.7%**. 16%
+discordance replicates the 2.3%-of-all-pairs figure above.
+
+**The double-count theory is dead too, in the other direction.** Pearson(favouredness,
+Yahoo proj / own season ppg) re-run at **n = 190** (was 39): **r = -0.036, p = 0.62, CI
+[-0.177, +0.107]** — RB -0.094, WR +0.018, TE -0.080. The 10-07 **+0.129 at n=39 was
+noise**. Yahoo genuinely does not price the spread, *and* adding it still loses. So the
+10-07 premise was right and its conclusion was still wrong — orthogonal information is
+not automatically usable information.
+
+Cause is arithmetic, not a defect. 0.00799 x 7 = **5.6%, ~0.6 pts** on a 10-pt
+projection, against ~8-9 pts of variance between two actuals inside a 5% band. **A 0.6-pt
+edge cannot arbitrate a 9-pt coin flip at the pair level**, however real it is in the mean.
+
+**The slope itself survives** (RB +0.00799/pt, p = 0.0109, n = 779). Keep using it to
+describe and report an RB's expected week. Note *why* it does not transfer to a tiebreak:
+the slope was measured on points **relative to a player's own season average**, and season
+ppg is our worst non-trivial baseline (MAE 7.32 vs Yahoo's 4.29). A multiplier calibrated
+against a weak baseline does not transfer onto a strong one. That mismatch is the bug.
+
+Also unchanged: the `mult_measure.R` 2026 rerun at season end is still the slope's kill
+condition. The RB coefficient in this check came back -0.0060 at p = 0.48 — **noise, not a
+sign flip.** Do not read it as one.
+
+Worked wk5 case, now closed: Gordon II (RB, MIA -7.0, proj 9.80 -> 9.25 adj) vs Boston
+(WR, proj 9.69). Started Boston on the spread tiebreak. Gordon 14.80, Boston 12.10,
+**-2.70**. The user caught the original Gordon/Tate framing on the grounds he faced a top
+defence, which is what triggered the slope rebuild — good instinct, and the slope is real;
+it just cannot pick between two players. One player-week is not what killed the rule.
+**The 215-pair test is.**
 
 ### Streaming K and DST. The only near-free weekly lever.
 
@@ -468,6 +503,24 @@ so passing on a positional run costs less. Recommendations must be slot-aware.
 - **Yahoo's position pages and matchup page disagree at the second decimal.** Same player,
   same week, ~0.02 apart. Pick one surface deliberately and say which; the **matchup page**
   is what a lineup decision is actually made against.
+- **No `rosterchanges_*` file is a roster snapshot.** `rosterchanges_league_team` carries
+  fantasy team names in `Roster Status` and plausible counts, yet disagreed with the frozen
+  week-5 lineup on **3 of 15 slots** while listing same-day waiver adds as present — it is
+  mid-transaction and internally inconsistent, not merely stale. Second debt on this family
+  after the IR one. **Rosters come from the six position exports** (`_qb_`, `_rb_`, `_wr_`,
+  `_te_`, `_k_`, `_def_`) via `dev/weekly/read_yahoo_week.R`. The `*_actual_*` position
+  exports carry owners in `Roster Status` too, which reconstructs **all ten** rosters
+  cleanly — that is how the week-5 league-wide tests were run.
+- **DEF team naming flips between vintages inside the same week.** The projection export
+  names teams by **city**, the `*_actual_*` export by **nickname**: `Jacksonville|Jax|6.90`
+  becomes `Jaguars|Jax|2.00`. Worse, the projection file emits `New York` **twice** —
+  NYJ and NYG — so the name is not even unique within one file. This is the cause behind
+  the standing "DEF never joins on name" rule. Join on the `Team` abbrev and
+  `stopifnot()` the map.
+- **The export has no started/bench flag.** Opponent starters are therefore not
+  recoverable after the fact, only bounded by enumerating legal lineups (week 5: 47 of 84
+  lose). This is why loop step 2 — freeze **both** lineups pre-kickoff — is load-bearing
+  rather than bookkeeping. Skipping it cost the week-5 opponent total permanently.
 - **Log the opponent's lineup pre-kickoff**, not just ours. It makes projection error
   measurable on both sides against the same model, and it exposes head-to-head structure
   invisible from one roster — e.g. our RB and their QB being teammates damps the margin.

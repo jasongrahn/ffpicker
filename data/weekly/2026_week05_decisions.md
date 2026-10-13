@@ -294,9 +294,6 @@ right, the file was wrong. Backup taken before the edit.
 ## Retro
 
 *Append after Monday 10-13. Never edit above this line.*
-
----
-
 ## §6b Method-test results, run 2026-10-06
 
 Three tests, all complete. Harnesses: `dev/weekly/dst_test.R`,
@@ -441,3 +438,189 @@ starter whose bye complements Hockenson's.
 
 Butker HELD, not dropped. KC's bye is week 5, so he covers week 6 when Bates (DET) is
 out. The earlier kill condition about week-6 free kickers is moot.
+
+---
+
+# RETRO — appended 2026-10-13 Tue. Nothing above the `## Retro` line touched.
+
+**W, barely. Record 3-2.** Us **107.02**.
+
+Vintages, stated per #38 §3. Actuals `docs/uploads/week_5_data/*_actual_2026-10-13.csv`.
+Freeze proj `*_2026-10-07.csv` (DEF city-named, see R5). Gameday proj `*_2026-10-11.csv`.
+Rosters rebuilt from `Roster Status` in the position **actual** exports — not from any
+`rosterchanges_*` file. Lineup CSVs written this session: `2026_week05_myteam.csv`,
+`2026_week05_opponent.csv` (closes #38 §2a).
+
+## R0. Scoreboard
+
+| slot | started | proj | actual |
+|---|---|---|---|
+| QB | Stafford | 19.69 | **27.32** |
+| RB1 | Henry | 14.62 | 20.50 |
+| RB2 | Javonte | 14.99 | 13.20 |
+| WR1 | Adams | 13.13 | 19.60 |
+| WR2 | Tate | 9.77 | **1.10** |
+| TE | Hockenson | 7.18 | **1.20** |
+| FLEX | Boston | 9.69 | 12.10 |
+| K | Bates | 8.70 | 10.00 |
+| DEF | Jaguars | 6.90 | 2.00 |
+| | | **104.67** | **107.02** |
+
+Bench: Gordon II **14.80**, Higbee **10.80**, Sutton 8.80, Odunze 3.50. Mahomes +
+Butker KC bye. Etienne IR 0.00.
+
+```
+started               107.02
+projection-optimal    109.72   -> regret from OUR deviation    +2.70  (12%)
+hindsight-optimal     130.32   -> regret from projection error +20.60 (88%)
+```
+
+Regret **23.30**. Split holds the #37 capstone shape: lineup layer near ceiling,
+projection carries the leak. Cumulative deviation regret **3.50 over 5 wks (0.70/wk)**,
+up from 0.80 over 4 — the whole increase is R2 below.
+
+## R0b. Opponent total NOT recoverable. Range only.
+
+Yahoo export has **no started/bench flag**. Max's TD Bombers roster enumerated: 84
+distinct legal lineups after dropping D. Smith (10-11 proj 0.00, ruled out) and Walker
+(KC bye). **47 of 84 lose to 107.02.** Closest plausible loss:
+
+```
+Prescott, Taylor+Harvey, Washington+Burden, Likely TE, Deebo FLEX, Fairbairn, Steelers
+  = 105.74 actual (proj 102.43)  -> we win by 1.28
+```
+
+Their **projection-optimal** lineup scores only **95.64** — it benches Likely 26.90 for
+Kraft 9.55. They beat their own projection and still lost. `opponent.csv` ships
+`slot = UNK` for all 15 rows. Do not back-fill it by guess. Also: week-5 `Roster Status`
+is post-week ownership, so a late add/drop could mis-assign a fringe row.
+
+## R1. Kill conditions scored. Seven. One fired, and it was pre-declared inert.
+
+| # | condition | result | verdict |
+|---|---|---|---|
+| W1 | Bengals opp implied > 21.0 -> stream off | **MOOT.** Claim failed, never rostered | not scored |
+| W2 | Gordon II < 10 opp in two consecutive wks | **18 opp.** wk3-5 = 20/11/18 | not fired. Role real |
+| W3 | Tate < 6 tgt in two consecutive wks | **5 tgt.** One week | **ARMED.** < 6 in wk6 -> he is the drop |
+| D9 | Boston < Sutton, wks 4-8 | Boston **12.10** > Sutton 8.80 | 3 of 5. no strike |
+| T1 | Ravens beat Bengals by > 3 | Bengals 9.00, Ravens 6.00 | no strike. Both unrostered anyway |
+| T2 | Raymond outscores Sutton wks 5-7 -> new drop rule wrong | Sutton **8.80**, Raymond **1.90** | 1 of 3. Rule survives |
+| GS | Gordon II > Boston AND > Tate | **FIRED.** 14.80 > 12.10 > 1.10 | **inert by pre-registration.** See R2 |
+| §4 | Hockenson clears 8 opp -> claim wk6 | **1 opp.** Already claimed 10-07 | caution was right, overridden |
+
+K rule: **retired-untested**, not passed. Butker on KC bye, forced to Bates. First real
+test wk7, per §6a.
+
+## R2. THE SPREAD TIEBREAK IS DEAD. Killed by a powered test, not by this week.
+
+Harness **`dev/weekly/spread_tiebreak_leaguewide.R`**, rerunnable.
+
+Prior evidence = **5** reordered pairs, our roster, wks 1-4. Rebuilt all **10 rosters**
+from the actual exports (191 rostered RB/WR/TE player-weeks, wks 4-5), paired every
+within-5% RB/WR/TE combination, scored raw ordering vs spread-adjusted ordering against
+actuals. Only **discordant** pairs — where the rule changes the pick — carry information.
+
+| scope | pairs within 5% | discordant | spread pick correct | 95% CI | p |
+|---|---|---|---|---|---|
+| 10 rosters, wks 4-5 | 75 | 17 (22.7%) | 6 (35.3%) | [0.142, 0.617] | 0.33 |
+| pool-wide, wks 4-5 | 1,497 | 240 (16.0%) | 114 (47.5%) | [0.410, 0.540] | 0.48 |
+| pool-wide, excl. actual == 0 | — | **215** | **105 (48.8%)** | **[0.420, 0.557]** | 0.79 |
+
+Points: **-0.488 per decision**, CI [-1.77, +0.80], p = 0.45. No bucket escapes chance —
+dog7+ 43.6% (n=55), dog3-7 47.9% (73), dog0-3 56.2% (16), fav0-3 36.4% (11), fav3-7 51.7%
+(58), fav7+ 44.4% (27). The 16% discordance rate replicates the 2.3%-of-all-pairs figure
+from the 10-06 backtest.
+
+**Not double-counting.** #33's "one source counted twice" re-run at scale:
+Pearson(favouredness, Yahoo proj / own season ppg), **n = 190** (was 39) -> **r = -0.036,
+p = 0.62, CI [-0.177, +0.107]**; RB -0.094 (58), WR +0.018 (93), TE -0.080 (39). The
+10-06 **+0.129 at n=39 was noise**. Yahoo really does not price the spread. The 10-07
+premise holds and the rule still fails.
+
+Cause is arithmetic. 0.00799 x 7 = **5.6%, ~0.6 pts** on a 10-pt projection. Inside a 5%
+band the two actuals differ by ~8-9 pts of variance. **A 0.6-pt edge cannot arbitrate a
+9-pt coin flip at the pair level**, however real it is in the mean.
+
+**KILLED:** standing rule "inside ~5%, break the tie on the SPREAD" (adopted 10-07 on
+reasoning, never on a decision test). CI excludes accuracy above **55.7%**.
+
+**NOT killed:** the slope itself (RB +0.00799/pt, p = 0.0109, n = 779, 2024-25). Note the
+slope was measured on points **relative to own season average** — and season ppg is our
+*worst* non-trivial baseline (MAE 7.32 vs Yahoo 4.29). A multiplier calibrated against a
+weak baseline does not transfer onto a strong one. That mismatch is the bug, not the slope.
+
+**NOT killed:** §7's pre-registered condition (sign flip from `mult_measure.R` on 2026
+relative-to-own-average data, season end). RB coef here came back -0.0060 at p = 0.48 —
+noise. **Do not read it as a flip.**
+
+Our own wk5 case (Boston over Gordon II, **-2.70**) is now 1 of 240. Consistent with the
+null, not evidence for it. The GS kill condition fired exactly as pre-declared and taught
+nothing by itself — the league-wide test is what taught.
+
+**Replacement rule: inside a ~5% gap nothing arbitrates. Start the higher raw Yahoo
+projection and stop.**
+
+## R3. DST rule HELD league-wide. Our pick still scored 2.00.
+
+Week 5, all teams with a line, **n = 30**. Opponent implied total vs DST pts:
+**r = -0.334, p = 0.071**, Spearman **-0.346**. Same sign and magnitude as the 4-wk
+validation (-0.275). Eight lowest opp-implied averaged **9.00** vs league mean 6.47 ->
+**+2.53 edge**.
+
+Our Jaguars were the rule's **#2** (opp implied 17.00) and returned **2.00**. Rule's #1
+(HOU, 15.50) returned 15. Textbook decision-right / outcome-bad, and exactly the 0.39-sd
+behaviour #37 predicted. **Do not touch the rule.** Line drifted from the 17.75 tie quoted
+at freeze to 17.00 — still top-2, so the pick was correct at freeze and at kickoff.
+
+## R4. TE cost 9.60 and it was NOT a decision error.
+
+Hockenson proj 7.18 vs Higbee 4.70. Projection said Hockenson; we followed it; Higbee
+went 10.80 to 1.20. Hockenson's wk4 13-opportunity spike collapsed to **1**.
+
+Two separate verdicts, do not collapse them:
+- the **claim** was shaky — §4 flagged the n=1 spike as the risk and we claimed anyway;
+- the **start** was correct given the projection, per the lineup-layer rule.
+
+## R5. Data finding — DEF naming flips between vintages inside one week.
+
+`yahoo_week5_def_2026-10-07.csv` names teams by **city**; `..._actual_2026-10-13.csv`
+names them by **nickname**. Same week, different key:
+
+```
+10-07 proj   : Jacksonville | Jax | 6.90      Cincinnati | Cin | 7.53
+10-13 actual : Jaguars      | Jax | 2.00      Bengals    | Cin | 9.00
+10-07 proj   : New York | NYJ | 7.31   and   New York | NYG | 5.04   <- same string, two teams
+```
+
+This is #37 §6's DEF trap with a cause, and live proof of the `CLAUDE.md` rule: **DEF
+joins on the `Team` abbrev, never on name.** `stopifnot()` the map.
+
+Confirmed again: `rosterchanges_league_team` disagrees with the position exports. Rosters
+come from the position exports. Both rosters rebuilt cleanly that way.
+
+## R6. Decision wrong vs outcome bad — the ledger
+
+| | decision | outcome |
+|---|---|---|
+| Boston over Gordon II (spread tiebreak) | **WRONG** — rule now dead at n=215 | bad, -2.70 |
+| Hockenson over Higbee | right (followed projection) | bad, -9.60 |
+| Tate started over Sutton | right (9.77 vs 8.94) | bad, -7.70 |
+| Jaguars DEF | right (rule's #2) | bad, -4.90 vs HOU |
+| Gordon II claim | right (18 opp) | good |
+| Raymond dropped, Sutton held | right | good, +6.90 |
+| Hockenson claim | **shaky** (n=1 spike, flagged) | bad |
+
+Caveat on T2: Sutton won on points **while his own usage fell to 3 opportunities**, his
+season low, vs Raymond's 5. The rule won on the scoreboard while its own underlying signal
+weakened. 1 of 3 weeks. **Do not bank it.**
+
+## R7. Still not learned
+
+1. Exact margin of the win. No started/bench flag exists in the export. Structural.
+2. DST rule at week granularity. p = 0.071, n = 30, 7.6% R2. Agrees; cannot confirm alone.
+3. Whether the K hold rule works. Bye-forced both wks 5 and 6. First test **wk7**.
+4. Multiplier *accuracy*. Retired as a retro question, 10-06. Unchanged.
+5. Any model fit. **n = 5. Fit nothing.**
+
+
+---

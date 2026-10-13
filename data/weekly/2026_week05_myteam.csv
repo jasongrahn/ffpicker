@@ -1,0 +1,17 @@
+season,week,player,pos,nfl_team,slot,started,proj,proj_gameday,proj_gameday_src,actual
+2026,5,M. Stafford,QB,LAR,QB,TRUE,19.69,19.71,positions_2026-10-11,27.32
+2026,5,J. Williams,RB,Dal,RB,TRUE,14.99,15.41,positions_2026-10-11,13.20
+2026,5,D. Henry,RB,Bal,RB,TRUE,14.62,14.78,positions_2026-10-11,20.50
+2026,5,D. Adams,WR,LAR,WR,TRUE,13.13,13.01,positions_2026-10-11,19.60
+2026,5,C. Tate,WR,Ten,WR,TRUE,9.77,9.81,positions_2026-10-11,1.10
+2026,5,T. Hockenson,TE,Min,TE,TRUE,7.18,7.26,positions_2026-10-11,1.20
+2026,5,D. Boston,WR,Cle,FLEX,TRUE,9.69,8.99,positions_2026-10-11,12.10
+2026,5,J. Bates,K,Det,K,TRUE,8.70,8.76,positions_2026-10-11,10.00
+2026,5,Jaguars,DEF,Jax,DEF,TRUE,6.90,6.93,positions_2026-10-11,2.00
+2026,5,O. Gordon II,RB,Mia,BN,FALSE,9.80,9.70,positions_2026-10-11,14.80
+2026,5,T. Higbee,TE,LAR,BN,FALSE,4.70,5.13,positions_2026-10-11,10.80
+2026,5,C. Sutton,WR,Den,BN,FALSE,8.94,8.48,positions_2026-10-11,8.80
+2026,5,R. Odunze,WR,Chi,BN,FALSE,8.59,8.87,positions_2026-10-11,3.50
+2026,5,P. Mahomes,QB,KC,BN,FALSE,0.00,0.00,positions_2026-10-11,0.00
+2026,5,H. Butker,K,KC,BN,FALSE,0.00,0.00,positions_2026-10-11,0.00
+2026,5,T. Etienne,RB,NO,IR,FALSE,0.00,0.00,positions_2026-10-11,0.00

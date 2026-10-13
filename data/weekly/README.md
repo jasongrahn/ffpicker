@@ -44,6 +44,7 @@ ones where being right is informative.
 | 2 | **W** vs Sunday Kevin | 152.58 | **155.08** | **2.50** | 112.08 |
 | 3 | **W** vs Maybe Mitchell | 108.74 | **133.80** | **25.06** | 96.70 |
 | 4 | L vs Jason's Jazzy Team | 93.00 | **120.10** | **27.10** | 98.58 |
+| 5 | **W** vs Max's TD Bombers | 107.02 | **130.32** | **23.30** | 100–106.4 (est) |
 
 ## Week 1 notes
 
@@ -98,3 +99,32 @@ separately from Week 4 on.
 `score_player_week()` reproduced all 9 Yahoo starter scores exactly. Validation **35/35**
 across weeks 1-3. DST still hand-scored from `config/scoring.json`.
 
+## Week 5 notes
+
+**Won, barely. Regret 23.30, and 88% of it is projection error.**
+
+```
+started               107.02
+projection-optimal    109.72   -> regret from OUR deviation    +2.70  (12%)
+hindsight-optimal     130.32   -> regret from projection error +20.60 (88%)
+```
+
+Cumulative deviation regret **3.50 over 5 weeks (0.70/wk)**, up from 0.80 over 4. The
+entire increase is one deviation: Boston over Gordon II on the spread tiebreak.
+
+**`opp` is a range, not a number.** Yahoo's export carries no started/bench flag and no
+opponent CSV was frozen pre-kickoff. Max's TD Bombers had 84 legal lineups (D. Smith ruled
+out, Walker on bye); **47 lose to 107.02**. Their projection-optimal lineup scores only
+95.64 — it benches Likely's 26.90. `2026_week05_opponent.csv` ships `slot = UNK` for all
+15 rows. **Do not back-fill it by guess.** Loop step 2 — freeze both lineups *before*
+kickoff — is what prevents this; it was skipped in week 5.
+
+**The spread tiebreak was retired this week by a powered test.** Harness
+`dev/weekly/spread_tiebreak_leaguewide.R`. All 10 rosters, weeks 4-5, 215 decidable
+discordant within-5% pairs: the spread-adjusted pick is right **48.8%**, CI
+[0.420, 0.557]. Not double-counting either — Pearson(favouredness, Yahoo proj / own ppg)
+= -0.036 at n=190. See `2026_week05_decisions.md` §R2. The slope itself survives; using it
+as a tiebreaker does not.
+
+**DST streaming held league-wide** (n=30, r = -0.334, p = 0.071) while our own pick
+returned 2.00. Decision right, outcome bad — the 0.39-sd edge behaving as predicted.
