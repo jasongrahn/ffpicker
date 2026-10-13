@@ -1,0 +1,511 @@
+Player,Player ID,Team,Positions,Game Status,Injury,Updated,New Player Note,Game
+Elijah Mitchell,33582,KC,RB,Q,Undisclosed,Oct 5 4:21 AM,N,Final W 30-27 @ LV
+Terrance Ferguson,41831,LAR,TE,IR,Ankle,Oct 5 4:21 AM,N,Final W 24-20 @ Phi
+Tee Higgins,32703,Cin,WR,Q,Groin,Oct 5 4:21 AM,Y,Final L 17-22 vs Jax
+Jaylin Lane,41920,Was,WR,O,Ankle,Oct 5 4:21 AM,Y,Final L 13-30 vs Ind
+Trevor Etienne,41913,Car,RB,IR-R,Ankle,Oct 5 4:21 AM,N,Final W 32-26 vs Det
+Dylan Sampson,41907,Cle,RB,IR,Knee,Oct 5 4:21 AM,N,Final W 27-24 vs Pit
+Arian Smith,41896,NYJ,WR,IR,Knee - ACL,Oct 5 4:21 AM,N,Final L 12-23 @ Chi
+Dont'e Thornton Jr.,41892,LV,WR,IR,Undisclosed,Oct 5 4:21 AM,N,Final L 27-30 vs KC
+Antonio Gibson,32736,NE,RB,Q,Knee - ACL,Oct 5 4:21 AM,N,Final W 29-26 @ Buf
+Dillon Gabriel,41861,Cle,QB,IR-R,Back,Oct 5 4:21 AM,N,Final W 27-24 vs Pit
+Pat Bryant,41860,Den,WR,D,Ankle,Oct 5 4:21 AM,Y,Final L 14-24 @ SF
+Savion Williams,41851,GB,WR,IR-R,Ankle,Oct 5 4:21 AM,N,Final W 17-14 @ TB
+Harrison Bryant,32785,Hou,TE,Q,Undisclosed,Oct 5 4:21 AM,N,Final L 30-34 vs Dal
+Gabe Davis,32798,Buf,WR,Q,Knee - ACL,Oct 5 4:21 AM,N,Final L 26-29 vs NE
+Colby Parkinson,32803,LAR,TE,O,Shoulder - AC Joint,Oct 5 4:21 AM,N,Final W 24-20 @ Phi
+Jack Bech,41843,LV,WR,IR,Forearm,Oct 5 4:21 AM,N,Final L 27-30 vs KC
+Mason Taylor,41827,NYJ,TE,O,Thumb,Oct 5 4:21 AM,N,Final L 12-23 @ Chi
+Justin Jefferson,32692,Min,WR,O,Ankle,Oct 5 4:21 AM,Y,Final W 15-10 vs Mia
+McCallan Castles,41373,GB,TE,Q,Undisclosed,Oct 5 4:21 AM,N,Final W 17-14 @ TB
+Mason Tipton,41188,NO,WR,PUP-R,Leg,Oct 5 4:21 AM,N,Mon 8:15 pm vs Atl
+Zach Wilson,33390,NO,QB,NA,Coach's Decision,Oct 5 4:21 AM,Y,Mon 8:15 pm vs Atl
+Xavier Weaver,41202,Ari,WR,Q,Hamstring,Oct 5 4:21 AM,N,Final L 24-36 @ NYG
+Chris Collier,41261,LV,RB,IR,Undisclosed,Oct 5 4:21 AM,N,Final L 27-30 vs KC
+Jalen Coker,41293,Car,WR,O,Quadriceps,Oct 5 4:21 AM,N,Final W 32-26 vs Det
+Patrick Taylor Jr.,33235,SF,RB,Q,Undisclosed,Oct 5 4:21 AM,N,Final W 24-14 vs Den
+Sean McKeon,33101,Ind,TE,Q,Undisclosed,Oct 5 4:21 AM,N,Final W 30-13 @ Was
+Jayden Higgins,41819,Hou,WR,IR,Knee - ACL,Oct 5 4:21 AM,N,Final L 30-34 vs Dal
+Rico Dowdle,33100,Pit,RB,O,Toe,Oct 5 4:21 AM,Y,Final L 24-27 @ Cle
+Thomas Yassmin,41397,GB,TE,IR,Undisclosed,Oct 5 4:21 AM,N,Final W 17-14 @ TB
+Dan Chisena,33023,Car,WR,Q,Undisclosed,Oct 5 4:21 AM,N,Final W 32-26 vs Det
+British Brooks,41480,Hou,RB,IR,Hamstring,Oct 5 4:21 AM,N,Final L 30-34 vs Dal
+Cole Burgess,41502,Pit,WR,IR,Undisclosed,Oct 5 4:21 AM,N,Final L 24-27 @ Cle
+Jaxson Dart,41810,NYG,QB,IR,Knee - Meniscus,Oct 5 4:21 AM,N,Final W 36-24 vs Ari
+Brandon Aiyuk,32695,SF,WR,DNR,Personal,Oct 5 4:21 AM,N,Final W 24-14 vs Den
+KeAndre Lambert-Smith,41944,LAC,WR,IR,Hamstring,Oct 5 4:21 AM,N,Final L 23-30 @ Sea
+DeVonta Smith,33398,Phi,WR,O,Hamstring,Oct 5 4:21 AM,N,Final L 20-24 vs LAR
+Tyrone Broden,42351,Sea,WR,Q,Undisclosed,Oct 5 4:21 AM,N,Final W 30-23 vs LAC
+Josh Jacobs,31856,GB,RB,CEL,Personal,Oct 5 4:21 AM,N,Final W 17-14 @ TB
+Hollywood Brown,31857,Phi,WR,O,Ankle,Oct 5 4:21 AM,N,Final L 20-24 vs LAR
+Jimmy Holiday,42490,KC,WR,IR,Undisclosed,Oct 5 4:21 AM,N,Final W 30-27 @ LV
+Ja'Corey Brooks,42482,Was,WR,Q,Undisclosed,Oct 5 4:21 AM,N,Final L 13-30 vs Ind
+A.J. Brown,31883,NE,WR,IR,Ankle,Oct 5 4:21 AM,N,Final W 29-26 @ Buf
+Jeremiah Webb,42437,NE,WR,IR,Arm,Oct 5 4:21 AM,N,Final W 29-26 @ Buf
+Jacoby Jones,42436,Was,WR,Q,Undisclosed,Oct 5 4:21 AM,N,Final L 13-30 vs Ind
+Parris Campbell,31891,Dal,WR,RET,Undisclosed,Oct 5 4:21 AM,N,Final W 34-30 @ Hou
+Ben Yurosek,42434,Min,TE,IR,Undisclosed,Oct 5 4:21 AM,N,Final W 15-10 vs Mia
+Josh Oliver,31901,Min,TE,IR,Biceps,Oct 5 4:21 AM,N,Final W 15-10 vs Mia
+Carter Runyon,42433,LV,TE,IR-R,Undisclosed,Oct 5 4:21 AM,N,Final L 27-30 vs KC
+Terry McLaurin,31908,Was,WR,O,Hamstring,Oct 5 4:21 AM,Y,Final L 13-30 vs Ind
+Ben Sauls,42379,NYG,K,Q,Undisclosed,Oct 5 4:21 AM,N,Final W 36-24 vs Ari
+Will Grier,31932,Dal,QB,RET,Personal,Oct 5 4:21 AM,N,Final W 34-30 @ Hou
+Mario Williams,42326,LAR,WR,Q,Undisclosed,Oct 5 4:21 AM,N,Final W 24-20 @ Phi
+Robbie Ouzts,41961,Sea,"RB,TE",IR,Neck,Oct 5 4:21 AM,N,Final W 30-23 vs LAC
+Konata Mumpfield,42035,LAR,WR,Q,Shoulder,Oct 5 4:21 AM,N,Final W 24-20 @ Phi
+Gunner Olszewski,32612,NYG,WR,IR,Achilles,Oct 5 4:21 AM,N,Final W 36-24 vs Ari
+Moliki Matavao,42006,NO,TE,IR,Knee,Oct 5 4:21 AM,N,Mon 8:15 pm vs Atl
+David Sills V,32418,TB,WR,IR-R,Undisclosed,Oct 5 4:21 AM,N,Final L 14-17 vs GB
+Kyle Monangai,42025,Chi,RB,Q,Thumb,Oct 5 4:21 AM,Y,Final W 23-12 vs NYJ
+Caleb Lohner,42027,Den,TE,IR-R,Lower Body,Oct 5 4:21 AM,N,Final L 14-24 @ SF
+D.J. Montgomery,32283,Ind,WR,IR,Abdomen,Oct 5 4:21 AM,N,Final W 30-13 @ Was
+Luke Lachey,42041,Hou,TE,Q,Foot,Oct 5 4:21 AM,N,Final L 30-34 vs Dal
+Gee Scott,42290,NE,WR,Q,Undisclosed,Oct 5 4:21 AM,N,Final W 29-26 @ Buf
+Luke Grimm,42104,LAC,WR,Q,Undisclosed,Oct 5 4:21 AM,N,Final L 23-30 @ Sea
+Beaux Collins,42194,Atl,WR,IR-R,Undisclosed,Oct 5 4:21 AM,N,Mon 8:15 pm @ NO
+Da'Quan Felton,42201,NYJ,WR,Q,Undisclosed,Oct 5 4:21 AM,N,Final L 12-23 @ Chi
+Ja'Quinden Jackson,42214,Phi,RB,Q,Undisclosed,Oct 5 4:21 AM,N,Final L 20-24 vs LAR
+Kye Robichaux,42245,Det,RB,Q,Foot,Oct 5 4:21 AM,N,Final L 26-32 @ Car
+Bryson Nesbit,42266,Min,TE,Q,Undisclosed,Oct 5 4:21 AM,N,Final W 15-10 vs Mia
+Ja'Marr Chase,33393,Cin,WR,Q,Concussion,Oct 5 4:21 AM,Y,Final L 17-22 vs Jax
+Carter Bradley,41133,Jax,QB,Q,Thumb,Oct 5 4:21 AM,N,Final W 22-17 @ Cin
+Max Hurleman,42516,Pit,"WR,RB",O,Undisclosed,Oct 5 4:21 AM,N,Final L 24-27 @ Cle
+Raheem Blackshear,34617,Det,RB,Q,Undisclosed,Oct 5 4:21 AM,N,Final L 26-32 @ Car
+Alec Pierce,34008,Ind,WR,IR,Heel,Oct 5 4:21 AM,N,Final W 30-13 @ Was
+Will Mallory,40180,Ind,TE,IR-R,Thumb,Oct 5 4:21 AM,N,Final W 30-13 @ Was
+Rachaad White,34047,Was,RB,O,Shoulder,Oct 5 4:21 AM,Y,Final L 13-30 vs Ind
+Danny Gray,34061,Phi,WR,Q,Undisclosed,Oct 5 4:21 AM,N,Final L 20-24 vs LAR
+De'Von Achane,40118,Mia,RB,IR,Knee - ACL,Oct 5 4:21 AM,N,Final L 10-15 @ Min
+Tank Dell,40097,Hou,WR,IR-R,Knee - ACL + MCL,Oct 5 4:21 AM,Y,Final L 30-34 vs Dal
+Tank Bigsby,40095,Phi,RB,O,Abdomen,Oct 5 4:21 AM,Y,Final L 20-24 vs LAR
+Pierre Strong Jr.,34083,GB,RB,Q,Hamstring,Oct 5 4:21 AM,N,Final W 17-14 @ TB
+Charlie Kolar,34084,LAC,TE,O,Forearm,Oct 5 4:21 AM,N,Final L 23-30 @ Sea
+Rashee Rice,40084,KC,WR,Q,Hamstring,Oct 5 4:21 AM,Y,Final W 30-27 @ LV
+Zach Charbonnet,40075,Sea,RB,PUP-R,Knee - ACL,Oct 5 4:21 AM,Y,Final W 30-23 vs LAC
+Luke Musgrave,40074,GB,TE,PUP-R,Neck,Oct 5 4:21 AM,N,Final W 17-14 @ TB
+Jayden Reed,40063,GB,WR,IR,Neck,Oct 5 4:21 AM,N,Final W 17-14 @ TB
+Calvin Austin III,34094,NYG,WR,IR,Knee,Oct 5 4:21 AM,N,Final W 36-24 vs Ari
+Cole Turner,34105,Mia,TE,IR,Undisclosed,Oct 5 4:21 AM,N,Final L 10-15 @ Min
+Tyquan Thornton,34005,KC,WR,O,Ankle,Oct 5 4:21 AM,Y,Final W 30-27 @ LV
+Jordan Mason,34320,Min,RB,IR,Thumb,Oct 5 4:21 AM,N,Final W 15-10 vs Mia
+Brittain Brown,34206,Chi,RB,IR,Undisclosed,Oct 5 4:21 AM,N,Final W 23-12 vs NYJ
+Skylar Thompson,34203,Bal,QB,IR,Undisclosed,Oct 5 4:21 AM,N,Final W 24-18 vs Ten
+Chris Oladokun,34197,KC,QB,Q,Undisclosed,Oct 5 4:21 AM,N,Final W 30-27 @ LV
+Ko Kieft,34174,TB,TE,O,Elbow,Oct 5 4:21 AM,N,Final L 14-17 vs GB
+Ronnie Rivers,34310,LAR,RB,IR,Calf,Oct 5 4:21 AM,N,Final W 24-20 @ Phi
+Michael Woods II,34158,Den,WR,Q,Leg,Oct 5 4:21 AM,N,Final L 14-24 @ SF
+Grant Calcaterra,34154,Phi,TE,IR-R,Back,Oct 5 4:21 AM,N,Final L 20-24 vs LAR
+Malik Davis,34610,Dal,RB,IR,Hip,Oct 5 4:21 AM,N,Final W 34-30 @ Hou
+Irv Charles,34356,Sea,WR,IR-R,Undisclosed,Oct 5 4:21 AM,N,Final W 30-23 vs LAC
+Jalen Nailor,34147,LV,WR,Q,Concussion,Oct 5 4:21 AM,N,Final L 27-30 vs KC
+Jake Tonges,34374,SF,TE,IR,Knee - MCL,Oct 5 4:21 AM,N,Final W 24-14 vs Den
+Ty Chandler,34125,NO,RB,IR,Knee,Oct 5 4:21 AM,N,Mon 8:15 pm vs Atl
+Jalen Virgil,34579,Ari,WR,Q,Undisclosed,Oct 5 4:21 AM,N,Final L 24-36 @ NYG
+Dennis Houston,34592,TB,WR,Q,Groin,Oct 5 4:21 AM,N,Final L 14-17 vs GB
+Andrei Iosivas,40211,Cin,WR,IR,Thumb,Oct 5 4:21 AM,N,Final L 17-22 vs Jax
+Scott Matlock,40225,LAC,RB,IR-R,Undisclosed,Oct 5 4:21 AM,N,Final L 23-30 @ Sea
+Johnny Wilson,41089,Phi,WR,IR,Knee,Oct 5 4:21 AM,N,Final L 20-24 vs LAR
+Tip Reiman,40959,Ari,TE,PUP-R,Ankle,Oct 5 4:21 AM,N,Final L 24-36 @ NYG
+Ja'Lynn Polk,40914,NO,WR,RET,Undisclosed,Oct 5 4:21 AM,N,Mon 8:15 pm vs Atl
+Adonai Mitchell,40915,NYJ,WR,O,Finger,Oct 5 4:21 AM,N,Final L 12-23 @ Chi
+Jonathon Brooks,40926,Car,RB,IR,Abdomen,Oct 5 4:21 AM,N,Final W 32-26 vs Det
+Jalen McMillan,40954,TB,WR,IR,Knee - PCL,Oct 5 4:21 AM,N,Final L 14-17 vs GB
+Tylan Wallace,33519,Cle,WR,O,Knee,Oct 5 4:21 AM,N,Final W 27-24 vs Pit
+Trey Benson,40958,Ari,RB,IR,Knee,Oct 5 4:21 AM,N,Final L 24-36 @ NYG
+Trey Sermon,33476,Atl,RB,IR,Undisclosed,Oct 5 4:21 AM,N,Mon 8:15 pm @ NO
+Caleb Williams,40900,Chi,QB,O,Hamstring,Oct 5 4:21 AM,Y,Final W 23-12 vs NYJ
+Hunter Long,33469,Ari,TE,Q,Knee,Oct 5 4:21 AM,N,Final L 24-36 @ NYG
+Isaac Guerendo,40998,SF,RB,PUP-R,Pectoral,Oct 5 4:21 AM,N,Final W 24-14 vs Den
+Jamari Thrash,41016,Cle,WR,Q,Undisclosed,Oct 5 4:21 AM,N,Final W 27-24 vs Pit
+Ainias Smith,41030,Car,WR,Q,Undisclosed,Oct 5 4:21 AM,N,Final W 32-26 vs Det
+Tanner McLachlan,41066,SF,TE,Q,Undisclosed,Oct 5 4:21 AM,N,Final W 24-14 vs Den
+Travis Etienne Jr.,33413,NO,RB,IR,Hamstring,Oct 5 4:21 AM,N,Mon 8:15 pm vs Atl
+Ladd McConkey,40908,LAC,WR,Q,Foot,Oct 5 4:21 AM,Y,Final L 23-30 @ Sea
+Jermar Jefferson,33644,Min,RB,Q,Undisclosed,Oct 5 4:21 AM,N,Final W 15-10 vs Mia
+Breece Hall,33991,NYJ,RB,O,Quadriceps,Oct 5 4:21 AM,N,Final L 12-23 @ Chi
+Tyrell Shavers,40630,Buf,WR,PUP-R,Knee - ACL,Oct 5 4:21 AM,N,Final L 26-29 vs NE
+Ben Sims,40335,Mia,TE,Q,Undisclosed,Oct 5 4:21 AM,N,Final L 10-15 @ Min
+Jake Bobo,40452,Sea,WR,IR,Knee,Oct 5 4:21 AM,N,Final W 30-23 vs LAC
+Bryce Ford-Wheaton,40529,NYG,WR,Q,Achilles,Oct 5 4:21 AM,N,Final W 36-24 vs Ari
+Nikola Kalinic,33950,Chi,TE,IR,Knee,Oct 5 4:21 AM,N,Final W 23-12 vs NYJ
+Chris Brooks,40625,GB,RB,Q,Ankle,Oct 5 4:21 AM,N,Final W 17-14 @ TB
+Julian Hill,40629,NE,TE,IR,Knee,Oct 5 4:21 AM,N,Final W 29-26 @ Buf
+DJ Turner,33813,LV,WR,Q,Undisclosed,Oct 5 4:21 AM,N,Final L 27-30 vs KC
+Jayden Daniels,40896,Was,QB,O,Elbow,Oct 5 4:21 AM,Y,Final L 13-30 vs Ind
+Shane Zylstra,33803,NE,TE,Q,Undisclosed,Oct 5 4:21 AM,N,Final W 29-26 @ Buf
+Princeton Fant,40778,Dal,TE,IR,Knee - ACL + MCL,Oct 5 4:21 AM,N,Final W 34-30 @ Hou
+Dante Miller,40874,NYG,RB,Q,Groin,Oct 5 4:21 AM,N,Final W 36-24 vs Ari
+Xavier Legette,40890,Car,WR,IR,Knee,Oct 5 4:21 AM,N,Final W 32-26 vs Det
+Ricky Pearsall,40892,SF,WR,IR,Knee - PCL,Oct 5 4:21 AM,N,Final W 24-14 vs Den
+Kenny Yeboah,33705,Ari,TE,Q,Hamstring,Oct 5 4:21 AM,N,Final L 24-36 @ NYG
+Noah Fant,31852,NO,TE,O,Abdomen,Oct 5 4:21 AM,Y,Mon 8:15 pm vs Atl
+Graham Mertz,41975,Hou,QB,IR,Knee - ACL,Oct 5 4:21 AM,N,Final L 30-34 vs Dal
+Isiah Pacheco,34207,Det,RB,IR,Back,Oct 5 4:21 AM,N,Final L 26-32 @ Car
+Jimmy Kibble,43368,NE,WR,Q,Undisclosed,Oct 5 4:21 AM,N,Final W 29-26 @ Buf
+Chip Trayanum,43213,NYJ,RB,IR,Neck,Oct 5 4:21 AM,N,Final L 12-23 @ Chi
+David Njoku,30142,LAC,TE,IR,Lower Leg,Oct 5 4:21 AM,N,Final L 23-30 @ Sea
+Corey Rucker,43248,LV,WR,IR,Undisclosed,Oct 5 4:21 AM,N,Final L 27-30 vs KC
+Lincoln Pare,43339,Ind,RB,Q,Undisclosed,Oct 5 4:21 AM,N,Final W 30-13 @ Was
+James Conner,30218,Ari,RB,IR-R,Foot,Oct 5 4:21 AM,N,Final L 24-36 @ NYG
+Quentin Moore,43206,Was,TE,Q,Undisclosed,Oct 5 4:21 AM,N,Final L 13-30 vs Ind
+Mack Hollins,30231,NE,WR,Q,Calf,Oct 5 4:21 AM,Y,Final W 29-26 @ Buf
+Squirrel White,43349,Chi,WR,RET,Personal,Oct 5 4:21 AM,N,Final W 23-12 vs NYJ
+Myles Montgomery,43367,NE,RB,IR,Undisclosed,Oct 5 4:21 AM,N,Final W 29-26 @ Buf
+Jeremy McNichols,30275,Was,RB,IR-R,Quadriceps,Oct 5 4:21 AM,N,Final L 13-30 vs Ind
+Kendrick Law,42798,Det,WR,IR,Knee - ACL,Oct 5 4:21 AM,N,Final L 26-32 @ Car
+Zane Gonzalez,30337,Mia,K,Q,Undisclosed,Oct 5 4:21 AM,N,Final L 10-15 @ Min
+Le'Meke Brockington,43376,Atl,WR,Q,Undisclosed,Oct 5 4:21 AM,N,Mon 8:15 pm @ NO
+Jeff Caldwell,42880,KC,WR,IR,Knee,Oct 5 4:21 AM,N,Final W 30-27 @ LV
+Adam Randall,42780,Bal,RB,IR-R,Undisclosed,Oct 5 4:21 AM,N,Final W 24-18 vs Ten
+Joe Royer,42772,Cle,TE,NFI-R,Personal,Oct 5 4:21 AM,N,Final W 27-24 vs Pit
+Kadarius Calloway,43424,TB,RB,Q,Undisclosed,Oct 5 4:21 AM,N,Final L 14-17 vs GB
+Colbie Young,42762,Cin,WR,O,Knee,Oct 5 4:21 AM,N,Final L 17-22 vs Jax
+Tim Patrick,30511,NYJ,WR,IR,Groin,Oct 5 4:21 AM,N,Final L 12-23 @ Chi
+Anthony Firkser,30571,Det,TE,Q,Leg,Oct 5 4:21 AM,N,Final L 26-32 @ Car
+Jonah Coleman,42730,Den,RB,IR,Ankle,Oct 5 4:21 AM,N,Final L 14-24 @ SF
+Brenen Thompson,42727,LAC,WR,O,Quadriceps,Oct 5 4:21 AM,N,Final L 23-30 @ Sea
+Eli Raridon,42717,NE,TE,Q,Ankle,Oct 5 4:21 AM,N,Final W 29-26 @ Buf
+Cooper Rush,30788,Atl,QB,NA,Coach's Decision,Oct 5 4:21 AM,Y,Mon 8:15 pm @ NO
+Kyron Hudson,43432,Chi,WR,Q,Undisclosed,Oct 5 4:21 AM,N,Final W 23-12 vs NYJ
+River Cracraft,30955,Was,WR,Q,Undisclosed,Oct 5 4:21 AM,N,Final L 13-30 vs Ind
+Jaren Kanak,42847,Ten,TE,IR,Pectoral,Oct 5 4:21 AM,N,Final L 18-24 @ Bal
+Le'Veon Moss,42890,Mia,RB,RET,Undisclosed,Oct 5 4:21 AM,N,Final L 10-15 @ Min
+Saquon Barkley,30972,Phi,RB,Q,Hamstring,Oct 5 4:21 AM,Y,Final L 20-24 vs LAR
+DJ Rogers,43055,Dal,TE,IR,Knee,Oct 5 4:21 AM,N,Final W 34-30 @ Hou
+Noah Whittington,43197,Hou,RB,O,Quadriceps,Oct 5 4:21 AM,N,Final L 30-34 vs Dal
+Desmond Reid,43185,Buf,RB,Q,Undisclosed,Oct 5 4:21 AM,N,Final L 26-29 vs NE
+Caullin Lacy,43165,NYJ,WR,Q,Undisclosed,Oct 5 4:21 AM,N,Final L 12-23 @ Chi
+Chase Curtis,43164,NYJ,TE,Q,Knee,Oct 5 4:21 AM,N,Final L 12-23 @ Chi
+DT Sheffield,43158,NYJ,WR,Q,Undisclosed,Oct 5 4:21 AM,N,Final L 12-23 @ Chi
+Marcus Mariota,28390,Was,QB,D,Knee - MCL,Oct 5 4:21 AM,Y,Final L 13-30 vs Ind
+Chase Roberts,43126,LV,WR,Q,Undisclosed,Oct 5 4:21 AM,N,Final L 27-30 vs KC
+J. Michael Gyllenborg,43116,KC,TE,IR,Knee,Oct 5 4:21 AM,N,Final W 30-27 @ LV
+EJ Smith,43115,KC,RB,Q,Undisclosed,Oct 5 4:21 AM,N,Final W 30-27 @ LV
+RJ Maryland,43087,GB,TE,Q,Hamstring,Oct 5 4:21 AM,N,Final W 17-14 @ TB
+Raheem Mostert,28654,LV,RB,Q,Knee,Oct 5 4:21 AM,N,Final L 27-30 vs KC
+Jameson Geers,43212,Ari,TE,IR,Undisclosed,Oct 5 4:21 AM,N,Final L 24-36 @ NYG
+Aaron Anderson,43052,Cle,WR,Q,Undisclosed,Oct 5 4:21 AM,N,Final W 27-24 vs Pit
+Tyreek Hill,29399,Mia,WR,O,Knee - ACL,Oct 5 4:21 AM,Y,Final L 10-15 @ Min
+Dominic Richardson,43034,NYJ,RB,Q,Undisclosed,Oct 5 4:21 AM,N,Final L 12-23 @ Chi
+Hayden Large,43027,Chi,TE,IR,Undisclosed,Oct 5 4:21 AM,N,Final W 23-12 vs NYJ
+Kyle Juszczyk,26753,SF,RB,D,Knee,Oct 5 4:21 AM,Y,Final W 24-14 vs Den
+Alex Bullock,42957,Jax,WR,RET,Undisclosed,Oct 5 4:21 AM,N,Final W 22-17 @ Cin
+Luke Wysong,42938,Min,WR,Q,Undisclosed,Oct 5 4:21 AM,N,Final W 15-10 vs Mia
+Sincere Brown,42925,LAC,WR,Q,Undisclosed,Oct 5 4:21 AM,N,Final L 23-30 @ Sea
+Kejon Owens,42912,Min,RB,Q,Illness,Oct 5 4:21 AM,N,Final W 15-10 vs Mia
+Keenan Allen,26699,Ind,WR,O,Groin,Oct 5 4:21 AM,N,Final W 30-13 @ Was
+Chris Moore,29341,Bal,WR,O,Ankle,Oct 5 4:21 AM,N,Final W 24-18 vs Ten
+Matthew Caldwell,42901,LAR,QB,IR,Undisclosed,Oct 5 4:21 AM,N,Final W 24-20 @ Phi
+Demarcus Robinson,29360,SF,WR,IR,Ankle,Oct 5 4:21 AM,N,Final W 24-14 vs Den
+Jack Strand,42898,Atl,QB,NA,Coach's Decision,Oct 5 4:21 AM,N,Mon 8:15 pm @ NO
+Baker Mayfield,30971,TB,QB,O,Thumb,Oct 5 4:21 AM,Y,Final L 14-17 vs GB
+Teddy Bridgewater,27560,TB,QB,RET,Undisclosed,Oct 5 4:21 AM,N,Final L 14-17 vs GB
+Jordyn Tyson,42630,NO,WR,IR-R,Hamstring,Oct 5 4:21 AM,Y,Mon 8:15 pm vs Atl
+Durham Smythe,31093,Bal,TE,Q,Achilles,Oct 5 4:21 AM,N,Final W 24-18 vs Ten
+Chris Brazzell II,42705,Car,WR,IR,Knee,Oct 5 4:21 AM,N,Final W 32-26 vs Det
+Jadarian Price,42654,Sea,RB,IR,Chest,Oct 5 4:21 AM,N,Final W 30-23 vs LAC
+Lamar Jackson,31002,Bal,QB,Q,Ankle,Oct 5 4:21 AM,Y,Final W 24-18 vs Ten
+Ja'Kobi Lane,42702,Bal,WR,IR,Wrist,Oct 5 4:21 AM,N,Final W 24-18 vs Ten
+De'Zhaun Stribling,42655,SF,WR,IR,Ankle,Oct 5 4:21 AM,N,Final W 24-14 vs Den
+Eli Stowers,42676,Phi,TE,IR,Hamstring,Oct 5 4:21 AM,N,Final L 20-24 vs LAR
+Caleb Douglas,42697,Mia,WR,O,Ankle,Oct 5 4:21 AM,Y,Final L 10-15 @ Min
+Omar Cooper Jr.,42652,NYJ,WR,IR,Ankle,Oct 5 4:21 AM,N,Final L 12-23 @ Chi
+Brock Rechsteiner,43435,NO,WR,SUSP,Suspension,Oct 5 4:21 AM,N,Mon 8:15 pm vs Atl
+Christian Kirk,31017,SF,WR,IR-R,Calf,Oct 5 4:21 AM,N,Final W 24-14 vs Den
+Connor Hulstein,43471,NYJ,TE,Q,Undisclosed,Oct 5 4:21 AM,N,Final L 12-23 @ Chi
+Dallas Goedert,31019,Phi,TE,O,Knee - MCL,Oct 5 4:21 AM,N,Final L 20-24 vs LAR
+Damien Alford,42622,NO,WR,Q,Undisclosed,Oct 5 4:21 AM,N,Mon 8:15 pm vs Atl
+Jeremiyah Love,42625,Ari,RB,Q,Ankle,Oct 5 4:21 AM,Y,Final L 24-36 @ NYG
+DJ Moore,30994,Buf,WR,Q,Shoulder,Oct 5 4:21 AM,Y,Final L 26-29 vs NE
+KhaDarel Hodge,31769,SF,WR,Q,Knee,Oct 5 4:21 AM,N,Final W 24-14 vs Den
+Braxton Berrios,31180,NYG,WR,D,Foot,Oct 5 4:21 AM,Y,Final W 36-24 vs Ari
+Dalevon Campbell,42519,LAC,WR,Q,Leg,Oct 5 4:21 AM,N,Final L 23-30 @ Sea
+Carson Towt,42620,Ind,TE,IR,Undisclosed,Oct 5 4:21 AM,N,Final W 30-13 @ Was
+Ray-Ray McCloud III,31157,Chi,WR,Q,Undisclosed,Oct 5 4:21 AM,N,Final W 23-12 vs NYJ
+Cedrick Wilson Jr.,31178,Det,WR,Q,Knee,Oct 5 4:21 AM,N,Final L 26-32 @ Car
+Luke McCaffrey,40964,Was,WR,,,Oct 5 12:11 AM,N,Final L 13-30 vs Ind
+Kylen Granson,33515,Ten,TE,,,Oct 5 12:11 AM,N,Final L 18-24 @ Bal
+Michael Carter,33495,Ten,RB,,,Oct 5 12:11 AM,N,Final L 18-24 @ Bal
+Montorie Foster Jr.,42515,Sea,WR,,,Oct 5 12:06 AM,N,Final W 30-23 vs LAC
+Nick Kallerup,42465,Sea,TE,,,Oct 5 12:06 AM,N,Final W 30-23 vs LAC
+Cole Payton,42801,Phi,QB,,,Oct 5 12:06 AM,N,Final L 20-24 vs LAR
+Jordan James,41933,SF,RB,,,Oct 5 12:06 AM,N,Final W 24-14 vs Den
+Eli Heidenreich,42852,Pit,RB,,,Oct 5 12:06 AM,N,Final L 24-27 @ Cle
+Jalen Milroe,41882,Sea,QB,,,Oct 5 12:06 AM,N,Final W 30-23 vs LAC
+Drew Allar,42698,Pit,QB,,,Oct 5 12:06 AM,N,Final L 24-27 @ Cle
+Kurtis Rourke,42009,SF,QB,,,Oct 5 12:06 AM,N,Final W 24-14 vs Den
+Will Howard,41989,Pit,QB,,,Oct 5 12:06 AM,N,Final L 24-27 @ Cle
+Thomas Fidone II,42004,NYG,TE,,,Oct 4 11:56 PM,N,Final W 36-24 vs Ari
+Devin Singletary,31906,NYG,RB,,,Oct 4 11:56 PM,N,Final W 36-24 vs Ari
+Max Brosmer,42075,Min,QB,,,Oct 4 11:56 PM,N,Final W 15-10 vs Mia
+Behren Morton,42856,NE,QB,,,Oct 4 11:56 PM,N,Final W 29-26 @ Buf
+Tanner Arkin,43152,NE,TE,,,Oct 4 11:56 PM,N,Final W 29-26 @ Buf
+Aidan O'Connell,40138,LV,QB,,,Oct 4 11:51 PM,N,Final L 27-30 vs KC
+CJ Daniels,42819,LAR,WR,,,Oct 4 11:51 PM,N,Final W 24-20 @ Phi
+Ty Simpson,42635,LAR,QB,,,Oct 4 11:51 PM,N,Final W 24-20 @ Phi
+Brady Cook,42229,Mia,QB,,,Oct 4 11:51 PM,N,Final L 10-15 @ Min
+DJ Uiagalelei,42079,LAC,QB,,,Oct 4 11:51 PM,N,Final L 23-30 @ Sea
+Justin Joly,42764,Mia,TE,,,Oct 4 11:51 PM,N,Final L 10-15 @ Min
+Jared Wiley,40978,KC,TE,,,Oct 4 11:46 PM,N,Final W 30-27 @ LV
+Marlin Klein,42681,Hou,TE,,,Oct 4 11:46 PM,N,Final L 30-34 vs Dal
+DJ Giddens,41937,Ind,RB,,,Oct 4 11:46 PM,N,Final W 30-13 @ Was
+CJ Williams,42825,Jax,WR,,,Oct 4 11:46 PM,N,Final W 22-17 @ Cin
+Darius Slayton,32003,Ind,WR,,,Oct 4 11:46 PM,N,Final W 30-13 @ Was
+Riley Leonard,41968,Ind,QB,,,Oct 4 11:46 PM,N,Final W 30-13 @ Was
+Garrett Nussmeier,42871,KC,QB,,,Oct 4 11:46 PM,N,Final W 30-27 @ LV
+Taylen Green,42804,Cle,QB,,,Oct 4 11:41 PM,N,Final W 27-24 vs Pit
+Tyler Conklin,31127,Det,TE,,,Oct 4 11:41 PM,N,Final L 26-32 @ Car
+Sam Ehlinger,33606,Den,QB,,,Oct 4 11:41 PM,N,Final L 14-24 @ SF
+Emari Demercado,40430,Dal,RB,,,Oct 4 11:41 PM,N,Final W 34-30 @ Hou
+Camden Brown,43059,Dal,WR,,,Oct 4 11:41 PM,N,Final W 34-30 @ Hou
+Dallen Bentley,42878,Den,TE,,,Oct 4 11:41 PM,N,Final L 14-24 @ SF
+Ja'Tavion Sanders,40995,Car,TE,,,Oct 4 11:36 PM,N,Final W 32-26 vs Det
+Haynes King,42904,Car,QB,,,Oct 4 11:36 PM,N,Final W 32-26 vs Det
+Carson Beck,42687,Ari,QB,,,Oct 4 11:31 PM,N,Final L 24-36 @ NYG
+Joe Fagnano,43003,Bal,QB,,,Oct 4 11:31 PM,N,Final W 24-18 vs Ten
+Reggie Virgil,42791,Ari,WR,,,Oct 4 11:31 PM,N,Final L 24-36 @ NYG
+Skyler Bell,42747,Buf,WR,,,Oct 4 11:31 PM,N,Final L 26-29 vs NE
+Reggie Gilliam,33357,NE,RB,,,Oct 4 12:46 AM,N,Final W 29-26 @ Buf
+Mike Evans,27535,SF,WR,,,Oct 4 12:06 AM,Y,Final W 24-14 vs Den
+Trey Lance,33391,LAC,QB,,,Oct 4 12:06 AM,N,Final L 23-30 @ Sea
+Joe Mixon,30161,Sea,RB,,,Oct 3 10:06 PM,Y,Final W 30-23 vs LAC
+Ray Davis,40980,Buf,RB,,,Oct 3 8:41 PM,N,Final L 26-29 vs NE
+Zay Flowers,40039,Bal,WR,,,Oct 3 8:36 PM,N,Final W 24-18 vs Ten
+Tyjae Spears,40119,Ten,RB,,,Oct 3 8:36 PM,N,Final L 18-24 @ Bal
+Kenyon Sadiq,42638,NYJ,TE,,,Oct 3 8:36 PM,N,Final L 12-23 @ Chi
+Ashton Dulin,32292,Ind,WR,,,Oct 3 5:11 PM,N,Final W 30-13 @ Was
+Mo Alie-Cox,30112,Ind,TE,,,Oct 3 11:51 AM,N,Final W 30-13 @ Was
+Barion Brown,42812,NO,WR,,,Oct 3 12:16 AM,N,Mon 8:15 pm vs Atl
+Jalen Walthall,43193,NYJ,WR,,,Oct 2 3:36 AM,N,Final L 12-23 @ Chi
+Justin Shorter,40167,LV,"WR,TE",,,Oct 2 3:36 AM,N,Final L 27-30 vs KC
+George Holani,41344,Sea,RB,,,Oct 2 2:36 AM,Y,Final W 30-23 vs LAC
+Tyrone Tracy Jr.,41048,NYG,RB,,,Oct 2 2:21 AM,N,Final W 36-24 vs Ari
+Will Shipley,41002,Phi,RB,,,Oct 2 1:56 AM,N,Final L 20-24 vs LAR
+Keaton Mitchell,40641,LAC,RB,,,Oct 2 1:41 AM,Y,Final L 23-30 @ Sea
+Nico Collins,33477,Hou,WR,,,Oct 2 1:11 AM,N,Final L 30-34 vs Dal
+Chris Bell,42716,Mia,WR,,,Oct 2 1:06 AM,Y,Final L 10-15 @ Min
+Nate Boerkircher,42678,Jax,TE,,,Oct 2 12:56 AM,N,Final W 22-17 @ Cin
+LeQuint Allen Jr.,42007,Jax,RB,,,Oct 2 12:56 AM,N,Final W 22-17 @ Cin
+Jakobi Meyers,32231,Jax,WR,,,Oct 2 12:56 AM,Y,Final W 22-17 @ Cin
+Jeremy Ruckert,34057,NYJ,TE,,,Oct 2 12:51 AM,N,Final L 12-23 @ Chi
+Bucky Irving,40993,TB,RB,,,Oct 2 12:46 AM,N,Final L 14-17 vs GB
+Keon Coleman,40911,Buf,WR,,,Oct 2 12:16 AM,Y,Final L 26-29 vs NE
+D'Andre Swift,32705,Chi,RB,,,Oct 2 12:06 AM,N,Final W 23-12 vs NYJ
+Puka Nacua,40168,LAR,WR,,,Oct 1 11:41 PM,N,Final W 24-20 @ Phi
+Ben Sinnott,40931,Was,TE,,,Oct 1 10:11 PM,N,Final L 13-30 vs Ind
+Chig Okonkwo,34099,Was,TE,,,Oct 1 10:06 PM,N,Final L 13-30 vs Ind
+Jaylen Wright,41010,Mia,RB,,,Oct 1 2:21 AM,Y,Final L 10-15 @ Min
+Chris Godwin Jr.,30197,TB,WR,,,Oct 1 1:31 AM,Y,Final L 14-17 vs GB
+Tony Pollard,31960,Ten,RB,,,Oct 1 1:21 AM,N,Final L 18-24 @ Bal
+Kene Nwangwu,33507,NYJ,RB,,,Sep 30 5:11 AM,N,Final L 12-23 @ Chi
+Tanner McKee,40220,Phi,QB,,,Sep 30 4:36 AM,N,Final L 20-24 vs LAR
+Marvin Mims Jr.,40090,Den,WR,,,Sep 30 3:36 AM,Y,Final L 14-24 @ SF
+Jaylen Waddle,33394,Den,WR,,,Sep 30 2:06 AM,Y,Final L 14-24 @ SF
+Josh Allen,30977,Buf,QB,,,Sep 30 2:06 AM,N,Final L 26-29 vs NE
+Coleman Owen,42130,GB,WR,,,Sep 29 3:26 AM,N,Final W 17-14 @ TB
+Jam Miller,42867,NE,RB,,,Sep 29 3:11 AM,N,Final W 29-26 @ Buf
+Terrell Jennings,41713,NE,RB,,,Sep 29 3:11 AM,N,Final W 29-26 @ Buf
+Devin Neal,41972,Min,RB,,,Sep 29 2:41 AM,N,Final W 15-10 vs Mia
+Lawrence Keys,41275,Det,WR,,,Sep 29 2:41 AM,N,Final L 26-32 @ Car
+Audric Estime,41019,Min,RB,,,Sep 29 2:41 AM,N,Final W 15-10 vs Mia
+John FitzPatrick,34169,Cle,TE,,,Sep 28 9:46 PM,N,Final W 27-24 vs Pit
+Jeshaun Jones,41205,Min,WR,,,Sep 28 2:36 AM,N,Final W 15-10 vs Mia
+Miles Kitselman,43082,Det,TE,,,Sep 28 1:41 AM,N,Final L 26-32 @ Car
+Blake Grupe,40296,NYJ,K,,,Sep 28 12:06 AM,N,Final L 12-23 @ Chi
+Treyton Welch,41363,NO,TE,,,Sep 27 11:56 PM,N,Mon 8:15 pm vs Atl
+Tutu Atwell,33445,LAR,WR,,,Sep 27 11:41 PM,N,Final W 24-20 @ Phi
+Brevin Jordan,33535,Hou,TE,,,Sep 27 11:31 PM,N,Final L 30-34 vs Dal
+Lil'Jordan Humphrey,32494,Den,WR,,,Sep 27 11:26 PM,N,Final L 14-24 @ SF
+Jack Endries,42843,Cin,TE,,,Sep 27 11:21 PM,N,Final L 17-22 vs Jax
+Elijah Sarratt,42737,Bal,WR,,,Sep 27 11:16 PM,N,Final W 24-18 vs Ten
+J.J. McCarthy,40905,NYG,QB,,,Sep 27 9:16 PM,N,Final W 36-24 vs Ari
+RJ Harvey,41845,Den,RB,,,Sep 27 8:06 AM,Y,Final L 14-24 @ SF
+Mark Andrews,31056,Bal,TE,,,Sep 27 3:21 AM,N,Final W 24-18 vs Ten
+Ollie Gordon II,41969,Mia,RB,,,Sep 27 12:36 AM,Y,Final L 10-15 @ Min
+Tyler Goodson,34261,Dal,RB,,,Sep 27 12:31 AM,N,Final W 34-30 @ Hou
+Brock Bowers,40878,LV,TE,,,Sep 27 12:06 AM,Y,Final L 27-30 vs KC
+Tyson Bagent,40504,Chi,QB,,,Sep 26 11:21 PM,Y,Final W 23-12 vs NYJ
+Spencer Shrader,41499,Ind,K,,,Sep 26 10:31 PM,N,Final W 30-13 @ Was
+Ryan Miller,40676,Mia,WR,,,Sep 26 8:41 PM,N,Final L 10-15 @ Min
+Jaylen Warren,34447,Pit,RB,,,Sep 26 8:41 PM,N,Final L 24-27 @ Cle
+Michael Pittman Jr.,32704,Pit,WR,,,Sep 26 8:41 PM,N,Final L 24-27 @ Cle
+Cairo Santos,28227,Chi,K,,,Sep 25 11:56 PM,Y,Final W 23-12 vs NYJ
+Jordan Whittington,41083,LAR,WR,,,Sep 25 2:36 AM,N,Final W 24-20 @ Phi
+Daniel Bellinger,34068,Ten,TE,,,Sep 25 1:46 AM,N,Final L 18-24 @ Bal
+DeeJay Dallas,32814,Min,RB,,,Sep 25 1:16 AM,N,Final W 15-10 vs Mia
+Kendre Miller,40108,NO,RB,,,Sep 25 12:36 AM,N,Mon 8:15 pm vs Atl
+Aaron Jones Sr.,30295,Min,RB,,,Sep 24 11:46 PM,Y,Final W 15-10 vs Mia
+Kaytron Allen,42809,Was,RB,,,Sep 24 5:36 AM,N,Final L 13-30 vs Ind
+Brady Russell,40519,Sea,"RB,TE",,,Sep 24 4:31 AM,N,Final W 30-23 vs LAC
+Cooper Kupp,30182,Sea,WR,,,Sep 24 4:31 AM,N,Final W 30-23 vs LAC
+Sam Darnold,30973,Sea,QB,,,Sep 24 4:21 AM,Y,Final W 30-23 vs LAC
+J.K. Dobbins,32725,Den,RB,,,Sep 24 3:56 AM,Y,Final L 14-24 @ SF
+Dareke Young,34189,LV,WR,,,Sep 24 2:46 AM,N,Final L 27-30 vs KC
+Malik Nabers,40899,NYG,WR,,,Sep 24 1:36 AM,Y,Final W 36-24 vs Ari
+Ty Johnson,32018,Buf,RB,,,Sep 23 3:36 AM,N,Final L 26-29 vs NE
+Jauan Jennings,32887,Min,WR,,,Sep 23 3:16 AM,Y,Final W 15-10 vs Mia
+Dontae Fleming,42255,Min,WR,,,Sep 22 3:51 AM,N,Final W 15-10 vs Mia
+Sam Scott,43209,NYJ,RB,,,Sep 22 2:56 AM,N,Final L 12-23 @ Chi
+Malick Meiga,43460,Sea,WR,,,Sep 22 2:06 AM,N,Final W 30-23 vs LAC
+Nick Muse,34183,Atl,TE,,,Sep 22 1:06 AM,N,Mon 8:15 pm @ NO
+Tua Tagovailoa,32675,Atl,QB,,,Sep 22 1:06 AM,N,Mon 8:15 pm @ NO
+Brian Robinson,34054,Atl,RB,,,Sep 22 1:06 AM,N,Mon 8:15 pm @ NO
+Brenden Bates,41675,Jax,TE,,,Sep 21 2:21 AM,N,Final W 22-17 @ Cin
+Bo Melton,34185,GB,WR,,,Sep 21 2:16 AM,N,Final W 17-14 @ TB
+Michael Penix Jr.,40889,Atl,QB,,,Sep 21 2:06 AM,N,Mon 8:15 pm @ NO
+Jordan Watkins,41917,SF,WR,,,Sep 21 12:11 AM,N,Final W 24-14 vs Den
+Athan Kaliakmanis,42845,Was,QB,,,Sep 21 12:06 AM,N,Final L 13-30 vs Ind
+Jalen Tolbert,34044,Mia,WR,,,Sep 21 12:06 AM,N,Final L 10-15 @ Min
+Elijah Moore,33422,Phi,WR,,,Sep 20 11:51 PM,N,Final L 20-24 vs LAR
+Quinn Ewers,42037,Jax,QB,,,Sep 20 11:51 PM,N,Final W 22-17 @ Cin
+Tanner Koziol,42797,Jax,TE,,,Sep 20 11:51 PM,N,Final W 22-17 @ Cin
+Kyler Murray,31833,Min,QB,,,Sep 20 11:31 PM,Y,Final W 15-10 vs Mia
+Ke'Shawn Williams,42278,Cin,WR,,,Sep 20 11:26 PM,N,Final L 17-22 vs Jax
+Josh Johnson,8937,Cin,QB,,,Sep 20 11:26 PM,N,Final L 17-22 vs Jax
+Case Keenum,26483,Chi,QB,,,Sep 20 11:26 PM,Y,Final W 23-12 vs NYJ
+Eddy Pineiro,31482,SF,K,,,Sep 20 12:11 AM,Y,Final W 24-14 vs Den
+Kaelon Black,42712,SF,RB,,,Sep 20 12:11 AM,Y,Final W 24-14 vs Den
+Chris Olave,33966,NO,WR,,,Sep 19 8:41 PM,N,Mon 8:15 pm vs Atl
+Joe Burrow,32671,Cin,QB,,,Sep 19 8:36 PM,N,Final L 17-22 vs Jax
+Seydou Traore,42790,Mia,TE,,,Sep 18 3:06 AM,N,Final L 10-15 @ Min
+George Kittle,30259,SF,TE,,,Sep 18 2:56 AM,Y,Final W 24-14 vs Den
+Brian Thomas Jr.,40883,Jax,WR,,,Sep 18 2:16 AM,N,Final W 22-17 @ Cin
+Samaje Perine,30227,Cin,RB,,,Sep 18 1:21 AM,N,Final L 17-22 vs Jax
+Oscar Delp,42695,NO,TE,,,Sep 17 11:26 PM,N,Mon 8:15 pm vs Atl
+Juwan Johnson,33113,NO,TE,,,Sep 17 11:26 PM,N,Mon 8:15 pm vs Atl
+Anthony Richardson Sr.,40040,Ind,QB,,,Sep 17 12:51 AM,N,Final W 30-13 @ Was
+Tory Horton,41952,Sea,WR,,,Sep 16 5:26 AM,Y,Final W 30-23 vs LAC
+Derius Davis,40133,LAC,WR,,,Sep 16 3:31 AM,N,Final L 23-30 @ Sea
+Devontez Walker,40991,Bal,WR,,,Sep 16 2:46 AM,N,Final W 24-18 vs Ten
+Sean Tucker,40742,TB,RB,,,Sep 16 2:31 AM,N,Final L 14-17 vs GB
+Josh Whyle,40182,GB,TE,,,Sep 16 2:16 AM,N,Final W 17-14 @ TB
+Alvin Kamara,30180,NO,RB,,,Sep 16 1:56 AM,N,Mon 8:15 pm vs Atl
+TreVeyon Henderson,41823,NE,RB,,,Sep 16 1:31 AM,N,Final W 29-26 @ Buf
+JuJu Smith-Schuster,30175,NYG,WR,,,Sep 15 6:26 AM,N,Final W 36-24 vs Ari
+Jerome Ford,34112,Min,RB,,,Sep 15 4:31 AM,N,Final W 15-10 vs Mia
+Tyler Badie,34152,Den,RB,,,Sep 14 8:41 PM,Y,Final L 14-24 @ SF
+Davis Allen,40164,LAR,TE,,,Sep 13 9:36 PM,N,Final W 24-20 @ Phi
+Nicholas Singleton,42763,Ten,RB,,,Sep 13 8:26 PM,N,Final L 18-24 @ Bal
+Treylon Burks,33973,Was,WR,,,Sep 13 8:26 PM,Y,Final L 13-30 vs Ind
+Dalen Cambre,42200,NYG,WR,,,Sep 13 8:21 PM,N,Final W 36-24 vs Ari
+Efton Chism III,42296,NE,WR,,,Sep 13 8:21 PM,Y,Final W 29-26 @ Buf
+Demond Claiborne,42820,Min,RB,,,Sep 13 8:21 PM,Y,Final W 15-10 vs Mia
+Max Klare,42683,LAR,TE,,,Sep 13 8:21 PM,N,Final W 24-20 @ Phi
+Najee Harris,33412,NYG,RB,,,Sep 13 8:21 PM,N,Final W 36-24 vs Ari
+J. Michael Sturdivant,43085,GB,WR,,,Sep 13 8:16 PM,N,Final W 17-14 @ TB
+Israel Abanikanda,40165,Dal,RB,,,Sep 13 8:16 PM,N,Final W 34-30 @ Hou
+Miller Moss,42902,Chi,QB,,,Sep 13 8:11 PM,N,Final W 23-12 vs NYJ
+John Metchie III,33999,Car,WR,,,Sep 13 8:11 PM,Y,Final W 32-26 vs Det
+Rome Odunze,40901,Chi,WR,,,Sep 12 8:36 PM,N,Final W 23-12 vs NYJ
+Will Kacmarek,42709,Mia,TE,,,Sep 11 1:11 AM,N,Final L 10-15 @ Min
+Zachariah Branch,42701,Atl,WR,,,Sep 10 11:06 PM,N,Mon 8:15 pm @ NO
+Jacory Croskey-Merritt,42010,Was,RB,,,Sep 10 10:21 PM,N,Final L 13-30 vs Ind
+Patrick Mahomes,30123,KC,QB,,,Sep 10 2:06 AM,Y,Final W 30-27 @ LV
+Drew Ogletree,34148,Ind,TE,,,Sep 10 1:06 AM,N,Final W 30-13 @ Was
+Joshua Pitsenberger,43098,Hou,RB,,,Sep 9 5:06 AM,N,Final L 30-34 vs Dal
+Cameron Dicker,34344,LAC,K,,,Sep 9 4:26 AM,Y,Final L 23-30 @ Sea
+John Bates,33512,Was,TE,,,Sep 9 3:21 AM,N,Final L 13-30 vs Ind
+Ashton Jeanty,41791,LV,RB,,,Sep 9 3:06 AM,Y,Final L 27-30 vs KC
+Tre' Harris,41840,LAC,WR,,,Sep 9 2:56 AM,Y,Final L 23-30 @ Sea
+Jaylin Noel,41885,Hou,WR,,,Sep 9 2:56 AM,Y,Final L 30-34 vs Dal
+Tucker Kraft,40102,GB,TE,,,Sep 9 2:41 AM,N,Final W 17-14 @ TB
+Khalil Shakir,34104,Buf,WR,,,Sep 9 2:36 AM,N,Final L 26-29 vs NE
+Emeka Egbuka,41804,TB,WR,,,Sep 9 2:06 AM,Y,Final L 14-17 vs GB
+Josh Downs,40126,Ind,WR,,,Sep 9 1:41 AM,N,Final W 30-13 @ Was
+Ben Skowronek,33637,Pit,WR,,,Sep 9 1:41 AM,N,Final L 24-27 @ Cle
+DK Metcalf,31896,Pit,WR,,,Sep 9 1:36 AM,N,Final L 24-27 @ Cle
+Carnell Tate,42626,Ten,WR,,,Sep 9 1:31 AM,N,Final L 18-24 @ Bal
+Wan'Dale Robinson,33998,Ten,WR,,,Sep 9 1:31 AM,Y,Final L 18-24 @ Bal
+Mitchell Trubisky,30115,Ten,QB,,,Sep 9 1:31 AM,N,Final L 18-24 @ Bal
+Tyler Warren,41799,Ind,TE,,,Sep 9 1:26 AM,N,Final W 30-13 @ Was
+Bhayshul Tuten,41900,Jax,RB,,,Sep 9 1:26 AM,N,Final W 22-17 @ Cin
+Theo Johnson,41003,NYG,TE,,,Sep 9 1:26 AM,N,Final W 36-24 vs Ari
+Isaiah Davis,41031,NYJ,RB,,,Sep 9 1:16 AM,N,Final L 12-23 @ Chi
+Luther Burden III,41824,Chi,WR,,,Sep 9 1:16 AM,N,Final W 23-12 vs NYJ
+Sam LaPorta,40064,Det,TE,,,Sep 9 1:06 AM,Y,Final L 26-32 @ Car
+Chuba Hubbard,33514,Car,RB,,,Sep 9 12:41 AM,Y,Final W 32-26 vs Det
+Jacob Cowing,40996,SF,WR,,,Sep 8 5:06 AM,N,Final W 24-14 vs Den
+Jack Stoll,33891,SF,TE,,,Sep 8 3:36 AM,N,Final W 24-14 vs Den
+Christian McCaffrey,30121,SF,RB,,,Sep 8 3:21 AM,Y,Final W 24-14 vs Den
+Isaiah Bond,42598,Cle,WR,,,Sep 6 11:26 PM,N,Final W 27-24 vs Pit
+Emanuel Wilson,40707,Sea,RB,,,Sep 6 4:56 AM,Y,Final W 30-23 vs LAC
+Brayden Willis,40261,SF,TE,,,Sep 5 2:26 AM,N,Final W 24-14 vs Den
+Brock Lampe,42293,Buf,RB,,,Sep 3 3:16 AM,N,Final L 26-29 vs NE
+Kalel Mullings,41986,Ten,RB,,,Sep 2 9:06 AM,N,Final L 18-24 @ Bal
+Cedric Tillman,40093,NO,WR,,,Sep 2 6:21 AM,N,Mon 8:15 pm vs Atl
+Kenneth Walker III,33996,KC,RB,,,Sep 1 10:06 PM,Y,Final W 30-27 @ LV
+Brandon Smith,33710,Pit,WR,,,Aug 31 2:26 AM,N,Final L 24-27 @ Cle
+Cam Camper,42212,NYJ,WR,,,Aug 30 9:46 PM,N,Final L 12-23 @ Chi
+Jawhar Jordan,41064,Hou,RB,,,Aug 30 8:56 PM,N,Final L 30-34 vs Dal
+Ihmir Smith-Marsette,33545,Car,WR,,,Aug 30 8:56 PM,N,Final W 32-26 vs Det
+Dayton Wade,41262,Bal,WR,,,Aug 30 7:16 PM,N,Final W 24-18 vs Ten
+Jalin Hyatt,40128,NYG,WR,,,Aug 30 6:21 AM,N,Final W 36-24 vs Ari
+Tez Johnson,42030,TB,WR,,,Aug 30 4:49 AM,N,Final L 14-17 vs GB
+Elijah Higgins,40226,Ari,TE,,,Aug 30 4:49 AM,N,Final L 24-36 @ NYG
+Michael Trigg,42887,Dal,TE,,,Aug 30 4:49 AM,N,Final W 34-30 @ Hou
+Lan Larison,42284,NE,RB,,,Aug 30 4:49 AM,N,Final W 29-26 @ Buf
+Phil Mafah,42018,NYG,RB,,,Aug 30 4:49 AM,N,Final W 36-24 vs Ari
+Jabari Small,41661,Det,RB,,,Aug 30 4:49 AM,N,Final L 26-32 @ Car
+Anthony Gould,41046,Ind,WR,,,Aug 30 4:49 AM,N,Final W 30-13 @ Was
+Britain Covey,34378,Phi,WR,,,Aug 30 4:49 AM,N,Final L 20-24 vs LAR
+Sione Vaki,41006,Det,RB,,,Aug 30 4:49 AM,N,Final L 26-32 @ Car
+Quentin Johnston,40051,LAC,WR,,,Aug 30 4:49 AM,Y,Final L 23-30 @ Sea
+Carsen Ryan,42870,Cle,TE,,,Aug 30 4:49 AM,N,Final W 27-24 vs Pit
+Xavier Worthy,40877,KC,WR,,,Aug 30 4:49 AM,Y,Final W 30-27 @ LV
+Bub Means,41045,Cle,WR,,,Aug 25 12:36 AM,N,Final W 27-24 vs Pit
+Quinshon Judkins,41821,Cle,RB,,,Aug 24 11:26 PM,N,Final W 27-24 vs Pit
+Cade Otton,34062,TB,TE,,,Aug 24 8:46 PM,N,Final L 14-17 vs GB
+Parker Washington,40234,Jax,WR,,,Aug 24 7:31 PM,N,Final W 22-17 @ Cin
+Rasheen Ali,41033,Bal,RB,,,Aug 24 3:11 AM,N,Final W 24-18 vs Ten
+Makai Lemon,42642,Phi,WR,,,Aug 23 9:51 PM,N,Final L 20-24 vs LAR
+Dameon Pierce,34063,Phi,RB,,,Aug 23 9:26 PM,N,Final L 20-24 vs LAR
+Jaydon Blue,41935,Phi,RB,,,Aug 22 9:11 AM,N,Final L 20-24 vs LAR
+Kevin Coleman Jr.,42768,Mia,WR,,,Aug 22 3:56 AM,Y,Final L 10-15 @ Min
+Trayveon Williams,32014,Det,RB,,,Aug 22 12:51 AM,N,Final L 26-32 @ Car
+Jacob Saylors,40474,Det,RB,,,Aug 22 12:06 AM,N,Final L 26-32 @ Car
+Brenden Rice,41098,LV,WR,,,Aug 19 2:56 AM,N,Final L 27-30 vs KC
+Jameson Williams,33967,Det,WR,,,Aug 19 2:06 AM,Y,Final L 26-32 @ Car
+Bryce Lance,42758,NO,WR,,,Aug 19 1:56 AM,N,Mon 8:15 pm vs Atl
+Ronnie Bell,40279,LV,WR,,,Aug 18 4:31 AM,N,Final L 27-30 vs KC
+Zavion Thomas,42711,Chi,WR,,,Aug 17 10:51 PM,N,Final W 23-12 vs NYJ
+Nick Mullens,30563,Jax,QB,,,Aug 17 7:21 PM,N,Final W 22-17 @ Cin
+Geno Smith,26662,NYJ,QB,,,Aug 17 6:41 PM,N,Final L 12-23 @ Chi
+Garrett Wilson,33965,NYJ,WR,,,Aug 17 6:06 PM,N,Final L 12-23 @ Chi
+Khalil Dinkins,42972,SF,TE,,,Aug 17 5:36 AM,N,Final W 24-14 vs Den
+Blake Watson,41388,Ten,RB,,,Aug 17 1:11 AM,N,Final L 18-24 @ Bal
+Craig Reynolds,32596,Was,RB,,,Aug 16 7:06 PM,N,Final L 13-30 vs Ind
+Jake Browning,32138,TB,QB,,,Aug 16 6:16 PM,N,Final L 14-17 vs GB
+Michael Wiley,41234,TB,RB,,,Aug 16 3:16 AM,N,Final L 14-17 vs GB
+Gavin Bartholomew,41994,Min,TE,,,Aug 15 10:41 PM,N,Final W 15-10 vs Mia
+Kaden Wetjen,42743,Pit,WR,,,Aug 15 8:26 PM,N,Final L 24-27 @ Cle
+M. Valdes-Scantling,31144,LAC,WR,,,Aug 15 8:26 AM,N,Final L 23-30 @ Sea
+Jordan Addison,40042,Min,WR,,,Aug 15 7:31 AM,Y,Final W 15-10 vs Mia
+Josh Reynolds,30230,NYJ,WR,,,Aug 15 1:21 AM,N,Final L 12-23 @ Chi
+Jaleel McLaughlin,40696,Cle,RB,,,Aug 14 5:36 AM,N,Final W 27-24 vs Pit
+Laquon Treadwell,29257,Ind,WR,,,Aug 13 9:41 PM,N,Final W 30-13 @ Was
+Jahmyr Gibbs,40059,Det,RB,,,Aug 13 6:31 PM,Y,Final L 26-32 @ Car
+Darren Waller,28592,Car,TE,,,Aug 12 5:36 AM,Y,Final W 32-26 vs Det
+Trevor Siemian,28638,Ten,QB,,,Aug 12 2:51 AM,N,Final L 18-24 @ Bal
+Matthew Golden,41808,GB,WR,,,Aug 10 9:06 PM,Y,Final W 17-14 @ TB
+Greg Dulcich,34036,Mia,TE,,,Aug 10 12:56 AM,N,Final L 10-15 @ Min
+Nate Adkins,40702,Den,TE,,,Aug 9 8:56 PM,N,Final L 14-24 @ SF
+Elic Ayomanor,41904,Ten,WR,,,Aug 7 4:36 AM,N,Final L 18-24 @ Bal
+Cyrus Allen,42773,KC,WR,,,Aug 6 7:11 PM,N,Final W 30-27 @ LV
+Romeo Doubs,34088,NE,WR,,,Aug 6 6:36 PM,N,Final W 29-26 @ Buf
+Bryce Pierre,42274,Car,TE,,,Aug 6 3:51 AM,N,Final W 32-26 vs Det
+Michael Mayer,40065,LV,TE,,,Aug 5 9:56 PM,Y,Final L 27-30 vs KC
+Josh Kattus,43058,Cin,TE,,,Aug 5 7:06 PM,N,Final L 17-22 vs Jax
+Jermaine Terry,42446,Cle,TE,,,Aug 5 3:26 AM,N,Final W 27-24 vs Pit
+Cam Grandy,41353,Min,TE,,,Aug 5 2:46 AM,N,Final W 15-10 vs Mia
+KC Concepcion Jr.,42646,Cle,WR,,,Aug 5 12:56 AM,N,Final W 27-24 vs Pit
+Ben VanSumeren,40518,KC,RB,,,Aug 4 9:51 PM,N,Final W 30-27 @ LV
+CJ Dippre,42291,TB,TE,,,Aug 4 8:21 PM,N,Final L 14-17 vs GB
+Zach Ertz,26658,Phi,TE,,,Aug 4 6:56 PM,N,Final L 20-24 vs LAR
+Chris Rodriguez Jr.,40231,Jax,RB,,,Aug 3 2:46 AM,Y,Final W 22-17 @ Cin
+Joseph Manjack,43076,Den,WR,,,Aug 3 12:06 AM,N,Final L 14-24 @ SF
+Donald Parham Jr.,32456,Pit,TE,,,Aug 1 1:51 AM,N,Final L 24-27 @ Cle
+Cody Hardy,43161,NYJ,TE,,,Jul 31 2:41 AM,N,Final L 12-23 @ Chi
+Mitchell Evans,41949,Car,TE,,,Jul 31 12:41 AM,N,Final W 32-26 vs Det
+Kenny McIntosh,40267,Sea,RB,,,Jul 20 1:21 AM,N,Final W 30-23 vs LAC
+Quentin Skinner,42223,Buf,WR,,,Jul 13 3:06 AM,N,Final L 26-29 vs NE
+Montrell Johnson Jr.,42173,Car,RB,,,May 20 2:06 AM,N,Final W 32-26 vs Det

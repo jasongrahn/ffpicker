@@ -281,11 +281,34 @@ Target share and carry share predict themselves. Touchdown rate does not. Any mo
 fails to aggressively regress efficiency is fooling itself, and most public projections
 do. This principle governs feature selection in Layer 2 and shrinkage in Layer 3.
 
-### Game script. Measured 2026-09-23, use it instead of guessing.
+### Game script. Measured 2026-09-23, REMEASURED AS A SLOPE 2026-10-07. Use the slope.
 
 Vegas spread moves fantasy points **by position, and only for some positions.** Measured
 on 2024-25 starter-calibre player-weeks, scored as points **relative to each player's own
-season average** so player quality cancels out. Harness: `dev/weekly/` scratch, rerunnable.
+season average** so player quality cancels out. Harness `dev/weekly/mult_measure.R`,
+rerunnable.
+
+**Use the slope, not the buckets.** The bucket table below was the 09-23 instrument and
+is kept for reference, but buckets run n=24-40 per cell and **only 1 of 22 cells is
+significantly different from 1.0** (RB fav3-7, 1.081, CI [1.013, 1.148]). Regressing
+relative points on favouredness pools every bucket and is far better powered:
+
+| position | n | slope / pt of spread | p | implied at 7-pt dog |
+|---|---|---|---|---|
+| **RB** | 779 | **+0.00799** | **0.0109** | **0.944** |
+| WR | 1132 | -0.00129 | 0.679 | ~1.00, flat |
+| QB | 398 | +0.00562 | 0.102 | ~1.00, flat |
+
+RB-vs-WR interaction coefficient **-0.00928, p = 0.0406** -> the two positions genuinely
+respond differently. This is the strongest game-script evidence in the log.
+
+Multiplier for an RB = `1 + 0.00799 * favouredness`. WR and QB get **1.0**; do not apply
+a WR multiplier at all, in either direction. The published WR fav3-7 1.059 did not
+survive the rebuild (came back 1.006) and was noise.
+
+The slope is linear, so it **extends past the measured buckets** — this is why it
+replaced them. The old table stopped at dog 3-7 and had nothing to say about a 7-point
+dog, which is exactly the case that came up in wk5 (Gordon II, MIA -7.0).
 
 | position | dog 3-7 | fav 0-3 | **fav 3-7** | fav 10+ |
 |---|---|---|---|---|
@@ -307,6 +330,76 @@ capped at -11.5" argument that was about to become advice.
 
 Also: high game total helps RBs (47+ -> 1.061 vs 0.939 at 41-44).
 
+**Under a ~5% gap the multiplier is NOT the tiebreaker. Backtested 2026-10-06.**
+Harness `dev/weekly/mult_backtest.R`, rerunnable, all four frozen `_myteam.csv` /
+`_opponent.csv` files, both rosters, n=45 player-weeks.
+
+Accuracy verdict is **inconclusive and always will be**: MAE 6.444 raw -> 6.595 adjusted,
+delta **+0.151**, 95% bootstrap CI **[-0.084, +0.397]**, p=0.226. No sign error, no bucket
+mis-assignment — the only things n=4 weeks could have caught. A multiplier moves a
+projection ~5%, ~0.60 pts on a typical 12-pt projection, against per-player-week error of
+**6.44**. Signal:noise ~1:10; resolving it needs ~1,000 player-weeks. **The table was
+measured on 2024-25 league-wide data — that is the right instrument. Our weekly logs are
+not. Do not score "do the multipliers work" in a retro.** See
+`single-seed-bars-underpowered`.
+
+Double-counting was checked and not found: Pearson(favouredness, Yahoo proj / own ppg) =
++0.129, n=39. Yahoo does not visibly price the spread, so applying ours is not #33's "one
+source counted twice".
+
+What the backtest *did* establish: **decision impact is 2.3%** — 5 of 220 FLEX-eligible
+pairs reordered across wks 1-4. The adjustment only changes a choice when two players sit
+within ~5% of each other. Same shape as the QB cliff above: a half-point line move
+swinging a number 9.5% is not measuring anything.
+
+**RULE RETIRED 2026-10-13. Inside that band NOTHING arbitrates — start the higher raw
+Yahoo projection and stop.** Do not break the tie on the spread, and do not revert to
+usage either. Harness `dev/weekly/spread_tiebreak_leaguewide.R`, rerunnable.
+
+The spread tiebreak was adopted 10-07 on reasoning, never on a decision test. It got one.
+All **10 rosters** rebuilt from the `Roster Status` column of the week-4/5 position
+*actual* exports, every within-5% RB/WR/TE pair scored raw ordering vs spread-adjusted
+ordering against actuals. Only **discordant** pairs — where the rule changes the pick —
+carry information.
+
+| scope | pairs within 5% | discordant | spread pick right | 95% CI | p |
+|---|---|---|---|---|---|
+| 10 rosters, wks 4-5 | 75 | 17 (22.7%) | 6 (35.3%) | [0.142, 0.617] | 0.33 |
+| pool-wide, wks 4-5 | 1,497 | 240 (16.0%) | 114 (47.5%) | [0.410, 0.540] | 0.48 |
+| pool-wide, excl. actual == 0 | — | **215** | **105 (48.8%)** | **[0.420, 0.557]** | 0.79 |
+
+Points: **-0.488/decision**, CI [-1.77, +0.80]. No favouredness bucket escapes chance
+(dog7+ 43.6% n=55 … fav7+ 44.4% n=27). The CI **excludes accuracy above 55.7%**. 16%
+discordance replicates the 2.3%-of-all-pairs figure above.
+
+**The double-count theory is dead too, in the other direction.** Pearson(favouredness,
+Yahoo proj / own season ppg) re-run at **n = 190** (was 39): **r = -0.036, p = 0.62, CI
+[-0.177, +0.107]** — RB -0.094, WR +0.018, TE -0.080. The 10-07 **+0.129 at n=39 was
+noise**. Yahoo genuinely does not price the spread, *and* adding it still loses. So the
+10-07 premise was right and its conclusion was still wrong — orthogonal information is
+not automatically usable information.
+
+Cause is arithmetic, not a defect. 0.00799 x 7 = **5.6%, ~0.6 pts** on a 10-pt
+projection, against ~8-9 pts of variance between two actuals inside a 5% band. **A 0.6-pt
+edge cannot arbitrate a 9-pt coin flip at the pair level**, however real it is in the mean.
+
+**The slope itself survives** (RB +0.00799/pt, p = 0.0109, n = 779). Keep using it to
+describe and report an RB's expected week. Note *why* it does not transfer to a tiebreak:
+the slope was measured on points **relative to a player's own season average**, and season
+ppg is our worst non-trivial baseline (MAE 7.32 vs Yahoo's 4.29). A multiplier calibrated
+against a weak baseline does not transfer onto a strong one. That mismatch is the bug.
+
+Also unchanged: the `mult_measure.R` 2026 rerun at season end is still the slope's kill
+condition. The RB coefficient in this check came back -0.0060 at p = 0.48 — **noise, not a
+sign flip.** Do not read it as one.
+
+Worked wk5 case, now closed: Gordon II (RB, MIA -7.0, proj 9.80 -> 9.25 adj) vs Boston
+(WR, proj 9.69). Started Boston on the spread tiebreak. Gordon 14.80, Boston 12.10,
+**-2.70**. The user caught the original Gordon/Tate framing on the grounds he faced a top
+defence, which is what triggered the slope rebuild — good instinct, and the slope is real;
+it just cannot pick between two players. One player-week is not what killed the rule.
+**The 215-pair test is.**
+
 ### Streaming K and DST. The only near-free weekly lever.
 
 One roster spot each, no opportunity cost, and both slots are forced — so a matchup swap
@@ -315,8 +408,23 @@ costs nothing but the claim. **DST scoring is dominated by points allowed**
 so rank candidates by **opponent implied total** (`total/2 - spread/2`), lowest first.
 Rank kickers by **own implied total**, highest first.
 
-Under test since Week 3 with a deliberately loose >3 pt kill bar, because the *method* is
-on trial, not the player. Do not call it validated until several weeks have scored.
+**DST side VALIDATED league-wide 2026-10-06.** No longer under test. All 32 teams,
+weeks 1-4, **n=128** team-weeks, DST points derived from `load_team_stats()` +
+`config/scoring.json` tiers. Harness `dev/weekly/dst_test.R`.
+
+- opponent implied total -> DST pts: **r = -0.275, p = 0.0017**, CI [-0.428, -0.107]
+- own implied total -> DST pts: r = -0.021, **p = 0.81** — correctly irrelevant, which
+  confirms we rank on the right side of the line
+- edge **+1.92 pts/wk** over a random DST; within-week Spearman +0.308
+
+Two refinements tested and **rejected**: the lowest quartile scoring below the second is
+noise (p = 0.291), and game total adds nothing on top (coef p = 0.200). **Rank on
+opponent implied total alone.**
+
+Ceiling: opp_implied explains only **7.6%** of DST variance — the rest is turnovers and
+return TDs, which are not forecastable. The edge is **0.39 sd**, so the rule will look
+wrong in individual weeks and still be right. **Do not kill it on a bad week**; the >3 pt
+kill bar is retired for DST. K side remains untested (no league-wide K harness yet).
 
 ### Snake turn structure
 
@@ -395,12 +503,116 @@ so passing on a positional run costs less. Recommendations must be slot-aware.
 - **Yahoo's position pages and matchup page disagree at the second decimal.** Same player,
   same week, ~0.02 apart. Pick one surface deliberately and say which; the **matchup page**
   is what a lineup decision is actually made against.
+- **No `rosterchanges_*` file is a roster snapshot.** `rosterchanges_league_team` carries
+  fantasy team names in `Roster Status` and plausible counts, yet disagreed with the frozen
+  week-5 lineup on **3 of 15 slots** while listing same-day waiver adds as present — it is
+  mid-transaction and internally inconsistent, not merely stale. Second debt on this family
+  after the IR one. **Rosters come from the six position exports** (`_qb_`, `_rb_`, `_wr_`,
+  `_te_`, `_k_`, `_def_`) via `dev/weekly/read_yahoo_week.R`. The `*_actual_*` position
+  exports carry owners in `Roster Status` too, which reconstructs **all ten** rosters
+  cleanly — that is how the week-5 league-wide tests were run.
+- **DEF team naming flips between vintages inside the same week.** The projection export
+  names teams by **city**, the `*_actual_*` export by **nickname**: `Jacksonville|Jax|6.90`
+  becomes `Jaguars|Jax|2.00`. Worse, the projection file emits `New York` **twice** —
+  NYJ and NYG — so the name is not even unique within one file. This is the cause behind
+  the standing "DEF never joins on name" rule. Join on the `Team` abbrev and
+  `stopifnot()` the map.
+- **The export has no started/bench flag.** Opponent starters are therefore not
+  recoverable after the fact, only bounded by enumerating legal lineups (week 5: 47 of 84
+  lose). This is why loop step 2 — freeze **both** lineups pre-kickoff — is load-bearing
+  rather than bookkeeping. Skipping it cost the week-5 opponent total permanently.
 - **Log the opponent's lineup pre-kickoff**, not just ours. It makes projection error
   measurable on both sides against the same model, and it exposes head-to-head structure
   invisible from one roster — e.g. our RB and their QB being teammates damps the margin.
 - **Correlation is not the thing to avoid — paying for it is.** A stack that costs
   projected points to buy shared upside loses; concentration that arrives for free while
   *gaining* points is fine. Flag it either way, and give it a kill condition.
+- **Need before candidates. Never infer a positional need from a candidate looking good.**
+  Any add/drop question runs in this order: (1) roster counts by position + bye week per
+  player, byes derived as `setdiff(all_weeks, weeks_played)` from `load_schedules(2026)`;
+  (2) per bye week, ask *am I actually short a startable body at that slot* — **FLEX
+  absorbs a lot, and 4 RBs for 2 RB slots is depth, not a hole**; (3) only then rank the
+  free-agent pool, and (4) pick the drop by usage trend, not ppg. Cost of skipping step 1, measured 2026-09-29: ranked the pool, saw
+  falling RB opportunity, called RB the hole. Wrong — real holes were **K (wk5, zero
+  kickers)** and **TE (1-deep all season, zero in wk14)**. If the sentence "X is your
+  hole" is being written, the depth and bye tables must already be on screen.
+- **`data/weekly/2026_weekNN_myteam.csv` can lag the decision log.** It is written at
+  lineup-log time and does not get rewritten when a decision reverses. The wk4 file still
+  listed Stroud, B. Allen, and Gainwell after D8/D1/D9 killed all three. **The decision
+  log's `LIVE` / `CANCELLED` / `NEW` rows are authoritative for who is rostered**; the csv
+  is authoritative only for what was projected at freeze time.
+- **The drop is ranked the same way as the add: snap share and target trend, never ppg.**
+  ppg embeds exactly the efficiency the core principle says to regress, so it mis-ranks
+  your own bench in both directions at once. Cost, measured 2026-10-06: handoff #36 called
+  **Sutton** the drop at 3.28 ppg, "worst on roster by 2.5x," and a session relayed it.
+  The real drop was **Raymond** at 9.63 ppg — snap share **60/62/75/51**, third in the CHI
+  room behind rookie Luther Burden III, 91% catch rate on aDOT 5.7 that regresses *down*.
+  Sutton held **73-87%** snaps and a 5.5 tgt/g #1 boundary role at aDOT 11.5 on a **41%**
+  catch rate that regresses *up*. Yahoo's own wk5 projections had them 8.96 vs **5.71**.
+  Identical byes (CHI and DEN both wk10), so byes did not discriminate — usage did. **The
+  user caught this, not the analysis.** Pull `load_snap_counts()` before naming any drop.
+- **A handoff doc is a prior claim, not a source.** Its roster rankings, drop candidates,
+  projections and ppg figures were derived from data that has since moved, by the same
+  reasoning now under review. Re-derive from `load_player_stats()`, `load_snap_counts()`
+  and the newest `docs/uploads/week_NN_data/` export before acting on an add/drop or
+  quoting a number. Same failure shape as treating `load_schedules()` output as fact
+  rather than a snapshot — and note handoff #36 §4's FLEX line (Raymond 9.62 / Odunze
+  7.58) is **season ppg, not a week-5 projection**, so the "we trail by 1.61" figure
+  inherits the ppg error.
+- **The Yahoo projection is the best one-week point estimate available to us. Do not
+  override it with our own numbers. Measured 2026-10-06, `dev/weekly/proj_benchmark.R`,
+  week 4, 221 startable players.** MAE: Yahoo **4.29**, opportunity x position rate 6.71,
+  season ppg 7.32, last week only 7.70. Paired t-test vs the best baseline **-2.42,
+  p < 0.0001**, CI [-3.22, -1.63]. Yahoo wins at every position (QB 3.50 vs 7.18, RB 4.29
+  vs 6.51, TE 4.29 vs 4.95, WR 4.69 vs 7.25). **Season ppg is the worst non-trivial
+  baseline** — that is the Sutton/Raymond error quantified, since Yahoo's own proj had
+  Sutton 8.96 vs Raymond 5.71 and the ppg ranking threw that away.
+
+  So opportunity and snap-share analysis has **three jobs, and start/sit is not one of
+  them**: (1) rank the wire, where projections are thin or absent; (2) catch a role change
+  the projection has not absorbed yet — a backfield vacated mid-week, a rookie taking over
+  a route tree; (3) **choose the drop**, which is a question about future role, not about
+  this week's points. For a start/sit call between two rostered players, read the
+  projection and stop.
+
+- **The lineup layer is already at its ceiling. Do not spend the week there. Measured
+  2026-10-06, `dev/weekly/proj_vs_choice.R`.** Compared what we started against the
+  projection-optimal lineup and the hindsight optimum, weeks 1-4:
+
+  | | 4-wk total |
+  |---|---|
+  | started | 456.12 |
+  | projection-optimal | 456.92 |
+  | hindsight-optimal | 530.54 |
+  | regret from **our deviations** | **+0.80 (1%)** |
+  | regret from **projection error** | **+73.62 (99%)** |
+
+  **Four weeks of start/sit work has cost 0.80 points — 0.20/wk.** We follow the
+  projection near-perfectly already; 99% of the 74.42 regret is the projection being
+  wrong, which we cannot fix. The pooled positional leak (WR 46.90, QB 23.52, K 12.00,
+  DEF 0.00, TE 0.00) therefore does **not** mean we benched the right WR — it means the
+  projection could not say which WR would hit. TE leaking zero is the same artifact
+  inverted: 1-deep means there was never a choice to get wrong, so the "TE hole" has cost
+  nothing to date.
+
+  For scale, week 4: lineup error **27.10**, roster error **66.76**. **Leverage is roster
+  quality and the two free streaming slots, not weekly lineup optimization.** A regret
+  number is still worth logging — it measures the projection, not us.
+
+- **The wire has two phases per week, and priority only matters in the first.** Yahoo
+  dumps every unowned player onto waivers after Sunday games; they clear Wednesday.
+  Week 4 WR export (Sat 10-04): **FA 360 / owned 54 / W 51**. Week 5 WR export
+  (Mon 10-06): **FA 0 / owned 53 / W 412**. Before the clear, priority gates everything;
+  after it, the pool is first-come and priority is irrelevant. **A Thursday/Friday second
+  look is free and spends no priority** — take it. Also: any availability filter over an
+  export must treat `FA` *and* `W (...)` as available. A `^W \(` -only filter understated
+  the week 4 pool by 360 WRs.
+
+- **A replacement level is only as good as the pool it is taken from.** Median ppg over a
+  280-row Yahoo free-agent export is ~1.5-2.3 for RB/WR/TE because the pool is mostly
+  inactive bodies -> every waiver body shows a large fake VOR. Rank the wire on
+  **opportunity and its week-over-week trend**, and bar anyone under ~5 opp/g before
+  ranking at all.
 - Every model outputs a distribution, not a point estimate.
 - Validate the config early and fail loudly. A bad `league.json` should not reach a model fit.
 - **Docs written in `/caveman` style.** Repo rule. Applies to `PLAN_1.md`, `CONTEXT.md`,

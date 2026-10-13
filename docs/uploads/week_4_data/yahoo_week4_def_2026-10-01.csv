@@ -1,0 +1,33 @@
+Player,Team,Positions,Game,Roster Status,GP*,Bye,Fantasy Fan Pts,Rankings Pre-Season,Rankings Actual,Trends % Ros,Pts vs.*,Tackles Sack,Tackles Safe,Turnovers Int,Turnovers Fum Rec,TD,Misc Blk Kick,Ret TD
+Vikings,Min,DEF,Sun 4:05 pm vs Mia,Owl Out Blitz,-,6,8.71,166,113,95%,17.5,3.5,0.0,0.8,0.5,0.2,0.1,0.1
+Seahawks,Sea,DEF,Sun 4:25 pm vs LAC,Locked In Michelle,-,11,8.29,149,129,99%,19.9,3.1,0.0,0.9,0.5,0.2,0.1,0.0
+Steelers,Pit,DEF,Thu 8:15 pm @ Cle,Max’s TD Bombers,-,9,7.80,188,150,85%,18.4,3.2,0.0,0.6,0.5,0.1,0.1,0.0
+Ravens,Bal,DEF,Sun 1:00 pm vs Ten,JGrahnasaurs,-,13,7.58,189,157,85%,19.2,2.6,0.0,0.7,0.5,0.2,0.1,0.0
+Bears,Chi,DEF,Sun 1:00 pm vs NYJ,FA,-,10,7.45,324,161,48%,22.4,2.9,0.0,0.8,0.5,0.1,0.1,0.0
+Packers,GB,DEF,Sun 1:00 pm @ TB,FA,-,11,7.34,"2,094",163,41%,20.4,2.6,0.0,0.8,0.5,0.2,0.1,0.0
+Bills,Buf,DEF,Sun 1:00 pm vs NE,FA,-,7,6.91,210,181,43%,22.6,2.9,0.0,0.7,0.5,0.2,0.1,0.0
+Browns,Cle,DEF,Thu 8:15 pm vs Pit,FA,-,11,6.65,219,186,13%,19.8,2.6,0.0,0.6,0.4,0.1,0.1,0.0
+Chiefs,KC,DEF,Sun 4:25 pm @ LV,W (Oct 3),-,5,6.44,186,193,52%,22.4,2.5,0.0,0.7,0.5,0.2,0.1,0.0
+Colts,Ind,DEF,Sun 9:30 am @ Was,FA,-,13,6.19,"2,075",199,2%,23.2,2.2,0.0,0.8,0.5,0.2,0.1,0.0
+Texans,Hou,DEF,Sun 1:00 pm vs Dal,Sunday Kevin,-,8,6.09,159,201,89%,23.6,2.2,0.0,0.7,0.4,0.2,0.1,0.0
+Falcons,Atl,DEF,Mon 8:15 pm @ NO,FA,-,11,6.07,337,203,2%,24.1,2.9,0.0,0.7,0.5,0.1,0.1,0.0
+Cardinals,Ari,DEF,Sun 1:00 pm @ NYG,FA,-,14,6.00,"2,088",208,4%,22.2,2.3,0.0,0.8,0.5,0.1,0.1,0.0
+Rams,LAR,DEF,Sun 1:00 pm @ Phi,Maybe Mitchell,-,11,5.94,181,210,87%,22.2,2.1,0.0,0.6,0.4,0.2,0.1,0.0
+Lions,Det,DEF,Sun 8:20 pm @ Car,FA,-,6,5.82,271,212,34%,25.3,2.4,0.0,0.7,0.5,0.2,0.1,0.0
+Saints,NO,DEF,Mon 8:15 pm vs Atl,FA,-,8,5.80,272,215,6%,22.1,2.4,0.0,0.6,0.5,0.1,0.1,0.1
+Buccaneers,TB,DEF,Sun 1:00 pm vs GB,Steel City,-,10,5.69,246,217,12%,20.2,2.1,0.0,0.6,0.4,0.1,0.1,0.0
+Bengals,Cin,DEF,Sun 1:00 pm vs Jax,FA,-,6,5.65,233,219,25%,24.4,2.3,0.0,0.7,0.4,0.1,0.1,0.0
+Eagles,Phi,DEF,Sun 1:00 pm vs LAR,Monday Night Madison,-,10,5.60,171,221,74%,22.1,1.8,0.0,0.7,0.4,0.1,0.1,0.0
+49ers,SF,DEF,Sun 4:25 pm vs Den,Dave’s Bone Crushers,-,8,5.34,204,228,40%,22.9,1.6,0.0,0.7,0.5,0.2,0.1,0.0
+Giants,NYG,DEF,Sun 1:00 pm vs Ari,Max’s TD Bombers,-,8,5.33,306,229,6%,23.0,2.1,0.0,0.6,0.5,0.1,0.1,0.0
+Chargers,LAC,DEF,Sun 4:25 pm @ Sea,FA,-,7,5.26,192,230,18%,23.1,1.9,0.0,0.7,0.4,0.1,0.1,0.0
+Jets,NYJ,DEF,Sun 1:00 pm @ Chi,FA,-,13,5.23,"2,110",231,2%,22.2,1.9,0.0,0.6,0.4,0.1,0.1,0.0
+Jaguars,Jax,DEF,Sun 1:00 pm @ Cin,FA,-,7,5.20,184,234,55%,26.3,2.1,0.0,0.7,0.4,0.2,0.1,0.0
+Commanders,Was,DEF,Sun 9:30 am vs Ind,FA,-,7,5.19,"2,078",235,1%,25.6,2.2,0.0,0.7,0.4,0.1,0.1,0.0
+Broncos,Den,DEF,Sun 4:25 pm @ SF,Jason's Jazzy Team,-,10,5.17,170,236,82%,24.3,1.8,0.0,0.7,0.4,0.2,0.1,0.0
+Raiders,LV,DEF,Sun 4:25 pm vs KC,FA,-,13,5.05,327,238,13%,24.4,2.3,0.0,0.6,0.4,0.1,0.1,0.0
+Cowboys,Dal,DEF,Sun 1:00 pm @ Hou,FA,-,14,5.01,"2,271",239,16%,24.9,2.0,0.0,0.6,0.4,0.1,0.1,0.0
+Patriots,NE,DEF,Sun 1:00 pm @ Buf,FA,-,11,4.94,183,243,55%,26.0,2.1,0.0,0.6,0.4,0.1,0.1,0.0
+Panthers,Car,DEF,Sun 8:20 pm vs Det,FA,-,5,4.89,328,245,12%,25.9,2.2,0.0,0.5,0.4,0.1,0.1,0.0
+Dolphins,Mia,DEF,Sun 4:05 pm @ Min,FA,-,6,4.65,"2,106",250,0%,22.0,1.9,0.0,0.5,0.4,0.1,0.1,0.0
+Titans,Ten,DEF,Sun 1:00 pm @ Bal,FA,-,9,4.50,"2,060",257,3%,24.0,2.1,0.0,0.5,0.4,0.1,0.1,0.0

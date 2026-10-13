@@ -1,0 +1,466 @@
+Player,Player ID,Team,Positions,Injury,Game,Roster Status,GP*,Bye,Fantasy Fan Pts,Rankings Pre-Season,Rankings Actual,Trends % Ros,Passing Yds,Passing TD,Passing Int,Rushing Att*,Rushing Yds,Rushing TD,Receiving Tgt*,Receiving Rec,Receiving Yds,Receiving TD,Ret TD,Misc 2PT,Fum Lost
+Tetairoa McMillan,41793,Car,WR,,Final W 32-26 vs Det,Dave’s Bone Crushers,1,5,38.20,40,1,99%,0,0,0,0,0,0,16,14,192,2,0,0,0
+CeeDee Lamb,32687,Dal,WR,,Final W 34-30 @ Hou,Owl Out Blitz,1,14,32.80,14,2,100%,0,0,0,1,-6,0,21,17,189,1,-,-,0
+Nico Collins,33477,Hou,WR,,Final L 30-34 vs Dal,Steel City,1,8,27.30,30,7,100%,0,0,0,0,0,0,8,7,118,2,-,-,0
+Tyquan Thornton,34005,KC,WR,O,Final W 30-27 @ LV,W (Oct 7),1,5,25.60,169,10,3%,0,0,0,0,0,0,8,5,111,2,-,-,0
+Puka Nacua,40168,LAR,WR,,Final W 24-20 @ Phi,Owl Out Blitz,1,11,23.20,12,15,100%,0,0,0,1,2,1,12,9,125,0,-,-,0
+Zay Flowers,40039,Bal,WR,,Final W 24-18 vs Ten,Jason's Jazzy Team,1,13,21.80,17,18,100%,0,0,0,0,0,0,10,8,118,1,-,-,0
+Tee Higgins,32703,Cin,WR,Q,Final L 17-22 vs Jax,Jason's Jazzy Team,1,6,21.20,38,20,99%,0,0,0,0,0,0,16,11,157,0,-,-,0
+Romeo Doubs,34088,NE,WR,,Final W 29-26 @ Buf,Maybe Mitchell,1,11,20.80,90,21,57%,0,0,0,0,0,0,9,6,58,2,-,-,0
+Keon Coleman,40911,Buf,WR,,Final L 26-29 vs NE,W (Oct 7),1,7,20.60,154,22,5%,0,0,0,0,0,0,7,6,116,1,-,-,0
+Malik Nabers,40899,NYG,WR,,Final W 36-24 vs Ari,Sunday Kevin,1,8,20.20,47,24,99%,0,0,0,0,0,0,7,6,112,1,-,-,0
+Carnell Tate,42626,Ten,WR,,Final L 18-24 @ Bal,W (Oct 7),1,9,17.00,108,38,80%,0,0,0,0,0,0,12,9,145,0,0,0,1
+Darius Cooper,42464,Phi,WR,,Final L 20-24 vs LAR,W (Oct 7),1,10,16.80,"2,081",40,0%,0,0,0,0,0,0,7,3,33,2,-,-,0
+Deebo Samuel Sr.,31868,SF,WR,,Final W 24-14 vs Den,Max’s TD Bombers,1,8,15.50,73,47,86%,0,0,0,3,44,0,6,5,26,1,0,0,0
+Roman Wilson,40952,Pit,WR,,Final L 24-27 @ Cle,W (Oct 7),1,9,14.90,286,51,3%,0,0,0,0,0,0,6,3,74,1,-,-,0
+Isaiah Williams,41421,NYJ,WR,,Final L 12-23 @ Chi,W (Oct 7),1,13,14.30,"2,084",55,2%,0,0,0,0,0,0,3,2,73,1,0,0,0
+DK Metcalf,31896,Pit,WR,,Final L 24-27 @ Cle,Jason's Jazzy Team,1,9,14.00,82,61,92%,0,0,0,0,0,0,9,5,115,0,-,-,0
+Jameson Williams,33967,Det,WR,,Final L 26-32 @ Car,Jason's Jazzy Team,1,6,13.20,57,70,95%,0,0,0,0,0,0,8,6,102,0,-,-,0
+Michael Wilson,40121,Ari,WR,,Final L 24-36 @ NYG,Maybe Mitchell,1,14,13.00,63,73,90%,0,0,0,0,0,0,13,7,95,0,-,-,0
+Rome Odunze,40901,Chi,WR,,Final W 23-12 vs NYJ,JGrahnasaurs,1,10,12.40,69,74,90%,0,0,0,0,0,0,7,6,94,0,-,-,0
+Malachi Fields,42696,NYG,WR,,Final W 36-24 vs Ari,W (Oct 7),1,8,12.20,200,76,7%,0,0,0,0,0,0,3,2,52,1,-,-,0
+Jaylen Waddle,33394,Den,WR,,Final L 14-24 @ SF,Owl Out Blitz,1,10,12.00,43,79,99%,0,0,0,0,0,0,6,5,35,1,-,-,0
+Rashid Shaheed,34659,Sea,WR,,Final W 30-23 vs LAC,Maybe Mitchell,1,11,11.80,148,86,33%,0,0,0,2,33,1,3,1,20,0,0,0,0
+Dohnte Meyers,42616,Cin,WR,,Final L 17-22 vs Jax,W (Oct 7),1,6,11.70,"2,103",87,1%,0,0,0,0,0,0,9,7,82,0,0,0,0
+Isaac TeSlaa,41865,Det,WR,,Final L 26-32 @ Car,W (Oct 7),1,6,11.50,214,92,3%,0,0,0,0,0,0,8,4,95,0,-,-,0
+Amon-Ra St. Brown,33500,Det,WR,,Final L 26-32 @ Car,Sunday Kevin,1,6,11.50,5,91,100%,0,0,0,0,0,0,11,8,75,0,-,-,0
+Treylon Burks,33973,Was,WR,,Final L 13-30 vs Ind,W (Oct 7),1,7,11.20,"2,078",94,0%,0,0,0,0,0,0,3,1,47,1,-,-,0
+Efton Chism III,42296,NE,WR,,Final W 29-26 @ Buf,W (Oct 7),1,11,11.20,"2,271",95,0%,0,0,0,0,0,0,4,2,42,1,-,-,0
+Denzel Boston,42661,Cle,WR,,Final W 27-24 vs Pit,JGrahnasaurs,1,11,10.90,91,98,75%,0,0,0,0,0,0,7,4,89,0,-,-,0
+Jaylin Noel,41885,Hou,WR,,Final L 30-34 vs Dal,W (Oct 7),1,8,10.40,217,100,2%,0,0,0,1,4,0,3,3,85,0,0,0,0
+Matthew Golden,41808,GB,WR,,Final W 17-14 @ TB,Owl Out Blitz,1,11,10.20,61,102,91%,0,0,0,1,6,0,7,3,21,1,-,-,0
+Mike Evans,27535,SF,WR,,Final W 24-14 vs Den,Owl Out Blitz,1,8,10.10,55,105,96%,0,0,0,0,0,0,8,5,76,0,-,-,0
+Jaxon Smith-Njigba,40041,Sea,WR,,Final W 30-23 vs LAC,Maybe Mitchell,1,11,10.10,4,107,100%,0,0,0,0,0,0,6,5,76,0,-,-,0
+Khalil Shakir,34104,Buf,WR,,Final L 26-29 vs NE,W (Oct 7),1,7,9.70,110,112,42%,0,0,0,0,0,0,8,7,82,0,0,0,1
+Malik Washington,41058,Mia,WR,,Final L 10-15 @ Min,W (Oct 7),1,6,9.50,140,113,31%,0,0,0,2,3,0,5,5,67,0,0,0,0
+Wan'Dale Robinson,33998,Ten,WR,,Final L 18-24 @ Bal,JGrahnasaurs,1,9,9.50,88,114,53%,0,0,0,1,1,0,5,3,19,1,-,-,0
+Luther Burden III,41824,Chi,WR,,Final W 23-12 vs NYJ,Max’s TD Bombers,1,10,9.40,54,116,95%,0,0,0,1,11,0,6,4,63,0,-,-,0
+Xavier Worthy,40877,KC,WR,,Final W 30-27 @ LV,W (Oct 7),1,5,9.00,86,123,61%,0,0,0,0,0,0,7,4,70,0,0,0,0
+KC Concepcion Jr.,42646,Cle,WR,,Final W 27-24 vs Pit,Steel City,1,11,8.90,98,126,61%,0,0,0,0,0,0,8,5,64,0,0,0,0
+Brian Thomas Jr.,40883,Jax,WR,,Final W 22-17 @ Cin,W (Oct 7),1,7,8.70,102,132,72%,0,0,0,0,0,0,2,2,17,1,0,0,0
+George Pickens,34007,Dal,WR,,Final W 34-30 @ Hou,Locked In Michelle,1,14,8.50,32,133,100%,0,0,0,0,0,0,3,2,75,0,-,-,0
+Dyami Brown,33470,Was,WR,,Final L 13-30 vs Ind,W (Oct 7),1,7,8.00,"2,257",136,0%,0,0,0,0,0,0,4,3,65,0,0,0,0
+Marvin Harrison Jr.,40893,Ari,WR,,Final L 24-36 @ NYG,Locked In Michelle,1,14,7.70,153,143,75%,0,0,0,0,0,0,4,1,12,1,-,-,0
+Tre' Harris,41840,LAC,WR,,Final L 23-30 @ Sea,W (Oct 7),1,7,7.50,180,145,9%,0,0,0,0,0,0,5,3,60,0,-,-,0
+Tory Horton,41952,Sea,WR,,Final W 30-23 vs LAC,W (Oct 7),1,11,7.10,326,149,0%,0,0,0,0,0,0,1,1,6,1,-,-,0
+Jordan Addison,40042,Min,WR,,Final W 15-10 vs Mia,Monday Night Madison,1,6,7.10,76,148,89%,0,0,0,1,-1,0,6,4,52,0,-,-,0
+Mack Hollins,30231,NE,WR,Q,Final W 29-26 @ Buf,W (Oct 7),1,11,6.80,242,157,12%,0,0,0,0,0,0,4,3,53,0,-,-,0
+Laquon Treadwell,29257,Ind,WR,,Final W 30-13 @ Was,W (Oct 7),1,13,6.70,"2,663",158,0%,0,0,0,0,0,0,6,5,42,0,-,-,0
+Cody White,32948,LV,WR,,Final L 27-30 vs KC,W (Oct 7),1,13,6.60,"2,075",159,1%,0,0,0,0,0,0,4,2,36,0,0,1,0
+Mitch Tinsley,40313,Cin,WR,,Final L 17-22 vs Jax,W (Oct 7),1,6,6.40,"2,053",164,0%,0,0,0,0,0,0,7,3,49,0,-,-,0
+Tre Tucker,40114,LV,WR,,Final L 27-30 vs KC,W (Oct 7),1,13,6.40,95,163,42%,0,0,0,0,0,0,8,4,44,0,-,-,0
+Christian Watson,33989,GB,WR,,Final W 17-14 @ TB,Sunday Kevin,1,11,6.20,29,167,98%,0,0,0,0,0,0,3,3,47,0,-,-,0
+Pat Bryant,41860,Den,WR,D,Final L 14-24 @ SF,W (Oct 7),1,10,6.20,124,166,8%,0,0,0,0,0,0,3,3,47,0,-,-,0
+Chris Godwin Jr.,30197,TB,WR,,Final L 14-17 vs GB,Steel City,1,10,6.10,71,169,74%,0,0,0,0,0,0,7,6,31,0,-,-,0
+Xavier Hutchinson,40232,Hou,WR,,Final L 30-34 vs Dal,W (Oct 7),1,8,6.10,"2,041",171,4%,0,0,0,0,0,0,5,3,46,0,-,-,0
+Stefon Diggs,28534,Was,WR,,Final L 13-30 vs Ind,Monday Night Madison,1,7,6.00,70,180,90%,0,0,0,0,0,0,9,5,35,0,-,-,0
+Ryan Flournoy,41087,Dal,WR,,Final W 34-30 @ Hou,W (Oct 7),1,14,5.70,224,181,8%,0,0,0,0,0,0,5,4,37,0,-,-,0
+Rashod Bateman,33415,Bal,WR,,Final W 24-18 vs Ten,W (Oct 7),1,13,5.60,126,183,26%,0,0,0,0,0,0,2,2,46,0,-,-,0
+Josh Cameron,42813,Jax,WR,,Final W 22-17 @ Cin,W (Oct 7),1,7,5.20,"2,091",186,0%,0,0,0,0,0,0,2,2,42,0,0,0,0
+Davante Adams,27581,LAR,WR,,Final W 24-20 @ Phi,JGrahnasaurs,1,11,5.20,33,187,98%,0,0,0,0,0,0,9,4,32,0,-,-,0
+John Metchie III,33999,Car,WR,,Final W 32-26 vs Det,W (Oct 7),1,5,5.20,"2,056",188,0%,0,0,0,0,0,0,5,3,37,0,-,-,0
+Kayshon Boutte,40224,Hou,WR,,Final L 30-34 vs Dal,W (Oct 7),1,8,5.10,194,189,18%,0,0,0,0,0,0,4,3,36,0,-,-,0
+Jerry Jeudy,32685,Cle,WR,,Final W 27-24 vs Pit,W (Oct 7),1,11,5.10,218,190,5%,0,0,0,0,0,0,3,3,36,0,-,-,0
+Jakobi Meyers,32231,Jax,WR,,Final W 22-17 @ Cin,Locked In Michelle,1,7,4.80,74,200,55%,0,0,0,0,0,0,4,3,33,0,-,-,0
+Quentin Johnston,40051,LAC,WR,,Final L 23-30 @ Sea,Sunday Kevin,1,7,4.50,121,201,63%,0,0,0,1,-4,0,2,1,44,0,-,-,0
+Ashton Dulin,32292,Ind,WR,,Final W 30-13 @ Was,W (Oct 7),1,13,4.40,"2,688",203,0%,0,0,0,0,0,0,6,3,29,0,-,-,0
+Brycen Tremayne,40407,Car,WR,,Final W 32-26 vs Det,W (Oct 7),1,5,4.20,"2,508",210,2%,0,0,0,0,0,0,3,2,32,0,-,-,0
+Garrett Wilson,33965,NYJ,WR,,Final L 12-23 @ Chi,Steel City,1,13,4.20,36,209,99%,0,0,0,0,0,0,4,3,27,0,-,-,0
+Ja'Marr Chase,33393,Cin,WR,Q,Final L 17-22 vs Jax,Steel City,1,6,4.20,11,208,100%,0,0,0,0,0,0,3,3,27,0,-,-,0
+Makai Lemon,42642,Phi,WR,,Final L 20-24 vs LAR,W (Oct 7),1,10,4.20,118,211,49%,0,0,0,0,0,0,6,3,27,0,-,-,0
+Tez Johnson,42030,TB,WR,,Final L 14-17 vs GB,W (Oct 7),1,10,3.70,"2,092",224,0%,0,0,0,1,10,0,2,2,17,0,0,0,0
+Antonio Williams,42693,Was,WR,,Final L 13-30 vs Ind,W (Oct 7),1,7,3.60,139,225,6%,0,0,0,0,0,0,8,3,21,0,0,0,0
+Ted Hurst III,42706,TB,WR,,Final L 14-17 vs GB,W (Oct 7),1,10,3.50,120,227,2%,0,0,0,0,0,0,3,2,25,0,-,-,0
+Dontayvion Wicks,40201,Phi,WR,,Final L 20-24 vs LAR,Monday Night Madison,1,10,3.30,72,228,60%,0,0,0,0,0,0,5,3,18,0,-,-,0
+Josh Downs,40126,Ind,WR,,Final W 30-13 @ Was,Dave’s Bone Crushers,1,13,3.10,59,230,92%,-,-,-,-,-,-,4,3,16,0,-,-,0
+Elic Ayomanor,41904,Ten,WR,,Final L 18-24 @ Bal,W (Oct 7),1,9,2.70,275,237,0%,0,0,0,0,0,0,1,1,22,0,-,-,0
+DeMario Douglas,40222,NE,WR,,Final W 29-26 @ Buf,W (Oct 7),1,11,2.50,229,245,2%,0,0,0,0,0,0,3,2,15,0,-,-,0
+Michael Pittman Jr.,32704,Pit,WR,,Final L 24-27 @ Cle,Sunday Kevin,1,9,2.50,119,246,59%,-,-,-,-,-,-,4,2,15,0,-,-,0
+Devontez Walker,40991,Bal,WR,,Final W 24-18 vs Ten,W (Oct 7),1,13,2.40,"2,088",247,0%,0,0,0,0,0,0,2,1,19,0,-,-,0
+Emeka Egbuka,41804,TB,WR,,Final L 14-17 vs GB,Monday Night Madison,1,10,2.30,53,250,97%,0,0,0,0,0,0,4,2,13,0,-,-,0
+DJ Moore,30994,Buf,WR,Q,Final L 26-29 vs NE,Dave’s Bone Crushers,1,7,2.20,51,257,97%,0,0,0,1,6,0,2,1,11,0,-,-,0
+Germie Bernard,42669,Pit,WR,,Final L 24-27 @ Cle,W (Oct 7),1,9,2.10,230,259,1%,-,-,-,-,-,-,2,2,11,0,-,-,0
+Chimere Dike,41903,Ten,WR,,Final L 18-24 @ Bal,W (Oct 7),1,9,2.00,263,260,1%,0,0,0,0,0,0,1,1,15,0,0,0,0
+Tai Felton,41859,Min,WR,,Final W 15-10 vs Mia,W (Oct 7),1,6,1.90,"2,751",268,0%,-,-,-,-,-,-,1,1,14,0,-,-,0
+Myles Price,42389,Min,WR,,Final W 15-10 vs Mia,W (Oct 7),1,6,1.80,"2,755",271,2%,-,-,-,1,2,0,2,2,6,0,0,0,0
+Cooper Kupp,30182,Sea,WR,,Final W 30-23 vs LAC,W (Oct 7),1,11,1.80,225,272,10%,0,0,0,0,0,0,2,1,13,0,-,-,0
+Calvin Ridley,30996,Ten,WR,,Final L 18-24 @ Bal,W (Oct 7),1,9,1.80,237,269,2%,0,0,0,0,0,0,2,1,13,0,-,-,0
+Elijah Sarratt,42737,Bal,WR,,Final W 24-18 vs Ten,W (Oct 7),1,13,1.80,262,273,0%,0,0,0,0,0,0,2,1,13,0,-,-,0
+Kalif Raymond,29631,Chi,WR,,Final W 23-12 vs NYJ,JGrahnasaurs,1,10,1.60,104,276,37%,-,-,-,-,-,-,2,2,6,0,0,0,0
+Parker Washington,40234,Jax,WR,,Final W 22-17 @ Cin,Max’s TD Bombers,1,7,1.50,25,281,97%,0,0,0,1,3,0,3,1,7,0,0,0,0
+Jauan Jennings,32887,Min,WR,,Final W 15-10 vs Mia,W (Oct 7),1,6,1.30,220,285,13%,-,-,-,-,-,-,1,1,8,0,-,-,0
+Tutu Atwell,33445,LAR,WR,,Final W 24-20 @ Phi,W (Oct 7),1,11,1.30,"2,270",286,0%,-,-,-,-,-,-,1,1,8,0,-,-,0
+Konata Mumpfield,42035,LAR,WR,Q,Final W 24-20 @ Phi,W (Oct 7),1,11,1.20,"2,250",292,1%,0,0,0,0,0,0,3,1,7,0,-,-,0
+Ben Skowronek,33637,Pit,WR,,Final L 24-27 @ Cle,W (Oct 7),1,9,1.20,"2,667",291,0%,-,-,-,-,-,-,2,1,7,0,-,-,0
+Deion Burks,42876,Ind,WR,,Final W 30-13 @ Was,W (Oct 7),1,13,1.10,"2,627",299,0%,-,-,-,-,-,-,2,1,6,0,-,-,0
+Jordan Whittington,41083,LAR,WR,,Final W 24-20 @ Phi,W (Oct 7),1,11,0.90,"2,690",304,0%,-,-,-,-,-,-,2,1,4,0,-,-,0
+Courtland Sutton,31010,Den,WR,,Final L 14-24 @ SF,JGrahnasaurs,1,10,0.90,83,305,78%,-,-,-,-,-,-,6,1,4,0,-,-,0
+Kevin Coleman Jr.,42768,Mia,WR,,Final L 10-15 @ Min,W (Oct 7),1,6,0.80,281,309,0%,-,-,-,-,-,-,4,1,3,0,-,-,0
+Joshua Palmer,33465,Buf,WR,,Final L 26-29 vs NE,W (Oct 7),1,7,0.80,"2,025",308,2%,-,-,-,-,-,-,4,1,3,0,-,-,0
+Kameron Johnson,41300,TB,WR,,Final L 14-17 vs GB,W (Oct 7),1,10,0.80,"2,771",307,0%,-,-,-,-,-,-,2,1,3,0,-,-,0
+Isaiah Bond,42598,Cle,WR,,Final W 27-24 vs Pit,W (Oct 7),1,11,0.70,"2,636",314,0%,-,-,-,-,-,-,1,1,2,0,-,-,0
+Skyy Moore,34009,GB,WR,,Final W 17-14 @ TB,W (Oct 7),1,11,0.30,"2,727",319,2%,-,-,-,-,-,-,2,1,-2,0,0,0,0
+Jacob Cowing,40996,SF,WR,,Final W 24-14 vs Den,W (Oct 7),1,8,0.20,"2,716",320,0%,-,-,-,1,2,0,1,0,0,0,0,0,0
+Jimmy Holiday,42490,KC,WR,IR,Final W 30-27 @ LV,W (Oct 7),-,5,0.00,"2,321",945,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Luke Floriea,42507,Cle,WR,NA,Final W 27-24 vs Pit,W (Oct 7),-,11,0.00,"2,370",951,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jaden Smith,42568,Dal,WR,NA,Final W 34-30 @ Hou,W (Oct 7),-,14,0.00,"2,375",976,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Kyrese Rowan,42527,NO,WR,NA,Mon 8:15 pm vs Atl,FA,-,8,–,"2,365",964,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Damien Alford,42622,NO,WR,NA,Mon 8:15 pm vs Atl,FA,-,8,–,"2,391",994,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Dalevon Campbell,42519,LAC,WR,NA,Final L 23-30 @ Sea,W (Oct 7),-,7,0.00,"2,404",959,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Max Hurleman,42516,Pit,"WR,RB",O,Final L 24-27 @ Cle,W (Oct 7),-,9,0.00,"2,498",957,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Ja'seem Reed,42497,Car,WR,NA,Final W 32-26 vs Det,W (Oct 7),1,5,0.00,"2,675",947,0%,-,-,-,-,-,-,1,0,0,0,-,-,0
+Montorie Foster Jr.,42515,Sea,WR,,Final W 30-23 vs LAC,W (Oct 7),-,11,0.00,"2,682",956,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jordyn Tyson,42630,NO,WR,IR-R,Mon 8:15 pm vs Atl,FA,-,8,–,163,998,51%,-,-,-,-,-,-,-,-,-,-,-,-,-
+DeAndre Hopkins,26650,Bal,WR,NA,Final W 24-18 vs Ten,W (Oct 7),-,13,0.00,"2,107",336,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Ja'Corey Brooks,42482,Was,WR,NA,Final L 13-30 vs Ind,W (Oct 7),-,7,0.00,"2,451",943,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Will Sheppard,42089,Mia,WR,NA,Final L 10-15 @ Min,W (Oct 7),-,6,0.00,"2,359",721,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+AJ Henning,42163,Mia,WR,NA,Final L 10-15 @ Min,W (Oct 7),-,6,0.00,"2,377",768,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Andrew Armstrong,42162,KC,WR,NA,Final W 30-27 @ LV,W (Oct 7),-,5,0.00,"2,318",766,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Theo Wease Jr.,42161,LAC,WR,NA,Final L 23-30 @ Sea,W (Oct 7),-,7,0.00,"2,460",765,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Traeshon Holden,42151,Dal,WR,NA,Final W 34-30 @ Hou,W (Oct 7),-,14,0.00,"2,441",760,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Josh Kelly,42150,Hou,WR,NA,Final L 30-34 vs Dal,W (Oct 7),-,8,0.00,"2,292",759,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Coleman Owen,42130,GB,WR,NA,Final W 17-14 @ TB,W (Oct 7),-,11,0.00,"2,372",748,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Mac Dalena,42107,Buf,WR,NA,Final L 26-29 vs NE,W (Oct 7),-,7,0.00,"2,320",731,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Luke Grimm,42104,LAC,WR,NA,Final L 23-30 @ Sea,W (Oct 7),-,7,0.00,"2,449",730,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Bryson Green,42100,Ari,WR,NA,Final L 24-36 @ NYG,W (Oct 7),-,14,0.00,"2,390",728,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Garrett Greene,42091,TB,WR,NA,Final L 14-17 vs GB,W (Oct 7),-,10,0.00,"2,424",722,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Joaquin Davis,42072,Pit,WR,NA,Final L 24-27 @ Cle,W (Oct 7),-,9,0.00,"2,402",714,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Quincy Skinner Jr.,42187,GB,WR,NA,Final W 17-14 @ TB,W (Oct 7),-,11,0.00,"2,426",783,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Courtney Jackson,42071,Ten,WR,NA,Final L 18-24 @ Bal,W (Oct 7),-,9,0.00,"2,284",713,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Stephen Gosnell,42062,Buf,WR,NA,Final L 26-29 vs NE,W (Oct 7),-,7,0.00,"2,304",710,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Hal Presley III,42060,KC,WR,NA,Final W 30-27 @ LV,W (Oct 7),-,5,0.00,"2,341",709,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jordan Moore,42057,Cin,WR,NA,Final L 17-22 vs Jax,W (Oct 7),-,6,0.00,"2,454",708,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+JP Richardson,42047,Chi,WR,NA,Final W 23-12 vs NYJ,W (Oct 7),-,10,0.00,"2,307",707,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Dominic Lovett,42043,Det,WR,NA,Final L 26-32 @ Car,W (Oct 7),-,6,0.00,"2,417",705,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Ricky White III,42042,Sea,WR,NA,Final W 30-23 vs LAC,W (Oct 7),-,11,0.00,"2,398",704,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Junior Bergen,42032,NYJ,WR,NA,Final L 12-23 @ Chi,W (Oct 7),-,13,0.00,"2,301",701,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Kaden Prather,42020,GB,WR,NA,Final W 17-14 @ TB,W (Oct 7),-,11,0.00,"2,459",699,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+LaJohntay Wester,42000,Bal,WR,,Final W 24-18 vs Ten,W (Oct 7),1,13,0.00,"2,768",687,0%,-,-,-,-,-,-,-,-,-,-,0,0,0
+Nick Nash,42185,Was,WR,NA,Final L 13-30 vs Ind,W (Oct 7),-,7,0.00,"2,331",780,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Beaux Collins,42194,Atl,WR,IR-R,Mon 8:15 pm @ NO,FA,-,11,–,"2,672",787,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Kisean Johnson,42475,GB,WR,NA,Final W 17-14 @ TB,W (Oct 7),-,11,0.00,"2,362",940,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Brennan Presley,42322,LAR,WR,NA,Final W 24-20 @ Phi,W (Oct 7),-,11,0.00,"2,358",875,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Juice Wells Jr.,42444,Atl,WR,NA,Mon 8:15 pm @ NO,FA,-,11,–,"2,403",929,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jeremiah Webb,42437,NE,WR,IR,Final W 29-26 @ Buf,W (Oct 7),-,11,0.00,"2,281",926,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jacoby Jones,42436,Was,WR,NA,Final L 13-30 vs Ind,W (Oct 7),-,7,0.00,"2,332",925,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Gage Larvadain,42417,Bal,WR,NA,Final W 24-18 vs Ten,W (Oct 7),-,13,0.00,"2,687",916,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jahdae Walker,42400,Chi,WR,,Final W 23-12 vs NYJ,W (Oct 7),-,10,0.00,"2,042",912,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Isaiah Neyor,42385,GB,WR,NA,Final W 17-14 @ TB,W (Oct 7),-,11,0.00,"2,409",904,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Xavier Restrepo,42368,Ten,WR,NA,Final L 18-24 @ Bal,W (Oct 7),-,9,0.00,"2,280",897,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Tyrone Broden,42351,Sea,WR,NA,Final W 30-23 vs LAC,W (Oct 7),-,11,0.00,"2,367",890,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Xavier Guillory,42340,Bal,WR,NA,Final W 24-18 vs Ten,W (Oct 7),-,13,0.00,"2,314",884,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Mario Williams,42326,LAR,WR,NA,Final W 24-20 @ Phi,W (Oct 7),-,11,0.00,"2,336",877,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Gee Scott,42290,NE,WR,NA,Final W 29-26 @ Buf,W (Oct 7),-,11,0.00,"2,434",858,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Dalen Cambre,42200,NYG,WR,NA,Final W 36-24 vs Ari,W (Oct 7),-,8,0.00,"2,411",790,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Roc Taylor,42279,Car,WR,NA,Final W 32-26 vs Det,W (Oct 7),-,5,0.00,"2,354",851,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Ke'Shawn Williams,42278,Cin,WR,NA,Final L 17-22 vs Jax,W (Oct 7),-,6,0.00,"2,795",850,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Dontae Fleming,42255,Min,WR,NA,Final W 15-10 vs Mia,W (Oct 7),-,6,0.00,"2,351",834,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jakobie Keeney-James,42246,Pit,WR,NA,Final L 24-27 @ Cle,W (Oct 7),-,9,0.00,"2,298",827,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jackson Meeks,42238,Det,"WR,TE",,Final L 26-32 @ Car,W (Oct 7),-,6,0.00,"2,501",819,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jamaal Pritchett,42233,NYJ,WR,,Final L 12-23 @ Chi,W (Oct 7),-,13,0.00,"2,681",815,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Quentin Skinner,42223,Buf,WR,NA,Final L 26-29 vs NE,W (Oct 7),-,7,0.00,"2,342",809,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Eli Pancol,42217,Ind,WR,NA,Final W 30-13 @ Was,W (Oct 7),-,13,0.00,"2,369",803,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Cam Camper,42212,NYJ,WR,NA,Final L 12-23 @ Chi,W (Oct 7),-,13,0.00,"2,452",798,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Chandler Brayboy,42210,NE,WR,NA,Final W 29-26 @ Buf,W (Oct 7),-,11,0.00,"2,352",797,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Da'Quan Felton,42201,NYJ,WR,NA,Final L 12-23 @ Chi,W (Oct 7),-,13,0.00,"2,455",791,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Tru Edwards,42316,LAR,WR,NA,Final W 24-20 @ Phi,W (Oct 7),-,11,0.00,"2,405",872,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Kendrick Law,42798,Det,WR,IR,Final L 26-32 @ Car,W (Oct 7),-,6,0.00,"2,295","1,065",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Omar Cooper Jr.,42652,NYJ,WR,IR,Final L 12-23 @ Chi,W (Oct 7),-,13,0.00,226,"1,003",3%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Cortez Braham Jr.,43181,Bal,WR,NA,Final W 24-18 vs Ten,W (Oct 7),-,13,0.00,"2,288",433,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Omari Evans,43261,KC,WR,NA,Final W 30-27 @ LV,W (Oct 7),-,5,0.00,"2,437",462,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jacob De Jesus,43258,KC,WR,NA,Final W 30-27 @ LV,W (Oct 7),-,5,0.00,"2,294",460,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Corey Rucker,43248,LV,WR,IR,Final L 27-30 vs KC,W (Oct 7),-,13,0.00,"2,303",456,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Michael Briscoe,43242,Min,WR,NA,Final W 15-10 vs Mia,W (Oct 7),-,6,0.00,"2,334",453,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Levi Wentz,43241,Pit,WR,NA,Final L 24-27 @ Cle,W (Oct 7),-,9,0.00,"2,373",452,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Treyvhon Saunders,43196,Hou,WR,NA,Final L 30-34 vs Dal,W (Oct 7),-,8,0.00,"2,394",443,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Daniel Sobkowicz,43195,Hou,WR,NA,Final L 30-34 vs Dal,W (Oct 7),-,8,0.00,"2,355",442,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jalen Walthall,43193,NYJ,WR,NA,Final L 12-23 @ Chi,W (Oct 7),-,13,0.00,"2,387",441,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Sean Brown,43192,Den,WR,NA,Final L 14-24 @ SF,W (Oct 7),-,10,0.00,"2,428",440,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Dane Key,43188,Den,WR,NA,Final L 14-24 @ SF,W (Oct 7),-,10,0.00,"2,309",439,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Octavian Smith Jr.,43180,Bal,WR,NA,Final W 24-18 vs Ten,W (Oct 7),-,13,0.00,"2,368",431,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jonathan Brady,43287,LV,WR,NA,Final L 27-30 vs KC,W (Oct 7),-,13,0.00,"2,330",475,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Mekhi Mews,43166,NO,WR,NA,Mon 8:15 pm vs Atl,FA,-,8,–,"2,316",425,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Caullin Lacy,43165,NYJ,WR,NA,Final L 12-23 @ Chi,W (Oct 7),-,13,0.00,"2,350",424,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Malik McClain,43159,NYJ,WR,,Final L 12-23 @ Chi,W (Oct 7),-,13,0.00,"2,442",421,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+DT Sheffield,43158,NYJ,WR,NA,Final L 12-23 @ Chi,W (Oct 7),-,13,0.00,"2,343",420,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Kyle Dixon,43155,NE,WR,NA,Final W 29-26 @ Buf,W (Oct 7),-,11,0.00,"2,415",419,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Romello Brinson,43150,Dal,WR,NA,Final W 34-30 @ Hou,W (Oct 7),-,14,0.00,"2,379",415,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Donaven McCulley,43147,Mia,WR,NA,Final L 10-15 @ Min,W (Oct 7),-,6,0.00,"2,412",412,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+E.J. Williams Jr.,43129,Car,WR,NA,Final W 32-26 vs Det,W (Oct 7),-,5,0.00,"2,327",400,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Chase Roberts,43126,LV,WR,NA,Final L 27-30 vs KC,W (Oct 7),-,13,0.00,"2,420",396,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Raylen Sharpe,43102,Ind,WR,NA,Final W 30-13 @ Was,W (Oct 7),-,13,0.00,"2,329",380,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Hank Beatty,43094,Ten,WR,NA,Final L 18-24 @ Bal,W (Oct 7),-,9,0.00,"2,299",376,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Xavier Loyd,43281,KC,WR,NA,Final W 30-27 @ LV,W (Oct 7),-,5,0.00,"2,431",471,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Sahmir Hagans,43327,Ind,WR,NA,Final W 30-13 @ Was,W (Oct 7),-,13,0.00,"2,381",486,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+J. Michael Sturdivant,43085,GB,WR,,Final W 17-14 @ TB,W (Oct 7),1,11,0.00,"2,630",367,0%,-,-,-,-,-,-,1,0,0,0,-,-,0
+Brock Rechsteiner,43435,NO,WR,SUSP,Mon 8:15 pm vs Atl,FA,-,8,–,"2,430",542,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Matthew Henry,43615,TB,WR,NA,Final L 14-17 vs GB,W (Oct 7),-,10,0.00,"2,399",594,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jeff Weimer,43469,KC,WR,NA,Final W 30-27 @ LV,W (Oct 7),-,5,0.00,"2,374",565,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Liam Clifford,43465,LAC,WR,NA,Final L 23-30 @ Sea,W (Oct 7),-,7,0.00,"2,312",561,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Malick Meiga,43460,Sea,WR,NA,Final W 30-23 vs LAC,W (Oct 7),-,11,0.00,"2,448",558,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Kyre Duplessis,43458,Den,WR,NA,Final L 14-24 @ SF,W (Oct 7),-,10,0.00,"2,339",556,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Brandon Hayes,43451,Phi,WR,NA,Final L 20-24 vs LAR,W (Oct 7),-,10,0.00,"2,322",554,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Terrill Davis,43442,Min,WR,NA,Final W 15-10 vs Mia,W (Oct 7),-,6,0.00,"2,348",548,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Mante Morrow,43441,LAC,WR,NA,Final L 23-30 @ Sea,W (Oct 7),-,7,0.00,"2,356",547,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Rashad Rochelle,43440,Sea,WR,NA,Final W 30-23 vs LAC,W (Oct 7),-,11,0.00,"2,385",546,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Trayvon Rudolph,43439,Min,WR,NA,Final W 15-10 vs Mia,W (Oct 7),-,6,0.00,"2,283",545,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Kyron Hudson,43432,Chi,WR,NA,Final W 23-12 vs NYJ,W (Oct 7),-,10,0.00,"2,306",539,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+E.J. Horton,43328,Ind,WR,NA,Final W 30-13 @ Was,W (Oct 7),-,13,0.00,"2,438",488,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Dean Patterson IV,43423,TB,WR,NA,Final L 14-17 vs GB,W (Oct 7),-,10,0.00,"2,435",535,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Tommy Thomas,43408,Den,WR,NA,Final L 14-24 @ SF,W (Oct 7),-,10,0.00,"2,308",527,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Kolbe Katsis,43382,Den,WR,NA,Final L 14-24 @ SF,W (Oct 7),-,10,0.00,"2,678",515,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Keelan Marion,43377,Atl,WR,NA,Mon 8:15 pm @ NO,FA,-,11,–,"2,444",510,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Le'Meke Brockington,43376,Atl,WR,NA,Mon 8:15 pm @ NO,FA,-,11,–,"2,406",509,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jimmy Kibble,43368,NE,WR,NA,Final W 29-26 @ Buf,W (Oct 7),-,11,0.00,"2,337",507,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Cameron Dorner,43364,NE,WR,NA,Final W 29-26 @ Buf,W (Oct 7),-,11,0.00,"2,357",505,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Nick DeGennaro,43363,NE,WR,NA,Final W 29-26 @ Buf,W (Oct 7),-,11,0.00,"2,313",504,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Squirrel White,43349,Chi,WR,NA,Final W 23-12 vs NYJ,W (Oct 7),-,10,0.00,"2,293",500,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Omari Kelly,43346,Chi,WR,NA,Final W 23-12 vs NYJ,W (Oct 7),-,10,0.00,"2,371",499,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Gabriel Benyard,43333,Car,WR,NA,Final W 32-26 vs Det,W (Oct 7),-,5,0.00,"2,335",491,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jaden Bradley,43092,Was,WR,NA,Final L 13-30 vs Ind,W (Oct 7),-,7,0.00,"2,338",373,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Joseph Manjack,43076,Den,WR,NA,Final L 14-24 @ SF,W (Oct 7),-,10,0.00,"2,363",359,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+De'Zhaun Stribling,42655,SF,WR,IR,Final W 24-14 vs Den,Maybe Mitchell,-,8,0.00,258,"1,005",32%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Reggie Virgil,42791,Ari,WR,,Final L 24-36 @ NYG,W (Oct 7),-,14,0.00,"2,389","1,062",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Marcus Sanders Jr.,42913,Min,WR,NA,Final W 15-10 vs Mia,W (Oct 7),-,6,0.00,"2,380","1,126",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Tyren Montgomery,42896,Ten,WR,NA,Final L 18-24 @ Bal,W (Oct 7),-,9,0.00,"2,296","1,113",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jeff Caldwell,42880,KC,WR,IR,Final W 30-27 @ LV,W (Oct 7),-,5,0.00,"2,676","1,103",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Anthony Smith,42840,Dal,WR,NA,Final W 34-30 @ Hou,W (Oct 7),-,14,0.00,"2,447","1,087",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Lewis Bond,42826,Hou,WR,NA,Final L 30-34 vs Dal,W (Oct 7),-,8,0.00,"2,679","1,082",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+CJ Williams,42825,Jax,WR,,Final W 22-17 @ Cin,W (Oct 7),-,7,0.00,"2,453","1,081",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+E. Henderson Jr.,42821,Sea,WR,NA,Final W 30-23 vs LAC,W (Oct 7),-,11,0.00,"2,422","1,079",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+CJ Daniels,42819,LAR,WR,,Final W 24-20 @ Phi,W (Oct 7),-,11,0.00,"2,290","1,078",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Malik Benson,42817,LV,WR,,Final L 27-30 vs KC,W (Oct 7),1,13,0.00,"2,670","1,076",0%,-,-,-,-,-,-,-,-,-,-,0,0,-
+Barion Brown,42812,NO,WR,,Mon 8:15 pm vs Atl,FA,-,8,–,"2,668","1,075",1%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Cyrus Allen,42773,KC,WR,,Final W 30-27 @ LV,W (Oct 7),1,5,0.00,241,"1,055",2%,-,-,-,-,-,-,1,0,0,0,-,-,0
+Shaleak Knotts,42917,Min,WR,NA,Final W 15-10 vs Mia,W (Oct 7),-,6,0.00,"2,291","1,130",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Colbie Young,42762,Cin,WR,O,Final L 17-22 vs Jax,W (Oct 7),-,6,0.00,"2,645","1,049",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Bryce Lance,42758,NO,WR,,Mon 8:15 pm vs Atl,FA,-,8,–,256,"1,047",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Skyler Bell,42747,Buf,WR,,Final L 26-29 vs NE,W (Oct 7),-,7,0.00,282,"1,044",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Kaden Wetjen,42743,Pit,WR,,Final L 24-27 @ Cle,W (Oct 7),1,9,0.00,"2,683","1,042",0%,-,-,-,-,-,-,-,-,-,-,0,0,-
+Brenen Thompson,42727,LAC,WR,O,Final L 23-30 @ Sea,W (Oct 7),-,7,0.00,"2,516","1,038",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Chris Bell,42716,Mia,WR,,Final L 10-15 @ Min,W (Oct 7),1,6,0.00,147,"1,036",8%,0,0,0,0,0,0,3,0,0,0,-,-,0
+Zavion Thomas,42711,Chi,WR,,Final W 23-12 vs NYJ,W (Oct 7),1,10,0.00,"2,665","1,033",0%,-,-,-,-,-,-,-,-,-,-,0,0,-
+Chris Brazzell II,42705,Car,WR,IR,Final W 32-26 vs Det,W (Oct 7),-,5,0.00,"2,463","1,031",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Ja'Kobi Lane,42702,Bal,WR,IR,Final W 24-18 vs Ten,W (Oct 7),-,13,0.00,231,"1,030",9%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Zachariah Branch,42701,Atl,WR,,Mon 8:15 pm @ NO,FA,-,11,–,255,"1,028",2%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Caleb Douglas,42697,Mia,WR,O,Final L 10-15 @ Min,W (Oct 7),-,6,0.00,144,"1,026",16%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Dillon Bell,42914,Min,WR,NA,Final W 15-10 vs Mia,W (Oct 7),-,6,0.00,"2,425","1,127",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Sincere Brown,42925,LAC,WR,NA,Final L 23-30 @ Sea,W (Oct 7),-,7,0.00,"2,360","1,134",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Cameron Ross,43069,Den,WR,NA,Final L 14-24 @ SF,W (Oct 7),-,10,0.00,"2,410",357,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Noah Short,42991,TB,WR,NA,Final L 14-17 vs GB,W (Oct 7),-,10,0.00,"2,392","1,178",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Kole Wilson,43066,Cle,WR,NA,Final W 27-24 vs Pit,W (Oct 7),-,11,0.00,"2,416",355,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jordan Hudson,43061,Dal,WR,NA,Final W 34-30 @ Hou,W (Oct 7),-,14,0.00,"2,458",352,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Camden Brown,43059,Dal,WR,,Final W 34-30 @ Hou,W (Oct 7),-,14,0.00,"2,305",350,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Aaron Anderson,43052,Cle,WR,NA,Final W 27-24 vs Pit,W (Oct 7),-,11,0.00,"2,364",345,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Noah Thomas,43033,Cin,WR,NA,Final L 17-22 vs Jax,W (Oct 7),-,6,0.00,"2,419",334,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Kobe Prentice,43022,NE,WR,NA,Final W 29-26 @ Buf,W (Oct 7),-,11,0.00,"2,376",328,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Max Tomczak,43015,Buf,WR,NA,Final L 26-29 vs NE,W (Oct 7),-,7,0.00,"2,347",327,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Ja'Mori Maclin,43013,Buf,WR,NA,Final L 26-29 vs NE,W (Oct 7),-,7,0.00,"2,423",325,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Malik Rutherford,42998,Atl,WR,NA,Mon 8:15 pm @ NO,FA,-,11,–,"2,353","1,181",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Vinny Anthony II,42996,Atl,WR,NA,Mon 8:15 pm @ NO,FA,-,11,–,"2,282","1,180",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Eric Rivers Jr.,42990,TB,WR,NA,Final L 14-17 vs GB,W (Oct 7),-,10,0.00,"2,429","1,176",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Devonte Ross,42930,LAC,WR,NA,Final L 23-30 @ Sea,W (Oct 7),-,7,0.00,"2,349","1,136",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Chris Hilton Jr.,42987,GB,WR,NA,Final W 17-14 @ TB,W (Oct 7),-,11,0.00,"2,388","1,175",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Harrison Wallace III,42979,Ari,WR,NA,Final L 24-36 @ NYG,W (Oct 7),-,14,0.00,"2,383","1,171",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Marcus Burke,42975,Ten,WR,NA,Final L 18-24 @ Bal,W (Oct 7),-,9,0.00,"2,366","1,168",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Wesley Grimes,42970,SF,WR,NA,Final W 24-14 vs Den,W (Oct 7),-,8,0.00,"2,289","1,164",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Will Pauling,42969,SF,WR,NA,Final W 24-14 vs Den,W (Oct 7),-,8,0.00,"2,462","1,162",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Brady Boyd,42959,Jax,WR,NA,Final W 22-17 @ Cin,W (Oct 7),-,7,0.00,"2,344","1,156",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Alex Bullock,42957,Jax,WR,NA,Final W 22-17 @ Cin,W (Oct 7),-,7,0.00,"2,457","1,155",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Trebor Pena,42951,Jax,WR,NA,Final W 22-17 @ Cin,W (Oct 7),-,7,0.00,"2,300","1,152",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Michael Wortham,42950,Jax,WR,NA,Final W 22-17 @ Cin,W (Oct 7),-,7,0.00,"2,340","1,151",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Ben Patterson,42949,Cle,WR,NA,Final W 27-24 vs Pit,W (Oct 7),-,11,0.00,"2,450","1,150",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Luke Wysong,42938,Min,WR,NA,Final W 15-10 vs Mia,W (Oct 7),-,6,0.00,"2,297","1,142",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jimmy Horn Jr.,41999,Cle,WR,NA,Final W 27-24 vs Pit,W (Oct 7),-,11,0.00,"2,761",686,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Devaughn Vele,41097,NO,WR,,Mon 8:15 pm vs Atl,FA,-,8,–,92,408,63%,-,-,-,-,-,-,-,-,-,-,-,-,-
+KeAndre Lambert-Smith,41944,LAC,WR,IR,Final L 23-30 @ Sea,W (Oct 7),-,7,0.00,"2,646",673,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+K.J. Osborn,32846,Ten,WR,NA,Final L 18-24 @ Bal,W (Oct 7),-,9,0.00,"2,476",368,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Chris Blair,33376,Atl,WR,,Mon 8:15 pm @ NO,FA,-,11,–,"2,640",595,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Mason Kinsey,33351,Ten,WR,NA,Final L 18-24 @ Bal,W (Oct 7),-,9,0.00,"2,713",586,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Kristian Wilkerson,33349,Atl,WR,NA,Mon 8:15 pm @ NO,FA,-,11,–,"2,421",584,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Nick Westbrook-Ikhine,33348,Ind,WR,NA,Final W 30-13 @ Was,W (Oct 7),1,13,0.00,"2,708",583,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Dan Chisena,33023,Car,WR,NA,Final W 32-26 vs Det,W (Oct 7),-,5,0.00,"2,502",463,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Andre Baccellia,32943,Ari,WR,NA,Final L 24-36 @ NYG,W (Oct 7),-,14,0.00,"2,709",436,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Isaiah Hodgins,32877,Pit,WR,NA,Final L 24-27 @ Cle,W (Oct 7),-,9,0.00,"2,256",393,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+James Proche II,32871,Ten,WR,NA,Final L 18-24 @ Bal,W (Oct 7),-,9,0.00,"2,673",386,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Quez Watkins,32870,Phi,WR,NA,Final L 20-24 vs LAR,W (Oct 7),-,10,0.00,"2,346",384,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Darnell Mooney,32843,NYG,WR,,Final W 36-24 vs Ari,W (Oct 7),1,8,0.00,248,365,1%,-,-,-,-,-,-,2,0,0,0,-,-,0
+Elijah Moore,33422,Phi,WR,,Final L 20-24 vs LAR,W (Oct 7),-,10,0.00,"2,260",604,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Tyler Johnson,32831,NYJ,WR,NA,Final L 12-23 @ Chi,W (Oct 7),-,13,0.00,"2,119",358,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Gabe Davis,32798,Buf,WR,NA,Final L 26-29 vs NE,W (Oct 7),-,7,0.00,"2,095",340,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Devin Duvernay,32762,Ari,WR,,Final L 24-36 @ NYG,W (Oct 7),1,14,0.00,"2,782","1,184",0%,-,-,-,-,-,-,-,-,-,-,0,0,-
+Denzel Mims,32729,Dal,WR,NA,Final W 34-30 @ Hou,W (Oct 7),-,14,0.00,"2,418","1,163",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Van Jefferson,32727,Was,WR,NA,Final L 13-30 vs Ind,W (Oct 7),-,7,0.00,"2,114","1,161",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Brandon Aiyuk,32695,SF,WR,NA,Final W 24-14 vs Den,W (Oct 7),-,8,0.00,"2,125","1,139",1%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Justin Jefferson,32692,Min,WR,O,Final W 15-10 vs Mia,Maybe Mitchell,-,6,0.00,23,"1,138",100%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jalen Reagor,32691,Mia,WR,NA,Final L 10-15 @ Min,W (Oct 7),-,6,0.00,"2,495","1,137",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Gunner Olszewski,32612,NYG,WR,IR,Final W 36-24 vs Ari,W (Oct 7),-,8,0.00,"2,623","1,094",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+DeVonta Smith,33398,Phi,WR,O,Final L 20-24 vs LAR,Max’s TD Bombers,-,10,0.00,26,599,100%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Dee Eskridge,33444,Mia,WR,NA,Final L 10-15 @ Min,W (Oct 7),-,6,0.00,"2,721",607,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Greg Dortch,32523,Buf,WR,,Final L 26-29 vs NE,W (Oct 7),1,7,0.00,"2,249","1,051",0%,-,-,-,-,-,-,-,-,-,-,0,0,-
+Drake London,33963,Atl,WR,,Mon 8:15 pm @ NO,Dave’s Bone Crushers,-,11,–,18,762,100%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Montrell Washington,34118,NYG,WR,NA,Final W 36-24 vs Ari,W (Oct 7),-,8,0.00,"2,285",869,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Calvin Austin III,34094,NYG,WR,IR,Final W 36-24 vs Ari,W (Oct 7),-,8,0.00,"2,062",856,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Erik Ezukanma,34081,Phi,WR,NA,Final L 20-24 vs LAR,W (Oct 7),-,10,0.00,"2,414",844,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Danny Gray,34061,Phi,WR,NA,Final L 20-24 vs LAR,W (Oct 7),-,10,0.00,"2,400",832,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jalen Tolbert,34044,Mia,WR,,Final L 10-15 @ Min,W (Oct 7),1,6,0.00,"2,500",817,0%,-,-,-,-,-,-,1,0,0,0,-,-,0
+Velus Jones Jr.,34027,Sea,"WR,RB",,Final W 30-23 vs LAC,W (Oct 7),-,11,0.00,"2,726",805,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Alec Pierce,34008,Ind,WR,IR,Final W 30-13 @ Was,W (Oct 7),-,13,0.00,173,789,60%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jahan Dotson,33971,Atl,WR,,Mon 8:15 pm @ NO,FA,-,11,–,268,767,1%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Chris Olave,33966,NO,WR,,Mon 8:15 pm vs Atl,Sunday Kevin,-,8,–,15,764,100%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Michael Bandy,33928,Den,WR,NA,Final L 14-24 @ SF,W (Oct 7),-,10,0.00,"2,467",737,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Terrace Marshall Jr.,33447,Mia,WR,NA,Final L 10-15 @ Min,W (Oct 7),-,6,0.00,"2,505",608,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+DJ Turner,33813,LV,WR,NA,Final L 27-30 vs KC,W (Oct 7),-,13,0.00,"2,468",689,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Tarik Black,33797,Det,WR,NA,Final L 26-32 @ Car,W (Oct 7),-,6,0.00,"2,427",684,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Austin Trammell,33745,Jax,WR,NA,Final W 22-17 @ Cin,W (Oct 7),-,7,0.00,"2,664",672,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Brandon Smith,33710,Pit,WR,NA,Final L 24-27 @ Cle,W (Oct 7),-,9,0.00,"2,407",660,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Tim Jones,33649,Jax,WR,NA,Final W 22-17 @ Cin,W (Oct 7),-,7,0.00,"2,507",646,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Cornell Powell,33569,Pit,WR,NA,Final L 24-27 @ Cle,W (Oct 7),-,9,0.00,"2,324",633,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Simi Fehoko,33567,Ari,WR,,Final L 24-36 @ NYG,W (Oct 7),1,14,0.00,"2,780",632,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Ihmir Smith-Marsette,33545,Car,WR,NA,Final W 32-26 vs Det,W (Oct 7),-,5,0.00,"2,512",631,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Tylan Wallace,33519,Cle,WR,O,Final W 27-24 vs Pit,W (Oct 7),-,11,0.00,"2,754",626,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Tom Kennedy,32561,Det,WR,,Final L 26-32 @ Car,W (Oct 7),1,6,0.00,"2,759","1,069",0%,-,-,-,-,-,-,-,-,-,-,0,0,-
+Lil'Jordan Humphrey,32494,Den,WR,NA,Final L 14-24 @ SF,W (Oct 7),-,10,0.00,"2,519","1,041",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Michael Woods II,34158,Den,WR,NA,Final L 14-24 @ SF,W (Oct 7),-,10,0.00,"2,488",889,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Curtis Samuel,30153,Buf,WR,NA,Final L 26-29 vs NE,W (Oct 7),-,7,0.00,"2,267",928,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Dante Pettis,31014,SF,WR,NA,Final W 24-14 vs Den,W (Oct 7),-,8,0.00,"2,617",479,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+River Cracraft,30955,Was,WR,NA,Final L 13-30 vs Ind,W (Oct 7),-,7,0.00,"2,486",454,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Kendrick Bourne,30551,Ari,WR,,Final L 24-36 @ NYG,W (Oct 7),-,14,0.00,254,"1,085",1%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Tim Patrick,30511,NYJ,WR,IR,Final L 12-23 @ Chi,W (Oct 7),-,13,0.00,"2,121","1,067",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Noah Brown,30352,LV,WR,NA,Final L 27-30 vs KC,W (Oct 7),-,13,0.00,"2,245","1,001",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+David Moore,30339,Car,WR,,Final W 32-26 vs Det,W (Oct 7),1,5,0.00,"2,659",997,0%,-,-,-,-,-,-,-,-,-,-,0,0,-
+Trent Taylor,30290,SF,WR,NA,Final W 24-14 vs Den,W (Oct 7),-,8,0.00,"2,323",982,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Josh Reynolds,30230,NYJ,WR,NA,Final L 12-23 @ Chi,W (Oct 7),-,13,0.00,"2,126",958,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+JuJu Smith-Schuster,30175,NYG,WR,NA,Final W 36-24 vs Ari,W (Oct 7),-,8,0.00,"2,123",935,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Zay Jones,30150,Hou,WR,NA,Final L 30-34 vs Dal,W (Oct 7),-,8,0.00,"2,265",927,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Justin Watson,31114,Hou,WR,NA,Final L 30-34 vs Dal,W (Oct 7),-,8,0.00,"2,464",524,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Tyreek Hill,29399,Mia,WR,NA,Final L 10-15 @ Min,Owl Out Blitz,-,6,0.00,320,618,23%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Demarcus Robinson,29360,SF,WR,IR,Final W 24-14 vs Den,W (Oct 7),-,8,0.00,334,611,1%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Chris Moore,29341,Bal,WR,O,Final W 24-18 vs Ten,W (Oct 7),-,13,0.00,"2,102",606,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Sterling Shepard,29274,NYJ,WR,NA,Final L 12-23 @ Chi,W (Oct 7),1,13,0.00,"2,109",591,0%,-,-,-,-,-,-,1,0,0,0,-,-,0
+DeAndre Carter,28947,Cle,WR,NA,Final W 27-24 vs Pit,W (Oct 7),-,11,0.00,"2,743",473,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Tyler Lockett,28457,LV,WR,NA,Final L 27-30 vs KC,W (Oct 7),-,13,0.00,"2,233","1,063",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Phillip Dorsett II,28417,LV,WR,NA,Final L 27-30 vs KC,W (Oct 7),-,13,0.00,"2,384","1,046",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Brandin Cooks,27548,SF,WR,,Final W 24-14 vs Den,W (Oct 7),1,8,0.00,"2,649",653,1%,-,-,-,-,-,-,1,0,0,0,-,-,0
+Odell Beckham Jr.,27540,NYG,WR,NA,Final W 36-24 vs Ari,W (Oct 7),-,8,0.00,"2,712",651,1%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Christian Kirk,31017,SF,WR,IR-R,Final W 24-14 vs Den,W (Oct 7),-,8,0.00,292,480,2%,-,-,-,-,-,-,-,-,-,-,-,-,-
+M. Valdes-Scantling,31144,LAC,WR,,Final L 23-30 @ Sea,W (Oct 7),1,7,0.00,"2,651",540,0%,-,-,-,-,-,-,1,0,0,0,-,-,0
+Trenton Irwin,32438,SF,WR,NA,Final W 24-14 vs Den,W (Oct 7),-,8,0.00,"2,511","1,014",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Hakeem Butler,31935,Den,WR,NA,Final L 14-24 @ SF,W (Oct 7),-,10,0.00,"2,445",776,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+David Sills V,32418,TB,WR,IR-R,Final L 14-17 vs GB,W (Oct 7),-,10,0.00,"2,246","1,008",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+D.J. Montgomery,32283,Ind,WR,IR,Final W 30-13 @ Was,W (Oct 7),-,13,0.00,"2,378",963,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Alex Bachman,32124,LAR,WR,,Final W 24-20 @ Phi,W (Oct 7),1,11,0.00,"2,783",895,0%,-,-,-,-,-,-,-,-,-,-,0,0,-
+Olamide Zaccheaus,32123,Atl,WR,,Mon 8:15 pm @ NO,FA,-,11,–,"2,113",894,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Scotty Miller,32040,Chi,WR,NA,Final W 23-12 vs NYJ,W (Oct 7),-,10,0.00,"2,622",853,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Juwann Winfree,32019,Hou,WR,NA,Final L 30-34 vs Dal,W (Oct 7),-,8,0.00,"2,287",836,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Darius Slayton,32003,Ind,WR,,Final W 30-13 @ Was,W (Oct 7),-,13,0.00,"2,047",825,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Hunter Renfrow,31981,Car,WR,NA,Final W 32-26 vs Det,W (Oct 7),-,5,0.00,"2,090",807,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Gary Jennings,31952,LAC,WR,NA,Final L 23-30 @ Sea,W (Oct 7),-,7,0.00,"2,317",786,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Terry McLaurin,31908,Was,WR,O,Final L 13-30 vs Ind,Monday Night Madison,-,7,0.00,64,757,95%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Ray-Ray McCloud III,31157,Chi,WR,NA,Final W 23-12 vs NYJ,W (Oct 7),-,10,0.00,"2,279",552,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Parris Campbell,31891,Dal,WR,NA,Final W 34-30 @ Hou,W (Oct 7),-,14,0.00,"2,469",749,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Mecole Hardman Jr.,31888,Buf,WR,NA,Final L 26-29 vs NE,W (Oct 7),-,7,0.00,"2,481",747,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+A.J. Brown,31883,NE,WR,IR,Final W 29-26 @ Buf,Monday Night Madison,-,11,0.00,67,741,96%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Hollywood Brown,31857,Phi,WR,O,Final L 20-24 vs LAR,W (Oct 7),-,10,0.00,"2,054",727,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Malik Turner,31777,SF,WR,NA,Final W 24-14 vs Den,W (Oct 7),-,8,0.00,"2,345",697,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+KhaDarel Hodge,31769,SF,WR,NA,Final W 24-14 vs Den,W (Oct 7),-,8,0.00,"2,764",693,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Trent Sherfield,31320,Buf,WR,NA,Final L 26-29 vs NE,W (Oct 7),-,7,0.00,"2,717",589,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Braxton Berrios,31180,NYG,WR,NA,Final W 36-24 vs Ari,W (Oct 7),1,8,0.00,"2,760",564,0%,-,-,-,-,-,-,1,0,0,0,0,0,0
+Cedrick Wilson Jr.,31178,Det,WR,NA,Final L 26-32 @ Car,W (Oct 7),-,6,0.00,"2,669",562,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jalen Nailor,34147,LV,WR,Q,Final L 27-30 vs KC,W (Oct 7),0,13,0.00,201,882,8%,-,-,-,-,-,-,-,-,-,-,-,-,0
+Bo Melton,34185,GB,WR,,Final W 17-14 @ TB,W (Oct 7),1,11,0.00,"2,731",900,0%,-,-,-,-,-,-,1,0,0,0,-,-,0
+Jaylin Lane,41920,Was,WR,O,Final L 13-30 vs Ind,W (Oct 7),1,7,0.00,"2,650",665,0%,-,-,-,-,-,-,-,-,-,-,0,0,-
+Ainias Smith,41030,Car,WR,NA,Final W 32-26 vs Det,W (Oct 7),-,5,0.00,"2,273",361,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Cornelius Johnson,41099,Bal,WR,NA,Final W 24-18 vs Ten,W (Oct 7),-,13,0.00,"2,413",411,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Brenden Rice,41098,LV,WR,NA,Final L 27-30 vs KC,W (Oct 7),-,13,0.00,"2,456",409,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Keenan Allen,26699,Ind,WR,O,Final W 30-13 @ Was,W (Oct 7),-,13,0.00,129,366,37%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Johnny Wilson,41089,Phi,WR,IR,Final L 20-24 vs LAR,W (Oct 7),-,10,0.00,"2,504",404,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Tejhaun Palmer,41079,NE,WR,NA,Final W 29-26 @ Buf,W (Oct 7),-,11,0.00,"2,311",397,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Casey Washington,41074,Car,WR,NA,Final W 32-26 vs Det,W (Oct 7),-,5,0.00,"2,490",395,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jha'Quan Jackson,41065,Hou,WR,NA,Final L 30-34 vs Dal,W (Oct 7),-,8,0.00,"2,615",389,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Anthony Gould,41046,Ind,WR,,Final W 30-13 @ Was,W (Oct 7),0,13,0.00,"2,786",375,0%,-,-,-,-,-,-,-,-,-,-,0,0,-
+Bub Means,41045,Cle,WR,NA,Final W 27-24 vs Pit,W (Oct 7),-,11,0.00,"2,247",374,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jamari Thrash,41016,Cle,WR,NA,Final W 27-24 vs Pit,W (Oct 7),-,11,0.00,"2,653",353,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+John Rhys Plumlee,41135,Pit,WR,NA,Final L 24-27 @ Cle,W (Oct 7),-,9,0.00,"2,328",435,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Troy Franklin,41009,Den,WR,,Final L 14-24 @ SF,W (Oct 7),-,10,0.00,259,348,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Luke McCaffrey,40964,Was,WR,,Final L 13-30 vs Ind,W (Oct 7),-,7,0.00,"2,277",323,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jalen McMillan,40954,TB,WR,IR,Final L 14-17 vs GB,W (Oct 7),-,10,0.00,216,"1,185",6%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Malachi Corley,40944,Cle,WR,,Final W 27-24 vs Pit,W (Oct 7),1,11,0.00,"2,746","1,179",0%,-,-,-,-,-,-,-,-,-,-,0,0,-
+Adonai Mitchell,40915,NYJ,WR,O,Final L 12-23 @ Chi,W (Oct 7),-,13,0.00,96,"1,159",29%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Ja'Lynn Polk,40914,NO,WR,NA,Mon 8:15 pm vs Atl,FA,-,8,–,"2,485","1,157",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Ladd McConkey,40908,LAC,WR,Q,Final L 23-30 @ Sea,Dave’s Bone Crushers,1,7,0.00,42,"1,154",97%,-,-,-,-,-,-,2,0,0,0,-,-,0
+Ricky Pearsall,40892,SF,WR,IR,Final W 24-14 vs Den,W (Oct 7),-,8,0.00,338,"1,145",3%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Xavier Legette,40890,Car,WR,IR,Final W 32-26 vs Det,W (Oct 7),-,5,0.00,280,"1,143",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Tahj Washington,41104,Mia,WR,NA,Final L 10-15 @ Min,W (Oct 7),-,6,0.00,"2,432",416,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Mason Tipton,41188,NO,WR,PUP-R,Mon 8:15 pm vs Atl,FA,-,8,–,"2,641",449,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jalen Cropper,40774,NO,WR,NA,Mon 8:15 pm vs Atl,FA,-,8,–,"2,677","1,080",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Cole Burgess,41502,Pit,WR,IR,Final L 24-27 @ Cle,W (Oct 7),-,9,0.00,"2,310",579,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jordan Watkins,41917,SF,WR,,Final W 24-14 vs Den,W (Oct 7),-,8,0.00,"2,058",663,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Arian Smith,41896,NYJ,WR,IR,Final L 12-23 @ Chi,W (Oct 7),-,13,0.00,"2,766",656,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Dont'e Thornton Jr.,41892,LV,WR,IR,Final L 27-30 vs KC,W (Oct 7),-,13,0.00,"2,633",655,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jalen Royals,41891,KC,WR,,Final W 30-27 @ LV,W (Oct 7),1,5,0.00,"2,492",654,0%,-,-,-,-,-,-,2,0,0,0,-,-,0
+Kyle Williams,41864,NE,WR,,Final W 29-26 @ Buf,W (Oct 7),1,11,0.00,251,650,0%,-,-,-,-,-,-,2,0,0,0,0,0,0
+Savion Williams,41851,GB,WR,IR-R,Final W 17-14 @ TB,W (Oct 7),-,11,0.00,"2,631",648,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jack Bech,41843,LV,WR,IR,Final L 27-30 vs KC,W (Oct 7),-,13,0.00,260,647,1%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jayden Higgins,41819,Hou,WR,IR,Final L 30-34 vs Dal,W (Oct 7),-,8,0.00,"2,043",640,3%,-,-,-,-,-,-,-,-,-,-,-,-,-
+John Jiles,41687,NE,WR,NA,Final W 29-26 @ Buf,W (Oct 7),-,11,0.00,"2,397",620,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Julian Hicks,41451,Sea,WR,NA,Final W 30-23 vs LAC,W (Oct 7),-,11,0.00,"2,443",572,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Xavier Weaver,41202,Ari,WR,NA,Final L 24-36 @ NYG,W (Oct 7),-,14,0.00,"2,648",457,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Joshua Cephus,41411,Jax,WR,NA,Final W 22-17 @ Cin,W (Oct 7),-,7,0.00,"2,386",557,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jalen Coker,41293,Car,WR,O,Final W 32-26 vs Det,Dave’s Bone Crushers,-,5,0.00,65,495,90%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Lawrence Keys,41275,Det,WR,NA,Final L 26-32 @ Car,W (Oct 7),-,6,0.00,"2,396",485,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Xavier Johnson,41274,Cin,WR,NA,Final L 17-22 vs Jax,W (Oct 7),-,6,0.00,"2,315",484,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Dayton Wade,41262,Bal,WR,NA,Final W 24-18 vs Ten,W (Oct 7),-,13,0.00,"2,440",483,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Bryce Oliver,41251,Hou,WR,NA,Final L 30-34 vs Dal,W (Oct 7),-,8,0.00,"2,497",478,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+JaQuae Jackson,41231,LAC,WR,NA,Final L 23-30 @ Sea,W (Oct 7),-,7,0.00,"2,393",469,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Isaiah Wooden,41226,LAC,WR,NA,Final L 23-30 @ Sea,W (Oct 7),-,7,0.00,"2,446",468,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jeshaun Jones,41205,Min,WR,,Final W 15-10 vs Mia,W (Oct 7),1,6,0.00,"2,680",458,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Lucky Jackson,40791,Det,WR,NA,Final L 26-32 @ Car,W (Oct 7),-,6,0.00,"2,461","1,086",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Dylan Drummond,40737,Atl,WR,NA,Mon 8:15 pm @ NO,FA,-,11,–,"2,656","1,060",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Travis Hunter,41787,Jax,WR,,Final W 22-17 @ Cin,W (Oct 7),1,7,0.00,243,612,9%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jalen Virgil,34579,Ari,WR,NA,Final L 24-36 @ NYG,W (Oct 7),-,14,0.00,"2,302","1,053",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Tank Dell,40097,Hou,WR,IR-R,Final L 30-34 vs Dal,W (Oct 7),-,8,0.00,"2,116",755,15%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Cedric Tillman,40093,NO,WR,NA,Mon 8:15 pm vs Atl,FA,-,8,–,"2,079",751,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Rashee Rice,40084,KC,WR,Q,Final W 30-27 @ LV,Locked In Michelle,0,5,0.00,58,750,99%,-,-,-,-,-,-,0,0,0,0,-,-,0
+Jonathan Mingo,40073,Dal,WR,,Final W 34-30 @ Hou,W (Oct 7),1,14,0.00,"2,765",738,0%,-,-,-,-,-,-,2,0,0,0,-,-,0
+Jayden Reed,40063,GB,WR,IR,Final W 17-14 @ TB,Locked In Michelle,-,11,0.00,203,733,36%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Maurice Alexander,34712,Chi,WR,NA,Final W 23-12 vs NYJ,W (Oct 7),-,10,0.00,"2,326","1,122",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+KaVontae Turpin,34709,Dal,WR,,Final W 34-30 @ Hou,W (Oct 7),1,14,0.00,"2,083","1,118",5%,-,-,-,-,-,-,-,-,-,-,0,0,-
+Dennis Houston,34592,TB,WR,NA,Final L 14-17 vs GB,W (Oct 7),-,10,0.00,"2,436","1,059",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Brandon Johnson,34571,Pit,WR,NA,Final L 24-27 @ Cle,W (Oct 7),-,9,0.00,"2,361","1,050",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Ryan Miller,40676,Mia,WR,,Final L 10-15 @ Min,W (Oct 7),1,6,0.00,"2,258","1,037",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Kaden Davis,34569,Chi,WR,NA,Final W 23-12 vs NYJ,W (Oct 7),-,10,0.00,"2,684","1,048",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Deven Thompkins,34520,LV,WR,NA,Final L 27-30 vs KC,W (Oct 7),-,13,0.00,"2,719","1,034",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Kendric Pryor,34476,Cin,WR,NA,Final L 17-22 vs Jax,W (Oct 7),-,6,0.00,"2,395","1,010",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Britain Covey,34378,Phi,WR,,Final L 20-24 vs LAR,W (Oct 7),1,10,0.00,"2,775",977,0%,-,-,-,-,-,-,-,-,-,-,0,0,-
+Irv Charles,34356,Sea,WR,IR-R,Final W 30-23 vs LAC,W (Oct 7),-,11,0.00,"2,522",970,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Lance McCutcheon,34330,Ten,WR,NA,Final L 18-24 @ Bal,W (Oct 7),-,9,0.00,"2,433",960,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Tay Martin,34319,Det,WR,,Final L 26-32 @ Car,W (Oct 7),1,6,0.00,"2,674",952,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Kevin Austin Jr.,34242,NO,WR,,Mon 8:15 pm vs Atl,FA,-,8,–,"2,112",923,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Samori Toure,34214,Phi,WR,NA,Final L 20-24 vs LAR,W (Oct 7),-,10,0.00,"2,325",915,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jalin Hyatt,40128,NYG,WR,NA,Final W 36-24 vs Ari,W (Oct 7),-,8,0.00,"2,707",777,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Tyler Scott,40141,LV,WR,NA,Final L 27-30 vs KC,W (Oct 7),-,13,0.00,"2,517",784,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Charlie Jones,40158,NYG,WR,,Final W 36-24 vs Ari,W (Oct 7),1,8,0.00,"2,778",796,0%,-,-,-,-,-,-,-,-,-,-,0,0,-
+Xavier Smith,40399,LAR,WR,NA,Final W 24-20 @ Phi,W (Oct 7),-,11,0.00,"2,729",931,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Tyrell Shavers,40630,Buf,WR,PUP-R,Final L 26-29 vs NE,W (Oct 7),-,7,0.00,"2,241","1,015",0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Nikko Remigio,40571,KC,WR,,Final W 30-27 @ LV,W (Oct 7),1,5,0.00,"2,779",992,0%,-,-,-,-,-,-,-,-,-,-,0,0,-
+Xavier Gipson,40548,Phi,WR,NA,Final L 20-24 vs LAR,W (Oct 7),-,10,0.00,"2,757",988,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jason Brownlee,40545,KC,WR,NA,Final W 30-27 @ LV,W (Oct 7),-,5,0.00,"2,408",987,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Bryce Ford-Wheaton,40529,NYG,WR,NA,Final W 36-24 vs Ari,W (Oct 7),-,8,0.00,"2,521",981,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Shedrick Jackson,40491,Bal,WR,NA,Final W 24-18 vs Ten,W (Oct 7),-,13,0.00,"2,439",968,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Isaiah Winstead,40466,Pit,WR,NA,Final L 24-27 @ Cle,W (Oct 7),-,9,0.00,"2,382",955,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jake Bobo,40452,Sea,WR,IR,Final W 30-23 vs LAC,W (Oct 7),-,11,0.00,"2,710",948,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Malik Heath,40445,Atl,WR,NA,Mon 8:15 pm @ NO,FA,-,11,–,"2,465",946,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Elijah Cooks,40374,Car,WR,NA,Final W 32-26 vs Det,W (Oct 7),-,5,0.00,"2,319",918,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Malik Cunningham,40290,Det,WR,NA,Final L 26-32 @ Car,W (Oct 7),-,6,0.00,"2,401",881,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jared Wayne,40288,Hou,WR,,Final L 30-34 vs Dal,W (Oct 7),-,8,0.00,"2,275",880,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Ronnie Bell,40279,LV,WR,NA,Final L 27-30 vs KC,W (Oct 7),-,13,0.00,"2,509",878,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Colton Dowell,40263,SF,WR,NA,Final W 24-14 vs Den,W (Oct 7),-,8,0.00,"2,333",870,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Jalen Brooks,40257,Ari,WR,,Final L 24-36 @ NYG,W (Oct 7),1,14,0.00,"2,767",866,0%,-,-,-,-,-,-,-,-,-,-,0,0,-
+A.T. Perry,40242,Den,WR,NA,Final L 14-24 @ SF,W (Oct 7),-,10,0.00,"2,286",859,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Trey Palmer,40223,NO,WR,NA,Mon 8:15 pm vs Atl,FA,-,8,–,"2,489",842,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Andrei Iosivas,40211,Cin,WR,IR,Final L 17-22 vs Jax,W (Oct 7),-,6,0.00,277,837,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Justin Shorter,40167,LV,"WR,TE",NA,Final L 27-30 vs KC,W (Oct 7),-,13,0.00,"2,255",802,0%,-,-,-,-,-,-,-,-,-,-,-,-,-
+Marvin Mims Jr.,40090,Den,WR,,Final L 14-24 @ SF,W (Oct 7),1,10,0.50,273,"1,193",1%,0,0,0,0,0,0,3,1,10,0,0,0,1
+Dareke Young,34189,LV,WR,,Final L 27-30 vs KC,W (Oct 7),1,13,0.60,"2,769","1,194",0%,-,-,-,-,-,-,2,1,9,0,0,0,1
+Derius Davis,40133,LAC,WR,,Final L 23-30 @ Sea,W (Oct 7),1,7,0.90,"2,784","1,195",0%,-,-,-,-,-,-,1,1,6,0,0,0,1

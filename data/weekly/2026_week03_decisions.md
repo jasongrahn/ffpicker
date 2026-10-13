@@ -320,3 +320,261 @@ Also record, separately from the kill table:
   and Dallas-side players moved the same direction, the self-damping claim is wrong.
 
 **n=3. Fit nothing.**
+
+### Result: **W 108.74 – 96.70** vs Maybe Mitchell. Record **2-1**.
+
+Yahoo had us **38% underdog** at -12.95 proj. We won by **+12.04**. The swing is almost
+entirely theirs: we beat projection by **+4.75**, they missed by **-20.24**.
+
+| | proj | actual | delta |
+|---|---|---|---|
+| JGrahnasaurs | 103.99 | **108.74** | **+4.75** |
+| Maybe Mitchell | 116.94 | **96.70** | **-20.24** |
+
+**Do not read this as our model being sharp.** We did not outscore their projection; they
+failed to reach it. Three of their nine (Jefferson -9.21, Hall -7.26, Montgomery -6.46)
+gave back 22.93 on their own, more than the final margin.
+
+### Kill table
+
+| decision | call | kill hit? | verdict |
+|---|---|---|---|
+| D1 Mahomes > Stafford | Mahomes 16.94 | **PENDING** — need Stafford actual | |
+| D2 Adams + Sutton | Adams **17.20**, Sutton 6.10 | **PENDING** Odunze; needs >17.20 to fire | Adams carried it |
+| D3 hold Etienne | Etienne **8.00** | **NO** — bar was <7.0 AND opp <12 | held, cleared bar |
+| D4 Henry + Williams | Henry **21.40**, Williams **17.30** | **PENDING** — needs Marks/Gainwell >21.40 | best two on roster |
+| D5 bench Raymond | — | **PENDING** — needs Raymond >17.20 | |
+| D6 stream Chiefs + Butker | Chiefs 8.00, Butker 6.00 | **PENDING** — the week's real experiment | |
+| D7 no swaps | — | **PENDING** — regret needs bench | |
+| §1 KC concentration | 16.94 / 6.00 / 8.00 | **NO** — 81% / 66% / 103% of proj, bar was 60% | see below |
+
+### Process: the `Q` contingency was executed correctly
+
+Etienne (RB, New Orleans) cleared inactives and dressed. Contingency was **checked and
+correctly not triggered** — commit `acc3de5`. He scored **8.00** on proj 9.82 with 57 rush
+yds and 2 receptions. First week the replacement-deadline rule from `R/42_deadlines.R` ran
+live, and it worked as designed: we knew before we had to decide. **Process: right.**
+
+### §1 concentration did not fire, but it was still the worst block on the roster
+
+KC @ MIA projected **37.73**, returned **30.94** (-6.79). KC won 24-10 — a win, but a
+low-scoring one, which is the exact script that pays a QB/K/DEF stack least: Mahomes 2 TD
+on 246 yards, Butker one FG. No individual player fell under 60%, so the kill condition is
+correctly scored NO, but the block underperformed and **none of it was offset** — the
+opponent had nobody in that game.
+
+Read: the kill condition was set at the wrong altitude. It tested "does one script sink
+three slots" when the live risk was "does one script mildly disappoint three slots at
+once." **Proposed revision for Week 4: fire on the block total under 80% of block
+projection, not on all three players under 60% individually.** That would have fired here
+(30.94 / 37.73 = 82%... barely not). Record as a candidate, not a change.
+
+### Hedge check (§1a): one hedge untested, one **falsified**
+
+**BAL @ DAL did not damp anything — it inflated both sides.** Final 34-31, a shootout, not
+a blowout. My 37.88 of exposure returned **46.50** (Henry 21.40, Williams 17.30, Ferguson
+7.80); their Jackson returned 20.44 on 22.89. The self-damping argument was about a
+*blowout* and no blowout happened. **Untested, not confirmed.** Carry it.
+
+**Sutton vs Rams DEF is falsified as stated.** The claim was that Denver passing well *is*
+the Rams defense failing, so the two move inversely. Denver won 30-26 and the Rams DEF
+duly scored **3.00** on 5.77 — but **Sutton scored 6.10 on 8.81**, 46 yards on 3 catches.
+Both went down together.
+
+The error: the hedge is stated at **team level**, my exposure sits at **player level**.
+Denver scoring 30 points does not require Courtland Sutton to catch them. A team-level
+opposition is not a player-level hedge, and future correlation notes must say which one
+they mean.
+
+### Out-of-sample game script (learn #2). n=3 per player. Nothing is concluded here.
+
+`actual / own 3-week average`, weeks 1-3 actuals only:
+
+| player | wk1 | wk2 | wk3 | avg | wk3 / avg | bucket predicted |
+|---|---|---|---|---|---|---|
+| D. Henry (RB, Bal) | 34.80 | 16.20 | 21.40 | 24.13 | **0.887** | RB fav 3-7 = 1.078x |
+| P. Mahomes (QB, KC) | 22.66 | 28.98 | 16.94 | 22.86 | **0.741** | QB fav 10+ = 1.120x |
+| C. Sutton (WR, Den) | 2.10 | 4.00 | 6.10 | 4.07 | **1.500** | WR flat, dog irrelevant |
+
+Both directional predictions **missed**, and the WR-is-flat control came in at 1.50x. This
+is not evidence against the 2024-25 measurement. A three-game denominator containing one
+34.80 outlier is not a season average, and one observation per bucket has no power at all.
+**The metric needs a real denominator before it means anything — revisit at week 8+.**
+Recorded so the record exists, not because it reads on anything.
+
+### Projection error, both sides. First week this is measurable.
+
+| | MAE / player | mean signed |
+|---|---|---|
+| ours | **3.06** | +0.53 |
+| theirs | **5.16** | -2.25 |
+
+Yahoo was substantially more wrong about their roster than ours, and wrong in the
+pessimistic-for-them direction. **One week. Do not call this bias.** The purpose of
+logging both lineups was to build this series; this is row one of it.
+
+Biggest single misses: their **J. Smith-Njigba +13.11** (30.36 on 17.25), our **D. Adams
++7.31** (17.20 on 9.89 — second straight week Adams blows past his number), their
+**J. Jefferson -9.21** (4.20 on 13.41).
+
+### Still open — needs six bench actuals + two dropped players
+
+Cannot score D1, D2, D4, D5, **D6** or regret without: Stafford, Odunze, Robinson, Marks,
+Gainwell, Raymond, **Patriots DEF**, **C. McLaughlin (K, TB)**.
+
+**D6 is the week's real experiment and it is the one still unscored.**
+
+**n=3. Fit nothing.**
+
+---
+
+## Retro, part 2 — bench scored 2026-09-29. Kill table now complete.
+
+Bench and dropped players were **not** in the Yahoo week-4 export (those stat columns are
+week-4 projections, the known trap). Scored instead with `score_player_week()` against
+`nflreadr::load_player_stats(2026)`, week 3.
+
+**`score_player_week()` reproduced all 9 Yahoo starter scores exactly** — Mahomes 16.94,
+Henry 21.40, Williams 17.30, Adams 17.20, Etienne 8.00, Ferguson 7.80, Sutton 6.10,
+Butker 6.00. Validation record now **35/35 across weeks 1-3**. The bench numbers below
+inherit that confidence.
+
+**Patriots DEF was computed by hand** from `config/scoring.json` DST tiers — allowed 35
+(NE 6 @ JAX 35) = **-4**, 1 sack = +1, 1 INT = +2 -> **-1.00**. Same hand method
+reproduces the Chiefs' Yahoo 8.00 exactly (7-13 allowed = 4, INT 2, fum rec 2).
+
+| player | slot | actual |
+|---|---|---|
+| M. Stafford (QB, LAR) | BN | **22.90** |
+| K. Raymond (WR, Chi) | BN | **18.00** |
+| W. Robinson (WR, Ten) | BN | **15.20** |
+| W. Marks (RB, Hou) | BN | 8.60 |
+| R. Odunze (WR, Chi) | BN | 5.90 |
+| K. Gainwell (RB, TB) | BN | 2.00 |
+| C. McLaughlin (K, TB) | **dropped** | **12.00** |
+| Patriots (DEF, NE) | **dropped** | **-1.00** |
+
+### Completed kill table
+
+| decision | call | kill hit? | verdict |
+|---|---|---|---|
+| D1 Mahomes > Stafford | Mahomes 16.94, Stafford **22.90** | **YES** — bar was >4, gap **5.96** | decision defensible, **outcome wrong** |
+| D2 Adams + Sutton | Adams 17.20, Sutton 6.10, Odunze 5.90 | **NO** — Odunze beat neither | **right, first time in 3 weeks** |
+| D3 hold Etienne | 8.00 | **NO** — bar <7.0 AND opp <12 | right, and contingency executed |
+| D4 Henry + Williams | 21.40 / 17.30 vs Marks 8.60, Gainwell 2.00 | **NO** | right, not close |
+| D5 bench Raymond | Raymond **18.00** vs Adams 17.20, Sutton 6.10 | **YES** — beat **both** | **wrong, and by rule** |
+| D6 stream Chiefs + Butker | Chiefs 8.00 vs NE **-1.00**; Butker 6.00 vs McLaughlin **12.00** | **HALF** — see below | net **+3.00** |
+| D7 no swaps | regret **25.06** | **YES** | lineup was far from optimal |
+| §1 KC concentration | 81% / 66% / 103% of proj | **NO** | bar mis-set, see part 1 |
+
+### D6 — the week's real experiment. Split decision, method survives.
+
+The compound bar was "**both** dropped players win by >3 -> method needs review." Only one did.
+
+| swap | kept | dropped | delta |
+|---|---|---|---|
+| DEF: Chiefs over Patriots | **8.00** | **-1.00** | **+9.00** |
+| K: Butker over McLaughlin | 6.00 | **12.00** | **-6.00** |
+| **net** | | | **+3.00** |
+
+**The DST side worked exactly as theorised, and it is the stronger half.** The pick was
+made on opponent implied total (MIA 17.5 vs JAX 24.2). Jacksonville scored **35** on New
+England, dropping the Patriots through two tiers into the **-4** bucket; Miami scored 10,
+putting the Chiefs in the 7-13 tier at +4. The mechanism the bet was placed on — points
+allowed dominating DST scoring — is precisely the mechanism that produced the 9-point gap.
+
+**The kicker side lost, and it lost the way it was pre-registered as likely to.** D6
+recorded the Butker move as "lower conviction... McLaughlin scored 16.00 in Week 2 and
+kicker scoring is noisy." He scored 12.00 on a 7.70 projection. McLaughlin has now beaten
+his projection **three weeks running** (11.00 / 16.00 / 12.00 on 7.03 / ~8 / 7.70).
+
+**Reading: the two halves are not the same bet and should stop being scored as one.**
+DST points-allowed tiers are wide, discrete, and driven by a variable the market prices
+directly. Kicker scoring is a handful of discrete events with no tier structure and a much
+weaker link to team implied total. **Proposal for Week 4: keep streaming DST on opponent
+implied total, drop the own-implied-total rule for K and hold the incumbent unless the gap
+is large.** One week is not enough to act on — record it, watch Week 4, decide at Week 5.
+
+### D5 — the expensive one. A pre-committed rule fired against us.
+
+Raymond (WR, Chicago) scored **18.00** — 6 catches, 90 yards, 1 TD on **7 targets** — and
+outscored both starting receivers. He was benched because his Week 2 trigger (6+ targets)
+came in at **5**, and D5 said "missing by one is missing."
+
+**Separate decision from outcome, carefully.** The rule was pre-registered, applied
+honestly, and is the kind of rule that stops us chasing last week's points. It cost
+**11.90** against Sutton this week. That is one observation, and a rule abandoned the
+first time it costs something is not a rule.
+
+**But the trigger has now fired: Raymond had 7 targets in Week 3. Per D5's own
+re-committed condition, he STARTS in Week 4.** No new argument needed; the rule says so.
+
+Target trend, the thing the rule actually tracks: **9 -> 5 -> 7**. Compare Sutton
+**5 -> 4 -> 7** and Odunze **3 -> 4 -> 6**. All three are converging; the roster has three
+WRs with near-identical volume and one of them costs a starting slot.
+
+### D1 — the QB call is now wrong in both directions
+
+| week | started | benched | gap |
+|---|---|---|---|
+| 1 | Stafford 5.10 | Mahomes 22.66 | **-17.56** |
+| 3 | Mahomes 16.94 | Stafford 22.90 | **-5.96** |
+
+Both calls followed the projection. Both lost. **Combined cost 23.52 across three weeks,
+and this is the single largest recurring leak on the roster.** Week 1's retro already
+concluded "a picker maximizing projected points makes the same wrong call."
+
+The D1 reasoning added a game-script argument (QB favored 10+ = 1.120x) and Mahomes came
+in at **0.741x** his own 3-week average. That is one data point against a 37-game measured
+effect and settles nothing, but it is the second time a confident QB argument preceded a
+loss. **Carry as an open question, not a fix: two QBs this close in projection may simply
+be a coin flip, and if so the correct response is to stop spending analysis on it.**
+
+### Regret: **25.06**. Worst of the three weeks — in a week we won.
+
+Best legal lineup, all rostered players, deadline-legal at Sun 13:00:
+
+| slot | optimal | started | delta |
+|---|---|---|---|
+| QB | **Stafford 22.90** | Mahomes 16.94 | +5.96 |
+| RB | Henry 21.40 | Henry 21.40 | — |
+| RB | Williams 17.30 | Williams 17.30 | — |
+| WR | **Raymond 18.00** | Adams 17.20 | +11.90* |
+| WR | Adams 17.20 | Sutton 6.10 | |
+| TE | Ferguson 7.80 | Ferguson 7.80 | forced |
+| FLEX | **Robinson 15.20** | Etienne 8.00 | +7.20 |
+| K | Butker 6.00 | Butker 6.00 | forced |
+| DEF | Chiefs 8.00 | Chiefs 8.00 | forced |
+| **total** | **133.80** | **108.74** | **25.06** |
+
+\* WR pair moves together: Raymond + Adams (35.20) replaces Adams + Sutton (23.30).
+
+| week | regret |
+|---|---|
+| 1 | 19.76 |
+| 2 | 2.50 |
+| **3** | **25.06** |
+
+**This is the cleanest "outcome good, decisions bad" case yet recorded, and it is the
+opposite of Week 1.** We won by 12.04 while leaving 25.06 on the bench. The win came from
+the opponent missing projection by 20.24, not from the lineup. **Three of four live
+choices — QB, WR2, FLEX — were wrong, and the record shows a win.**
+
+**The single structural finding: our three benched pass-catchers (Raymond 18.00,
+Robinson 15.20) outscored two of our three starting receiver-eligible slots.** Sutton
+6.10 and Etienne 8.00 held slots that four rostered players beat. That is not a start/sit
+error to fix retroactively — it is a signal that the WR/FLEX depth chart is mis-ranked
+and the Yahoo projections we rank on are not separating these players.
+
+### What carries into Week 4
+
+1. **Raymond starts.** Trigger fired at 7 targets, pre-committed in D5. Not optional.
+2. **Keep DST streaming on opponent implied total** — the strongest single result of the
+   week (+9.00). **Revisit K streaming**, which lost 6.00 and whose mechanism is weaker.
+3. **Stop analysing Mahomes vs Stafford.** Two wrong calls in three weeks on a ~4-point
+   projection gap. Pick one and leave it unless something material changes.
+4. **The WR/FLEX depth chart is the real problem**, not any single start/sit.
+5. **Proposed §1 revision:** score single-game concentration on block total vs block
+   projection (<80%), not per-player <60%. Candidate only.
+
+**n=3. Fit nothing.** Every item above is a question for Week 4, not a fitted rule.

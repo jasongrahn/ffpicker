@@ -83,7 +83,11 @@ read_yahoo_week <- function(dir) {
   # per-position files carry the same rows with cleaner position labels.
   pos <- c("qb", "rb", "wr", "te", "k", "def")
   files <- list.files(dir, full.names = TRUE)
-  files <- files[grepl(sprintf("_(%s)\\.csv$", paste(pos, collapse = "|")), files)]
+  # Exports may carry a trailing date stamp (`yahoo_week3_rb_2026-09-27.csv`)
+  # when the same week is re-pulled. Allow it; the position token must still be
+  # the last non-date segment, so `rosterchanges_injured_reserve_<date>.csv` and
+  # friends stay excluded.
+  files <- files[grepl(sprintf("_(%s)(_[0-9-]+)?\\.csv$", paste(pos, collapse = "|")), files)]
   stopifnot(length(files) > 0)
 
   bind_rows(lapply(files, read_yahoo_position)) |>
