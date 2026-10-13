@@ -18,13 +18,31 @@ Yahoo at scaffold time: us **106.78**, them **107.83**, underdog **49%**.
 | thing | state |
 |---|---|
 | `data/weekly/2026_week06_decisions.md` | committed `f81c554`. §2 DEF row = `<PENDING WAIVER>` |
-| `_myteam.csv` / `_opponent.csv` | **NOT WRITTEN.** Blocked on waivers |
+| `_opponent.csv` | **WRITTEN 10-13**, 16 rows, starters sum **107.83** = Yahoo exactly. `proj_gameday` **BLANK** |
+| `_myteam.csv` | **NOT WRITTEN.** Blocked on the DEF row |
 | waivers | KC + CLE claims in. Process **Wed 2026-10-14** |
 | freeze deadline | **Sun 10-18 9:30am**, JAX London kickoff |
 
-**Opponent lineup was captured from the user's screenshot and is in this conversation
-only.** If `_opponent.csv` is not written before kickoff, that total is lost the way
-week 5's was. #39 §2 — structural, no recovery.
+### !! REFRESH `_opponent.csv` BY THU 2026-10-16 AFTERNOON !!
+
+`proj_gameday` and `proj_gameday_src` are **blank in all 16 rows**. Fill them from the
+Thursday Yahoo matchup page. Two reasons this is not optional:
+
+1. Their lineup is **not final**. Caleb Williams (18.88) and C.J. Stroud (16.80) both sit
+   behind Bryce Young (16.76) on their bench — a QB swap gains them ~2 pts, and their
+   **DEF slot is dead** (Vikings on bye, 0.00, no backup DEF rostered). Both are likely
+   to move. The 107.83 captured here is a **floor-ish snapshot, not their final number**.
+2. Week 5's opponent total was lost permanently because this step was skipped. The export
+   has **no started/bench flag**, so starters are only recoverable *before* kickoff.
+
+A second look **Sun 10-18 before 9:30am** is free and costs nothing. Take it.
+
+**Two anomalies in the file, verify on refresh:**
+- `M. Evans, WR, SF` — read off the screenshot as San Francisco (Mon 8:15 vs Was, which
+  is SF's game). Mike Evans is normally **TB**. Either a mis-read or a player this
+  session could not identify. **Confirm the name and team.**
+- **16 rows = 15 roster + 1 IR.** Which of the 7 bench rows is the IR slot is **not
+  determinable** from the matchup page. All 7 are coded `BN`.
 
 ---
 
@@ -149,9 +167,11 @@ WR and QB get 1.0.
 
 1. **Wed 10-14, after waivers:** fill §2's `<PENDING WAIVER>` DEF row, mark which §1
    branch fired.
-2. **Same sitting:** write `data/weekly/2026_week06_myteam.csv` and
-   `2026_week06_opponent.csv`. Opponent lineup is in the #40 conversation only. **Do not
-   skip — this is the number week 5 lost permanently.**
+2. **Same sitting:** write `data/weekly/2026_week06_myteam.csv` (blocked only on the
+   DEF row). `_opponent.csv` already exists.
+2b. **THU 10-16 AFTERNOON — REFRESH `_opponent.csv`.** Fill `proj_gameday` in all 16
+   rows, confirm `M. Evans / SF`, and re-check their QB and DEF slots, which are the two
+   most likely to move. See §0.
 3. **Before Sun 9:30am:** freeze. Nothing below `## Retro` edited after.
 4. **Monday:** append `## Retro`, score all six conditions, compute
    `regret = best legal lineup - started` into `data/weekly/README.md`.

@@ -158,7 +158,18 @@ BN   Bates      DET  BYE      0.00
 IR   Etienne    NO           hamstring
 ```
 
-Opponent (Owl Out Blitz) frozen separately in `2026_week06_opponent.csv`.
+Opponent (Owl Out Blitz) captured in `2026_week06_opponent.csv` on **10-13**, 16 rows,
+starters summing **107.83 — matches Yahoo's matchup page exactly**.
+
+**NOT FINAL. Refresh `proj_gameday` by Thu 10-16 afternoon.** Their lineup has two obvious
+open slots: **Caleb Williams (18.88) and C.J. Stroud (16.80) are both benched behind
+Bryce Young (16.76)**, and their **DEF slot is dead** — Vikings on bye, 0.00, no backup
+DEF rostered. Expect them to gain ~2 at QB and ~5-8 at DEF. **107.83 is a snapshot, not
+their final number.**
+
+Two anomalies to verify on refresh: `M. Evans, WR, SF` (Mike Evans is normally TB; read
+off the matchup page, Mon 8:15 vs Was is SF's game), and **16 rows = 15 roster + 1 IR**
+with no way to tell which bench row is the IR slot — all 7 coded `BN`.
 Yahoo had us **106.78 vs 107.83, underdog 49%**.
 
 ### 2a. The only live choice: 3 WRs from 4. Started Adams / Tate / Boston.
