@@ -48,7 +48,10 @@ from 3 healthy RBs. #39 §3b's "wk11 fillable with zero slack" still holds.
 
 ### W1. Claim **KC DEF**, no drop. W2. Claim **CLE DEF**, drop **Jaguars**.
 
-Both process **Wed 2026-10-14**. Priority **10 of 10** — a rolling list with no FAAB, and
+**RESULT 2026-10-14: BOTH LANDED.** Roster 15, Jaguars gone. KC starts wk6, CLE held
+for wk7. The best branch of the four fired, and it cost zero waiver priority.
+
+Both processed **Wed 2026-10-14**. Priority **10 of 10** — a rolling list with no FAAB, and
 a successful claim sends you to the bottom. We are already there, so **claims are
 priority-free this week.** That is why two were submitted instead of one.
 
@@ -75,7 +78,7 @@ Owned and therefore unavailable: SEA, PIT, DEN, HOU, LAR, MIN, CIN, CHI, NYG, PH
 
 | outcome | lineup consequence |
 |---|---|
-| both land | KC starts wk6 (17.00), CLE starts wk7 (18.00). Both weeks solved. Roster 15 |
+| **both land — THIS IS WHAT FIRED, 10-14** | KC starts wk6 (17.00), CLE starts wk7 (18.00). Both weeks solved. Roster 15. **Jaguars gone** |
 | KC only | keep JAX, start KC wk6, re-claim a wk7 DEF Wed 10-21 |
 | CLE only | JAX gone, start CLE wk6 at 23.00 vs JAX's 19.75. **Costs ~1-2 pts.** Accepted |
 | neither | start JAX wk6 (19.75, rank 8 of 28), re-claim for wk7 |
@@ -147,9 +150,10 @@ WR   Tate       TEN @ IND     9.87
 TE   Higbee     LAR vs ARI    5.74
 FLX  Boston     CLE vs BAL    9.04
 K    Butker     KC vs LAC     8.41
-DEF  <PENDING WAIVER>              <!-- fill Wed 10-14 -->
-                 total       106.78 (DEF row = Jaguars 6.60 at scaffold time)
+DEF  KC         KC vs LAC     ____   <!-- proj: fill on Thu 10-16 refresh -->
+                 total       100.18 + KC DEF
 
+BN   CLE DEF    CLE vs BAL    ____   held for wk7 (opp implied 18.00)
 BN   Mahomes    KC vs LAC    18.37
 BN   Odunze     CHI @ ATL     8.64
 BN   Hockenson  MIN  BYE      0.00   concussion, Q
