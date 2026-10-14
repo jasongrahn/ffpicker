@@ -318,6 +318,100 @@ Earliest kickoff among legal replacements for any slot. No rostered player of ou
 
 ---
 
+## 6. FINAL. Wed 10-14 evening. Supersedes §2 and corrects §5d, §5e, §5f.
+
+Source: **Yahoo matchup page** 2026-10-14 (not position pages). Two moves executed.
+
+### 6a. Moves made.
+
+| # | move | why |
+|---|---|---|
+| **D10** | **DROP `J. Bates` (K, Det)** | Dead spot. Butker's bye (KC wk5) is **past**, so a 2nd K covers nothing. Same argument that dropped the Jaguars in §W1 |
+| **A4** | **ADD `Brenton Strange` (TE, Jax)** | Free agent, waivers already cleared -> **zero priority spent** |
+| **S1** | **START Strange 8.25, BENCH Higbee 5.72** | 44% gap, far outside the retired 5% band. Raw Yahoo projection decides |
+| **S2** | **START Tate 9.87, BENCH Odunze 8.64** | 14.2% gap. The one lineup error at freeze; worth **+1.23** |
+
+### 6b. §5d was WRONG. "No add justified" did not survive the wk11 filter.
+
+§5d ranked the wire and concluded no add. The defect: it never filtered the pool for
+**plays in week 11** — the one zero-slack week (§5c). Once filtered, TE is the thin slot
+and Strange is both insurance *and* an upgrade over the starter.
+
+Strange is not a lottery ticket. Snaps and targets, wks 1-5:
+
+| | wk1 | wk2 | wk3 | wk4 | wk5 | Yahoo wk6 |
+|---|---|---|---|---|---|---|
+| **Strange** snap% | 68 | 83 | 77 | **87** | 81 | **8.25** |
+| **Strange** targets | 3 | 2 | 5 | **8** | **8** | |
+| Higbee snap% | 20 | 26 | 71 | 65 | 67 | 5.72 |
+| Hockenson snap% | 66 | 69 | 85 | 83 | **3** | 0.00 |
+
+Never below 68% of JAX snaps; targets **doubled** across the season.
+
+**Byes are complementary: JAX bye wk7, LA bye wk11.** Strange and Higbee cover every
+remaining week between them. That is why the add cost nothing structurally.
+
+**Pierce was the rejected alternative.** 7.93 and **conditional** on Barkley (`Q`,
+hamstring) sitting again, into our *deepest* room (Henry 25.5 opp/g, J.Williams 19.5,
+Gordon II 14.5). Strange 8.25 unconditional into our *thinnest*. One spot, Strange wins.
+
+### 6c. §5e was WRONG. Their bench has an `(Empty)` slot. They CAN stream a DEF.
+
+§5e read the Wed position export as 15 rostered = full, and concluded their DEF was stuck
+at 0.00. The matchup page shows an **open bench spot** — they dropped Stroud and have not
+refilled it. **An export is a snapshot; a roster is not.** Same failure shape as the
+`rosterchanges_*` family in `CLAUDE.md`.
+
+Their headroom, both unspent as of Wed night:
+
+| | now | available |
+|---|---|---|
+| **DEF** | Vikings **0.00**, MIN bye | **+5 to +8** with the open spot |
+| **QB** | Bryce Young 16.68 | Caleb Williams **19.09** (`Q`) -> **+2.41** |
+
+**Yahoo's "51% favorite / 108.65" is computed against an unfinished lineup. Their
+realistic final is ~116-119.** Do not read 49% as the real line.
+
+### 6d. Final lineup. 108.71.
+
+```
+QB   Stafford    LAR vs ARI   21.05      BN  Mahomes     18.72
+RB   Henry       BAL @ CLE    16.00      BN  Odunze       8.64
+RB   J.Williams  DAL @ GB     14.30      BN  Higbee       5.72
+WR   Adams       LAR vs ARI   13.33      BN  Browns DEF   5.90
+WR   Tate        TEN @ IND     9.87      BN  Hockenson    0.00  concussion
+TE   Strange     JAX vs HOU    8.25      BN  Gordon II    0.00  bye
+FLX  Boston      CLE vs BAL    9.78      IR  Etienne      0.00
+K    Butker      KC vs LAC     8.37
+DEF  Chiefs      KC vs LAC     7.76      opp implied 17.00
+                 total       108.71      vs their 108.65 (unfinished)
+```
+
+Roster 15, zero open spots, zero waiver priority spent all week.
+
+### 6e. §5f CORRECTED. Freeze deadline is now **Sun 10-18 9:30am ET**, not 1:00pm.
+
+**Strange plays Sun 9:30am vs HOU.** Adding him put a 9:30am game back on our roster, so
+he is a legal replacement at TE and FLEX, and the earliest-replacement-kickoff rule moves
+the whole call forward **3.5 hours**. Second time this season the binding deadline was not
+a player's own kickoff (wk2 Adams was the first).
+
+### 6f. Kill conditions. Score ALL of these in the retro.
+
+| # | condition | state |
+|---|---|---|
+| **S1** | **Strange >= Higbee's actual.** Fail twice consecutively -> Higbee reclaims TE1 | **NEW.** Not killable on one week — 0.39sd-class edge, same logic as the DST rule |
+| **A4** | Strange snap% **< 60** in wk6 -> the role read was wrong, not a variance miss | **NEW.** Snap share is the claim; points are not |
+| **S2** | Tate-over-Odunze: score **both** actuals. Right call != good outcome | **NEW.** +1.23 projected |
+| **W3** | Tate **< 6 tgt** in wk6 -> second consecutive -> **Tate is the drop** | **ARMED.** wk5 = 5. S2 and W3 can both fire: we started him *and* he can still fail |
+| **H1** | Hockenson clears protocol by wk7 | **DOWNGRADED — no longer a drop question.** §5c made him the only legal wk11 TE; Strange now covers that. H1 becomes informational |
+| **D10** | Bates drop: did we need a K in wks 6-18? | **Cannot fail before wk18.** Butker's bye is past |
+
+**Opponent watch, two items only, both cheap:** does a DEF appear in their empty slot, and
+does Caleb Williams clear `Q`. Nothing else about their roster is actionable.
+
+---
+
 ## Retro
 
 <!-- Nothing above this line is edited after freeze. Append only, after Monday night. -->

@@ -1,17 +1,17 @@
-season,week,opponent,player,pos,nfl_team,slot,proj,proj_gameday,proj_gameday_src,actual
-2026,6,Owl Out Blitz,B. Young,QB,Car,QB,16.76,16.72,position_pages_2026-10-14,
-2026,6,Owl Out Blitz,D. Swift,RB,Chi,RB,13.25,13.31,position_pages_2026-10-14,
-2026,6,Owl Out Blitz,Q. Judkins,RB,Cle,RB,9.75,10.02,position_pages_2026-10-14,
-2026,6,Owl Out Blitz,P. Nacua,WR,LAR,WR,22.62,19.04,position_pages_2026-10-14,
-2026,6,Owl Out Blitz,M. Evans,WR,SF,WR,13.13,13.21,position_pages_2026-10-14,
-2026,6,Owl Out Blitz,B. Bowers,TE,LV,TE,14.61,14.43,position_pages_2026-10-14,
-2026,6,Owl Out Blitz,B. Allen,RB,NYJ,FLEX,9.63,9.65,position_pages_2026-10-14,
-2026,6,Owl Out Blitz,T. Loop,K,Bal,K,8.08,8.14,position_pages_2026-10-14,
-2026,6,Owl Out Blitz,Vikings,DEF,Min,DEF,0.00,0.00,position_pages_2026-10-14,
-2026,6,Owl Out Blitz,C. Lamb,WR,Dal,BN,15.91,15.80,position_pages_2026-10-14,
-2026,6,Owl Out Blitz,M. Golden,WR,GB,BN,13.11,12.43,position_pages_2026-10-14,
-2026,6,Owl Out Blitz,J. Waddle,WR,Den,BN,9.21,9.21,position_pages_2026-10-14,
-2026,6,Owl Out Blitz,G. Kittle,TE,SF,BN,12.07,12.10,position_pages_2026-10-14,
-2026,6,Owl Out Blitz,C. Stroud,QB,Hou,BN,16.80,16.60,position_pages_2026-10-14,
-2026,6,Owl Out Blitz,C. Williams,QB,Chi,BN,18.88,18.87,position_pages_2026-10-14,
-2026,6,Owl Out Blitz,J. Croskey-Merritt,RB,Was,BN,7.43,7.44,position_pages_2026-10-14,
+season,week,opponent,player,pos,nfl_team,slot,proj,proj_gameday,proj_gameday_src,actual,note
+2026,6,Owl Out Blitz,B. Young,QB,Car,QB,16.76,16.68,matchup_2026-10-14,,
+2026,6,Owl Out Blitz,D. Swift,RB,Chi,RB,13.25,13.44,matchup_2026-10-14,,
+2026,6,Owl Out Blitz,B. Allen,RB,NYJ,RB,9.63,11.17,matchup_2026-10-14,,
+2026,6,Owl Out Blitz,P. Nacua,WR,LAR,WR,22.62,19.04,matchup_2026-10-14,,
+2026,6,Owl Out Blitz,M. Evans,WR,SF,WR,13.13,13.34,matchup_2026-10-14,,
+2026,6,Owl Out Blitz,B. Bowers,TE,LV,TE,14.61,14.43,matchup_2026-10-14,,
+2026,6,Owl Out Blitz,M. Golden,WR,GB,FLEX,13.11,12.42,matchup_2026-10-14,,
+2026,6,Owl Out Blitz,T. Loop,K,Bal,K,8.08,8.13,matchup_2026-10-14,,
+2026,6,Owl Out Blitz,Vikings,DEF,Min,DEF,0.00,0.00,matchup_2026-10-14,,"bye, no 2nd DEF"
+2026,6,Owl Out Blitz,C. Lamb,WR,Dal,BN,15.91,15.82,matchup_2026-10-14,,Q
+2026,6,Owl Out Blitz,C. Williams,QB,Chi,BN,18.88,19.09,matchup_2026-10-14,,Q
+2026,6,Owl Out Blitz,G. Kittle,TE,SF,BN,12.07,12.23,matchup_2026-10-14,,
+2026,6,Owl Out Blitz,Q. Judkins,RB,Cle,BN,9.75,9.91,matchup_2026-10-14,,Q
+2026,6,Owl Out Blitz,J. Waddle,WR,Den,BN,9.21,9.23,matchup_2026-10-14,,
+2026,6,Owl Out Blitz,J. Croskey-Merritt,RB,Was,BN,7.43,7.53,matchup_2026-10-14,,
+2026,6,Owl Out Blitz,(Empty),,,BN,,,matchup_2026-10-14,,OPEN ROSTER SPOT
