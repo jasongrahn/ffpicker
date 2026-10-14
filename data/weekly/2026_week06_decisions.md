@@ -150,10 +150,10 @@ WR   Tate       TEN @ IND     9.87
 TE   Higbee     LAR vs ARI    5.74
 FLX  Boston     CLE vs BAL    9.04
 K    Butker     KC vs LAC     8.41
-DEF  KC         KC vs LAC     ____   <!-- proj: fill on Thu 10-16 refresh -->
-                 total       100.18 + KC DEF
+DEF  KC         KC vs LAC     7.75   <!-- filled 10-14 from position pages -->
+                 total       107.93  (100.18 + KC DEF 7.75)
 
-BN   CLE DEF    CLE vs BAL    ____   held for wk7 (opp implied 18.00)
+BN   CLE DEF    CLE vs BAL    5.91   held for wk7 (opp implied 18.00)
 BN   Mahomes    KC vs LAC    18.37
 BN   Odunze     CHI @ ATL     8.64
 BN   Hockenson  MIN  BYE      0.00   concussion, Q
@@ -236,6 +236,85 @@ logged for the retro only:
    signal, not a start/sit one (he is forced either way).
 4. Hockenson concussion status in the wk6 `injuries` / `gamedaycalls` exports.
 5. `regret = best legal lineup - started`, appended to `data/weekly/README.md`.
+
+## 5. Wed 10-14 refresh. Both #41 §1 items closed. Two bye-week facts in #41 are WRONG.
+
+Source: `docs/uploads/week_6_data/yahoo_week6_*_2026-10-14.csv` (position pages, **not**
+matchup page -> ~0.02-1.0 lower than the 10-13 matchup capture; see `CLAUDE.md`).
+
+### 5a. Closed.
+- **DEF proj filled**: KC **7.75**, CLE **5.91**. Starter total **107.93**.
+- **`proj_gameday` filled in both csvs**, 32/32 rows matched, `proj_gameday_src =
+  position_pages_2026-10-14`. Sun 10-18 refresh may overwrite.
+- **M. Evans WR SF VERIFIED REAL.** `Mike Evans,27535,SF,WR` in the wk6 WR export, owned
+  by Owl Out Blitz. Not a mis-read. He is on SF in 2026.
+
+### 5b. #41's bye weeks are wrong. Derived from `load_schedules(2026)`.
+
+| team | #41 said | actual |
+|---|---|---|
+| **KC** | 10 | **5 — already past.** Butker + Chiefs DEF play every remaining week |
+| **CLE** | 9 | **11** |
+| LA (=LAR) | 11 | 11 ok |
+
+-> **"The Browns need a wk9 replacement" is a false alarm. There are ZERO DEF holes left
+all season.** KC DEF bye already passed and covers CLE's wk11.
+
+### 5c. Week 11 is the pinch week, and it is exactly covered. H1 resolved by arithmetic.
+
+LA bye 11 **and** CLE bye 11 -> out: Stafford, Adams, Higbee, Browns DEF, **Boston**.
+Legal wk11 lineup is forced, **9 bodies for 9 slots, zero bench**:
+QB Mahomes / RB Henry, J.Williams / WR Tate, Odunze / TE **Hockenson** / FLX Gordon II /
+K Butker / DEF Chiefs.
+
+**-> HOLD HOCKENSON regardless of how H1 scores.** With Higbee on bye in 11 he is the
+only legal TE. Dropping him makes wk11 unfillable. H1 stops being a drop question.
+
+### 5d. Wire: waivers already cleared. No swap justified.
+
+RB FA 217 / W 0, WR FA 409 / W 2, TE FA 221 / W 0 -> **first-come, priority irrelevant.**
+
+Need-before-candidates, in order: depth table (5c) shows **no hole**; every one of our 9
+skill players clears the 5 opp/g bar and 7 of 9 trend **up** (wks 4-5 vs 1-3):
+
+| ours | opp/g last2 | trend | | best available | opp/g | trend |
+|---|---|---|---|---|---|---|
+| Henry RB | 25.5 | +1.8 | | Dameon Pierce RB PHI | 16.0 | **1 game only** |
+| J.Williams RB | 19.5 | +1.2 | | Keaton Mitchell RB LAC | 13.0 | +6 |
+| Gordon II RB | 14.5 | +3.0 | | Woody Marks RB HOU | 13.0 | +3 |
+| Tate WR | 8.5 | +1.8 | | Roschon Johnson RB CHI | 8.5 | +8.5 |
+| Odunze WR | 8.0 | +3.7 | | Brenton Strange TE JAX | 8.0 | +4.7 |
+| Adams WR | 8.0 | **-1.7** | | | | |
+| Boston WR | 7.0 | +2.0 | | | | |
+| Hockenson TE | 7.0 | +2.7 | | | | |
+| Higbee TE | 6.0 | -0.5 | | | | |
+
+**No add.** Pierce's 16 is one week post-signing, not a trend. Adams is our only negative
+trend and still our WR1 by projection (13.33).
+
+**The free drop, when we want a body, is `J. Bates` (K, DET).** Butker's bye (KC 5) is
+past, so a second kicker is now a **dead roster spot** — the same argument that dropped
+the Jaguars in §W1. Do not drop a TE, and keep both DEFs (streaming is the validated
++1.92/wk lever; a 2nd K is the same lever on far weaker evidence).
+
+### 5e. Opponent re-read. They DROPPED Stroud. Realistic final ~112.8, not #41's 115.
+
+15 rostered, no IR row now. `C.J. Stroud` shows `W (Oct 16)` -> they cut him.
+
+- QB: **Caleb Williams 18.87 (Q)** vs Bryce Young 16.72. ~+2.2 if Williams is cleared.
+- **DEF: Vikings 0.00, MIN on bye, no 2nd DEF, and the roster is FULL at 15.** They must
+  **drop someone** to stream a DEF. #41's "+5-8 available" assumed a free spot. There
+  isn't one. If they stand pat, DEF = 0.00.
+- Their optimal: 18.87 + 13.31 + 10.02 + 19.04 + 15.80 + 14.43 + 13.21 (Evans FLEX) +
+  8.14 + 0.00 = **112.82**. With Young instead: 110.67.
+
+**Us 107.93 vs ~112.8 = -4.9.** Underdog, inside one WR game. Watch two things only:
+whether Caleb Williams clears Q, and whether a DEF appears on their roster.
+
+### 5f. Freeze deadline CONFIRMED Sun 10-18 1:00pm ET.
+
+Earliest kickoff among legal replacements for any slot. No rostered player of ours has a
+9:30am or Thursday game (Jaguars gone). A Thu/Fri second look is free and spends nothing.
 
 ---
 
