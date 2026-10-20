@@ -422,6 +422,10 @@ Appended Mon 2026-10-20 from `docs/uploads/week_6_data/` (`*_actual_*` exports,
 
 ### R1. Result. We scored **91.68**. Lost. All six conditions scored below.
 
+> **R1's opponent paragraph and R6 in full are SUPERSEDED by R8.** User confirmed the
+> real final: Owl Out Blitz **111.14**, not the 106.54 replayed here. They *did* fill the
+> slot. Conditions, regret and R4/R5 are unaffected.
+
 ```
 QB   Stafford    proj 21.05 -> act 16.88   -4.17
 RB   Henry            16.00 ->      4.50  -11.49
@@ -555,7 +559,7 @@ six positions is not what noise usually looks like. Re-check at wk7; if it persi
 projections are being scored against an optimistic baseline and **cross-roster**
 comparisons (ours vs theirs) are unaffected while **absolute** totals are inflated.
 
-### R6. Process. One prediction missed, and it is the useful one.
+### R6. ~~Process. One prediction missed, and it is the useful one.~~ **WRONG. See R8.**
 
 §6c called the opponent's empty bench slot "+5 to +8 available" and projected 116-119.
 **They left it empty.** We correctly identified their headroom and incorrectly assumed
@@ -576,3 +580,79 @@ n=1. Record it, build nothing on it.
 2. Pool wks 4-7 pairs and re-run R4's 5-15% band at week 8.
 3. Re-check R5's -1.79 bias at wk7.
 4. Confirm the final score on the Yahoo matchup page and correct R1 if 106.54 is wrong.
+
+### R8. CORRECTION. Final was **111.14**. They filled the slot. R6 had it backwards.
+
+User confirmed from the Yahoo matchup page: **JGrahnasaurs 91.68, Owl Out Blitz 111.14.**
+Lost by **19.46**. Record 3-3 stands.
+
+**111.14 is not reachable from their Monday roster.** All 1,440 legal lineups over their
+15 remaining players were enumerated; **zero** total 111.14. Adding one outside player
+makes it reachable 62 ways across **19 distinct candidates** — Tre Tucker (WR, LV, 24.20),
+Tyrone Tracy Jr. (RB, NYG, 17.50), Chad Ryland (K, Ari, 19.00), Bears DEF (11.00),
+Packers DEF (9.00), and 14 others. **Every one of them reads `W (Oct 21)` today** —
+added for week 6, dropped Sunday night, back on waivers by the Monday export.
+
+**Which one is unidentifiable and will stay that way.**
+
+**-> §6c was right. R6 was wrong, and wrong by exactly the mechanism §6c itself named.**
+§6c caught the Wednesday position export being read as a live roster and wrote *"an export
+is a snapshot, a roster is not."* R6 then read the **Monday** export as a live roster,
+saw 15 players and Vikings DEF still present, and concluded they never streamed. Same
+trap, same week, one section later, in the opposite temporal direction. A post-game export
+is a snapshot of *Monday*, not of *Sunday's starting lineups*.
+
+**The rule generalises past `rosterchanges_*`:** a Yahoo export dated after kickoff cannot
+show a player who was added and dropped inside the same week. Streaming is **invisible in
+arrears by construction**. This is the same defect as the missing started/bench flag, and
+it has the same fix: **observe before kickoff or lose it permanently.** The Thu/Fri
+matchup glance that R6 correctly flagged as skipped is what would have caught this — that
+half of R6 survives, and its cost is now measured, not hypothetical.
+
+### R9. The correction guts R3's counterfactual for the one team we can check.
+
+R3 scored every roster *as if it had followed the Yahoo projection*. For Owl Out Blitz
+that counterfactual says **83.90** and a league-worst-but-one regret of **29.64**. The
+truth is **111.14** — they beat their own projection-following counterfactual by
+**+27.24**, and their regret against the 15-man hindsight optimum (113.54, itself now a
+floor) is at most **2.40**.
+
+| Owl Out Blitz | value |
+|---|---|
+| projection-optimal, actual pts | 83.90 |
+| R3 counterfactual regret | 29.64 |
+| **realized** | **111.14** |
+| realized regret vs 15-man hindopt | **<= 2.40** |
+
+**R3's conclusion was too strong.** "Weekly regret is a property of the roster's
+projection error, not the manager" is correct *about the counterfactual column* and was
+over-read as a statement about reality. The one team where reality is now known moved
+**27 points** off the counterfactual — by streaming, which is a manager action, and the
+one lever `lineup-layer-at-ceiling` already identifies as live.
+
+What survives R3 unchanged:
+- **Our own 3.40 is observed, not counterfactual.** We started the projection-optimal
+  lineup exactly; cumulative deviation regret stays 3.50 over 6 weeks.
+- Roster quality, projopt **108.72 vs league mean 109.22**, is unaffected — it is a
+  projection-time number and needs no lineup assumption.
+- The 3.40-to-38.70 spread still shows what projection error alone can do to a week.
+
+What does not survive: **reading the counterfactual column as other managers' skill, or
+as evidence that managers don't matter.** It measures rosters under a rule nobody is known
+to follow. Relabel it in `leaguewide_retro.py` output and do not rank teams by it.
+
+**Open and now interesting:** how often does the rest of the league stream, and does it
+pay? Week 6 gives one observation — a stream worth up to +27.24 against the projection
+baseline, by the team that beat us. We have run the free K/DST streaming lever all season;
+we have never checked whether anyone else runs it harder. Needs wks 4-7 pooled, same
+harness, by diffing consecutive weekly exports for `W (...)` churn. **Do not build on n=1.**
+
+### R10. Carried to week 7 — supersedes R7.
+
+1. **Tate's drop case is void** (W3 passed). Re-rank from snap share. **JAX bye is wk7**,
+   so Strange is out and TE is Higbee-only next week.
+2. Pool wks 4-7 pairs, re-run R4's 5-15% band at week 8.
+3. Re-check R5's -1.79 projection bias at wk7.
+4. **Take the Thu/Fri matchup glance.** It is free, it was skipped, and R8 is the bill.
+5. Build the stream-detector in R9: diff `Roster Status` across consecutive weekly exports
+   to count league-wide adds. Cheap, and it is the only lever with measured headroom.

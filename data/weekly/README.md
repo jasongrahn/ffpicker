@@ -166,3 +166,16 @@ case is void). S1/S2/D10/H1 logged as deposits, not verdicts.
 **`opp` is again a replay, not an observation.** Owl Out Blitz's frozen Wed lineup scores
 **106.54**; 408 of their 1,440 legal lineups beat our 91.68. They never filled the empty
 bench slot §6c flagged — opponent headroom is an upper bound, not an expectation.
+
+**CORRECTION, same day.** Final confirmed: **91.68 - 111.14**, lost by 19.46. The 106.54
+above is a replay of their Wednesday lineup and is wrong. **111.14 is unreachable from
+their Monday roster** — they streamed a 16th player and dropped him Sunday night; 19
+candidates fit and none is identifiable. A post-game export cannot show an add-and-drop
+inside the same week, so **streaming is invisible in arrears by construction** — same
+class of defect as the missing started/bench flag, same fix: observe before kickoff.
+
+This also caps R3's claim. Owl Out Blitz's projection-following counterfactual says 83.90
+and regret 29.64; they actually scored **111.14**, beating the counterfactual by
+**+27.24** with a regret of at most 2.40. **Do not rank teams by that column** — it
+measures rosters under a rule nobody is known to follow. Our own 3.40 is observed and
+stands. Detail: `2026_week06_decisions.md` §R8-R9.

@@ -15,8 +15,10 @@ Usage:  python3 dev/weekly/leaguewide_retro.py 6 2026-10-14 2026-10-20
 Traps handled (see CLAUDE.md):
   - headers carry invisible private-use-area chars -> "Fantasy Fan Pts"
   - DEF export has no `Player ID` column -> keyed on Team
-  - an export is a snapshot, not a roster, but the *_actual_* exports are
-    post-game and do reconstruct all ten cleanly
+  - an export is a snapshot, not a roster. The *_actual_* exports reconstruct
+    all ten MONDAY rosters cleanly, but CANNOT show a player added and dropped
+    inside the same week -- streaming is invisible in arrears. Week 6: the
+    opponent scored 111.14, unreachable from their Monday 15.
   - no started/bench flag exists -> other teams' real lineups are NOT
     recoverable. Column `they got` below is a projection-following
     counterfactual, not what they started.
@@ -90,7 +92,8 @@ def best(r, f):
 
 
 print(f"== week {WEEK}: regret per roster, conditioned on following the projection ==")
-print(f"{'team':26s} {'projopt':>8s} {'they got':>9s} {'hindopt':>8s} {'regret':>7s}")
+print("NOTE: `if-followed` is a COUNTERFACTUAL, not what they started. Week 6 showed\n      one team beating it by +27.24 via an add-and-drop stream. Do not rank by it.")
+print(f"{'team':26s} {'projopt':>8s} {'if-followed':>12s} {'hindopt':>8s} {'regret':>7s}")
 reg = []
 for t, r in sorted(by.items()):
     pv, pl = best(r, "P")
@@ -100,7 +103,7 @@ for t, r in sorted(by.items()):
         continue
     pa = sum(p["A"] for p in pl)
     reg.append(hv - pa)
-    print(f"{t[:26]:26s} {pv:8.2f} {pa:9.2f} {hv:8.2f} {hv - pa:7.2f}")
+    print(f"{t[:26]:26s} {pv:8.2f} {pa:12.2f} {hv:8.2f} {hv - pa:7.2f}")
 print(f"\nmean {st.mean(reg):.2f}  median {st.median(reg):.2f}  "
       f"min {min(reg):.2f}  max {max(reg):.2f}  n={len(reg)}")
 
