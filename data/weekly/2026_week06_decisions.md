@@ -415,3 +415,164 @@ does Caleb Williams clear `Q`. Nothing else about their roster is actionable.
 ## Retro
 
 <!-- Nothing above this line is edited after freeze. Append only, after Monday night. -->
+
+Appended Mon 2026-10-20 from `docs/uploads/week_6_data/` (`*_actual_*` exports,
+2026-10-20) + `nflreadr::load_snap_counts(2026)`. Harness:
+`dev/weekly/leaguewide_retro.py 6 2026-10-14 2026-10-20`, rerunnable.
+
+### R1. Result. We scored **91.68**. Lost. All six conditions scored below.
+
+```
+QB   Stafford    proj 21.05 -> act 16.88   -4.17
+RB   Henry            16.00 ->      4.50  -11.49
+RB   J.Williams       14.30 ->     12.00   -2.30
+WR   Adams            13.33 ->      5.40   -7.93
+WR   Tate              9.87 ->     16.00   +6.13
+TE   Strange           8.25 ->      6.90   -1.35
+FLX  Boston            9.78 ->      2.00   -7.81
+K    Butker            8.37 ->     13.00   +4.63
+DEF  Chiefs            7.76 ->     15.00   +7.25
+                 proj 108.71 -> act 91.68  -17.03
+```
+
+Bench: Mahomes 11.48, Browns DEF 9.00, Odunze 5.40, Higbee 2.20.
+
+**Opponent did NOT fill the empty slot.** §6c predicted ~116-119 off a DEF stream plus
+the Caleb Williams swap. Neither happened — they finished 15, Vikings DEF stayed in on
+bye at 0.00, Young started over Williams. **Their frozen Wed lineup scores 106.54**, so
+we lose by 14.86 even against their *unimproved* lineup. Record **3-3**.
+
+The §6c read was right about the headroom and wrong about the manager. Logged in R6.
+
+> **Confirm the final from the Yahoo matchup page.** The export has no started/bench
+> flag, so 106.54 is the frozen lineup replayed, not an observed total. Their 1,440
+> legal lineups span 55.80 - 113.54; **408 of 1,440 (28.3%) beat our 91.68.**
+
+### R2. Conditions. Scored. **Both powered tests PASS. Nothing fires.**
+
+| # | condition | result | verdict |
+|---|---|---|---|
+| **A4** | Strange snap% < 60 | **76%** (54 of 71) | **PASS.** Role read holds |
+| **W3** | Tate < 6 targets | **7 tgt, 16.00 pts** | **PASS. Tate is NOT the drop.** Test disarmed |
+| **S1** | Strange >= Higbee | 6.90 vs 2.20 | right, strike 0 of 2 — **deposit** |
+| **S2** | Tate over Odunze | 16.00 vs 5.40, **+10.60** | right — **deposit**, see R4 |
+| **D10** | Bates drop needed a K? | Butker 13.00 | cannot fail before wk18 |
+| **H1** | Hockenson clears by wk7 | still out wk6 | informational |
+
+A4 was written on snaps, not points, precisely so n=1 could resolve it. It did. Strange's
+range is now **68/83/77/87/81/76** — six weeks, never below 68%. 7 targets in wk6, third
+straight week at 7+.
+
+**W3 is the week's one real reversal.** Tate went 5 tgt (wk5) -> 7 tgt / 16.00 (wk6) on
+74% snaps. The pre-registered second strike did not land, so the two-week test closes
+**in his favour** and the drop question reopens from scratch. Do not carry "Tate is the
+drop" into week 7.
+
+### R3. Regret **3.40 — lowest in the league.** Mean 16.08. This is luck, not skill.
+
+```
+started               91.68
+projection-optimal    91.68   -> regret from OUR deviation    +0.00  (0%)
+hindsight-optimal     95.08   -> regret from projection error +3.40  (100%)
+```
+
+We started the projection-optimal lineup **exactly**. Cumulative deviation regret stays
+**3.50 over 6 weeks (0.58/wk)**.
+
+Same quantity computed for all ten rosters — each team's regret *if it had followed the
+Yahoo projection*, which makes ours directly comparable:
+
+| team | projopt | followed-proj actual | hindopt | regret |
+|---|---|---|---|---|
+| **JGrahnasaurs** | 108.72 | **91.68** | 95.08 | **3.40** |
+| Max's TD Bombers | 120.06 | 141.12 | 146.22 | 5.10 |
+| Steel City | 100.20 | 90.00 | 97.20 | 7.20 |
+| Jason's Jazzy Team | 116.16 | 122.00 | 132.30 | 10.30 |
+| Locked In Michelle | 109.50 | 55.94 | 66.74 | 10.80 |
+| Sunday Kevin | 103.62 | 100.74 | 114.24 | 13.50 |
+| Maybe Mitchell | 105.33 | 59.70 | 80.62 | 20.92 |
+| Monday Night Madison | 92.03 | 72.76 | 93.96 | 21.20 |
+| Owl Out Blitz | 112.82 | 83.90 | 113.54 | 29.64 |
+| Dave's Bone Crushers | 123.79 | 67.70 | 106.40 | 38.70 |
+
+**Read this correctly.** The column is a counterfactual — no export carries a
+started/bench flag, so nobody else's real lineup is recoverable. What the spread shows is
+that **week-6 regret is a property of the roster's projection error, not of the
+manager**: 3.40 to 38.70 with everyone running the identical rule. Our 3.40 is the
+bottom of that range because our misses cancelled (Henry -11.49 and Boston -7.81 against
+Tate +6.13, Chiefs +7.25, Butker +4.63), not because we chose better.
+
+**This retires "low regret week" as a thing to feel good about.** It is a draw from a
+distribution with sd ~11 across ten identical strategies.
+
+Roster quality: our projopt **108.72 vs league mean 109.22** — dead average, 5th of 10.
+That is the number with signal in it, and it is the one the wire moves.
+
+### R4. S1/S2 at scale. First powered look. **The 5-15% band is a coin flip.**
+
+The question S1 and S2 each ask at n=1 — *does the higher Yahoo projection outscore the
+lower one?* — asked across all 427 within-roster RB/WR/TE pairs in the league:
+
+| gap band | pairs | decided | higher-proj right | 95% CI | mean pts |
+|---|---|---|---|---|---|
+| ALL | 427 | 416 | 267 (**64.2%**) | [59.6, 68.8] | +3.31 |
+| **<= 5%** (dead band) | 29 | 28 | 17 (60.7%) | [42.6, 78.8] | +2.09 |
+| **5-15%** (S2 lives here) | 59 | 58 | 27 (**46.6%**) | [33.7, 59.4] | **-1.17** |
+| **> 15%** (S1 lives here) | 339 | 330 | 223 (**67.6%**) | [62.5, 72.6] | +4.21 |
+
+**S1's band is real and large.** Above a 15% gap the projection is right 67.6% with the
+CI clear of 50 — that is where "read the projection and stop" earns its keep, and S1's
+44% gap sat deep inside it.
+
+**S2's band did not survive one week of league-wide data.** At 5-15% the projection went
+46.6%, CI straddling 50, mean **-1.17 pts**. S2 itself was right by +10.60, which is
+exactly the n=1 noise §3b pre-registered against. One week at n=58 does not retire the
+band either — but it is the first evidence that the 5-15% gap may be as dead as the <=5%
+one, and it was invisible from our roster alone.
+
+**Pre-registered: do not act on this yet.** The spread tiebreak needed 215 discordant
+pairs to die. Pool wks 4-7 with the same harness and revisit at week 8. Kill condition:
+if the 5-15% band is still under 55% at n >= 200, the dead band widens from 5% to 15% and
+S1-class decisions below a 15% gap stop being decisions. See
+`single-seed-bars-underpowered`.
+
+### R5. Yahoo projection error, league-wide. n=135, and it is **biased low**.
+
+| pos | n | MAE | bias (act - proj) |
+|---|---|---|---|
+| QB | 18 | 6.69 | -3.47 |
+| RB | 38 | 6.09 | -2.22 |
+| WR | 41 | 4.55 | -1.32 |
+| TE | 18 | 5.48 | -1.56 |
+| K | 9 | 2.83 | -0.95 |
+| DEF | 11 | 3.98 | -0.35 |
+| **ALL** | **135** | **5.23** | **-1.79** |
+
+MAE 5.23 against the wk4 benchmark's 4.29 — a worse week, not a worse model. The new
+thing is the **-1.79 bias**: every position came in under its projection, QB worst at
+-3.47. One week, so this is an observation, not a finding — but a *uniform* sign across
+six positions is not what noise usually looks like. Re-check at wk7; if it persists,
+projections are being scored against an optimistic baseline and **cross-roster**
+comparisons (ours vs theirs) are unaffected while **absolute** totals are inflated.
+
+### R6. Process. One prediction missed, and it is the useful one.
+
+§6c called the opponent's empty bench slot "+5 to +8 available" and projected 116-119.
+**They left it empty.** We correctly identified their headroom and incorrectly assumed
+they would spend it — the Yahoo-ADP blind spot's in-season analog, flagged in handoff #42
+§3d, collecting its first datapoint.
+
+The forecast error cost nothing (we lost by 14.86 either way) but the shape matters:
+**opponent headroom is an upper bound, not an expectation.** Of the two cheap watches, one
+was never taken — a Thu/Fri matchup glance would have shown the slot still empty and
+Young still starting. It is free and it was skipped.
+
+n=1. Record it, build nothing on it.
+
+### R7. Carried to week 7.
+
+1. **Tate's drop case is void** (W3 passed). Re-rank the drop from snap share, not from
+   this doc. JAX bye is **wk7** — Strange is out, so TE is Higbee-only next week.
+2. Pool wks 4-7 pairs and re-run R4's 5-15% band at week 8.
+3. Re-check R5's -1.79 bias at wk7.
+4. Confirm the final score on the Yahoo matchup page and correct R1 if 106.54 is wrong.

@@ -128,3 +128,41 @@ as a tiebreaker does not.
 
 **DST streaming held league-wide** (n=30, r = -0.334, p = 0.071) while our own pick
 returned 2.00. Decision right, outcome bad — the 0.39-sd edge behaving as predicted.
+
+## Week 6 — regret **3.40** (lowest in the league, and that is luck)
+
+```
+started               91.68
+projection-optimal    91.68   -> regret from OUR deviation    +0.00  (0%)
+hindsight-optimal     95.08   -> regret from projection error +3.40  (100%)
+```
+
+Cumulative deviation regret **3.50 over 6 weeks (0.58/wk)** — unchanged from week 5. We
+started the projection-optimal lineup exactly.
+
+**New this week: the same regret computed for all ten rosters.** Harness
+`dev/weekly/leaguewide_retro.py 6 2026-10-14 2026-10-20`. Each team scored *as if it had
+followed the Yahoo projection*, which makes the numbers comparable. Range **3.40 (us) to
+38.70**, mean 16.08, sd ~11, over ten rosters running the identical rule.
+
+**-> A single week's regret measures the roster's projection error, not the manager.**
+Ours was lowest because Henry -11.49 and Boston -7.81 cancelled against Tate +6.13,
+Chiefs +7.25 and Butker +4.63. Stop reading a low weekly regret as a good week. Roster
+quality is the comparable number: our projection-optimal 108.72 vs league mean 109.22 —
+dead average.
+
+**S1/S2 at scale, first powered look.** 427 within-roster RB/WR/TE pairs: the higher
+Yahoo projection is right **67.6%** above a 15% gap (CI [62.5, 72.6], n=330) and
+**46.6%** in the 5-15% band (CI [33.7, 59.4], n=58, mean **-1.17 pts**). The dead band
+may be wider than 5%. **Not actioned** — the spread tiebreak needed 215 discordant pairs
+to die. Pool wks 4-7, revisit week 8. Detail in `2026_week06_decisions.md` §R4.
+
+**Yahoo projection error ran -1.79 low at every position** (n=135, MAE 5.23). One week,
+uniform sign across six positions. Re-check wk7.
+
+Conditions: **A4 PASS** (Strange 76% snaps), **W3 PASS** (Tate 7 tgt, 16.00 — the drop
+case is void). S1/S2/D10/H1 logged as deposits, not verdicts.
+
+**`opp` is again a replay, not an observation.** Owl Out Blitz's frozen Wed lineup scores
+**106.54**; 408 of their 1,440 legal lineups beat our 91.68. They never filled the empty
+bench slot §6c flagged — opponent headroom is an upper bound, not an expectation.

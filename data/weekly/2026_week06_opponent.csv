@@ -1,17 +1,17 @@
 season,week,opponent,player,pos,nfl_team,slot,proj,proj_gameday,proj_gameday_src,actual,note
-2026,6,Owl Out Blitz,B. Young,QB,Car,QB,16.76,16.68,matchup_2026-10-14,,
-2026,6,Owl Out Blitz,D. Swift,RB,Chi,RB,13.25,13.44,matchup_2026-10-14,,
-2026,6,Owl Out Blitz,B. Allen,RB,NYJ,RB,9.63,11.17,matchup_2026-10-14,,
-2026,6,Owl Out Blitz,P. Nacua,WR,LAR,WR,22.62,19.04,matchup_2026-10-14,,
-2026,6,Owl Out Blitz,M. Evans,WR,SF,WR,13.13,13.34,matchup_2026-10-14,,
-2026,6,Owl Out Blitz,B. Bowers,TE,LV,TE,14.61,14.43,matchup_2026-10-14,,
-2026,6,Owl Out Blitz,M. Golden,WR,GB,FLEX,13.11,12.42,matchup_2026-10-14,,
-2026,6,Owl Out Blitz,T. Loop,K,Bal,K,8.08,8.13,matchup_2026-10-14,,
-2026,6,Owl Out Blitz,Vikings,DEF,Min,DEF,0.00,0.00,matchup_2026-10-14,,"bye, no 2nd DEF"
-2026,6,Owl Out Blitz,C. Lamb,WR,Dal,BN,15.91,15.82,matchup_2026-10-14,,Q
-2026,6,Owl Out Blitz,C. Williams,QB,Chi,BN,18.88,19.09,matchup_2026-10-14,,Q
-2026,6,Owl Out Blitz,G. Kittle,TE,SF,BN,12.07,12.23,matchup_2026-10-14,,
-2026,6,Owl Out Blitz,Q. Judkins,RB,Cle,BN,9.75,9.91,matchup_2026-10-14,,Q
-2026,6,Owl Out Blitz,J. Waddle,WR,Den,BN,9.21,9.23,matchup_2026-10-14,,
-2026,6,Owl Out Blitz,J. Croskey-Merritt,RB,Was,BN,7.43,7.53,matchup_2026-10-14,,
+2026,6,Owl Out Blitz,B. Young,QB,Car,QB,16.76,16.68,matchup_2026-10-14,19.84,
+2026,6,Owl Out Blitz,D. Swift,RB,Chi,RB,13.25,13.44,matchup_2026-10-14,21.00,
+2026,6,Owl Out Blitz,B. Allen,RB,NYJ,RB,9.63,11.17,matchup_2026-10-14,11.40,
+2026,6,Owl Out Blitz,P. Nacua,WR,LAR,WR,22.62,19.04,matchup_2026-10-14,11.00,
+2026,6,Owl Out Blitz,M. Evans,WR,SF,WR,13.13,13.34,matchup_2026-10-14,10.90,
+2026,6,Owl Out Blitz,B. Bowers,TE,LV,TE,14.61,14.43,matchup_2026-10-14,9.00,
+2026,6,Owl Out Blitz,M. Golden,WR,GB,FLEX,13.11,12.42,matchup_2026-10-14,19.40,
+2026,6,Owl Out Blitz,T. Loop,K,Bal,K,8.08,8.13,matchup_2026-10-14,4.00,
+2026,6,Owl Out Blitz,Vikings,DEF,Min,DEF,0.00,0.00,matchup_2026-10-14,0.00,"bye, no 2nd DEF"
+2026,6,Owl Out Blitz,C. Lamb,WR,Dal,BN,15.91,15.82,matchup_2026-10-14,11.50,Q
+2026,6,Owl Out Blitz,C. Williams,QB,Chi,BN,18.88,19.09,matchup_2026-10-14,16.50,Q
+2026,6,Owl Out Blitz,G. Kittle,TE,SF,BN,12.07,12.23,matchup_2026-10-14,15.40,
+2026,6,Owl Out Blitz,Q. Judkins,RB,Cle,BN,9.75,9.91,matchup_2026-10-14,0.00,Q
+2026,6,Owl Out Blitz,J. Waddle,WR,Den,BN,9.21,9.23,matchup_2026-10-14,4.40,
+2026,6,Owl Out Blitz,J. Croskey-Merritt,RB,Was,BN,7.43,7.53,matchup_2026-10-14,0.00,
 2026,6,Owl Out Blitz,(Empty),,,BN,,,matchup_2026-10-14,,OPEN ROSTER SPOT
