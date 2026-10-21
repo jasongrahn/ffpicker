@@ -32,3 +32,4 @@ dev/bars_b_results.rds
 dev/bars_b_seeds.rds
 __pycache__/
 *.pyc
+data/nflreadr/
