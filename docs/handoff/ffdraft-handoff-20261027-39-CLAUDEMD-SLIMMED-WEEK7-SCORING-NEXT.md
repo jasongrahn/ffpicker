@@ -1,7 +1,6 @@
 # Handoff #46 — CLAUDE.md slimmed 648 -> 388, history -> ADRs 0002-0011. Next: week 7 scoring + trade re-run.
 
-Written 2026-10-27 Tue. Branch `week3-gameday`. **All of #45's and this session's work
-UNCOMMITTED** (§6). Prior: #45
+Written 2026-10-27 Tue. Branch `week3-gameday`. **Committed + pushed** (§6). Prior: #45
 `docs/handoff/ffdraft-handoff-20261021-38-LEAGUEWIDE-SIM-BUILT-CLAUDEMD-REVIEW-NEXT.md`.
 Index: `docs/handoff/README.md`.
 
@@ -68,8 +67,8 @@ Carried from #45 §4, not re-derived — docs session:
 - M1: Kyler Murray in 10-21. Drop recorded as **Butker — user never named it; verify on
   the first wk8 export.**
 - Trades TR1 (Madison) + TR2 (Max's) parked, NOT SENT. P(top 4) 3.3% -> 8.3% if both land.
-- Open: push owed (**37 ahead** of `origin/main`, no PR); Etienne IR reactivation
-  unexamined; stream detector blocked.
+- Open: **PR owed** (branch pushed 10-27, ~40 ahead of `origin/main`); Etienne IR
+  reactivation unexamined; stream detector blocked.
 
 ## 5. Next session, in order.
 
@@ -81,21 +80,14 @@ Carried from #45 §4, not re-derived — docs session:
    owns them.
 5. Week 8 decision log + freeze — weekly loop in `CLAUDE.md` § Live state.
 
-## 6. Uncommitted. git status 2026-10-27.
+## 6. Git. Committed + pushed 2026-10-27.
 
-```
- M CLAUDE.md  PLAN_1.md  docs/handoff/README.md                          <- #46
- M data/weekly/2026_week07_decisions.md  dev/weekly/leaguewide_retro.py   <- #45
-?? docs/adr/0002 ... 0011, docs/adr/README.md                             <- #46
-?? docs/handoff/ffdraft-handoff-20261021-38-*.md (#45), -20261027-39-*.md (#46)
-?? data/weekly/{2026_ceilings.rds, 2026_league_schedule.csv, 2026_trade_scan_wk7.rds,
-   2026_week07_leaguewide_predictions.csv, 2026_week08_trade_ideas.md}   <- #45
-?? dev/weekly/{ceiling_vs_margin, league_sim, playoff_odds, predictions,
-   schedule_check, score_week07, trade_finder}.R                          <- #45
-```
+`debdae1` #45 league-wide sim work. `a5d7ef7` this session's docs. Plus one commit
+recording this section. Branch `week3-gameday` on origin, **no PR**. GitHub had no
+`week3-gameday` before this push — the local tracking ref was stale; the push created it.
 
 Commit only when the user asks. `git commit -F <file>` — apostrophes break the heredoc
-form. Natural split: #45's sim work, then this docs session.
+form.
 
 ## 7. Suggested skills
 
