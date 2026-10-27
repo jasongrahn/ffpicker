@@ -222,3 +222,89 @@ the next session is for.
 ## Retro
 
 *(append after Monday 2026-10-26. Never edit above this line.)*
+
+---
+
+### M1. Post-freeze, 2026-10-21 Wed. **ADD K. Murray (QB, MIN), DROP Butker (K, KC).** Status: **PENDING** — user executes in Yahoo app.
+
+User asked for Murray. Logged below `## Retro` because post-freeze (wk4 GD1 precedent).
+**Lineup unchanged. Stafford starts, Murray to bench.** M0 need run still holds.
+
+**Need first. QB is NOT a hole.** Move spends a free spot on an option. Fixes nothing.
+Grid after move, byes from `load_schedules(2026)`, 15 active (cap 15):
+```
+week      7  8  9 10 11 12 13 14 15 16 17
+QB        3  3  3  3  2  3  3  3  3  3  3
+K         1  1  1  1  1  1  1  1  1  1  1
+DEF       2  2  2  2  1  2  2  2  2  2  2
+TE        2  3  3  3  2  3  3  3  3  3  3
+flexpool  8  9  8  8  7  9  8  8  9  9  9
+```
+Every week legal. K 1-deep fine: Bates bye (DET 6) passed, FA kickers abundant.
+**Drop = Butker** — M0 standing finding, only genuinely droppable body.
+
+**For Murray:**
+- MIN starter, **100% snaps wks 3-5** (59/78/71). Out wk2, concussion. No tag now.
+- No rival for job: J.J. McCarthy now **NYG**. Backup Wentz, 1% rostered.
+- **Carries 2 -> 6 -> 10**, wks 3-5. QB rushing = opportunity -> sticky. Only usage signal for him.
+- Wk7 Yahoo: Stafford **19.16** > Murray **18.48** > Mahomes **16.49**.
+- Scarce: `FA`, first-come. **Sunday Kevin has zero QBs playing wk7** (Lawrence JAX +
+  Herbert LAC, both bye 7) -> likely taker.
+
+**Against, plainly:**
+- League-scored starts **11.42 / 11.48 / 18.26 = 13.72/g**. Mahomes 19.41 (n=5), Stafford
+  18.64 (n=6). ppg = weak baseline; gap large anyway.
+- **Rarely starts for us.** Wk8 implied: LA 27.0, MIN 22.5, KC 22.0. Wk11 (Stafford bye):
+  KC hosts ARI, MIN @ SF. Murray = QB3 most weeks.
+- Value = injury cover behind two QBs + best-of-3 in odd weeks + Mahomes trade leverage. Small. Cost ~0.
+
+**Wk7 start:** 19.16 vs 18.48 = **3.5% gap, inside 5% dead band** -> higher raw projection
+-> **Stafford.** No change.
+
+> **KILL (M1a), role:** Murray snap share **< 80%** in any game wks 7-11 -> lost the job. Drop.
+> **KILL (M1b), option:** by wk11, Murray **never our top-projected QB** (Yahoo matchup page)
+> and no QB injury forced him in -> option never used. Not a wrong call — spot was empty
+> value — but he is **first drop for the next real need** (Adams/Etienne IR return, WR add).
+> Any week he starts: score in **wins**, per `win-by-one-not-points` — did his edge over the
+> benched QB exceed our margin? Log it, no verdict on one week.
+
+**M1 — EXECUTED 2026-10-21 Wed** (user confirmed "kyler murray add is complete"). Drop
+recorded as **Butker per M1** — not stated by user; verify on next export. Encoded as `TXN`
+in `dev/weekly/league_sim.R`, so every league sim now runs on the post-move roster.
+
+**Scored in wins** (`dev/weekly/playoff_odds.R`, common random numbers): **ΔP(top 4) ≈ 0.000,
+Δwins ≈ 0.00.** On base projections Murray 18.48 ≈ Mahomes 18.38; he changes week 11 only,
++0.1 pt. As an add, nothing — as forecast ("option, not a fix"). His real value surfaced in
+`dev/weekly/trade_finder.R`: **no remaining bye** → he frees Stafford *or* Mahomes as trade
+currency. Caveat found same run: starting QBs sit on the wire (Rodgers FA, Brissett W,
+Cousins FA, ~16-17) → our QBs buy little, max partner gain +1.2 pts/wk. M1a/M1b stand.
+
+---
+
+### L1. League-wide, pre-registered 2026-10-21 Wed 10:35 EDT — before Thu 8:15pm kickoff. Tests the sim, not a decision.
+
+File: `data/weekly/2026_week07_leaguewide_predictions.csv`, written by
+`dev/weekly/predictions.R freeze` (refuses overwrite, refuses after kickoff). Ceilings =
+projection-optimal, Wed 10-21 export + M1. P = pnorm(margin / (22.0 x sqrt 2)), no fit.
+
+| game | ceilings | pred margin | P(first team) |
+|---|---|---|---|
+| Dave's v Max's | 105.94 v 112.05 | -6.11 | 0.422 |
+| Jason's v Sunday Kevin | 105.99 v 96.43 | +9.56 | 0.621 |
+| **JGrahnasaurs v Madison** | 105.27 v 100.60 | +4.67 | **0.560** |
+| Locked In v Maybe Mitchell | 115.62 v 116.20 | -0.58 | 0.493 |
+| Owl Out v Steel City | 122.66 v 103.70 | +18.96 | 0.729 |
+
+Perfect model expects **3.0 of 5** favourites right. n = 5 -> log, no verdict.
+
+> **KILL (L1a), gate, powered form:** wk7 joins `ceiling_vs_margin.R` once scores are entered
+> (n 20 -> 25). r(ceiling diff, margin) **< 0.20** or slope **<= 0** at n = 25 -> roster lever
+> weaker than measured -> `2026_week08_trade_ideas.md` valuations overstate; re-scan before
+> sending any offer.
+> **L1b, calibration:** `predictions.R score` — hit rate + Brier vs 0.250. Logged weekly; never
+> a verdict alone, underpowered by construction at 5 games/wk.
+
+**Scoring is one command each after MNF**: `Rscript dev/weekly/score_week07.R` (K1, T1, W1a,
+W1b, D1, M1a, result, regret — prints WAITING per missing input). R4 pooled:
+`python3 dev/weekly/leaguewide_retro.py --pool 4:2026-10-01:2026-10-05 5:2026-10-07:2026-10-13
+6:2026-10-14:2026-10-20 7:2026-10-21:<wk7 actual date>` — prints the pre-registered verdict.
