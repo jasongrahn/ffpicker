@@ -1,10 +1,13 @@
 # ffdraft
 
-A local, config-driven fantasy football draft engine in R. Objective is to maximize
-championship probability for a specific league, not to produce generic rankings.
+Local, config-driven fantasy football engine in R for one Yahoo league. Objective: maximize
+championship probability for this league, not generic rankings. Draft engine done
+(2026-09-08); in-season work = weekly decisions + league-wide sims.
 
-See `PLAN.md` for the full architecture and phased build plan. This file is the
-standing context for every session.
+This file = standing rules, each with its key number. Full evidence, history and closed
+investigations: `docs/adr/`. Draft-era build plan + architecture: `PLAN_1.md`. Live season
+state: newest doc in `docs/handoff/`. New facts go here (rule + key number) or in a new ADR —
+never in auto-memory.
 
 ---
 
@@ -28,227 +31,90 @@ Do not over-explain R, dbt patterns, or statistics. Do explain football.
 
 ## League facts
 
-**Known — pulled from the real Yahoo settings page for "TKWW2K26 League 5" (ID #1541392)
-on 2026-09-04:**
-- Company league, organizer is Pete Gentile
-- 10-team snake draft, **15 rounds** (9 starters + 6 bench). IR 2 exists but is **not
+Yahoo "TKWW2K26 League 5" (ID #1541392). Settings page read 2026-09-04; real values in
+`config/league.json` and `config/scoring.json`.
+- Company league, organizer Pete Gentile. Our team: **JGrahnasaurs**, drafted from slot 10.
+- 10 teams, snake draft, **15 rounds** (9 starters + 6 bench). IR 2 exists but is **not
   drafted** — a 17-round assumption cost us the Week 1 kicker (handoff #24).
-- Platform: Yahoo
-- Draft date: **Tuesday, Sept 8, 2026, 6:00pm ET**, 1-minute pick clock (2026 NFL season
-  opens Wed Sept 9 — this is the night before Week 1)
-- Roster: QB 1, RB 2, WR 2, TE 1, FLEX (RB/WR/TE) 1, K 1, DST 1, bench 6, IR 2. **Note:
-  only 2 WR starters, not 3** — the third receiver-eligible slot is the FLEX.
-- Scoring: half-PPR (0.5/reception), 0.04/pass yard, 4/pass TD, **-1/INT** (not -2), 0.1
-  per rush/rec yard, 6/rush or rec TD, no first-down bonus, no 300-yard passing bonus,
-  standard Yahoo kicker tiers, full DST scoring (sack/INT/fumble/points-allowed tiers —
-  recorded in `config/scoring.json` but not yet consumed by `score_player_week()`, which
-  is still per-player only; see `R/30_scoring.R`).
-- Playoffs: **4 teams, weeks 16-17** (not 6 teams / weeks 15-17) — regular season is
-  weeks 1-15.
-- `config/league.json` and `config/scoring.json` hold these real values now, not
-  placeholders.
+- Roster: QB 1, RB 2, WR 2, TE 1, FLEX (RB/WR/TE) 1, K 1, DST 1, bench 6, IR 2. **Only 2 WR
+  starters, not 3** — the third receiver-eligible slot is the FLEX.
+- Scoring: half-PPR (0.5/reception), 0.04/pass yard, 4/pass TD, **-1/INT** (not -2), 0.1 per
+  rush/rec yard, 6/rush or rec TD, no first-down bonus, no 300-yard passing bonus, standard
+  Yahoo kicker tiers, full DST scoring (sack/INT/fumble/points-allowed tiers — in
+  `config/scoring.json` but not yet consumed by `score_player_week()`, which is still
+  per-player only; see `R/30_scoring.R`).
+- Season: regular weeks 1-15; playoffs **4 teams, weeks 16-17**. Schedule = round robin wks
+  1-9, then wks 10-15 replay wks 1-6. Full grid (no Yahoo export carries it):
+  `data/weekly/2026_league_schedule.csv`.
+- Standings tiebreak = points for. Inferred, not read off settings: every W-L tie is ordered
+  by PF; head-to-head ruled out (a wk4 winner ranks below the team it beat).
+- Waivers: continual rolling list, **no FAAB** — never reason about bids. Each drop clears 2
+  days later (`W (Oct 7)` = clears Oct 7), so the pool refreshes daily. Weekly waivers
+  setting: "Game Time - Tuesday". Injured players can be added straight to IR; the 2 IR
+  slots sit outside the 15-man roster -> an empty IR slot is a free stash.
+- `config/league.json` `max_at_position` K 1 / DST 1 = our draft-time cap, **not** a league
+  rule (we carried 2 K). Waiver settings are not in that file — its schema has
+  `additionalProperties: false`.
+- 10 teams x 1 QB slot -> starting-calibre QBs sit on the wire (3 at 16+ pts, 2026-10-21) ->
+  a QB surplus is weak trade currency (best partner gain from any of ours: +1.2/wk).
 
-**Unknown:** draft slot only.
+---
 
-**Implication:** with team count fixed, sweep mode narrows from 22 (team x slot)
-scenarios to **10** — one per possible draft slot in a 10-team snake draft. `my_slot` in
-`league.json` stays nullable until the draft order is revealed.
+## Season objective. Win matchups, not points.
+
+User, 2026-10-21: "We don't need to dominate, we just need to win each remaining matchup -
+even by 1 point." Target = P(top 4). 4 pts added to a 20-pt win = 0; 2 pts added to a 1-pt
+loss = the season.
+- Price every move and score every test **in wins**: `dev/weekly/playoff_odds.R` (P(top 4),
+  per-game leverage, exchange rate), `dev/weekly/trade_finder.R`. Margin only where near 0.
+- Exchange rate shrinks as weeks run out — rerun, never quote a stale one. 2026-10-21:
+  +1 pt/wk ≈ +0.09 wins, +0.7pp P(top 4).
+- **Lineup layer is at its ceiling -> the lever is roster quality + the two free streaming
+  slots.** Wks 1-4 regret: 0.80 from our choices, 73.62 from projection error (ADR 0010).
+- Run tests across all 10 rosters, not just ours — ours is n=1 per week.
+
+## League-wide sim — `dev/weekly/`
+
+`read_yahoo_week.R` <- `league_sim.R` <- `playoff_odds.R`, `trade_finder.R`,
+`predictions.R`. `ceiling_vs_margin.R` = gate test + noise constants.
+- **Gate PASSED** (wks 3-6, n=20 matchups): roster-ceiling diff -> margin r +0.49, p 0.028,
+  slope +1.17, resid sd 30.0. Prior-weeks PPG weaker (r +0.36, p 0.12). Favourite wins only
+  10-12 of 20: typical gaps 5-10 pts vs ~30 pts of margin noise.
+- **Noise constants — every sim number rests on them:** per-team weekly sd(actual − ceiling)
+  **22.0**, mean gap **−3.88**, team-score sd 26.3. `ceiling_vs_margin.R` adds each week
+  once its scores are entered.
+- Rosters = clean export (`clean_tmpl()`: latest pull with every Game cell unstarted) +
+  `TXN` (moves logged after it). Env: `CUR_WEEK`, `BASE` (default `mean`), `GAPMODE`
+  (default `uniform`).
+- Base projection: zero in both of the last two applicable exports -> base 0. **No
+  injury-tag exception** — an injured backup carries a tag too (Mariota read as a 17.8-pt
+  starter).
+- Fill **empty** slots only (bye holes). Filling weak starters too makes every FA add score
+  0 by construction. Without the fill, a sim fakes bye holes (one wk14 P(win) read 46%;
+  with the fill, 25%).
+- Drop logic is blind to trade value -> protect trade chips explicitly (auto-drop cut
+  Mahomes, the trade chip, for McLaurin).
+- Shortlist trades **per partner**. A league-wide top-k by strength gain = one partner, and
+  never tries non-contenders, where arming the partner costs nothing.
 
 ---
 
 ## Hard constraints
 
-**Yahoo API is gated behind a MANUAL APPROVAL FORM. Corrected 2026-09-16.**
-**-> Apply at `https://sports.yahoo.com/developer/access/`. This is the path in.**
+**Yahoo API: Fantasy access DENIED 2026-10-27 ("not enough information"); user chose not to
+re-apply -> manual paste is the only path. Not an open item.** Settings: user reads the Yahoo settings page -> `config/league.json`. Weekly
+data: user-pulled exports -> `docs/uploads/week_NN_data/`. Our app's
+`401 additional_authorization_required` = never provisioned (12 probes, 2026-09-15). **Do
+not re-run the probes; they cannot change the answer.** Scraping prohibited by Yahoo terms.
+If access is ever granted: thin `httr2` OAuth2 client, never live sync as a dependency.
+History, probe table, form facts: `docs/adr/0002-yahoo-api-manual-paste.md`.
 
-Status: **application not yet submitted.** Not closed. Not impossible. Blocked on a
-form the user can fill out in ~10 minutes, then a human review with no stated SLA.
-
-Yahoo removed self-serve Fantasy provisioning ~May 2026 and replaced it with an
-approval program. `developer.yahoo.com/fantasysports/guide/` now 308-redirects to
-`sports.yahoo.com/developer`. Creating an app is **necessary but not sufficient** —
-it yields the client id/secret, and the Fantasy entitlement is granted separately on
-approval. Existing legacy apps were de-provisioned 2026-07-22 without notice
-(`github.com/uberfastman/yfpy` issue #84), so this hit working integrations too, not
-just new ones.
-
-Form facts, read from the live page 2026-09-16:
-- Read-only. "Write access is not available at this time." `fspt-r` is the only scope.
-- Asks: Expected Users (Small <1,000 / Medium / Large), Client ID (optional, ours
-  exists), and a description.
-- **Personal / single-league use is explicitly in scope** — that is our case.
-- "incomplete or insufficiently detailed submissions cannot be evaluated and will be
-  closed without further correspondence." Write it properly the first time.
-- Attribution required if approved: "Fantasy data provided by Yahoo Fantasy",
-  linking back to Yahoo Fantasy.
-
-Error shapes are diagnostic, per the community thread and matching our probes:
-`401 additional_authorization_required` = never provisioned (us, new app).
-`403 This application is not authorized` = de-provisioned legacy app.
-
-**Superseded:** the 09-15 "CLOSED, do not re-investigate" verdict below was wrong in
-scope. Its twelve probes are accurate and worth keeping — they correctly prove the
-*app* lacks the entitlement. It wrongly concluded no path existed, having never
-looked for a provisioning process outside the create-app form. Same failure mode as
-the 09-06 note: inferring absence of a path from absence of a checkbox.
-
----
-
-*Superseded 2026-09-16, probe data still valid, conclusion too broad:*
-
-**Yahoo API is gated. Probed exhaustively 2026-09-15 with response codes.**
-
-Deep pass run 2026-09-15 with the user's real app credentials (app id, consumer
-key, secret, redirect `https://127.0.0.1:7645/`). Harnesses `dev/yahoo/auth_probe.R`
-(OAuth2) and `dev/yahoo/oauth1_probe.py` (OAuth 1.0a). Supersedes but does not delete
-the 09-06 note below — that note inferred from a form UI, this one issued the requests.
-
-**Both auth generations tested.** First OAuth2-only pass was incomplete: Yahoo's own
-still-published sample code (gists under `VerizonMediaOwner`, Copyright Yahoo Inc.
-2017, zLib) is OAuth 1.0a and carries no `scope` concept at all, including a
-two-legged consumer-key-only call to `/fantasy/v2/game/nfl`. That path was untested
-and had to be run before any verdict. It was. It fails too — differently, and more
-informatively.
-
-| probe | status | body |
-|---|---|---|
-| `GET /fantasy/v2/game/nfl`, no token | 401 | `oauth_problem="unable_to_determine_oauth_type"` |
-| `GET /fantasy/v2/league/449.l.1541392`, no token | 401 | identical — private league leaks nothing |
-| `POST /oauth2/get_token` `grant_type=client_credentials` | 400 | `client assertion cannot be empty` — enterprise JWT flow, not ours |
-| authorize URL `scope=fspt-r` | 302 | -> redirect `?error=invalid_scope` **before login** |
-| authorize URL `scope=fspt-w` | 302 | -> same |
-| authorize URL `scope=bogus-scope-xyz` | 302 | -> same, so curl cannot discriminate scopes |
-| authorize URL `scope=openid` (control) | 200 | real consent screen, **offers only "Yahoo Auction (read/write)" + "Profile (read)"** |
-| `POST /oauth2/get_token` `grant_type=authorization_code` | **200** | valid `access_token` issued, `scope` field absent |
-| `GET /fantasy/v2/game/nfl` **with valid bearer token** | **401** | `oauth_problem="additional_authorization_required"` |
-| **OAuth1 two-legged** `GET /fantasy/v2/game/nfl`, HMAC-SHA1 signed | **403** | **"This application is not authorized to perform this action."** |
-| OAuth1 same, `format=json` | 403 | identical |
-| OAuth1 `GET /oauth/v2/get_request_token` | 401 | `Unauthorized` — OAuth1 three-legged endpoint retired |
-
-Reading. Three mechanisms, three refusals, all at the entitlement layer.
-
-The OAuth1 403 is the strongest single datapoint. Yahoo **accepted the HMAC-SHA1
-signature** — an invalid signature returns a signature error, not this one — so it
-parsed the request, identified the app by consumer key, and refused on authorization.
-Yahoo's own words, reached via Yahoo's own published sample code.
-
-On the OAuth2 side: token valid, entitlement absent. `fspt-r` is rejected at the
-authorize endpoint *before a login even happens*, so the scope is not merely unchecked
-on the create-app form — it is ungrantable to self-serve apps. The consent screen for
-a working `openid` flow offers only Yahoo Auction and Profile.
-
-Gap is at the entitlement layer: not the docs, not the form UI, not OAuth version,
-not our code. `sports.yahoo.com/developer/docs/` documenting the endpoint is not
-evidence of access — the endpoint exists and answers; it refuses this class of app.
-
-All four gaps named in handoff #28 §3 are now answered: (1) no, `fspt-r` is not
-grantable at the authorize URL; (2) 401 `additional_authorization_required`, now
-actually called; (3) private vs public is moot, refusal precedes league resolution —
-`/game/nfl` is public game metadata and is refused identically; (4) `YFAR` moot — it
-wraps the OAuth1 flow, whose request-token endpoint now returns 401.
-
-Consequence **as revised 2026-09-16**: manual paste stays primary *until the access
-application is approved*. The probes above remain the correct description of an
-unprovisioned app — they are the "before" state. Re-running them changes nothing;
-submitting the form is the only action that can. Do not re-run them as a substitute
-for applying.
-
----
-
-*Superseded 2026-09-15, retained as the record of that probe:*
-
-**Yahoo API is gated. Verified empirically 2026-09-06 — do not re-investigate.**
-`sports.yahoo.com/developer/docs/` still documents a self-serve flow instructing you to
-"select either Read or Read/Write access for Fantasy Sports" when creating an app. **That
-checkbox no longer exists.** The live form at `developer.yahoo.com/apps/create` offers
-exactly two API Permissions: "OpenID Connect Permissions" and "TW Auction". You can create
-an app and receive a consumer key/secret, but nothing grants the Fantasy Sports scope, so
-the key cannot authorize `fantasysports.yahooapis.com/fantasy/v2` calls against a private
-league — and this league is private. The docs are stale, not a path in.
-Their terms prohibit reverse-engineering
-or scraping. `ffscrapr` does NOT support Yahoo (MFL, Sleeper, Fleaflicker, ESPN only).
-`YFAR` exists on GitHub but appears unmaintained.
-
-Therefore: **manual pick entry is the primary path, not the fallback.** If API access is
-granted, build a thin `httr2` OAuth2 client. Never build live sync as a dependency.
-
-**League settings come from the user, not the API.** They read the Yahoo settings page
-and paste values into `league.json`.
-
-**Third-party fantasy libraries are all league-scoped — evaluated and rejected 2026-09-06.**
-`ffscrapr` (MFL/Sleeper/Fleaflicker/ESPN, Yahoo only "perhaps eventually"), the Python
-`espn-api` package, and ESPN-fantasy MCP servers all require a `league_id` for a league you
-are a member of, and return that league's rosters/settings/transactions. **None expose
-cross-league ADP, rankings, or projections**, so none of them help a Yahoo league. Do not
-re-investigate this category. The gap they would fill — Yahoo's own ADP, i.e. what the nine
-opponents will actually do — is real and remains unfilled: `yahoo_id`,
-`player_owned_yahoo`, and `player_owned_espn` are 100% NA in `ff_rankings`'
-`redraft-overall` slice. Carry that as the known blind spot in Phase 6's opponent model.
-
-**Sleeper API evaluated and rejected 2026-09-06 — do not re-investigate `search_rank`.**
-Access is clean (read-only HTTP, no token, terms fine); usefulness is not. `search_rank` is
-search-autocomplete popularity, and it is genuinely independent of FantasyPros ECR in the tail
-(rho 0.166) while still predicting 2025 PPG there (-0.314 vs ECR's -0.104). But that edge lives
-only where `ecr > 290`, and a 10-team 17-round draft removes 170 players — our own 17 picks
-bottom out at `ecr` 219. Reordering all 160 matched tail players by `search_rank` changed
-**0 of 17 picks and 0.0 starter points**. Real signal, wrong region. Numbers and harness in
-`docs/handoff/ffdraft-handoff-20260906-9.md` and `dev/sleeper/`. The `trending/add` endpoint is a
-different signal aimed at the Yahoo-ADP blind spot and remains unprobed — this closure does not
-cover it.
-
-**Yahoo XRank/ADP ACQUIRED 2026-09-06 — `docs/yahoo_fantasy_football_adp.csv`.**
-User-harvested from Yahoo, Gemini-cleaned. Cols `Player,Position,Team,Bye Week,XRank,ADP`.
-332 rows, XRank on all 332, ADP on 227, defenses coded `DEF`. Name-joins to the pool at
-**170/170 of the top-170-by-ECR** (42.5% of the full 764-row pool — the misses are all
-undraftable tail). No `yahoo_id` to join on: 100% NA in the `redraft-overall` slice, so
-this is a `normalize_player_name()` join by necessity.
-
-**Gate PASSED 2026-09-06** (`dev/yahoo_gate.R`). Correct use of the data is an **opponent
-model, not a board reorder**. Swapping the nine simulated opponents from best-available-by-ECR
-to best-available-by-Yahoo-XRank changes **5 of 17 picks** (bar was >= 3) and drops starter
-Extra pts **568.5 -> 536.0 (-32.5)**. Read: every strategy conclusion drawn against ECR
-opponents is optimistic, because ECR opponents leave value on the board that real Yahoo
-drafters take. Our top-70 vs Yahoo XRank: Spearman **0.709**.
-
-Superseded prior claim: an earlier audit concluded "no Yahoo ranking data exists in this
-repo." True at the time. `data/yahoo_rankings.csv` remains **our own board exported** by
-`export_yahoo_rankings()` (`R/95_export.R:68`) for upload *into* Yahoo — Spearman 0.9976
-against our board, a mirror. Do not confuse the two files.
-
-**VONA as a pick selector — three framings tried, all closed 2026-09-07. Do not
-re-run.** VONA(X) = vor(X) - E[best vor at pos(X) at my next turn]. Idea sound,
-every attempt to make it *choose the pick* failed. Evidence in
-`docs/handoff/ffdraft-handoff-20260907-{12,13}.md` and `dev/PREREG_B.md`;
-harnesses `dev/bars_a*.R`, `dev/bars_b*.R`; arms live behind `my_rule` in
-`simulate_draft()` (`R/80_opponent_sim.R`), reachable only from `dev/`.
-
-- `"vona"` — argmax VONA across all positions. **Rejected #19.** Drafts zero K,
-  zero DST at every tau. Correct VONA logic (kickers near-identical -> replacement
-  sits right behind -> tiny VONA) applied to slots the league makes mandatory.
-- `"vona_fill"` — same, plus `forced_positions()` closing mandatory slots once
-  rounds left <= slots open. **Only positive result.** Pre-registered bar A2
-  (single frozen seed) FAILED at tau=3; 30 seeds CRN then showed +7..+81, 93% win
-  rate, loses at no tau. FAIL stands as recorded, bar was underpowered. Measured,
-  never wired to the app.
-- `"vona_tiebreak"` — position from `target_position()` as today, VONA orders
-  candidates within it. **No-op by algebra, not by measurement.** The subtracted
-  term is keyed on position alone, so within one position it is a constant and
-  argmax-VONA == argmax-VOR. 0 picks changed across 124 drafts, 1920/1920
-  tiebreak picks identical, CI [0.0, 0.0], sd 0.0. Mutation M1 (negate the key ->
-  16/17 picks change) proves the branch live. No seed count changes this.
-
-**Not closed: `simulate_forward()`'s `p_available`.** Survival probability per
-player over the horizon to my next turn. Never failed a bar because it was never
-a selector -- it is a *display*. "12% he survives to your next pick" is the
-question a human has on the clock, and it is orthogonal to every VONA verdict
-above. `survival_display()` and `VONA_LOW_SURVIVAL` (`R/81_vona.R`) already
-format it. Unwired to `inst/app/app.R` only because the draft was hours out.
-This is the piece worth reviving.
-
-**Draft-only, does not transfer mid-season.** VONA and the opponent model both
-assume snake turn order and run on Yahoo *preseason* XRank. Waivers have no turn
-structure and XRank is stale by ~week 3. Do not reach for this code in-season
-without a new data source.
+**Draft-era investigations are closed: `docs/adr/0003`-`0006`** (third-party libs, Sleeper
+`search_rank`, Yahoo XRank opponent model, VONA). Snake turn math + sweep mode: `PLAN_1.md`.
+Read all of it before the 2027 draft. **None of it transfers mid-season:** VONA and the
+opponent model assume snake turn order and run on *preseason* XRank; waivers have no turn
+structure; XRank is stale by ~week 3. Do not reach for draft code in-season without a new
+data source.
 
 **Config-driven or it doesn't ship.** Anything that could vary by league lives in
 `config/*.json`, validated against JSON Schema. No league rule is ever hardcoded.
@@ -260,7 +126,7 @@ without a new data source.
 Six scoring positions: QB, RB, WR, TE, K, DST. Nothing else exists in this format.
 Typical lineup: 1 QB / 2 RB / 2-3 WR / 1 TE / 1 FLEX (RB/WR/TE) / 1 K / 1 DST + bench.
 
-32 teams, 17 games + 1 bye each. Fantasy regular season is weeks 1-14, playoffs 15-17,
+32 teams, 17 games + 1 bye each. This league: regular season weeks 1-15, playoffs 16-17,
 so byes and late-season schedules matter more than raw season totals suggest.
 
 Scoring is roughly 0.1 pts per rushing/receiving yard, 0.04 per passing yard, 6 pts for
@@ -279,354 +145,231 @@ thrown at a receiver), snap share, air yards, red zone touches.
 
 Target share and carry share predict themselves. Touchdown rate does not. Any model that
 fails to aggressively regress efficiency is fooling itself, and most public projections
-do. This principle governs feature selection in Layer 2 and shrinkage in Layer 3.
+do. This principle governs feature selection in Layer 2 and shrinkage in Layer 3
+(`PLAN_1.md`).
 
-### Game script. Measured 2026-09-23, REMEASURED AS A SLOPE 2026-10-07. Use the slope.
+### Game script. RB slope only, never a tiebreak. ADRs 0007, 0008.
 
-Vegas spread moves fantasy points **by position, and only for some positions.** Measured
-on 2024-25 starter-calibre player-weeks, scored as points **relative to each player's own
-season average** so player quality cancels out. Harness `dev/weekly/mult_measure.R`,
-rerunnable.
+The spread moves fantasy points **for RBs only**. RB multiplier = `1 + 0.00799 *
+favouredness` (n 779, p 0.0109; 2024-25 starter-calibre player-weeks, points relative to
+each player's own season average; `dev/weekly/mult_measure.R`). WR and QB = **1.0** — no
+multiplier in either direction (WR -0.00129 p 0.68, QB +0.00562 p 0.10; RB-vs-WR interaction
+p 0.041). Use the slope, not the 09-23 buckets (1 of 22 cells significant); it is linear, so
+it extends past them (7-pt dog -> 0.944).
+- **No blowout tax.** QBs favoured by 10+ score 1.120x their own average (n 37). A big
+  spread mostly means a bad opponent.
+- WR: an underdog team is not a reason to bench, a favourite not a reason to start. Let the
+  projection decide.
+- High game total helps RBs (47+ -> 1.061 vs 0.939 at 41-44).
+- **Inside a ~5% projection gap NOTHING arbitrates — start the higher raw Yahoo projection
+  and stop.** Spread tiebreak retired 2026-10-13: 215 discordant pairs, spread pick right
+  48.8%, CI [0.420, 0.557], -0.488 pts/decision. A 0.6-pt edge cannot arbitrate a 9-pt coin
+  flip. Do not revert to usage either.
+- Use the slope to describe an RB's expected week, never to pick between two players.
+- **Do not score "do the multipliers work" in a weekly retro** — signal:noise ~1:10,
+  resolving it needs ~1,000 player-weeks.
+- Kill condition: `mult_measure.R` rerun on 2026 data at season end.
 
-**Use the slope, not the buckets.** The bucket table below was the 09-23 instrument and
-is kept for reference, but buckets run n=24-40 per cell and **only 1 of 22 cells is
-significantly different from 1.0** (RB fav3-7, 1.081, CI [1.013, 1.148]). Regressing
-relative points on favouredness pools every bucket and is far better powered:
+### Streaming K and DST. The only near-free weekly lever. ADR 0011.
 
-| position | n | slope / pt of spread | p | implied at 7-pt dog |
-|---|---|---|---|---|
-| **RB** | 779 | **+0.00799** | **0.0109** | **0.944** |
-| WR | 1132 | -0.00129 | 0.679 | ~1.00, flat |
-| QB | 398 | +0.00562 | 0.102 | ~1.00, flat |
-
-RB-vs-WR interaction coefficient **-0.00928, p = 0.0406** -> the two positions genuinely
-respond differently. This is the strongest game-script evidence in the log.
-
-Multiplier for an RB = `1 + 0.00799 * favouredness`. WR and QB get **1.0**; do not apply
-a WR multiplier at all, in either direction. The published WR fav3-7 1.059 did not
-survive the rebuild (came back 1.006) and was noise.
-
-The slope is linear, so it **extends past the measured buckets** — this is why it
-replaced them. The old table stopped at dog 3-7 and had nothing to say about a 7-point
-dog, which is exactly the case that came up in wk5 (Gordon II, MIA -7.0).
-
-| position | dog 3-7 | fav 0-3 | **fav 3-7** | fav 10+ |
-|---|---|---|---|---|
-| RB | 0.945 | 1.036 | **1.078** | 1.134 |
-| WR | 0.975 | 0.935 | 1.059 | ~1.00 |
-| QB | — | 0.939 | 1.028 | **1.120** |
-
-**RB is the position that cares.** Leading teams run to kill the clock. A back on a 3-7
-point favorite is in the peak bucket; on a 3-7 point dog he loses ~5%.
-
-**WR is flat across every bucket.** Trailing teams pass more, which offsets the lost
-possessions. So "his team is an underdog" is **not** a reason to bench a receiver, and
-being on a favorite is not a reason to start one. Let the projection decide.
-
-**There is no blowout tax.** QBs favored by 10+ score **1.120x** their own average
-(n=37); RBs favored 13+ hit 1.311 (n=24). A big spread mostly means a **bad opponent**,
-and that outweighs the risk of resting starters late. This killed a "Mahomes' ceiling is
-capped at -11.5" argument that was about to become advice.
-
-Also: high game total helps RBs (47+ -> 1.061 vs 0.939 at 41-44).
-
-**Under a ~5% gap the multiplier is NOT the tiebreaker. Backtested 2026-10-06.**
-Harness `dev/weekly/mult_backtest.R`, rerunnable, all four frozen `_myteam.csv` /
-`_opponent.csv` files, both rosters, n=45 player-weeks.
-
-Accuracy verdict is **inconclusive and always will be**: MAE 6.444 raw -> 6.595 adjusted,
-delta **+0.151**, 95% bootstrap CI **[-0.084, +0.397]**, p=0.226. No sign error, no bucket
-mis-assignment — the only things n=4 weeks could have caught. A multiplier moves a
-projection ~5%, ~0.60 pts on a typical 12-pt projection, against per-player-week error of
-**6.44**. Signal:noise ~1:10; resolving it needs ~1,000 player-weeks. **The table was
-measured on 2024-25 league-wide data — that is the right instrument. Our weekly logs are
-not. Do not score "do the multipliers work" in a retro.** See
-`single-seed-bars-underpowered`.
-
-Double-counting was checked and not found: Pearson(favouredness, Yahoo proj / own ppg) =
-+0.129, n=39. Yahoo does not visibly price the spread, so applying ours is not #33's "one
-source counted twice".
-
-What the backtest *did* establish: **decision impact is 2.3%** — 5 of 220 FLEX-eligible
-pairs reordered across wks 1-4. The adjustment only changes a choice when two players sit
-within ~5% of each other. Same shape as the QB cliff above: a half-point line move
-swinging a number 9.5% is not measuring anything.
-
-**RULE RETIRED 2026-10-13. Inside that band NOTHING arbitrates — start the higher raw
-Yahoo projection and stop.** Do not break the tie on the spread, and do not revert to
-usage either. Harness `dev/weekly/spread_tiebreak_leaguewide.R`, rerunnable.
-
-The spread tiebreak was adopted 10-07 on reasoning, never on a decision test. It got one.
-All **10 rosters** rebuilt from the `Roster Status` column of the week-4/5 position
-*actual* exports, every within-5% RB/WR/TE pair scored raw ordering vs spread-adjusted
-ordering against actuals. Only **discordant** pairs — where the rule changes the pick —
-carry information.
-
-| scope | pairs within 5% | discordant | spread pick right | 95% CI | p |
-|---|---|---|---|---|---|
-| 10 rosters, wks 4-5 | 75 | 17 (22.7%) | 6 (35.3%) | [0.142, 0.617] | 0.33 |
-| pool-wide, wks 4-5 | 1,497 | 240 (16.0%) | 114 (47.5%) | [0.410, 0.540] | 0.48 |
-| pool-wide, excl. actual == 0 | — | **215** | **105 (48.8%)** | **[0.420, 0.557]** | 0.79 |
-
-Points: **-0.488/decision**, CI [-1.77, +0.80]. No favouredness bucket escapes chance
-(dog7+ 43.6% n=55 … fav7+ 44.4% n=27). The CI **excludes accuracy above 55.7%**. 16%
-discordance replicates the 2.3%-of-all-pairs figure above.
-
-**The double-count theory is dead too, in the other direction.** Pearson(favouredness,
-Yahoo proj / own season ppg) re-run at **n = 190** (was 39): **r = -0.036, p = 0.62, CI
-[-0.177, +0.107]** — RB -0.094, WR +0.018, TE -0.080. The 10-07 **+0.129 at n=39 was
-noise**. Yahoo genuinely does not price the spread, *and* adding it still loses. So the
-10-07 premise was right and its conclusion was still wrong — orthogonal information is
-not automatically usable information.
-
-Cause is arithmetic, not a defect. 0.00799 x 7 = **5.6%, ~0.6 pts** on a 10-pt
-projection, against ~8-9 pts of variance between two actuals inside a 5% band. **A 0.6-pt
-edge cannot arbitrate a 9-pt coin flip at the pair level**, however real it is in the mean.
-
-**The slope itself survives** (RB +0.00799/pt, p = 0.0109, n = 779). Keep using it to
-describe and report an RB's expected week. Note *why* it does not transfer to a tiebreak:
-the slope was measured on points **relative to a player's own season average**, and season
-ppg is our worst non-trivial baseline (MAE 7.32 vs Yahoo's 4.29). A multiplier calibrated
-against a weak baseline does not transfer onto a strong one. That mismatch is the bug.
-
-Also unchanged: the `mult_measure.R` 2026 rerun at season end is still the slope's kill
-condition. The RB coefficient in this check came back -0.0060 at p = 0.48 — **noise, not a
-sign flip.** Do not read it as one.
-
-Worked wk5 case, now closed: Gordon II (RB, MIA -7.0, proj 9.80 -> 9.25 adj) vs Boston
-(WR, proj 9.69). Started Boston on the spread tiebreak. Gordon 14.80, Boston 12.10,
-**-2.70**. The user caught the original Gordon/Tate framing on the grounds he faced a top
-defence, which is what triggered the slope rebuild — good instinct, and the slope is real;
-it just cannot pick between two players. One player-week is not what killed the rule.
-**The 215-pair test is.**
-
-### Streaming K and DST. The only near-free weekly lever.
-
-One roster spot each, no opportunity cost, and both slots are forced — so a matchup swap
-costs nothing but the claim. **DST scoring is dominated by points allowed**
-(`config/scoring.json` tiers: 0 allowed = 10, 1-6 = 7, 7-13 = 4, 14-20 = 1, 21-27 = 0),
-so rank candidates by **opponent implied total** (`total/2 - spread/2`), lowest first.
-Rank kickers by **own implied total**, highest first.
-
-**DST side VALIDATED league-wide 2026-10-06.** No longer under test. All 32 teams,
-weeks 1-4, **n=128** team-weeks, DST points derived from `load_team_stats()` +
-`config/scoring.json` tiers. Harness `dev/weekly/dst_test.R`.
-
-- opponent implied total -> DST pts: **r = -0.275, p = 0.0017**, CI [-0.428, -0.107]
-- own implied total -> DST pts: r = -0.021, **p = 0.81** — correctly irrelevant, which
-  confirms we rank on the right side of the line
-- edge **+1.92 pts/wk** over a random DST; within-week Spearman +0.308
-
-Two refinements tested and **rejected**: the lowest quartile scoring below the second is
-noise (p = 0.291), and game total adds nothing on top (coef p = 0.200). **Rank on
-opponent implied total alone.**
-
-Ceiling: opp_implied explains only **7.6%** of DST variance — the rest is turnovers and
-return TDs, which are not forecastable. The edge is **0.39 sd**, so the rule will look
-wrong in individual weeks and still be right. **Do not kill it on a bad week**; the >3 pt
-kill bar is retired for DST. K side remains untested (no league-wide K harness yet).
-
-### Snake turn structure
-
-For T teams, slot s (1-indexed), round r:
-- odd r: `pick = (r-1)*T + s`
-- even r: `pick = r*T - s + 1`
-
-Gap structure varies sharply by slot and is the central strategic problem:
-
-| Slot (of 12) | First five picks | Gaps |
-|---|---|---|
-| 1 | 1, 24, 25, 48, 49 | 23, 1, 23, 1 |
-| 2 | 2, 23, 26, 47, 50 | 21, 3, 21, 3 |
-| 6 | 6, 19, 30, 43, 54 | 13, 11, 13, 11 |
-| 12 | 12, 13, 36, 37, 60 | 1, 23, 1, 23 |
-
-Early slots wait long and then pick back-to-back, so they can punt a position and take
-two at the turn. Middle slots have an even rhythm and are never far from their next pick,
-so passing on a positional run costs less. Recommendations must be slot-aware.
+One roster spot each, both slots forced -> a matchup swap costs only the claim.
+- **DST: rank by opponent implied total** (`total/2 - spread/2`), lowest first — points
+  allowed dominate DST scoring (`config/scoring.json` tiers: 0 allowed = 10, 1-6 = 7,
+  7-13 = 4, 14-20 = 1, 21-27 = 0). **Validated** 2026-10-06, 32 teams wks 1-4, n 128:
+  r -0.275, p 0.0017, edge **+1.92 pts/wk** over a random DST (`dev/weekly/dst_test.R`). Own
+  implied total irrelevant (p 0.81). Rejected add-ons: game total (p 0.20), bottom-quartile
+  kink (p 0.29).
+- Explains only 7.6% of DST variance (edge 0.39 sd) -> it will look wrong in single weeks.
+  **Do not kill it on a bad week**; the >3-pt kill bar is retired for DST.
+- **K: rank by own implied total**, highest first. Untested — no league-wide K harness yet.
 
 ---
 
 ## Stack
 
-- R 4.4+, `renv` for pinning, package structure (`devtools::load_all()`).
-  **`renv` is currently out of sync — `devtools` is not installed and `load_all()` fails.**
-  Workaround: `source()` the `R/*.R` files you need directly. Fix with `renv::status()`.
-- `targets` for the DAG, DuckDB as the local warehouse, parquet for raw
-- `nflreadr` (1.5.1+) for all NFL data. `ffsimulator` as a reference implementation
+- R 4.4+, package structure. **Load with `pkgload::load_all(".")`** — `devtools` is not
+  installed. `renv` is out of sync: a warning on every `Rscript`, cosmetic; inspect with
+  `renv::status()`.
+- `targets` for the DAG, DuckDB as the local warehouse, parquet (`arrow`) for raw
+- `nflreadr` (1.5.1+) for all NFL data. `ffsimulator` as a reference implementation only
 - `jsonlite` + `jsonvalidate` for config, `pointblank` for data validation
 - `data.table` / matrices in hot paths, `Rcpp` only if profiling demands it
-- `shiny` + `bslib` + `reactable` for the app
+- Plain `shiny` for the draft app (`inst/app/app.R`)
+- Python 3 for `dev/weekly/leaguewide_retro.py` (+ two week-2-era helpers)
+
+## Commands
+
+```bash
+Rscript -e 'pkgload::load_all("."); testthat::test_dir("tests/testthat")'   # tests
+Rscript -e 'targets::tar_make()'                                             # pipeline
+Rscript dev/weekly/pull_nflreadr.R         # refresh nflreadr data -> data/nflreadr/
+Rscript dev/weekly/predictions.R freeze    # before first kickoff; refuses after it, or overwrite
+Rscript dev/weekly/predictions.R score     # every frozen week whose scores are entered
+Rscript dev/weekly/playoff_odds.R          # P(top 4), per-game leverage, exchange rate
+Rscript dev/weekly/trade_finder.R          # trades vs all 9 rosters, scored in wins
+python3 dev/weekly/leaguewide_retro.py WEEK PROJ_DATE ACT_DATE   # or --pool WEEK:PROJ:ACT ...
+```
+
+After MNF, in order: exports (`yahoo-ff-collector` skill) -> `pull_nflreadr.R` -> enter
+scores in `data/weekly/2026_league_schedule.csv` -> `schedule_check.R` -> the week's
+`score_weekNN.R` -> `ceiling_vs_margin.R` -> `predictions.R score` ->
+`leaguewide_retro.py` -> `trade_finder.R`.
+
+## Layout, in-season
+
+- `docs/uploads/week_NN_data/` — raw Yahoo exports, one folder per week. Read through
+  `dev/weekly/read_yahoo_week.R`, never ad hoc.
+- `data/weekly/` — decision logs (`2026_weekNN_decisions.md`), frozen lineups
+  (`_myteam.csv`, `_opponent.csv`), frozen predictions, schedule grid, regret log
+  (`README.md`).
+- `dev/weekly/` — rerunnable harnesses. Each ADR names the one behind its numbers.
+- `R/41_weekly.R` (weekly mart), `R/42_deadlines.R` (lineup deadlines) — packaged.
+- `docs/adr/` — decisions + evidence. `docs/handoff/` — session state, index `README.md`.
+
+---
 
 ## Conventions
 
+### Data and joins
+
 - Layer like dbt: `raw` -> `stage` -> `mart`. Numbered files in `R/` follow pipeline order.
 - **Prefer not to join players on name.** Use `load_ff_playerids()` to build the crosswalk
-  and a surrogate key in `dim_player`. Name collisions and mid-season roster churn will bite.
-  Name-joining is allowed only when name is genuinely all the source gives you (Yahoo's
-  exported ADP/XRank file, for one) — and when you do it, say so at the point of use and
-  report the match rate.
+  and a surrogate key in `dim_player`. Name collisions and mid-season roster churn will
+  bite. Name-joining is allowed only when name is genuinely all the source gives you
+  (Yahoo's exported ADP/XRank file) — then say so at the point of use and report the match
+  rate.
+- **Align by key, never by position across two sorts.** dplyr `arrange()` sorts in the C
+  locale, base `sort()` in the system one -> "JGrahnasaurs" and "Jason's Jazzy Team" swapped
+  -> matrix rows mislabeled, P(top 4) read 33% vs truth 4.4%, no error.
+  `stopifnot(identical(rownames(M), teams))`.
+- **Team names are byte-exact.** "Dave’s Bone Crushers", "Max’s TD Bombers" = U+2019;
+  "Jason's Jazzy Team" = straight apostrophe. Same in `Roster Status`. Never normalise one
+  side only.
+- **Multi-position eligibility exists** (`RB,TE`, `WR,RB`, `WR,TE`; 8 players in wk7).
+  `pos %in% p` fills no slot for them, silently — the `optimal()` copies in
+  `league_ceiling.R`, `ceiling_vs_margin.R`, `regret_decomp.R`, `roster_error.R` all do
+  this. `league_sim.R` stops loudly. None rostered wks 3-7, so no past number is wrong.
 - Scoring must be a pure vectorized function of (stat line, config). Golden-test it.
-- **`score_player_week()` is validated 26/26** vs Yahoo box scores across Weeks 1-2, incl.
-  2-pt conversions and kicker FG bands. Do not re-validate. **DST is the only gap** —
-  per-player by design; worth 21.00 (14% of the total) in Week 2.
+  **`score_player_week()` is validated 26/26** vs Yahoo box scores wks 1-2, incl. 2-pt
+  conversions and kicker FG bands. Do not re-validate. **DST is the only gap** — per-player
+  by design; worth 21.00 (14% of the total) in Week 2.
 - **nflreadr name gotchas are silent.** `Kenny` not `Kenneth` Gainwell; the column is
-  `passing_interceptions`, not `interceptions`. A name miss returns `NA` through a join,
-  not an error. This is the name-join rule above collecting its debt.
-- **`load_schedules()` `temp`/`wind` are NA for every unplayed game** — backfilled
-  post-game only. Not a bug. Use the market total as the weather proxy.
-- **A Yahoo injury `O` is a state, not an event.** Diff it against last week's usage before
-  reading it as news — a player long out reads identically to one just ruled out.
-- **A Yahoo live win probability mid-week is not a forecast.** It is points already banked
-  plus a stale projection, so it is most wrong when the opponent's early players spiked.
-  Compute remaining-vs-remaining instead; it inverted the Week 2 read.
-- **Yahoo weekly exports (week 3 format onward) carry a `Player ID`.** That is a real
-  surrogate key — join it to `load_ff_playerids()$yahoo_id` instead of on names. Reader:
-  `dev/weekly/read_yahoo_week.R`. Three silent traps live there, all handled; do not
-  simplify them out:
-  (a) **headers contain invisible private-use-area characters** — `"Fantasy Fan Pts"` is
-  really `"Fantasy Fan Pts"`, a sort-arrow glyph, so `d[["Fantasy Fan Pts"]]`
-  returns **NULL rather than erroring**;
+  `passing_interceptions`, not `interceptions`. A miss returns `NA` through a join, not an
+  error.
+- **`yahoo_id` coverage collapses by draft class**: 2022 85.6%, 2023 75.4%, 2024 32.3%,
+  **2025 0.3%, 2026 0%** -> an **id-only join silently drops every rookie**.
+  `attach_nfl_ids()` falls back to name and records which key was used in `method`. Do not
+  "fix" it to id-only.
+- **`load_schedules()` `temp`/`wind` are NA for every unplayed game** — backfilled post-game
+  only. Use the market total as the weather proxy.
+
+### Yahoo exports
+
+- **Weekly exports (week 3 format onward) carry a `Player ID`** -> join it to
+  `load_ff_playerids()$yahoo_id`, not names. Reader: `dev/weekly/read_yahoo_week.R`. Its
+  three silent traps are handled; do not simplify them out:
+  (a) **headers hold invisible private-use-area characters** — "Fantasy Fan Pts" really
+  ends in U+E002, a sort-arrow glyph, so `d[["Fantasy Fan Pts"]]` returns **NULL rather
+  than erroring**;
   (b) the file glob must **whitelist the six position files** — `gamedaycalls` and
   `injuries` share the prefix but not the schema;
-  (c) the stat columns are **projections for the upcoming week, not actuals** (decimal TD
-  counts are the tell).
-- **`yahoo_id` coverage collapses by draft class**: 2022 85.6%, 2023 75.4%, 2024 32.3%,
-  **2025 0.3%, 2026 0%**. Rookies are in the crosswalk with a `gsis_id` and no Yahoo id,
-  so an **id-only join silently drops every rookie**. `attach_nfl_ids()` falls back to
-  name and records which key was used in `method`. Do not "fix" it to id-only.
-- **`rosterchanges_injured_reserve.csv` is not trustworthy.** 15% of one day's rows listed
-  the same player as both "On" and "Off" IR, including healthy starters. Use the
-  `injuries` and `gamedaycalls` exports, which agree with each other and with nflreadr.
-  The Yahoo injuries export is **skill-positions only** — for defensive players use
+  (c) the stat columns are **projections for the upcoming week** (decimal TD counts are
+  the tell) — **only before kickoff.** Sat/Sun pulls list games `Final` or live, and for
+  those players `Fantasy Fan Pts` = points SCORED (wk3/4/5 Sunday pulls: 77/149/138
+  players). Clean export = latest pull with every Game cell unstarted (`clean_tmpl()`).
+- **`*_actual_*` exports: `-` = did not play -> NA, not 0.** Every player (FA included) is
+  in the file; a started inactive player scores 0.
+- **No export has a started/bench flag.** Opponent starters are not recoverable after the
+  fact, only bounded (week 5: 47 of 84 legal lineups lose). Why freezing **both** lineups
+  pre-kickoff is load-bearing.
+- **Rosters come from the six position exports** (`_qb_`, `_rb_`, `_wr_`, `_te_`, `_k_`,
+  `_def_`). `*_actual_*` exports carry owners in `Roster Status` -> all ten rosters rebuild
+  cleanly. **No `rosterchanges_*` file is a roster snapshot:** `rosterchanges_league_team`
+  disagreed with the frozen week-5 lineup on 3 of 15 slots (mid-transaction, not stale);
+  `rosterchanges_injured_reserve.csv` listed 15% of one day's rows as both "On" and "Off"
+  IR. Injuries: the `injuries` + `gamedaycalls` exports (skill positions only); defenders ->
   `nflreadr::load_injuries()`.
-- **Yahoo's position pages and matchup page disagree at the second decimal.** Same player,
-  same week, ~0.02 apart. Pick one surface deliberately and say which; the **matchup page**
-  is what a lineup decision is actually made against.
-- **No `rosterchanges_*` file is a roster snapshot.** `rosterchanges_league_team` carries
-  fantasy team names in `Roster Status` and plausible counts, yet disagreed with the frozen
-  week-5 lineup on **3 of 15 slots** while listing same-day waiver adds as present — it is
-  mid-transaction and internally inconsistent, not merely stale. Second debt on this family
-  after the IR one. **Rosters come from the six position exports** (`_qb_`, `_rb_`, `_wr_`,
-  `_te_`, `_k_`, `_def_`) via `dev/weekly/read_yahoo_week.R`. The `*_actual_*` position
-  exports carry owners in `Roster Status` too, which reconstructs **all ten** rosters
-  cleanly — that is how the week-5 league-wide tests were run.
-- **DEF team naming flips between vintages inside the same week.** The projection export
-  names teams by **city**, the `*_actual_*` export by **nickname**: `Jacksonville|Jax|6.90`
-  becomes `Jaguars|Jax|2.00`. Worse, the projection file emits `New York` **twice** —
-  NYJ and NYG — so the name is not even unique within one file. This is the cause behind
-  the standing "DEF never joins on name" rule. Join on the `Team` abbrev and
-  `stopifnot()` the map.
-- **The export has no started/bench flag.** Opponent starters are therefore not
-  recoverable after the fact, only bounded by enumerating legal lineups (week 5: 47 of 84
-  lose). This is why loop step 2 — freeze **both** lineups pre-kickoff — is load-bearing
-  rather than bookkeeping. Skipping it cost the week-5 opponent total permanently.
-- **Log the opponent's lineup pre-kickoff**, not just ours. It makes projection error
-  measurable on both sides against the same model, and it exposes head-to-head structure
-  invisible from one roster — e.g. our RB and their QB being teammates damps the margin.
-- **Correlation is not the thing to avoid — paying for it is.** A stack that costs
-  projected points to buy shared upside loses; concentration that arrives for free while
-  *gaining* points is fine. Flag it either way, and give it a kill condition.
+- **DEF never joins on name — team names change with export vintage.** City in some projection exports
+  (`Jacksonville|Jax|6.90`), nickname in others (wk7 projection: `Browns`) and in actuals
+  (`Jaguars|Jax|2.00`); one projection file emitted `New York` twice (NYJ, NYG). **Join DEF
+  on the `Team` abbrev and `stopifnot()` the map.**
+- Position pages and the matchup page disagree by ~0.02 for the same player-week. Pick one
+  surface and say which; the **matchup page** is what a lineup decision is made against.
+- **A Yahoo injury `O` is a state, not an event.** Diff it against last week's usage before
+  reading it as news — a player long out reads identically to one just ruled out.
+- **A Yahoo live win probability mid-week is not a forecast** — banked points plus a stale
+  projection, most wrong when the opponent's early players spiked. Compute remaining vs
+  remaining instead (it inverted the Week 2 read).
+
+### Roster decisions. ADR 0009.
+
+- **Start/sit: read the Yahoo projection and stop.** Best one-week estimate we have: MAE
+  4.29 vs 6.71 opportunity-based, 7.32 season ppg (`dev/weekly/proj_benchmark.R`, wk4,
+  n 221). Never override it with our numbers.
+- **Opportunity / snap analysis has three jobs, start/sit is not one:** rank the wire,
+  catch a role change the projection has not absorbed, choose the drop.
 - **Need before candidates. Never infer a positional need from a candidate looking good.**
-  Any add/drop question runs in this order: (1) roster counts by position + bye week per
-  player, byes derived as `setdiff(all_weeks, weeks_played)` from `load_schedules(2026)`;
-  (2) per bye week, ask *am I actually short a startable body at that slot* — **FLEX
-  absorbs a lot, and 4 RBs for 2 RB slots is depth, not a hole**; (3) only then rank the
-  free-agent pool, and (4) pick the drop by usage trend, not ppg. Cost of skipping step 1, measured 2026-09-29: ranked the pool, saw
-  falling RB opportunity, called RB the hole. Wrong — real holes were **K (wk5, zero
-  kickers)** and **TE (1-deep all season, zero in wk14)**. If the sentence "X is your
-  hole" is being written, the depth and bye tables must already be on screen.
-- **`data/weekly/2026_weekNN_myteam.csv` can lag the decision log.** It is written at
-  lineup-log time and does not get rewritten when a decision reverses. The wk4 file still
-  listed Stroud, B. Allen, and Gainwell after D8/D1/D9 killed all three. **The decision
-  log's `LIVE` / `CANCELLED` / `NEW` rows are authoritative for who is rostered**; the csv
-  is authoritative only for what was projected at freeze time.
-- **The drop is ranked the same way as the add: snap share and target trend, never ppg.**
-  ppg embeds exactly the efficiency the core principle says to regress, so it mis-ranks
-  your own bench in both directions at once. Cost, measured 2026-10-06: handoff #36 called
-  **Sutton** the drop at 3.28 ppg, "worst on roster by 2.5x," and a session relayed it.
-  The real drop was **Raymond** at 9.63 ppg — snap share **60/62/75/51**, third in the CHI
-  room behind rookie Luther Burden III, 91% catch rate on aDOT 5.7 that regresses *down*.
-  Sutton held **73-87%** snaps and a 5.5 tgt/g #1 boundary role at aDOT 11.5 on a **41%**
-  catch rate that regresses *up*. Yahoo's own wk5 projections had them 8.96 vs **5.71**.
-  Identical byes (CHI and DEN both wk10), so byes did not discriminate — usage did. **The
-  user caught this, not the analysis.** Pull `load_snap_counts()` before naming any drop.
-- **A handoff doc is a prior claim, not a source.** Its roster rankings, drop candidates,
-  projections and ppg figures were derived from data that has since moved, by the same
-  reasoning now under review. Re-derive from `load_player_stats()`, `load_snap_counts()`
-  and the newest `docs/uploads/week_NN_data/` export before acting on an add/drop or
-  quoting a number. Same failure shape as treating `load_schedules()` output as fact
-  rather than a snapshot — and note handoff #36 §4's FLEX line (Raymond 9.62 / Odunze
-  7.58) is **season ppg, not a week-5 projection**, so the "we trail by 1.61" figure
-  inherits the ppg error.
-- **The Yahoo projection is the best one-week point estimate available to us. Do not
-  override it with our own numbers. Measured 2026-10-06, `dev/weekly/proj_benchmark.R`,
-  week 4, 221 startable players.** MAE: Yahoo **4.29**, opportunity x position rate 6.71,
-  season ppg 7.32, last week only 7.70. Paired t-test vs the best baseline **-2.42,
-  p < 0.0001**, CI [-3.22, -1.63]. Yahoo wins at every position (QB 3.50 vs 7.18, RB 4.29
-  vs 6.51, TE 4.29 vs 4.95, WR 4.69 vs 7.25). **Season ppg is the worst non-trivial
-  baseline** — that is the Sutton/Raymond error quantified, since Yahoo's own proj had
-  Sutton 8.96 vs Raymond 5.71 and the ppg ranking threw that away.
+  Add/drop runs in order: (1) roster counts by position + bye week per player, byes as
+  `setdiff(all_weeks, weeks_played)` from `load_schedules(2026)`; (2) per bye week, *am I
+  actually short a startable body at that slot?* — FLEX absorbs a lot, 4 RBs for 2 RB
+  slots is depth, not a hole; (3) only then rank the pool; (4) pick the drop by usage
+  trend. Writing "X is your hole" requires the depth + bye tables already on screen
+  (2026-09-29: called RB the hole; the real holes were K and TE).
+- **The drop ranks like the add: snap share + target trend, never ppg.** ppg embeds the
+  efficiency the core principle regresses, so it mis-ranks your own bench both ways
+  (2026-10-06: Sutton vs Raymond — the user caught it, not the analysis). Pull
+  `load_snap_counts()` before naming any drop. Snaps also catch fresh injuries a base
+  projection cannot see (McLaurin snaps 75 -> 58 -> 10).
+- **A handoff doc is a prior claim, not a source.** Re-derive from `load_player_stats()`,
+  `load_snap_counts()` and the newest `docs/uploads/week_NN_data/` export before acting on
+  an add/drop or quoting a number.
+- **The decision log beats `_myteam.csv` for who is rostered.** The csv is written at
+  freeze time and not rewritten when a decision reverses; the log's `LIVE` / `CANCELLED` /
+  `NEW` rows are authoritative. The csv is authoritative only for what was projected.
+- **The wire has two phases per week.** After Sunday games every unowned player goes to
+  waivers; they clear Wednesday. Before the clear, priority gates everything; after it,
+  first-come, priority irrelevant -> **a Thursday/Friday second look is free**. Any
+  availability filter must treat `FA` *and* `W (...)` as available (a `^W \(`-only filter
+  hid 360 week-4 WRs). A successful claim drops us to the bottom of the rolling list -> at
+  low priority, spending it costs ~nothing: stack claims on several targets; contested
+  ones mostly fail.
+- **A replacement level is only as good as its pool.** A Yahoo FA export's median ppg is
+  ~1.5-2.3 for RB/WR/TE (mostly inactive bodies) -> every waiver body shows a fake VOR.
+  Rank the wire on opportunity and its week-over-week trend; bar anyone under ~5 opp/g.
+- **Log the opponent's lineup pre-kickoff**, not just ours. Makes projection error
+  measurable on both sides, and exposes head-to-head structure (our RB and their QB as
+  teammates damps the margin).
+- **Correlation is not the thing to avoid — paying for it is.** A stack that costs
+  projected points to buy shared upside loses; concentration that arrives free while
+  *gaining* points is fine. Flag it either way, with a kill condition.
 
-  So opportunity and snap-share analysis has **three jobs, and start/sit is not one of
-  them**: (1) rank the wire, where projections are thin or absent; (2) catch a role change
-  the projection has not absorbed yet — a backfield vacated mid-week, a rookie taking over
-  a route tree; (3) **choose the drop**, which is a question about future role, not about
-  this week's points. For a start/sit call between two rostered players, read the
-  projection and stop.
+### Method
 
-- **The lineup layer is already at its ceiling. Do not spend the week there. Measured
-  2026-10-06, `dev/weekly/proj_vs_choice.R`.** Compared what we started against the
-  projection-optimal lineup and the hindsight optimum, weeks 1-4:
-
-  | | 4-wk total |
-  |---|---|
-  | started | 456.12 |
-  | projection-optimal | 456.92 |
-  | hindsight-optimal | 530.54 |
-  | regret from **our deviations** | **+0.80 (1%)** |
-  | regret from **projection error** | **+73.62 (99%)** |
-
-  **Four weeks of start/sit work has cost 0.80 points — 0.20/wk.** We follow the
-  projection near-perfectly already; 99% of the 74.42 regret is the projection being
-  wrong, which we cannot fix. The pooled positional leak (WR 46.90, QB 23.52, K 12.00,
-  DEF 0.00, TE 0.00) therefore does **not** mean we benched the right WR — it means the
-  projection could not say which WR would hit. TE leaking zero is the same artifact
-  inverted: 1-deep means there was never a choice to get wrong, so the "TE hole" has cost
-  nothing to date.
-
-  For scale, week 4: lineup error **27.10**, roster error **66.76**. **Leverage is roster
-  quality and the two free streaming slots, not weekly lineup optimization.** A regret
-  number is still worth logging — it measures the projection, not us.
-
-- **The wire has two phases per week, and priority only matters in the first.** Yahoo
-  dumps every unowned player onto waivers after Sunday games; they clear Wednesday.
-  Week 4 WR export (Sat 10-04): **FA 360 / owned 54 / W 51**. Week 5 WR export
-  (Mon 10-06): **FA 0 / owned 53 / W 412**. Before the clear, priority gates everything;
-  after it, the pool is first-come and priority is irrelevant. **A Thursday/Friday second
-  look is free and spends no priority** — take it. Also: any availability filter over an
-  export must treat `FA` *and* `W (...)` as available. A `^W \(` -only filter understated
-  the week 4 pool by 360 WRs.
-
-- **A replacement level is only as good as the pool it is taken from.** Median ppg over a
-  280-row Yahoo free-agent export is ~1.5-2.3 for RB/WR/TE because the pool is mostly
-  inactive bodies -> every waiver body shows a large fake VOR. Rank the wire on
-  **opportunity and its week-over-week trend**, and bar anyone under ~5 opp/g before
-  ranking at all.
 - Every model outputs a distribution, not a point estimate.
-- Validate the config early and fail loudly. A bad `league.json` should not reach a model fit.
+- Validate the config early and fail loudly. A bad `league.json` should not reach a model
+  fit.
+- **n is tiny. Fit nothing on our own weekly logs.** Power comes from league-wide data (all
+  10 rosters, all 32 teams, 2024-25 history).
+- **Pre-register.** Kill condition per decision, before kickoff. `predictions.R freeze`
+  refuses after kickoff and refuses overwrite; scorers print `WAITING`, never a silent pass.
+- **Common random numbers for every delta** — without them +1 pt/wk drowned in MC noise.
+  Arm comparisons: paired bootstrap CI over >= 30 seeds, never one frozen seed (ADR 0006).
+- **Monotonicity checks catch silent bugs** — "more points cannot lower our odds" caught
+  the locale swap above.
+- **Validate hand transcription by redundancy** — mirror check + Standings reproduced to
+  the cent (`schedule_check.R`). **Verify refactors by output diff** (byte-identical).
 - **Docs written in `/caveman` style.** Repo rule. Applies to `PLAN_1.md`, `CONTEXT.md`,
   handoff docs, ADRs, roxygen blocks. Drop articles, filler, hedging. Fragments fine.
   Arrows for causality (X -> Y). Technical terms, code blocks, error strings stay exact.
   Exception per skill: full prose for security warnings, destructive-action confirms,
   ordered multi-step sequences where fragment order risks misread.
 
-## Current status
+---
 
-**Draft engine DONE.** Drafted 2026-09-08 from slot 10. In-season now — **record 1-1
-through Week 2, Week 3 frozen and in flight**. Current work is the weekly start/sit layer
-(`R/41_weekly.R`, `R/42_deadlines.R`), not `PLAN.md`. Read the newest doc in
-`docs/handoff/` for live state; `docs/handoff/README.md` is the index.
+## Live state
+
+Not kept here — anything that changes weekly rots in this file. Read the newest doc in
+`docs/handoff/` (index `docs/handoff/README.md`). Roster truth = decision log rows.
 
 Weekly loop, as practiced — it works, keep it:
 1. **Freeze a decision log before kickoff** (`data/weekly/2026_weekNN_decisions.md`) with
@@ -636,11 +379,8 @@ Weekly loop, as practiced — it works, keep it:
 2. Log **both lineups** (`_myteam.csv`, `_opponent.csv`) at freeze-time projections.
 3. After Monday, append to `## Retro` — never edit above it. Score each kill condition
    y/n and **separate "decision wrong" from "outcome bad"**; Week 1 proved they differ.
-4. `regret = best legal lineup - started` -> `data/weekly/README.md`. Week 1 **19.76**,
-   Week 2 **2.50**.
-
-**n is tiny. Fit nothing.** Three weeks of data cannot support a model. The decision logs
-are there to accumulate honest test cases, not to be regressed on yet.
+4. `regret = best legal lineup - started` -> `data/weekly/README.md`. It measures the
+   projection, not us.
 
 **Lineup deadlines are not a player's own kickoff.** The real deadline for a slot is
 `min(kickoff of that player's legal replacements)`. Week 2: Adams locked Monday, but every

@@ -101,7 +101,7 @@ storage-format rationale):
   name ("JGrahnasaurs") and `my_slot` are entered once at session start instead, since
   both are already known.
 - `my_slot` entry also drives an always-visible "picks until your turn" readout, computed
-  from the snake-turn formula already in `CLAUDE.md`.
+  from the snake-turn formula (§ Snake turn structure, below).
 - Every pick is a `.jsonl`-appended event (`pick_made` / `pick_corrected` / `draft_started`)
   — an append-only log, never a mutated row, so a crash loses at most one in-flight write
   and a mis-entry never destroys history. One undo control, **last pick only**.
@@ -280,6 +280,34 @@ news is currently happening to.
   `redraft-overall`). Opponents draft off Yahoo's default list; we cannot model that. This
   is the main known gap in Phase 6's opponent model.
 - Waivers, trades.
+
+---
+
+## Snake turn structure
+
+Moved from `CLAUDE.md` 2026-10-27. Implemented by `picks_until_my_turn()` (`R/78_turn.R`).
+
+For T teams, slot s (1-indexed), round r:
+- odd r: `pick = (r-1)*T + s`
+- even r: `pick = r*T - s + 1`
+
+Gap structure varies sharply by slot and is the central strategic problem. Table for this
+league, T = 10 (CLAUDE.md carried a 12-team table; recomputed):
+
+| Slot (of 10) | First five picks | Gaps |
+|---|---|---|
+| 1 | 1, 20, 21, 40, 41 | 19, 1, 19, 1 |
+| 2 | 2, 19, 22, 39, 42 | 17, 3, 17, 3 |
+| 5 | 5, 16, 25, 36, 45 | 11, 9, 11, 9 |
+| 10 | 10, 11, 30, 31, 50 | 1, 19, 1, 19 |
+
+Early slots wait long and then pick back-to-back, so they can punt a position and take
+two at the turn. Middle slots have an even rhythm and are never far from their next pick,
+so passing on a positional run costs less. Recommendations must be slot-aware.
+
+**Sweep mode:** with team count fixed, sweep narrows from 22 (team x slot) scenarios to
+**10** — one per possible draft slot in a 10-team snake draft. `my_slot` in `league.json`
+stays nullable until the draft order is revealed. 2026: drafted from slot 10.
 
 ---
 
