@@ -45,6 +45,8 @@ ones where being right is informative.
 | 3 | **W** vs Maybe Mitchell | 108.74 | **133.80** | **25.06** | 96.70 |
 | 4 | L vs Jason's Jazzy Team | 93.00 | **120.10** | **27.10** | 98.58 |
 | 5 | **W** vs Max's TD Bombers | 107.02 | **130.32** | **23.30** | 100–106.4 (est) |
+| 6 | L vs Owl Out Blitz | 91.68 | **95.08** | **3.40** | 111.14 |
+| 7 | **W** vs Monday Night Madison | 99.30 | **104.00** | **4.70** | 70.92 |
 
 ## Week 1 notes
 
@@ -179,3 +181,41 @@ and regret 29.64; they actually scored **111.14**, beating the counterfactual by
 **+27.24** with a regret of at most 2.40. **Do not rank teams by that column** — it
 measures rosters under a rule nobody is known to follow. Our own 3.40 is observed and
 stands. Detail: `2026_week06_decisions.md` §R8-R9.
+
+## Week 7 — regret **4.70**, all projection error
+
+```
+started               99.30
+projection-optimal    99.30   -> regret from OUR deviation    +0.00  (0%)
+hindsight-optimal    104.00   -> regret from projection error +4.70  (100%)
+```
+
+Whole 4.70 = Odunze 8.90 on bench over Boston 4.20. Boston 9.37 vs Odunze 8.73 = 6.8% gap ->
+inside the new 15% dead band (ADR 0008): coin flip by rule, not a miss. Cumulative deviation
+regret **3.50 over 7 weeks (0.50/wk)**.
+
+**First week with every real final** (schedule CSV, Yahoo Matchups 10-27) -> real regret =
+hindsight-optimal − actual, no lineup needed. Supersedes the `if-followed` column for ranking:
+
+| team | if-followed | actual | hindopt | real regret | actual − if-followed |
+|---|---|---|---|---|---|
+| **JGrahnasaurs** | 99.30 | 99.30 | 104.00 | **4.70** | 0.00 |
+| Maybe Mitchell | 96.60 | 129.72 | 136.02 | 6.30 | **+33.12** |
+| Sunday Kevin | 111.10 | 111.10 | 117.50 | 6.40 | 0.00 |
+| Steel City | 91.68 | 84.88 | 95.98 | 11.10 | -6.80 |
+| Monday Night Madison | 78.72 | 70.92 | 82.18 | 11.26 | -7.80 |
+| Max's TD Bombers | 109.48 | 113.68 | 130.78 | 17.10 | +4.20 |
+| Dave's Bone Crushers | 73.22 | 73.22 | 96.72 | 23.50 | 0.00 |
+| Owl Out Blitz | 135.92 | 118.62 | 145.92 | 27.30 | -17.30 |
+| Locked In Michelle | 100.76 | 103.36 | 134.28 | 30.92 | +2.60 |
+| Jason's Jazzy Team | 126.54 | 122.74 | 155.54 | 32.80 | -3.80 |
+
+Mean real regret 17.14. 3 of 10 started exactly the Wed projection-optimal lineup (us, Sunday
+Kevin, Dave's). 7 deviated: 3 gained +39.92, 4 lost -35.70 -> net ~0. Deviating from Wed
+projections bought nothing on average, n 7. Caveat: `if-followed` runs on Wed projections;
+managers had Sunday news -> deviation is not manager skill alone.
+
+**No real regret negative** -> nobody beat own 10-27 roster's ceiling -> no stream *proven*
+this week. A stream can still hide under the ceiling.
+
+Ours lowest again. Wk6 rule holds: a draw from projection error, not skill.

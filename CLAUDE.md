@@ -52,6 +52,10 @@ Yahoo "TKWW2K26 League 5" (ID #1541392). Settings page read 2026-09-04; real val
   days later (`W (Oct 7)` = clears Oct 7), so the pool refreshes daily. Weekly waivers
   setting: "Game Time - Tuesday". Injured players can be added straight to IR; the 2 IR
   slots sit outside the 15-man roster -> an empty IR slot is a free stash.
+- Trades (settings read 2026-10-27): **deadline 2026-11-28** (Sat, mid-wk12). Review = League
+  Votes, 2-day reject window -> a trade lands ~2 days after acceptance -> get it accepted by
+  ~11-26. Lopsided offers risk a veto. No trade cap; no draft-pick trades. Not in
+  `config/league.json`, same as waivers.
 - `config/league.json` `max_at_position` K 1 / DST 1 = our draft-time cap, **not** a league
   rule (we carried 2 K). Waiver settings are not in that file — its schema has
   `additionalProperties: false`.
@@ -77,12 +81,14 @@ loss = the season.
 
 `read_yahoo_week.R` <- `league_sim.R` <- `playoff_odds.R`, `trade_finder.R`,
 `predictions.R`. `ceiling_vs_margin.R` = gate test + noise constants.
-- **Gate PASSED** (wks 3-6, n=20 matchups): roster-ceiling diff -> margin r +0.49, p 0.028,
-  slope +1.17, resid sd 30.0. Prior-weeks PPG weaker (r +0.36, p 0.12). Favourite wins only
-  10-12 of 20: typical gaps 5-10 pts vs ~30 pts of margin noise.
+- **Gate PASSED** (wks 3-7, n=25 matchups, 2026-10-27): roster-ceiling diff -> margin r +0.54,
+  p 0.005, slope +1.30, resid sd 28.5 (n=20 read r +0.49, p 0.028). Prior-weeks PPG weaker
+  (r +0.41, p 0.041). Favourite wins 15-17 of 25: typical gaps 5-10 pts vs ~30 pts of margin
+  noise.
 - **Noise constants — every sim number rests on them:** per-team weekly sd(actual − ceiling)
-  **22.0**, mean gap **−3.88**, team-score sd 26.3. `ceiling_vs_margin.R` adds each week
-  once its scores are entered.
+  **21.1**, mean gap **−4.24** (n 50 team-weeks, wks 3-7), team-score sd 25.5 (n 70).
+  `league_sim.R` recomputes them from `ceiling_vs_margin.R` output -> every entered week
+  moves every sim number.
 - Rosters = clean export (`clean_tmpl()`: latest pull with every Game cell unstarted) +
   `TXN` (moves logged after it). Env: `CUR_WEEK`, `BASE` (default `mean`), `GAPMODE`
   (default `uniform`).
@@ -161,27 +167,32 @@ it extends past them (7-pt dog -> 0.944).
 - WR: an underdog team is not a reason to bench, a favourite not a reason to start. Let the
   projection decide.
 - High game total helps RBs (47+ -> 1.061 vs 0.939 at 41-44).
-- **Inside a ~5% projection gap NOTHING arbitrates — start the higher raw Yahoo projection
-  and stop.** Spread tiebreak retired 2026-10-13: 215 discordant pairs, spread pick right
-  48.8%, CI [0.420, 0.557], -0.488 pts/decision. A 0.6-pt edge cannot arbitrate a 9-pt coin
-  flip. Do not revert to usage either.
+- **Inside a ~15% projection gap NOTHING arbitrates — start the higher raw Yahoo projection
+  and stop.** Not a decision -> no kill condition, no retro score. Widened from 5% 2026-10-27
+  (R4, pooled wks 4-7, 10 rosters): higher proj right **52.2%** at 5-15% (n 314, CI [46.7,
+  57.8]) vs **71.0%** above 15% (n 1,385). Spread tiebreak retired 2026-10-13: 215 discordant
+  pairs, spread pick right 48.8%, CI [0.420, 0.557], -0.488 pts/decision. A 0.6-pt edge
+  cannot arbitrate a 9-pt coin flip. Do not revert to usage either.
 - Use the slope to describe an RB's expected week, never to pick between two players.
 - **Do not score "do the multipliers work" in a weekly retro** — signal:noise ~1:10,
   resolving it needs ~1,000 player-weeks.
 - Kill condition: `mult_measure.R` rerun on 2026 data at season end.
 
-### Streaming K and DST. The only near-free weekly lever. ADR 0011.
+### Streaming DST. The only near-free weekly lever. K: hold. ADR 0011.
 
 One roster spot each, both slots forced -> a matchup swap costs only the claim.
 - **DST: rank by opponent implied total** (`total/2 - spread/2`), lowest first — points
   allowed dominate DST scoring (`config/scoring.json` tiers: 0 allowed = 10, 1-6 = 7,
   7-13 = 4, 14-20 = 1, 21-27 = 0). **Validated** 2026-10-06, 32 teams wks 1-4, n 128:
-  r -0.275, p 0.0017, edge **+1.92 pts/wk** over a random DST (`dev/weekly/dst_test.R`). Own
+  r -0.275, p 0.0017, edge **+1.92 pts/wk** over a random DST (`dev/weekly/dst_test.R`).
+  Sizing: **-0.40 DST pts per opponent implied pt** (2-pt gap = 0.8 pts). Own
   implied total irrelevant (p 0.81). Rejected add-ons: game total (p 0.20), bottom-quartile
   kink (p 0.29).
 - Explains only 7.6% of DST variance (edge 0.39 sd) -> it will look wrong in single weeks.
   **Do not kill it on a bad week**; the >3-pt kill bar is retired for DST.
-- **K: rank by own implied total**, highest first. Untested — no league-wide K harness yet.
+- **K: do NOT stream on implied total — hold the kicker.** Tested 2026-10-27, 2026 wks 1-7,
+  n 214 team-weeks (`dev/weekly/k_test.R`): own implied -> K pts r +0.02, p 0.75, CI
+  [-0.11, +0.16]; top-8-implied rule **-0.37 pts/wk** vs all. A K claim buys nothing.
 
 ---
 
@@ -280,8 +291,10 @@ scores in `data/weekly/2026_league_schedule.csv` -> `schedule_check.R` -> the we
 - **`*_actual_*` exports: `-` = did not play -> NA, not 0.** Every player (FA included) is
   in the file; a started inactive player scores 0.
 - **No export has a started/bench flag.** Opponent starters are not recoverable after the
-  fact, only bounded (week 5: 47 of 84 legal lineups lose). Why freezing **both** lineups
-  pre-kickoff is load-bearing.
+  fact, only bounded (week 5: 47 of 84 legal lineups lose) — unless the Yahoo final matches
+  one legal lineup exactly (wk7 Madison: 1 of 520). Why freezing **both** lineups
+  pre-kickoff is load-bearing. **A frozen opponent lineup replayed with actuals is not their
+  score** — wk6 off 4.60, wk7 off 7.80. Quote the Yahoo matchup page.
 - **Rosters come from the six position exports** (`_qb_`, `_rb_`, `_wr_`, `_te_`, `_k_`,
   `_def_`). `*_actual_*` exports carry owners in `Roster Status` -> all ten rosters rebuild
   cleanly. **No `rosterchanges_*` file is a roster snapshot:** `rosterchanges_league_team`
@@ -320,6 +333,14 @@ scores in `data/weekly/2026_league_schedule.csv` -> `schedule_check.R` -> the we
   (2026-10-06: Sutton vs Raymond — the user caught it, not the analysis). Pull
   `load_snap_counts()` before naming any drop. Snaps also catch fresh injuries a base
   projection cannot see (McLaurin snaps 75 -> 58 -> 10).
+- **A target-share dip is weak evidence of a role change. Season-to-date carries 2/3.** WR
+  next-3 share = 0.66 x season-to-date + 0.21 x last game + 0.14 x game before (2024-25 REG,
+  n 1,009). From an 18-26% role, 2 straight games < 15% -> next 3 average 16.0%, 44% stay
+  under (n 41; no dip: 23.3%, 12%). A dip quadruples the risk but most bounce back -> one or
+  two low weeks alone never kill a role read (`dev/weekly/target_dip_test.R`).
+- **A kill window must start after the decision.** A window holding a week already seen when
+  the move is made is pre-loaded (TR2 §6 wks 8-10, trade sent after wk8: a 10% wk8 alone ->
+  P(kill) 49%).
 - **A handoff doc is a prior claim, not a source.** Re-derive from `load_player_stats()`,
   `load_snap_counts()` and the newest `docs/uploads/week_NN_data/` export before acting on
   an add/drop or quoting a number.

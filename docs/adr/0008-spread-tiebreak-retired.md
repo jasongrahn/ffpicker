@@ -1,5 +1,8 @@
 # Inside a ~5% projection gap nothing arbitrates — spread tiebreak retired
 
+**Updated 2026-10-27: band widened 5% -> 15%. Last section.** 10-13 evidence below = history,
+unchanged.
+
 2026-10-07: the RB spread multiplier (ADR 0007) was adopted as the tiebreak when two players
 sit within ~5% of each other — on reasoning, never on a decision test. Then it got one.
 
@@ -52,3 +55,34 @@ the spread tiebreak. Gordon 14.80, Boston 12.10, **-2.70**. The user caught the 
 Gordon/Tate framing on the grounds he faced a top defence, which triggered the slope rebuild —
 good instinct, and the slope is real; it just cannot pick between two players. One
 player-week is not what killed the rule. **The 215-pair test is.**
+
+## 2026-10-27 — band widened 5% -> 15%
+
+Different question from the spread test. That asked: does anything *beat* raw order inside
+5%? This asks: is raw order *itself* informative between 5% and 15%? Pre-registered wk6 retro
+§R4 (2026-10-20), carried in wk7 log §3.1: **5-15% band under 55% at n >= 200 decided ->
+dead band widens to 15%.**
+
+Harness `dev/weekly/leaguewide_retro.py --pool 4:2026-10-01:2026-10-05 5:2026-10-07:2026-10-13
+6:2026-10-14:2026-10-20 7:2026-10-21:2026-10-27`. Within-roster RB/WR/TE pairs, all 10
+rosters, wks 4-7: does the higher Yahoo projection outscore the lower?
+
+| gap band | pairs | decided | higher proj right | 95% CI | mean pts |
+|---|---|---|---|---|---|
+| ALL | 1,885 | 1,835 | 1,223 (66.6%) | [64.5, 68.8] | +4.29 |
+| <= 5% | 137 | 136 | 76 (55.9%) | [47.5, 64.2] | +1.55 |
+| **5-15%** | 319 | **314** | 164 (**52.2%**) | **[46.7, 57.8]** | +0.88 |
+| > 15% | 1,429 | 1,385 | 983 (71.0%) | [68.6, 73.4] | +5.33 |
+
+**Fires as registered: 52.2% at n 314.** Wk6 alone 46.6% (n 58), wk7 alone 51.5% (n 68).
+
+CI top 57.8 still reaches past the 55% bar — rule written on the point estimate, scored as
+written. Band not proven worthless, only not proven useful. Mean edge +0.88 pts/pair, sign
+still positive -> **pick unchanged**: higher raw projection starts. What changes: pairs under
+15% stop being decisions. No kill condition, no retro verdict, no tiebreak hunt (spread,
+usage, hedge, matchup).
+
+Cliff at 15%: 52-56% below, 71% above. Same arithmetic as above — a 5-15% gap is 0.5-1.5 pts
+on a 10-pt player against ~8-9 pts of pair noise.
+
+Revisit: pooled rerun at season end. No mid-season trigger.

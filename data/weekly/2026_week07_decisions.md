@@ -308,3 +308,114 @@ Perfect model expects **3.0 of 5** favourites right. n = 5 -> log, no verdict.
 W1b, D1, M1a, result, regret — prints WAITING per missing input). R4 pooled:
 `python3 dev/weekly/leaguewide_retro.py --pool 4:2026-10-01:2026-10-05 5:2026-10-07:2026-10-13
 6:2026-10-14:2026-10-20 7:2026-10-21:<wk7 actual date>` — prints the pre-registered verdict.
+
+---
+
+### R1. Result. **WON 99.30 - 70.92, +28.38.** 4-3, 5th. Every pre-registered test scored.
+
+Appended Tue 2026-10-27. Sources: `docs/uploads/week_7_data/*_actual_2026-10-27.csv`;
+nflreadr re-pulled 10-27 13:12 (wks 1-7 final, snaps in); Yahoo Matchups + Standings
+screenshot 10-27 (standings update 02:46am). `schedule_check.R` passes: mirror + wk1-7
+Standings to the cent (snapshot moved wk6 -> wk7 this session).
+
+```
+QB   Stafford     proj 19.16 -> act 18.50   -0.66
+RB   Henry             17.46 ->      5.40  -12.06
+RB   J.Williams        14.99 ->     21.50   +6.51
+WR   Boston             9.37 ->      4.20   -5.17
+WR   Tate               9.13 ->      7.40   -1.73
+TE   Hockenson          8.09 ->     11.50   +3.41
+FLX  Gordon II         11.15 ->     16.80   +5.65
+K    Bates              8.61 ->      9.00   +0.39
+DEF  Browns             7.31 ->      5.00   -2.31
+                 proj 105.27 -> act 99.30  -5.97
+```
+
+Bench: Kyler 13.90, Odunze 8.90, Mahomes 7.00, Chiefs DEF 3.00, Higbee 2.40, Strange bye.
+Export-started 99.30 = Yahoo to the cent.
+
+**Opponent: 70.92 observed — not the 78.72 replay.** `2026_week07_opponent.csv` = their
+projection-optimal (100.60): our guess, not their lineup. Yahoo shows their started lineup at
+proj 98.60. Of 520 legal lineups from their 15, **exactly 1 sums to 70.92**: Barkley (PHI RB,
+`Q` Wed + Tue, 14.10) and Egbuka (TB WR, 0.00) benched; Addison (MIN WR, 3.30) + Freiermuth
+(PIT TE, 3.00) started. -7.80 vs replay. That lineup reads 93.77 on Wed projections, not
+98.60 -> their projections moved after our pull; match strong, unconfirmed. Same trap as wk6
+R8 (replay 106.54 vs real 111.14) -> CLAUDE.md § Yahoo exports now says quote the matchup
+page. Win never at risk: their hindsight max 82.18 < 99.30.
+
+### R2. Conditions. **Nothing fires.** Decision wrong: none. Outcome bad: W1a mildly; Henry -12.06, no decision attached.
+
+| # | condition | result | verdict |
+|---|---|---|---|
+| K1 | Bates over Butker | 9.00 vs 5.00 | log only. Concordant pair -> K rule still untested, carry forward |
+| T1 | Hockenson inactive, no swap | played, **76%** snaps, 11.50 | **pass**. Option not needed |
+| W1a | Odunze − Tate > +3.0 | **+1.50** (8.90 vs 7.40) | **pass**. Outcome mildly against, under bar |
+| W1b | TEN-CLE < 30 AND trio < 15.0 | total **51**, trio **16.60** | **pass**. Neither leg |
+| D1 | Browns DEF | 5.00; Chiefs alt 3.00 | log only. TEN scored 24 vs implied 18.00 |
+| M0 | hold, no TE add | ours 11.50; FA Waller 11.50, H. Henry 10.60, Mayer 4.70 | **y**. No FA TE beat ours, no hole surfaced |
+| M1a | Kyler snap% < 80 | **100%** | **pass**. Window wks 7-11 runs; M1b scored wk11 |
+
+**M1 drop verified = Butker**: owner 10-21 `JGrahnasaurs` -> 10-27 `W (Oct 28)`; Kyler `FA`
+-> `JGrahnasaurs`. `TXN` in `league_sim.R` correct.
+
+### R3. Regret **4.70** — all projection error, 0 deviation.
+
+Whole 4.70 = Odunze on bench over Boston (6.8% gap, inside the new 15% band, R5). Cumulative
+deviation regret **3.50 over 7 weeks**. League-wide real-regret table:
+`data/weekly/README.md` § Week 7.
+
+### R4. L1, the sim. **L1a PASS, stronger.** L1b 5 of 5.
+
+| gate | n | r | p | slope | resid sd | fav wins |
+|---|---|---|---|---|---|---|
+| wks 3-6 (10-21) | 20 | +0.49 | 0.028 | +1.17 | 30.0 | 10-12 |
+| **wks 3-7** | **25** | **+0.54** | **0.005** | **+1.30** | **28.5** | 15-17 |
+
+Kill bar r < 0.20 or slope <= 0 -> far clear. **Trade valuations in
+`2026_week08_trade_ideas.md` stand; no re-scan.**
+
+Noise constants moved: sd(actual − ceiling) 22.0 -> **21.08**, mean gap −3.88 -> **−4.24**
+(n 40 -> 50), team-score sd 26.3 -> **25.47** (n 70). `league_sim.R` recomputes live -> P(top
+4) moves on next run.
+
+L1b: favourites **5 of 5** (model expected 3.0), Brier **0.166** vs 0.250 coin flip, margin
+MAE 20.1. n 5 -> log only.
+
+**P(top 4) not rerun.** `playoff_odds.R` stops: "week 7 already scored -- pull the week 8
+export before simulating". Handoff #47 said only the trade re-run needed wk8 exports — wrong.
+Rerun after the wk8 pull.
+
+### R5. §3.1 pair band, pooled wks 4-7. **FIRES -> dead band 5% -> 15%.**
+
+| gap band | decided | higher proj right | 95% CI | mean pts |
+|---|---|---|---|---|
+| ALL | 1,835 | 66.6% | [64.5, 68.8] | +4.29 |
+| <= 5% | 136 | 55.9% | [47.5, 64.2] | +1.55 |
+| **5-15%** | **314** | **52.2%** | [46.7, 57.8] | +0.88 |
+| > 15% | 1,385 | 71.0% | [68.6, 73.4] | +5.33 |
+
+Bar: < 55% at n >= 200 -> fires as registered. CI top 57.8 crosses the bar — registered on the
+point estimate, scored as written. Pick unchanged (higher raw projection, +0.88/pair). Pairs
+under 15% stop being decisions. W1 (4.6%), T1 (2.7%) and R3's regret pair (6.8%) all inside.
+Applied: CLAUDE.md § Game script; evidence ADR 0008 § 2026-10-27.
+
+### R6. §3.2 Yahoo projection sign. **Wk6 uniform sign broke.**
+
+| pos | n | MAE | bias wk7 | bias wk6 |
+|---|---|---|---|---|
+| QB | 18 | 5.94 | −0.84 | −3.47 |
+| RB | 39 | 6.21 | **+0.97** | −2.22 |
+| WR | 41 | 5.73 | −2.32 | −1.32 |
+| TE | 18 | 4.70 | −1.39 | −1.56 |
+| K | 10 | 2.81 | −0.57 | −0.95 |
+| DEF | 13 | 3.67 | −1.81 | −0.35 |
+| **ALL** | **139** | **5.36** | **−0.91** | **−1.79** |
+
+bias = act − proj. RB flipped -> not uniform. Negative overall both weeks. Start/sit
+unaffected (relative order); absolute level already in the sim's mean gap −4.24. Log only.
+
+### R7. §3.3 stream detector. Not testable — Sunday pre-kickoff pull missed, 3rd week running.
+
+Partial substitute, new: real finals now exist for all 10 teams -> actual > own roster's
+hindsight max = stream proven. None this week (README § Week 7). Blind to a stream that stays
+under the ceiling.

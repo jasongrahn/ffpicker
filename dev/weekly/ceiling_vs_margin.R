@@ -100,7 +100,8 @@ cal <- sch |> filter(week %in% SC) |> select(week, team, pf) |>
   mutate(gap = pf - ceiling)
 cat(sprintf("mean actual %.2f | mean ceiling %.2f | mean gap %+.2f | sd gap %.2f | n %d\n",
             mean(cal$pf), mean(cal$ceiling), mean(cal$gap), sd(cal$gap), nrow(cal)))
-cat("weekly team-score sd (all 60 team-weeks, wks 1-6):", round(sd(sch$pf, na.rm = TRUE), 2), "\n")
+cat(sprintf("weekly team-score sd (all %d team-weeks, wks 1-%d): %.2f\n",
+            sum(!is.na(sch$pf)), max(sch$week[!is.na(sch$pf)]), sd(sch$pf, na.rm = TRUE)))
 
 cat("\n=== matchups, clean variant ===\n")
 c1 <- ceil |> filter(variant == "late_roster_clean_proj")

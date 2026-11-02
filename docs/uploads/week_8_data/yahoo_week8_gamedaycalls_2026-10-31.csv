@@ -1,0 +1,604 @@
+Player,Player ID,Team,Positions,Game Status,Injury,Updated,New Player Note,Game
+Gee Scott,42290,NE,WR,Q,Undisclosed,Oct 30 8:06 PM,N,Sun 4:25 pm @ Mia
+Ty Chandler,34125,NO,RB,IR,Knee,Oct 30 8:06 PM,N,
+Brittain Brown,34206,Chi,RB,IR,Undisclosed,Oct 30 8:06 PM,N,Mon 8:15 pm @ Sea
+Skylar Thompson,34203,Bal,QB,IR,Undisclosed,Oct 30 8:06 PM,N,Sun 1:00 pm @ Buf
+Chris Oladokun,34197,KC,QB,Q,Undisclosed,Oct 30 8:06 PM,N,Sun 4:25 pm @ Den
+Michael Woods II,34158,Den,WR,Q,Leg,Oct 30 8:06 PM,N,Sun 4:25 pm vs KC
+Tyler Badie,34152,Den,RB,IR,Thumb,Oct 30 8:06 PM,N,Sun 4:25 pm vs KC
+Drew Ogletree,34148,Ind,TE,Q,Knee,Oct 30 8:06 PM,Y,Sun 1:00 pm @ Jax
+Aaron Anderson,43052,Cle,WR,Q,Undisclosed,Oct 30 8:06 PM,N,Sun 1:00 pm @ Pit
+DJ Rogers,43055,Dal,TE,Q,Knee,Oct 30 8:06 PM,N,Sun 1:00 pm vs Ari
+Josh Kattus,43058,Cin,TE,O,Undisclosed,Oct 30 8:06 PM,N,Sun 1:00 pm vs Ten
+Dominic Richardson,43034,NYJ,RB,Q,Undisclosed,Oct 30 8:06 PM,N,Sun 1:00 pm vs LV
+Cole Turner,34105,Mia,TE,IR,Undisclosed,Oct 30 8:06 PM,N,Sun 4:25 pm vs NE
+Calvin Austin III,34094,NYG,WR,IR,Knee,Oct 30 8:06 PM,N,
+Romeo Doubs,34088,NE,WR,IR,Shoulder,Oct 30 8:06 PM,N,Sun 4:25 pm @ Mia
+Dameon Pierce,34063,Phi,RB,IR,Undisclosed,Oct 30 8:06 PM,N,Sun 8:20 pm @ Was
+Danny Gray,34061,Phi,WR,Q,Undisclosed,Oct 30 8:06 PM,N,Sun 8:20 pm @ Was
+Brian Robinson Jr.,34054,Atl,RB,O,Hamstring,Oct 30 8:06 PM,Y,Sun 1:00 pm @ TB
+RJ Maryland,43087,GB,TE,Q,Hamstring,Oct 30 8:06 PM,N,Final W 27-19 vs Car
+Velus Jones Jr.,34027,Sea,"WR,RB",Q,Hamstring,Oct 30 8:06 PM,N,Mon 8:15 pm vs Chi
+Skyy Moore,34009,GB,WR,IR,Ankle,Oct 30 8:06 PM,N,Final W 27-19 vs Car
+Isiah Pacheco,34207,Det,RB,IR,Back,Oct 30 8:06 PM,Y,Sun 1:00 pm vs Min
+Ronnie Rivers,34310,LAR,RB,IR,Calf,Oct 30 8:06 PM,N,Sun 4:05 pm vs LAC
+George Pickens,34007,Dal,WR,Q,Shoulder,Oct 30 8:06 PM,Y,Sun 1:00 pm vs Ari
+Luke Musgrave,40074,GB,TE,PUP-R,Neck,Oct 30 8:06 PM,N,Final W 27-19 vs Car
+Evan Svoboda,42927,LAC,TE,O,Undisclosed,Oct 30 8:06 PM,N,Sun 4:05 pm @ LAR
+Luke Wysong,42938,Min,WR,Q,Undisclosed,Oct 30 8:06 PM,N,Sun 1:00 pm @ Det
+CJ Donaldson,42940,NO,RB,Q,Shoulder,Oct 30 8:06 PM,N,
+Tyler Scott,40141,LV,WR,Q,Undisclosed,Oct 30 8:06 PM,N,Sun 1:00 pm @ NYJ
+Tyjae Spears,40119,Ten,RB,O,Knee,Oct 30 8:06 PM,Y,Sun 1:00 pm @ Cin
+De'Von Achane,40118,Mia,RB,IR,Knee - ACL,Oct 30 8:06 PM,N,Sun 4:25 pm vs NE
+Alex Bullock,42957,Jax,WR,RET,Personal,Oct 30 8:06 PM,N,Sun 1:00 pm vs Ind
+Tank Bigsby,40095,Phi,RB,IR,Abdomen,Oct 30 8:06 PM,N,Sun 8:20 pm @ Was
+Zach Charbonnet,40075,Sea,RB,Q,Knee - ACL,Oct 30 8:06 PM,Y,Mon 8:15 pm vs Chi
+Jayden Reed,40063,GB,WR,IR,Neck,Oct 30 8:06 PM,N,Final W 27-19 vs Car
+Hayden Large,43027,Chi,TE,IR,Undisclosed,Oct 30 8:06 PM,N,Mon 8:15 pm @ Sea
+Luke Schoonmaker,40061,Dal,TE,Q,Groin,Oct 30 8:06 PM,N,Sun 1:00 pm vs Ari
+Dalton Kincaid,40048,Buf,TE,Q,Chest,Oct 30 8:06 PM,Y,Sun 1:00 pm vs Bal
+KaVontae Turpin,34709,Dal,WR,O,Ribs,Oct 30 8:06 PM,Y,Sun 1:00 pm vs Ari
+Rashid Shaheed,34659,Sea,WR,Q,Knee,Oct 30 8:06 PM,Y,Mon 8:15 pm vs Chi
+Raheem Blackshear,34617,Det,RB,Q,Undisclosed,Oct 30 8:06 PM,N,Sun 1:00 pm vs Min
+Malik Davis,34610,Dal,RB,IR,Hip,Oct 30 8:06 PM,N,Sun 1:00 pm vs Ari
+Dennis Houston,34592,TB,WR,Q,Groin,Oct 30 8:06 PM,N,Sun 1:00 pm vs Atl
+Britain Covey,34378,Phi,WR,O,Knee,Oct 30 8:06 PM,Y,Sun 8:20 pm @ Was
+Jake Tonges,34374,SF,TE,IR,Knee - MCL,Oct 30 8:06 PM,N,
+Alec Pierce,34008,Ind,WR,IR,Heel,Oct 30 8:06 PM,N,Sun 1:00 pm @ Jax
+Tyquan Thornton,34005,KC,WR,IR,Ankle,Oct 30 8:06 PM,N,Sun 4:25 pm @ Den
+Andrei Iosivas,40211,Cin,WR,IR,Thumb,Oct 30 8:06 PM,N,Sun 1:00 pm vs Ten
+Harrison Bryant,32785,Hou,TE,Q,Undisclosed,Oct 30 8:06 PM,N,
+Sean McKeon,33101,Ind,TE,Q,Undisclosed,Oct 30 8:06 PM,N,Sun 1:00 pm @ Jax
+Dan Chisena,33023,Car,WR,Q,Undisclosed,Oct 30 8:06 PM,N,Final L 19-27 @ GB
+Andre Baccellia,32943,Ari,WR,Q,Neck,Oct 30 8:06 PM,N,Sun 1:00 pm @ Dal
+Treyvhon Saunders,43196,Hou,WR,Q,Undisclosed,Oct 30 8:06 PM,N,
+Noah Whittington,43197,Hou,RB,O,Quadriceps,Oct 30 8:06 PM,N,
+Colby Parkinson,32803,LAR,TE,Q,Ribs,Oct 30 8:06 PM,Y,Sun 4:05 pm vs LAC
+Gabe Davis,32798,Buf,WR,Q,Knee - ACL,Oct 30 8:06 PM,N,Sun 1:00 pm vs Bal
+Jameson Geers,43212,Ari,TE,Q,Undisclosed,Oct 30 8:06 PM,N,Sun 1:00 pm @ Dal
+Chip Trayanum,43213,NYJ,RB,IR,Neck,Oct 30 8:06 PM,N,Sun 1:00 pm vs LV
+Patrick Taylor Jr.,33235,SF,RB,Q,Undisclosed,Oct 30 8:06 PM,N,
+Antonio Gibson,32736,NE,RB,Q,Knee - ACL,Oct 30 8:06 PM,N,Sun 4:25 pm @ Mia
+AJ Dillon,32732,Car,RB,NA,Coach's Decision,Oct 30 8:06 PM,N,Final L 19-27 @ GB
+Jalen Hurts,32723,Phi,QB,IR,Calf,Oct 30 8:06 PM,N,Sun 8:20 pm @ Was
+Michael Briscoe,43242,Min,WR,O,Undisclosed,Oct 30 8:06 PM,N,Sun 1:00 pm @ Det
+Cole Kmet,32713,Chi,TE,IR,Knee,Oct 30 8:06 PM,N,Mon 8:15 pm @ Sea
+Corey Rucker,43248,LV,WR,Q,Undisclosed,Oct 30 8:06 PM,N,Sun 1:00 pm @ NYJ
+Michael Pittman Jr.,32704,Pit,WR,IR,Foot,Oct 30 8:06 PM,N,Sun 1:00 pm vs Cle
+Brandon Aiyuk,32695,SF,WR,DNR,Personal,Oct 30 8:06 PM,N,
+Gunner Olszewski,32612,NYG,WR,IR,Achilles,Oct 30 8:06 PM,N,
+Desmond Reid,43185,Buf,RB,Q,Undisclosed,Oct 30 8:06 PM,N,Sun 1:00 pm vs Bal
+Reggie Gilliam,33357,NE,RB,IR,Ankle,Oct 30 8:06 PM,N,Sun 4:25 pm @ Mia
+Breece Hall,33991,NYJ,RB,Q,Quadriceps,Oct 30 8:06 PM,Y,Sun 1:00 pm vs LV
+Ben Skowronek,33637,Pit,WR,Q,Calf,Oct 30 8:06 PM,Y,Sun 1:00 pm vs Cle
+Christian Watson,33989,GB,WR,Q,Ribs,Oct 30 8:06 PM,N,Final W 27-19 vs Car
+Treylon Burks,33973,Was,WR,Q,Foot,Oct 30 8:06 PM,Y,Sun 8:20 pm vs Phi
+Nikola Kalinic,33950,Chi,TE,IR,Knee,Oct 30 8:06 PM,N,Mon 8:15 pm @ Sea
+EJ Smith,43115,KC,RB,Q,Undisclosed,Oct 30 8:06 PM,N,Sun 4:25 pm @ Den
+DJ Turner,33813,LV,WR,Q,Undisclosed,Oct 30 8:06 PM,N,Sun 1:00 pm @ NYJ
+Shane Zylstra,33803,NE,TE,Q,Undisclosed,Oct 30 8:06 PM,N,Sun 4:25 pm @ Mia
+J. Michael Gyllenborg,43116,KC,TE,IR,Knee,Oct 30 8:06 PM,N,Sun 4:25 pm @ Den
+Chase Roberts,43126,LV,WR,Q,Undisclosed,Oct 30 8:06 PM,N,Sun 1:00 pm @ NYJ
+Jermar Jefferson,33644,Min,RB,Q,Undisclosed,Oct 30 8:06 PM,N,Sun 1:00 pm @ Det
+Kenny Gainwell,33538,TB,RB,Q,Hip,Oct 30 8:06 PM,Y,Sun 1:00 pm vs Atl
+Trey Lance,33391,LAC,QB,IR,Groin,Oct 30 8:06 PM,N,Sun 4:05 pm @ LAR
+John Bates,33512,Was,TE,Q,Shoulder,Oct 30 8:06 PM,Y,Sun 8:20 pm vs Phi
+Trey Sermon,33476,Atl,RB,IR,Undisclosed,Oct 30 8:06 PM,N,Sun 1:00 pm @ TB
+Hunter Long,33469,Ari,TE,IR,Knee,Oct 30 8:06 PM,N,Sun 1:00 pm @ Dal
+DT Sheffield,43158,NYJ,WR,Q,Undisclosed,Oct 30 8:06 PM,N,Sun 1:00 pm vs LV
+Chase Curtis,43164,NYJ,TE,Q,Knee,Oct 30 8:06 PM,N,Sun 1:00 pm vs LV
+Travis Etienne Jr.,33413,NO,RB,IR,Hamstring,Oct 30 8:06 PM,N,
+Caullin Lacy,43165,NYJ,WR,Q,Undisclosed,Oct 30 8:06 PM,N,Sun 1:00 pm vs LV
+DeVonta Smith,33398,Phi,WR,O,Hamstring,Oct 30 8:06 PM,Y,Sun 8:20 pm @ Was
+Jaylen Waddle,33394,Den,WR,Q,Chest,Oct 30 8:06 PM,Y,Sun 4:25 pm vs KC
+Dontayvion Wicks,40201,Phi,WR,O,Ankle,Oct 30 8:06 PM,Y,Sun 8:20 pm @ Was
+Sincere Brown,42925,LAC,WR,Q,Undisclosed,Oct 30 8:06 PM,N,Sun 4:05 pm @ LAR
+Tyree Jackson,32415,Was,TE,Q,Undisclosed,Oct 30 8:06 PM,N,Sun 8:20 pm vs Phi
+Pat Bryant,41860,Den,WR,IR,Ankle,Oct 30 8:06 PM,N,Sun 4:25 pm vs KC
+Robbie Ouzts,41961,Sea,"RB,TE",IR,Neck,Oct 30 8:06 PM,N,Mon 8:15 pm vs Chi
+Cam Skattebo,41922,NYG,RB,Q,Hamstring,Oct 30 8:06 PM,N,
+Jaylin Lane,41920,Was,WR,IR,Ankle,Oct 30 8:06 PM,N,Sun 8:20 pm vs Phi
+Arian Smith,41896,NYJ,WR,IR,Knee - ACL,Oct 30 8:06 PM,N,Sun 1:00 pm vs LV
+Jadarian Price,42654,Sea,RB,IR-R,Chest,Oct 30 8:06 PM,Y,Mon 8:15 pm vs Chi
+Jaylin Noel,41885,Hou,WR,IR,Toe,Oct 30 8:06 PM,N,
+Kaleb Johnson,41881,GB,RB,NA,Coach's Decision,Oct 30 8:06 PM,N,Final W 27-19 vs Car
+De'Zhaun Stribling,42655,SF,WR,IR,Ankle,Oct 30 8:06 PM,N,
+RJ Harvey,41845,Den,RB,O,Knee,Oct 30 8:06 PM,Y,Sun 4:25 pm vs KC
+Carnell Tate,42626,Ten,WR,O,Shoulder,Oct 30 8:06 PM,Y,Sun 1:00 pm @ Cin
+Jack Bech,41843,LV,WR,IR-R,Forearm,Oct 30 8:06 PM,Y,Sun 1:00 pm @ NYJ
+Elijah Arroyo,41835,Sea,TE,IR,Shoulder,Oct 30 8:06 PM,N,Mon 8:15 pm vs Chi
+Terrance Ferguson,41831,LAR,TE,IR,Ankle,Oct 30 8:06 PM,N,Sun 4:05 pm vs LAC
+TreVeyon Henderson,41823,NE,RB,Q,Illness,Oct 30 8:06 PM,Y,Sun 4:25 pm @ Mia
+Jayden Higgins,41819,Hou,WR,IR,Knee - ACL,Oct 30 8:06 PM,N,
+Jaxson Dart,41810,NYG,QB,IR,Knee - Meniscus,Oct 30 8:06 PM,N,
+Emeka Egbuka,41804,TB,WR,O,Foot,Oct 30 8:06 PM,Y,Sun 1:00 pm vs Atl
+Colston Loveland,41795,Chi,TE,Q,Neck,Oct 30 8:06 PM,Y,Mon 8:15 pm @ Sea
+John Jiles,41687,NE,WR,Q,Undisclosed,Oct 30 8:06 PM,N,Sun 4:25 pm @ Mia
+Jordyn Tyson,42630,NO,WR,IR-R,Hamstring,Oct 30 8:06 PM,N,
+Graham Mertz,41975,Hou,QB,IR,Knee - ACL,Oct 30 8:06 PM,N,
+British Brooks,41480,Hou,RB,IR,Hamstring,Oct 30 8:06 PM,N,
+Ja'Corey Brooks,42482,Was,WR,Q,Undisclosed,Oct 30 8:06 PM,N,Sun 8:20 pm vs Phi
+Kye Robichaux,42245,Det,RB,Q,Foot,Oct 30 8:06 PM,N,Sun 1:00 pm vs Min
+Mario Williams,42326,LAR,WR,Q,Undisclosed,Oct 30 8:06 PM,N,Sun 4:05 pm vs LAC
+Tyrone Broden,42351,Sea,WR,Q,Undisclosed,Oct 30 8:06 PM,N,Mon 8:15 pm vs Chi
+Jacardia Wright,42357,Sea,RB,O,Foot,Oct 30 8:06 PM,N,Mon 8:15 pm vs Chi
+Da'Quan Felton,42201,NYJ,WR,Q,Undisclosed,Oct 30 8:06 PM,N,Sun 1:00 pm vs LV
+Beaux Collins,42194,Atl,WR,IR-R,Hip,Oct 30 8:06 PM,Y,Sun 1:00 pm @ TB
+Carter Runyon,42433,LV,TE,IR-R,Foot,Oct 30 8:06 PM,Y,Sun 1:00 pm @ NYJ
+Jeremiah Webb,42437,NE,WR,Q,Arm,Oct 30 8:06 PM,N,Sun 4:25 pm @ Mia
+Raheim Sanders,42139,Cle,RB,IR,Hip,Oct 30 8:06 PM,N,Sun 1:00 pm @ Pit
+Jimmy Holiday,42490,KC,WR,IR,Undisclosed,Oct 30 8:06 PM,N,Sun 4:25 pm @ Den
+Damien Alford,42622,NO,WR,Q,Undisclosed,Oct 30 8:06 PM,N,
+Max Hurleman,42516,Pit,"WR,RB",O,Undisclosed,Oct 30 8:06 PM,N,Sun 1:00 pm vs Cle
+Dalevon Campbell,42519,LAC,WR,Q,Leg,Oct 30 8:06 PM,N,Sun 4:05 pm @ LAR
+Luke Lachey,42041,Hou,TE,Q,Foot,Oct 30 8:06 PM,N,
+Caleb Lohner,42027,Den,TE,IR-R,Lower Body,Oct 30 8:06 PM,N,Sun 4:25 pm vs KC
+Kyle Monangai,42025,Chi,RB,Q,Thumb,Oct 30 8:06 PM,Y,Mon 8:15 pm @ Sea
+Brashard Smith,42012,KC,RB,IR,Hamstring,Oct 30 8:06 PM,N,Sun 4:25 pm @ Den
+J. Croskey-Merritt,42010,Was,RB,IR,Groin,Oct 30 8:06 PM,N,Sun 8:20 pm vs Phi
+Moliki Matavao,42006,NO,TE,IR,Knee,Oct 30 8:06 PM,N,
+Carson Towt,42620,Ind,TE,IR,Undisclosed,Oct 30 8:06 PM,N,Sun 1:00 pm @ Jax
+Cole Burgess,41502,Pit,WR,IR,Undisclosed,Oct 30 8:06 PM,N,Sun 1:00 pm vs Cle
+Carson Steele,41464,Phi,RB,Q,Shoulder,Oct 30 8:06 PM,N,Sun 8:20 pm @ Was
+Kejon Owens,42912,Min,RB,Q,Illness,Oct 30 8:06 PM,N,Sun 1:00 pm @ Det
+Tyrell Shavers,40630,Buf,WR,PUP-R,Knee - ACL,Oct 30 8:06 PM,N,Sun 1:00 pm vs Bal
+Jalen McMillan,40954,TB,WR,IR,Knee - PCL,Oct 30 8:06 PM,N,Sun 1:00 pm vs Atl
+Roman Wilson,40952,Pit,WR,IR,Finger,Oct 30 8:06 PM,N,Sun 1:00 pm vs Cle
+Jonathon Brooks,40926,Car,RB,IR,Abdomen,Oct 30 8:06 PM,N,Final L 19-27 @ GB
+Ja'Lynn Polk,40914,NO,WR,RET,Personal,Oct 30 8:06 PM,N,
+Ricky Pearsall,40892,SF,WR,IR,Knee - PCL,Oct 30 8:06 PM,N,
+Xavier Legette,40890,Car,WR,IR,Knee,Oct 30 8:06 PM,N,Final L 19-27 @ GB
+Princeton Fant,40778,Dal,TE,IR,Knee - ACL + MCL,Oct 30 8:06 PM,N,Sun 1:00 pm vs Ari
+Jaren Kanak,42847,Ten,TE,IR,Pectoral,Oct 30 8:06 PM,N,Sun 1:00 pm @ Cin
+Julian Hill,40629,NE,TE,IR,Knee,Oct 30 8:06 PM,N,Sun 4:25 pm @ Mia
+Tip Reiman,40959,Ari,TE,PUP-R,Ankle,Oct 30 8:06 PM,N,Sun 1:00 pm @ Dal
+Chris Brooks,40625,GB,RB,IR,Ankle,Oct 30 8:06 PM,N,Final W 27-19 vs Car
+Bryce Ford-Wheaton,40529,NYG,WR,Q,Achilles,Oct 30 8:06 PM,N,
+Jeff Caldwell,42880,KC,WR,IR,Knee,Oct 30 8:06 PM,N,Sun 4:25 pm @ Den
+Jake Bobo,40452,Sea,WR,IR,Knee,Oct 30 8:06 PM,N,Mon 8:15 pm vs Chi
+Le'Veon Moss,42890,Mia,RB,RET,Personal,Oct 30 8:06 PM,N,Sun 4:25 pm vs NE
+Matthew Caldwell,42901,LAR,QB,IR,Undisclosed,Oct 30 8:06 PM,N,Sun 4:05 pm vs LAC
+Blake Grupe,40296,LAR,K,IR,Knee - ACL,Oct 30 8:06 PM,N,Sun 4:05 pm vs LAC
+Haynes King,42904,Car,QB,NA,Coach's Decision,Oct 30 8:06 PM,N,Final L 19-27 @ GB
+Jalen Brooks,40257,Ari,WR,IR,Wrist,Oct 30 8:06 PM,N,Sun 1:00 pm @ Dal
+Trey Benson,40958,Ari,RB,IR,Knee,Oct 30 8:06 PM,N,Sun 1:00 pm @ Dal
+Erick All Jr.,40989,Cin,TE,IR,Knee - ACL,Oct 30 8:06 PM,N,Sun 1:00 pm vs Ten
+Chris Brazzell II,42705,Car,WR,IR,Knee,Oct 30 8:06 PM,N,Final L 19-27 @ GB
+Johnny Wilson,41089,Phi,WR,IR,Knee,Oct 30 8:06 PM,N,Sun 8:20 pm @ Was
+Thomas Yassmin,41397,GB,TE,IR,Undisclosed,Oct 30 8:06 PM,N,Final W 27-19 vs Car
+McCallan Castles,41373,GB,TE,Q,Undisclosed,Oct 30 8:06 PM,N,Final W 27-19 vs Car
+Brenen Thompson,42727,LAC,WR,O,Quadriceps,Oct 30 8:06 PM,Y,Sun 4:05 pm @ LAR
+Chris Collier,41261,LV,RB,IR,Undisclosed,Oct 30 8:06 PM,N,Sun 1:00 pm @ NYJ
+Xavier Weaver,41202,Ari,WR,Q,Hamstring,Oct 30 8:06 PM,N,Sun 1:00 pm @ Dal
+Mason Tipton,41188,NO,WR,PUP-R,Leg,Oct 30 8:06 PM,N,
+Carter Bradley,41133,Jax,QB,Q,Thumb,Oct 30 8:06 PM,N,Sun 1:00 pm vs Ind
+Joe Royer,42772,Cle,TE,NFI-R,Personal,Oct 30 8:06 PM,N,Sun 1:00 pm @ Pit
+Adam Randall,42780,Bal,RB,IR-R,Neck,Oct 30 8:06 PM,Y,Sun 1:00 pm @ Buf
+Jordan Whittington,41083,LAR,WR,Q,Back,Oct 30 8:06 PM,Y,Sun 4:05 pm vs LAC
+Ja'Tavion Sanders,40995,Car,TE,NA,Coach's Decision,Oct 30 8:06 PM,N,Final L 19-27 @ GB
+Tanner McLachlan,41066,SF,TE,Q,Undisclosed,Oct 30 8:06 PM,N,
+Jawhar Jordan,41064,Hou,RB,O,Quadriceps,Oct 30 8:06 PM,N,
+Kendrick Law,42798,Det,WR,IR,Knee - ACL,Oct 30 8:06 PM,N,Sun 1:00 pm vs Min
+Tyrone Tracy Jr.,41048,NYG,RB,IR,Hamstring,Oct 30 8:06 PM,N,
+Anthony Gould,41046,Ind,WR,O,Concussion,Oct 30 8:06 PM,Y,Sun 1:00 pm @ Jax
+Bub Means,41045,Cle,WR,O,Knee,Oct 30 8:06 PM,N,Sun 1:00 pm @ Pit
+Theo Johnson,41003,NYG,TE,Q,Neck,Oct 30 8:06 PM,N,
+Will Shipley,41002,Phi,RB,IR,Foot,Oct 30 8:06 PM,N,Sun 8:20 pm @ Was
+Isaac Guerendo,40998,SF,RB,PUP-R,Pectoral,Oct 30 8:06 PM,N,
+Tom Kennedy,32561,Det,WR,IR,Knee - MCL,Oct 30 8:06 PM,N,Sun 1:00 pm vs Min
+Jalen Virgil,34579,Ari,WR,Q,Undisclosed,Oct 30 8:06 PM,N,Sun 1:00 pm @ Dal
+Alec Ingold,32344,LAC,RB,IR,Shoulder,Oct 30 8:06 PM,N,Sun 4:05 pm @ LAR
+Durham Smythe,31093,Bal,TE,IR,Achilles,Oct 30 8:06 PM,N,Sun 1:00 pm @ Buf
+James Conner,30218,Ari,RB,IR-R,Foot,Oct 30 8:06 PM,N,Sun 1:00 pm @ Dal
+Mack Hollins,30231,NE,WR,IR,Calf,Oct 30 8:06 PM,N,Sun 4:25 pm @ Mia
+Terry McLaurin,31908,Was,WR,IR,Knee,Oct 30 8:06 PM,Y,Sun 8:20 pm vs Phi
+Anthony Firkser,30571,Det,TE,Q,Leg,Oct 30 8:06 PM,N,Sun 1:00 pm vs Min
+River Cracraft,30955,Was,WR,Q,Undisclosed,Oct 30 8:06 PM,N,Sun 8:20 pm vs Phi
+Squirrel White,43349,Chi,WR,RET,Personal,Oct 30 8:06 PM,N,Mon 8:15 pm @ Sea
+DJ Moore,30994,Buf,WR,Q,Shoulder - AC Joint,Oct 30 8:06 PM,Y,Sun 1:00 pm vs Bal
+Calvin Ridley,30996,Ten,WR,Q,Hip,Oct 30 8:06 PM,Y,Sun 1:00 pm @ Cin
+Kyron Hudson,43432,Chi,WR,Q,Undisclosed,Oct 30 8:06 PM,N,Mon 8:15 pm @ Sea
+Dante Pettis,31014,SF,WR,Q,Calf,Oct 30 8:06 PM,N,
+Kadarius Calloway,43424,TB,RB,Q,Undisclosed,Oct 30 8:06 PM,N,Sun 1:00 pm vs Atl
+Will Dissly,31090,LAC,TE,Q,Undisclosed,Oct 30 8:06 PM,N,Sun 4:05 pm @ LAR
+Ray-Ray McCloud III,31157,Chi,WR,Q,Undisclosed,Oct 30 8:06 PM,N,Mon 8:15 pm @ Sea
+Jonnu Smith,30213,GB,TE,NA,Coach's Decision,Oct 30 8:06 PM,N,Final W 27-19 vs Car
+Cedrick Wilson Jr.,31178,Det,WR,Q,Knee,Oct 30 8:06 PM,N,Sun 1:00 pm vs Min
+Myles Montgomery,43367,NE,RB,IR,Undisclosed,Oct 30 8:06 PM,N,Sun 4:25 pm @ Mia
+Braxton Berrios,31180,NYG,WR,IR,Foot,Oct 30 8:06 PM,N,
+Tanner Hudson,31257,Cin,TE,IR,Pectoral,Oct 30 8:06 PM,N,Sun 1:00 pm vs Ten
+KhaDarel Hodge,31769,SF,WR,Q,Knee,Oct 30 8:06 PM,N,
+Deebo Samuel Sr.,31868,SF,WR,Q,Hamstring,Oct 30 8:06 PM,N,
+Jimmy Kibble,43368,NE,WR,Q,Undisclosed,Oct 30 8:06 PM,N,Sun 4:25 pm @ Mia
+Drew Lock,31874,Sea,QB,Q,Elbow,Oct 30 8:06 PM,Y,Mon 8:15 pm vs Chi
+A.J. Brown,31883,NE,WR,Q,Ankle,Oct 30 8:06 PM,Y,Sun 4:25 pm @ Mia
+Parris Campbell,31891,Dal,WR,RET,Personal,Oct 30 8:06 PM,N,Sun 1:00 pm vs Ari
+Le'Meke Brockington,43376,Atl,WR,Q,Undisclosed,Oct 30 8:06 PM,N,Sun 1:00 pm @ TB
+Will Grier,31932,Dal,QB,RET,Personal,Oct 30 8:06 PM,N,Sun 1:00 pm vs Ari
+Josh Oliver,31901,Min,TE,IR,Biceps,Oct 30 8:06 PM,N,Sun 1:00 pm @ Det
+Lincoln Pare,43339,Ind,RB,Q,Undisclosed,Oct 30 8:06 PM,N,Sun 1:00 pm @ Jax
+David Montgomery,31905,Hou,RB,Q,Groin,Oct 30 8:06 PM,N,
+Connor Hulstein,43471,NYJ,TE,Q,Undisclosed,Oct 30 8:06 PM,N,Sun 1:00 pm vs LV
+Christian McCaffrey,30121,SF,RB,Q,Hamstring,Oct 30 8:06 PM,N,
+Davante Adams,27581,LAR,WR,IR,Hamstring,Oct 30 8:06 PM,N,Sun 4:05 pm vs LAC
+Demarcus Robinson,29360,SF,WR,IR,Ankle,Oct 30 8:06 PM,N,
+Jakobi Meyers,32231,Jax,WR,Q,Hamstring,Oct 30 8:06 PM,Y,Sun 1:00 pm vs Ind
+Tyreek Hill,29399,Mia,WR,Q,Knee - ACL,Oct 30 8:06 PM,N,Sun 4:25 pm vs NE
+D.J. Montgomery,32283,Ind,WR,IR,Abdomen,Oct 30 8:06 PM,N,Sun 1:00 pm @ Jax
+Teddy Bridgewater,27560,TB,QB,RET,Personal,Oct 30 8:06 PM,N,Sun 1:00 pm vs Atl
+David Njoku,30142,LAC,TE,IR,Lower Leg,Oct 30 8:06 PM,N,Sun 4:05 pm @ LAR
+Mike Evans,27535,SF,WR,Q,Achilles,Oct 30 8:06 PM,N,
+Olamide Zaccheaus,32123,Atl,WR,Q,Shoulder,Oct 30 8:06 PM,Y,Sun 1:00 pm @ TB
+Joe Mixon,30161,Hou,RB,Q,Foot,Oct 30 8:06 PM,N,
+Michael Wilson,40121,Ari,WR,,,Oct 30 2:11 AM,Y,Sun 1:00 pm @ Dal
+Jeremiyah Love,42625,Ari,RB,,,Oct 30 2:11 AM,Y,Sun 1:00 pm @ Dal
+Tyler Allgeier,34107,Ari,RB,,,Oct 30 2:11 AM,Y,Sun 1:00 pm @ Dal
+Tre' Harris,41840,LAC,WR,,,Oct 30 1:21 AM,Y,Sun 4:05 pm @ LAR
+Will Kacmarek,42709,Mia,TE,,,Oct 30 1:16 AM,Y,Sun 4:25 pm vs NE
+Jared Wayne,40288,Mia,WR,,,Oct 30 1:16 AM,Y,Sun 4:25 pm vs NE
+Malik Washington,41058,Mia,WR,,,Oct 30 1:11 AM,Y,Sun 4:25 pm vs NE
+Ladd McConkey,40908,LAC,WR,,,Oct 30 1:11 AM,Y,Sun 4:05 pm @ LAR
+Greg Dulcich,34036,Mia,TE,,,Oct 30 1:11 AM,Y,Sun 4:25 pm vs NE
+Saquon Barkley,30972,Phi,RB,,,Oct 30 12:56 AM,Y,Sun 8:20 pm @ Was
+Ian Thomas,31071,LV,TE,,,Oct 30 12:46 AM,Y,Sun 1:00 pm @ NYJ
+LeQuint Allen Jr.,42007,Jax,RB,,,Oct 30 12:26 AM,Y,Sun 1:00 pm vs Ind
+Travis Kelce,26686,KC,TE,,,Oct 30 12:16 AM,Y,Sun 4:25 pm @ Den
+Ray Davis,40980,Buf,RB,,,Oct 30 12:16 AM,Y,Sun 1:00 pm vs Bal
+Gavin Bartholomew,41994,Min,TE,,,Oct 29 11:21 PM,N,Sun 1:00 pm @ Det
+Aaron Jones Sr.,30295,Min,RB,,,Oct 29 11:16 PM,Y,Sun 1:00 pm @ Det
+Rashee Rice,40084,KC,WR,,,Oct 29 11:16 PM,Y,Sun 4:25 pm @ Den
+Lamar Jackson,31002,Bal,QB,,,Oct 29 10:36 PM,Y,Sun 1:00 pm @ Buf
+Tyler Warren,41799,Ind,TE,,,Oct 29 9:51 PM,Y,Sun 1:00 pm @ Jax
+Carson Beck,42687,Ari,QB,,,Oct 29 4:11 AM,N,Sun 1:00 pm @ Dal
+Matthew Golden,41808,GB,WR,,,Oct 29 3:51 AM,N,Final W 27-19 vs Car
+Stefon Diggs,28534,Was,WR,,,Oct 29 2:36 AM,Y,Sun 8:20 pm vs Phi
+Marvin Mims Jr.,40090,Den,WR,,,Oct 29 2:26 AM,N,Sun 4:25 pm vs KC
+Brock Bowers,40878,LV,TE,,,Oct 29 1:46 AM,N,Sun 1:00 pm @ NYJ
+Ja'Marr Chase,33393,Cin,WR,,,Oct 29 1:36 AM,Y,Sun 1:00 pm vs Ten
+Braelon Allen,40981,NYJ,RB,,,Oct 29 1:31 AM,Y,Sun 1:00 pm vs LV
+Jacob Saylors,40474,Det,RB,,,Oct 29 1:26 AM,N,Sun 1:00 pm vs Min
+Jahmyr Gibbs,40059,Det,RB,,,Oct 29 1:11 AM,Y,Sun 1:00 pm vs Min
+Amon-Ra St. Brown,33500,Det,WR,,,Oct 29 1:11 AM,Y,Sun 1:00 pm vs Min
+Dylan Sampson,41907,Cle,RB,,,Oct 29 1:06 AM,Y,Sun 1:00 pm @ Pit
+Marcus Mariota,28390,Was,QB,,,Oct 28 3:46 AM,N,Sun 8:20 pm vs Phi
+Jaylen Wright,41010,Mia,RB,,,Oct 28 1:46 AM,N,Sun 4:25 pm vs NE
+Kene Nwangwu,33507,NYJ,RB,,,Oct 28 1:41 AM,N,Sun 1:00 pm vs LV
+Bryson Nesbit,42266,Min,TE,,,Oct 27 10:06 PM,N,Sun 1:00 pm @ Det
+Ben Sauls,42379,NYG,K,,,Oct 27 6:56 PM,N,
+Ben Sims,40335,Sea,TE,,,Oct 27 2:36 AM,N,Mon 8:15 pm vs Chi
+Dont'e Thornton Jr.,41892,LV,WR,,,Oct 27 1:11 AM,N,Sun 1:00 pm @ NYJ
+Jalen Coker,41293,Car,WR,,,Oct 27 12:21 AM,N,Final L 19-27 @ GB
+Cole Payton,42801,Phi,QB,,,Oct 26 6:11 PM,N,Sun 8:20 pm @ Was
+Emari Demercado,40430,Hou,RB,,,Oct 26 6:11 PM,N,
+Dillon Gabriel,41861,Cle,QB,,,Oct 26 1:31 AM,N,Sun 1:00 pm @ Pit
+Eli Stowers,42676,Phi,TE,,,Oct 26 1:06 AM,N,Sun 8:20 pm @ Was
+Grant Calcaterra,34154,Phi,TE,,,Oct 26 1:06 AM,N,Sun 8:20 pm @ Was
+Kylen Granson,33515,Ten,TE,,,Oct 26 12:26 AM,N,Sun 1:00 pm @ Cin
+Nicholas Singleton,42763,Ten,RB,,,Oct 26 12:26 AM,N,Sun 1:00 pm @ Cin
+Robert Henry Jr.,42986,Sea,RB,,,Oct 26 12:11 AM,N,Mon 8:15 pm vs Chi
+Kurtis Rourke,42009,SF,QB,,,Oct 26 12:11 AM,N,
+Will Howard,41989,Pit,QB,,,Oct 25 11:56 PM,N,Sun 1:00 pm vs Cle
+Drew Allar,42698,Pit,QB,,,Oct 25 11:56 PM,N,Sun 1:00 pm vs Cle
+Eli Heidenreich,42852,Pit,RB,,,Oct 25 11:56 PM,N,Sun 1:00 pm vs Cle
+Treyton Welch,41363,NO,TE,,,Oct 25 11:46 PM,N,
+Jake Haener,40144,NYG,QB,,,Oct 25 11:46 PM,N,
+Zach Wilson,33390,NO,QB,,,Oct 25 11:46 PM,N,
+Ty Simpson,42635,LAR,QB,,,Oct 25 11:41 PM,N,Sun 4:05 pm vs LAC
+Behren Morton,42856,NE,QB,,,Oct 25 11:41 PM,N,Sun 4:25 pm @ Mia
+Jalen Tolbert,34044,Mia,WR,,,Oct 25 11:41 PM,N,Sun 4:25 pm vs NE
+Demond Claiborne,42820,Min,RB,,,Oct 25 11:41 PM,N,Sun 1:00 pm @ Det
+Max Klare,42683,LAR,TE,,,Oct 25 11:41 PM,N,Sun 4:05 pm vs LAC
+Max Brosmer,42075,Min,QB,,,Oct 25 11:41 PM,N,Sun 1:00 pm @ Det
+Aidan O'Connell,40138,LV,QB,,,Oct 25 11:41 PM,N,Sun 1:00 pm @ NYJ
+Garrett Nussmeier,42871,KC,QB,,,Oct 25 11:36 PM,N,Sun 4:25 pm @ Den
+Marlin Klein,42681,Hou,TE,,,Oct 25 11:36 PM,N,
+Ben VanSumeren,40518,KC,RB,,,Oct 25 11:36 PM,N,Sun 4:25 pm @ Den
+Riley Leonard,41968,Ind,QB,,,Oct 25 11:36 PM,N,Sun 1:00 pm @ Jax
+Jackson Meeks,42238,Det,"WR,TE",,,Oct 25 11:31 PM,N,Sun 1:00 pm vs Min
+Sam Ehlinger,33606,Den,QB,,,Oct 25 11:06 PM,N,Sun 4:25 pm vs KC
+Dallen Bentley,42878,Den,TE,,,Oct 25 11:06 PM,N,Sun 4:25 pm vs KC
+Case Keenum,26483,Chi,QB,,,Oct 25 10:56 PM,N,Mon 8:15 pm @ Sea
+Audric Estime,41019,Cle,RB,,,Oct 25 10:56 PM,N,Sun 1:00 pm @ Pit
+Taylen Green,42804,Cle,QB,,,Oct 25 10:56 PM,N,Sun 1:00 pm @ Pit
+Elijah Sarratt,42737,Bal,WR,,,Oct 25 10:31 PM,N,Sun 1:00 pm @ Buf
+Andy Dalton,24822,Atl,QB,,,Oct 25 10:26 PM,N,Sun 1:00 pm @ TB
+Jack Strand,42898,Atl,QB,,,Oct 25 10:26 PM,N,Sun 1:00 pm @ TB
+Woody Marks,41902,Hou,RB,,,Oct 25 12:51 AM,N,
+Mike Washington Jr.,42744,LV,RB,,,Oct 25 12:06 AM,N,Sun 1:00 pm @ NYJ
+Bo Melton,34185,GB,WR,,,Oct 25 12:06 AM,N,Final W 27-19 vs Car
+Puka Nacua,40168,LAR,WR,,,Oct 25 12:06 AM,N,Sun 4:05 pm vs LAC
+Jonah Coleman,42730,Den,RB,,,Oct 24 11:41 PM,Y,Sun 4:25 pm vs KC
+Myles Price,42389,Min,WR,,,Oct 24 10:51 PM,N,Sun 1:00 pm @ Det
+Baker Mayfield,30971,TB,QB,,,Oct 24 8:36 PM,Y,Sun 1:00 pm vs Atl
+Rico Dowdle,33100,Pit,RB,,,Oct 24 5:16 PM,N,Sun 1:00 pm vs Cle
+Tank Dell,40097,Hou,WR,,,Oct 24 2:26 AM,N,
+Christian Kirk,31017,SF,WR,,,Oct 24 1:41 AM,N,
+Jordan Mason,34320,Min,RB,,,Oct 24 1:36 AM,Y,Sun 1:00 pm @ Det
+Dallas Goedert,31019,Phi,TE,,,Oct 24 12:56 AM,N,Sun 8:20 pm @ Was
+Chris Manhertz,28365,NYG,TE,,,Oct 23 1:51 AM,N,
+Charlie Jones,40158,NYG,WR,,,Oct 23 1:51 AM,N,
+Brevin Jordan,33535,Hou,TE,,,Oct 23 1:31 AM,N,
+Dalton Schultz,31107,Hou,TE,,,Oct 23 1:31 AM,N,
+Savion Williams,41851,GB,WR,,,Oct 23 1:26 AM,N,Final W 27-19 vs Car
+Caleb Douglas,42697,Mia,WR,,,Oct 23 1:21 AM,N,Sun 4:25 pm vs NE
+Adonai Mitchell,40915,NYJ,WR,,,Oct 23 1:11 AM,N,Sun 1:00 pm vs LV
+T.J. Hockenson,31840,Min,TE,,,Oct 23 1:06 AM,N,Sun 1:00 pm @ Det
+Ashton Dulin,32292,Ind,WR,,,Oct 23 12:26 AM,N,Sun 1:00 pm @ Jax
+KC Concepcion Jr.,42646,Cle,WR,,,Oct 22 10:51 PM,N,Sun 1:00 pm @ Pit
+Quinshon Judkins,41821,Cle,RB,,,Oct 22 10:51 PM,N,Sun 1:00 pm @ Pit
+Denzel Boston,42661,Cle,WR,,,Oct 22 10:51 PM,N,Sun 1:00 pm @ Pit
+Bucky Irving,40993,TB,RB,,,Oct 22 10:06 PM,N,Sun 1:00 pm vs Atl
+Alvin Kamara,30180,NO,RB,,,Oct 22 6:26 PM,N,
+Justin Jefferson,32692,Min,WR,,,Oct 22 2:51 AM,N,Sun 1:00 pm @ Det
+David Sills V,32418,TB,WR,,,Oct 22 1:56 AM,N,Sun 1:00 pm vs Atl
+Rashod Bateman,33415,Bal,WR,,,Oct 22 1:36 AM,N,Sun 1:00 pm @ Buf
+Matt Hibner,42755,Bal,TE,,,Oct 22 1:36 AM,N,Sun 1:00 pm @ Buf
+Jordan Love,32696,GB,QB,,,Oct 22 1:21 AM,N,Final W 27-19 vs Car
+Raheem Mostert,28654,LV,RB,,,Oct 22 12:06 AM,N,Sun 1:00 pm @ NYJ
+Jordan Addison,40042,Min,WR,,,Oct 21 2:26 AM,N,Sun 1:00 pm @ Det
+Colbie Young,42762,Cin,WR,,,Oct 21 1:56 AM,N,Sun 1:00 pm vs Ten
+Justin Joly,42764,Mia,TE,,,Oct 21 1:41 AM,N,Sun 4:25 pm vs NE
+Darnell Mooney,32843,NYG,WR,,,Oct 21 1:31 AM,N,
+Sean Tucker,40742,TB,RB,,,Oct 21 12:26 AM,N,Sun 1:00 pm vs Atl
+Elijah Mitchell,33582,Phi,RB,,,Oct 20 3:21 AM,N,Sun 8:20 pm @ Was
+Zane Gonzalez,30337,Mia,K,,,Oct 19 10:51 PM,N,Sun 4:25 pm vs NE
+Josh Jacobs,31856,GB,RB,,,Oct 19 2:36 AM,Y,Final W 27-19 vs Car
+Jeremy McNichols,30275,Was,RB,,,Oct 19 1:11 AM,N,Sun 8:20 pm vs Phi
+Joe Milton,41060,Phi,QB,,,Oct 18 10:16 PM,N,Sun 8:20 pm @ Was
+Montorie Foster Jr.,42515,Sea,WR,,,Oct 18 10:16 PM,N,Mon 8:15 pm vs Chi
+Hollywood Brown,31857,Phi,WR,,,Oct 18 10:16 PM,N,Sun 8:20 pm @ Was
+Jalen Milroe,41882,Sea,QB,,,Oct 18 10:16 PM,N,Mon 8:15 pm vs Chi
+Tanner Arkin,43152,NE,TE,,,Oct 18 10:11 PM,N,Sun 4:25 pm @ Mia
+CJ Daniels,42819,LAR,WR,,,Oct 18 9:56 PM,N,Sun 4:05 pm vs LAC
+Tutu Atwell,33445,LAR,WR,,,Oct 18 9:56 PM,N,Sun 4:05 pm vs LAC
+CJ Williams,42825,Jax,WR,,,Oct 18 9:46 PM,N,Sun 1:00 pm vs Ind
+Jared Wiley,40978,KC,TE,,,Oct 18 9:46 PM,N,Sun 4:25 pm @ Den
+Camden Brown,43059,Dal,WR,,,Oct 18 9:36 PM,N,Sun 1:00 pm vs Ari
+Ainias Smith,41030,Car,WR,,,Oct 18 8:26 PM,N,Final L 19-27 @ GB
+Cooper Rush,30788,Atl,QB,,,Oct 18 6:56 PM,N,Sun 1:00 pm @ TB
+Makai Lemon,42642,Phi,WR,,,Oct 18 1:06 AM,Y,Sun 8:20 pm @ Was
+KeAndre Lambert-Smith,41944,LAC,WR,,,Oct 18 12:06 AM,Y,Sun 4:05 pm @ LAR
+Joshua Palmer,33465,Buf,WR,,,Oct 18 12:06 AM,N,Sun 1:00 pm vs Bal
+Michael Penix Jr.,40889,Atl,QB,,,Oct 17 10:36 PM,N,Sun 1:00 pm @ TB
+Ameer Abdullah,28442,Jax,RB,,,Oct 17 9:36 PM,N,Sun 1:00 pm vs Ind
+Pat Freiermuth,33443,Pit,TE,,,Oct 17 8:46 PM,N,Sun 1:00 pm vs Cle
+Trevor Etienne,41913,Car,RB,,,Oct 17 8:46 PM,N,Final L 19-27 @ GB
+Caleb Williams,40900,Chi,QB,,,Oct 17 8:46 PM,N,Mon 8:15 pm @ Sea
+Ja'Kobi Lane,42702,Bal,WR,,,Oct 17 8:36 PM,N,Sun 1:00 pm @ Buf
+Omar Cooper Jr.,42652,NYJ,WR,,,Oct 17 8:36 PM,N,Sun 1:00 pm vs LV
+Kenyon Sadiq,42638,NYJ,TE,,,Oct 17 8:36 PM,N,Sun 1:00 pm vs LV
+Chris Olave,33966,NO,WR,,,Oct 17 8:36 PM,N,
+Austin Ekeler,30423,Was,RB,,,Oct 17 12:06 AM,N,Sun 8:20 pm vs Phi
+Rachaad White,34047,Was,RB,,,Oct 17 12:06 AM,N,Sun 8:20 pm vs Phi
+DK Metcalf,31896,Pit,WR,,,Oct 16 9:26 PM,N,Sun 1:00 pm vs Cle
+Will Mallory,40180,Ind,TE,,,Oct 16 9:06 PM,N,Sun 1:00 pm @ Jax
+Kyle Juszczyk,26753,SF,RB,,,Oct 16 3:36 AM,N,
+Ty Johnson,32018,Buf,RB,,,Oct 16 3:06 AM,N,Sun 1:00 pm vs Bal
+Jalen Nailor,34147,LV,WR,,,Oct 16 2:56 AM,N,Sun 1:00 pm @ NYJ
+Davis Allen,40164,LAR,TE,,,Oct 16 2:36 AM,N,Sun 4:05 pm vs LAC
+Devin Duvernay,32762,Ari,WR,,,Oct 16 2:31 AM,N,Sun 1:00 pm @ Dal
+E.J. Jenkins,40550,Atl,TE,,,Oct 16 1:41 AM,N,Sun 1:00 pm @ TB
+David Martin-Robinson,41662,Ten,TE,,,Oct 16 1:41 AM,N,Sun 1:00 pm @ Cin
+Carsen Ryan,42870,Cle,TE,,,Oct 16 1:26 AM,N,Sun 1:00 pm @ Pit
+Tylan Wallace,33519,Cle,WR,,,Oct 16 1:26 AM,N,Sun 1:00 pm @ Pit
+Zay Flowers,40039,Bal,WR,,,Oct 16 1:06 AM,N,Sun 1:00 pm @ Buf
+Quentin Johnston,40051,LAC,WR,,,Oct 16 12:21 AM,Y,Sun 4:05 pm @ LAR
+Nate Boerkircher,42678,Jax,TE,,,Oct 15 11:46 PM,N,Sun 1:00 pm vs Ind
+Tommy Tremble,33471,Car,TE,,,Oct 15 10:21 PM,N,Final L 19-27 @ GB
+Darren Waller,28592,Car,TE,,,Oct 15 10:21 PM,N,Final L 19-27 @ GB
+M. Valdes-Scantling,31144,Pit,WR,,,Oct 15 3:11 AM,N,Sun 1:00 pm vs Cle
+Nick Vannett,29328,Bal,TE,,,Oct 15 1:51 AM,N,Sun 1:00 pm @ Buf
+Josh Downs,40126,Ind,WR,,,Oct 15 12:56 AM,Y,Sun 1:00 pm @ Jax
+Jaxon Smith-Njigba,40041,Sea,WR,,,Oct 14 3:31 AM,N,Mon 8:15 pm vs Chi
+CeeDee Lamb,32687,Dal,WR,,,Oct 14 2:16 AM,N,Sun 1:00 pm vs Ari
+Darius Slayton,32003,Ind,WR,,,Oct 14 1:46 AM,N,Sun 1:00 pm @ Jax
+Keenan Allen,26699,Ind,WR,,,Oct 14 1:46 AM,N,Sun 1:00 pm @ Jax
+Tony Pollard,31960,Ten,RB,,,Oct 14 1:36 AM,Y,Sun 1:00 pm @ Cin
+Ja'Quinden Jackson,42214,Phi,RB,,,Oct 13 3:06 AM,N,Sun 8:20 pm @ Was
+Quentin Moore,43206,Was,TE,,,Oct 13 3:06 AM,N,Sun 8:20 pm vs Phi
+Brock Rechsteiner,43435,NO,WR,,,Oct 13 2:46 AM,N,
+Irvin Charles,34356,Sea,WR,,,Oct 13 1:31 AM,N,Mon 8:15 pm vs Chi
+Luke Grimm,42104,LAC,WR,,,Oct 12 11:36 PM,N,Sun 4:05 pm @ LAR
+Michael Carter,33495,Ten,RB,,,Oct 12 12:46 AM,N,Sun 1:00 pm @ Cin
+Nick Kallerup,42465,Sea,TE,,,Oct 12 12:41 AM,N,Mon 8:15 pm vs Chi
+Devin Singletary,31906,NYG,RB,,,Oct 12 12:31 AM,N,
+Odell Beckham Jr.,27540,Min,WR,,,Oct 12 12:26 AM,N,Sun 1:00 pm @ Det
+Kaytron Allen,42809,Mia,RB,,,Oct 12 12:21 AM,N,Sun 4:25 pm vs NE
+Roman Hemby,42941,LV,RB,,,Oct 12 12:16 AM,N,Sun 1:00 pm @ NYJ
+Marvin Harrison Jr.,40893,Hou,WR,,,Oct 12 12:16 AM,N,
+Jack Endries,42843,Cin,TE,,,Oct 12 12:06 AM,N,Sun 1:00 pm vs Ten
+Ollie Gordon II,41969,Mia,RB,,,Oct 11 12:46 AM,N,Sun 4:25 pm vs NE
+George Holani,41344,Sea,RB,,,Oct 11 12:06 AM,N,Mon 8:15 pm vs Chi
+Scott Matlock,40225,LAC,RB,,,Oct 10 11:56 PM,N,Sun 4:05 pm @ LAR
+Charlie Kolar,34084,LAC,TE,,,Oct 10 11:56 PM,N,Sun 4:05 pm @ LAR
+Barion Brown,42812,NO,WR,,,Oct 10 8:56 PM,N,
+Ben Yurosek,42434,Min,TE,,,Oct 10 8:56 PM,N,Sun 1:00 pm @ Det
+Ashton Jeanty,41791,LV,RB,,,Oct 10 8:41 PM,N,Sun 1:00 pm @ NYJ
+Rhamondre Stevenson,33508,NE,RB,,,Oct 10 8:41 PM,N,Sun 4:25 pm @ Mia
+Tee Higgins,32703,Cin,WR,,,Oct 10 8:36 PM,N,Sun 1:00 pm vs Ten
+Tim Patrick,30511,NYJ,WR,,,Oct 10 1:21 AM,N,Sun 1:00 pm vs LV
+Bryce Oliver,41251,Hou,WR,,,Oct 10 12:21 AM,N,
+Mason Taylor,41827,NYJ,TE,,,Oct 9 2:41 AM,N,Sun 1:00 pm vs LV
+Chig Okonkwo,34099,Was,TE,,,Oct 9 1:46 AM,N,Sun 8:20 pm vs Phi
+Chris Bell,42716,Mia,WR,,,Oct 9 1:31 AM,N,Sun 4:25 pm vs NE
+Isaiah Likely,34095,NYG,TE,,,Oct 9 1:21 AM,N,
+Malik Nabers,40899,NYG,WR,,,Oct 9 1:21 AM,N,
+Gunnar Helm,41905,Ten,TE,,,Oct 9 12:46 AM,N,Sun 1:00 pm @ Cin
+D'Andre Swift,32705,Chi,RB,,,Oct 9 12:11 AM,N,Mon 8:15 pm @ Sea
+Cody White,32948,LV,WR,,,Oct 8 11:56 PM,N,Sun 1:00 pm @ NYJ
+Noah Fant,31852,NO,TE,,,Oct 8 11:41 PM,N,
+Konata Mumpfield,42035,LAR,WR,,,Oct 8 5:16 AM,N,Sun 4:05 pm vs LAC
+Adam Trautman,32775,Den,TE,,,Oct 8 4:16 AM,N,Sun 4:25 pm vs KC
+Kaelon Black,42712,SF,RB,,,Oct 8 4:06 AM,N,
+Jonathan Mingo,40073,Dal,WR,,,Oct 8 3:51 AM,N,Sun 1:00 pm vs Ari
+Pierre Strong Jr.,34083,GB,RB,,,Oct 8 3:16 AM,N,Final W 27-19 vs Car
+Ben Sinnott,40931,Was,TE,,,Oct 8 1:46 AM,N,Sun 8:20 pm vs Phi
+Tyler Shough,41825,NO,QB,,,Oct 8 1:36 AM,N,
+Chris Moore,29341,Bal,WR,,,Oct 8 1:06 AM,N,Sun 1:00 pm @ Buf
+Jacoby Jones,42436,Was,WR,,,Oct 7 3:11 AM,N,Sun 8:20 pm vs Phi
+Eli Raridon,42717,NE,TE,,,Oct 7 3:06 AM,N,Sun 4:25 pm @ Mia
+Jayden Daniels,40896,Was,QB,,,Oct 7 1:11 AM,N,Sun 8:20 pm vs Phi
+Ko Kieft,34174,TB,TE,,,Oct 7 12:06 AM,N,Sun 1:00 pm vs Atl
+Chase McLaughlin,32417,TB,K,,,Oct 6 8:46 PM,N,Sun 1:00 pm vs Atl
+Kenny Yeboah,33705,Ari,TE,,,Oct 6 1:31 AM,N,Sun 1:00 pm @ Dal
+Dante Miller,40874,NYG,RB,,,Oct 5 11:11 PM,N,
+Jamari Thrash,41016,LV,WR,,,Oct 5 7:36 PM,N,Sun 1:00 pm @ NYJ
+Luke McCaffrey,40964,Was,WR,,,Oct 5 12:11 AM,N,Sun 8:20 pm vs Phi
+Jordan James,41933,SF,RB,,,Oct 5 12:06 AM,N,
+Thomas Fidone II,42004,NYG,TE,,,Oct 4 11:56 PM,N,
+Brady Cook,42229,Mia,QB,,,Oct 4 11:51 PM,N,Sun 4:25 pm vs NE
+DJ Uiagalelei,42079,LAC,QB,,,Oct 4 11:51 PM,N,Sun 4:05 pm @ LAR
+DJ Giddens,41937,Ind,RB,,,Oct 4 11:46 PM,N,Sun 1:00 pm @ Jax
+Tyler Conklin,31127,Det,TE,,,Oct 4 11:41 PM,N,Sun 1:00 pm vs Min
+Skyler Bell,42747,Buf,WR,,,Oct 4 11:31 PM,N,Sun 1:00 pm vs Bal
+Reggie Virgil,42791,Ari,WR,,,Oct 4 11:31 PM,N,Sun 1:00 pm @ Dal
+Joe Fagnano,43003,Bal,QB,,,Oct 4 11:31 PM,N,Sun 1:00 pm @ Buf
+Mo Alie-Cox,30112,Ind,TE,,,Oct 3 11:51 AM,N,Sun 1:00 pm @ Jax
+Justin Shorter,40167,LV,"WR,TE",,,Oct 2 3:36 AM,N,Sun 1:00 pm @ NYJ
+Jalen Walthall,43193,NYJ,WR,,,Oct 2 3:36 AM,N,Sun 1:00 pm vs LV
+Keaton Mitchell,40641,LAC,RB,,,Oct 2 1:41 AM,N,Sun 4:05 pm @ LAR
+Nico Collins,33477,Hou,WR,,,Oct 2 1:11 AM,N,
+Jeremy Ruckert,34057,NYJ,TE,,,Oct 2 12:51 AM,N,Sun 1:00 pm vs LV
+Keon Coleman,40911,Buf,WR,,,Oct 2 12:16 AM,N,Sun 1:00 pm vs Bal
+Chris Godwin Jr.,30197,TB,WR,,,Oct 1 1:31 AM,N,Sun 1:00 pm vs Atl
+Tanner McKee,40220,Phi,QB,,,Sep 30 4:36 AM,N,Sun 8:20 pm @ Was
+Josh Allen,30977,Buf,QB,,,Sep 30 2:06 AM,N,Sun 1:00 pm vs Bal
+Coleman Owen,42130,GB,WR,,,Sep 29 3:26 AM,N,Final W 27-19 vs Car
+Jam Miller,42867,Atl,RB,,,Sep 29 3:11 AM,N,Sun 1:00 pm @ TB
+Terrell Jennings,41713,NE,RB,,,Sep 29 3:11 AM,N,Sun 4:25 pm @ Mia
+Lawrence Keys,41275,Det,WR,,,Sep 29 2:41 AM,N,Sun 1:00 pm vs Min
+Devin Neal,41972,Was,RB,,,Sep 29 2:41 AM,N,Sun 8:20 pm vs Phi
+John FitzPatrick,34169,Cle,TE,,,Sep 28 9:46 PM,N,Sun 1:00 pm @ Pit
+Jeshaun Jones,41205,Min,WR,,,Sep 28 2:36 AM,N,Sun 1:00 pm @ Det
+Miles Kitselman,43082,Det,TE,,,Sep 28 1:41 AM,N,Sun 1:00 pm vs Min
+Lil'Jordan Humphrey,32494,Den,WR,,,Sep 27 11:26 PM,N,Sun 4:25 pm vs KC
+J.J. McCarthy,40905,NYG,QB,,,Sep 27 9:16 PM,N,
+Mark Andrews,31056,Bal,TE,,,Sep 27 3:21 AM,N,Sun 1:00 pm @ Buf
+Tyler Goodson,34261,Dal,RB,,,Sep 27 12:31 AM,N,Sun 1:00 pm vs Ari
+Tyson Bagent,40504,Chi,QB,,,Sep 26 11:21 PM,N,Mon 8:15 pm @ Sea
+Spencer Shrader,41499,Ind,K,,,Sep 26 10:31 PM,N,Sun 1:00 pm @ Jax
+Jaylen Warren,34447,Pit,RB,,,Sep 26 8:41 PM,N,Sun 1:00 pm vs Cle
+Ryan Miller,40676,NE,WR,,,Sep 26 8:41 PM,N,Sun 4:25 pm @ Mia
+Cairo Santos,28227,Chi,K,,,Sep 25 11:56 PM,N,Mon 8:15 pm @ Sea
+Daniel Bellinger,34068,Ten,TE,,,Sep 25 1:46 AM,N,Sun 1:00 pm @ Cin
+DeeJay Dallas,32814,Min,RB,,,Sep 25 1:16 AM,N,Sun 1:00 pm @ Det
+Kendre Miller,40108,NO,RB,,,Sep 25 12:36 AM,N,
+Brady Russell,40519,Sea,"RB,TE",,,Sep 24 4:31 AM,N,Mon 8:15 pm vs Chi
+Cooper Kupp,30182,Sea,WR,,,Sep 24 4:31 AM,N,Mon 8:15 pm vs Chi
+Sam Darnold,30973,Sea,QB,,,Sep 24 4:21 AM,N,Mon 8:15 pm vs Chi
+J.K. Dobbins,32725,Den,RB,,,Sep 24 3:56 AM,Y,Sun 4:25 pm vs KC
+Dareke Young,34189,LV,WR,,,Sep 24 2:46 AM,N,Sun 1:00 pm @ NYJ
+Jauan Jennings,32887,Min,WR,,,Sep 23 3:16 AM,N,Sun 1:00 pm @ Det
+Dontae Fleming,42255,NYG,WR,,,Sep 22 3:51 AM,N,
+Sam Scott,43209,NYJ,RB,,,Sep 22 2:56 AM,N,Sun 1:00 pm vs LV
+Malick Meiga,43460,Sea,WR,,,Sep 22 2:06 AM,N,Mon 8:15 pm vs Chi
+Tua Tagovailoa,32675,Atl,QB,,,Sep 22 1:06 AM,N,Sun 1:00 pm @ TB
+Nick Muse,34183,Atl,TE,,,Sep 22 1:06 AM,N,Sun 1:00 pm @ TB
+Brenden Bates,41675,Jax,TE,,,Sep 21 2:21 AM,N,Sun 1:00 pm vs Ind
+Jordan Watkins,41917,SF,WR,,,Sep 21 12:11 AM,N,
+Athan Kaliakmanis,42845,Was,QB,,,Sep 21 12:06 AM,N,Sun 8:20 pm vs Phi
+Quinn Ewers,42037,Jax,QB,,,Sep 20 11:51 PM,N,Sun 1:00 pm vs Ind
+Elijah Moore,33422,Phi,WR,,,Sep 20 11:51 PM,N,Sun 8:20 pm @ Was
+Tanner Koziol,42797,Jax,TE,,,Sep 20 11:51 PM,N,Sun 1:00 pm vs Ind
+Kyler Murray,31833,Min,QB,,,Sep 20 11:31 PM,N,Sun 1:00 pm @ Det
+Josh Johnson,8937,Cin,QB,,,Sep 20 11:26 PM,N,Sun 1:00 pm vs Ten
+Ke'Shawn Williams,42278,Cin,WR,,,Sep 20 11:26 PM,N,Sun 1:00 pm vs Ten
+Eddy Pineiro,31482,SF,K,,,Sep 20 12:11 AM,N,
+Joe Burrow,32671,Cin,QB,,,Sep 19 8:36 PM,N,Sun 1:00 pm vs Ten
+Seydou Traore,42790,Mia,TE,,,Sep 18 3:06 AM,N,Sun 4:25 pm vs NE
+George Kittle,30259,SF,TE,,,Sep 18 2:56 AM,N,
+Brian Thomas Jr.,40883,Jax,WR,,,Sep 18 2:16 AM,N,Sun 1:00 pm vs Ind
+Samaje Perine,30227,Cin,RB,,,Sep 18 1:21 AM,N,Sun 1:00 pm vs Ten
+Juwan Johnson,33113,NO,TE,,,Sep 17 11:26 PM,N,
+Oscar Delp,42695,NO,TE,,,Sep 17 11:26 PM,N,
+Anthony Richardson Sr.,40040,Ind,QB,,,Sep 17 12:51 AM,N,Sun 1:00 pm @ Jax
+Tory Horton,41952,Sea,WR,,,Sep 16 5:26 AM,N,Mon 8:15 pm vs Chi
+Derius Davis,40133,LAC,WR,,,Sep 16 3:31 AM,N,Sun 4:05 pm @ LAR
+Devontez Walker,40991,Bal,WR,,,Sep 16 2:46 AM,N,Sun 1:00 pm @ Buf
+Josh Whyle,40182,GB,TE,,,Sep 16 2:16 AM,N,Final W 27-19 vs Car
+JuJu Smith-Schuster,30175,NYG,WR,,,Sep 15 6:26 AM,N,
+Jerome Ford,34112,Ari,RB,,,Sep 15 4:31 AM,N,Sun 1:00 pm @ Dal
+Dalen Cambre,42200,NYG,WR,,,Sep 13 8:21 PM,N,
+Efton Chism III,42296,NE,WR,,,Sep 13 8:21 PM,N,Sun 4:25 pm @ Mia
+Najee Harris,33412,NYG,RB,,,Sep 13 8:21 PM,N,
+J. Michael Sturdivant,43085,GB,WR,,,Sep 13 8:16 PM,N,Final W 27-19 vs Car
+Israel Abanikanda,40165,Dal,RB,,,Sep 13 8:16 PM,N,Sun 1:00 pm vs Ari
+Miller Moss,42902,Chi,QB,,,Sep 13 8:11 PM,N,Mon 8:15 pm @ Sea
+John Metchie III,33999,Car,WR,,,Sep 13 8:11 PM,N,Final L 19-27 @ GB
+Rome Odunze,40901,Chi,WR,,,Sep 12 8:36 PM,N,Mon 8:15 pm @ Sea
+Zachariah Branch,42701,Atl,WR,,,Sep 10 11:06 PM,N,Sun 1:00 pm @ TB
+Patrick Mahomes,30123,KC,QB,,,Sep 10 2:06 AM,N,Sun 4:25 pm @ Den
+Joshua Pitsenberger,43098,Hou,RB,,,Sep 9 5:06 AM,N,
+Cameron Dicker,34344,LAC,K,,,Sep 9 4:26 AM,N,Sun 4:05 pm @ LAR
+Tucker Kraft,40102,GB,TE,,,Sep 9 2:41 AM,N,Final W 27-19 vs Car
+Khalil Shakir,34104,Buf,WR,,,Sep 9 2:36 AM,N,Sun 1:00 pm vs Bal
+Mitchell Trubisky,30115,Ten,QB,,,Sep 9 1:31 AM,N,Sun 1:00 pm @ Cin
+Wan'Dale Robinson,33998,Ten,WR,,,Sep 9 1:31 AM,Y,Sun 1:00 pm @ Cin
+Bhayshul Tuten,41900,Jax,RB,,,Sep 9 1:26 AM,N,Sun 1:00 pm vs Ind
+Isaiah Davis,41031,NYJ,RB,,,Sep 9 1:16 AM,N,Sun 1:00 pm vs LV
+Luther Burden III,41824,Chi,WR,,,Sep 9 1:16 AM,N,Mon 8:15 pm @ Sea
+Sam LaPorta,40064,Det,TE,,,Sep 9 1:06 AM,N,Sun 1:00 pm vs Min
+Chuba Hubbard,33514,Car,RB,,,Sep 9 12:41 AM,N,Final L 19-27 @ GB
+Jacob Cowing,40996,SF,WR,,,Sep 8 5:06 AM,N,
+Jack Stoll,33891,SF,TE,,,Sep 8 3:36 AM,N,
+Isaiah Bond,42598,Cle,WR,,,Sep 6 11:26 PM,N,Sun 1:00 pm @ Pit
+Emanuel Wilson,40707,Sea,RB,,,Sep 6 4:56 AM,N,Mon 8:15 pm vs Chi
+Brayden Willis,40261,SF,TE,,,Sep 5 2:26 AM,N,
+Brock Lampe,42293,Buf,RB,,,Sep 3 3:16 AM,N,Sun 1:00 pm vs Bal
+Kalel Mullings,41986,Ten,RB,,,Sep 2 9:06 AM,N,Sun 1:00 pm @ Cin
+Cedric Tillman,40093,NO,WR,,,Sep 2 6:21 AM,N,
+Kenneth Walker III,33996,KC,RB,,,Sep 1 10:06 PM,N,Sun 4:25 pm @ Den
+Brandon Smith,33710,Pit,WR,,,Aug 31 2:26 AM,N,Sun 1:00 pm vs Cle
+Cam Camper,42212,NYJ,WR,,,Aug 30 9:46 PM,N,Sun 1:00 pm vs LV
+Ihmir Smith-Marsette,33545,Car,WR,,,Aug 30 8:56 PM,N,Final L 19-27 @ GB
+Dayton Wade,41262,Bal,WR,,,Aug 30 7:16 PM,N,Sun 1:00 pm @ Buf
+Jalin Hyatt,40128,NYG,WR,,,Aug 30 6:21 AM,N,
+Xavier Worthy,40877,KC,WR,,,Aug 30 4:49 AM,Y,Sun 4:25 pm @ Den
+Jabari Small,41661,Det,RB,,,Aug 30 4:49 AM,N,Sun 1:00 pm vs Min
+Tez Johnson,42030,TB,WR,,,Aug 30 4:49 AM,N,Sun 1:00 pm vs Atl
+Phil Mafah,42018,NYG,RB,,,Aug 30 4:49 AM,N,
+Elijah Higgins,40226,Ari,TE,,,Aug 30 4:49 AM,N,Sun 1:00 pm @ Dal
+Michael Trigg,42887,Dal,TE,,,Aug 30 4:49 AM,N,Sun 1:00 pm vs Ari
+Sione Vaki,41006,Det,RB,,,Aug 30 4:49 AM,N,Sun 1:00 pm vs Min
+Lan Larison,42284,NE,RB,,,Aug 30 4:49 AM,N,Sun 4:25 pm @ Mia
+Cade Otton,34062,TB,TE,,,Aug 24 8:46 PM,N,Sun 1:00 pm vs Atl
+Parker Washington,40234,Jax,WR,,,Aug 24 7:31 PM,N,Sun 1:00 pm vs Ind
+Rasheen Ali,41033,Bal,RB,,,Aug 24 3:11 AM,N,Sun 1:00 pm @ Buf
+Jaydon Blue,41935,Phi,RB,,,Aug 22 9:11 AM,N,Sun 8:20 pm @ Was
+Kevin Coleman Jr.,42768,Mia,WR,,,Aug 22 3:56 AM,N,Sun 4:25 pm vs NE
+Trayveon Williams,32014,Det,RB,,,Aug 22 12:51 AM,N,Sun 1:00 pm vs Min
+Brenden Rice,41098,LV,WR,,,Aug 19 2:56 AM,N,Sun 1:00 pm @ NYJ
+Jameson Williams,33967,Det,WR,,,Aug 19 2:06 AM,N,Sun 1:00 pm vs Min
+Bryce Lance,42758,NO,WR,,,Aug 19 1:56 AM,N,
+Ronnie Bell,40279,LV,WR,,,Aug 18 4:31 AM,N,Sun 1:00 pm @ NYJ
+Zavion Thomas,42711,Chi,WR,,,Aug 17 10:51 PM,N,Mon 8:15 pm @ Sea
+Nick Mullens,30563,Jax,QB,,,Aug 17 7:21 PM,N,Sun 1:00 pm vs Ind
+Geno Smith,26662,NYJ,QB,,,Aug 17 6:41 PM,N,Sun 1:00 pm vs LV
+Garrett Wilson,33965,NYJ,WR,,,Aug 17 6:06 PM,Y,Sun 1:00 pm vs LV
+Khalil Dinkins,42972,SF,TE,,,Aug 17 5:36 AM,N,
+Blake Watson,41388,Ten,RB,,,Aug 17 1:11 AM,N,Sun 1:00 pm @ Cin
+Craig Reynolds,32596,Was,RB,,,Aug 16 7:06 PM,N,Sun 8:20 pm vs Phi
+Jake Browning,32138,LAC,QB,,,Aug 16 6:16 PM,N,Sun 4:05 pm @ LAR
+Michael Wiley,41234,TB,RB,,,Aug 16 3:16 AM,N,Sun 1:00 pm vs Atl
+Kaden Wetjen,42743,Pit,WR,,,Aug 15 8:26 PM,N,Sun 1:00 pm vs Cle
+Josh Reynolds,30230,NYJ,WR,,,Aug 15 1:21 AM,N,Sun 1:00 pm vs LV
+Jaleel McLaughlin,40696,Cle,RB,,,Aug 14 5:36 AM,N,Sun 1:00 pm @ Pit
+Laquon Treadwell,29257,Ind,WR,,,Aug 13 9:41 PM,N,Sun 1:00 pm @ Jax
+Trevor Siemian,28638,Ten,QB,,,Aug 12 2:51 AM,N,Sun 1:00 pm @ Cin
+Nate Adkins,40702,Den,TE,,,Aug 9 8:56 PM,N,Sun 4:25 pm vs KC
+Elic Ayomanor,41904,Ten,WR,,,Aug 7 4:36 AM,Y,Sun 1:00 pm @ Cin
+Cyrus Allen,42773,KC,WR,,,Aug 6 7:11 PM,N,Sun 4:25 pm @ Den
+Bryce Pierre,42274,Car,TE,,,Aug 6 3:51 AM,N,Final L 19-27 @ GB
+Michael Mayer,40065,LV,TE,,,Aug 5 9:56 PM,N,Sun 1:00 pm @ NYJ
+Jermaine Terry,42446,Cle,TE,,,Aug 5 3:26 AM,N,Sun 1:00 pm @ Pit
+Cam Grandy,41353,Cin,TE,,,Aug 5 2:46 AM,N,Sun 1:00 pm vs Ten
+CJ Dippre,42291,TB,TE,,,Aug 4 8:21 PM,N,Sun 1:00 pm vs Atl
+Zach Ertz,26658,Phi,TE,,,Aug 4 6:56 PM,N,Sun 8:20 pm @ Was
+Chris Rodriguez Jr.,40231,Jax,RB,,,Aug 3 2:46 AM,N,Sun 1:00 pm vs Ind
+Joseph Manjack,43076,Den,WR,,,Aug 3 12:06 AM,N,Sun 4:25 pm vs KC
+Donald Parham Jr.,32456,Pit,TE,,,Aug 1 1:51 AM,N,Sun 1:00 pm vs Cle
+Cody Hardy,43161,NYJ,TE,,,Jul 31 2:41 AM,N,Sun 1:00 pm vs LV
+Mitchell Evans,41949,Car,TE,,,Jul 31 12:41 AM,N,Final L 19-27 @ GB
+Kenny McIntosh,40267,Sea,RB,,,Jul 20 1:21 AM,N,Mon 8:15 pm vs Chi
+Quentin Skinner,42223,Phi,WR,,,Jul 13 3:06 AM,N,Sun 8:20 pm @ Was
+Montrell Johnson Jr.,42173,Car,RB,,,May 20 2:06 AM,N,Final L 19-27 @ GB
