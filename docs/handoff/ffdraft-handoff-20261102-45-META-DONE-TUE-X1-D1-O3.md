@@ -1,7 +1,7 @@
 # Handoff #52 — Meta-analysis DONE (review 002). Tue 11-3: send X1 + D1 (+ O3 long shot), NOT TR1/TR2.
 
-Written 2026-11-02 Mon evening, before MNF. Branch `week3-gameday`. **Everything since `b93e6a4`
-uncommitted** (§4). Supersedes #51. **#50's Tue list still holds except its trade steps (4-5),
+Written 2026-11-02 Mon evening, before MNF. Branch `week3-gameday`, **committed `0f22cd0` and
+pushed** (§4). Supersedes #51. **#50's Tue list still holds except its trade steps (4-5),
 replaced by §2 here.**
 
 ---
@@ -57,7 +57,7 @@ replaced by §2 here.**
 3. Mean-of-projections base lags role changes: M1/S1 flipped sign under `BASE=latest`. Check both.
 4. `trade_finder.R` display bug (#49 §3.5, `6 - W0`) still open; display only.
 
-## 4. Uncommitted. Commit only when user asks. PR owed.
+## 4. Committed `0f22cd0`, pushed 11-02. PR owed (`gh`).
 
 - New: `docs/review/002-season-meta-analysis.md`, `docs/review/002-evidence/` (164 files, ~1 MB),
   `docs/adr/0012-*`, `docs/adr/0013-*`, this handoff.
