@@ -1,0 +1,23 @@
+baseline (helper-equivalent) P(top4) mean over 5 seeds: 0.0269  [per seed: 0.0263 0.0274 0.0277 0.027 0.0263]  exp W 6.08
+helper simulate_cond seed SEED: 0.0262 (must equal seed-1 value above)
+
+(1) persistent ROS-strength sd for US only, mean-preserving
+tau_us = 3                             P 0.0299  dP +0.0029 (seed sd 0.0006)  dW +0.008
+tau_us = 6                             P 0.0387  dP +0.0118 (seed sd 0.0011)  dW +0.027
+tau_us = 9                             P 0.0546  dP +0.0277 (seed sd 0.0014)  dW +0.057
+tau_us = 12                            P 0.0763  dP +0.0494 (seed sd 0.0017)  dW +0.094
+
+(2) weekly sd for US only (SIG = %.2f), mean-preserving
+sig_us = 23 (base 21.1)                P 0.0312  dP +0.0042 (seed sd 0.0005)  dW +0.057
+sig_us = 25 (base 21.1)                P 0.0354  dP +0.0085 (seed sd 0.0010)  dW +0.115
+sig_us = 27 (base 21.1)                P 0.0396  dP +0.0126 (seed sd 0.0011)  dW +0.170
+sig_us = 30 (base 21.1)                P 0.0462  dP +0.0193 (seed sd 0.0012)  dW +0.247
+
+(3) mean shift for comparison
++1 pts/wk wks 9-15                     P 0.0322  dP +0.0052 (seed sd 0.0004)  dW +0.081
++3 pts/wk wks 9-15                     P 0.0442  dP +0.0173 (seed sd 0.0012)  dW +0.251
++5 pts/wk wks 9-15                     P 0.0596  dP +0.0326 (seed sd 0.0011)  dW +0.423
+
+(4) lottery ticket: 25%% chance of +10/wk persistent (stash hits), else -0.5 (cost of slot)  [mean +2.1]
+ticket 25% x +10, else -0.5            P 0.0481  dP +0.0212 (seed sd 0.0007)  dW +0.189
+certain +2.1/wk (same mean)            P 0.0383  dP +0.0113 (seed sd 0.0008)  dW +0.177

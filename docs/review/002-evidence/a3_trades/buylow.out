@@ -1,0 +1,32 @@
+== BUY-LOW: other teams, base >= 9, base - perceived largest ==
+            player nfl pos                owner    base   ppg last3   pval  gap injury_1031 pick
+        A.J. Brown  NE  WR Monday Night Madison 12.1100  4.87  4.87  4.870 7.24           Q   25
+    Bijan Robinson ATL  RB Dave’s Bone Crushers 19.8000 17.60  9.53 13.565 6.23                1
+       Chase Brown CIN  RB           Steel City 14.9275 10.41  8.47  9.440 5.49               18
+      Nico Collins HOU  WR           Steel City 14.8300 12.82  6.37  9.595 5.23               23
+    Jeremiyah Love ARI  RB Monday Night Madison 10.7540  7.98  3.50  5.740 5.01               36
+      Drake London ATL  WR Dave’s Bone Crushers 14.3800 11.29  9.20 10.245 4.14               20
+      Jordan Mason MIN  RB   Locked In Michelle 10.7100  6.90  6.90  6.900 3.81               99
+    Garrett Wilson NYJ  WR           Steel City 12.9640 11.53  7.10  9.315 3.65               38
+     Lamar Jackson BAL  QB       Maybe Mitchell 17.6040 16.02 13.11 14.565 3.04               49
+        Josh Downs IND  WR Dave’s Bone Crushers  9.6960  6.84  6.60  6.720 2.98              100
+        DK Metcalf PIT  WR   Jason's Jazzy Team 10.4640  7.68  7.43  7.555 2.91               87
+  Justin Jefferson MIN  WR       Maybe Mitchell 14.5200 12.07 11.33 11.700 2.82               12
+       Sam Darnold SEA  QB Monday Night Madison 16.0560 13.80 12.77 13.285 2.77              125
+   Omarion Hampton LAC  RB Monday Night Madison  9.0650  8.10  4.67  6.385 2.68               16
+ Amon-Ra St. Brown DET  WR         Sunday Kevin 17.1300 16.36 12.90 14.630 2.50                8
+
+== SELL-HIGH candidates: ours, perceived - base ==
+           player nfl pos    base   ppg last3   pval   gap injury_1031 pick
+       Tre Tucker  LV  WR  7.7760 10.66 14.33 12.495 -4.72               NA
+  Ollie Gordon II MIA  RB  9.6050 11.53 12.83 12.180 -2.57               NA
+   T.J. Hockenson MIN  TE  7.8000  9.00  8.83  8.915 -1.11               NA
+ Javonte Williams DAL  RB 14.6360 15.90 13.23 14.565  0.07               NA
+  Brenton Strange JAX  TE  7.8525  7.63  7.90  7.765  0.09               NA
+     Carnell Tate TEN  WR  9.4340  8.61  8.17  8.390  1.04           O   86
+  Patrick Mahomes  KC  QB 17.8625 18.50 14.64 16.570  1.29              110
+      Rome Odunze CHI  WR  8.3300  6.87  5.93  6.400  1.93               50
+    Denzel Boston CLE  WR  9.3260  9.24  4.30  6.770  2.56               NA
+ Matthew Stafford  LA  QB 18.9460 17.46 14.89 16.175  2.77               70
+     Kyler Murray MIN  QB 18.3400 12.76 17.69 15.225  3.11              142
+    Derrick Henry BAL  RB 16.1380 16.34  7.63 11.985  4.15               11

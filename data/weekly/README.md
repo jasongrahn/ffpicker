@@ -43,10 +43,17 @@ ones where being right is informative.
 | 1 | L vs Bone Crushers | 101.80 | **121.56** | **19.76** | 118.96 |
 | 2 | **W** vs Sunday Kevin | 152.58 | **155.08** | **2.50** | 112.08 |
 | 3 | **W** vs Maybe Mitchell | 108.74 | **133.80** | **25.06** | 96.70 |
-| 4 | L vs Jason's Jazzy Team | 93.00 | **120.10** | **27.10** | 98.58 |
-| 5 | **W** vs Max's TD Bombers | 107.02 | **130.32** | **23.30** | 100–106.4 (est) |
+| 4 | L vs Jason's Jazzy Team | 93.00 | **120.10** | **27.10** | 123.98 |
+| 5 | **W** vs Max's TD Bombers | 107.02 | **130.32** | **23.30** | 100.44 |
 | 6 | L vs Owl Out Blitz | 91.68 | **95.08** | **3.40** | 111.14 |
 | 7 | **W** vs Monday Night Madison | 99.30 | **104.00** | **4.70** | 70.92 |
+
+**CORRECTION 2026-11-02 (review 002, A1).** `opp` = Yahoo Schedule-tab finals (both sides,
+reproduced by `schedule_check.R`). Wk4 was **123.98**, not 98.58: 98.58 = replay of Jazzy's
+frozen Wed lineup with Achane (IR, 0.00) at RB2; 123.98 − 98.58 = 25.40 = Hubbard exact.
+**Best legal 120.10 loses by 3.88 -> wk4 not winnable by any lineup.** Withdrawn: "beats them by
+21.52", "winnable game, lost on three swaps". Swap gains stand as regret, not a lost win. Wk5
+final 100.44 replaces the 100–106.4 range.
 
 ## Week 1 notes
 

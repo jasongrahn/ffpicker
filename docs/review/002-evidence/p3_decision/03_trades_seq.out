@@ -1,0 +1,66 @@
+drops: Titans | fut d_us pts/wk: TR1 3.11 TR2 2.67 both 5.84 | Tate-out base: both 7.1 
+                        stat      mean  sd_seed       se
+1                       base  0.026410 0.001479 4.68e-04
+2                        TR1  0.016700 0.001191 3.77e-04
+3                        TR2  0.012805 0.000999 3.16e-04
+4                       both  0.036410 0.001630 5.15e-04
+5                    both_dW  0.465950 0.005970 1.89e-03
+6                    to_base  0.020985 0.001322 4.18e-04
+7                     to_TR2  0.018385 0.001026 3.24e-04
+8                    to_both  0.042145 0.001817 5.75e-04
+9              both_from_wk9  0.036410 0.001630 5.15e-04
+10            both_from_wk10  0.028110 0.001572 4.97e-04
+11            both_from_wk11  0.023720 0.001292 4.09e-04
+12            both_from_wk12  0.020025 0.001308 4.14e-04
+13            both_from_wk13  0.014205 0.001082 3.42e-04
+14               gen6_from11  0.025690 0.001153 3.65e-04
+15               gen8_from11  0.038475 0.001671 5.28e-04
+16              gen10_from11  0.053665 0.002345 7.41e-04
+17              gen12_from11  0.071350 0.002231 7.06e-04
+18                       pW9  0.000000 0.000000 0.00e+00
+19                      pW10  0.322520 0.003843 1.22e-03
+20                      c_WW       NaN       NA       NA
+21                      c_WL       NaN       NA       NA
+22                      c_LW  0.057959 0.003309 1.05e-03
+23                      c_LL  0.011391 0.001077 3.41e-04
+24                      t_WW       NaN       NA       NA
+25                      t_WL       NaN       NA       NA
+26                      t_LW  0.110643 0.003499 1.11e-03
+27                      t_LL  0.028862 0.002353 7.44e-04
+28                      tpW9  0.000000 0.000000 0.00e+00
+29                     tpW10  0.415255 0.003973 1.26e-03
+30          LL_plus10_from11  0.093355 0.002713 8.58e-04
+31                      c_L9  0.026410 0.001479 4.68e-04
+32                      c_W9       NaN       NA       NA
+33                      t_L9  0.062820 0.002330 7.37e-04
+34                      t_W9       NaN       NA       NA
+35 arm5_Dave’s Bone Crushers -0.004435 0.000418 1.32e-04
+36   arm5_Jason's Jazzy Team -0.003775 0.000462 1.46e-04
+37   arm5_Locked In Michelle -0.000350 0.000299 9.46e-05
+38     arm5_Max’s TD Bombers -0.003240 0.000509 1.61e-04
+39       arm5_Maybe Mitchell -0.003235 0.000488 1.54e-04
+40 arm5_Monday Night Madison  0.002095 0.000250 7.90e-05
+41        arm5_Owl Out Blitz -0.001475 0.000347 1.10e-04
+42           arm5_Steel City -0.000820 0.000408 1.29e-04
+43         arm5_Sunday Kevin -0.004365 0.000608 1.92e-04
+44              max_wk14_2.5 -0.001425 0.000297 9.41e-05
+45     sweet_Brenton Strange  0.000000 0.000000 0.00e+00
+46     sweet_Ollie Gordon II -0.005685 0.000574 1.81e-04
+47         sweet_Rome Odunze -0.000725 0.000159 5.01e-05
+48          sweet_Tre Tucker  0.000470 0.000127 4.03e-05
+49       sweet_Denzel Boston -0.007745 0.000592 1.87e-04
+50              sweet_Chiefs -0.006235 0.000580 1.83e-04
+51                    ceil15  0.186610 0.003001 9.49e-04
+52                  ceil18.5  0.275140 0.003111 9.84e-04
+53                    ceil25  0.472090 0.003336 1.06e-03
+ week                                        game             root_for  swing
+    9 Dave’s Bone Crushers v Monday Night Madison Monday Night Madison 0.0101
+   10       Jason's Jazzy Team v Max’s TD Bombers     Max’s TD Bombers 0.0090
+   15   Locked In Michelle v Monday Night Madison Monday Night Madison 0.0085
+   10         Monday Night Madison v Sunday Kevin Monday Night Madison 0.0077
+   12                   Steel City v Sunday Kevin           Steel City 0.0075
+   11          Jason's Jazzy Team v Owl Out Blitz        Owl Out Blitz 0.0068
+   15               Max’s TD Bombers v Steel City           Steel City 0.0068
+   14             Jason's Jazzy Team v Steel City           Steel City 0.0065
+    9                Owl Out Blitz v Sunday Kevin        Owl Out Blitz 0.0063
+   11           Dave’s Bone Crushers v Steel City           Steel City 0.0060

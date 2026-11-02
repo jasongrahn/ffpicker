@@ -1,9 +1,10 @@
 suppressPackageStartupMessages({library(dplyr)})
 WK   <- 8L
 YDIR <- Sys.getenv("YDIR", "docs/uploads/week_8_data")
+YDATE <- Sys.getenv("YDATE", "2026-10-28")   # which pull; read_yahoo_week() stops on a mixed folder
 source("dev/weekly/read_yahoo_week.R")
-yh <- read_yahoo_week(YDIR)
-src <- "position_exports_2026-10-28"
+yh <- read_yahoo_week(YDIR, YDATE)
+src <- paste0("position_exports_", YDATE)
 
 slots_me <- c("K. Murray"="QB","J. Williams"="RB","D. Henry"="RB","C. Tate"="WR",
               "D. Boston"="WR","T. Hockenson"="TE","O. Gordon II"="FLEX","J. Bates"="K","Commanders"="DEF")

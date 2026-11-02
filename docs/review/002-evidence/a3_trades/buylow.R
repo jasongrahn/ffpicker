@@ -1,0 +1,10 @@
+# Buy-low / sell-high: base (Yahoo mean proj) vs what managers see (0.5 season ppg + 0.5 last-3).
+source("docs/review/002-evidence/a3_trades/common.R")
+pv <- readRDS(file.path(A3, "perceived.rds")); pv$pval <- ifelse(pv$g > 0, 0.5 * pv$ppg + 0.5 * pv$last3, 0)
+d <- merge(active(R)[, c("player", "owner", "pos", "nfl", "base")], pv[, c("player", "injury_1031", "g", "ppg", "last3", "pval", "pick")], by = "player")
+d <- d[d$pos %in% c("QB", "RB", "WR", "TE") & d$base > 0, ]; d$gap <- round(d$base - d$pval, 2)
+options(width = 200)
+cat("== BUY-LOW: other teams, base >= 9, base - perceived largest ==\n")
+b <- d[d$owner != ME & d$base >= 9, ]; print(head(b[order(-b$gap), c("player", "nfl", "pos", "owner", "base", "ppg", "last3", "pval", "gap", "injury_1031", "pick")], 15), row.names = FALSE)
+cat("\n== SELL-HIGH candidates: ours, perceived - base ==\n")
+o <- d[d$owner == ME, ]; print(o[order(o$gap), c("player", "nfl", "pos", "base", "ppg", "last3", "pval", "gap", "injury_1031", "pick")], row.names = FALSE)

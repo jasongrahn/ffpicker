@@ -1,0 +1,81 @@
+415316 trades screened in 273 s
+
+== tateOut : win-win (d_them >= 0) top 25 by d_us ==
+             team shape                                             give                               get  noQB drop_us      drop_them d_us   d_them ppg_them
+ Max’s TD Bombers   3-2    Patrick Mahomes + Tre Tucker + T.J. Hockenson Luther Burden III + Isaiah Likely FALSE                 Giants 3.99 0.065071  -5.0060
+ Max’s TD Bombers   3-2   Patrick Mahomes + Tre Tucker + Brenton Strange Luther Burden III + Isaiah Likely FALSE                 Giants 3.99 0.080071  -5.2131
+ Max’s TD Bombers   3-2    Kyler Murray + Patrick Mahomes + Carnell Tate Luther Burden III + Isaiah Likely FALSE         Germie Bernard 3.92 0.010429  -6.1740
+ Max’s TD Bombers   3-2  Kyler Murray + Patrick Mahomes + T.J. Hockenson Luther Burden III + Isaiah Likely FALSE         Germie Bernard 3.92 0.000714  -5.9234
+ Max’s TD Bombers   3-2 Kyler Murray + Patrick Mahomes + Brenton Strange Luther Burden III + Isaiah Likely FALSE         Germie Bernard 3.92 0.015714  -6.2520
+ Max’s TD Bombers   3-2       Kyler Murray + Tre Tucker + T.J. Hockenson Luther Burden III + Isaiah Likely FALSE                 Giants 3.92 0.133286  -5.0060
+ Max’s TD Bombers   3-2      Kyler Murray + Tre Tucker + Brenton Strange Luther Burden III + Isaiah Likely FALSE                 Giants 3.92 0.148286  -5.2131
+ Max’s TD Bombers   3-2     Kyler Murray + Carnell Tate + T.J. Hockenson Luther Burden III + Isaiah Likely FALSE         Germie Bernard 3.86 0.000714  -5.8943
+ Max’s TD Bombers   3-2    Kyler Murray + Carnell Tate + Brenton Strange Luther Burden III + Isaiah Likely FALSE         Germie Bernard 3.86 0.015714  -6.1336
+ Max’s TD Bombers   3-2  Kyler Murray + T.J. Hockenson + Brenton Strange Luther Burden III + Isaiah Likely FALSE         Germie Bernard 3.86 0.015714  -5.9234
+ Max’s TD Bombers   3-2       Patrick Mahomes + Tre Tucker + Rome Odunze Luther Burden III + Isaiah Likely FALSE                 Giants 3.83 0.095357  -5.2536
+ Max’s TD Bombers   3-2        Tre Tucker + Rome Odunze + T.J. Hockenson Luther Burden III + Isaiah Likely FALSE             Geno Smith 3.83 0.009286  -5.0564
+ Max’s TD Bombers   3-2       Tre Tucker + Rome Odunze + Brenton Strange Luther Burden III + Isaiah Likely FALSE             Geno Smith 3.82 0.016786  -5.2636
+ Max’s TD Bombers   3-2      Patrick Mahomes + Carnell Tate + Tre Tucker  Luther Burden III + Tucker Kraft FALSE         Germie Bernard 3.82 0.109214  -0.2036
+ Max’s TD Bombers   3-2    Patrick Mahomes + Tre Tucker + T.J. Hockenson  Luther Burden III + Tucker Kraft FALSE                 Giants 3.82 0.245214   0.0626
+ Max’s TD Bombers   3-2       Carnell Tate + Tre Tucker + T.J. Hockenson  Luther Burden III + Tucker Kraft FALSE             Geno Smith 3.82 0.113714   0.0121
+ Max’s TD Bombers   3-2   Patrick Mahomes + Tre Tucker + Brenton Strange  Luther Burden III + Tucker Kraft FALSE                 Giants 3.81 0.252714   0.0197
+ Max’s TD Bombers   3-2      Carnell Tate + Tre Tucker + Brenton Strange  Luther Burden III + Tucker Kraft FALSE             Geno Smith 3.81 0.121214  -0.0307
+ Max’s TD Bombers   3-2      Kyler Murray + Patrick Mahomes + Tre Tucker  Luther Burden III + Tucker Kraft FALSE         Germie Bernard 3.81 0.177429  -0.2327
+ Max’s TD Bombers   3-2          Kyler Murray + Tre Tucker + Rome Odunze Luther Burden III + Isaiah Likely FALSE                 Giants 3.76 0.163571  -5.2536
+ Max’s TD Bombers   3-2    Tre Tucker + T.J. Hockenson + Brenton Strange  Luther Burden III + Tucker Kraft FALSE             Geno Smith 3.76 0.121214   0.0121
+ Max’s TD Bombers   3-2  Patrick Mahomes + Carnell Tate + T.J. Hockenson  Luther Burden III + Tucker Kraft FALSE         Germie Bernard 3.76 0.112643  -0.8257
+ Max’s TD Bombers   3-2 Patrick Mahomes + Carnell Tate + Brenton Strange  Luther Burden III + Tucker Kraft FALSE         Germie Bernard 3.75 0.120143  -0.9007
+ Max’s TD Bombers   3-2    Kyler Murray + Patrick Mahomes + Carnell Tate  Luther Burden III + Tucker Kraft FALSE         Germie Bernard 3.75 0.236000  -0.9007
+ Max’s TD Bombers   3-2  Kyler Murray + Patrick Mahomes + T.J. Hockenson  Luther Burden III + Tucker Kraft FALSE         Germie Bernard 3.75 0.180857  -0.8549
+
+== per partner best win-win ==
+                 team shape                                                  give                               get  d_us  d_them
+     Max’s TD Bombers   3-2         Patrick Mahomes + Tre Tucker + T.J. Hockenson Luther Burden III + Isaiah Likely 3.988 0.06507
+ Dave’s Bone Crushers   1-2                                        T.J. Hockenson             DJ Moore + Josh Downs 3.291 0.17857
+        Owl Out Blitz   1-2                                      Matthew Stafford        Jaylen Waddle + Mike Evans 2.951 0.23526
+         Sunday Kevin   3-2        Javonte Williams + Tre Tucker + T.J. Hockenson   Christian Watson + Malik Nabers 2.892 0.37536
+       Maybe Mitchell   3-2 Matthew Stafford + Patrick Mahomes + Javonte Williams    Justin Jefferson + Sam LaPorta 2.656 0.04364
+   Jason's Jazzy Team   3-2     Matthew Stafford + Kyler Murray + Patrick Mahomes     Jared Goff + Jameson Williams 2.630 0.03607
+   Locked In Michelle   3-2             Tre Tucker + Rome Odunze + T.J. Hockenson     Jordan Love + Aaron Jones Sr. 2.188 0.00436
+ Monday Night Madison   3-2       Kyler Murray + Patrick Mahomes + T.J. Hockenson     Saquon Barkley + Stefon Diggs 2.181 0.18536
+           Steel City   3-2      Patrick Mahomes + Derrick Henry + T.J. Hockenson      Nico Collins + Juwan Johnson 0.345 0.04629
+
+== asSim : win-win (d_them >= 0) top 25 by d_us ==
+             team shape                                              give                               get  noQB drop_us      drop_them d_us   d_them ppg_them
+ Max’s TD Bombers   3-2        Patrick Mahomes + Tre Tucker + Rome Odunze Luther Burden III + Isaiah Likely FALSE                 Giants 3.41 0.095357  -5.2536
+ Max’s TD Bombers   3-2     Patrick Mahomes + Tre Tucker + T.J. Hockenson Luther Burden III + Isaiah Likely FALSE                 Giants 3.41 0.065071  -5.0060
+ Max’s TD Bombers   3-2    Patrick Mahomes + Tre Tucker + Brenton Strange Luther Burden III + Isaiah Likely FALSE                 Giants 3.41 0.080071  -5.2131
+ Max’s TD Bombers   3-2    Patrick Mahomes + Rome Odunze + T.J. Hockenson Luther Burden III + Isaiah Likely FALSE         Germie Bernard 3.41 0.008214  -5.9234
+ Max’s TD Bombers   3-2   Patrick Mahomes + Rome Odunze + Brenton Strange Luther Burden III + Isaiah Likely FALSE         Germie Bernard 3.41 0.015714  -6.2520
+ Max’s TD Bombers   3-2         Tre Tucker + Rome Odunze + T.J. Hockenson Luther Burden III + Isaiah Likely FALSE             Geno Smith 3.41 0.009286  -5.0564
+ Max’s TD Bombers   3-2        Tre Tucker + Rome Odunze + Brenton Strange Luther Burden III + Isaiah Likely FALSE             Geno Smith 3.41 0.016786  -5.2636
+ Max’s TD Bombers   3-2      Kyler Murray + Patrick Mahomes + Rome Odunze Luther Burden III + Isaiah Likely FALSE         Germie Bernard 3.41 0.031000  -6.4874
+ Max’s TD Bombers   3-2   Kyler Murray + Patrick Mahomes + T.J. Hockenson Luther Burden III + Isaiah Likely FALSE         Germie Bernard 3.41 0.000714  -5.9234
+ Max’s TD Bombers   3-2  Kyler Murray + Patrick Mahomes + Brenton Strange Luther Burden III + Isaiah Likely FALSE         Germie Bernard 3.41 0.015714  -6.2520
+ Max’s TD Bombers   3-2           Kyler Murray + Tre Tucker + Rome Odunze Luther Burden III + Isaiah Likely FALSE                 Giants 3.35 0.163571  -5.2536
+ Max’s TD Bombers   3-2        Kyler Murray + Tre Tucker + T.J. Hockenson Luther Burden III + Isaiah Likely FALSE                 Giants 3.35 0.133286  -5.0060
+ Max’s TD Bombers   3-2       Kyler Murray + Tre Tucker + Brenton Strange Luther Burden III + Isaiah Likely FALSE                 Giants 3.35 0.148286  -5.2131
+ Max’s TD Bombers   3-2       Kyler Murray + Rome Odunze + T.J. Hockenson Luther Burden III + Isaiah Likely FALSE         Germie Bernard 3.35 0.076429  -5.9234
+ Max’s TD Bombers   3-2      Kyler Murray + Rome Odunze + Brenton Strange Luther Burden III + Isaiah Likely FALSE         Germie Bernard 3.35 0.083929  -6.2520
+ Max’s TD Bombers   3-2   Kyler Murray + T.J. Hockenson + Brenton Strange Luther Burden III + Isaiah Likely FALSE         Germie Bernard 3.35 0.015714  -5.9234
+ Max’s TD Bombers   3-2  Patrick Mahomes + Denzel Boston + T.J. Hockenson     DeVonta Smith + Isaiah Likely FALSE                 Giants 3.27 0.002214  -7.8181
+ Max’s TD Bombers   3-2 Patrick Mahomes + Denzel Boston + Brenton Strange     DeVonta Smith + Isaiah Likely FALSE                 Giants 3.27 0.009714  -8.0253
+ Max’s TD Bombers   3-2    Kyler Murray + Patrick Mahomes + Denzel Boston     DeVonta Smith + Isaiah Likely FALSE                 Giants 3.26 0.025000  -8.0657
+ Max’s TD Bombers   3-2         Kyler Murray + Denzel Boston + Tre Tucker     DeVonta Smith + Isaiah Likely FALSE                 Giants 3.26 0.025000  -7.4007
+ Max’s TD Bombers   3-2        Patrick Mahomes + Tre Tucker + Rome Odunze  Luther Burden III + Tucker Kraft FALSE                 Giants 3.24 0.320929   0.0197
+ Max’s TD Bombers   3-2     Patrick Mahomes + Tre Tucker + T.J. Hockenson  Luther Burden III + Tucker Kraft FALSE                 Giants 3.24 0.245214   0.0626
+ Max’s TD Bombers   3-2    Patrick Mahomes + Rome Odunze + T.J. Hockenson  Luther Burden III + Tucker Kraft FALSE         Germie Bernard 3.24 0.188357  -0.8549
+ Max’s TD Bombers   3-2         Tre Tucker + Rome Odunze + T.J. Hockenson  Luther Burden III + Tucker Kraft FALSE             Geno Smith 3.24 0.189429   0.0121
+ Max’s TD Bombers   3-2    Patrick Mahomes + Tre Tucker + Brenton Strange  Luther Burden III + Tucker Kraft FALSE                 Giants 3.23 0.252714   0.0197
+
+== per partner best win-win ==
+                 team shape                                              give                               get  d_us  d_them
+     Max’s TD Bombers   3-2        Patrick Mahomes + Tre Tucker + Rome Odunze Luther Burden III + Isaiah Likely 3.414 0.09536
+        Owl Out Blitz   2-2                  Matthew Stafford + Derrick Henry       CeeDee Lamb + George Kittle 2.696 0.04048
+       Maybe Mitchell   3-2  Kyler Murray + Patrick Mahomes + Ollie Gordon II         Breece Hall + Sam LaPorta 2.528 0.09914
+ Dave’s Bone Crushers   1-2                                    T.J. Hockenson            Brock Purdy + DJ Moore 2.316 0.31371
+   Locked In Michelle   3-2         Tre Tucker + Rome Odunze + T.J. Hockenson     Jordan Love + Aaron Jones Sr. 2.002 0.00436
+         Sunday Kevin   1-2                                     Derrick Henry   Bucky Irving + Christian Watson 1.958 0.30786
+   Jason's Jazzy Team   3-2 Matthew Stafford + Kyler Murray + Patrick Mahomes     Jared Goff + Jameson Williams 1.894 0.03607
+ Monday Night Madison   2-2                 Matthew Stafford + T.J. Hockenson     Jeremiyah Love + Emeka Egbuka 1.297 0.03664
+           Steel City   3-2  Patrick Mahomes + Derrick Henry + T.J. Hockenson      Nico Collins + Juwan Johnson 0.172 0.04629

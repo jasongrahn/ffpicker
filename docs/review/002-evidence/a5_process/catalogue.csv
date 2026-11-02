@@ -1,0 +1,70 @@
+id,wk,type,item,effort,changed_decision,realized_pts,flipped_game,verdict,kill_fired / rule_followed
+X1,draft,data bug,config rounds 17 vs real 15 -> zero K drafted; fixed by waiver add McLaughlin / drop Jacobs,"S #24,#26",y,"K filled before wk1 kick (0 lost); Jacobs gone (now TR1 target, costs Kyler+Hockenson)",n,no test asserted rounds vs roster math,-
+X2,draft,roster,Jacobs (CEL) drafted at 71: status col never wired to app,-,n,dead pick wks1-6,n,"named 4x pre-draft, never fixed",-
+X3,draft,roster,QB fade: Stafford 70 + Mahomes 110; RB 7 / WR 4,-,-,2 QB starters; WR thin -> 6 WR adds since,n,QB surplus now weak currency (+1.2/wk max partner gain),-
+L1-1,1,lineup,QB Stafford (proj 18.06) over Mahomes (16.39),S #26,n (followed proj+board),-17.56,YES (L by 17.16 -> W by 0.40),projection error; 9% gap = coin flip by today's 15% rule,-
+W1-1,1,waiver,add McLaughlin K / drop Jacobs,S #26,y,K 11.00,n,forced by X1,-
+I1,2,data infra,"Yahoo API: 12 probes, OAuth1+2, application filed -> DENIED","S #28-#29 (~1.5), ADR 0002 105 lines",n,0,n,zero value; should have been a 1-probe time box,-
+I2,2,data infra,weekly layer fct_player_week_current + scorer validated 12/12 -> 57/57,S #28,n,enables actuals,n,kept re-validating after 'stop' rule,-
+L2-1,2,lineup,D1 Mahomes over Stafford (18.50 v 18.22),14,n,+1.00,n,coin flip,kill n
+L2-2,2,lineup,"D2 Sutton over Odunze (contrarian, snaps)",19,y (vs crowd),-1.80,n,usage override lost,kill FIRED; next wk followed proj
+L2-3,2,lineup,D3 Adams starts despite 54% snaps,10,n,Adams 35.50,n,right,kill n
+W2-1,2,waiver,"D4 hold Etienne FLEX, no upgrade (221 FA scanned)",27,n,Etienne 6.10,n,-,kill FIRED; held wk3 (n=2)
+W2-2,2,waiver,"D5 add Raymond / drop Tracy, bench; trigger 6+ tgt",52,y,bench 6.50,n,right call after corrected reasoning,trigger missed by 1 (5 tgt)
+O2-1,2,opponent,D6 Dal/Was same-game exposure accepted,16,n,Ferguson 18.30,n,hedge held,kill n
+L2-4,2,lineup,Sun 11:30 check; Mixon O = state not event (snap diff),20,n (avoided bad rec),~0,n,analysis catch,-
+L3-1,3,lineup,D1 Mahomes (20.90) over Stafford (16.65),35,n,-5.96,n (W +12.04),projection error,kill FIRED -> 'stop analysing QB' (broken wk8)
+L3-2,3,lineup,D5 Raymond benched (trigger missed by 1 tgt),28,n,-11.90 vs Sutton,n (W +12.04),single-wk trigger whipsaw,kill FIRED; trigger then fired (7 tgt) -> forced start wk4
+L3-3,3,lineup,D3 Etienne Q contingency via replacement-deadline rule,26,"n (checked, not needed)",0,n,process right,-
+L3-4,3,lineup,"D2/D4/D7 Adams+Sutton, Henry+Williams, 16 swaps tested",45,n,regret 25.06,n,projection error,D7 fired (regret)
+S3-1,3,stream DST,Chiefs DEF over Patriots (opp implied 17.5 v 24.2),~45,y,+9.00,n,rule worked on its mechanism,-
+S3-2,3,stream K,Butker over McLaughlin (own implied),~13,y,-6.00,n,K rule later null (n 214),half-kill; 'score halves separately'
+O3-1,3,opponent,KC concentration + h2h hedge map (§1/§1a),88,n,0,n,hedge falsified (team v player level),kill n; bar mis-set
+C4-1,4,data/correction,Rankings Actual = projection (#32 built 3 moves on it),"36 + S #32 wasted, #33",y (3 reversed pre-processing),avoided Stroud swap (-3.61 ppg),n,"analysis catch, 1 session lost",-
+M4-1,4,method,§0/§3a ppg 'production' frame: 'favourites by 18',92,y (fed D6),lost by 30.98,n,wrong frame; ppg = worst baseline (MAE 7.32),3a kill moot
+S4-1,4,stream DST,Ravens over Chiefs (16.0 v 21.5),25,y,+2.00,n,-,kill n
+S4-2,4,stream K,D3/GD1 hold Butker (>3 proj-pt bar),52,n,-12.00 vs Bates (bench),n (L by 30.98),bar unsatisfiable; K null later,"literal n / intent y -> bar rewritten, not retired"
+L4-1,4,lineup,"D4 QB Mahomes pre-committed, no analysis",9,n,+5.32,n,the one QB call with zero analysis,no kill (by design)
+L4-2,4,lineup,D6a Raymond over Odunze AGAINST Yahoo (usage),57,y,-10.80 vs Odunze,n (L by 30.98),usage override lost,KILLED both legs; followed (Raymond dropped wk5)
+L4-3,4,lineup,D6/D6b Sutton -> Robinson -> Boston at WR2,70,y,+10.00 vs Sutton,n,-,kill n
+W4-1,4,waiver,D9 add Boston / drop Gainwell,27,y,Boston 10.90; WR/FLEX starter wks4-8,n,best early add,kill n (3 of 5 then moot)
+W4-2,4,waiver,D10 Etienne -> IR slot (no drop); D11 Bates K2 added,63,y,Bates 18.00 on bench,n,"IR = free spot, analysis catch",D10 open: activation needs a drop now
+W4-3,4,waiver,D8 Stroud claim cancelled; D1 Etienne kept; Allen cancelled,56,y,avoided downgrades,n,from C4-1,-
+M4-2,4,method,GD1 game-script multipliers on 2 player-weeks,72,n,0,n,underpowered,FIRED; correctly ignored
+B4-1,4,deadline/bye,bye horizon + 2-wk bye-monitoring design (never built),99,n,0,n,overhead,-
+R4-1,4,retro,"retro: 'best legal beats them by 21.52, winnable' (opp = 98.58 replay)",26,y (drove K-bar rewrite),real opp 123.98 -> hind max 120.10 still L,NO,FALSE lesson from snapshot misread,-
+C5-1,5,data/correction,#36 named Sutton the drop on ppg -> USER caught -> Raymond,25,y,T2 wk5 Sutton 8.80 v Raymond 1.90,n,user catch -> ADR 0009,T2 truncated 1 of 3
+S5-1,5,stream DST,"Bengals claim (failed, prio 9) -> Jaguars (rule #2)",~40,y,-4.00 vs held Ravens; rule #1 HOU 15,n (W +6.58),"decision right, outcome bad",DST kill retired
+W5-1,5,waiver,"W2 add Gordon II / drop Marks (ACL vacancy, opp trend +12.5)",20,y,bench 14.80; FLEX 16.80 wk7,n,good add,W2 n (18 opp)
+W5-2,5,waiver,W3 add Tate / drop W. Robinson (tgt 6-5-9-12),16,y,"1.10, 16.00, 7.40, then O",n,good add; now injured,W3 armed -> PASS wk6 (followed)
+W5-3,5,waiver,Hockenson claim before pre-reg 8-opp trigger; Ferguson dropped instead of Butker (mis-execution) -> Higbee,~26,y,TE -9.60 vs Higbee wk5,n (W +6.58),rule overridden + execution error,§4 gate overridden
+M5-1,5,method,game-script buckets -> backtest (inconclusive) -> slope; spread tiebreak ADOPTED on reasoning,~120,y,Boston over Gordon -2.70,n (W +6.58),retired 6 days later (215 pairs),"GS fired, inert"
+M5-2,5,method,dst_test n 128 / proj_benchmark MAE 4.29 / lineup-at-ceiling 0.80 v 73.62,~95,y (rules),indirect,n,HIGH value: closed 3 questions,-
+M5-3,5,method,spread_tiebreak_leaguewide 215 pairs -> retired,49,y,stops -0.49/decision,n,HIGH value closure,-
+W6-1,6,waiver,"M0 drop Sutton; H1 hold Hockenson (concussion, not role loss)",41,y,"Hockenson 11.50, 13.80 since",n,analysis catch,H1 informational
+S6-1,6,stream DST,KC + CLE double DEF claim (sized: worth ~1 pt),"72 + S #40,#41",y,Chiefs 15.00; Browns 5.00 wk7,n,72 lines for ~1 pt,-
+W6-2,6,waiver,drop Bates (dead K2) -> re-added wk7; add Strange (zero priority),33,y,Strange 6.90 v Higbee 2.20,n,K churn; Strange good,A4 PASS (76% snaps)
+L6-1,6,lineup,S2 Tate over Odunze; 2a Boston over Odunze held (4.6% gap),38,n,+10.60; -3.40,n (L by 19.46),coin flips,S2 deposit
+O6-1,6,opponent,§5e Wed export read as live roster; R6 Mon export read as live -> both wrong,~59,n,0,n,snapshot-as-truth x2,R8 correction
+R6-1,6,retro,"league-wide regret table, R3 over-read then retracted",78,n,0,n,overhead,-
+M6-1,6,method,R4 5-15% pair band first look n 58 (pre-registered pool),28,n then y wk7,-,n,good pre-registration,-
+R6-2,6,result,L 91.68-111.14; hind max 95.08,-,-,-,NO,roster + projection error + opp stream (+27),-
+S7-1,7,stream K,"K1 Bates over Butker (concordant, not a test)",13,n,+4.00,n,-,-
+L7-1,7,lineup,T1 Hockenson over Higbee on slot ordering,21,n,+9.10,n (W +28.38),option logic right,pass
+L7-2,7,lineup,W1 hold Tate over Odunze (TEN-record argument rejected),40,n,-1.50,n,"coin flip, 40 lines",W1a/b pass
+S7-2,7,stream DST,Browns DEF (opp 18.0),8,n,+2.00 vs Chiefs,n,-,-
+W7-1,7,waiver,M0 no TE add (need-before-candidates),47,n,right (no FA TE beat ours),n,-,y
+W7-2,7,waiver,M1 add Kyler / drop Butker (user ask),56,y,dP 0.000 as add; TR1 chip; started wk8 20.90,n,"option, not a fix",M1a pass; M1b wk11
+I7-1,7,data infra,league_sim + playoff_odds + trade_finder + predictions + gate,S #45 + ~570 code lines,y (prices moves in wins),-,n,HIGH value infra,gate PASS n 25
+M7-1,7,method,pair band pooled n 314 -> dead band 5% -> 15%,14,y,removes 5-15% calls,n,HIGH value closure,"fired, followed"
+M7-2,7,method,stream detector / Yahoo bias / T4 calibration,~40,n,0,n,never resolvable this season,Sunday pull missed 3 wks
+W8-1,8,waiver,C1 add Tucker / drop Higbee (tgt 5-7-12),26,y,"Tucker 0.00 (1 tgt, 54% snaps)",n,role kill window wks 8-10,T5 wk1 of 3: bad
+S8-1,8,stream DST,C2 Commanders over Browns/Chiefs (opp 18.0),~10,y,+13.00 vs Chiefs,n (L),-,-
+S8-2,8,stream K,K hold Bates; k_test n 214 null -> K streaming retired,"25 code lines, ~30 min",y (stops churn),-,n,HIGH value: should have run wk3,-
+T8-1,8,trade,TR1 Kyler+Hockenson -> Jacobs: deferred to 11-3,~20,n (not sent),0,n,T1 PASS 71% snaps,"GO, unsent"
+T8-2,8,trade,"TR2 Mahomes+Tate -> Burden+Likely: GO 10-28, NOT SENT (missed)",~35 + S,n (not sent),0,n,plan not executed; parked since 10-21,"T2 recalibrated (target_dip_test n 1,009)"
+L8-1,8,lineup,QB Kyler over Stafford: argued 3x (+DvP harness 78 lines); rule said Stafford +0.20,~45,y (user over rule),+11.62 v Stafford; -4.54 v Mahomes 25.44,n (L <= -25.5),expected 0.20 pts = +0.003 W,no kill (15% band)
+L8-2,8,lineup,Tate O (Sat nflreadr pull) -> Tucker,~15,y,0 (Tucker 0.00),n,ex-ante avoided sure zero ~+8.5 = +0.11 W,-
+I8-1,8,data bug,"read_yahoo_week() keeps OLDEST pull (found 10-31, unfixed)",-,n,unknown; Thu wk9 freeze exposed,n,fix before Thu,-
+R8-1,8,result,L 87.50 v ~113-133; best swap Mahomes +4.54,-,-,-,NO,"projection error both sides (Javonte -10, Burrow +20.6)",-
+P-1,all,docs/process,"26 in-season handoffs ~4,700 lines; 5 superseded/empty within a day (#32,#36,#38,#40,#41); CLAUDE.md rewrite session",S 26,-,0,n,~19% of sessions reversed next day,-

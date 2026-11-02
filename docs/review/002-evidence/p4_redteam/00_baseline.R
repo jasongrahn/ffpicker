@@ -1,0 +1,18 @@
+# P4 red team: baseline dump. Run from repo root.
+SC <- "docs/review/002-evidence"
+source(file.path(SC, "sim_helpers.R"))
+cat("CLEAN:\n"); print(CLEAN)
+cat("CUR", CUR, "EXDATE", EXDATE, "WEEKS", WEEKS, "\n")
+cat("teams:\n"); print(teams); print(lapply(teams, utf8ToInt) |> sapply(function(x) any(x > 127)))
+cat("GAP", GAP, "SIG", SIG, "TAU2", TAU2, "n cl", nrow(cl), "\n")
+print(GAPS)
+print(data.frame(W0, PF0))
+cat("FILL:\n"); print(FILL)
+print(REPL |> select(pos, player, yteam, owner, injury, base))
+print(round(M0, 1))
+cat("fut:\n"); print(round(apply(M0, 1, fut), 1))
+s0 <- simulate(M0); sc <- simulate_cond(M0)
+cat("simulate() P(top4) us", mean(s0$top4[, ME]), " simulate_cond():", pt4(sc), "\n")
+print(round(colMeans(sc$top4), 3))
+print(table(R$owner))
+saveRDS(list(R = R, P = P, M0 = M0, FILL = FILL, AVAIL = AVAIL), file.path(SC, "p4_redteam/base_objs.rds"))

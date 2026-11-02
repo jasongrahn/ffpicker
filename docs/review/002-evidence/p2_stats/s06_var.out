@@ -1,0 +1,30 @@
+
+	Bartlett test of homogeneity of variances
+
+data:  r by factor(team)
+Bartlett's K-squared = 11.877, df = 9, p-value = 0.2203
+
+
+	Fligner-Killeen test of homogeneity of variances
+
+data:  r by factor(team)
+Fligner-Killeen:med chi-squared = 10.53, df = 9, p-value = 0.3093
+
+
+	Bartlett test of homogeneity of variances
+
+data:  pf by factor(team)
+Bartlett's K-squared = 11.438, df = 9, p-value = 0.2469
+
+                   team sd_pf n
+1  Dave’s Bone Crushers  25.0 7
+2          JGrahnasaurs  20.8 7
+3    Jason's Jazzy Team  14.9 7
+4    Locked In Michelle  27.2 7
+5      Max’s TD Bombers  25.7 7
+6        Maybe Mitchell  32.7 7
+7  Monday Night Madison  11.5 7
+8         Owl Out Blitz  14.4 7
+9            Steel City  14.3 7
+10         Sunday Kevin  25.0 7
+our resid sd 7.45 n 5, 95% CI [4.5, 21.4]

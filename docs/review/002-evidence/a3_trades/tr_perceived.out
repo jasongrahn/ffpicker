@@ -1,0 +1,10 @@
+TR1        ppg-world: us +5.98  them -8.26 pts/wk | drops us[] them[Sam Darnold]
+TR2        ppg-world: us +9.48  them -6.11 pts/wk | drops us[] them[]
+MahLikely  ppg-world: us +5.79  them -5.27 pts/wk | drops us[] them[]
+TateBurden ppg-world: us +3.69  them -0.64 pts/wk | drops us[] them[]
+asSim TR1       partner dW -0.149
+asSim TR2       partner dW -0.009
+asSim MahLikely partner dW -0.023
+tateOut TR1       partner dW -0.149
+tateOut TR2       partner dW -0.101
+tateOut MahLikely partner dW -0.024

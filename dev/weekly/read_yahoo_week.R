@@ -73,8 +73,10 @@ read_yahoo_position <- function(path) {
 #' Read every position export for a week and stack them.
 #'
 #' @param dir Directory holding `yahoo_week*_*.csv`.
+#' @param date Pull stamp to read (`"2026-10-31"`, or `"undated"`). Required when
+#'   `dir` holds 2+ pulls; stops otherwise.
 #' @return tibble, one row per player (deduped; `wrt` is a superset of wr/te).
-read_yahoo_week <- function(dir) {
+read_yahoo_week <- function(dir, date = NULL) {
   # WHITELIST the position exports. A glob over `yahoo_week*_*.csv` also drags
   # in gamedaycalls/ and injuries/, which share the prefix but not the schema
   # -- no `Roster Status`, no `Fantasy Fan Pts` -- and the failure surfaces as
@@ -88,6 +90,18 @@ read_yahoo_week <- function(dir) {
   # the last non-date segment, so `rosterchanges_injured_reserve_<date>.csv` and
   # friends stay excluded.
   files <- files[grepl(sprintf("_(%s)(_[0-9-]+)?\\.csv$", paste(pos, collapse = "|")), files)]
+  # 2+ pulls in one folder (Tue + Thu re-pull): distinct() below keeps the FIRST
+  # row per player and files sort by date ascending -> a mixed read silently
+  # served the OLDEST projections plus stragglers from the newer pull (wk8 10-28
+  # v 10-31, handoff #49 §3.1). Never mix; the caller names the pull.
+  stamp <- ifelse(grepl("_[0-9]{4}-[0-9]{2}-[0-9]{2}\\.csv$", files),
+                  sub(".*_([0-9]{4}-[0-9]{2}-[0-9]{2})\\.csv$", "\\1", files), "undated")
+  if (!is.null(date)) {
+    files <- files[stamp == date]
+  } else if (length(unique(stamp)) > 1) {
+    stop(sprintf("%s holds %d pulls (%s) -- pass date = one of them", dir,
+                 length(unique(stamp)), paste(sort(unique(stamp)), collapse = ", ")))
+  }
   stopifnot(length(files) > 0)
 
   bind_rows(lapply(files, read_yahoo_position)) |>

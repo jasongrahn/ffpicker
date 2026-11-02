@@ -1,0 +1,13 @@
+     pair   n    rho     lo    hi sd_qb sd_b sd_team_after  d_sd mean_equiv_pts
+ QB + WR1 808  0.377  0.316 0.434  7.04 6.93         21.94  0.86           0.34
+ QB + WR2 715  0.422  0.360 0.480  6.94 5.99         21.90  0.82           0.32
+ QB + TE1 765  0.303  0.237 0.366  6.94 5.29         21.60  0.52           0.20
+ QB + RB1 801 -0.006 -0.075 0.064  6.96 7.24         21.07 -0.01           0.00
+Warning message:
+In inner_join(g, g, by = c("season", "week", team = "opponent_team")) :
+  Detected an unexpected many-to-many relationship between `x` and `y`.
+ℹ Row 147 of `x` matches multiple rows in `y`.
+ℹ Row 147 of `y` matches multiple rows in `x`.
+ℹ If a many-to-many relationship is expected, set `relationship =
+  "many-to-many"` to silence this warning.
+opposing QBs same game: rho 0.215, n 442

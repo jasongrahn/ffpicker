@@ -1,0 +1,12 @@
+suppressMessages({library(dplyr); library(arrow)})
+nf <- readRDS("data/nflreadr/pull_2026.rds")
+ps <- nf$player_stats
+cat("player_stats weeks:", sort(unique(ps$week)), " season:", unique(ps$season), "\n")
+cat(head(names(ps), 60), "\n")
+op <- read_parquet("data/raw/ff_opportunity.parquet")
+cat("ff_opp seasons:", sort(unique(op$season)), "\n"); cat(names(op)[1:40], "\n")
+print(op |> filter(season == max(season)) |> count(week))
+sn <- nf$snaps; cat("snaps:", names(sn), "\n"); print(range(sn$week))
+inj <- nf$injuries; cat("inj:", names(inj), "\n"); print(range(inj$week))
+dp <- nf$depth; cat("depth:", names(dp), "\n"); print(head(dp, 3))
+sc <- nf$schedules; cat("sched:", names(sc)[1:30], "\n")

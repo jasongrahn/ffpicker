@@ -17,3 +17,5 @@ Check here before re-opening any question — most "should we try X" already has
 | 0009 | Yahoo projection for start/sit; usage trend for the wire and the drop; never ppg | in-season |
 | 0010 | Lineup layer at its ceiling: leverage is roster quality + the two streaming slots | in-season |
 | 0011 | Stream DST on opponent implied total; K on own implied total | in-season |
+| 0012 | Trades: acceptance on the partner's ppg view; positive under both bases; parallel, on a clock | in-season |
+| 0013 | Underdog: buy season-level upside at equal value; weekly variance is not a lever | in-season |

@@ -144,6 +144,9 @@ done <- sch |> filter(!is.na(pf)) |> group_by(team) |>
 W0 <- setNames(done$w0, done$team)[teams]; PF0 <- setNames(done$pf0, done$team)[teams]
 G <- sch |> filter(week %in% WEEKS, team < opponent) |>
   transmute(week, a = team, b = opponent, ia = match(team, teams), ib = match(opponent, teams))
+# Locale guard: under LC_ALL=C the U+2019 teams lost their rosters (8 owners,
+# 3 games/wk) and our P(top 4) read 14.6% v 2.6%, no error (review 002, P4).
+stopifnot(setequal(unique(R$owner), teams), nrow(G) == 5 * length(WEEKS))
 
 # Same seed -> same draws for any M: common random numbers, so a delta between
 # two calls is the move's effect, not Monte Carlo noise.

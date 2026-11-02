@@ -1,0 +1,198 @@
+2	frame/overhead	0	(preamble)
+2	frame/overhead	14	Week 2 decision log — written BEFORE kickoff
+2	frame/overhead	2	Decisions
+2	lineup start/sit	14	D1. Mahomes (KC) starts, Stafford (LAR) benched
+2	lineup start/sit	19	D2. Sutton (Den) starts over Odunze (Chi) at WR2
+2	lineup start/sit	10	D3. Adams (LAR) starts despite 54% snap share
+2	waiver/roster	15	D4. Etienne (NO) held in FLEX. No waiver upgrade taken.
+2	waiver/roster	19	D5. Raymond (Chi) added but BENCHED. Deferred to Sun 11:30am.
+2	waiver/roster	33	D5 addendum — 2025 history pulled 2026-09-16, BEFORE kickoff
+2	opponent/h2h	16	D6. Dal/Was same-game exposure ACCEPTED
+2	frame/overhead	8	Open at freeze time
+2	deadline/bye	14	Lock order
+2	lineup start/sit	20	Sunday 11:30am check — 2026-09-20, BEFORE 1:00pm lock
+2	waiver/roster	12	D4 — NO backfield, wk1 actuals
+2	waiver/roster	10	False lead, killed before acting. Record it.
+2	opponent/h2h	6	Chi opponent note, unused
+2	lineup start/sit	7	Weather — open item 1, CLOSED as unanswerable from nflreadr
+2	frame/overhead	9	Still open at 11:30am
+2	frame/overhead	22	Retro
+2	retro/scoring	34	Reading, per decision
+2	retro/scoring	6	Regret 2.50
+2	retro/scoring	6	Scorecard: 4 right, 2 wrong, and the two wrong cost 2.50 combined
+2	method test	6	Yahoo moved its projections on inactive news. We cannot.
+3	frame/overhead	0	(preamble)
+3	frame/overhead	32	Week 3 decision log — FROZEN 2026-09-23 (Tue)
+3	deadline/bye	27	0. Deadlines. Read this before anything else.
+3	opponent/h2h	27	1. Correlation. NEW and self-inflicted. Record it honestly.
+3	opponent/h2h	30	1a. Head-to-head overlap. Only visible once the opponent lineup was logged.
+3	frame/overhead	2	2. Decisions
+3	lineup start/sit	18	D1. QB — Mahomes starts, Stafford benched
+3	lineup start/sit	20	D2. WR — Adams + Sutton start, Odunze benched
+3	lineup start/sit	26	D3. FLEX — Etienne holds, but he is `Q`
+3	lineup start/sit	15	D4. RB — Henry + J. Williams, unchanged
+3	lineup start/sit	10	D5. Raymond — trigger did NOT fire, stays benched
+3	stream K/DST	30	D6. Streaming — Chiefs DEF and Butker in. BOTH EXECUTED.
+3	lineup start/sit	10	D7. No lineup swaps. Tested exhaustively.
+3	frame/overhead	26	3. What to learn this week
+3	frame/overhead	16	Open at freeze time
+3	frame/overhead	34	Retro
+3	retro/scoring	14	Result: **W 108.74 – 96.70** vs Maybe Mitchell. Record **2-1**.
+3	retro/scoring	13	Kill table
+3	retro/scoring	7	Process: the `Q` contingency was executed correctly
+3	opponent/h2h	14	§1 concentration did not fire, but it was still the worst block on the roster
+3	opponent/h2h	17	Hedge check (§1a): one hedge untested, one **falsified**
+3	method test	16	Out-of-sample game script (learn #2). n=3 per player. Nothing is concluded here.
+3	method test	15	Projection error, both sides. First week this is measurable.
+3	frame/overhead	11	Still open — needs six bench actuals + two dropped players
+3	frame/overhead	26	Retro, part 2 — bench scored 2026-09-29. Kill table now complete.
+3	retro/scoring	13	Completed kill table
+3	stream K/DST	28	D6 — the week's real experiment. Split decision, method survives.
+3	lineup start/sit	18	D5 — the expensive one. A pre-committed rule fired against us.
+3	lineup start/sit	17	D1 — the QB call is now wrong in both directions
+3	retro/scoring	36	Regret: **25.06**. Worst of the three weeks — in a week we won.
+3	retro/scoring	13	What carries into Week 4
+4	frame/overhead	0	(preamble)
+4	frame/overhead	24	Week 4 Decisions — 2026, JGrahnasaurs (2-1)
+4	data/correction	36	00. METHODOLOGY CORRECTION. Read before trusting anything dated earlier.
+4	method test	42	0. The frame. Reversed by the correction. We are favourites, not underdogs.
+4	frame/overhead	2	1. Roster moves.
+4	waiver/roster	30	D1. **CORRECTED.** Etienne RETAINED. Allen claim cancelled.
+4	stream K/DST	25	D2. DEF streamed: Chiefs -> Ravens. Method call, executed.
+4	lineup start/sit	24	2. Lineup. Nine slots.
+4	stream K/DST	22	D3. K — hold Butker. Method explicitly on probation.
+4	lineup start/sit	9	D4. QB — Mahomes. No analysis. Pre-committed.
+4	lineup start/sit	16	D5. RB — Henry + J. Williams. Forced by projection.
+4	lineup start/sit	36	D6. **CORRECTED.** WR / FLEX — Adams, **Robinson**, Raymond. Sutton benched.
+4	lineup start/sit	49	D6a. **AMENDMENT, 09-29 late.** Yahoo says bench Raymond for Odunze. Resolved ag
+4	lineup start/sit	34	D6b. **AMENDMENT, 10-01.** Sutton -> Boston at WR2. D6's choice of Robinson supe
+4	waiver/roster	26	D8. **CANCELLED.** Stroud claim withdrawn. Stafford retained.
+4	waiver/roster	27	D9. **NEW.** D. Boston claimed, K. Gainwell dropped. Executed 09-29 evening.
+4	waiver/roster	30	D10. **NEW.** Etienne -> IR slot. Executed 10-01. No drop required.
+4	stream K/DST	33	D11. **NEW.** J. Bates (K, Det) added as K2, into the slot D10 freed.
+4	lineup start/sit	7	D7. Forced slots. No decision exists.
+4	opponent/h2h	22	3. Head-to-head overlap. Observed lineup, Tue 09-29.
+4	method test	50	3a. Production read, added at freeze 2026-10-02.
+4	deadline/bye	18	4. Deadlines. Earlier than the lock table says.
+4	frame/overhead	11	5. Explicitly NOT being learned this week
+4	deadline/bye	37	6. Bye horizon. Opened Tue 09-29, not yet a process.
+4	deadline/bye	44	7. Open task: bye monitoring, two weeks ahead
+4	frame/overhead	6	Retro
+4	method test	60	GD1. Gameday script read. 2026-10-04 11:40 ET. **No lineup change.**
+4	frame/overhead	26	Retro — Week 4. Appended 2026-10-05. Nothing above this edited.
+4	retro/scoring	14	Kill conditions scored
+4	lineup start/sit	8	D6a. Clean kill. Chicago target room reorganised.
+4	stream K/DST	30	D3. The bar measured the wrong thing. Method NOT retired.
+4	method test	12	GD1. Fired, and stated against ourselves.
+4	retro/scoring	12	Decision wrong vs outcome bad
+4	frame/overhead	5	Standing
+5	frame/overhead	0	(preamble)
+5	frame/overhead	10	Week 5 Decisions — 2026, JGrahnasaurs (2-2)
+5	data/correction	25	00. METHOD CORRECTION. Read before trusting handoff #36.
+5	frame/overhead	7	1. Roster moves. Three waiver claims, submitted 10-06, process **Wed 10-07**.
+5	stream K/DST	20	W1. Add **Bengals DST**, drop **Kalif Raymond**.
+5	waiver/roster	20	W2. Add **Ollie Gordon II** (RB, Mia), drop **Woody Marks**.
+5	waiver/roster	16	W3. Add **Carnell Tate** (WR, Ten), drop **Wan'Dale Robinson**.
+5	stream K/DST	6	W-HOLD. **Butker is not droppable.** Butker bye 5, Bates bye 6 — complementary.
+5	lineup start/sit	18	2. Lineup. Nine slots. Settled except FLEX and DST, both waiver-dependent.
+5	method test	9	D-SPREAD. **Stafford sits 0.0 off a multiplier cliff. Flagged, not resolved.**
+5	method test	6	D-WR-SCRIPT. **No WR is benched for being on a dog.** Robinson's TEN was a 7.5-p
+5	opponent/h2h	18	3. Head-to-head. We trail. Re-run on complete lines 10-06.
+5	waiver/roster	14	4. Open hole, not yet acted on: **TE.**
+5	deadline/bye	13	5. Deadlines. Per slot: `min(kickoff of legal replacements)`.
+5	deadline/bye	14	6. Byes ahead. Two real crises.
+5	method test	14	6a. Method tests live this week. Score these in the retro.
+5	stream K/DST	12	**The K rule change is NOT testable this week. Do not score it as a pass.**
+5	method test	31	Game-script multipliers: BACKTESTED 2026-10-06. Inconclusive by construction.
+5	method test	22	What the backtest DID establish: decision impact is 2.3%.
+5	data/correction	9	Data defect found and repaired during the backtest.
+5	frame/overhead	9	7. Explicitly NOT being learned this week
+5	frame/overhead	3	Retro
+5	method test	6	§6b Method-test results, run 2026-10-06
+5	stream K/DST	24	Test 1 — DST streaming rule. VALIDATED.
+5	method test	21	Test 2 — Yahoo projection vs baselines. YAHOO WINS DECISIVELY.
+5	method test	9	Test 3 — Regret decomposition.
+5	method test	30	Capstone — is the regret ours or the projection's?
+5	method test	10	Operational finding — the wire has two phases
+5	method test	23	7. Game-script remeasurement, 2026-10-07
+5	lineup start/sit	12	Week 5 lineup, FINAL (set 2026-10-07)
+5	waiver/roster	12	Roster move
+5	frame/overhead	10	RETRO — appended 2026-10-13 Tue. Nothing above the `## Retro` line touched.
+5	retro/scoring	28	R0. Scoreboard
+5	opponent/h2h	16	R0b. Opponent total NOT recoverable. Range only.
+5	retro/scoring	16	R1. Kill conditions scored. Seven. One fired, and it was pre-declared inert.
+5	method test	49	R2. THE SPREAD TIEBREAK IS DEAD. Killed by a powered test, not by this week.
+5	stream K/DST	12	R3. DST rule HELD league-wide. Our pick still scored 2.00.
+5	waiver/roster	9	R4. TE cost 9.60 and it was NOT a decision error.
+5	data/correction	17	R5. Data finding — DEF naming flips between vintages inside one week.
+5	retro/scoring	16	R6. Decision wrong vs outcome bad — the ledger
+5	frame/overhead	11	R7. Still not learned
+6	frame/overhead	0	(preamble)
+6	frame/overhead	15	Week 6 Decisions — 2026, JGrahnasaurs (3-2, 5th)
+6	frame/overhead	11	0. Headline. Lineup is forced. The week's work was the wire.
+6	frame/overhead	2	1. Roster moves.
+6	waiver/roster	20	M0. Dropped **Courtland Sutton** outright, 10-13, no claim attached.
+6	stream K/DST	72	W1. Claim **KC DEF**, no drop. W2. Claim **CLE DEF**, drop **Jaguars**.
+6	waiver/roster	21	H1. HELD **T.J. Hockenson** despite the concussion. <!-- CONFIRM BEFORE FREEZE -
+6	lineup start/sit	37	2. Lineup. Started vs benched.
+6	lineup start/sit	19	2a. The only live choice: 3 WRs from 4. Started Adams / Tate / Boston.
+6	method test	19	2b. Our own numbers vs Yahoo's. Checked, overrode nothing.
+6	retro/scoring	14	3. Kill conditions live this week. Score every one in the retro.
+6	frame/overhead	9	4. Open questions carried into the retro
+6	lineup start/sit	5	5. Wed 10-14 refresh. Both #41 §1 items closed. Two bye-week facts in #41 are WR
+6	data/correction	7	5a. Closed.
+6	deadline/bye	11	5b. #41's bye weeks are wrong. Derived from `load_schedules(2026)`.
+6	deadline/bye	10	5c. Week 11 is the pinch week, and it is exactly covered. H1 resolved by arithme
+6	waiver/roster	27	5d. Wire: waivers already cleared. No swap justified.
+6	opponent/h2h	14	5e. Opponent re-read. They DROPPED Stroud. Realistic final ~112.8, not #41's 115
+6	deadline/bye	7	5f. Freeze deadline CONFIRMED Sun 10-18 1:00pm ET.
+6	lineup start/sit	4	6. FINAL. Wed 10-14 evening. Supersedes §2 and corrects §5d, §5e, §5f.
+6	waiver/roster	9	6a. Moves made.
+6	waiver/roster	24	6b. §5d was WRONG. "No add justified" did not survive the wk11 filter.
+6	opponent/h2h	17	6c. §5e was WRONG. Their bench has an `(Empty)` slot. They CAN stream a DEF.
+6	lineup start/sit	17	6d. Final lineup. 108.71.
+6	deadline/bye	7	6e. §5f CORRECTED. Freeze deadline is now **Sun 10-18 9:30am ET**, not 1:00pm.
+6	retro/scoring	16	6f. Kill conditions. Score ALL of these in the retro.
+6	frame/overhead	8	Retro
+6	retro/scoring	32	R1. Result. We scored **91.68**. Lost. All six conditions scored below.
+6	retro/scoring	20	R2. Conditions. Scored. **Both powered tests PASS. Nothing fires.**
+6	method test	40	R3. Regret **3.40 — lowest in the league.** Mean 16.08. This is luck, not skill.
+6	method test	28	R4. S1/S2 at scale. First powered look. **The 5-15% band is a coin flip.**
+6	method test	19	R5. Yahoo projection error, league-wide. n=135, and it is **biased low**.
+6	opponent/h2h	14	R6. ~~Process. One prediction missed, and it is the useful one.~~ **WRONG. See R
+6	retro/scoring	8	R7. Carried to week 7.
+6	opponent/h2h	28	R8. CORRECTION. Final was **111.14**. They filled the slot. R6 had it backwards.
+6	method test	38	R9. The correction guts R3's counterfactual for the one team we can check.
+6	retro/scoring	10	R10. Carried to week 7 — supersedes R7.
+7	frame/overhead	0	(preamble)
+7	frame/overhead	17	Week 7 Decisions — 2026, JGrahnasaurs (3-3, 6th)
+7	lineup start/sit	13	0. Headline. Lineup is projection-optimal at **105.27** vs their **100.60**. +4.
+7	lineup start/sit	19	1. Lineup. Frozen.
+7	frame/overhead	2	2. Decisions, with pre-registered kill conditions.
+7	stream K/DST	13	K1. Start **Bates** (8.61) over Butker (7.49). 15% gap, above every dead band.
+7	lineup start/sit	21	T1. Start **Hockenson** (8.09) over Higbee (7.88) — on ORDERING, not belief.
+7	lineup start/sit	40	W1. **HOLD Tate** (9.13) over Odunze (8.73). Locks Thu 8:15pm.
+7	stream K/DST	8	D1. Start **Browns DEF** (7.31). Opp implied **18.00, 4th lowest of 28**.
+7	waiver/roster	47	M0. **No roster move. Roster is full and there is no hole.** HOLD, recorded as a
+7	method test	15	3. Open tests carried in, not resolved this week.
+7	method test	26	4. League-wide seed for the next session. Not a week-7 decision.
+7	frame/overhead	6	Retro
+7	waiver/roster	56	M1. Post-freeze, 2026-10-21 Wed. **ADD K. Murray (QB, MIN), DROP Butker (K, KC).
+7	method test	30	L1. League-wide, pre-registered 2026-10-21 Wed 10:35 EDT — before Thu 8:15pm kic
+7	retro/scoring	32	R1. Result. **WON 99.30 - 70.92, +28.38.** 4-3, 5th. Every pre-registered test s
+7	retro/scoring	15	R2. Conditions. **Nothing fires.** Decision wrong: none. Outcome bad: W1a mildly
+7	retro/scoring	6	R3. Regret **4.70** — all projection error, 0 deviation.
+7	method test	21	R4. L1, the sim. **L1a PASS, stronger.** L1b 5 of 5.
+7	method test	14	R5. §3.1 pair band, pooled wks 4-7. **FIRES -> dead band 5% -> 15%.**
+7	method test	15	R6. §3.2 Yahoo projection sign. **Wk6 uniform sign broke.**
+7	method test	6	R7. §3.3 stream detector. Not testable — Sunday pre-kickoff pull missed, 3rd wee
+8	frame/overhead	0	(preamble)
+8	frame/overhead	16	Week 8 Decisions — 2026, JGrahnasaurs (4-3, 5th)
+8	waiver/roster	26	1. Claims. Placed 10-27 by user, clear Wed 10-28. Order C1 > C2.
+8	waiver/roster	7	2. Holds.
+8	trade	48	3. Trades. Deadline 11-28; accept by ~11-26 (2-day league-vote review).
+8	lineup start/sit	28	4. Lineup. Frozen 10-29 18:59 ET. QB re-frozen 19:14 ET (pre-kickoff) -> Kyler.
+8	method test	42	5. Tests. Pre-registered 10-29 19:45 ET, before kickoff.
+8	frame/overhead	6	Retro
+8	lineup start/sit	40	M1. Post-freeze, 2026-10-31 Sat. **Tate OUT (shoulder) -> Tucker starts WR.** St
+8	trade	7	R1. T1 scored early, 2026-10-31 Sat. **Jacobs 71% snaps -> TR1 stays GO.**

@@ -21,9 +21,14 @@ M0 <- strength_matrix(R); s0 <- simulate(M0)
 p0 <- colMeans(s0$top4); w0 <- colMeans(s0$W)
 
 settle <- function(r, keep) {           # enforce cap, cheapest drop first
+  # Never drop a team's ONLY QB/K/DEF: FILL then supplies a wire body for free,
+  # with no roster spot, so the drop reads as a gain (Madison's sole DEF -> fake
+  # +1.5/wk partner gain; TR1 read win-win at +0.0, truth -2.0). Review 002.
   dropped <- character(0)
   while (nrow(active(r)) > CAP) {
-    c <- setdiff(active(r)$player, keep)
+    a <- active(r); np <- table(a$pos)
+    sole <- a$player[a$pos %in% c("QB", "K", "DEF") & np[a$pos] == 1]
+    c <- setdiff(a$player, c(keep, sole))
     left <- vapply(c, function(p) fut(team_strength(r[r$player != p, ])), numeric(1))
     d <- c[which.max(left)]; dropped <- c(dropped, d); r <- r[r$player != d, ]
   }

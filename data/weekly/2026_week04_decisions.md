@@ -824,3 +824,15 @@ n=1 observations. Future script bars need many player-weeks, not our own two sta
 
 **n = 4. Fit nothing.** Two bars this week (D3, GD1) failed on *power*, not on direction.
 **Stop writing kill conditions on single player-weeks.** That is the transferable finding.
+
+---
+
+### CORRECTION 2026-11-02 (review 002). Appended; nothing above edited.
+
+Final was **93.00-123.98, L by 30.98** (Yahoo Schedule tab, both sides). The 98.58 used in this
+retro = replay of Jazzy's frozen Wed lineup, Achane (IR, 0.00) at RB2 — not their score.
+123.98 − 98.58 = 25.40 = Hubbard exact -> they started Hubbard for Achane. **Best legal 120.10
+loses by 3.88 -> wk4 was not winnable by any lineup.** Withdrawn: "winnable game, lost on three
+swaps", "K hold bar forfeited 18 pts". Swap gains (+12.00 / +7.90 / +7.20) stand as regret, not
+a lost win. The K-bar rewrite this retro drove is moot: K rule retired 2026-10-27 (ADR 0011).
+Source: `docs/review/002-evidence/a1_luck/q3_wk4_reconcile.R`.

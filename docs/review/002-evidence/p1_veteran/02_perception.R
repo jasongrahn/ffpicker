@@ -1,0 +1,20 @@
+SCR <- "docs/review/002-evidence"
+suppressMessages(source(file.path(SCR, "sim_helpers.R")))
+source(file.path(SCR, "p1_veteran/p1_data.R"))
+options(width = 220)
+cat("id method:\n"); print(table(Y$method[Y$pos != "DEF" & Y$owner %in% teams], useNA = "ifany"))
+show <- function(d) print(as.data.frame(d |> transmute(owner = substr(owner, 1, 12), player, pos, nfl = yteam, inj = injury, proj8 = proj, base = round(base, 1),
+   gp, ppg = round(ppg, 1), l3 = round(ppg_l3, 1), snap_l3 = round(snap_l3), snap_prev = round(snap_prev), tsh_l3 = round(100 * tsh_l3), opp_l3 = round(opp_l3, 1), wks)), row.names = FALSE)
+cat("\n=== OUR ROSTER ===\n"); show(Y |> filter(owner == ME) |> arrange(pos, desc(base)))
+cat("\n=== perception gap, all rostered skill players: ppg - base (pos: QB RB WR TE) ===\n")
+rp <- Y |> filter(owner %in% teams, pos %in% c("QB","RB","WR","TE")) |> mutate(gap = ppg - base)
+cat("cor(ppg, base) rostered skill:", round(cor(rp$ppg, rp$base, use = "complete"), 3), " n", sum(complete.cases(rp$ppg, rp$base)), "\n")
+cat("\n-- SELL-HIGH candidates (ours): ppg >> base --\n"); show(rp |> filter(owner == ME) |> arrange(desc(gap)))
+cat("\n-- BUY-LOW: rostered by others, base >= 9, ppg < base (they look worse than projected) --\n")
+show(rp |> filter(owner != ME, base >= 9, gap < 0) |> arrange(gap) |> head(25))
+cat("\n-- Etienne / IR / injury detail --\n")
+show(Y |> filter(player %in% c("Travis Etienne Jr.", "Davante Adams", "Carnell Tate", "Josh Jacobs", "Luther Burden III", "Isaiah Likely")))
+inj <- nf$injuries |> filter(full_name %in% c("Travis Etienne", "Travis Etienne Jr.", "Davante Adams", "Carnell Tate", "Tyler Shough", "Lamar Jackson", "Brock Purdy", "Christian McCaffrey")) |>
+  select(week, team, full_name, report_primary_injury, report_status, practice_status) |> arrange(full_name, week)
+print(as.data.frame(inj), row.names = FALSE)
+saveRDS(Y, file.path(SCR, "p1_veteran/Y.rds"))

@@ -1,0 +1,17 @@
+gate slope excl. Madison games: 0.97 (SE 0.66) n 20
+pf~ceiling WITHIN-team (team FE): 1.08 [0.08, 2.09]
+BETWEEN-team slope pf~ceiling 1.93 (SE 0.46, n 10) | cor(team ceiling, team gap) +0.58 p 0.080
+h=1 drift (ceiling_w - forecast from w-1), origins 4-7: team F 1.44 p 0.215, between var 4.7
+                   team     m    s2 n   shr
+1          JGrahnasaurs  3.77  0.49 4  3.47
+2        Maybe Mitchell  7.29 10.52 4  2.62
+3         Owl Out Blitz  1.84  3.10 4  1.32
+4    Jason's Jazzy Team  2.55 11.74 4  1.11
+5            Steel City  1.16 12.34 4  0.71
+6  Monday Night Madison -0.63 43.23 4  0.43
+7    Locked In Michelle  0.07  4.60 4  0.31
+8  Dave’s Bone Crushers -0.86  7.98 4  0.02
+9      Max’s TD Bombers -2.40  4.65 4 -0.93
+10         Sunday Kevin -7.39  7.13 4 -2.60
+us h=1 drift 5.4,4,2,3.6 mean 3.77 t-CI [1.54, 6.01]
+5-15% band excl. wk6 (seen at registration): 137/256 = 53.5% [47.2, 59.7]

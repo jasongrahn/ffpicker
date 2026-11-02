@@ -1,0 +1,44 @@
+tateOut baseline P 2.1 | unique (team,get) rows 129 
+
+== A. win-win on paper (d_them >= 0), top 10 by our dP ==
+ team         shape give                                           get                               drop_us          d_us d_them ppg_them dP   dW   dP_them P_them0 tags_in                name_heavy fa_gain fa_who          
+ Max’s TD Bom 3-2   Patrick Mahomes + Tre Tucker + T.J. Hockenson  Luther Burden III + Isaiah Likely                  3.99 0.07   -5.01    1.87 0.30 -0.4    84.5                           FALSE      0.0     C.J. Stroud     
+ Max’s TD Bom 3-2   Patrick Mahomes + Tre Tucker + T.J. Hockenson  Luther Burden III + Tucker Kraft                   3.82 0.25    0.06    1.77 0.29 -0.1    84.5                           FALSE      0.0     C.J. Stroud     
+ Dave’s Bone  1-2   T.J. Hockenson                                 DJ Moore + Josh Downs             Patrick Mahomes  3.29 0.18    0.30    1.58 0.26  0.3    50.9    D. Moore Q             FALSE      0.0     <NA>            
+ Max’s TD Bom 3-2   Patrick Mahomes + Denzel Boston + Tre Tucker   DeVonta Smith + Tucker Kraft                       3.31 0.18   -2.13    1.51 0.25 -0.1    84.5    D. Smith O             FALSE      0.1     Courtland Sutton
+ Dave’s Bone  1-2   T.J. Hockenson                                 Brock Purdy + DJ Moore            Matthew Stafford 3.05 0.31    0.45    1.44 0.24  0.6    50.9    D. Moore Q             FALSE      0.0     <NA>            
+ Dave’s Bone  3-2   Javonte Williams + Tre Tucker + T.J. Hockenson Drake London + Jalen Coker                         3.20 0.18    6.18    1.44 0.27 -0.3    50.9                            TRUE      0.0     C.J. Stroud     
+ Owl Out Blit 1-2   Matthew Stafford                               Jaylen Waddle + Mike Evans        Patrick Mahomes  2.95 0.24   -1.03    1.40 0.23  0.2    91.5    J. Waddle Q M. Evans Q FALSE      0.0     <NA>            
+ Dave’s Bone  1-2   T.J. Hockenson                                 DJ Moore + Ladd McConkey          Patrick Mahomes  2.87 0.31    0.45    1.34 0.23  0.7    50.9    D. Moore Q             FALSE      0.0     <NA>            
+ Sunday Kevin 1-2   Derrick Henry                                  Chris Olave + Malik Nabers        Patrick Mahomes  2.55 0.39   -6.63    1.27 0.23  0.7    61.0                           FALSE      0.0     <NA>            
+ Owl Out Blit 2-2   Matthew Stafford + Derrick Henry               CeeDee Lamb + George Kittle                        2.80 0.04   -2.98    1.26 0.23  0.0    91.5                           FALSE      0.0     <NA>            
+
+== B. they lose a little on paper (-2 <= d_them < 0), top 5 ==
+ team         shape give                                            get                            drop_us         d_us d_them ppg_them dP   dW   dP_them P_them0 tags_in     name_heavy fa_gain fa_who     
+ Owl Out Blit 3-2   Matthew Stafford + Tre Tucker + Brenton Strange Matthew Golden + George Kittle                 6.45 -1.74  -0.97    3.97 0.55 -2.7    91.5                FALSE      0       C.J. Stroud
+ Owl Out Blit 1-2   Matthew Stafford                                Mike Evans + Brock Bowers      Patrick Mahomes 6.18 -1.65  -5.37    3.76 0.53 -2.5    91.5    M. Evans Q   TRUE      0       <NA>       
+ Owl Out Blit 1-2   Matthew Stafford                                Jaylen Waddle + Brock Bowers   Tre Tucker      6.18 -1.75  -4.27    3.76 0.54 -2.7    91.5    J. Waddle Q  TRUE      0       <NA>       
+ Sunday Kevin 1-2   Patrick Mahomes                                 Malik Nabers + Tyler Warren    Carnell Tate    5.25 -1.20  -6.77    3.40 0.49 -4.3    61.0                FALSE      0       <NA>       
+ Dave’s Bone  2-2   Ollie Gordon II + Brenton Strange               Tetairoa McMillan + DJ Moore                   5.28 -1.98   0.51    3.32 0.46 -6.6    50.9    D. Moore Q  FALSE      0       <NA>       
+
+== C. fair on BOTH surfaces (d_them >= -1 & ppg_them >= -1), not name-heavy, top 10 ==
+ team         shape give                                             get                                 drop_us          d_us d_them ppg_them dP   dW   dP_them P_them0 tags_in       name_heavy fa_gain fa_who          
+ Dave’s Bone  1-2   T.J. Hockenson                                   Jalen Coker + Josh Downs            Patrick Mahomes  4.07 -0.60  0.06     2.19 0.34 -2.1    50.9                  FALSE      0.00    <NA>            
+ Owl Out Blit 3-2   Ollie Gordon II + Tre Tucker + T.J. Hockenson    Mike Evans + George Kittle                           4.10 -0.80  0.03     2.09 0.34 -1.1    91.5    M. Evans Q    FALSE      0.08    Devaughn Vele   
+ Owl Out Blit 3-2   Ollie Gordon II + Tre Tucker + T.J. Hockenson    Matthew Golden + Jaylen Waddle                       3.97 -0.94  0.11     2.02 0.34 -1.4    91.5    J. Waddle Q   FALSE      0.00    C.J. Stroud     
+ Maybe Mitche 3-2   Kyler Murray + Patrick Mahomes + Ollie Gordon II Breece Hall + Michael Wilson                         3.39 -0.91  0.72     1.79 0.30 -2.0    18.4    B. Hall Q     FALSE      0.06    Courtland Sutton
+ Max’s TD Bom 3-2   Patrick Mahomes + Tre Tucker + T.J. Hockenson    Luther Burden III + Tucker Kraft                     3.82  0.25  0.06     1.77 0.29 -0.1    84.5                  FALSE      0.00    C.J. Stroud     
+ Dave’s Bone  1-2   T.J. Hockenson                                   DJ Moore + Josh Downs               Patrick Mahomes  3.29  0.18  0.30     1.58 0.26  0.3    50.9    D. Moore Q    FALSE      0.00    <NA>            
+ Locked In Mi 2-2   Tre Tucker + T.J. Hockenson                      Cam Skattebo + Harold Fannin Jr.                     3.01 -0.88  1.16     1.45 0.24 -1.2    17.7    C. Skattebo Q FALSE      0.00    <NA>            
+ Dave’s Bone  1-2   T.J. Hockenson                                   Brock Purdy + DJ Moore              Matthew Stafford 3.05  0.31  0.45     1.44 0.24  0.6    50.9    D. Moore Q    FALSE      0.00    <NA>            
+ Locked In Mi 2-2   Tre Tucker + T.J. Hockenson                      Aaron Jones Sr. + Harold Fannin Jr.                  2.89 -0.76  1.98     1.38 0.23 -1.0    17.7                  FALSE      0.00    <NA>            
+ Dave’s Bone  1-2   T.J. Hockenson                                   DJ Moore + Ladd McConkey            Patrick Mahomes  2.87  0.31  0.45     1.34 0.23  0.7    50.9    D. Moore Q    FALSE      0.00    <NA>            
+
+== D. ppg-fair but paper-lopsided (d_them < -2 & ppg_them >= 0): 'fleece' tier, top 6 ==
+ team         shape give                                          get                                drop_us         d_us  d_them ppg_them dP    dW   dP_them P_them0 tags_in    name_heavy fa_gain fa_who     
+ Dave’s Bone  3-2   Ollie Gordon II + Tre Tucker + T.J. Hockenson Bijan Robinson + Drake London                      14.01 -11.22 2.20     18.53 1.41 -33.0   50.9               TRUE       0       C.J. Stroud
+ Dave’s Bone  3-2   Ollie Gordon II + Tre Tucker + T.J. Hockenson Bijan Robinson + Tetairoa McMillan                 12.81  -9.80 1.57     15.73 1.27 -29.4   50.9               TRUE       0       C.J. Stroud
+ Dave’s Bone  3-2   Ollie Gordon II + Tre Tucker + T.J. Hockenson Bijan Robinson + Jalen Coker                       12.00  -8.99 2.21     13.91 1.18 -27.4   50.9               TRUE       0       C.J. Stroud
+ Dave’s Bone  3-2   Ollie Gordon II + Tre Tucker + T.J. Hockenson Bijan Robinson + DJ Moore                          11.23  -8.22 2.33     12.30 1.10 -25.4   50.9    D. Moore Q TRUE       0       C.J. Stroud
+ Steel City   1-2   Tre Tucker                                    Chase Brown + Nico Collins         Patrick Mahomes 12.50 -13.90 0.93     11.96 1.26  -0.9    1.0               TRUE       0       <NA>       
+ Sunday Kevin 2-2   Javonte Williams + Tre Tucker                 Amon-Ra St. Brown + Chris Olave                     9.42  -6.21 0.37      9.23 0.92 -19.7   61.0               TRUE       0       <NA>       

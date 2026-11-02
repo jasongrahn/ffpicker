@@ -1,0 +1,10 @@
+setwd("/Users/jasongrahn/R-projects/ffootballer")
+source("docs/review/002-evidence/sim_helpers.R")
+cat("CUR", CUR, "EXDATE", EXDATE, "WEEKS", WEEKS, "\n"); print(names(P))
+print(FILL); print(REPL |> select(pos, player, yteam, owner, base, injury))
+byes <- sapply(c(9:15), function(w) setdiff(unique(c(nfl$home_team, nfl$away_team)), ON[[as.character(w)]]))
+names(byes) <- 9:15; print(byes)
+options(width = 200)
+for (t in teams) { cat("\n==", t, "== fut", round(fut(M0[t, ]), 1), " wk:", round(M0[t, ], 1), "\n")
+  d <- R[R$owner == t, ] |> arrange(pos, desc(base))
+  print(as.data.frame(d |> transmute(player, pos, nfl, base = round(base, 1), proj8 = round(proj, 1), injury)), row.names = FALSE) }

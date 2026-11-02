@@ -1,0 +1,40 @@
+validation OK. baseline P(top4) us 0.0262 exp W 6.07765 
+asSim TR1 | TR1: us drop [] them drop [Sam Darnold] 
+asSim TR2 | TR2: us drop [] them drop [] 
+asSim both | TR1: us drop [] them drop [Sam Darnold] ; TR2: us drop [] them drop [] 
+asSim TR1alt_Love | TR1alt_Love: us drop [] them drop [Sam Darnold] 
+asSim TR2alt_Kraft | TR2alt_Kraft: us drop [] them drop [] 
+asSim Love_Kraft | TR1alt_Love: us drop [] them drop [Sam Darnold] ; TR2alt_Kraft: us drop [] them drop [] 
+asSim TR2_noTate_Mah_Likely | TR2_noTate_Mah_Likely: us drop [] them drop [] 
+asSim TR2_Tate_Burden | TR2_Tate_Burden: us drop [] them drop [] 
+asSim TR1_MahLikely | TR1: us drop [] them drop [Sam Darnold] ; TR2_noTate_Mah_Likely: us drop [] them drop [] 
+tateOut TR1 | TR1: us drop [] them drop [Sam Darnold] 
+tateOut TR2 | TR2: us drop [] them drop [] 
+tateOut both | TR1: us drop [] them drop [Sam Darnold] ; TR2: us drop [] them drop [] 
+tateOut TR1alt_Love | TR1alt_Love: us drop [] them drop [Sam Darnold] 
+tateOut TR2alt_Kraft | TR2alt_Kraft: us drop [] them drop [] 
+tateOut Love_Kraft | TR1alt_Love: us drop [] them drop [Sam Darnold] ; TR2alt_Kraft: us drop [] them drop [] 
+tateOut TR2_noTate_Mah_Likely | TR2_noTate_Mah_Likely: us drop [] them drop [] 
+tateOut TR2_Tate_Burden | TR2_Tate_Burden: us drop [] them drop [] 
+tateOut TR1_MahLikely | TR1: us drop [] them drop [Sam Darnold] ; TR2_noTate_Mah_Likely: us drop [] them drop [] 
+ variant scen                  P_us dP_pp dP_ci95      dW    d_us_ptswk partner                                                                                             
+ asSim   base                  2.64 0.00  [0.00, 0.00] 0.000 0.00                                                                                                           
+ asSim   TR1                   4.24 1.60  [1.52, 1.67] 0.259 3.11       Monday Night -2.02 pts/wk, dP -0.0pp (base 0.0%)                                                    
+ asSim   TR2                   3.92 1.28  [1.22, 1.34] 0.196 2.67       Max’s TD Bom +0.30 pts/wk, dP +0.1pp (base 84.4%)                                                   
+ asSim   both                  6.18 3.54  [3.43, 3.65] 0.466 5.84       Monday Night -2.02 pts/wk, dP -0.0pp (base 0.0%) | Max’s TD Bom +0.30 pts/wk, dP -0.3pp (base 84.4%)
+ asSim   TR1alt_Love           3.20 0.56  [0.53, 0.59] 0.096 1.17       Monday Night -0.48 pts/wk, dP -0.0pp (base 0.0%)                                                    
+ asSim   TR2alt_Kraft          3.43 0.79  [0.74, 0.83] 0.127 1.98       Max’s TD Bom +0.68 pts/wk, dP +0.8pp (base 84.4%)                                                   
+ asSim   Love_Kraft            4.08 1.44  [1.39, 1.50] 0.225 3.15       Monday Night -0.48 pts/wk, dP -0.0pp (base 0.0%) | Max’s TD Bom +0.68 pts/wk, dP +0.9pp (base 84.4%)
+ asSim   TR2_noTate_Mah_Likely 3.45 0.81  [0.75, 0.87] 0.126 1.86       Max’s TD Bom +0.04 pts/wk, dP -0.1pp (base 84.4%)                                                   
+ asSim   TR2_Tate_Burden       3.04 0.40  [0.37, 0.43] 0.069 0.81       Max’s TD Bom +0.30 pts/wk, dP +0.4pp (base 84.4%)                                                   
+ asSim   TR1_MahLikely         5.47 2.83  [2.73, 2.92] 0.394 5.03       Monday Night -2.02 pts/wk, dP -0.0pp (base 0.0%) | Max’s TD Bom +0.04 pts/wk, dP -0.6pp (base 84.4%)
+ tateOut base                  2.10 0.00  [0.00, 0.00] 0.000 0.00                                                                                                           
+ tateOut TR1                   3.54 1.44  [1.38, 1.50] 0.266 3.26       Monday Night -2.02 pts/wk, dP -0.0pp (base 0.0%)                                                    
+ tateOut TR2                   3.94 1.84  [1.77, 1.90] 0.295 3.93       Max’s TD Bom -0.52 pts/wk, dP -1.5pp (base 84.5%)                                                   
+ tateOut both                  6.21 4.12  [4.00, 4.23] 0.565 7.10       Monday Night -2.02 pts/wk, dP -0.0pp (base 0.0%) | Max’s TD Bom -0.52 pts/wk, dP -2.0pp (base 84.5%)
+ tateOut TR1alt_Love           2.59 0.49  [0.45, 0.53] 0.100 1.24       Monday Night -0.48 pts/wk, dP -0.0pp (base 0.0%)                                                    
+ tateOut TR2alt_Kraft          3.44 1.35  [1.29, 1.40] 0.226 3.24       Max’s TD Bom -0.14 pts/wk, dP -0.7pp (base 84.5%)                                                   
+ tateOut Love_Kraft            4.10 2.00  [1.94, 2.06] 0.324 4.40       Monday Night -0.48 pts/wk, dP -0.0pp (base 0.0%) | Max’s TD Bom -0.14 pts/wk, dP -0.6pp (base 84.5%)
+ tateOut TR2_noTate_Mah_Likely 2.80 0.70  [0.65, 0.74] 0.125 1.88       Max’s TD Bom +0.04 pts/wk, dP -0.2pp (base 84.5%)                                                   
+ tateOut TR2_Tate_Burden       3.04 0.95  [0.91, 0.99] 0.168 2.07       Max’s TD Bom -0.11 pts/wk, dP -0.5pp (base 84.5%)                                                   
+ tateOut TR1_MahLikely         4.59 2.49  [2.42, 2.57] 0.399 5.19       Monday Night -2.02 pts/wk, dP -0.0pp (base 0.0%) | Max’s TD Bom +0.04 pts/wk, dP -0.7pp (base 84.5%)

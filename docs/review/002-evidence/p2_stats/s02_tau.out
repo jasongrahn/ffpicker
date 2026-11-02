@@ -1,0 +1,60 @@
+wk8 late 10-31: 80 started-game players -> 10-28 proj (0 unmatched); multi-pos rostered: 0
+realized ceilings wks 3-8:
+                         3     4     5     6     7     8
+Dave’s Bone Crushers 115.3 121.0 117.8 121.6 105.9 117.5
+Jason's Jazzy Team   116.0 110.2 109.9 116.2 106.0 112.6
+JGrahnasaurs         106.0 102.5 104.9 106.2 105.3 104.0
+Locked In Michelle   114.8 121.4 118.3 107.7 115.6 117.9
+Max’s TD Bombers     118.4 117.1 107.9 120.1 112.0 110.2
+Maybe Mitchell       117.8 108.6 116.1 105.3 116.2 125.8
+Monday Night Madison  97.4 102.6  87.8  79.6 100.6  98.9
+Owl Out Blitz        104.3 115.8 120.6 112.8 122.7 117.8
+Steel City           103.1 114.1 114.4 100.2 103.7 115.9
+Sunday Kevin         114.2 117.5 115.8 103.6  96.4 105.3
+
+== drift = realized ceiling - origin forecast, by horizon (pooled over origins) ==
+  h  n mean_drift sd_drift rmse n_pf sd_err mean_err
+1 1 40       0.54     6.83 6.76   30  21.12    -0.76
+2 2 30       0.26     7.84 7.71   20  18.76    -6.71
+3 3 20       0.29     7.91 7.72   10  18.66    -4.00
+4 4 10       2.53     7.87 7.88    0     NA      NaN
+
+== by origin x horizon: mean drift (sd) ==
+  origin          1          2          3          4
+1      4 +0.6 (4.8) -0.2 (7.8) -2.6 (7.1) +2.5 (7.9)
+2      5 +0.6 (6.2) -1.4 (8.2) +3.1 (8.0)       <NA>
+3      6 -1.7 (8.6) +2.3 (7.9)       <NA>       <NA>
+4      7 +2.7 (7.4)       <NA>       <NA>       <NA>
+
+== persistent team component of DRIFT (one-way RE per origin) ==
+origin 4 (wks 5-8, m=4): between var 10.2 (sd 3.2) | within var 39.1 (sd 6.3) | F 2.04 p 0.069
+origin 5 (wks 6-8, m=3): between var 6.3 (sd 2.5) | within var 50.3 (sd 7.1) | F 1.38 p 0.262
+origin 6 (wks 7-8, m=2): between var 40.9 (sd 6.4) | within var 30.7 (sd 5.5) | F 3.66 p 0.028
+
+== persistent team component of ACTUAL forecast error err = pf - pred - GAP ==
+origin 4 (wks 5-7, m=3): between var 53.7 (sd 7.3) | within var 423.9 (sd 20.6) | F 1.38 p 0.261 | mean err -1.29
+origin 5 (wks 6-7, m=2): between var 138.5 (sd 11.8) | within var 197.4 (sd 14.1) | F 2.40 p 0.094 | mean err -6.33
+  same weeks, same-week ceiling (gap resid): between var 43.2 | within var 367.8 (sd 19.2) p 0.273
+  same weeks, same-week ceiling (gap resid): between var 111.0 | within var 224.0 (sd 15.0) p 0.149
+
+== does the origin-k forecast still pick winners k+1..7 weeks out? (horizon gate) ==
+origin 4: n 15 | r(pdiff, margin) +0.44 | slope 1.37 (SE 0.79) | resid sd 29.8 | fav right 9/15 | same-wk ceiling r +0.69
+origin 5: n 10 | r(pdiff, margin) +0.41 | slope 0.90 (SE 0.94) | resid sd 29.3 | fav right 7/10 | same-wk ceiling r +0.61
+origin 6: n 5 | r(pdiff, margin) +0.44 | slope 0.99 (SE 1.45) | resid sd 31.4 | fav right 4/5 | same-wk ceiling r +0.87
+origin 4 cor CI [-0.09, 0.78] p 0.101
+
+== JGrahnasaurs: origin forecast vs realized ceiling ==
+   origin week  pred  ceil drift     pf
+1       4    5  99.5 104.9   5.4 107.02
+2       4    6 102.2 106.2   4.0  91.68
+3       4    7 102.2 105.3   3.0  99.30
+4       4    8 102.2 104.0   1.7     NA
+5       5    6 102.2 106.2   4.0  91.68
+6       5    7 102.2 105.3   3.1  99.30
+7       5    8 102.2 104.0   1.8     NA
+8       6    7 103.3 105.3   2.0  99.30
+9       6    8 103.3 104.0   0.7     NA
+10      7    8 100.3 104.0   3.6     NA
+
+== spread of team strength: sd across teams of forecast vs realized mean ceiling wks 5-8 (origin 4) ==
+sd forecast 6.86 | sd realized ceiling 7.84 | cor 0.82 | regression slope ceil~pred 0.94 | pf~pred slope 1.48

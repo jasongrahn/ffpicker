@@ -71,8 +71,12 @@ even by 1 point." Target = P(top 4). 4 pts added to a 20-pt win = 0; 2 pts added
 loss = the season.
 - Price every move and score every test **in wins**: `dev/weekly/playoff_odds.R` (P(top 4),
   per-game leverage, exchange rate), `dev/weekly/trade_finder.R`. Margin only where near 0.
-- Exchange rate shrinks as weeks run out — rerun, never quote a stale one. 2026-10-21:
-  +1 pt/wk ≈ +0.09 wins, +0.7pp P(top 4).
+- Exchange rate shrinks as weeks run out — rerun, never quote a stale one. 2026-11-02 (4-4):
+  +1 pt/wk ≈ +0.08 wins, +0.47pp P(top 4); **convex** — +10 -> +9.9pp, +15 -> +19.7pp.
+- **Record = roster, not luck** (review 002): all-play 30-33 thru wk7 = +0.67 W *lucky*; roster
+  gap = 69% of the margin deficit; 0 of 4 losses winnable by any pre-kickoff call.
+- **Underdog: buy season-level upside at equal value; weekly variance is not a lever** (ADR
+  0013). +1 of our weekly sd ≈ +0.38 pts/wk.
 - **Lineup layer is at its ceiling -> the lever is roster quality + the two free streaming
   slots.** Wks 1-4 regret: 0.80 from our choices, 73.62 from projection error (ADR 0010).
 - Run tests across all 10 rosters, not just ours — ours is n=1 per week.
@@ -100,6 +104,15 @@ loss = the season.
   with the fill, 25%).
 - Drop logic is blind to trade value -> protect trade chips explicitly (auto-drop cut
   Mahomes, the trade chip, for McLaurin).
+- `settle()` never drops a team's only QB/K/DEF: FILL refilled it free, no roster spot ->
+  phantom partner gain (TR1 read +0.0 for Madison, truth −2.0).
+- **Trades: our gain must hold under `BASE=mean` AND `BASE=latest`** — the mean lags role
+  changes (2 of 5 offers flipped sign 11-02). **Acceptance = the partner's ppg view**, not
+  projections (ADR 0012).
+- **Sim reads us ~2pp low**: no IR returns (Adams +1.1..+1.9pp), no DST-streaming credit
+  (+1.0..+1.7pp). Rivals' IR bodies would sit on the bench -> the bias is ours alone.
+- `stopifnot` guards 10 owners + 5 games/wk: under `LC_ALL=C` the two U+2019 teams vanished,
+  our P(top 4) read 14.6% v 2.6%, no error.
 - Shortlist trades **per partner**. A league-wide top-k by strength gain = one partner, and
   never tries non-contenders, where arming the partner costs nothing.
 
@@ -288,6 +301,8 @@ scores in `data/weekly/2026_league_schedule.csv` -> `schedule_check.R` -> the we
   the tell) — **only before kickoff.** Sat/Sun pulls list games `Final` or live, and for
   those players `Fantasy Fan Pts` = points SCORED (wk3/4/5 Sunday pulls: 77/149/138
   players). Clean export = latest pull with every Game cell unstarted (`clean_tmpl()`).
+- **`read_yahoo_week(dir, date)` stops on a folder with 2+ pulls unless `date` is given.** It
+  used to keep the OLDEST pull silently -> a Thursday freeze read Tuesday's projections.
 - **`*_actual_*` exports: `-` = did not play -> NA, not 0.** Every player (FA included) is
   in the file; a started inactive player scores 0.
 - **No export has a started/bench flag.** Opponent starters are not recoverable after the
@@ -362,7 +377,8 @@ scores in `data/weekly/2026_league_schedule.csv` -> `schedule_check.R` -> the we
   teammates damps the margin).
 - **Correlation is not the thing to avoid — paying for it is.** A stack that costs
   projected points to buy shared upside loses; concentration that arrives free while
-  *gaining* points is fine. Flag it either way, with a kill condition.
+  *gaining* points is fine. Flag it either way, with a kill condition. Underdog price (ADR
+  0013): QB-WR stack ≈ +0.34 pts/wk -> never pay > ~0.3 projected pts.
 
 ### Method
 
@@ -392,16 +408,18 @@ scores in `data/weekly/2026_league_schedule.csv` -> `schedule_check.R` -> the we
 Not kept here — anything that changes weekly rots in this file. Read the newest doc in
 `docs/handoff/` (index `docs/handoff/README.md`). Roster truth = decision log rows.
 
-Weekly loop, as practiced — it works, keep it:
-1. **Freeze a decision log before kickoff** (`data/weekly/2026_weekNN_decisions.md`) with
-   a **pre-registered kill condition** per decision. Record holds too: "tested all 16
-   swaps, none help" is a result, and without it the retro cannot tell a considered hold
-   from an unconsidered one.
-2. Log **both lineups** (`_myteam.csv`, `_opponent.csv`) at freeze-time projections.
-3. After Monday, append to `## Retro` — never edit above it. Score each kill condition
-   y/n and **separate "decision wrong" from "outcome bad"**; Week 1 proved they differ.
-4. `regret = best legal lineup - started` -> `data/weekly/README.md`. It measures the
-   projection, not us.
+Weekly loop — **slimmed 2026-11-02** (review 002 §7: >= 55% of log lines changed no
+decision; trades got 2% of effort for ~+4pp). User ~30 min/wk:
+1. **Tue** — Yahoo pull (projections + last week's actuals) -> one ~10-line card: data check,
+   result, odds, DST, hole, trades, kills, lineup. User executes it by 9pm; trades go out Tue.
+2. **Thu, before TNF** — set lineup to the card; `predictions.R freeze`. Decision log = the
+   card + one line per add/drop/trade/hold. Holds still count as results.
+3. **Sun 11:45am** — any starter `O`/IR/inactive -> best legal bench body. Nothing else.
+4. **Pre-register a kill per add, drop, trade** (role-based, multi-week, window after the
+   decision). Coin flips: no kill, no retro. Retro = one line per changed decision, appended
+   below `## Retro`, never edited above; **separate "decision wrong" from "outcome bad"**.
+5. **Stop rule (pre-registered 11-02):** 4-6 after wk10 -> P ≈ 1% -> Yahoo-projection lineup +
+   DST stream only, <= 15 min/wk. Resume if a rerun shows > 3%.
 
 **Lineup deadlines are not a player's own kickoff.** The real deadline for a slot is
 `min(kickoff of that player's legal replacements)`. Week 2: Adams locked Monday, but every

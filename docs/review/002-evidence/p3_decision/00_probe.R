@@ -1,0 +1,12 @@
+SCR <- "docs/review/002-evidence"
+source(file.path(SCR, "sim_helpers.R"))
+cat("CUR", CUR, "WEEKS", WEEKS, "SIG", SIG, "GAP", GAP, "N", N, "SEED", SEED, "\n")
+print(round(M0, 1))
+s <- simulate_cond(M0); print(pt4(s))
+print(round(colMeans(s$top4), 3))
+print(G)
+me <- R[R$owner == ME, c("player","pos","nfl","base","proj","injury")]; print(as.data.frame(me))
+for (p in c("Kyler Murray","T.J. Hockenson","Josh Jacobs","Patrick Mahomes","Carnell Tate","Luther Burden III","Isaiah Likely"))
+  print(R[R$player == p, c("player","owner","pos","nfl","base","injury")])
+cat("ON 16/17:", length(ON[["16"]]), length(ON[["17"]]), "\n")
+print(W0); print(PF0)
