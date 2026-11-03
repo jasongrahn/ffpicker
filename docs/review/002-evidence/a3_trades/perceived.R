@@ -1,5 +1,5 @@
 # Perceived value: what a casual manager sees -- season ppg, last-3 ppg, draft slot, injury tag.
-# ppg = nflreadr 2026 REG wks 1-8 (MNF wk8 CHI@SEA not in the pull) scored by score_player_week()
+# ppg = nflreadr 2026 REG wks 1-8 (MNF wk8 in, pulled 11-03) scored by score_player_week()
 # (validated 35/35 vs Yahoo). Join yahoo_id -> gsis via cached ids, name fallback (rookies: ids
 # carry no yahoo_id for 2025-26 classes). Draft slot: official_draft_results.csv on initial+last name.
 setwd("/Users/jasongrahn/R-projects/ffootballer")
@@ -10,7 +10,7 @@ x <- readRDS("data/nflreadr/pull_2026.rds")
 ps <- x$player_stats |> filter(season_type == "REG", week <= 8)
 ps$fpts <- score_player_week(ps, load_config("scoring"))
 
-f <- function(p) read_yahoo_position(sprintf("docs/uploads/week_8_data/yahoo_week8_%s_2026-10-31.csv", p))
+f <- function(p) read_yahoo_position(sprintf("docs/uploads/week_9_data/yahoo_week9_%s_2026-11-03.csv", p))
 y <- bind_rows(lapply(c("qb", "rb", "wr", "te"), f)) |> distinct(player, yteam, .keep_all = TRUE)
 ids <- as.data.frame(x$ids); ids$yahoo_id <- as.character(ids$yahoo_id)
 by_id <- ids[!is.na(ids$yahoo_id) & !is.na(ids$gsis_id), c("yahoo_id", "gsis_id")]; by_id <- by_id[!duplicated(by_id$yahoo_id), ]

@@ -1,7 +1,7 @@
 # Gate test (handoff #44 test #1). Does projection-optimal roster ceiling
 # predict who WINS? Unit = matchup, all ten rosters. Scores every week with an
 # EX entry AND Schedule-tab scores: wks 3-6 n = 20; wk7 joins (n = 25) once its
-# scores are entered. Wk7 ceilings + P(win) were frozen pre-kickoff in
+# scores are entered; wk8 -> n = 30. Wk7 ceilings + P(win) were frozen pre-kickoff in
 # data/weekly/2026_week07_leaguewide_predictions.csv.
 # Outcome = actual started score from the Schedule tab
 # (data/weekly/2026_league_schedule.csv), not reconstructed from exports --
@@ -24,7 +24,8 @@ EX <- list(  # week = c(late, early) file sets
   `4` = c(sprintf("%s/week_4_data/yahoo_week4_%%s_2026-10-04.csv", U), sprintf("%s/week_4_data/yahoo_week4_%%s_2026-10-01.csv", U)),
   `5` = c(sprintf("%s/week_5_data/yahoo_week5_%%s_2026-10-11.csv", U), sprintf("%s/week_5_data/yahoo_week5_%%s_2026-10-07.csv", U)),
   `6` = c(sprintf("%s/week_6_data/yahoo_week6_%%s_2026-10-14.csv", U), sprintf("%s/week_6_data/yahoo_week6_%%s_2026-10-14.csv", U)),
-  `7` = c(sprintf("%s/week_7_data/yahoo_week7_%%s_2026-10-21.csv", U), sprintf("%s/week_7_data/yahoo_week7_%%s_2026-10-21.csv", U)))
+  `7` = c(sprintf("%s/week_7_data/yahoo_week7_%%s_2026-10-21.csv", U), sprintf("%s/week_7_data/yahoo_week7_%%s_2026-10-21.csv", U)),
+  `8` = c(sprintf("%s/week_8_data/yahoo_week8_%%s_2026-10-31.csv", U), sprintf("%s/week_8_data/yahoo_week8_%%s_2026-10-28.csv", U)))
 POS <- c("qb", "rb", "wr", "te", "k", "def")
 read_set <- function(tmpl) bind_rows(lapply(POS, function(p) read_yahoo_position(sprintf(tmpl, p)))) |>
   distinct(player, yteam, .keep_all = TRUE) |>

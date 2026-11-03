@@ -1,0 +1,41 @@
+Tate-out baseline P(top 4) 2.93% (5 seeds)
+ offer        partner                                           give                              get        our_drop us_pts them_paper them_ppg dP_pp   se
+    X1 Max’s TD Bombe Patrick Mahomes + Tre Tucker + Brenton Strange Luther Burden III + Tucker Kraft                   3.71      -0.16    -1.69  2.08 0.07
+    D1 Dave’s Bone Cr                                 T.J. Hockenson                      Jalen Coker                   3.06       0.03     0.37  1.81 0.05
+    S1   Sunday Kevin                               Javonte Williams       Chris Olave + Travis Kelce Patrick Mahomes   1.59       0.62     2.07  0.32 0.03
+    M1 Locked In Mich                                Ollie Gordon II   Aaron Jones Sr. + Cam Skattebo      Tre Tucker   2.39      -1.36     1.31  1.24 0.03
+    O3  Owl Out Blitz                               Matthew Stafford   Matthew Golden + George Kittle      Tre Tucker   6.55      -1.94    -2.05  5.79 0.03
+         subset us_pts dP_pp P_pct
+    X1+D1+M1+O3  10.81 10.90 13.82
+       D1+M1+O3  10.41 10.54 13.47
+       X1+D1+O3   9.85  9.51 12.44
+    D1+S1+M1+O3  10.48  9.42 12.35
+       X1+M1+O3   9.68  9.22 12.15
+ X1+D1+S1+M1+O3  10.49  9.19 12.12
+    X1+S1+M1+O3   9.86  8.39 11.32
+          D1+O3   8.87  8.37 11.30
+          M1+O3   8.53  8.07 11.00
+       S1+M1+O3   9.34  7.74 10.67
+    X1+D1+S1+O3   9.09  7.43 10.36
+       D1+S1+O3   8.85  7.36 10.29
+          X1+O3   8.14  7.26 10.19
+       X1+S1+O3   8.07  6.15  9.08
+             O3   6.55  5.79  8.72
+       X1+D1+M1   7.60  5.51  8.44
+    X1+D1+S1+M1   7.84  5.03  7.96
+          S1+O3   6.77  4.82  7.75
+       D1+S1+M1   7.23  4.54  7.47
+          X1+D1   6.06  4.12  7.05
+       X1+S1+M1   6.77  3.93  6.86
+       X1+D1+S1   6.23  3.60  6.53
+          X1+M1   5.59  3.47  6.40
+          D1+M1   4.95  3.00  5.93
+          S1+M1   4.98  2.40  5.33
+          D1+S1   4.62  2.34  5.27
+             X1   3.71  2.08  5.01
+          X1+S1   4.13  1.84  4.77
+             D1   3.06  1.81  4.74
+             M1   2.39  1.24  4.17
+             S1   1.59  0.32  3.25
+
+EV dP with guesses X1 0.5 D1 0.35 S1 0.1 M1 0.3 O3 0.1: +2.70pp (P(none accepted) 0.18)

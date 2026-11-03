@@ -217,3 +217,29 @@ T1-T3 change a decision. T4-T5 sharpen the map only. Score each y/n in `## Retro
   6 tgt 13 yd, 2 TD -> 20.2 half-PPR. Lloyd 16%, Strong 13% -> clear lead back.
 - Kill line 50% -> not fired. TR1 re-run Tue 11-3 on wk9 export, as planned.
 - Big game raises his price to Madison too -> re-run prices it (base = mean non-zero proj).
+
+### R2. Wk8 final, 2026-11-03 Tue. **L 87.50-125.22 -> 4-4, 6th.**
+
+Source: Yahoo Matchups screenshot 11-03 (authority; Yahoo proj at final 103.87 v 113.09) +
+`*_actual_2026-11-03.csv` (9 starters sum 87.50 exact) + nflreadr 11-03 (MNF in).
+
+- **Result.** Best legal 103.04 (Mahomes 25.44 QB, Odunze WR, Strange FLEX) -> still L by
+  22.18 -> 0 of 5 losses winnable by any lineup. Regret **15.54** = our deviation **−11.62**
+  (Kyler call) + projection error **+27.16**.
+- **C1 Tucker claim** — decision right (top wire opportunity, rule followed). Outcome bad so
+  far: 1 tgt (4%), 54% snaps, 0.00 -> both kill legs under, wk 1 of 3. Score wk10. X1 ships him.
+- **C2 Commanders DST** — decision right (PHI opp implied 18.0, lowest). Outcome good: 13.00
+  (WAS 27-10) v Chiefs 0.00, Browns 3.00. One week = 0.39 sd -> not evidence either way.
+- **§2 holds** — K: Bates 7.00 v Cam Little 6.00, right (K rule null, retired). RB no add: Pierce
+  (PHI) 0.00, now IR -> right.
+- **M1 Tucker for Tate** — forced (Tate `O`); Tucker 8.73 v Odunze 7.73 inside band -> higher
+  raw. Outcome bad: 0.00 v 10.70. Coin flip by rule -> not a wrong decision, no score.
+- **Kyler (user call over rule)** — outcome only: Kyler 20.90 v Stafford 9.28, +11.62. Inside the
+  15% band -> coin flip; not evidence for DvP or overrides.
+- **TR1/TR2** — retired unsent (review 002 §3: partner fails on ppg; TR2 fails Tate-out bound;
+  TR1 win-win = `settle()` bug). Right for cause. Outcome note: TR2 sent 10-28 -> Burden 15.10 in
+  Tucker's slot -> 102.60, still L. TR1 had zero wk8 value by construction.
+- Status, no grades. **T2** Burden wk8 share 26% (line 15%) -> feeds X1. **T4** stopped (review
+  §7); wk8 point: margin MAE Yahoo Thu 17.97 v model 18.79, n 5. **T5** = C1 kill above. **T3**
+  (Yahoo DST proj v rule) not run -> run only if the two pick different wk9 DSTs. Gate n 30:
+  r +0.564, p 0.001; wk8 favourites 5/5 (gate), frozen predictions 4/5 (miss = 50.2% flip).

@@ -47,6 +47,7 @@ ones where being right is informative.
 | 5 | **W** vs Max's TD Bombers | 107.02 | **130.32** | **23.30** | 100.44 |
 | 6 | L vs Owl Out Blitz | 91.68 | **95.08** | **3.40** | 111.14 |
 | 7 | **W** vs Monday Night Madison | 99.30 | **104.00** | **4.70** | 70.92 |
+| 8 | L vs Locked In Michelle | 87.50 | **103.04** | **15.54** | 125.22 |
 
 **CORRECTION 2026-11-02 (review 002, A1).** `opp` = Yahoo Schedule-tab finals (both sides,
 reproduced by `schedule_check.R`). Wk4 was **123.98**, not 98.58: 98.58 = replay of Jazzy's

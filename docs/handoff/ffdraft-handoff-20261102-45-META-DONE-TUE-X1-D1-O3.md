@@ -1,8 +1,8 @@
 # Handoff #52 — Meta-analysis DONE (review 002). Tue 11-3: send X1 + D1 (+ O3 long shot), NOT TR1/TR2.
 
 Written 2026-11-02 Mon evening, before MNF. Branch `week3-gameday`, **committed `0f22cd0` and
-pushed** (§4). Supersedes #51. **#50's Tue list still holds except its trade steps (4-5),
-replaced by §2 here.**
+pushed** (§4). Supersedes #51. **Tue run sheet = #50, rewritten 11-02 PM; it folds in §2 here.
+§2 below = history.**
 
 ---
 

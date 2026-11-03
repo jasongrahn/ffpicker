@@ -14,7 +14,11 @@ Rw <- within(R, base[player == "Carnell Tate"] <- 0)
 Mb <- M_of(Rw); Rp <- R; i <- match(Rp$player, pv$player); Rp$base[!is.na(i)] <- pv$pval[i[!is.na(i)]]; Mp <- strength_matrix(Rp)
 mk <- function(Rx, ks) { dr <- character(0); for (k in ks) { t <- T[[k]]; a <- apply_trade(Rx, t[[1]], t[[2]], t[[3]]); Rx <- a$R; dr <- c(dr, a$drop_us) }; list(R = Rx, drop = dr) }
 subs <- unlist(lapply(1:length(T), function(m) combn(names(T), m, simplify = FALSE)), recursive = FALSE)
-Ms <- lapply(subs, function(ks) M_of(mk(Rw, ks)$R)); names(Ms) <- sapply(subs, paste, collapse = "+")
+# A chain fails when an earlier trade's auto-drop (settle) cut a player a later trade gives (BASE=latest,
+# 11-03: S1 drops Stafford -> S1+O3). Real offers designate drops -> skip that subset, say so.
+Ms <- lapply(subs, function(ks) tryCatch(M_of(mk(Rw, ks)$R), error = function(e) NULL)); names(Ms) <- sapply(subs, paste, collapse = "+")
+if (any(bad <- sapply(Ms, is.null))) cat(sprintf("skipped %d subset(s), auto-drop conflict: %s\n", sum(bad), paste(names(Ms)[bad], collapse = " ")))
+subs <- subs[!bad]; Ms <- Ms[!bad]
 SEEDS5 <- SEED + 0:4
 res <- mclapply(SEEDS5, function(sd) { b <- sim_fast(Mb, seed = sd); sapply(Ms, function(M) sim_fast(M, seed = sd)$p[[ME]] - b$p[[ME]]) }, mc.cores = 4)
 dP <- rowMeans(do.call(cbind, res)); se <- apply(do.call(cbind, res), 1, sd) / sqrt(length(SEEDS5))
