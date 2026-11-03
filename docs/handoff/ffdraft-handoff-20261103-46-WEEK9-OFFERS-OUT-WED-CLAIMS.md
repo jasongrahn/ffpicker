@@ -63,7 +63,7 @@ Supersedes #50 (Tue run sheet, executed). **Wk9 authority = `data/weekly/2026_we
 - **Sun 11:45am ET**: starter `O`/IR/inactive -> best legal bench body. Stafford `Q` arm matters
   only if he starts.
 
-## 5. Changed this session (all uncommitted).
+## 5. Changed this session. Committed `f49fa4d`, pushed (`week3-gameday`).
 
 - `data/weekly/2026_league_schedule.csv` wk8 rows (line-level; `schedule_check.R` passes).
 - `dev/weekly/ceiling_vs_margin.R` wk8 `EX` -> `data/weekly/2026_ceilings.rds` (wks 3-7 identical).
