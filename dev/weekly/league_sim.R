@@ -76,7 +76,8 @@ base <- base |> left_join(role |> select(key, live), by = "key") |>
 
 P <- ex[[cw]] |> left_join(base, by = "key") |> mutate(base = coalesce(base, 0), nfl = nfl_team(yteam))
 TXN <- tribble(~date, ~team, ~add, ~drop, ~logged,
-  "2026-10-21", ME, "Kyler Murray", "Harrison Butker", "2026_week07_decisions.md M1")
+  "2026-10-21", ME, "Kyler Murray", "Harrison Butker", "2026_week07_decisions.md M1",
+  "2026-11-04", ME, "Jadarian Price", "Mike Washington Jr.", "2026_week09_decisions.md F2")
 R <- P |> filter(owner %in% teams)
 for (i in which(TXN$date >= EXDATE)) {
   if (TXN$add[i] %in% R$player[R$owner == TXN$team[i]]) next      # export already has it

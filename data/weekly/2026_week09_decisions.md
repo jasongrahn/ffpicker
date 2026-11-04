@@ -96,6 +96,33 @@ Screen: 137,742 trades (shapes 1-1..3-2, 8 partners, Hockenson + Dave’s out, T
 | M3 | **Drop Commanders DEF** | wk9 v LA, opp implied 26.5. Chiefs hold (v NYJ 18.5, tied 4th; top 3 rostered) |
 | C1-C4 | **Claims, no drop, clear Wed 11-4:** Kendre Miller (NO RB) > Tyler Allgeier (ARI RB) > Mike Washington Jr. (LV RB) > Jadarian Price (SEA RB) | 2 open spots -> first 2 successes land, rest fail on full roster |
 | C4x | **Price claim CANCELLED** by user 11-03 Tue pm | C1-C3 stand; 2 open spots (M3 redone) -> first 2 successes land |
+| C1-C3 result | **Wed 11-4 (Yahoo email): Miller LIVE, Washington Jr. LIVE, Allgeier DENIED** (higher priority) | 2 spots filled. Kills armed per add (below). Roster 15 active + Tate (IR slot) + Adams (IR) |
+
+Wed 11-4 re-run, `week_9_data/*_2026-11-04.csv` (17:15, 0 started games ✓). Claims already in the
+export -> no `TXN` rows. No trade processed (Dave's 15, Kevin 16, Jazzy 15 owned). P(top 4) **3.1%**
+(was 3.5); wk9 P(win) **37.0%** (99.1 v 108.6) — projection drift both sides, not the claims
+(tickets bench in wk9). Lineup re-read: Odunze 8.74 now > Tucker 8.49 -> start Odunze (band call,
+higher raw, no kill). Rest unchanged: Mahomes 19.96 v Stafford 18.55 `Q`; Kyler `Q`.
+
+FA swaps priced Wed 11-4 (`wire_scan.R` + `league_sim.R` TXN variants, same seed, 11-04 pull):
+
+| # | move | P(top 4) mean | latest | why |
+|---|---|---|---|---|
+| — | none | 3.1% | 4.8% | baseline |
+| F1 | **Claim A.J. Brown** (NE WR, `W (Nov 7)`, `Q`), **drop Kyler** | 4.2% (+1.1) | 5.1% (+0.3) | base 11.15 > every WR ours (Boston 9.26). 3rd QB ≈ 0: Stroud 18.26 FA = Kyler 18.28 base. Claim fails -> Kyler stays, cost 0 |
+| F2 | **Add Jadarian Price** (SEA RB, FA, instant), **drop Washington Jr.** | 3.2% (+0.1) | 5.1% (+0.3) | Price beats Washington on every usage line: 12.2 v 8.9 opp/g, 48 v 40% snaps, base 9.41 v 5.25. E. Wilson (SEA) no wk8 game, Yahoo 0.58 |
+| — | F1 + F2 | 4.2% | 5.4% (+0.6) | both positive, both bases |
+
+- F1 caveat: Brown 2026 = 3 games, 4.1 / 4.2 / 6.3 half-PPR, `Q`. Projection rides name; opp 6.7/g ≈ ours.
+  Kill: < 15% tgt share or < 60% snaps, wks 9-12 (NE bye 11).
+- F2 kill: < 8 opp/g or < 40% snaps wks 9-10 (same as C1-C3).
+- Kyler was "never drop" (#53) for QB cover; superseded by Stroud on wire. J1 lands -> drop = weaker RB ticket.
+- DST: Texans (`W (Nov 7)`, opp implied 18.0) v Chiefs 18.75 -> 0.3 pts. Hold Chiefs.
+
+| # | executed by user Wed 11-4 | state |
+|---|---|---|
+| F2 | **Add Price, drop Washington Jr.** | **LIVE** (instant FA). Post-11-04-pull -> `TXN` row needed |
+| F1 | **Claim A.J. Brown, drop Kyler** | **PENDING**, clears Sat 11-7. Success -> `TXN` row; fail -> Kyler stays |
 
 - **Lever 4, dead-spot tickets** (review 002 §2): >= 10 carries+tgt/g -> 15.6% become 12+ ppg
   starters wks 10-15 (n 32). ~+0.5pp each. Order = scan last-3 opp/g: Miller 17.5 (2 g, NO bye
@@ -123,3 +150,38 @@ Sim notes:
   fail -> don't send, re-scan Owl Out Wed for a ppg-fair version (ADR 0012, #50 §3).
 - O3 passes after all -> 1-for-2 -> designate Odunze as the drop even though the roster is 13
   now: claims fill it Wed, before the trade processes.
+
+## 2. WR scan, Wed 11-4 (user: "WR game is pretty shit")
+
+Need first: starters v league median (BASE=mean, 11-04 + F2): **WR −9.3/wk** (17.7 v 27.0, 9th of 10),
+FLEX −1.3, TE −0.9, RB +0.9, QB/K/DST ~0. Total −15.6 -> WR = 60% of the gap. RB = only surplus.
+
+Search: `lead/wk9_wr_search.R` (wk9_search.R, get side >= 1 WR, partners without a pending offer,
+give side excludes D1/K2/J1 players + Kyler + Tate). 23,660 screened, 884 pass both bases + ADR 0012.
+Priced with pending set: `lead/wk9_wr_menu.R` -> `2026_week09_wr_menu_{mean,latest}.out` (5 seeds, Tate out).
+
+| # | partner | we give | we get | dP mean / latest | partner ppg / paper |
+|---|---|---|---|---|---|
+| W1 | Owl Out | Stafford | Jaylen Waddle (DEN WR) + George Kittle (SF TE) | +4.32 / +4.59 | −0.69 / −0.45 |
+| W2 | Maybe Mitchell | Boston | Michael Wilson (ARI WR, `Q`) + Sam LaPorta (DET TE) | +4.47 / +1.59 | −0.38 / −1.71 |
+| W3 | Steel City | Mahomes + Henry + K. Miller | Nico Collins (HOU WR) + Garrett Wilson (NYJ WR, `Q`) | +3.78 / +3.79 | +3.69 / −1.10 |
+
+- Pending for reference: K2 +5.87 / +5.11, D1 +1.66 / +0.41, J1 +2.13 / +0.24.
+- Best subset both bases: **K2+W1+W3** +14.5 / +13.4pp. EV all six at 30% each: +4.6 / +3.2pp.
+- No player in two offers ✓. Designated drops overlap across offers (auto-drop conflict in 28-32
+  subsets) -> pick drop at accept time from what's left; never Kyler if W1+W3 both land.
+- W1 = same get side as O4, which Yahoo's impact screen showed Owl −20.20 -> **screen before send**.
+- W3 to our wk9 opponent: accept Wed/Thu -> lands before Sun -> arms them v us (Mahomes, Henry).
+  **Send Mon 11-9**, after wk9.
+- Usage: Waddle share 21-29% wks 5-8 (ppg 8.0, TD-light); Kittle 22-28%, 12.5 ppg; M. Wilson 15-37%,
+  10.8 ppg; LaPorta 6-25%; Collins 16-31% (5 g, HOU bye 8); G. Wilson 10-39%, 11.5 ppg.
+- Kills (wks 11-13; DEN bye 10): W1 Waddle share < 15% avg 3 g or Kittle snaps < 60%; W2 M. Wilson
+  share < 15% or LaPorta snaps < 60% (wks 10-12); W3 Collins or G. Wilson share < 15% (wks 10-12).
+
+## 3. Cruise control, Wed 11-4 (user call)
+
+User: "we're on cruise control for the rest of the season. we aren't last, and i'm happy about that."
+-> Stop rule (CLAUDE.md weekly loop §5) invoked early, wk9 not wk10. P(top 4) 3-5% now; all
+pending land ~12-14%. **W1-W3 NOT sent.** D1 / K2 / J1 + Brown claim (F1) left to run.
+Weekly from here (<= 15 min): Thu lineup = higher raw Yahoo proj per slot; Sun 11:45 `O` swap;
+trade reply -> one-line yes/no. No scans, no retros, no kills scored.

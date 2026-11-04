@@ -1,0 +1,49 @@
+              player                owner pos nfl injury     base
+ Rhamondre Stevenson   Jason's Jazzy Team  RB  NE        11.48167
+        Nico Collins           Steel City  WR HOU        14.63600
+    Christian Watson         Sunday Kevin  WR  GB      Q 13.82667
+      Garrett Wilson           Steel City  WR NYJ      Q 12.66000
+         Jalen Coker Dave’s Bone Crushers  WR CAR        11.31800
+      Michael Wilson       Maybe Mitchell  WR ARI      Q 11.44333
+       Jaylen Waddle        Owl Out Blitz  WR DEN        10.37667
+          DK Metcalf   Jason's Jazzy Team  WR PIT        10.46400
+       George Kittle        Owl Out Blitz  TE  SF        11.51400
+        Travis Kelce         Sunday Kevin  TE  KC         9.27200
+         Sam LaPorta       Maybe Mitchell  TE DET        10.00000
+skipped 28 subset(s), auto-drop conflict: K2+J1 J1+W2 D1+J1+W3 D1+W1+W3 D1+W2+W3 K2+J1+W1 K2+J1+W2 K2+J1+W3 K2+W1+W2 J1+W1+W2 J1+W2+W3 D1+K2+J1+W3 D1+K2+W1+W3 D1+K2+W2+W3 D1+J1+W1+W3 D1+J1+W2+W3 D1+W1+W2+W3 K2+J1+W1+W2 K2+J1+W1+W3 K2+J1+W2+W3 K2+W1+W2+W3 J1+W1+W2+W3 D1+K2+J1+W1+W3 D1+K2+J1+W2+W3 D1+K2+W1+W2+W3 D1+J1+W1+W2+W3 K2+J1+W1+W2+W3 D1+K2+J1+W1+W2+W3
+Tate-out baseline P(top 4) 2.87% (5 seeds)
+ offer        partner                                            give                              get                 our_drop us_pts them_paper them_ppg dP_pp   se
+    D1 Dave’s Bone Cr                                  T.J. Hockenson                      Jalen Coker             Kyler Murray   2.89      -0.03    -0.35  1.66 0.04
+    K2   Sunday Kevin                    Tre Tucker + Brenton Strange  Christian Watson + Travis Kelce              Rome Odunze   6.85      -1.57    -0.37  5.87 0.07
+    J1 Jason's Jazzy                                      Rome Odunze Rhamondre Stevenson + DK Metcalf Tre Tucker,Denzel Boston   5.64      -1.49     0.00  2.13 0.07
+    W1  Owl Out Blitz                                Matthew Stafford    Jaylen Waddle + George Kittle   Tre Tucker,Rome Odunze   5.72      -0.45    -0.69  4.32 0.07
+    W2 Maybe Mitchell                                   Denzel Boston     Michael Wilson + Sam LaPorta   Tre Tucker,Rome Odunze   7.17      -1.71    -0.38  4.47 0.10
+    W3     Steel City Patrick Mahomes + Derrick Henry + Kendre Miller    Nico Collins + Garrett Wilson                            4.09      -1.10     3.69  3.78 0.05
+         subset us_pts dP_pp P_pct
+       K2+W1+W3  11.30 14.49 17.36
+       K2+W2+W3  10.90 14.13 17.00
+    D1+K2+W1+W2  11.59 13.68 16.55
+    D1+K2+J1+W2  11.40 13.52 16.39
+ D1+K2+J1+W1+W2  13.71 13.18 16.05
+       D1+K2+W3  10.13 12.23 15.10
+    D1+K2+J1+W1  13.31 12.01 14.88
+       J1+W1+W3   9.59 11.96 14.82
+       D1+K2+W1  10.61 11.56 14.43
+       D1+K2+W2  10.63 11.37 14.24
+       D1+K2+J1  10.22 11.28 14.15
+       W1+W2+W3   9.18 10.61 13.47
+          K2+W3   9.00 10.35 13.22
+          K2+W1   9.52  9.79 12.66
+          K2+W2   9.40  9.71 12.58
+       D1+J1+W2   8.96  8.96 11.83
+    D1+J1+W1+W2  11.32  8.66 11.53
+          W1+W3   8.10  8.64 11.50
+          W2+W3   7.75  8.39 11.26
+       D1+W1+W2   8.61  8.28 11.14
+          D1+K2   8.13  7.57 10.43
+          J1+W3   6.74  7.47 10.34
+       D1+J1+W1  10.47  7.15 10.02
+          J1+W1   8.67  6.73  9.60
+          D1+W1   7.15  6.07  8.94
+
+EV dP with guesses D1 0.3 K2 0.3 J1 0.3 W1 0.3 W2 0.3 W3 0.3: +4.56pp (P(none accepted) 0.12)
