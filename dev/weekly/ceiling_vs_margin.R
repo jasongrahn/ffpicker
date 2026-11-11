@@ -25,7 +25,8 @@ EX <- list(  # week = c(late, early) file sets
   `5` = c(sprintf("%s/week_5_data/yahoo_week5_%%s_2026-10-11.csv", U), sprintf("%s/week_5_data/yahoo_week5_%%s_2026-10-07.csv", U)),
   `6` = c(sprintf("%s/week_6_data/yahoo_week6_%%s_2026-10-14.csv", U), sprintf("%s/week_6_data/yahoo_week6_%%s_2026-10-14.csv", U)),
   `7` = c(sprintf("%s/week_7_data/yahoo_week7_%%s_2026-10-21.csv", U), sprintf("%s/week_7_data/yahoo_week7_%%s_2026-10-21.csv", U)),
-  `8` = c(sprintf("%s/week_8_data/yahoo_week8_%%s_2026-10-31.csv", U), sprintf("%s/week_8_data/yahoo_week8_%%s_2026-10-28.csv", U)))
+  `8` = c(sprintf("%s/week_8_data/yahoo_week8_%%s_2026-10-31.csv", U), sprintf("%s/week_8_data/yahoo_week8_%%s_2026-10-28.csv", U)),
+  `9` = c(sprintf("%s/week_9_data/yahoo_week9_%%s_2026-11-04.csv", U), sprintf("%s/week_9_data/yahoo_week9_%%s_2026-11-03.csv", U)))
 POS <- c("qb", "rb", "wr", "te", "k", "def")
 read_set <- function(tmpl) bind_rows(lapply(POS, function(p) read_yahoo_position(sprintf(tmpl, p)))) |>
   distinct(player, yteam, .keep_all = TRUE) |>

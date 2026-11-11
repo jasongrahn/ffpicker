@@ -1,0 +1,8 @@
+   subset        our_drops us_pts dP_pp   se
+       KN                    3.53  4.77 0.06
+       MH                    2.11  2.79 0.04
+       J1 Matthew Stafford   0.75  0.95 0.01
+    KN+MH                    5.32  8.09 0.07
+    KN+J1 Matthew Stafford   3.53  5.00 0.06
+    MH+J1 Matthew Stafford   2.76  3.87 0.03
+ KN+MH+J1 Matthew Stafford   4.50  7.22 0.07

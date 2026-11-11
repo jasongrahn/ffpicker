@@ -1,0 +1,45 @@
+- The project is out-of-sync -- use `renv::status()` for details.
+           player        owner pos nfl injury      base
+   Jayden Daniels   Steel City  QB WAS        18.742000
+           Bo Nix   Steel City  QB DEN        16.941667
+ Javonte Williams JGrahnasaurs  RB DAL        14.851429
+   Bhayshul Tuten   Steel City  RB JAX        12.370000
+      Chase Brown   Steel City  RB CIN        14.346667
+    Rachaad White   Steel City  RB WAS         8.283333
+   MarShawn Lloyd   Steel City  RB  GB      Q  6.064286
+    Ja'Marr Chase   Steel City  WR CIN        16.588333
+     Nico Collins   Steel City  WR HOU        14.195000
+       A.J. Brown JGrahnasaurs  WR  NE      Q 10.672500
+   Garrett Wilson   Steel City  WR NYJ      Q 12.120000
+       Tre Tucker JGrahnasaurs  WR  LV         7.822857
+ Chris Godwin Jr.   Steel City  WR  TB         7.793333
+      Rome Odunze JGrahnasaurs  WR CHI         8.398333
+   T.J. Hockenson JGrahnasaurs  TE MIN         8.015000
+    Juwan Johnson   Steel City  TE  NO         7.828333
+ Colston Loveland   Steel City  TE CHI         8.613333
+      Jason Myers   Steel City   K SEA         8.522857
+          Bengals   Steel City DEF CIN   <NA>  6.420000
+         Patriots   Steel City DEF  NE   <NA>  6.151429
+
+byes wks 10-15 (no game):
+  Javonte Williams     DAL 14
+  Tre Tucker           LV 13
+  A.J. Brown           NE 11
+  T.J. Hockenson       MIN 
+  Rome Odunze          CHI 10
+  Chris Olave          NO 
+  Malik Nabers         NYG 
+  Garrett Wilson       NYJ 13
+  Colston Loveland     CHI 10
+  Ja'Marr Chase        CIN 
+  Brenton Strange      JAX 
+ subset us_pts dP_pp   se SC_ppg SC_paper
+     S1   1.90  1.77 0.03   0.47    -1.76
+     C1   6.97  9.71 0.06 -10.56    -6.99
+     C2   6.30  8.72 0.07 -10.56    -6.39
+     C3   6.37  8.81 0.06 -11.03    -6.39
+     C4   6.37  8.82 0.06  -9.81    -6.34
+     C5   6.97  9.71 0.06  -9.34    -6.94
+  KN+S1   4.83  6.56 0.06   0.47    -1.76
+  KN+C1   9.79 15.59 0.14 -10.56    -6.99
+  KN+C2   9.13 14.35 0.08 -10.56    -6.39

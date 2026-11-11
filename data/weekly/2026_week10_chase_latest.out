@@ -1,0 +1,45 @@
+- The project is out-of-sync -- use `renv::status()` for details.
+           player        owner pos nfl injury  base
+   Jayden Daniels   Steel City  QB WAS        18.75
+           Bo Nix   Steel City  QB DEN        16.60
+ Javonte Williams JGrahnasaurs  RB DAL        15.17
+   Bhayshul Tuten   Steel City  RB JAX        14.30
+      Chase Brown   Steel City  RB CIN        11.77
+    Rachaad White   Steel City  RB WAS         8.76
+   MarShawn Lloyd   Steel City  RB  GB      Q  4.05
+    Ja'Marr Chase   Steel City  WR CIN        15.90
+     Nico Collins   Steel City  WR HOU        11.99
+       A.J. Brown JGrahnasaurs  WR  NE      Q  9.23
+   Garrett Wilson   Steel City  WR NYJ      Q  8.88
+       Tre Tucker JGrahnasaurs  WR  LV         7.39
+ Chris Godwin Jr.   Steel City  WR  TB         8.25
+      Rome Odunze JGrahnasaurs  WR CHI         8.74
+   T.J. Hockenson JGrahnasaurs  TE MIN         7.93
+    Juwan Johnson   Steel City  TE  NO         7.10
+ Colston Loveland   Steel City  TE CHI         9.32
+      Jason Myers   Steel City   K SEA         8.61
+          Bengals   Steel City DEF CIN   <NA>  6.41
+         Patriots   Steel City DEF  NE   <NA>  4.99
+
+byes wks 10-15 (no game):
+  Javonte Williams     DAL 14
+  Tre Tucker           LV 13
+  A.J. Brown           NE 11
+  T.J. Hockenson       MIN 
+  Rome Odunze          CHI 10
+  Chris Olave          NO 
+  Malik Nabers         NYG 
+  Garrett Wilson       NYJ 13
+  Colston Loveland     CHI 10
+  Ja'Marr Chase        CIN 
+  Brenton Strange      JAX 
+ subset us_pts dP_pp   se SC_ppg SC_paper
+     S1   0.52  0.33 0.01   0.47    -1.11
+     C1   7.59  9.87 0.09 -10.56    -8.15
+     C2   6.77  8.82 0.09 -10.56    -6.76
+     C3   6.77  8.80 0.09 -11.03    -6.76
+     C4   6.74  8.75 0.08  -9.81    -6.76
+     C5   7.56  9.82 0.09  -9.34    -8.15
+  KN+S1   4.35  5.71 0.06   0.47    -1.11
+  KN+C1   9.66 14.34 0.12 -10.56    -8.15
+  KN+C2   8.84 13.16 0.14 -10.56    -6.76

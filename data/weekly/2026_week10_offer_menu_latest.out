@@ -1,0 +1,34 @@
+              player                owner pos nfl injury  base
+         Brock Purdy Dave’s Bone Crushers  QB  SF        22.12
+      Kyren Williams   Locked In Michelle  RB  LA        16.19
+       Chuba Hubbard   Jason's Jazzy Team  RB CAR        15.21
+     Zach Charbonnet        Owl Out Blitz  RB SEA        11.53
+       Ashton Jeanty     Max’s TD Bombers  RB  LV        10.51
+         Breece Hall       Maybe Mitchell  RB NYJ        10.28
+    Quinshon Judkins        Owl Out Blitz  RB CLE        10.11
+ Rhamondre Stevenson   Jason's Jazzy Team  RB  NE      D  4.49
+    Christian Watson         Sunday Kevin  WR  GB        14.13
+         Chris Olave         Sunday Kevin  WR  NO        13.77
+   Parker Washington     Max’s TD Bombers  WR JAX        13.09
+        Malik Nabers         Sunday Kevin  WR NYG        12.80
+   Tetairoa McMillan Dave’s Bone Crushers  WR CAR        12.52
+      George Pickens   Locked In Michelle  WR DAL      Q 10.07
+          DK Metcalf   Jason's Jazzy Team  WR PIT         9.69
+       Jaylen Waddle        Owl Out Blitz  WR DEN      Q 10.08
+         Sam LaPorta       Maybe Mitchell  TE DET        10.30
+        Tyler Warren         Sunday Kevin  TE IND        10.14
+baseline P(top 4) 8.68% (5 seeds), BASE=latest
+ offer        partner                                           give                               get         our_drop                  their_drop us_pts them_paper them_ppg dP_pp   se dP_them_pp
+    J1 Jason's Jazzy                                     Rome Odunze  Rhamondre Stevenson + DK Metcalf Matthew Stafford                               0.75      -0.19     0.00  0.95 0.01       -0.4
+    DV Dave’s Bone Cr                  Rome Odunze + Brenton Strange   Brock Purdy + Tetairoa McMillan                                                6.27      -0.63    -0.68  9.31 0.06       -3.8
+    KV   Sunday Kevin                               Javonte Williams    Christian Watson + Chris Olave Matthew Stafford                               3.78      -0.77    -0.90  4.05 0.06        1.6
+    MT Maybe Mitchell                                 Jadarian Price         Breece Hall + Sam LaPorta Matthew Stafford                               2.11      -1.73    -0.70  2.80 0.04       -4.0
+    JZ Jason's Jazzy               Javonte Williams + Jadarian Price        Chuba Hubbard + DK Metcalf                                                1.98      -1.57     0.37  2.37 0.02       -2.0
+    OW  Owl Out Blitz                                 Jadarian Price  Quinshon Judkins + Jaylen Waddle Matthew Stafford                               1.50      -1.44    -0.79  1.28 0.03       -0.1
+    MX Max’s TD Bombe                                  Derrick Henry Ashton Jeanty + Parker Washington Matthew Stafford                               0.71      -1.60    -0.38  0.66 0.04       -2.0
+    LM Locked In Mich Javonte Williams + A.J. Brown + T.J. Hockenson   Kyren Williams + George Pickens                  Jordan Love,Aaron Jones Sr.   1.49      -1.51     0.30  1.42 0.04       -1.7
+    KQ   Sunday Kevin                                Patrick Mahomes   Christian Watson + Tyler Warren   Jadarian Price                               4.38      -1.47    -2.95  6.46 0.03       -3.9
+    DH Dave’s Bone Cr                                 T.J. Hockenson   Brock Purdy + Tetairoa McMillan  Patrick Mahomes                               6.84      -1.22     0.29 10.66 0.07       -5.4
+    KN   Sunday Kevin                  Javonte Williams + Tre Tucker        Chris Olave + Malik Nabers                                                3.53      -0.79     0.46  4.77 0.06        0.6
+    MH Maybe Mitchell                Jadarian Price + T.J. Hockenson         Breece Hall + Sam LaPorta                                                2.11      -1.66     0.23  2.79 0.04       -3.9
+    OC  Owl Out Blitz                                     Tre Tucker   Zach Charbonnet + Jaylen Waddle Matthew Stafford                               2.06      -1.84     0.00  2.04 0.05       -0.2

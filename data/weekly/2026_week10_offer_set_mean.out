@@ -1,0 +1,8 @@
+   subset      our_drops us_pts dP_pp   se
+       KN                  3.07  4.54 0.06
+       MH                  2.22  3.14 0.02
+       J1 Jadarian Price   1.50  2.10 0.04
+    KN+MH                  4.93  7.97 0.06
+    KN+J1 Jadarian Price   3.51  5.66 0.06
+    MH+J1  Denzel Boston   3.53  5.48 0.04
+ KN+MH+J1   Carnell Tate   5.55  9.40 0.09

@@ -26,6 +26,13 @@ Traps handled (see CLAUDE.md):
   - no started/bench flag exists -> other teams' real lineups are NOT
     recoverable. Column `they got` below is a projection-following
     counterfactual, not what they started.
+  - Monday rosters include claims that cleared AFTER lineup lock. Wk9: A.J.
+    Brown (claim cleared Sat, `O`, 0 pts) outprojected Odunze (14.00) -> the
+    counterfactual benched Odunze -> our regret read 18.82, truth 4.82. So
+    regret (section 1) uses rosters from the PROJ_DATE export (`Roster Status`
+    at pull time). Pass the last pre-kickoff pull. Moves between that pull and
+    lock stay invisible (wk9: Price add). Sections 2-3 keep Monday rosters --
+    a pair's proj-vs-actual does not depend on who owned it when.
 """
 import csv, sys, json, math, itertools, statistics as st
 
@@ -51,7 +58,7 @@ def load(path):
 
 
 def load_week(week, proj_date, act_date):
-    """Players keyed by Yahoo id (DEF by team), and rosters by owner."""
+    """Players keyed by Yahoo id (DEF by team); rosters by Monday owner and by PROJ_DATE owner."""
     D = f"docs/uploads/week_{week}_data"
     rows = {}
     for p in POS:
@@ -66,15 +73,18 @@ def load_week(week, proj_date, act_date):
             rows[k] = dict(
                 pos=p.upper(), name=d["Player"], team=d["Team"],
                 owner=d.get("Roster Status", "").strip(),
+                lock_owner=pr.get("Roster Status", "").strip(),
                 played=a is not None, A=a or 0.0, P=q or 0.0,
                 tgt=num(d.get("Receiving Tgt*")),
             )
-    by = {}
-    for x in rows.values():
-        o = x["owner"]
-        if o and not o.startswith("W (") and o not in ("FA", "W"):
-            by.setdefault(o, []).append(x)
-    return rows, by
+    def group(f):
+        by = {}
+        for x in rows.values():
+            o = x[f]
+            if o and not o.startswith("W (") and o not in ("FA", "W"):
+                by.setdefault(o, []).append(x)
+        return by
+    return rows, group("owner"), group("lock_owner")
 
 
 def best(r, f):
@@ -135,7 +145,7 @@ if len(sys.argv) > 1 and sys.argv[1] == "--pool":
     allp = []
     print(f"== R4 pooled: within-roster RB/WR/TE pairs, weeks {','.join(s[0] for s in spec)} ==")
     for w, pd, ad in spec:
-        _, by = load_week(w, pd, ad)
+        _, by, _ = load_week(w, pd, ad)
         p = pairs_of(by)
         allp += p
         print(f"week {w}: {len(by)} rosters, {len(p)} pairs, "
@@ -155,13 +165,16 @@ if len(sys.argv) > 1 and sys.argv[1] == "--pool":
 WEEK = sys.argv[1] if len(sys.argv) > 1 else "6"
 PROJ_DATE = sys.argv[2] if len(sys.argv) > 2 else "2026-10-14"
 ACT_DATE = sys.argv[3] if len(sys.argv) > 3 else "2026-10-20"
-rows, by = load_week(WEEK, PROJ_DATE, ACT_DATE)
+rows, by, lock = load_week(WEEK, PROJ_DATE, ACT_DATE)
+assert set(lock) == set(by), (sorted(lock), sorted(by))   # byte-exact team names, both snapshots
+moved = sum(1 for x in rows.values() if x["owner"] != x["lock_owner"] and (x["owner"] in by or x["lock_owner"] in by))
 
 print(f"== week {WEEK}: regret per roster, conditioned on following the projection ==")
 print("NOTE: `if-followed` is a COUNTERFACTUAL, not what they started. Week 6 showed\n      one team beating it by +27.24 via an add-and-drop stream. Do not rank by it.")
+print(f"Rosters as of the {PROJ_DATE} pull; {moved} players changed roster between it and {ACT_DATE}.")
 print(f"{'team':26s} {'projopt':>8s} {'if-followed':>12s} {'hindopt':>8s} {'regret':>7s}")
 reg = []
-for t, r in sorted(by.items()):
+for t, r in sorted(lock.items()):
     pv, pl = best(r, "P")
     hv, _ = best(r, "A")
     if pl is None or hv is None:

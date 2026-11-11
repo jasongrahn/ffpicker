@@ -27,6 +27,10 @@ need to go do outside research to use this tool. This has two consequences:
 
 Do not over-explain R, dbt patterns, or statistics. Do explain football.
 
+**Name trades by their players, never by internal codes** (S1, C3, KN...) in anything the user reads.
+User 11-10: "I dont understand this s1 c3 c1 jargon". Codes stay in logs/scripts only. One offer
+per message to the user; they send trades one at a time.
+
 ---
 
 ## League facts
@@ -108,7 +112,10 @@ loss = the season.
   phantom partner gain (TR1 read +0.0 for Madison, truth −2.0).
 - **Trades: our gain must hold under `BASE=mean` AND `BASE=latest`** — the mean lags role
   changes (2 of 5 offers flipped sign 11-02). **Acceptance = the partner's ppg view**, not
-  projections (ADR 0012).
+  projections (ADR 0012). **Run the ppg check before ANY trade reaches the user** —
+  `trade_finder.R` output is not a recommendation (11-10: its top idea, QB -> Watson + Warren,
+  was Kevin −2.95 ppg). Contender partner -> ppg must be >= 0, not >= −1: D1 (Dave's +0.37) and
+  K2 (Kevin −0.37) both declined. Screen: `docs/review/002-evidence/lead/wk10_search.R`.
 - **Sim reads us ~2pp low**: no IR returns (Adams +1.1..+1.9pp), no DST-streaming credit
   (+1.0..+1.7pp). Rivals' IR bodies would sit on the bench -> the bias is ours alone.
 - `stopifnot` guards 10 owners + 5 games/wk: under `LC_ALL=C` the two U+2019 teams vanished,
