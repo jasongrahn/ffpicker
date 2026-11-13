@@ -1,0 +1,9 @@
+- The project is out-of-sync -- use `renv::status()` for details.
+Kyren Williams LA bye: 11 
+Rashee Rice KC bye:  
+ subset                                                         give us_pts dP_us dP_MI MI_ppg MI_paper
+     GW                                             Javonte Williams   8.83 13.66  -7.2  -6.28    -8.62
+     KR                               Javonte Williams + Rome Odunze   2.83  3.34  -4.2   0.17    -3.97
+  CH+GW               A.J. Brown + T.J. Hockenson + Javonte Williams  15.80 29.55  -7.6  -6.28    -8.62
+  CH+KR A.J. Brown + T.J. Hockenson + Javonte Williams + Rome Odunze   9.89 14.54  -4.6   0.17    -3.97
+     CH                                  A.J. Brown + T.J. Hockenson   6.97  9.71  -0.5   0.00     0.00

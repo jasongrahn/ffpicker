@@ -16,10 +16,10 @@ bottom). Wk9 scored, retro fixed, everything below committed with this doc.
 |---|---|
 | roster | Miller dropped, Tate activated (Tate `Q` -> not IR-eligible). 15 active + Adams IR. Brown claim landed (`TXN` row in) |
 | offer A, Steel City (2-7, P ~0) | **Brown + Hockenson -> Ja'Marr Chase (CIN WR) + Colston Loveland (CHI TE)**. +9.7 / +9.9pp. SC ppg −10.6 -> fails ADR 0012 on purpose: goodwill ask, user's call. Note sent (honest "not even" pitch) |
-| offer B, Michelle (3-6, sim **10.3%**) | **Tre Tucker -> Jahmyr Gibbs (DET RB)** 1-for-1. +22.5 / +18.4pp. Michelle ppg −11.8. Note + Slack sent |
+| offer B, Michelle — **DECLINED 11-12; Michelle won't trade at all** (3-6, sim **10.3%**) | **Tre Tucker -> Jahmyr Gibbs (DET RB)** 1-for-1. +22.5 / +18.4pp. Michelle ppg −11.8. Note + Slack sent |
 | both | disjoint players -> either lands alone. Both land ≈ +35-40pp (est. from 2-for-2 Gibbs combo +40.1/+36.3) |
 | cancelled / declined | J1 (Jazzy) cancelled 11-10. D1 (Dave’s), K2 (Kevin) declined |
-| parked | Kevin: Javonte Williams + Tucker -> Olave + Nabers (+4.5/+4.8pp, Kevin ppg +0.46). Shares Tucker w/ Gibbs offer. User: Kevin 4-5 likely holds out |
+| parked -> **send wk11 Tue** | Kevin (decisions log §Deferred; re-price first, Kevin = wk11 opponent): Javonte Williams + Tucker -> Olave + Nabers (+4.5/+4.8pp, Kevin ppg +0.46). Shares Tucker w/ Gibbs offer. User: Kevin 4-5 likely holds out |
 
 ## 3. Next — on a trade reply (user pastes it)
 

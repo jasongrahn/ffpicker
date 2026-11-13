@@ -92,3 +92,21 @@ bar too loose for contenders -> bar for contenders now **ppg >= 0** (CLAUDE.md).
 - Mason = throw-in, worth ~0 to us (Tucker -> Gibbs = Odunze + Tucker -> Gibbs + Mason, both bases) -> **ask = Tucker for
   Gibbs 1-for-1** (+22.5 / +18.4pp, keep Odunze). Fallback = JW for Gibbs 1-for-1 (+13.7 / +11.5pp).
 - **11-10 Gibbs offer SENT** to Michelle: Tucker -> Gibbs 1-for-1, goodwill note. Open now: Chase (Steel City), Gibbs (Michelle). Kevin parked.
+- **11-11 Wed**: Ravens claimed, Chiefs dropped (user). `TXN` row once a pull confirms. Chase + Gibbs offers: no reply, day 1.
+- **11-12 Thu: Michelle DECLINED Tucker -> Gibbs.** Next (`lead/wk10_mich2.R` -> `2026_week10_mich2_{mean,latest}.out`):
+  JW -> Gibbs +13.66 / +11.52pp, Michelle ppg −6.28 (planned fallback); fair alt JW + Odunze -> Kyren Williams (LA RB, bye 11)
+  + Rashee Rice (KC WR) +3.34 / +2.72pp, ppg **+0.17**, paper −3.97 (her Yahoo screen red). Chase offer: no reply, day 2.
+- **11-12: Michelle does not want to trade, at all** -> no more Michelle offers. JW + Tucker free again.
+
+## Deferred -> wk11 Tue 11-17 (user 11-12: "for after this week ends")
+
+- **Kevin offer, NOT sent:** Javonte Williams + Tre Tucker -> Chris Olave (NO WR) + Malik Nabers (NYG WR). 11-10 price:
+  **+4.54 / +4.77pp**, Kevin ppg **+0.46**, Kevin dP +0.1, paper −1.00 / −0.79. Before sending: re-price both bases on the
+  wk11 pull (`lead/wk10_menu.R` row KN) + re-run ppg check (wk10 actuals move it). **Wk11 opponent = Kevin** -> a trade
+  landing before wk11 lock changes that matchup; check our wk11 P(win) with and without. Note:
+  "Your WR room is stacked and one of them sits every week. Javonte's been putting up 16 a game and would start in your
+  FLEX every week. JW + Tucker for Nabers + Olave?"
+- **11-12 wire check** (11-10 pull; waivers cleared 11-11 -> FA first-come): no FA beats a starter outside the 15% band.
+  Best: K Eddy Pineiro (SF) 9.43 v Bates 8.75 (K = hold, ADR 0011); TE Gesicki 8.04 < Strange 8.50; WR Flournoy 8.60 <
+  Brown 9.23; DEF Texans 8.40 v Ravens 7.67 Yahoo, but opp implied 17.5 v 16.5 -> Ravens by rule. Dave’s 118 (Yahoo,
+  user) = Allen 24.3 + Bijan 18.1; not wire-fixable.
